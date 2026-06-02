@@ -548,5 +548,38 @@
     "language": "en",
     "category": "evidence",
     "note": "偏見やスティグマがもたらす「マイノリティ・ストレス」が精神的健康格差を生むことを理論化した、トランス健康研究でも土台として最も引用される古典的論文。"
+  },
+  {
+    "type": "book",
+    "authors": "潘柏林・劉燁・韓萌・陳冰鋭",
+    "title": "走出性别困境：“跨性别”与“性别焦虑”的医疗援助",
+    "venue": "上海科学技术文献出版社",
+    "year": "2023",
+    "url": "https://book.douban.com/subject/36473977/",
+    "language": "zh",
+    "category": "intl",
+    "note": "トランスジェンダーの医療的サポートを、当事者と家族に向けてやさしく解説した中国語の本。中国語圏のトランス情報プロジェクトとも関わりがある。"
+  },
+  {
+    "type": "book",
+    "authors": "何春蕤 編",
+    "title": "跨性別",
+    "venue": "中央大學性／別研究室（台湾）",
+    "year": "2003",
+    "url": "http://sex.ncu.edu.tw/publication/book_common_27.html",
+    "language": "zh",
+    "category": "intl",
+    "note": "台湾で最初の本格的なトランスジェンダー論集。当事者・運動・歴史・パフォーマンス分析などを収める。"
+  },
+  {
+    "type": "book",
+    "authors": "金比（キム・ビ）",
+    "title": "못생긴 트랜스젠더 김비 이야기",
+    "venue": "오상（オサン）",
+    "year": "2001",
+    "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=292634",
+    "language": "ko",
+    "category": "intl",
+    "note": "韓国のトランス女性作家キム・ビによる自伝的エッセイ。"
   }
 ]

@@ -18,7 +18,8 @@ const sections = bibCategoryMeta
   })
   .filter((section) => section.items.length > 0);
 
-const langLabel = (l: string) => (l === 'ja' ? '日本語' : l === 'en' ? '英語' : 'その他');
+const langLabel = (l: string) =>
+  l === 'ja' ? '日本語' : l === 'en' ? '英語' : l === 'zh' ? '中国語' : l === 'ko' ? '韓国語' : 'その他';
 ---
 
 <BaseLayout

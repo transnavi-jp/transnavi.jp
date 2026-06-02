@@ -878,6 +878,16 @@ ul {
   color: #c2185b;
 }
 
+.bib-lang-zh {
+  background: #fff4e6;
+  color: #b5651d;
+}
+
+.bib-lang-ko {
+  background: #eef3ff;
+  color: #3a59b5;
+}
+
 .bib-meta {
   font-size: 0.88rem;
   color: var(--muted);
