@@ -1,6 +1,20 @@
 import { expect, test } from '@playwright/test';
 
-const pages = ['/', '/clinics/', '/glossary/', '/works/', '/legal/', '/library/', '/resources/'];
+const pages = [
+  '/',
+  '/start/',
+  '/support/',
+  '/allies/',
+  '/gender/',
+  '/pride/',
+  '/clinics/',
+  '/glossary/',
+  '/works/',
+  '/legal/',
+  '/library/',
+  '/resources/',
+  '/about/',
+];
 
 for (const path of pages) {
   test(`${path} は日本語ページとして表示される`, async ({ page }) => {
@@ -136,19 +150,22 @@ test('関連サイトページに 2345.LGBT 由来の外部リンクを表示す
   await expect(page.getByRole('link', { name: /虹色ダイバーシティ/ })).toBeVisible();
 });
 
-test('文化作品ページに 2345.LGBT の追加項目を掲載する', async ({ page }) => {
-  await page.goto('/articles/cultural-works/');
+test('文芸作品データベースに 2345.LGBT 由来の作品を掲載する', async ({ page }) => {
+  await page.goto('/works/');
 
-  await expect(page.locator('h1')).toContainText('文化作品');
+  await expect(page.locator('h1')).toContainText('文芸作品');
   await expect(page.locator('body')).toContainText('片袖の魚');
   await expect(page.locator('body')).toContainText('三浦部長、本日付けで女性になります。');
 });
 
-test('文芸作品は独立したセクションから見られる', async ({ page }) => {
-  await page.goto('/works/');
-
-  await expect(page.locator('h1')).toContainText('文芸作品');
-  await expect(page.getByRole('link', { name: /文化作品/ })).toHaveAttribute('href', '/articles/cultural-works/');
+test('旧 cultural-works ページは /works/ へ誘導する', async ({ page }) => {
+  // 本番（静的）では meta refresh、開発サーバーでは HTTP リダイレクトになる。
+  const res = await page.request.get('/articles/cultural-works/', { maxRedirects: 0 });
+  if (res.status() >= 300 && res.status() < 400) {
+    expect(res.headers()['location']).toMatch(/\/works/);
+  } else {
+    expect(await res.text()).toMatch(/refresh[\s\S]*?\/works/i);
+  }
 
   await page.goto('/articles/');
   await expect(page.getByRole('link', { name: /文化作品/ })).toHaveCount(0);

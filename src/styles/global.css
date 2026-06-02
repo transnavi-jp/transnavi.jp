@@ -155,6 +155,14 @@ main {
   gap: 24px;
 }
 
+/* Grid items default to min-width:auto, which refuses to shrink below their
+   content's min-content width — that lets a wide child (e.g. the works table)
+   push a card wider than its track. min-width:0 lets cards shrink to the track
+   so inner overflow (the scrollable table) scrolls instead of widening the card. */
+main > * {
+  min-width: 0;
+}
+
 h1,
 h2,
 h3 {
@@ -1256,8 +1264,15 @@ ul {
 }
 
 @media (max-width: 720px) {
+  /* Put the page gutter on body so the header, main and footer wrappers all
+     inset equally — the content cards inside main then line up exactly with
+     the footer (same width and left edge) on mobile too. */
+  body {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
   .site-header,
-  main,
   .site-footer {
     padding: 18px;
   }
