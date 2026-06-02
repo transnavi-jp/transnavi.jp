@@ -55,7 +55,9 @@
       "es": "Outing Forzado",
       "ko": "아웃팅"
     },
-    "aliases": [],
+    "aliases": [
+      "暴露"
+    ],
     "avoid": [],
     "disputed": [],
     "source": "Force Outing",
@@ -243,7 +245,9 @@
       "ko": "커밍아웃",
       "th": "การเปิดเผยอัตลักษณ์ทางเพศของตน"
     },
-    "aliases": [],
+    "aliases": [
+      "カムアウト"
+    ],
     "avoid": [],
     "disputed": [],
     "source": "Coming Out",
@@ -314,7 +318,9 @@
       "zhHant": "守門",
       "es": "Control de Acceso"
     },
-    "aliases": [],
+    "aliases": [
+      "門番"
+    ],
     "avoid": [],
     "disputed": [],
     "notes": "医療者や精神科の専門職が、長期間の実生活体験（RLE）や煩雑な診断書の要求など高いハードルを設け、トランスジェンダー当事者が医療資源にアクセスするのを制限する行為を指す。WPATH SOC-8 はこうした傾向の緩和を目指し、インフォームド・コンセント（自己決定）モデルの普及を進めている。",
@@ -334,7 +340,10 @@
       "ko": "생식선자극호르몬",
       "th": "โกนาโดโทรฟิน"
     },
-    "aliases": [],
+    "aliases": [
+      "LH",
+      "FSH"
+    ],
     "avoid": [],
     "disputed": [],
     "source": "Gonadotropins (LH/FSH)",
@@ -448,7 +457,9 @@
       "zhHant": "隱形",
       "es": "Modo Sigiloso"
     },
-    "aliases": [],
+    "aliases": [
+      "埋没"
+    ],
     "avoid": [],
     "disputed": [],
     "notes": "性同一性に沿った性別で生活し、周囲にトランスジェンダーであることを明かさずに過ごしている状態のこと。トランスであることを秘めつつも自認していないクローゼット（非公表）とは区別される。",
@@ -487,7 +498,9 @@
       "es": "Dilatador Vaginal",
       "ko": "질확장기"
     },
-    "aliases": [],
+    "aliases": [
+      "拡張器"
+    ],
     "avoid": [],
     "disputed": [],
     "notes": "性別適合手術（造腟術）後に、造設した腟が癒着・収縮しないよう、挿入して一定の深さと幅を保つために用いる拡張器具のこと。",
@@ -563,7 +576,9 @@
       "es": "Deadnaming",
       "ko": "데드네이밍"
     },
-    "aliases": [],
+    "aliases": [
+      "デッドネーム"
+    ],
     "avoid": [],
     "disputed": [],
     "notes": "トランスジェンダーの人が以前使っていたが現在は使わなくなった名前（多くは出生時の名前）で、その人を呼んだり言及したりすること。",
@@ -749,7 +764,9 @@
       "ko": "TERF",
       "th": "เทิร์ฟ"
     },
-    "aliases": [],
+    "aliases": [
+      "ターフ"
+    ],
     "avoid": [],
     "disputed": [],
     "source": "TERF",
@@ -787,7 +804,8 @@
       "th": "นอนไบนารี"
     },
     "aliases": [
-      "Xジェンダー"
+      "Xジェンダー",
+      "ノンバイナリ"
     ],
     "avoid": [],
     "disputed": [],
@@ -925,7 +943,9 @@
       "es": "Misgendering",
       "ko": "미스젠더링"
     },
-    "aliases": [],
+    "aliases": [
+      "誤った性別で扱うこと"
+    ],
     "avoid": [],
     "disputed": [],
     "source": "Misgendering",
@@ -1065,7 +1085,9 @@
       "zhHant": "皮瓣陰道成形術",
       "es": "Vaginoplastia por Inversión Peneana"
     },
-    "aliases": [],
+    "aliases": [
+      "陰茎反転法"
+    ],
     "avoid": [],
     "disputed": [],
     "source": "Penile Inversion Vaginoplasty"
@@ -1137,7 +1159,10 @@
       "zhHant": "嗓音女性化手術",
       "es": "Cirugía de Feminización Vocal"
     },
-    "aliases": [],
+    "aliases": [
+      "声オペ",
+      "ボイスオペ"
+    ],
     "avoid": [],
     "disputed": [],
     "source": "Voice Feminization Surgery (VFS)"
@@ -1173,7 +1198,9 @@
       "zhHant": "外陰成形術",
       "es": "Vulvoplastia"
     },
-    "aliases": [],
+    "aliases": [
+      "ゼロデプス"
+    ],
     "avoid": [],
     "disputed": [
       "ゼロデプス腟形成術（Zero-depth Vaginoplasty）"
@@ -1209,7 +1236,9 @@
       "ko": "간기능 검사",
       "th": "การตรวจการทำงานของตับ"
     },
-    "aliases": [],
+    "aliases": [
+      "肝機能検査"
+    ],
     "avoid": [],
     "disputed": [],
     "source": "Liver Function"
@@ -1355,7 +1384,9 @@
       "es": "Tromboembolismo",
       "ko": "혈전색전증"
     },
-    "aliases": [],
+    "aliases": [
+      "血栓症"
+    ],
     "avoid": [],
     "disputed": [],
     "source": "Thromboembolism"
@@ -1428,7 +1459,8 @@
       "es": "Rasurado Traqueal"
     },
     "aliases": [
-      "のどぼとけ手術"
+      "のどぼとけ手術",
+      "喉仏削り"
     ],
     "avoid": [],
     "disputed": [],
@@ -1467,7 +1499,9 @@
       "ko": "골다공증",
       "th": "โรคกระดูกพรุน"
     },
-    "aliases": [],
+    "aliases": [
+      "骨粗しょう症"
+    ],
     "avoid": [],
     "disputed": [],
     "notes": "テストステロンの低値やエストロゲンの不足が長期間続くことに関連する骨の健康リスク。",
@@ -1503,7 +1537,9 @@
       "es": "Densidad Mineral Ósea",
       "ko": "골밀도"
     },
-    "aliases": [],
+    "aliases": [
+      "骨塩量"
+    ],
     "avoid": [],
     "disputed": [],
     "source": "Bone Mineral Density (BMD)"
@@ -1605,7 +1641,9 @@
       "zhHant": "實際生活體驗",
       "es": "Experiencia de Vida Real"
     },
-    "aliases": [],
+    "aliases": [
+      "実生活経験"
+    ],
     "avoid": [],
     "disputed": [],
     "source": "Real Life Experience (RLE)",
@@ -1624,7 +1662,9 @@
       "es": "Asignada mujer al nacer",
       "ko": "지정여성"
     },
-    "aliases": [],
+    "aliases": [
+      "指定女性"
+    ],
     "avoid": [],
     "disputed": [],
     "notes": "出生時に女性と割り当てられた人のこと。性同一性とは関係なく、医師により出生時に指定された性別を指す。AFAB（Assigned Female At Birth）の訳語。",
@@ -1643,7 +1683,9 @@
       "es": "Asignado hombre al nacer",
       "ko": "지정남성"
     },
-    "aliases": [],
+    "aliases": [
+      "指定男性"
+    ],
     "avoid": [],
     "disputed": [],
     "notes": "出生時に男性と割り当てられた人のこと。性同一性とは関係なく、医師により出生時に指定された性別を指す。AMAB（Assigned Male At Birth）の訳語。",
@@ -1809,7 +1851,10 @@
       "ko": "성전환증",
       "th": "ภาวะอยากแปลงเพศ"
     },
-    "aliases": [],
+    "aliases": [
+      "トランスセクシュアル",
+      "TS"
+    ],
     "avoid": [],
     "disputed": [],
     "notes": "性同一性と身体の性が一致せず、医療的な性別移行を望む状態を指した、過去の病理化された診断名。現在は脱病理化が進み、ICD-11では「性別不合」に置き換えられている。",
@@ -1892,7 +1937,8 @@
     "aliases": [
       "HRT",
       "ホルモン補充療法",
-      "トランスジェンダー・ホルモン療法"
+      "トランスジェンダー・ホルモン療法",
+      "ホルモン療法"
     ],
     "avoid": [],
     "disputed": [],
@@ -1914,7 +1960,8 @@
     },
     "aliases": [
       "SRS",
-      "GCS"
+      "GCS",
+      "GRS"
     ],
     "avoid": [
       "性転換手術"
@@ -1953,7 +2000,9 @@
       "ko": "구역",
       "th": "อาณาเขต"
     },
-    "aliases": [],
+    "aliases": [
+      "ジェンダー表現"
+    ],
     "avoid": [],
     "disputed": [],
     "notes": "外見・服装・髪型・振る舞い・言葉づかいなどを通して、自分の性のあり方を外に表すこと。性同一性や指定性別とは別の概念で、必ずしも一致するとは限らない。",
@@ -1972,7 +2021,9 @@
       "es": "Incongruencia de Género",
       "ko": "성별 불일치"
     },
-    "aliases": [],
+    "aliases": [
+      "ジェンダー・インコングルエンス"
+    ],
     "avoid": [
       "性同一性障害（旧称・病理化された用語）"
     ],
@@ -1993,7 +2044,11 @@
       "es": "Reconocimiento Legal de Género",
       "ko": "성별 인정"
     },
-    "aliases": [],
+    "aliases": [
+      "戸籍の性別変更",
+      "性別の取扱いの変更",
+      "特例法"
+    ],
     "avoid": [],
     "disputed": [],
     "source": "Legal Gender Recognition",
@@ -2012,7 +2067,9 @@
       "ko": "고환 적출술"
     },
     "aliases": [
-      "去勢"
+      "去勢",
+      "精巣摘出",
+      "睾丸摘出"
     ],
     "avoid": [
       "去勢手術"
@@ -2050,7 +2107,9 @@
       "zhHant": "聲帶縮短術",
       "es": "Glotoplastia"
     },
-    "aliases": [],
+    "aliases": [
+      "ウェンドラー法"
+    ],
     "avoid": [],
     "disputed": [],
     "source": "Glottoplasty",
@@ -2146,7 +2205,10 @@
       "zhHant": "電解脫毛",
       "es": "Electrólisis"
     },
-    "aliases": [],
+    "aliases": [
+      "ニードル脱毛",
+      "針脱毛"
+    ],
     "avoid": [],
     "disputed": [],
     "source": "Electrolysis"
@@ -2257,7 +2319,8 @@
       "ko": "유방 확대술"
     },
     "aliases": [
-      "豊胸"
+      "豊胸",
+      "バストアップ"
     ],
     "avoid": [],
     "disputed": [],
@@ -2277,7 +2340,9 @@
     },
     "aliases": [
       "SRS",
-      "腟形成"
+      "腟形成",
+      "造腟術",
+      "腟造設術"
     ],
     "avoid": [],
     "disputed": [],

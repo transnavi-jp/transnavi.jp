@@ -34,8 +34,16 @@ const sections = categoryMeta
 
 const meaningOf = (entry: GlossaryEntry) => {
   if (entry.notes) return entry.notes.length > 46 ? entry.notes.slice(0, 46) + '…' : entry.notes;
-  if (entry.aliases.length > 0) return `別名: ${entry.aliases.join('、')}`;
   return entry.translations.en ?? '';
+};
+
+// Show a couple of aliases inline so people who know a term by another name can
+// spot it; keep it short so cards stay scannable.
+const aliasPreview = (entry: GlossaryEntry) => {
+  if (entry.aliases.length === 0) return '';
+  const shown = entry.aliases.slice(0, 3);
+  const more = entry.aliases.length - shown.length;
+  return shown.join('、') + (more > 0 ? ` ほか${more}件` : '');
 };
 ---
 
@@ -90,6 +98,9 @@ const meaningOf = (entry: GlossaryEntry) => {
             >
               <span class="clinic-name">{entry.term}{entry.abbr ? `（${entry.abbr}）` : ''}</span>
               <span class="glossary-meaning">{meaningOf(entry)}</span>
+              {entry.aliases.length > 0 && (
+                <span class="glossary-aliases"><span class="glossary-aliases-label">別名</span>{aliasPreview(entry)}</span>
+              )}
             </a>
           ))}
         </div>

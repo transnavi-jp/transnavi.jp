@@ -909,6 +909,28 @@ ul {
   overflow-wrap: anywhere;
 }
 
+.glossary-aliases {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: 2px;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+.glossary-aliases-label {
+  flex: none;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--ink-heading);
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
+}
+
 .soft-quote {
   margin: 16px 0;
   padding: 6px 0 6px 20px;
