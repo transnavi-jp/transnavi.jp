@@ -114,16 +114,18 @@ const breadcrumbLd = showBreadcrumb
           <span class="brand-subtitle">{subtitle}</span>
         </span>
       </a>
-      <nav class="site-nav" aria-label="主要なページ">
-        <a href="/start/">はじめての方へ</a>
-        <a href="/learn/">知る・学ぶ</a>
-        <a href="/dysphoria/">性別違和を知る</a>
-        <a href="/glossary/">用語集</a>
-        <a href="/support/">相談先</a>
-        <a href="/clinics/">医療機関</a>
-        <a href="/bibliography/">文献</a>
-        <a href="/resources/">リンク</a>
-      </nav>
+      {pathname !== '/' && (
+        <nav class="site-nav" aria-label="主要なページ">
+          <a href="/start/">はじめての方へ</a>
+          <a href="/learn/">知る・学ぶ</a>
+          <a href="/dysphoria/">性別違和を知る</a>
+          <a href="/glossary/">用語集</a>
+          <a href="/support/">相談先</a>
+          <a href="/clinics/">医療機関</a>
+          <a href="/bibliography/">文献</a>
+          <a href="/resources/">リンク</a>
+        </nav>
+      )}
     </header>
     <main>
       {showBreadcrumb && (

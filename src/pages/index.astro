@@ -2,11 +2,14 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Mascot from '../components/Mascot.astro';
 
-const actions = [
-  { href: '/start/', label: 'はじめに', primary: true },
-  { href: '/glossary/', label: '用語を知る' },
-  { href: '/support/', label: '相談先を探す' },
-  { href: '/clinics/', label: '医療機関を探す' },
+// Fewer links than the global nav, but each with a line of detail — this is the
+// homepage's main wayfinding (the header nav is hidden on the home page).
+const heroNav = [
+  { href: '/start/', label: 'はじめての方へ', desc: 'まだよくわからない、というところから読めます。', primary: true },
+  { href: '/basics/', label: '基本のことば', desc: 'トランス・シス・ノンバイナリーって？　やさしく整理。' },
+  { href: '/support/', label: '相談先', desc: '誰かに話したくなったら。身近で安全なところから。' },
+  { href: '/clinics/', label: '医療機関', desc: 'ホルモンや診断の病院。地図でも探せます。' },
+  { href: '/learn/', label: '知る・学ぶ', desc: '性別違和、移行、暮らしのこと。テーマの一覧へ。' },
 ];
 
 const routes = [
@@ -33,13 +36,14 @@ const routes = [
       まだ答えが出ていなくても、大丈夫。<br />
       このサイトは、日本でトランスジェンダーのことを調べたいときの、最初の入り口です。
     </p>
-    <div class="hero-actions">
-      {actions.map((action) => (
-        <a class:list={['hero-button', { 'hero-button-primary': action.primary }]} href={action.href}>
-          {action.label}
+    <nav class="hero-nav" aria-label="主要なページ">
+      {heroNav.map((item) => (
+        <a class:list={['hero-nav-card', { 'is-primary': item.primary }]} href={item.href}>
+          <span class="hero-nav-label">{item.label}</span>
+          <span class="hero-nav-desc">{item.desc}</span>
         </a>
       ))}
-    </div>
+    </nav>
   </section>
 
   <section aria-labelledby="reassure">

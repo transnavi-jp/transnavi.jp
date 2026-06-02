@@ -68,7 +68,8 @@ test.describe('レイアウトの一貫性', () => {
 
   test('はじめての導線がトップに表示される', async ({ page }) => {
     await page.goto('/');
-    await expect(page.getByRole('link', { name: 'はじめに' })).toBeVisible();
-    await expect(page.locator('.site-nav').getByRole('link', { name: 'はじめての方へ' })).toBeVisible();
+    // The header nav is hidden on the home page; the hero carries the wayfinding.
+    await expect(page.locator('.site-nav')).toHaveCount(0);
+    await expect(page.locator('.hero-nav').getByRole('link', { name: /はじめての方へ/ })).toBeVisible();
   });
 });

@@ -107,8 +107,10 @@ main {
 }
 
 .site-header {
-  padding-top: 30px;
-  padding-bottom: 16px;
+  /* A box like the cards/footer below, so the header is the same width. */
+  margin-top: 16px;
+  padding-top: 26px;
+  padding-bottom: 22px;
   /* Align the brand/nav with the content edge of the full-width cards below
      (cards sit flush to the 980px wrapper and inset their content by 28px). */
   padding-left: 28px;
@@ -124,21 +126,25 @@ main {
 
 .brand-mark {
   display: block;
-  width: 52px;
-  height: 52px;
-  flex: 0 0 52px;
-  border-radius: 16px;
+  width: 64px;
+  height: 64px;
+  flex: 0 0 64px;
+  border-radius: 18px;
   box-shadow: var(--shadow-soft);
 }
 
+/* Cuter title: the trans-flag pink→blue as a soft gradient text fill. */
 .brand-name {
   display: block;
   margin: 0;
-  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  font-size: clamp(1.9rem, 5vw, 2.6rem);
   font-weight: 800;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.03em;
   line-height: 1.15;
-  color: var(--ink-heading);
+  background: linear-gradient(95deg, #f0719f 0%, #a877d8 50%, #4f95dd 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .brand-subtitle,
@@ -245,6 +251,7 @@ ul {
   padding-left: 1.25rem;
 }
 
+.site-header,
 .intro,
 .notice,
 .topic-item,
@@ -261,6 +268,7 @@ ul {
   box-shadow: var(--shadow);
 }
 
+.site-header,
 .intro,
 .notice,
 .site-footer,
@@ -435,6 +443,50 @@ ul {
 }
 
 /* ── Home signpost / entry pages ───────────────────────────── */
+
+/* Homepage hero wayfinding: fewer links than the global nav, each with a line
+   of detail (the header nav is hidden on the home page). */
+.hero-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.hero-nav-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 15px 18px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--paper-strong);
+  box-shadow: var(--shadow-soft);
+  text-decoration: none;
+  transition: transform 120ms ease, border-color 120ms ease;
+}
+
+.hero-nav-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--line-hover);
+}
+
+.hero-nav-card.is-primary {
+  border-color: var(--line-hover);
+  background: linear-gradient(95deg, rgba(255, 195, 213, 0.5), rgba(153, 216, 253, 0.4));
+}
+
+.hero-nav-label {
+  font-weight: 800;
+  font-size: 1.05rem;
+  color: var(--ink-heading);
+}
+
+.hero-nav-desc {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
 
 .hero-actions {
   display: flex;
@@ -1786,9 +1838,9 @@ ul {
   }
 
   .brand-mark {
-    width: 46px;
-    height: 46px;
-    flex-basis: 46px;
+    width: 54px;
+    height: 54px;
+    flex-basis: 54px;
   }
 
   .topic-list {
