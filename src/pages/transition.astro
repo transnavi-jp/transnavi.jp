@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import References from '../components/References.astro';
 
 const sides = [
   {
@@ -114,5 +115,6 @@ const sides = [
       {' '}<a href="https://mtf.wiki/ja/" target="_blank" rel="noreferrer">MtF.wiki</a>
       なども参考になります（海外の情報は日本の制度・医療と異なる点に注意）。最終的な判断は専門職や公的窓口とあわせて確認してください。
     </p>
+    <References route="/transition/" />
   </article>
 </BaseLayout>

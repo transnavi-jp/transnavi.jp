@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import References from '../components/References.astro';
 
 const hrtOverview = '/library/mtf-wiki-ja/docs/medicine/hrt-overview/';
 
@@ -102,5 +103,6 @@ const testosterone = [
       {' '}<a href="https://ftm.wiki/" target="_blank" rel="noreferrer">FtM.wiki</a>
       など（海外の資料は日本の保険診療・処方の実態と異なる点に注意）。
     </p>
+    <References route="/hrt-effects/" />
   </article>
 </BaseLayout>

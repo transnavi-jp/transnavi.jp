@@ -1,0 +1,49 @@
+{
+  "/transition/": [
+    { "title": "Standards of Care for the Health of Transgender and Gender Diverse People, Version 8 (WPATH SOC-8)", "url": "https://www.tandfonline.com/doi/full/10.1080/26895269.2022.2100644", "publisher": "World Professional Association for Transgender Health / International Journal of Transgender Health", "lang": "en" },
+    { "title": "Endocrine Treatment of Gender-Dysphoric/Gender-Incongruent Persons: An Endocrine Society Clinical Practice Guideline (2017)", "url": "https://academic.oup.com/jcem/article/102/11/3869/4157558", "publisher": "The Endocrine Society / The Journal of Clinical Endocrinology & Metabolism", "lang": "en" },
+    { "title": "性同一性障害に関する診断と治療のガイドライン（第4版改）", "url": "https://www.jspn.or.jp/uploads/uploads/files/activity/gid_guideline_no4_20180120.pdf", "publisher": "日本精神神経学会 性同一性障害に関する委員会", "lang": "ja" },
+    { "title": "性同一性障害者の性別の取扱いの特例に関する法律（平成15年法律第111号）", "url": "https://laws.e-gov.go.jp/law/415AC0100000111/", "publisher": "デジタル庁 e-Gov法令検索", "lang": "ja" },
+    { "title": "性別の取扱いの変更（家事事件の手続案内）", "url": "https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_23/index.html", "publisher": "裁判所（最高裁判所）", "lang": "ja" },
+    { "title": "名の変更許可（家事事件の手続案内）", "url": "https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_20/index.html", "publisher": "裁判所（最高裁判所）", "lang": "ja" }
+  ],
+  "/hrt-effects/": [
+    { "title": "Standards of Care for the Health of Transgender and Gender Diverse People, Version 8 (WPATH SOC-8)", "url": "https://www.tandfonline.com/doi/full/10.1080/26895269.2022.2100644", "publisher": "World Professional Association for Transgender Health / International Journal of Transgender Health", "lang": "en" },
+    { "title": "Overview of feminizing hormone therapy — Guidelines for the Primary and Gender-Affirming Care of Transgender and Gender Nonbinary People", "url": "https://transcare.ucsf.edu/guidelines/feminizing-hormone-therapy", "publisher": "UCSF Gender Affirming Health Program", "lang": "en" },
+    { "title": "An Introduction to Hormone Therapy for Transfeminine People", "url": "https://transfemscience.org/articles/transfem-intro/", "publisher": "Transfeminine Science", "lang": "en" },
+    { "title": "性同一性障害に関する診断と治療のガイドライン（第4版）", "url": "https://www.jspn.or.jp/uploads/uploads/files/activity/journal_114_11_gid_guideline_no4.pdf", "publisher": "日本精神神経学会 性同一性障害に関する委員会", "lang": "ja" },
+    { "title": "One-third of amenorrheic transmasculine people on testosterone ovulate", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10982961/", "publisher": "PMC / National Library of Medicine（査読付き論文）", "lang": "en" },
+    { "title": "Endocrine Treatment of Gender-Dysphoric/Gender-Incongruent Persons: An Endocrine Society Clinical Practice Guideline", "url": "https://academic.oup.com/jcem/article/102/11/3869/4157558", "publisher": "The Endocrine Society / The Journal of Clinical Endocrinology & Metabolism", "lang": "en" }
+  ],
+  "/presentation/": [
+    { "title": "Health impact of chest binding among transgender adults: a community-engaged, cross-sectional study", "url": "https://pubmed.ncbi.nlm.nih.gov/27300085/", "publisher": "Peitzmeier S, et al. / Culture, Health & Sexuality（査読付き）", "lang": "en" },
+    { "title": "Understanding the health effects of binding and tucking for gender affirmation", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6798434/", "publisher": "Poteat T, Malik M, Cooney E / Journal of Clinical and Translational Science (2018)", "lang": "en" },
+    { "title": "Tucking Practices and Attributed Health Effects in Transfeminine Individuals", "url": "https://pubmed.ncbi.nlm.nih.gov/38312458/", "publisher": "Malik M, et al. / Transgender Health (2024)", "lang": "en" },
+    { "title": "Standards of Care for the Health of Transgender and Gender Diverse People, Version 8 (SOC-8)", "url": "https://wpath.org/publications/soc8/", "publisher": "World Professional Association for Transgender Health", "lang": "en" },
+    { "title": "性別不合に関する診断と治療のガイドライン（第4版改）", "url": "https://www.jspn.or.jp/uploads/uploads/files/activity/gid_guideline_no4_20180120.pdf", "publisher": "日本精神神経学会", "lang": "ja" }
+  ],
+  "/surgery/": [
+    { "title": "Principles and outcomes of gender-affirming vaginoplasty (Nat Rev Urol. 2023)", "url": "https://pubmed.ncbi.nlm.nih.gov/36726039/", "publisher": "Nature Reviews Urology（査読付き総説）", "lang": "en" }
+  ],
+  "/puberty-blockers/": [
+    { "title": "Standards of Care for the Health of Transgender and Gender Diverse People, Version 8 (WPATH SOC-8)", "url": "https://www.tandfonline.com/doi/full/10.1080/26895269.2022.2100644", "publisher": "World Professional Association for Transgender Health / International Journal of Transgender Health", "lang": "en" },
+    { "title": "Endocrine Treatment of Gender-Dysphoric/Gender-Incongruent Persons: An Endocrine Society Clinical Practice Guideline (2017)", "url": "https://academic.oup.com/jcem/article/102/11/3869/4157558", "publisher": "The Endocrine Society / The Journal of Clinical Endocrinology & Metabolism", "lang": "en" },
+    { "title": "Puberty Blockers: A Review of GnRH Analogues in Transgender Youth", "url": "https://transfemscience.org/articles/puberty-blockers/", "publisher": "Transfeminine Science", "lang": "en" },
+    { "title": "Pubertal blockers for transgender and gender-diverse youth", "url": "https://www.mayoclinic.org/diseases-conditions/gender-dysphoria/in-depth/pubertal-blockers/art-20459075", "publisher": "Mayo Clinic", "lang": "en" },
+    { "title": "性別不合に関する診断と治療のガイドライン（第5版）", "url": "https://www.jspn.or.jp/modules/advocacy/index.php?content_id=23", "publisher": "日本精神神経学会（JSPN）", "lang": "ja" }
+  ],
+  "/legal-change/": [
+    { "title": "名の変更許可（家事事件の手続案内）", "url": "https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_20/index.html", "publisher": "裁判所（最高裁判所）", "lang": "ja" },
+    { "title": "性別の取扱いの変更（家事事件の手続案内）", "url": "https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_23/index.html", "publisher": "裁判所（最高裁判所）", "lang": "ja" },
+    { "title": "性同一性障害者の性別の取扱いの特例に関する法律（平成15年法律第111号）", "url": "https://laws.e-gov.go.jp/law/415AC0100000111/", "publisher": "デジタル庁 e-Gov法令検索", "lang": "ja" },
+    { "title": "特例法第3条第2項に規定する診断書の記載要領について", "url": "https://www.mhlw.go.jp/general/seido/syakai/sei32/", "publisher": "厚生労働省", "lang": "ja" },
+    { "title": "性別の取扱いの変更要件の一部を無効とした最高裁令和5年10月25日決定について", "url": "https://www.toben.or.jp/know/iinkai/seibyoudou/column/51025.html", "publisher": "東京弁護士会", "lang": "ja" },
+    { "title": "性別不合に関する診断と治療のガイドライン", "url": "https://www.jspn.or.jp/modules/advocacy/index.php?content_id=23", "publisher": "日本精神神経学会 / 日本GI（性別不合）学会", "lang": "ja" }
+  ],
+  "/safety/": [
+    { "title": "Gender incongruence and transgender health in the ICD (FAQ)", "url": "https://www.who.int/standards/classifications/frequently-asked-questions/gender-incongruence-and-transgender-health-in-the-icd", "publisher": "世界保健機関（WHO）", "lang": "en" },
+    { "title": "Expecting Rejection: Understanding the Minority Stress Experiences of Transgender and Gender-Nonconforming Individuals", "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5685272/", "publisher": "Rood BA, et al. / Transgender Health（査読付き論文）", "lang": "en" },
+    { "title": "電話相談窓口（よりそいホットライン）｜まもろうよ こころ", "url": "https://www.mhlw.go.jp/mamorouyokokoro/soudan/tel/", "publisher": "厚生労働省", "lang": "ja" },
+    { "title": "あかるい職場応援団（ハラスメント・SOGIハラ・アウティングの防止）", "url": "https://www.no-harassment.mhlw.go.jp/", "publisher": "厚生労働省", "lang": "ja" }
+  ]
+}

@@ -1633,6 +1633,29 @@ ul {
 .map-popup-sub { color: var(--muted); font-size: 0.85em; }
 .maplibregl-popup-content { border-radius: 12px; font-family: inherit; }
 
+/* --- 参考文献 (References) --- */
+.references {
+  margin-top: 28px;
+}
+
+.reference-list {
+  margin: 10px 0 0;
+  padding-left: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.reference-list li {
+  margin: 10px 0;
+  color: var(--ink);
+}
+
+.ref-meta {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 0.85em;
+}
+
 .flag-swatch svg {
   display: block;
   width: 100%;

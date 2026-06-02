@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import References from '../components/References.astro';
 
 const groups = [
   {
@@ -80,5 +81,6 @@ const groups = [
       {' '}<a href="https://ftm.wiki/" target="_blank" rel="noreferrer">FtM.wiki</a>
       なども参考になります（術者一覧は海外中心。日本の制度・費用とは異なります）。費用や保険は<a href="/clinics/">医療機関</a>へ確認してください。
     </p>
+    <References route="/surgery/" />
   </article>
 </BaseLayout>

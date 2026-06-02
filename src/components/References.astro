@@ -1,0 +1,25 @@
+---
+import citations from '../data/citations.json';
+
+interface Props {
+  route: string;
+}
+const { route } = Astro.props;
+type Ref = { title: string; url: string; publisher: string; lang: string };
+const refs = (citations as Record<string, Ref[]>)[route] ?? [];
+const langLabel = (l: string) => (l === 'en' ? '英語' : l === 'other' ? '他言語' : '');
+---
+
+{refs.length > 0 && (
+  <section class="references" aria-labelledby="references-heading">
+    <h2 id="references-heading">参考文献</h2>
+    <ol class="reference-list">
+      {refs.map((r) => (
+        <li>
+          <a href={r.url} target="_blank" rel="noreferrer">{r.title}</a>
+          <span class="ref-meta">{r.publisher}{langLabel(r.lang) ? `（${langLabel(r.lang)}）` : ''}</span>
+        </li>
+      ))}
+    </ol>
+  </section>
+)}
