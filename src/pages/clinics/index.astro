@@ -153,6 +153,24 @@ const groupedClinics = prefectures.map((prefecture) => ({
   prefecture,
   clinics: clinicsWithCategories.filter((clinic) => clinic.prefecture === prefecture),
 }));
+
+// Data for an embedded clinics-only map (reuses /map.js). Only clinics with
+// coordinates; no orgs/events here. Each pin is coloured by its 診療区分:
+// surgery-capable first, then HRT, then mental.
+const genreOf = (categories: string[]): string =>
+  categories.includes('srs') ? 'srs' : categories.includes('hrt') ? 'hrt' : 'mental';
+const mapClinics = clinicsWithCategories
+  .filter((clinic) => typeof clinic.lat === 'number' && typeof clinic.lng === 'number')
+  .map((clinic) => ({
+    id: clinic.id,
+    name: clinic.name,
+    area: [clinic.prefecture, clinic.city].filter(Boolean).join(' '),
+    approx: clinic.geoSource !== 'address',
+    genre: genreOf(clinic.categories),
+    lat: clinic.lat,
+    lng: clinic.lng,
+  }));
+const clinicMapData = { clinics: mapClinics, pois: [] };
 ---
 
 <BaseLayout title="医療機関 - とらんすナビ" description="ホルモン療法や診断に関する医療機関。">
@@ -164,7 +182,24 @@ const groupedClinics = prefectures.map((prefecture) => ({
       ホルモン療法や診断に関する医療機関。受診条件、診断書の要否、費用、診療内容は変わることがあります。
     </p>
     <p>予約前に必ず医療機関へ確認してください。口コミ、ランキング、推奨表現は掲載しません。詳しくは<a href="/legal/">掲載について</a>を確認してください。</p>
-    <p>ホルモン療法そのものについて先に知りたいときは、<a href="/hrt-effects/">ホルモン療法で起きること</a>もどうぞ。診療内容の用語は<a href="/glossary/">用語集</a>で調べられます。場所から探したいときは<a href="/map/">地図で探す</a>が便利です。</p>
+    <p>ホルモン療法そのものについて先に知りたいときは、<a href="/hrt-effects/">ホルモン療法で起きること</a>もどうぞ。診療内容の用語は<a href="/glossary/">用語集</a>で調べられます。</p>
+
+    <div class="map-legend" aria-label="地図の凡例（診療区分）">
+      <label><input type="checkbox" data-map-toggle="hrt" checked /><span class="map-dot map-dot-hrt" aria-hidden="true"></span>ホルモン療法</label>
+      <label><input type="checkbox" data-map-toggle="mental" checked /><span class="map-dot map-dot-mental" aria-hidden="true"></span>精神科・診断</label>
+      <label><input type="checkbox" data-map-toggle="srs" checked /><span class="map-dot map-dot-srs" aria-hidden="true"></span>手術（SRS）</label>
+    </div>
+    <div id="map" class="map-canvas clinic-map" role="application" aria-label="医療機関の地図">
+      <p class="map-fallback">地図を表示するには JavaScript が必要です。下の一覧からも探せます。</p>
+    </div>
+    <p class="clinic-map-note">
+      ピンの色は診療区分、位置は住所からのおおよそです（番地が不明なものは市区町村のあたり）。ピンをタップすると掲載ページへ進めます。
+      <a class="map-everything-link" href="/map/">当事者団体・イベントもふくむ地図を見る →</a>
+    </p>
+    <p class="source-note">
+      地図は <a href="https://maplibre.org/" target="_blank" rel="noreferrer">MapLibre GL</a> と
+      {' '}<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a> を利用しています。
+    </p>
     <p>病院では、特定の医師や診療科だけがトランス関連の診療に対応していることがあります。予約のときに「ホルモン療法に対応していますか」「担当はどの先生ですか」と確認すると確実です。専門の医師を探す手がかりとして、<a href="http://www.gi-soc.jp/" target="_blank" rel="noreferrer">日本GI（性別不合）学会</a>の<a href="http://www.gi-soc.jp/ninteiiichiran.html" target="_blank" rel="noreferrer">認定医一覧</a>も役立ちます（当サイトは特定の医師をすすめたり順位づけしたりはしません）。</p>
 
     <div class="clinic-summary" aria-label="掲載件数">
@@ -332,4 +367,8 @@ const groupedClinics = prefectures.map((prefecture) => ({
     <p class="empty-state" data-filter-empty hidden>条件に合う医療機関は見つかりませんでした。</p>
   </article>
   <script is:inline src="/filter-index.js" defer></script>
+  <script type="application/json" id="map-data" set:html={JSON.stringify(clinicMapData)} />
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
+  <script is:inline src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+  <script is:inline src="/map.js" defer></script>
 </BaseLayout>

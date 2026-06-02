@@ -1902,6 +1902,10 @@ ul {
 .map-pin-circle { background: #8a6dc6; }
 .map-pin-desk { background: #f2994a; }
 .map-pin-event { background: #ff83b7; }
+/* clinic map: pins coloured by 診療区分 */
+.map-pin-hrt { background: #4ba8ea; }
+.map-pin-mental { background: #36b37e; }
+.map-pin-srs { background: #e8589b; }
 
 .map-legend {
   display: flex;
@@ -1933,6 +1937,24 @@ ul {
 .map-dot-circle { background: #8a6dc6; }
 .map-dot-desk { background: #f2994a; }
 .map-dot-event { background: #ff83b7; }
+.map-dot-hrt { background: #4ba8ea; }
+.map-dot-mental { background: #36b37e; }
+.map-dot-srs { background: #e8589b; }
+
+.clinic-map { height: min(52vh, 440px); margin-top: 4px; }
+
+.clinic-map-note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 8px 0 4px;
+}
+
+.map-everything-link {
+  display: inline-block;
+  margin-left: 4px;
+  font-weight: 600;
+  white-space: nowrap;
+}
 
 .map-popup-sub { color: var(--muted); font-size: 0.85em; }
 .maplibregl-popup-content { border-radius: 12px; font-family: inherit; }

@@ -54,7 +54,9 @@
       '<strong>' + escapeHtml(c.name) + '</strong><br>' +
       '<span class="map-popup-sub">' + escapeHtml(c.area || '') + (c.approx ? '（おおよそ）' : '') + '</span><br>' +
       '<a href="/clinics/' + encodeURIComponent(c.id) + '/">掲載ページ →</a>';
-    addMarker(c.lng, c.lat, 'clinic', html);
+    // On the clinics page, pins are coloured by 診療区分 (c.genre); elsewhere
+    // they fall back to a generic clinic pin.
+    addMarker(c.lng, c.lat, c.genre || 'clinic', html);
   }
   for (const p of pois) {
     const isInternal = typeof p.url === 'string' && p.url.startsWith('/');
