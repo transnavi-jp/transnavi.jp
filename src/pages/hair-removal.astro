@@ -1,23 +1,67 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const areas = [
+  {
+    name: '顔・ヒゲ',
+    body: 'いちばん相談の多い部位です。ホルモン療法では薄くなっても完全には消えにくく、脱毛を考える人が多くいます。範囲が広く、回数も多めになりがち。白髪が混じると、レーザーでは効きにくいため電気脱毛が選ばれます。',
+  },
+  {
+    name: '脇下（わき）',
+    body: '範囲は狭めで、比較的取り組みやすい部位です。日常では剃毛で対応する人も多く、しっかりなくしたい場合に脱毛を選びます。',
+  },
+  {
+    name: 'VIO（デリケートゾーン）',
+    body: '陰部まわりのこと。性別適合手術（SRS）を受ける場合、手術する部位の毛を事前になくしておくよう求められることがあります。皮膚が敏感で痛みも出やすいため、慣れた施設で慎重に。自己処理は深追いせず、肌を傷つけないように。',
+  },
+  {
+    name: '腕・脚・胸・おなか',
+    body: '広い範囲です。全部を一度にやろうとせず、気になるところから少しずつでも大丈夫。剃毛やワックスで日々整えつつ、脱毛を組み合わせる人もいます。',
+  },
+];
 ---
 
 <BaseLayout
-  title="脱毛（ヒゲ・体毛）の入門 - とらんすナビ"
-  description="レーザー脱毛と電気（ニードル）脱毛のちがい、回数・痛み・費用の目安。日本の医療脱毛とサロンの違いについて。"
+  title="脱毛と毛の処理（ヒゲ・体毛・VIO）の入門 - とらんすナビ"
+  description="剃毛・ワックス・コンシーラーなど日々の毛の処理から、レーザー脱毛・電気脱毛まで。顔（ヒゲ）・脇下・VIO など部位ごとの話と、肌を守るための注意。"
 >
   <article class="article-shell">
     <div class="eyebrow">知る</div>
-    <h1>脱毛（ヒゲ・体毛）の入門</h1>
+    <h1>脱毛と毛の処理の入門</h1>
     <p class="page-disclaimer">
       情報提供のみを目的としたページです。効果や費用には個人差・施設差があります。施術の判断は、施設や医師に相談してください。
     </p>
     <p class="lead">
-      脱毛は、移行のわりと早い段階で話題になることがあります。とくにヒゲは、ホルモン療法では薄くなっても完全には消えにくいため、脱毛を考える人が多くいます。
+      毛を減らしたい・なくしたいと思ったとき、方法はいくつもあります。すぐにできる日々の処理から、時間をかけて行う脱毛まで、順番に見ていきましょう。どこまでやるかは、あなたの自由です。
     </p>
 
+    <section aria-labelledby="two-kinds">
+      <h2 id="two-kinds">「処理」と「脱毛」は、別のもの</h2>
+      <p>大きく分けて、2つの考え方があります。組み合わせて使うのがふつうです。</p>
+      <div class="concept-grid">
+        <div class="concept-card">
+          <h3>一時的な処理</h3>
+          <p>剃る、抜く、ワックス、隠す（コンシーラー）など。今すぐ・安くできますが、また生えてきます。</p>
+        </div>
+        <div class="concept-card">
+          <h3>永久的な脱毛</h3>
+          <p>レーザー脱毛・電気脱毛。時間と費用はかかりますが、毛そのものを減らしていきます。</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="daily">
+      <h2 id="daily">すぐにできる、毛の処理</h2>
+      <ul class="assure-list">
+        <li><strong>剃毛（シェービング）</strong>：いちばん手軽です。シェービング剤を使い、毛の流れに沿ってやさしく剃り、あとは保湿を。カミソリの逆剃りや乾いた肌での剃毛は、肌荒れ・カミソリ負けの原因になります。電気シェーバーは肌にやさしめです。すぐ生えてくるのが難点。</li>
+        <li><strong>ワックス・毛抜き</strong>：根元から抜くので、数週間はつるつるが続きます。ただし痛みがあり、肌への負担や<strong>埋没毛</strong>（毛が皮膚の中に埋もれる）が起きることも。広い範囲はワックスが向きますが、敏感な部位は慎重に。</li>
+        <li><strong>除毛クリーム</strong>：毛を溶かして処理します。肌に合わないことがあるので、必ず先に<strong>パッチテスト</strong>を。顔やデリケートゾーン用かどうかも確認してください。</li>
+        <li><strong>コンシーラーで隠す</strong>：青ヒゲ（剃りあとの青み）は、オレンジ・赤み系のコントロールカラーを重ねてからファンデーションを塗ると、目立ちにくくなります。これは「なくす」のではなく「隠す」方法です。くわしくは<a href="/presentation/">見た目と、毎日のこと</a>をどうぞ。</li>
+      </ul>
+    </section>
+
     <section aria-labelledby="kinds">
-      <h2 id="kinds">大きく2つの方法</h2>
+      <h2 id="kinds">永久的な脱毛：大きく2つの方法</h2>
       <div class="concept-grid">
         <div class="concept-card">
           <h3>レーザー脱毛</h3>
@@ -25,14 +69,32 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
         <div class="concept-card">
           <h3>電気（ニードル）脱毛</h3>
-          <p>毛穴ひとつずつに処理する方法。白髪にも効き、恒久的とされますが、時間がかかり、痛みも強めです。</p>
+          <p>毛穴ひとつずつに処理する方法。白髪にも効き、恒久的とされますが、時間がかかり、痛みも強めです。仕上げや、レーザーで残った毛に向きます。</p>
         </div>
+      </div>
+      <p>多くの人は、まずレーザーで全体を減らし、残った毛や白髪を電気脱毛で仕上げる、という組み合わせをとります。</p>
+    </section>
+
+    <section aria-labelledby="areas">
+      <h2 id="areas">部位（エリア）ごとのこと</h2>
+      <div class="concept-grid">
+        {areas.map((area) => (
+          <div class="concept-card">
+            <h3>{area.name}</h3>
+            <p>{area.body}</p>
+          </div>
+        ))}
       </div>
     </section>
 
-    <section aria-labelledby="where">
-      <h2 id="where">どこを脱毛するか</h2>
-      <p>顔（ヒゲ）、体のほか、手術を受ける場合に手術部位の毛をあらかじめ処理することもあります。回数や期間は、部位や毛の状態によって変わります。</p>
+    <section aria-labelledby="safety">
+      <h2 id="safety">肌を守るために</h2>
+      <ul class="assure-list">
+        <li>新しい方法・新しい製品は、まず<strong>パッチテスト</strong>から。</li>
+        <li>脱毛やワックスの前後は、肌が敏感になります。<strong>日焼けを避け、保湿</strong>を。</li>
+        <li>赤み・痛み・化膿・強いかゆみが続くときは、無理をせず皮膚科へ。</li>
+        <li>デリケートゾーン（VIO）は、自己処理で深追いしないこと。心配なときは医療機関で。</li>
+      </ul>
     </section>
 
     <section aria-labelledby="japan">
@@ -42,7 +104,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </p>
     </section>
 
+    <aside class="entry-message" role="note" aria-label="読んでいるあなたへ">
+      <p>毛のことは、時間も手間もかかります。一度に完璧を目指さなくて大丈夫。今日できる小さな処理からでも、十分です。</p>
+    </aside>
+
     <nav class="word-chips entry-related" aria-label="関連ページ">
+      <a class="word-chip" href="/presentation/">見た目と、毎日のこと</a>
       <a class="word-chip" href="/transition/">性別移行を知る</a>
       <a class="word-chip" href="/clinics/">医療機関</a>
       <a class="word-chip" href="/resources/">関連サイト</a>
