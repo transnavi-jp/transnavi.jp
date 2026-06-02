@@ -13,9 +13,13 @@
   --pink-soft: #fff0f7;
   --shadow: 0 14px 40px rgba(154, 207, 243, 0.18);
   --shadow-soft: 0 8px 22px rgba(255, 166, 204, 0.14);
+  --shadow-hover: 0 16px 40px rgba(255, 166, 204, 0.18);
+  --bg-flat: #f9fbff;
+  --ink-heading: #4a5d80;
+  --line-hover: rgba(255, 131, 183, 0.6);
   font-family: 'M PLUS Rounded 1c', system-ui, -apple-system, BlinkMacSystemFont, 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Meiryo', sans-serif;
   color: var(--ink);
-  background: #f9fbff;
+  background: var(--bg-flat);
 }
 
 *,
@@ -25,7 +29,7 @@
 }
 
 html {
-  background: #f9fbff;
+  background: var(--bg-flat);
 }
 
 body {
@@ -99,7 +103,7 @@ main {
   font-weight: 800;
   letter-spacing: -0.04em;
   line-height: 1.15;
-  color: #4a5a7b;
+  color: var(--ink-heading);
 }
 
 .brand-subtitle,
@@ -120,7 +124,7 @@ main {
 
 .brand-subtitle {
   display: block;
-  margin-top: 3px;
+  margin-top: 4px;
   font-size: 0.95rem;
 }
 
@@ -136,17 +140,17 @@ main {
   align-items: center;
   min-height: 40px;
   padding: 0 14px;
-  border: 1px solid rgba(154, 207, 243, 0.5);
+  border: 1px solid var(--line);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.72);
+  background: var(--paper);
   box-shadow: var(--shadow-soft);
-  color: #5a6c90;
+  color: var(--muted);
   text-decoration: none;
   font-size: 0.94rem;
 }
 
 .site-nav a:hover {
-  border-color: rgba(255, 131, 183, 0.55);
+  border-color: var(--line-hover);
   background: rgba(255, 245, 250, 0.98);
 }
 
@@ -166,7 +170,7 @@ main > * {
 h1,
 h2,
 h3 {
-  color: #4a5d80;
+  color: var(--ink-heading);
 }
 
 h1 {
@@ -285,7 +289,7 @@ ul {
 
 .topic-item {
   padding: 18px 20px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(239, 248, 255, 0.88));
+  background: linear-gradient(180deg, var(--paper-strong), rgba(239, 248, 255, 0.88));
 }
 
 .article-list,
@@ -296,7 +300,7 @@ ul {
 }
 
 .article-section {
-  margin-top: 32px;
+  margin-top: 28px;
 }
 
 .article-section h2 {
@@ -310,7 +314,7 @@ ul {
 
 .clinic-region {
   padding: 0;
-  border-top: 1px solid rgba(154, 207, 243, 0.6);
+  border-top: 1px solid var(--line);
 }
 
 .clinic-region summary {
@@ -320,7 +324,7 @@ ul {
   gap: 16px;
   cursor: pointer;
   font-weight: 800;
-  color: #4a5d80;
+  color: var(--ink-heading);
   list-style: none;
   padding: 14px 4px 10px;
 }
@@ -398,7 +402,7 @@ ul {
 
 .hero-button:hover {
   transform: translateY(-2px);
-  border-color: rgba(255, 131, 183, 0.6);
+  border-color: var(--line-hover);
   color: var(--ink);
 }
 
@@ -462,7 +466,7 @@ ul {
 
 .route-item:hover {
   transform: translateY(-2px);
-  border-color: rgba(255, 131, 183, 0.6);
+  border-color: var(--line-hover);
   color: var(--ink);
 }
 
@@ -531,7 +535,7 @@ ul {
 }
 
 .word-chip:hover {
-  border-color: rgba(255, 131, 183, 0.6);
+  border-color: var(--line-hover);
   color: var(--accent-strong);
 }
 
@@ -602,7 +606,7 @@ ul {
 }
 
 .link-section {
-  margin-top: 30px;
+  margin-top: 28px;
 }
 
 .link-section h2 {
@@ -632,8 +636,8 @@ ul {
 
 .link-chip:hover {
   transform: translateY(-2px);
-  border-color: rgba(255, 131, 183, 0.6);
-  box-shadow: 0 12px 28px rgba(255, 166, 204, 0.2);
+  border-color: var(--line-hover);
+  box-shadow: var(--shadow-hover);
   color: var(--ink);
 }
 
@@ -653,7 +657,7 @@ ul {
   border-radius: 999px;
   background: var(--accent-soft);
   color: var(--muted);
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   font-weight: 500;
   line-height: 1.8;
 }
@@ -693,7 +697,7 @@ ul {
   padding: 16px 18px;
   color: var(--ink);
   text-decoration: none;
-  transition: transform 140ms ease, box-shadow 140ms ease, border-color 140ms ease;
+  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
 }
 
 .clinic-card:hover,
@@ -701,8 +705,8 @@ ul {
 .article-link:hover,
 .topic-item:hover {
   transform: translateY(-2px);
-  border-color: rgba(255, 131, 183, 0.6);
-  box-shadow: 0 16px 40px rgba(255, 166, 204, 0.18);
+  border-color: var(--line-hover);
+  box-shadow: var(--shadow-hover);
 }
 
 .clinic-card-header {
@@ -723,16 +727,16 @@ ul {
 .clinic-name {
   display: block;
   font-weight: 700;
-  color: #4b6187;
+  color: var(--ink-heading);
 }
 
 .clinic-expand-button {
   min-height: 38px;
   padding: 0 14px;
-  border: 1px solid rgba(154, 207, 243, 0.7);
+  border: 1px solid var(--line);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.92);
-  color: #58719b;
+  background: var(--paper-strong);
+  color: var(--muted);
   font: inherit;
   font-size: 0.9rem;
   font-weight: 700;
@@ -741,8 +745,8 @@ ul {
 }
 
 .clinic-expand-button[aria-expanded='true'] {
-  border-color: rgba(255, 131, 183, 0.7);
-  color: #c45b8c;
+  border-color: var(--line-hover);
+  color: var(--accent-strong);
 }
 
 .clinic-meta,
@@ -772,7 +776,7 @@ ul {
 .clinic-expand-panel {
   margin-top: 4px;
   padding-top: 14px;
-  border-top: 1px dashed rgba(154, 207, 243, 0.65);
+  border-top: 1px dashed var(--line);
 }
 
 .clinic-card-detail-list {
@@ -801,9 +805,9 @@ ul {
   gap: 12px;
   margin: 24px 0;
   padding: 16px 18px;
-  border: 1px dashed rgba(153, 216, 253, 0.8);
+  border: 1px dashed var(--line);
   border-radius: 22px;
-  background: rgba(255, 255, 255, 0.72);
+  background: var(--paper);
   font-size: 0.94rem;
 }
 
@@ -817,19 +821,19 @@ ul {
 .filter-tab {
   min-height: 42px;
   padding: 0 16px;
-  border: 1px solid rgba(154, 207, 243, 0.7);
+  border: 1px solid var(--line);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.8);
-  color: #58719b;
+  background: var(--paper);
+  color: var(--muted);
   font: inherit;
   font-weight: 700;
   cursor: pointer;
 }
 
 .filter-tab[aria-pressed='true'] {
-  border-color: rgba(255, 131, 183, 0.7);
+  border-color: var(--line-hover);
   background: linear-gradient(90deg, rgba(153, 216, 253, 0.32), rgba(255, 195, 213, 0.5));
-  color: #4a5d80;
+  color: var(--ink-heading);
 }
 
 .index-search {
@@ -841,15 +845,15 @@ ul {
 
 .index-search label {
   font-weight: 700;
-  color: #55688e;
+  color: var(--muted);
 }
 
 .index-search input {
   box-sizing: border-box;
   width: 100%;
-  border: 1px solid rgba(154, 207, 243, 0.8);
+  border: 1px solid var(--line);
   border-radius: 16px;
-  background: rgba(255, 255, 255, 0.96);
+  background: var(--paper-strong);
   color: var(--ink);
   font: inherit;
   line-height: 1.6;
@@ -873,7 +877,7 @@ ul {
 
 .clinic-detail div {
   padding-top: 12px;
-  border-top: 1px dashed rgba(154, 207, 243, 0.65);
+  border-top: 1px dashed var(--line);
 }
 
 .clinic-detail dd {
@@ -975,7 +979,7 @@ ul {
 .footer-col {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 8px;
 }
 
 .footer-col h2 {
@@ -1143,7 +1147,7 @@ ul {
   border-radius: 999px;
   background: var(--accent-soft);
   color: var(--muted);
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 500;
   vertical-align: middle;
 }
@@ -1207,7 +1211,7 @@ ul {
   width: 72px;
   height: 48px;
   border-radius: 8px;
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 0 1px var(--line);
 }
 
 .flag-text h3 {
