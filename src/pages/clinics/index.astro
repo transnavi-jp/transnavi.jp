@@ -85,6 +85,30 @@ const typeDefinitions = [
   { id: 'その他', label: 'その他' },
 ] as const;
 
+// 地方（region）grouping of the 47 prefectures, for a region-level filter.
+const regionByPrefecture: Record<string, string> = {
+  '北海道': '北海道',
+  '青森県': '東北', '岩手県': '東北', '宮城県': '東北', '秋田県': '東北', '山形県': '東北', '福島県': '東北',
+  '茨城県': '関東', '栃木県': '関東', '群馬県': '関東', '埼玉県': '関東', '千葉県': '関東', '東京都': '関東', '神奈川県': '関東',
+  '新潟県': '中部', '富山県': '中部', '石川県': '中部', '福井県': '中部', '山梨県': '中部', '長野県': '中部', '岐阜県': '中部', '静岡県': '中部', '愛知県': '中部',
+  '三重県': '近畿', '滋賀県': '近畿', '京都府': '近畿', '大阪府': '近畿', '兵庫県': '近畿', '奈良県': '近畿', '和歌山県': '近畿',
+  '鳥取県': '中国', '島根県': '中国', '岡山県': '中国', '広島県': '中国', '山口県': '中国',
+  '徳島県': '四国', '香川県': '四国', '愛媛県': '四国', '高知県': '四国',
+  '福岡県': '九州・沖縄', '佐賀県': '九州・沖縄', '長崎県': '九州・沖縄', '熊本県': '九州・沖縄', '大分県': '九州・沖縄', '宮崎県': '九州・沖縄', '鹿児島県': '九州・沖縄', '沖縄県': '九州・沖縄',
+};
+const regionOf = (prefecture: string): string => regionByPrefecture[prefecture] ?? 'その他';
+const regionDefinitions = [
+  { id: '', label: 'すべて' },
+  { id: '北海道', label: '北海道' },
+  { id: '東北', label: '東北' },
+  { id: '関東', label: '関東' },
+  { id: '中部', label: '中部' },
+  { id: '近畿', label: '近畿' },
+  { id: '中国', label: '中国' },
+  { id: '四国', label: '四国' },
+  { id: '九州・沖縄', label: '九州・沖縄' },
+] as const;
+
 const clinicsWithCategories = clinics.map((clinic) => {
   const categories = new Set<string>();
   const links = splitClinicUrls(clinic.urls);
@@ -110,6 +134,7 @@ const clinicsWithCategories = clinics.map((clinic) => {
     ...clinic,
     categories: [...categories],
     type: typeOf(clinic.name),
+    region: regionOf(clinic.prefecture),
     links,
   };
 });
@@ -165,6 +190,23 @@ const groupedClinics = prefectures.map((prefecture) => ({
     </div>
 
     <div class="filter-group-row">
+      <span class="filter-tabs-label">地方</span>
+      <section class="filter-tabs" aria-label="地方" data-filter-tabs data-filter-key="regions">
+        {regionDefinitions.map((region) => (
+          <button
+            type="button"
+            class="filter-tab"
+            data-filter-tab
+            data-filter-value={region.id}
+            aria-pressed={region.id === '' ? 'true' : 'false'}
+          >
+            {region.label}
+          </button>
+        ))}
+      </section>
+    </div>
+
+    <div class="filter-group-row">
       <span class="filter-tabs-label">施設の種類</span>
       <section class="filter-tabs" aria-label="施設の種類" data-filter-tabs data-filter-key="types">
         {typeDefinitions.map((type) => (
@@ -200,7 +242,8 @@ const groupedClinics = prefectures.map((prefecture) => ({
               data-filter-item
               data-categories={clinic.categories.join(',')}
               data-types={clinic.type}
-              data-search={[clinic.name, clinic.displayName, clinic.prefecture, clinic.city, clinic.address, clinic.phone, clinic.type, ...clinic.services].filter(Boolean).join(' ')}
+              data-regions={clinic.region}
+              data-search={[clinic.name, clinic.displayName, clinic.region, clinic.prefecture, clinic.city, clinic.address, clinic.phone, clinic.type, ...clinic.services].filter(Boolean).join(' ')}
             >
               <div class="clinic-card-header">
                 <div>
