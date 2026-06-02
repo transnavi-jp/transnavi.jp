@@ -281,6 +281,15 @@ ul {
   margin-top: 0;
 }
 
+/* Give section headings inside content cards clear breathing room above. */
+.article-shell h2 {
+  margin-top: 28px;
+}
+
+.article-shell .notice h2 {
+  margin-top: 0;
+}
+
 .topic-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -485,22 +494,6 @@ ul {
   font-weight: 700;
 }
 
-.route-item-stack {
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
-}
-
-.route-item-stack .route-to {
-  margin-left: 0;
-  color: var(--ink);
-  font-size: 1.02rem;
-}
-
-.route-desc {
-  color: var(--muted);
-  font-size: 0.9rem;
-}
 
 .home-motto {
   margin: 24px 0 0;
@@ -574,6 +567,14 @@ ul {
   border-color: var(--line-hover);
   box-shadow: var(--shadow-hover);
   color: var(--ink);
+}
+
+/* Same big-button look, but flush (no top divider) — for use under its own
+   heading like 「次に読むなら」, so all "further reading" navs match. */
+.entry-related.is-flush {
+  margin-top: 8px;
+  padding-top: 0;
+  border-top: none;
 }
 
 .concept-grid {

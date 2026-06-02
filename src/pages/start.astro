@@ -76,14 +76,11 @@ const next = [
     </div>
 
     <h2>次に読むなら</h2>
-    <div class="route-list">
+    <nav class="word-chips entry-related is-flush" aria-label="次に読む">
       {next.map((item) => (
-        <a class="route-item route-item-stack" href={item.href}>
-          <span class="route-to">{item.title}</span>
-          <span class="route-desc">{item.description}</span>
-        </a>
+        <a class="word-chip" href={item.href}>{item.title}</a>
       ))}
-    </div>
+    </nav>
 
     <p class="soft-close">決めつけない。急がせない。でも、迷っているあなたを放っておきはしない。このサイトは、そういう気持ちでつくっています。</p>
 
