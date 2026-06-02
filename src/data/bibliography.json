@@ -117,7 +117,7 @@
     "year": "2007",
     "url": "https://en.wikipedia.org/wiki/Whipping_Girl",
     "language": "en",
-    "category": "intl-book",
+    "category": "intl",
     "note": "性差別とトランス嫌悪、女性性の貶めの結びつきを論じたトランスフェミニズムの古典。トランスミソジニー概念で知られる。"
   },
   {
@@ -128,7 +128,7 @@
     "year": "2017",
     "url": "https://www.hachettebookgroup.com/titles/susan-stryker/transgender-history-second-edition/9781580056892/",
     "language": "en",
-    "category": "intl-book",
+    "category": "intl",
     "note": "20世紀半ば以降の米国トランス運動史を扱う定番の概説書。トランス・スタディーズの基礎文献。"
   },
   {
@@ -139,7 +139,7 @@
     "year": "2018",
     "url": "https://www.jspn.or.jp/uploads/uploads/files/activity/gid_guideline_no4_20180120.pdf",
     "language": "ja",
-    "category": "guideline",
+    "category": "evidence",
     "note": "日本の身体的治療の標準となる公式診療ガイドライン。2018年1月20日公表で、保険適用や実務の前提となる一次資料。"
   },
   {
@@ -150,7 +150,7 @@
     "year": "2022",
     "url": "https://doi.org/10.1080/26895269.2022.2100644",
     "language": "en",
-    "category": "guideline",
+    "category": "evidence",
     "note": "WPATHによる国際標準ケア基準SOC-8。世界のトランス医療の指針で、日本の議論でも参照される基幹ガイドライン。"
   },
   {
@@ -161,7 +161,7 @@
     "year": "1994",
     "url": "https://www.routledge.com/Gender-Outlaw-On-Men-Women-and-the-Rest-of-Us/Bornstein/p/book/9780415908979",
     "language": "en",
-    "category": "intl-book",
+    "category": "intl",
     "note": "トランス当事者によるジェンダー論の先駆。二元論への問いを自伝と戯曲で展開した古典。初版はRoutledge(1994、ISBN 9780415908979)。"
   },
   {
@@ -172,7 +172,7 @@
     "year": "2018",
     "url": "https://www.ucpress.edu/books/trans/paper",
     "language": "en",
-    "category": "intl-book",
+    "category": "intl",
     "note": "「トランス*」というアスタリスク表記をめぐり、ジェンダーの多様性を簡潔に整理した薄手の理論書。American Studies Nowシリーズ第3巻、ISBN 9780520292697。"
   },
   {
@@ -183,7 +183,7 @@
     "year": "2017",
     "url": "https://www.upress.umn.edu/9781517901738/black-on-both-sides/",
     "language": "en",
-    "category": "intl-book",
+    "category": "intl",
     "note": "黒人性とトランス性の歴史的交差を19世紀以降の米国史から論じる、人種とジェンダーの研究書。"
   },
   {
@@ -194,7 +194,7 @@
     "year": "2021",
     "url": "https://www.penguin.co.uk/books/441227/the-transgender-issue-by-faye-shon/9780141991801",
     "language": "en",
-    "category": "intl-book",
+    "category": "intl",
     "note": "英国の状況を踏まえ、トランスの権利を社会正義・解放の枠組みで論じた近年の代表作。2021年Allen Lane刊（初版ハードカバー、ISBN 9780241423141）。"
   },
   {
@@ -205,7 +205,7 @@
     "year": "2006",
     "url": "https://doi.org/10.4324/9780203955055",
     "language": "en",
-    "category": "intl-book",
+    "category": "intl",
     "note": "トランス研究の重要論文50本を集めた基本アンソロジー。編者による序文を付し、英語圏のトランス研究の発展を記録した一次資料集。"
   },
   {
@@ -216,7 +216,7 @@
     "year": "2022",
     "url": "https://nyupress.org/9780814717103/sex-is-as-sex-does/",
     "language": "en",
-    "category": "intl-book",
+    "category": "intl",
     "note": "法・行政が「性別」をどう分類・統治してきたかを米国の事例で分析。性別変更や身分証・戸籍を考える上で有用。"
   },
   {
@@ -227,7 +227,7 @@
     "year": "2017",
     "url": "https://doi.org/10.1210/jc.2017-01658",
     "language": "en",
-    "category": "guideline",
+    "category": "evidence",
     "note": "米国内分泌学会によるホルモン療法の臨床ガイドライン。投与法・モニタリングの根拠として広く参照される。J Clin Endocrinol Metab 102(11):3869–3903。"
   },
   {
@@ -238,7 +238,7 @@
     "year": "2024",
     "url": "https://doi.org/10.1093/ejendo/lvad170",
     "language": "en",
-    "category": "article",
+    "category": "evidence",
     "note": "ホルモン療法と心血管疾患リスクを統合解析した系統的レビュー。HRTの安全性評価に引用できる査読論文。"
   },
   {
@@ -249,7 +249,7 @@
     "year": "2020",
     "url": "https://transfemscience.org/articles/e2-equivalent-doses/",
     "language": "en",
-    "category": "article",
+    "category": "evidence",
     "note": "投与経路ごとのエストラジオール用量の目安を文献に基づき整理。トランス女性HRTの実務的参照資料。2020年4月19日初版。"
   },
   {
@@ -260,7 +260,7 @@
     "year": "2025",
     "url": "https://doi.org/10.1093/humupd/dmae036",
     "language": "en",
-    "category": "article",
+    "category": "evidence",
     "note": "ホルモン療法が生殖器官・妊孕性に及ぼす影響を体系的に整理した系統的レビュー。妊孕性温存を考える上での包括的なエビデンス。"
   },
   {
@@ -271,7 +271,7 @@
     "year": "2024",
     "url": "https://doi.org/10.1080/26895269.2024.2333525",
     "language": "en",
-    "category": "article",
+    "category": "evidence",
     "note": "成人へのジェンダー肯定的介入がうつ・不安など精神的健康に及ぼす効果を前向き研究29件(計2789名)から検討した系統的レビュー。"
   },
   {
@@ -282,7 +282,7 @@
     "year": "2021",
     "url": "https://doi.org/10.1016/S2213-8587(21)00185-6",
     "language": "en",
-    "category": "article",
+    "category": "evidence",
     "note": "ホルモン療法を受けた成人トランスジェンダー4,568人を1972〜2018年（約50年間）追跡したアムステルダム・コホートの死亡率報告。長期安全性を論じる際の代表的大規模研究。"
   },
   {
@@ -348,7 +348,7 @@
     "year": "2014",
     "url": "https://doi.org/10.4044/joma.126.109",
     "language": "ja",
-    "category": "article",
+    "category": "evidence",
     "note": "岡山大学病院ジェンダーセンターの医師による総説で、診断からホルモン療法・性別適合手術までを含む包括的治療の枠組みを臨床の立場から概観する。"
   },
   {
@@ -359,7 +359,7 @@
     "year": "2016",
     "url": "https://doi.org/10.24503/jasmh.19.2_164",
     "language": "ja",
-    "category": "article",
+    "category": "jp-academic",
     "note": "当事者が直面する具体的な困難と、それを乗り越える要因を質的に分析した心理・メンタルヘルス領域の研究で、支援を考える上で有用。"
   },
   {
@@ -392,7 +392,7 @@
     "year": "2021",
     "url": "https://doi.org/10.15064/jjpm.61.7_608",
     "language": "ja",
-    "category": "article",
+    "category": "evidence",
     "note": "長年ジェンダークリニックに携わる産婦人科医が、診断概念の変遷と当事者への臨床的対応を整理した実践的な総説。"
   },
   {
@@ -403,7 +403,7 @@
     "year": "2013",
     "url": "https://doi.org/10.4264/numa.72.137",
     "language": "ja",
-    "category": "article",
+    "category": "evidence",
     "note": "性同一性障害をめぐる脳科学・神経生物学的知見を概観した総説で、生物学的背景に関する議論の入口となる。"
   },
   {
@@ -414,7 +414,7 @@
     "year": "2018",
     "url": "https://doi.org/10.11642/kyushuneurop.64.3_4_112",
     "language": "ja",
-    "category": "article",
+    "category": "evidence",
     "note": "性の多様性と性同一性障害を精神医学の立場から平易に解説した論考で、診断概念と臨床的留意点を概観できる。"
   },
   {
@@ -425,7 +425,7 @@
     "year": "1991",
     "url": "https://sandystone.com/empire-strikes-back.html",
     "language": "en",
-    "category": "article",
+    "category": "intl",
     "note": "トランスジェンダー・スタディーズの礎を築いたとされる宣言的論考で、医学・フェミニズムによるトランス女性の表象に異議を唱え当事者自身による語りを呼びかけた古典である。"
   },
   {
@@ -436,7 +436,7 @@
     "year": "1994",
     "url": "https://read.dukeupress.edu/glq/article/1/3/237/69091/My-Words-to-Victor-Frankenstein-Above-the-Village",
     "language": "en",
-    "category": "article",
+    "category": "intl",
     "note": "トランスの身体を「怪物」になぞらえつつ怒りを引き受け直す詩的・理論的パフォーマンス論考で、トランス・スタディーズの創設期を代表する一篇である。"
   },
   {
@@ -447,7 +447,7 @@
     "year": "2007",
     "url": "https://doi.org/10.1111/j.1527-2001.2007.tb01090.x",
     "language": "en",
-    "category": "article",
+    "category": "intl",
     "note": "トランスを「欺く者」とみなす偏見がトランスフォビックな暴力を正当化する構造を哲学的に分析した、トランス哲学の必読論文である。"
   },
   {
@@ -458,7 +458,7 @@
     "year": "2006",
     "url": "https://www.taylorfrancis.com/chapters/edit/10.4324/9780203955055-27/mutilating-gender-dean-spade",
     "language": "en",
-    "category": "article",
+    "category": "intl",
     "note": "性別違和の診断・医療ゲートキーピングが二元的な性別規範を強制する仕組みを自身の体験を交えて批判した、当事者法理論家による著名な論考である。"
   },
   {
@@ -469,7 +469,7 @@
     "year": "2009",
     "url": "https://doi.org/10.1111/j.1527-2001.2009.01043.x",
     "language": "en",
-    "category": "article",
+    "category": "intl",
     "note": "英米フェミニズム理論がトランスの生を理論の素材として消費しつつ実生活の改善に寄与しない「認識論的暴力」を批判した、研究倫理を問う重要論文である。"
   },
   {
@@ -480,7 +480,7 @@
     "year": "2014",
     "url": "https://pubmed.ncbi.nlm.nih.gov/25201798/",
     "language": "en",
-    "category": "article",
+    "category": "evidence",
     "note": "思春期ブロッカー(二次性徴抑制)から性別適合治療までを受けた若年トランスジェンダーの心理的予後を初めて長期追跡した、青年期医療の基盤となる代表的論文。"
   },
   {
@@ -491,7 +491,7 @@
     "year": "2022",
     "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8881768/",
     "language": "en",
-    "category": "article",
+    "category": "evidence",
     "note": "ジェンダー肯定ケアを受けたトランス・ノンバイナリーの若者で、うつ・希死念慮が有意に減少したことを前向きコホートで示した、近年よく引用される研究。"
   },
   {
@@ -502,7 +502,7 @@
     "year": "2023",
     "url": "https://pubmed.ncbi.nlm.nih.gov/36652355/",
     "language": "en",
-    "category": "article",
+    "category": "evidence",
     "note": "米4施設315名のトランス青年を2年間追跡し、ホルモン療法で外見の一致感と心理社会的機能が改善したことを示した、NEJM掲載の大規模前向き研究。"
   },
   {
@@ -513,7 +513,7 @@
     "year": "2018",
     "url": "https://pubmed.ncbi.nlm.nih.gov/29463477/",
     "language": "en",
-    "category": "article",
+    "category": "evidence",
     "note": "6,793名の診療記録を分析し、性別違和の有病率・治療動向と、後悔(リグレット)が一貫して少ないことを示した、世界最大級・最長期のコホート研究。"
   },
   {
@@ -524,7 +524,7 @@
     "year": "2017",
     "url": "https://pubmed.ncbi.nlm.nih.gov/28075632/",
     "language": "en",
-    "category": "article",
+    "category": "evidence",
     "note": "確率標本に基づく調査をメタ回帰し、米国の成人トランスジェンダー人口を推計した、疫学・人口規模の議論で頻繁に引用される基礎文献。"
   },
   {
@@ -535,7 +535,7 @@
     "year": "2021",
     "url": "https://pubmed.ncbi.nlm.nih.gov/33968550/",
     "language": "en",
-    "category": "article",
+    "category": "evidence",
     "note": "7,928名を含む27研究を統合し、性別適合手術後の後悔率が約1%にとどまることを示した、手術アウトカムの議論で広く参照されるメタ分析。"
   },
   {
@@ -546,7 +546,7 @@
     "year": "2003",
     "url": "https://pubmed.ncbi.nlm.nih.gov/12956539/",
     "language": "en",
-    "category": "article",
+    "category": "evidence",
     "note": "偏見やスティグマがもたらす「マイノリティ・ストレス」が精神的健康格差を生むことを理論化した、トランス健康研究でも土台として最も引用される古典的論文。"
   }
 ]

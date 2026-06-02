@@ -6,14 +6,19 @@ import { bibCategoryMeta, type BibEntry } from '../types/bibliography';
 
 const entries = bibData as BibEntry[];
 
+// 「はじめに読む」 keeps its curated (accessibility) order; every other group is
+// sorted newest-first so recent work surfaces.
 const sections = bibCategoryMeta
-  .map((meta) => ({
-    ...meta,
-    items: entries
-      .filter((entry) => entry.category === meta.key)
-      .sort((a, b) => (a.year < b.year ? -1 : a.year > b.year ? 1 : a.title.localeCompare(b.title, 'ja'))),
-  }))
+  .map((meta) => {
+    const items = entries.filter((entry) => entry.category === meta.key);
+    if (meta.key !== 'jp-intro') {
+      items.sort((a, b) => Number(b.year) - Number(a.year) || a.title.localeCompare(b.title, 'ja'));
+    }
+    return { ...meta, items };
+  })
   .filter((section) => section.items.length > 0);
+
+const langLabel = (l: string) => (l === 'ja' ? '日本語' : l === 'en' ? '英語' : 'その他');
 ---
 
 <BaseLayout
@@ -35,7 +40,10 @@ const sections = bibCategoryMeta
         <ul class="bib-list">
           {section.items.map((item) => (
             <li class="bib-item">
-              <a class="bib-title" href={item.url} target="_blank" rel="noreferrer">{item.title}</a>
+              <span class="bib-head">
+                <a class="bib-title" href={item.url} target="_blank" rel="noreferrer">{item.title}</a>
+                <span class:list={['bib-lang', `bib-lang-${item.language}`]}>{langLabel(item.language)}</span>
+              </span>
               <span class="bib-meta">{item.authors}／{item.venue}（{item.year}）</span>
               {item.note && <span class="bib-note">{item.note}</span>}
             </li>

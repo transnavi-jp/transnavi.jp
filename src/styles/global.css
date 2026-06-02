@@ -56,14 +56,14 @@ a:hover {
 
 /* Glossary/term links read like dictionary terms: a distinct purple with a
    dotted underline, so they're visibly different from ordinary links. */
-.article-shell a[href^='/glossary/'],
-.intro a[href^='/glossary/'] {
+.article-shell a[href^='/glossary/']:not(.hero-button):not(.word-chip),
+.intro a[href^='/glossary/']:not(.hero-button):not(.word-chip) {
   color: var(--accent-term);
   text-decoration-style: dotted;
 }
 
-.article-shell a[href^='/glossary/']:hover,
-.intro a[href^='/glossary/']:hover {
+.article-shell a[href^='/glossary/']:not(.hero-button):not(.word-chip):hover,
+.intro a[href^='/glossary/']:not(.hero-button):not(.word-chip):hover {
   color: var(--accent-strong);
 }
 
@@ -846,9 +846,35 @@ ul {
   background: var(--paper);
 }
 
+.bib-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 8px;
+}
+
 .bib-title {
   font-weight: 700;
   overflow-wrap: anywhere;
+}
+
+.bib-lang {
+  flex: none;
+  padding: 0 7px;
+  border-radius: 6px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.bib-lang-ja {
+  background: var(--accent-soft);
+  color: var(--ink-heading);
+}
+
+.bib-lang-en {
+  background: #fff0f7;
+  color: #c2185b;
 }
 
 .bib-meta {
