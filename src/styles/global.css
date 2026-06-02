@@ -677,6 +677,10 @@ ul {
   flex-wrap: wrap;
   align-items: center;
   gap: 4px 6px;
+  /* Align with the card's content edge below, and tuck close to the card so it
+     reads as the card's location label rather than text floating on the page. */
+  padding: 0 28px;
+  margin-bottom: -16px;
   font-size: 0.82rem;
   color: var(--muted);
 }
