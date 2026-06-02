@@ -39,6 +39,14 @@ const orgItemCount = orgSections.reduce(
   0,
 );
 const totalCount = resources.length + orgItemCount;
+
+const langLabels: Record<string, string> = {
+  en: 'EN',
+  'zh-Hans': '简中',
+  'zh-Hant': '繁中',
+  ko: '한국어',
+  other: '多言語',
+};
 ---
 
 <BaseLayout title="関連サイト - とらんすナビ" description="外部サイト、団体、リンク集。">
@@ -84,6 +92,9 @@ const totalCount = resources.length + orgItemCount;
               data-search={[resource.data.title, resource.data.description, ...resource.data.tags].join(' ')}
             >
               <span class="link-chip-title">{resource.data.title}</span>
+              {resource.data.language !== 'ja' && langLabels[resource.data.language] && (
+                <span class="link-chip-lang">{langLabels[resource.data.language]}</span>
+              )}
               {resource.data.tags.length > 0 && (
                 <span class="link-chip-tags">
                   {resource.data.tags.slice(0, 3).map((tag) => (
