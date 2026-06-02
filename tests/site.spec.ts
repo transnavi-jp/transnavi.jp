@@ -155,7 +155,7 @@ test('関連サイトページに 2345.LGBT 由来の外部リンクを表示す
   await expect(page.getByRole('link', { name: /日本 GID\/GD と共に生きる人々の会/ })).toBeVisible();
   await expect(page.getByRole('link', { name: /はじめてのトランスジェンダー trans101\.jp/ })).toBeVisible();
   await expect(page.getByRole('link', { name: /Tネット/ })).toBeVisible();
-  await expect(page.getByRole('link', { name: /虹色ダイバーシティ/ })).toBeVisible();
+  await expect(page.getByRole('link', { name: /虹色ダイバーシティ/ }).first()).toBeVisible();
 });
 
 test('文芸作品データベースに 2345.LGBT 由来の作品を掲載する', async ({ page }) => {
