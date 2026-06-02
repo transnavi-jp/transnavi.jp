@@ -10,6 +10,7 @@
   --accent: #4ba8ea;
   --accent-strong: #ff83b7;
   --accent-soft: #eef7ff;
+  --accent-term: #8a6dc6;
   --pink-soft: #fff0f7;
   --shadow: 0 14px 40px rgba(154, 207, 243, 0.18);
   --shadow-soft: 0 8px 22px rgba(255, 166, 204, 0.14);
@@ -51,6 +52,40 @@ a {
 
 a:hover {
   color: var(--accent-strong);
+}
+
+/* Glossary/term links read like dictionary terms: a distinct purple with a
+   dotted underline, so they're visibly different from ordinary links. */
+.article-shell a[href^='/glossary/'],
+.intro a[href^='/glossary/'] {
+  color: var(--accent-term);
+  text-decoration-style: dotted;
+}
+
+.article-shell a[href^='/glossary/']:hover,
+.intro a[href^='/glossary/']:hover {
+  color: var(--accent-strong);
+}
+
+/* External links get a small ↗ mark in content areas (not on button/chip-style
+   links, which are internal anyway). */
+.article-shell a[href^='http']::after,
+.intro a[href^='http']::after,
+.references a[href^='http']::after,
+.source-note a[href^='http']::after {
+  content: '\FEFF\2197';
+  margin-left: 0.05em;
+  font-size: 0.78em;
+  vertical-align: 0.12em;
+  color: var(--muted);
+}
+
+/* Don't mark button/chip links or the clinic official-site link (it already
+   says 公式サイト). */
+.hero-button[href^='http']::after,
+.word-chip[href^='http']::after,
+.clinic-links a[href^='http']::after {
+  content: none;
 }
 
 .site-header,
