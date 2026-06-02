@@ -746,8 +746,10 @@ ul {
 
 .link-chip {
   display: inline-flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 8px;
+  gap: 6px 8px;
+  max-width: 100%;
   padding: 8px 14px;
   border: 1px solid var(--line);
   border-radius: 14px;
@@ -757,6 +759,10 @@ ul {
   text-decoration: none;
   line-height: 1.4;
   transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+}
+
+.link-chip-title {
+  overflow-wrap: anywhere;
 }
 
 .link-chip:hover {
