@@ -1941,6 +1941,16 @@ ul {
 .map-dot-mental { background: #36b37e; }
 .map-dot-srs { background: #e8589b; }
 
+.map-legend-count {
+  margin-left: 5px;
+  padding: 0 6px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--muted);
+  font-size: 0.78em;
+  font-variant-numeric: tabular-nums;
+}
+
 .clinic-map { height: min(52vh, 440px); margin-top: 4px; }
 
 .clinic-map-note {
