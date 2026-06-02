@@ -539,10 +539,41 @@ ul {
   color: var(--accent-strong);
 }
 
+/* "関連ページ / 次に読む" navigation: render as big buttons (not small text
+   chips). Only applies to .entry-related navs — the glossary term cloud
+   (.word-chips without .entry-related) keeps the small pill style. */
 .entry-related {
-  margin-top: 22px;
+  margin-top: 24px;
   padding-top: 18px;
   border-top: 1px dashed var(--line);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.entry-related .word-chip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 15px 18px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-soft);
+  font-size: 0.95rem;
+  color: var(--ink);
+}
+
+.entry-related .word-chip::after {
+  content: '→';
+  color: var(--accent);
+  font-weight: 800;
+}
+
+.entry-related .word-chip:hover {
+  transform: translateY(-2px);
+  border-color: var(--line-hover);
+  box-shadow: var(--shadow-hover);
+  color: var(--ink);
 }
 
 .concept-grid {

@@ -231,7 +231,7 @@
     "avoid": [],
     "disputed": [],
     "source": "Coming Out",
-    "message": "昔の自分を、責め続けないであげてくださいね。あの子だって、何も見えない霧の中で、必死に迷っていたんだから。"
+    "message": "話すかどうか、誰に・いつ話すかは、いつだってあなたが選んでいい。あなたの安全が、いちばんです。"
   },
   {
     "id": "closeted",
@@ -539,7 +539,8 @@
     "avoid": [],
     "disputed": [],
     "notes": "指停止或逆转性别过渡的过程",
-    "source": "Detransition"
+    "source": "Detransition",
+    "message": "進む道も、立ち止まる道も、引き返す道も、ぜんぶあなたのものです。どんな選択も、責められるものではありません。"
   },
   {
     "id": "dutasteride",
@@ -595,7 +596,7 @@
     ],
     "disputed": [],
     "source": "Transgender",
-    "message": "昔の自分を、責め続けないであげてくださいね。あの子だって、何も見えない霧の中で、必死に迷っていたんだから。"
+    "message": "どんなあり方でも、あなたがあなたであることは、誰にも否定できません。"
   },
   {
     "id": "gender-identity",
@@ -631,7 +632,7 @@
     "disputed": [],
     "notes": "自分の性自認や性的指向が、まだはっきりしていない、あるいは決めていない・決めない状態。迷いや探索のさなかにいることそのものを指す言葉で、結論を急ぐ必要はありません。",
     "source": "Questioning (sexuality and gender)",
-    "message": "昔の自分を、責め続けないであげてくださいね。あの子だって、何も見えない霧の中で、必死に迷っていたんだから。"
+    "message": "まだ名前がついていなくても、大丈夫。「わからない」も、ちゃんとあなたの居場所です。"
   },
   {
     "id": "transgender-woman",
@@ -710,7 +711,8 @@
     ],
     "avoid": [],
     "disputed": [],
-    "source": "Non-binary"
+    "source": "Non-binary",
+    "message": "どちらか一つを選ばなくても、あなたはちゃんと、あなたのままでいられます。"
   },
   {
     "id": "passing",
@@ -1462,7 +1464,8 @@
     "aliases": [],
     "avoid": [],
     "disputed": [],
-    "source": "Self-acceptance"
+    "source": "Self-acceptance",
+    "message": "昔の自分を、責め続けないであげてくださいね。あの子だって、何も見えない霧の中で、必死に迷っていたんだから。"
   },
   {
     "id": "diy-hrt",
@@ -1746,7 +1749,7 @@
     ],
     "notes": "ICD-11已更新为性别不一致，但在描述心理痛苦时仍常使用性别焦虑",
     "source": "Gender Dysphoria",
-    "message": "昔の自分を、責め続けないであげてくださいね。あの子だって、何も見えない霧の中で、必死に迷っていたんだから。"
+    "message": "その違和感は、わがままではありません。ちゃんと意味のある、大切な感覚です。"
   },
   {
     "id": "gender-transition",
