@@ -502,15 +502,32 @@ ul {
 }
 
 
-.home-motto {
-  margin: 24px 0 0;
-  padding: 14px 18px 14px 22px;
+/* The site's one defiant line. Lifted out of the disclaimer card into its own
+   end-of-page band: a soft framing line buffers the tonal shift, then the
+   slogan states the site's stance on the way out. A left-bar accent quote;
+   deliberately NOT .entry-message (whose 「そっと、ひとこと」 label would
+   undercut a stance). */
+.home-flag {
+  margin: 44px 0 0;
+  padding: 18px 22px 20px 24px;
   border-left: 5px solid var(--accent);
-  border-radius: 0 14px 14px 0;
+  border-radius: 0 16px 16px 0;
   background: var(--accent-soft);
+}
+
+.home-flag-frame {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.home-flag-motto {
+  margin: 0;
   color: var(--ink);
-  font-weight: 800;
   font-size: 1.08rem;
+  font-weight: 800;
   line-height: 1.7;
 }
 
