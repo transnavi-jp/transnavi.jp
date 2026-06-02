@@ -50,7 +50,9 @@ let n = 0;
 const tally = { ja: 0, en: 0, ko: 0, th: 0, es: 0, zhHans: 0, zhHant: 0 };
 for (const e of glossary) {
   if (!e.wikidata || !links[e.wikidata]) continue;
-  e.wikipedia = links[e.wikidata];
+  // Merge, so manually-curated languages Wikidata lacks (e.g. a ja article not
+  // sitelinked to this item) are preserved; Wikidata wins where it has a value.
+  e.wikipedia = { ...(e.wikipedia || {}), ...links[e.wikidata] };
   n++;
   for (const k of Object.keys(tally)) if (e.wikipedia[k]) tally[k]++;
 }

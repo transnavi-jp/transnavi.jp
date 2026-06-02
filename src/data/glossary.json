@@ -2974,5 +2974,73 @@
       "zhHans": "https://zh.wikipedia.org/zh-hans/阴道成形术",
       "zhHant": "https://zh.wikipedia.org/zh-hant/阴道成形术"
     }
+  },
+  {
+    "id": "mastectomy",
+    "term": "乳房切除術",
+    "category": "手術",
+    "wikidata": "Q848318",
+    "translations": {
+      "en": "Mastectomy (top surgery)",
+      "ko": "유방 절제술"
+    },
+    "aliases": [
+      "胸オペ",
+      "トップサージェリー",
+      "乳房摘出"
+    ],
+    "avoid": [],
+    "disputed": [],
+    "notes": "トランス男性やノンバイナリーの人が、胸（乳房）を平らにするための手術。「胸オペ」「トップサージェリー」とも呼ばれます。",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/乳房切除術",
+      "en": "https://en.wikipedia.org/wiki/Mastectomy",
+      "ko": "https://ko.wikipedia.org/wiki/유방_절제술",
+      "es": "https://es.wikipedia.org/wiki/Mastectomía",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/乳房切除术",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/乳房切除术"
+    }
+  },
+  {
+    "id": "metoidioplasty",
+    "term": "メトイジオプラスティ",
+    "category": "手術",
+    "wikidata": "Q3291045",
+    "translations": {
+      "en": "Metoidioplasty",
+      "ko": "메토이디오플라스티"
+    },
+    "aliases": [
+      "メタ",
+      "メイ"
+    ],
+    "avoid": [],
+    "disputed": [],
+    "notes": "ホルモン療法で大きくなった陰核（クリトリス）をもとに、小さなペニスを形づくる手術。陰茎形成術より、からだへの負担が小さいとされます。",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Metoidioplasty"
+    }
+  },
+  {
+    "id": "phalloplasty",
+    "term": "陰茎形成術",
+    "category": "手術",
+    "wikidata": "Q1889215",
+    "translations": {
+      "en": "Phalloplasty",
+      "ko": "음경 재건술"
+    },
+    "aliases": [
+      "ファロプラスティ",
+      "ペニス形成"
+    ],
+    "avoid": [],
+    "disputed": [],
+    "notes": "腕や太ももなどの皮膚を使って、ペニスを形づくる手術。複数回に分けて行うことが多い、規模の大きい手術です。",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/陰茎形成術",
+      "en": "https://en.wikipedia.org/wiki/Phalloplasty",
+      "es": "https://es.wikipedia.org/wiki/Faloplastia"
+    }
   }
 ]
