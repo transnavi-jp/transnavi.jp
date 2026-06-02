@@ -38,9 +38,8 @@ const routes = [
     </p>
     <nav class="hero-nav" aria-label="主要なページ">
       {heroNav.map((item) => (
-        <a class:list={['hero-nav-card', { 'is-primary': item.primary }]} href={item.href}>
-          <span class="hero-nav-label">{item.label}</span>
-          <span class="hero-nav-desc">{item.desc}</span>
+        <a class:list={['hero-button', { 'hero-button-primary': item.primary }]} href={item.href} title={item.desc}>
+          {item.label}
         </a>
       ))}
     </nav>
@@ -48,7 +47,7 @@ const routes = [
 
   <section aria-labelledby="reassure">
     <h2 id="reassure">まず、安心してほしいこと</h2>
-    <ul class="assure-list">
+    <ul class="assure-list assure-list-pills">
       <li>すぐに決めなくていい</li>
       <li>ひとりで抱えなくていい</li>
       <li>誰かに話すかどうかは自分で選んでいい</li>
