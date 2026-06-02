@@ -14,6 +14,7 @@ const pages = [
   '/flags/',
   '/pride/',
   '/clinics/',
+  '/map/',
   '/glossary/',
   '/works/',
   '/legal/',

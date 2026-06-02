@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import clinicsData from '../data/clinics.json';
+import poisData from '../data/map-pois.json';
+import type { Clinic } from '../types/clinic';
+
+const clinics = (clinicsData as Clinic[])
+  .filter((c) => typeof c.lat === 'number' && typeof c.lng === 'number')
+  .map((c) => ({
+    id: c.id,
+    name: c.name,
+    area: [c.prefecture, c.city].filter(Boolean).join(' '),
+    approx: c.geoSource !== 'address',
+    lat: c.lat,
+    lng: c.lng,
+  }));
+
+const pois = poisData as { name: string; type: string; url: string; lat: number; lng: number }[];
+const mapData = { clinics, pois };
+---
+
+<BaseLayout
+  title="地図で探す（医療機関・団体・イベント） - とらんすナビ"
+  description="ホルモン療法などの医療機関、当事者団体・拠点、プライドイベントを地図の上でまとめて探せます。"
+>
+  <article class="article-shell">
+    <div class="eyebrow">地図で探す</div>
+    <h1>地図で探す</h1>
+    <p class="lead">
+      医療機関、団体・拠点、イベントを、地図の上でまとめて見られます。気になるピンをタップすると、掲載ページや公式サイトへ進めます。
+    </p>
+
+    <div class="map-legend" aria-label="地図の凡例">
+      <label><input type="checkbox" data-map-toggle="clinic" checked /><span class="map-dot map-dot-clinic" aria-hidden="true"></span>医療機関</label>
+      <label><input type="checkbox" data-map-toggle="org" checked /><span class="map-dot map-dot-org" aria-hidden="true"></span>団体・拠点</label>
+      <label><input type="checkbox" data-map-toggle="event" checked /><span class="map-dot map-dot-event" aria-hidden="true"></span>イベント</label>
+    </div>
+
+    <div id="map" class="map-canvas" role="application" aria-label="医療機関・団体・イベントの地図">
+      <p class="map-fallback">地図を表示するには JavaScript が必要です。<a href="/clinics/">医療機関の一覧</a>や<a href="/resources/">関連サイト</a>からも探せます。</p>
+    </div>
+
+    <p class="resource-section-intro">
+      ピンの位置は、住所をもとにおおよそで表示しています（番地が不明なものは市区町村のおおよその位置です）。正確な所在地や診療内容は、必ず各施設・団体の公式情報で確認してください。
+    </p>
+
+    <nav class="word-chips entry-related" aria-label="関連ページ">
+      <a class="word-chip" href="/clinics/">医療機関の一覧</a>
+      <a class="word-chip" href="/resources/">団体・関連サイト</a>
+      <a class="word-chip" href="/pride/">記念日・イベント</a>
+    </nav>
+
+    <p class="source-note">
+      地図は <a href="https://maplibre.org/" target="_blank" rel="noreferrer">MapLibre GL</a> と
+      {' '}<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a>
+      のタイルを使っています。住所から座標への変換には
+      {' '}<a href="https://www.gsi.go.jp/" target="_blank" rel="noreferrer">国土地理院</a>のジオコーディングを利用しました。
+    </p>
+  </article>
+
+  <script type="application/json" id="map-data" set:html={JSON.stringify(mapData)} />
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
+  <script is:inline src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+  <script is:inline src="/map.js" defer></script>
+</BaseLayout>

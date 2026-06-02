@@ -16,4 +16,7 @@ export interface Clinic {
   verificationStatus: string;
   importedAt: string;
   notes: string;
+  lat?: number;
+  lng?: number;
+  geoSource?: string;
 }

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "プライドハウス東京レガシー",
+    "type": "org",
+    "url": "https://pridehouse.jp/",
+    "lat": 35.689556,
+    "lng": 139.71225
+  },
+  {
+    "name": "SHIP（横浜）",
+    "type": "org",
+    "url": "https://ship.or.jp/",
+    "lat": 35.450336,
+    "lng": 139.634216
+  },
+  {
+    "name": "L-Port（札幌）",
+    "type": "org",
+    "url": "https://l-port.net/",
+    "lat": 43.05545,
+    "lng": 141.341095
+  },
+  {
+    "name": "PROUD LIFE（名古屋）",
+    "type": "org",
+    "url": "https://proudlife.org/",
+    "lat": 35.181438,
+    "lng": 136.90657
+  },
+  {
+    "name": "QWRC（大阪）",
+    "type": "org",
+    "url": "https://qwrc.org/",
+    "lat": 34.69389,
+    "lng": 135.502228
+  },
+  {
+    "name": "プライドセンター大阪",
+    "type": "org",
+    "url": "https://pridecenter.jp/",
+    "lat": 34.700069,
+    "lng": 135.519958
+  },
+  {
+    "name": "ピンクドット沖縄",
+    "type": "org",
+    "url": "https://pinkdot-okinawa.com/",
+    "lat": 26.212374,
+    "lng": 127.679108
+  },
+  {
+    "name": "G-Front関西 トランスサロン",
+    "type": "org",
+    "url": "http://www5e.biglobe.ne.jp/~gfront/",
+    "lat": 34.69389,
+    "lng": 135.502228
+  },
+  {
+    "name": "きんきトランス・ミーティング",
+    "type": "org",
+    "url": "https://x.com/kintoramtg",
+    "lat": 34.69389,
+    "lng": 135.502228
+  },
+  {
+    "name": "東京レインボープライド",
+    "type": "event",
+    "url": "https://tokyorainbowpride.com/",
+    "lat": 35.681885,
+    "lng": 139.700043
+  },
+  {
+    "name": "関西レインボーフェスタ",
+    "type": "event",
+    "url": "/pride/",
+    "lat": 34.69389,
+    "lng": 135.502228
+  },
+  {
+    "name": "K.G. Rainbow Week（関西学院大学）",
+    "type": "event",
+    "url": "/pride/",
+    "lat": 34.73774,
+    "lng": 135.341843
+  }
+]
