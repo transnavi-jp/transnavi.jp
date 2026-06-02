@@ -9,7 +9,8 @@
       "en": "17β-Estradiol",
       "zhHans": "17β-雌二醇",
       "zhHant": "17β-雌二醇",
-      "es": "17β-Estradiol"
+      "es": "17β-Estradiol",
+      "ko": "에스트라디올"
     },
     "aliases": [
       "Oestradiol",
@@ -30,7 +31,8 @@
       "en": "GnRH Analogues",
       "zhHans": "GnRH 类似物",
       "zhHant": "GnRH 類似物",
-      "es": "Análogos de GnRH"
+      "es": "Análogos de GnRH",
+      "ko": "성선자극호르몬분비호르몬 작용제"
     },
     "aliases": [
       "ホルモンブロッカー",
@@ -50,7 +52,8 @@
       "en": "Force Outing",
       "zhHans": "踹柜门",
       "zhHant": "踹櫃門",
-      "es": "Outing Forzado"
+      "es": "Outing Forzado",
+      "ko": "아웃팅"
     },
     "aliases": [],
     "avoid": [],
@@ -156,7 +159,9 @@
       "en": "Estrogen",
       "zhHans": "雌激素",
       "zhHant": "雌激素",
-      "es": "Estrógeno"
+      "es": "Estrógeno",
+      "ko": "에스트로겐",
+      "th": "เอสโตรเจน"
     },
     "aliases": [
       "卵胞ホルモン"
@@ -176,7 +181,8 @@
       "en": "Estrone",
       "zhHans": "雌酮",
       "zhHant": "雌酮",
-      "es": "Estrona"
+      "es": "Estrona",
+      "ko": "에스트론"
     },
     "aliases": [],
     "avoid": [],
@@ -194,7 +200,8 @@
       "en": "Ethinylestradiol",
       "zhHans": "乙炔雌二醇",
       "zhHant": "乙炔雌二醇",
-      "es": "Etinilestradiol"
+      "es": "Etinilestradiol",
+      "ko": "에티닐에스트라다이올"
     },
     "aliases": [
       "ダイアン-35（商品名）"
@@ -213,7 +220,8 @@
       "en": "Estradiol Enanthate",
       "zhHans": "庚酸雌二醇",
       "zhHant": "庚酸雌二醇",
-      "es": "Enantato de Estradiol"
+      "es": "Enantato de Estradiol",
+      "ko": "에스트라디올 에난테이트"
     },
     "aliases": [],
     "avoid": [],
@@ -231,7 +239,9 @@
       "en": "Coming Out",
       "zhHans": "出柜",
       "zhHant": "出櫃",
-      "es": "Salir del Clóset"
+      "es": "Salir del Clóset",
+      "ko": "커밍아웃",
+      "th": "การเปิดเผยอัตลักษณ์ทางเพศของตน"
     },
     "aliases": [],
     "avoid": [],
@@ -249,7 +259,8 @@
       "en": "In the Closet",
       "zhHans": "深柜",
       "zhHant": "深櫃",
-      "es": "En el Clóset"
+      "es": "En el Clóset",
+      "ko": "클로짓"
     },
     "aliases": [],
     "avoid": [],
@@ -319,7 +330,9 @@
       "en": "Gonadotropins",
       "zhHans": "促性腺激素",
       "zhHant": "促性腺激素",
-      "es": "Gonadotropinas"
+      "es": "Gonadotropinas",
+      "ko": "생식선자극호르몬",
+      "th": "โกนาโดโทรฟิน"
     },
     "aliases": [],
     "avoid": [],
@@ -336,7 +349,8 @@
       "en": "Cisgender",
       "zhHans": "顺性别",
       "zhHant": "順性別",
-      "es": "Cisgénero"
+      "es": "Cisgénero",
+      "ko": "시스젠더"
     },
     "aliases": [
       "シス"
@@ -355,7 +369,8 @@
       "en": "Cisgender Woman",
       "zhHans": "顺性别女性",
       "zhHant": "順性別女性",
-      "es": "Mujer Cisgénero"
+      "es": "Mujer Cisgénero",
+      "ko": "시스여성"
     },
     "aliases": [
       "シス女性"
@@ -374,7 +389,8 @@
       "en": "Cisgender Man",
       "zhHans": "顺性别男性",
       "zhHant": "順性別男性",
-      "es": "Hombre Cisgénero"
+      "es": "Hombre Cisgénero",
+      "ko": "시스남성"
     },
     "aliases": [
       "シス男性"
@@ -411,7 +427,8 @@
       "en": "Dihydrotestosterone",
       "zhHans": "双氢睾酮",
       "zhHant": "雙氫睾酮",
-      "es": "Dihidrotestosterona"
+      "es": "Dihidrotestosterona",
+      "ko": "디하이드로테스토스테론"
     },
     "aliases": [
       "DHT"
@@ -446,7 +463,8 @@
       "en": "Spironolactone",
       "zhHans": "螺内酯",
       "zhHant": "螺內酯",
-      "es": "Espironolactona"
+      "es": "Espironolactona",
+      "ko": "스피로놀락톤"
     },
     "aliases": [
       "アルダクトン（商品名）",
@@ -466,7 +484,8 @@
       "en": "Vaginal Dilator",
       "zhHans": "阴道扩张器",
       "zhHant": "陰道擴張器",
-      "es": "Dilatador Vaginal"
+      "es": "Dilatador Vaginal",
+      "ko": "질확장기"
     },
     "aliases": [],
     "avoid": [],
@@ -500,7 +519,9 @@
       "en": "Dexamethasone",
       "zhHans": "地塞米松",
       "zhHant": "地塞米松",
-      "es": "Dexametasona"
+      "es": "Dexametasona",
+      "ko": "덱사메타손",
+      "th": "เด็กซาเมทาโซน"
     },
     "aliases": [],
     "avoid": [],
@@ -518,7 +539,9 @@
       "en": "Testosterone",
       "zhHans": "睾酮",
       "zhHant": "睾酮",
-      "es": "Testosterona"
+      "es": "Testosterona",
+      "ko": "테스토스테론",
+      "th": "เทสโทสเตอโรน"
     },
     "aliases": [
       "アンドロゲン"
@@ -537,7 +560,8 @@
       "en": "Deadnaming",
       "zhHans": "弃名错称",
       "zhHant": "棄名錯稱",
-      "es": "Deadnaming"
+      "es": "Deadnaming",
+      "ko": "데드네이밍"
     },
     "aliases": [],
     "avoid": [],
@@ -554,7 +578,8 @@
       "en": "Detransition",
       "zhHans": "逆性别过渡",
       "zhHant": "逆性別過渡",
-      "es": "Detransición"
+      "es": "Detransición",
+      "ko": "탈성전환"
     },
     "aliases": [
       "デトランス"
@@ -574,7 +599,8 @@
       "en": "Dutasteride",
       "zhHans": "度他雄胺",
       "zhHant": "度他雄胺",
-      "es": "Dutasterida"
+      "es": "Dutasterida",
+      "ko": "두타스테리드"
     },
     "aliases": [
       "ザガーロ",
@@ -610,7 +636,9 @@
       "en": "Transgender",
       "zhHans": "跨性别",
       "zhHant": "跨性別",
-      "es": "Transgénero"
+      "es": "Transgénero",
+      "ko": "트랜스젠더",
+      "th": "คนข้ามเพศ"
     },
     "aliases": [
       "トランス"
@@ -671,7 +699,9 @@
       "en": "Transgender Woman",
       "zhHans": "跨性别女性",
       "zhHant": "跨性別女性",
-      "es": "Mujer Transgénero"
+      "es": "Mujer Transgénero",
+      "ko": "트랜스여성",
+      "th": "ผู้หญิงข้ามเพศ"
     },
     "aliases": [
       "MtF",
@@ -715,7 +745,9 @@
       "en": "TERF",
       "zhHans": "排跨激进女权主义者",
       "zhHant": "排跨激進女權主義者",
-      "es": "TERF"
+      "es": "TERF",
+      "ko": "TERF",
+      "th": "เทิร์ฟ"
     },
     "aliases": [],
     "avoid": [],
@@ -750,7 +782,9 @@
       "en": "Non-binary",
       "zhHans": "非二元性别",
       "zhHant": "非二元性別",
-      "es": "No binario"
+      "es": "No binario",
+      "ko": "논바이너리",
+      "th": "นอนไบนารี"
     },
     "aliases": [
       "Xジェンダー"
@@ -770,7 +804,8 @@
       "en": "Passing",
       "zhHans": "过关",
       "zhHant": "過關",
-      "es": "Pasar"
+      "es": "Pasar",
+      "ko": "패싱"
     },
     "aliases": [
       "パス"
@@ -807,7 +842,8 @@
       "en": "Finasteride",
       "zhHans": "非那雄胺",
       "zhHant": "非那雄胺",
-      "es": "Finasterida"
+      "es": "Finasterida",
+      "ko": "피나스테리드"
     },
     "aliases": [
       "プロペシア"
@@ -827,7 +863,9 @@
       "en": "Progesterone",
       "zhHans": "孕酮",
       "zhHant": "孕酮",
-      "es": "Progesterona"
+      "es": "Progesterona",
+      "ko": "프로제스테론",
+      "th": "โพรเจสเทอโรน"
     },
     "aliases": [
       "黄体ホルモン"
@@ -845,7 +883,8 @@
       "en": "Progestogen",
       "zhHans": "孕激素",
       "zhHant": "孕激素",
-      "es": "Progestágeno"
+      "es": "Progestágeno",
+      "ko": "프로게스타겐"
     },
     "aliases": [
       "プロゲスチン"
@@ -865,7 +904,9 @@
       "en": "Prolactin",
       "zhHans": "泌乳素",
       "zhHant": "泌乳素",
-      "es": "Prolactina"
+      "es": "Prolactina",
+      "ko": "프로락틴",
+      "th": "โพรแลกติน"
     },
     "aliases": [],
     "avoid": [],
@@ -881,7 +922,8 @@
       "en": "Misgendering",
       "zhHans": "性别错称",
       "zhHant": "性別錯稱",
-      "es": "Misgendering"
+      "es": "Misgendering",
+      "ko": "미스젠더링"
     },
     "aliases": [],
     "avoid": [],
@@ -898,7 +940,9 @@
       "en": "Minoxidil",
       "zhHans": "米诺地尔",
       "zhHant": "米諾地爾",
-      "es": "Minoxidil"
+      "es": "Minoxidil",
+      "ko": "미녹시딜",
+      "th": "ไมน็อกซิดิล"
     },
     "aliases": [
       "リアップ"
@@ -917,7 +961,8 @@
       "en": "Raloxifene",
       "zhHans": "雷洛昔芬",
       "zhHant": "雷洛昔芬",
-      "es": "Raloxifeno"
+      "es": "Raloxifeno",
+      "ko": "랄록시펜"
     },
     "aliases": [
       "エビスタ"
@@ -973,7 +1018,8 @@
       "en": "Cross-dresser",
       "zhHans": "异装者",
       "zhHant": "異裝者",
-      "es": "Travesti"
+      "es": "Travesti",
+      "ko": "크로스드레싱"
     },
     "aliases": [
       "女装者"
@@ -995,7 +1041,9 @@
       "en": "Clitoris",
       "zhHans": "阴蒂",
       "zhHant": "陰蒂",
-      "es": "Clítoris"
+      "es": "Clítoris",
+      "ko": "음핵",
+      "th": "คลิตอริส"
     },
     "aliases": [
       "クリトリス"
@@ -1031,7 +1079,9 @@
       "en": "Labia",
       "zhHans": "阴唇",
       "zhHant": "陰唇",
-      "es": "Labios Vulvares"
+      "es": "Labios Vulvares",
+      "ko": "음순",
+      "th": "แคม"
     },
     "aliases": [],
     "avoid": [],
@@ -1155,7 +1205,9 @@
       "en": "Liver Function",
       "zhHans": "肝功能",
       "zhHant": "肝功能",
-      "es": "Función Hepática"
+      "es": "Función Hepática",
+      "ko": "간기능 검사",
+      "th": "การตรวจการทำงานของตับ"
     },
     "aliases": [],
     "avoid": [],
@@ -1172,7 +1224,8 @@
       "en": "Facial Feminization Surgery",
       "zhHans": "面部女性化手术",
       "zhHant": "面部女性化手術",
-      "es": "Cirugía de Feminización Facial"
+      "es": "Cirugía de Feminización Facial",
+      "ko": "얼굴 여성화 수술"
     },
     "aliases": [
       "顔面女性化"
@@ -1191,7 +1244,9 @@
       "en": "Fundamental Frequency",
       "zhHans": "基频",
       "zhHant": "基頻",
-      "es": "Frecuencia Fundamental"
+      "es": "Frecuencia Fundamental",
+      "ko": "기본 주파수",
+      "th": "ความถี่มูลฐาน"
     },
     "aliases": [],
     "avoid": [],
@@ -1297,7 +1352,8 @@
       "en": "Thromboembolism",
       "zhHans": "血栓栓塞",
       "zhHant": "血栓栓塞",
-      "es": "Tromboembolismo"
+      "es": "Tromboembolismo",
+      "ko": "혈전색전증"
     },
     "aliases": [],
     "avoid": [],
@@ -1331,7 +1387,8 @@
       "en": "Employment Discrimination",
       "zhHans": "就业歧视",
       "zhHant": "就業歧視",
-      "es": "Discriminación Laboral"
+      "es": "Discriminación Laboral",
+      "ko": "고용 차별"
     },
     "aliases": [],
     "avoid": [],
@@ -1387,7 +1444,9 @@
       "en": "Hyperkalemia",
       "zhHans": "高钾血症",
       "zhHant": "高鉀血症",
-      "es": "Hiperpotasemia"
+      "es": "Hiperpotasemia",
+      "ko": "고칼륨혈증",
+      "th": "ภาวะมีโพแทสเซียมในเลือดมากเกิน"
     },
     "aliases": [],
     "avoid": [],
@@ -1404,7 +1463,9 @@
       "en": "Osteoporosis",
       "zhHans": "骨质疏松症",
       "zhHant": "骨質疏鬆症",
-      "es": "Osteoporosis"
+      "es": "Osteoporosis",
+      "ko": "골다공증",
+      "th": "โรคกระดูกพรุน"
     },
     "aliases": [],
     "avoid": [],
@@ -1439,7 +1500,8 @@
       "en": "Bone Mineral Density",
       "zhHans": "骨密度",
       "zhHant": "骨密度",
-      "es": "Densidad Mineral Ósea"
+      "es": "Densidad Mineral Ósea",
+      "ko": "골밀도"
     },
     "aliases": [],
     "avoid": [],
@@ -1475,7 +1537,8 @@
       "en": "Assigned Gender",
       "zhHans": "指派性别",
       "zhHant": "指派性別",
-      "es": "Género Asignado"
+      "es": "Género Asignado",
+      "ko": "지정성별"
     },
     "aliases": [
       "出生時に割り当てられた性別",
@@ -1500,7 +1563,9 @@
       "en": "Self-acceptance",
       "zhHans": "自我接纳",
       "zhHant": "自我接納",
-      "es": "Autoaceptación"
+      "es": "Autoaceptación",
+      "ko": "자기수용",
+      "th": "การยอมรับตนเอง"
     },
     "aliases": [],
     "avoid": [],
@@ -1556,7 +1621,8 @@
       "en": "Assigned Female at Birth",
       "zhHans": "出生时指派女性",
       "zhHant": "出生時指派女性",
-      "es": "Asignada mujer al nacer"
+      "es": "Asignada mujer al nacer",
+      "ko": "지정여성"
     },
     "aliases": [],
     "avoid": [],
@@ -1574,7 +1640,8 @@
       "en": "Assigned Male at Birth",
       "zhHans": "出生时指派男性",
       "zhHant": "出生時指派男性",
-      "es": "Asignado hombre al nacer"
+      "es": "Asignado hombre al nacer",
+      "ko": "지정남성"
     },
     "aliases": [],
     "avoid": [],
@@ -1646,7 +1713,8 @@
       "en": "Medroxyprogesterone Acetate",
       "zhHans": "醋酸甲羟孕酮",
       "zhHant": "醋酸甲羥孕酮",
-      "es": "Acetato de Medroxiprogesterona"
+      "es": "Acetato de Medroxiprogesterona",
+      "th": "เมดร็อกซีโพรเจสเทอโรนอะซีเทต"
     },
     "aliases": [
       "メドロキシプロゲステロン酢酸エステル"
@@ -1737,7 +1805,9 @@
       "en": "Transsexualism",
       "zhHans": "易性症",
       "zhHant": "易性症",
-      "es": "Transexualismo"
+      "es": "Transexualismo",
+      "ko": "성전환증",
+      "th": "ภาวะอยากแปลงเพศ"
     },
     "aliases": [],
     "avoid": [],
@@ -1771,7 +1841,9 @@
       "en": "Gender Dysphoria",
       "zhHans": "性别不安",
       "zhHant": "性別不安",
-      "es": "Disforia de Género"
+      "es": "Disforia de Género",
+      "ko": "성별 불일치",
+      "th": "ความทุกข์ใจในเพศสภาพ"
     },
     "aliases": [
       "性別違和感",
@@ -1814,7 +1886,8 @@
       "en": "Gender-Affirming Hormone Therapy",
       "zhHans": "性别肯定激素治疗",
       "zhHant": "性別肯定激素治療",
-      "es": "Terapia Hormonal de Afirmación de Género"
+      "es": "Terapia Hormonal de Afirmación de Género",
+      "ko": "트랜스젠더 호르몬 치료"
     },
     "aliases": [
       "HRT",
@@ -1836,7 +1909,8 @@
       "en": "Gender Affirmation Surgery",
       "zhHans": "性别肯定手术",
       "zhHant": "性別肯定手術",
-      "es": "Cirugía de Afirmación de Género"
+      "es": "Cirugía de Afirmación de Género",
+      "ko": "성전환 수술"
     },
     "aliases": [
       "SRS",
@@ -1875,7 +1949,9 @@
       "en": "Gender Expression",
       "zhHans": "性别表达",
       "zhHant": "性別表達",
-      "es": "Expresión de Género"
+      "es": "Expresión de Género",
+      "ko": "구역",
+      "th": "อาณาเขต"
     },
     "aliases": [],
     "avoid": [],
@@ -1893,7 +1969,8 @@
       "en": "Gender Incongruence",
       "zhHans": "性别不一致",
       "zhHant": "性別不一致",
-      "es": "Incongruencia de Género"
+      "es": "Incongruencia de Género",
+      "ko": "성별 불일치"
     },
     "aliases": [],
     "avoid": [
@@ -1913,7 +1990,8 @@
       "en": "Legal Gender Recognition",
       "zhHans": "性别变更",
       "zhHant": "性別變更",
-      "es": "Reconocimiento Legal de Género"
+      "es": "Reconocimiento Legal de Género",
+      "ko": "성별 인정"
     },
     "aliases": [],
     "avoid": [],
@@ -1930,7 +2008,8 @@
       "en": "Orchiectomy",
       "zhHans": "睾丸切除术",
       "zhHant": "睪丸切除術",
-      "es": "Orquiectomía"
+      "es": "Orquiectomía",
+      "ko": "고환 적출술"
     },
     "aliases": [
       "去勢"
@@ -1951,7 +2030,8 @@
       "en": "Vocal Folds",
       "zhHans": "声带",
       "zhHant": "聲帶",
-      "es": "Cuerdas Vocales"
+      "es": "Cuerdas Vocales",
+      "ko": "성대"
     },
     "aliases": [],
     "avoid": [],
@@ -2005,7 +2085,9 @@
       "en": "Prostate",
       "zhHans": "前列腺",
       "zhHant": "前列腺",
-      "es": "Próstata"
+      "es": "Próstata",
+      "ko": "전립샘",
+      "th": "ต่อมลูกหมาก"
     },
     "aliases": [],
     "avoid": [],
@@ -2022,7 +2104,8 @@
       "en": "Hair Loss",
       "zhHans": "脱发",
       "zhHant": "脫髮",
-      "es": "Pérdida de Cabello"
+      "es": "Pérdida de Cabello",
+      "ko": "탈모증"
     },
     "aliases": [
       "薄毛"
@@ -2041,7 +2124,8 @@
       "en": "Conversion Therapy",
       "zhHans": "扭转治疗",
       "zhHant": "扭轉治療",
-      "es": "Terapia de Conversión"
+      "es": "Terapia de Conversión",
+      "ko": "전환 치료"
     },
     "aliases": [
       "修復療法"
@@ -2076,7 +2160,9 @@
       "en": "Endocrinology",
       "zhHans": "内分泌科",
       "zhHant": "內分泌科",
-      "es": "Endocrinología"
+      "es": "Endocrinología",
+      "ko": "내분비학",
+      "th": "วิทยาต่อมไร้ท่อ"
     },
     "aliases": [],
     "avoid": [],
@@ -2093,7 +2179,9 @@
       "en": "Breast Cancer",
       "zhHans": "乳腺癌",
       "zhHant": "乳癌",
-      "es": "Cáncer de Mama"
+      "es": "Cáncer de Mama",
+      "ko": "유방암",
+      "th": "มะเร็งเต้านม"
     },
     "aliases": [],
     "avoid": [],
@@ -2126,7 +2214,9 @@
       "en": "Urethra",
       "zhHans": "尿道",
       "zhHant": "尿道",
-      "es": "Uretra"
+      "es": "Uretra",
+      "ko": "요도",
+      "th": "ท่อปัสสาวะ"
     },
     "aliases": [],
     "avoid": [],
@@ -2163,7 +2253,8 @@
       "en": "Breast Augmentation",
       "zhHans": "隆乳术",
       "zhHant": "隆乳術",
-      "es": "Aumento de Senos"
+      "es": "Aumento de Senos",
+      "ko": "유방 확대술"
     },
     "aliases": [
       "豊胸"
@@ -2181,7 +2272,8 @@
       "en": "Vaginoplasty",
       "zhHans": "阴道成形术",
       "zhHant": "陰道成形術",
-      "es": "Vaginoplastia"
+      "es": "Vaginoplastia",
+      "ko": "질성형술"
     },
     "aliases": [
       "SRS",

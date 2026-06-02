@@ -9,6 +9,8 @@ export interface GlossaryEntry {
     zhHans?: string;
     zhHant?: string;
     es?: string;
+    ko?: string;
+    th?: string;
   };
   aliases: string[];
   avoid: string[];
