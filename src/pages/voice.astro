@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const tools = [
+  { name: 'Vocal Pitch Monitor', note: 'スマホで自分の声の高さをリアルタイムに表示（Android/iOS）。' },
+  { name: 'Praat', note: 'パソコン用の音声分析ソフト。ピッチや共鳴を細かく見られます。' },
+  { name: 'Friture', note: 'パソコンで声をリアルタイムに可視化できる無料ツール。' },
+];
+---
+
+<BaseLayout
+  title="声を変える練習（ボイストレーニング入門） - とらんすナビ"
+  description="声の女性化・男性化の基本。声は高さだけでなく共鳴や話し方も。お金も医療もなく自宅で始められます。"
+>
+  <article class="article-shell">
+    <div class="eyebrow">知る</div>
+    <h1>声を変える練習</h1>
+    <p class="lead">
+      声は、性別の印象に大きく関わる一方で、練習で少しずつ変えられる部分があります。お金も医療もなしに、自宅で今日から始められます。
+    </p>
+
+    <section aria-labelledby="not-just-pitch">
+      <h2 id="not-just-pitch">声は「高さ」だけじゃない</h2>
+      <p>声の印象は、いくつかの要素でできています。高さだけを変えようとすると、無理が出やすくなります。</p>
+      <div class="concept-grid">
+        <div class="concept-card"><h3>ピッチ（高さ）</h3><p>声の高い・低い。上げすぎて裏声に頼ると、かえって不自然になりがちです。</p></div>
+        <div class="concept-card"><h3>共鳴（レゾナンス）</h3><p>声の太さ・明るさ。のどや口の使い方で変わり、印象への影響が大きい要素です。</p></div>
+        <div class="concept-card"><h3>話し方</h3><p>抑揚（イントネーション）、間の取り方、言葉選びなど。高さ以上に印象を左右します。</p></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="fem">
+      <h2 id="fem">女性化の基本</h2>
+      <p>ピッチを少しだけ上げ、共鳴を前のほうに・明るく、抑揚をやわらかく豊かに。大切なのは「裏声で高くする」のではなく、楽に出せる範囲で響きを変えることです。</p>
+    </section>
+
+    <section aria-labelledby="masc">
+      <h2 id="masc">男性化の基本</h2>
+      <p>テストステロンを使うと声は自然に低くなることが多いですが、声が変わってからも、共鳴を下げ抑揚を落ち着かせる「話し方」の練習は役立ちます。ホルモンを使わない場合も、話し方の練習で印象は変えられます。</p>
+    </section>
+
+    <section aria-labelledby="how">
+      <h2 id="how">練習のコツ</h2>
+      <ul class="assure-list">
+        <li>短く、毎日。長時間より、少しずつ続けるほうが身につきます。</li>
+        <li>録音して聴く。自分の耳で聞こえる声と、録音の声は違います。</li>
+        <li>のどを締めない。痛みや違和感が出たら、すぐにやめてください。</li>
+        <li>やりすぎない。声は楽器です。無理をすると傷めることがあります。</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="tools">
+      <h2 id="tools">声を「見える化」する無料ツール</h2>
+      <p class="resource-section-intro">自分の声の高さを目で見ながら練習すると、変化がわかりやすくなります。</p>
+      <ul class="assure-list assure-list-plain">
+        {tools.map((tool) => <li><strong>{tool.name}</strong> — {tool.note}</li>)}
+      </ul>
+    </section>
+
+    <section aria-labelledby="help">
+      <h2 id="help">一人で難しいときは</h2>
+      <p>
+        言語聴覚士（ST）による声の指導を受けられる医療機関もあります。声の女性化手術という選択肢もありますが、まずは練習から始めるのが一般的です。日本語の発信としては<a href="/resources/">関連サイト</a>のさつきぽん（西原さつき）さんなども参考になります。
+      </p>
+    </section>
+
+    <aside class="entry-message" role="note" aria-label="読んでいるあなたへ">
+      <p>声はすぐには変わりません。時間がかかって当たり前です。比べる相手は、昨日の自分だけで大丈夫です。</p>
+    </aside>
+
+    <nav class="word-chips entry-related" aria-label="関連ページ">
+      <a class="word-chip" href="/transition/">性別移行を知る</a>
+      <a class="word-chip" href="/resources/">発信・メディア</a>
+      <a class="word-chip" href="/glossary/">用語集</a>
+    </nav>
+
+    <p class="source-note">
+      声の練習の技法は世界共通で、日本でもそのまま使えます。より詳しい解説は
+      {' '}<a href="https://mtf.wiki/" target="_blank" rel="noreferrer">MtF.wiki</a>
+      の声のトレーニングの項目なども参考になります。痛みが続くときは医療機関にご相談ください。
+    </p>
+  </article>
+</BaseLayout>

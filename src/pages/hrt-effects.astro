@@ -1,0 +1,95 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const hrtOverview = '/library/mtf-wiki-ja/docs/medicine/hrt-overview/';
+
+const estrogen = [
+  '乳房がふくらみはじめる（3〜6か月ごろから／安定まで2〜3年が目安）',
+  '体脂肪が女性的な位置に移り、体つきが丸みを帯びる',
+  '肌がやわらかくなり、皮脂が減る',
+  '体毛がやわらかく・薄くなる（ひげは消えにくい）',
+  '筋肉量が落ちる',
+  '勃起や性欲が変化する',
+];
+const testosterone = [
+  '声が低くなる（数か月〜／戻りません）',
+  'ひげや体毛が濃くなる',
+  '体脂肪が男性的な位置に移る',
+  '筋肉がつきやすくなる',
+  '皮脂が増え、にきびが出やすくなる',
+  '月経が止まる',
+  '陰核が大きくなる',
+  '人によっては頭髪が後退しやすくなる',
+];
+---
+
+<BaseLayout
+  title="ホルモン療法で起きること（第二の思春期） - とらんすナビ"
+  description="ホルモン療法（HRT）で、からだはどう変わっていくのか。エストロゲン／テストステロン方向の変化の目安と、戻る変化・戻らない変化について。"
+>
+  <article class="article-shell">
+    <div class="eyebrow">知る</div>
+    <h1>ホルモン療法で起きること</h1>
+    <p class="page-disclaimer">
+      情報提供のみを目的としたページです。効果や時間には大きな個人差があり、最新・正確とはかぎりません。具体的な薬や量、検査の判断は、必ず医師に相談してください。
+    </p>
+    <p class="lead">
+      ホルモン療法（<a href="/glossary/gaht/">HRT</a>）は、望む性別の方向へ、もう一度「思春期」をやり直すように、からだを少しずつ変えていく治療です。
+    </p>
+
+    <section aria-labelledby="basics">
+      <h2 id="basics">はじめに知っておきたいこと</h2>
+      <ul class="assure-list">
+        <li><strong>ホルモンは魔法ではありません。</strong>変化はゆっくりで、人によって大きく違います。</li>
+        <li>気持ちの落ち着きが先に来て、見た目の変化はあとからのことも多いです。</li>
+        <li>必ず医師のもとで、検査をしながら進めるものです。自己判断は危険です。</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="estro">
+      <h2 id="estro">エストロゲン（女性化）の方向</h2>
+      <p>エストロゲンと、必要に応じて抗アンドロゲン薬を使います。おもな変化の目安です。</p>
+      <ul class="assure-list assure-list-plain">
+        {estrogen.map((e) => <li>{e}</li>)}
+      </ul>
+      <p><strong>戻る変化・戻らない変化：</strong>多くは中止すると戻りますが、ふくらんだ乳房や、生殖機能への影響は、戻らないことがあります。</p>
+    </section>
+
+    <section aria-labelledby="testo">
+      <h2 id="testo">テストステロン（男性化）の方向</h2>
+      <p>テストステロンを使います。おもな変化の目安です。</p>
+      <ul class="assure-list assure-list-plain">
+        {testosterone.map((t) => <li>{t}</li>)}
+      </ul>
+      <p><strong>戻る変化・戻らない変化：</strong>声・体毛・陰核の変化などは、基本的に戻りません。</p>
+      <p><strong>大切な注意：</strong>月経が止まっても、それは避妊ではありません。月経がなくても妊娠することがあります。</p>
+    </section>
+
+    <section aria-labelledby="before">
+      <h2 id="before">始める前に考えること</h2>
+      <p>ホルモン療法は、妊孕性（子どもをもつ力）に影響することがあります。希望があるかもしれない人は、始める前に<a href="/fertility/">妊孕性と「始める前」の選択</a>も読んでみてください。</p>
+    </section>
+
+    <section aria-labelledby="more">
+      <h2 id="more">もっと詳しく</h2>
+      <p>
+        薬の種類（飲み薬・舌下・貼り薬・ゲル・注射）や検査、リスクについては<a href={hrtOverview}>ホルモン療法の基礎（資料集）</a>へ。受けられる<a href="/clinics/">医療機関</a>も探せます。具体的な量や目標値は、このサイトでは扱いません。必ず医師と決めてください。
+      </p>
+    </section>
+
+    <nav class="word-chips entry-related" aria-label="関連ページ">
+      <a class="word-chip" href="/transition/">性別移行を知る</a>
+      <a class="word-chip" href="/fertility/">妊孕性のこと</a>
+      <a class="word-chip" href="/clinics/">医療機関</a>
+      <a class="word-chip" href="/glossary/">用語集</a>
+    </nav>
+
+    <p class="source-note">
+      参考:
+      {' '}<a href="https://transfemscience.org/" target="_blank" rel="noreferrer">Transfeminine Science</a>、
+      {' '}<a href="https://mtf.wiki/ja/" target="_blank" rel="noreferrer">MtF.wiki</a>、
+      {' '}<a href="https://ftm.wiki/" target="_blank" rel="noreferrer">FtM.wiki</a>
+      など（海外の資料は日本の保険診療・処方の実態と異なる点に注意）。
+    </p>
+  </article>
+</BaseLayout>
