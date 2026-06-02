@@ -131,7 +131,7 @@ main {
   box-shadow: var(--shadow-soft);
 }
 
-/* Cuter title: a trans-flag mirror (blue → pink → lavender → pink → blue). */
+/* Clean solid blue title (matches the icon), no gradient. */
 .brand-name {
   display: block;
   margin: 0;
@@ -139,10 +139,7 @@ main {
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1.15;
-  background: linear-gradient(100deg, #5bcefa 0%, #f5a9c4 38%, #cfa9e8 50%, #f5a9c4 62%, #5bcefa 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: #2b90e7;
 }
 
 .brand-subtitle,
