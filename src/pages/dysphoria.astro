@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const GDB = 'https://genderdysphoria.fyi/en';
+
+// 違和のいろいろな形。説明は当サイトで独自に書き、詳しい解説は
+// The Gender Dysphoria Bible（CC BY-NC-SA）へリンクしています。
+const kinds = [
+  { name: '身体的違和', en: 'physical-dysphoria',
+    body: '自分のからだの特徴——体つき、声、毛、胸、性器など——に対して感じる違和。鏡を見たくない、写真がつらい、といった形でも現れます。' },
+  { name: '生化学的違和', en: 'biochemical-dysphoria',
+    body: '体内のホルモンのバランスそのものに根ざした、言葉にしにくい不快感や落ち着かなさ。ホルモン療法で和らぐことがあります。' },
+  { name: '対人的違和', en: 'social-dysphoria',
+    body: '人とのやり取りの中で、ちがう性別として扱われること——呼ばれ方、見られ方、「くん／さん」など——から生じる違和。' },
+  { name: '社会的違和', en: 'societal-dysphoria',
+    body: '制度や書類、世の中の「ふつう」や期待といった、より大きな枠組みから生じる違和。自分のせいではありません。' },
+  { name: '性的違和', en: 'sexual-dysphoria',
+    body: '性的な場面や親密な関係の中で生じる違和。からだや役割への違和感として現れることがあります。' },
+  { name: '表現的違和', en: 'presentational-dysphoria',
+    body: '服装・髪型・メイクなど、自分をどう見せるか（性別表現）にまつわる違和。「らしく」させられることのつらさ。' },
+  { name: '実存的違和', en: 'existential-dysphoria',
+    body: '自分の存在や将来そのものに向けられる、より深い違和。「この先どう生きていくのか」という不安として現れることも。' },
+  { name: '管理された違和', en: 'managed-dysphoria',
+    body: '違和を抑え込み、「やり過ごしてきた」状態。慣れて感じにくくなっていることもありますが、それは消えたのとは違います。' },
+];
+---
+
+<BaseLayout
+  title="性別違和を知る - とらんすナビ"
+  description="性別違和（ジェンダー・ディスフォリア）とは何か、どんな形で現れるのか。違和のいろいろなかたちと、その対極にある性別高揚感について。"
+>
+  <article class="article-shell">
+    <div class="eyebrow">知る</div>
+    <h1>性別違和を知る</h1>
+    <p class="lead">
+      「性別違和」は、出生時に割り当てられた性別と、自分が感じている性別とのあいだのズレから生じる、苦しさや違和感のことです。現れ方も強さも、人によってずいぶん違います。
+    </p>
+
+    <section aria-labelledby="what-heading">
+      <h2 id="what-heading">性別違和とは</h2>
+      <p>
+        <a href="/glossary/gender-dysphoria/">性別違和</a>は「病気」や「弱さ」ではありません。自分の性のあり方と、まわりから期待される性別とが食い違うときに、心やからだが感じる自然な反応です。
+      </p>
+      <p>
+        大切なのは、<strong>「これくらい違和があればトランス」という線引きはない</strong>ということ。違和が強くなくてもトランスジェンダーでありえますし、感じ方は時期によっても変わります。全部に当てはまる必要も、強く感じる必要もありません。
+      </p>
+      <p>
+        臨床的には、DSM-5 で「性別違和」、ICD-11 で「<a href="/glossary/gender-incongruence/">性別不合</a>」と呼ばれます。かつての「性同一性障害」という言い方は、今は使われなくなってきています。
+      </p>
+    </section>
+
+    <section aria-labelledby="kinds-heading">
+      <h2 id="kinds-heading">違和には、いろいろな形がある</h2>
+      <p class="resource-section-intro">
+        性別違和はひとつの感覚ではなく、いくつもの面から現れます。自分の気持ちに名前がつくと、少し整理しやすくなることがあります。
+      </p>
+      <div class="concept-grid">
+        {kinds.map((kind) => (
+          <div class="concept-card">
+            <h3>{kind.name}</h3>
+            <p>{kind.body}</p>
+            <a class="concept-more" href={`${GDB}/${kind.en}`} target="_blank" rel="noreferrer">詳しく（英語）→</a>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section aria-labelledby="euphoria-heading">
+      <h2 id="euphoria-heading">性別高揚感（ジェンダー・ユーフォリア）</h2>
+      <p>
+        違和の「対極」にあるのが、<strong>性別高揚感</strong>です。自分の性自認が肯定されたとき——望む名前で呼ばれた、しっくりくる服を着られた——にわいてくる、ほっとする喜びのことです。
+      </p>
+      <p>
+        つらさ（違和）よりも先に、この喜びのほうから自分に気づく人もいます。「何が苦しいか」だけでなく「何が心地よいか」も、自分を知る手がかりになります。
+        <a href={`${GDB}/euphoria`} target="_blank" rel="noreferrer">詳しく（英語）→</a>
+      </p>
+    </section>
+
+    <aside class="entry-message" role="note" aria-label="読んでいるあなたへ">
+      <p>「自分は本物のトランスではないのかも」と感じても、大丈夫。その迷いは、とても多くの人が通る道です。何かの基準を満たさないと当事者になれない、ということはありません。<a href={`${GDB}/impostor-syndrome`} target="_blank" rel="noreferrer">（インポスター症候群について・英語）</a></p>
+    </aside>
+
+    <nav class="word-chips entry-related" aria-label="関連ページ">
+      <a class="word-chip" href="/start/">はじめての方へ</a>
+      <a class="word-chip" href="/gender/">性別は、男女だけじゃない</a>
+      <a class="word-chip" href="/glossary/">用語集</a>
+      <a class="word-chip" href="/support/">相談先</a>
+    </nav>
+
+    <p class="source-note">
+      「違和のいろいろな形」という整理は、
+      {' '}<a href="https://genderdysphoria.fyi/" target="_blank" rel="noreferrer">The Gender Dysphoria Bible（性別違和バイブル）</a>
+      （CC BY-NC-SA）を参考にしています。本ページの文章は当サイトが独自に書いたものです。各項目の詳しい解説は同書へ（日本語訳が進行中です）。
+    </p>
+  </article>
+</BaseLayout>

@@ -545,6 +545,42 @@ ul {
   border-top: 1px dashed var(--line);
 }
 
+.concept-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 14px;
+  margin: 14px 0 4px;
+}
+
+.concept-card {
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--paper);
+  box-shadow: var(--shadow-soft);
+}
+
+.concept-card h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+}
+
+.concept-card p {
+  margin: 0 0 10px;
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.concept-more {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.concept-more:hover {
+  text-decoration: underline;
+}
+
 .page-disclaimer {
   margin: 4px 0 0;
   padding: 10px 16px;

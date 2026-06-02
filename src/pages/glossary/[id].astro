@@ -14,6 +14,9 @@ const { entry } = Astro.props as { entry: GlossaryEntry };
 const hrtOverview = '/library/mtf-wiki-ja/docs/medicine/hrt-overview/';
 const medicalCategories = new Set(['ホルモン療法', '医療', '手術', '検査', '脱毛', '声']);
 const related: { href: string; label: string }[] = [];
+if (entry.id === 'gender-dysphoria' || entry.id === 'gender-incongruence') {
+  related.push({ href: '/dysphoria/', label: '性別違和を知る' });
+}
 if (entry.category === '性自認・属性') {
   related.push({ href: '/gender/', label: '性別は、男女だけじゃない' });
 }
