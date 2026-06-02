@@ -1,0 +1,140 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const silhouette = [
+  {
+    name: '女性的に見せたいとき',
+    points: [
+      'ウエストを絞ると、体の曲線が出やすくなります。',
+      '肩の存在感は、縦のラインや首まわりの開いた服でやわらげられます。',
+      'スカートやワイドパンツ、ヒップ・胸のパッドでカーブを足せます。',
+    ],
+  },
+  {
+    name: '男性的に見せたいとき',
+    points: [
+      '肩のラインを出す服や横の広がりで、上半身がしっかり見えます。',
+      'レイヤード（重ね着）やゆとりのあるトップスは、胸を目立たせません。',
+      'バインダー（後述）と合わせると、より平らに見せられます。',
+    ],
+  },
+  {
+    name: 'どちらにも寄せたくないとき',
+    points: [
+      '「男っぽく／女っぽく」ではなく、自分が心地よい組み合わせを基準に。',
+      'ジェンダーレスな服や、サイズ感で印象を調整する方法もあります。',
+      '日によって変えてかまいません。一貫していなくて大丈夫です。',
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="見た目と、毎日のこと（服・メイク・からだ） - とらんすナビ"
+  description="服装やメイク、体の特徴を目立たなくする工夫（バインディング・タッキング）、衛生のこと。医療を待たずにできる、日常の見た目の整え方を、安全に気をつけながら。"
+>
+  <article class="article-shell">
+    <div class="eyebrow">知る</div>
+    <h1>見た目と、毎日のこと</h1>
+    <p class="lead">
+      見た目を自分に近づける工夫は、たくさんあります。お金や医療をかけずに、今日から試せるものも少なくありません。ここでは服・メイク・からだの見せ方・衛生について、やさしく整理します。
+    </p>
+
+    <div class="page-disclaimer">
+      これは「こうしなければいけない」というルールではありません。やってみたい人が、<strong>安全に</strong>試すための案内です。何もしなくても、あなたはあなたです。
+    </div>
+
+    <section aria-labelledby="clothes">
+      <h2 id="clothes">服装でできること</h2>
+      <p>体のラインの見え方は、服でかなり変わります。「何を着るか」だけでなく「どこを見せて、どこをゆるめるか」で印象が動きます。</p>
+      <div class="concept-grid">
+        {silhouette.map((s) => (
+          <div class="concept-card">
+            <h3>{s.name}</h3>
+            <ul class="assure-list assure-list-plain">
+              {s.points.map((p) => <li>{p}</li>)}
+            </ul>
+          </div>
+        ))}
+      </div>
+      <p>胸パッド、ヒップパッド、肩や首まわりの工夫など、小物で印象を補うこともできます。鏡の前で少しずつ試して、自分が落ち着くバランスを探してみてください。</p>
+    </section>
+
+    <section aria-labelledby="makeup">
+      <h2 id="makeup">メイクでできること</h2>
+      <p>メイクは、輪郭や肌の印象を変える手軽な方法です。性別を問わず使えます。</p>
+      <ul class="assure-list">
+        <li><strong>青ひげ・ひげの剃りあと</strong>は、オレンジ・赤み系のコントロールカラー（コンシーラー）を先に重ねてからファンデーションを塗ると、目立ちにくくなります。</li>
+        <li><strong>やわらかい印象にしたいとき</strong>は、眉を整える、まつげ、リップ、ハイライトで丸みを出す、といった足し算が効きます。</li>
+        <li><strong>きりっとした印象にしたいとき</strong>は、シェーディングで輪郭に陰影をつけ、眉をしっかりめにすると、骨格が強調されます。うっすら無精ひげを描く方法もあります。</li>
+        <li>まずは<strong>スキンケア</strong>から。肌が整っていると、どんなメイクものりやすくなります。</li>
+      </ul>
+      <p>動画の解説（日本語・英語ともに豊富です）を見ながら手を動かすと、こつをつかみやすくなります。うまくいかなくて当たり前。少しずつで大丈夫です。</p>
+    </section>
+
+    <section aria-labelledby="body">
+      <h2 id="body">からだの特徴を目立たなくする</h2>
+      <p>胸や股間など、気になる部分の見え方を変える方法があります。便利な一方で、<strong>体を締めつける工夫は、やり方をまちがえると体を痛めます</strong>。安全のためのポイントを、必ず押さえてください。</p>
+
+      <h3 id="binding">胸を平らに見せる（バインディング）</h3>
+      <p>専用の下着「バインダー（ナベシャツ）」で、胸を平らに近づける方法です。</p>
+      <div class="page-disclaimer">
+        <strong>安全のために：</strong>
+        <ul class="assure-list">
+          <li>包帯・ガムテープ・ラップ・きついコルセットなどで締めるのは<strong>絶対にやめてください</strong>。肋骨を痛めたり、呼吸ができなくなったりする危険があります。</li>
+          <li><strong>専用のバインダー</strong>を、きつすぎない正しいサイズで使います（サイズ選びがいちばん大切です）。</li>
+          <li>連続して着けるのは<strong>1日8時間まで</strong>を目安に。毎日は避けて、休む日をつくります。</li>
+          <li><strong>寝るときは外します。</strong>激しい運動のときも外すか、スポーツブラに替えます。</li>
+          <li>痛み・しびれ・息苦しさ・皮膚のトラブルが出たら、<strong>すぐに外して</strong>休んでください。</li>
+        </ul>
+      </div>
+      <p>経済的に購入が難しい場合、海外には無償でバインダーを届ける支援（Point of Pride など）もあります。</p>
+
+      <h3 id="tucking">股間を目立たなくする（タッキング）</h3>
+      <p>「ガフ」と呼ばれる専用下着などで、股間のふくらみを目立たなくする方法です。</p>
+      <div class="page-disclaimer">
+        <strong>安全のために：</strong>
+        <ul class="assure-list">
+          <li><strong>痛いほど押し込まないでください。</strong>無理に力を加えるのは禁物です。</li>
+          <li>慣れるまでは短い時間から。連続は<strong>8時間まで</strong>を目安に、毎日は避けます。</li>
+          <li><strong>寝るときは外します。</strong>家にいて安全なときは、ほどいて体を休めましょう。</li>
+          <li>尿路感染や皮膚のかぶれ、精巣の不快感などのリスクがあります。鋭い痛み・しびれが出たら、すぐにほどいてください。</li>
+          <li>ガフや下着は<strong>使うたびに洗います</strong>（衛生のためにとても大切です）。</li>
+        </ul>
+      </div>
+
+      <h3 id="packing">股間にふくらみを作る（パッキング）</h3>
+      <p>「パッカー」を下着に入れて、ふくらみを作る方法です。立って排尿するのを助ける道具（STP）もあります。自分が心地よい範囲で取り入れてください。</p>
+    </section>
+
+    <section aria-labelledby="hygiene">
+      <h2 id="hygiene">衛生とスキンケア</h2>
+      <ul class="assure-list">
+        <li>ホルモン療法を始めると、肌質（脂っぽさ・乾燥）が変わることがあります。そのときどきに合わせて、スキンケアを見直してください。</li>
+        <li>バインダーやガフは清潔に保ち、肌を休ませる時間をつくります。汗をかいたら、こまめに着替えましょう。</li>
+        <li>ムダ毛の処理は、肌を傷つけない範囲で無理なく。レーザーや電気脱毛については<a href="/hair-removal/">脱毛の入門</a>をどうぞ。</li>
+      </ul>
+    </section>
+
+    <aside class="entry-message" role="note" aria-label="読んでいるあなたへ">
+      <p>体を締めつける工夫は、便利だけれど、無理をすると危険です。「少し変だな」と感じたら、ゆるめる・外す・休む。あなたの体より大切な見た目は、ありません。</p>
+    </aside>
+
+    <nav class="word-chips entry-related" aria-label="関連ページ">
+      <a class="word-chip" href="/transition/">性別移行を知る</a>
+      <a class="word-chip" href="/hair-removal/">脱毛の入門</a>
+      <a class="word-chip" href="/voice/">声を変える練習</a>
+      <a class="word-chip" href="/resources/">関連サイト</a>
+    </nav>
+
+    <p class="source-note">
+      バインディングの安全情報は
+      {' '}<a href="https://www.pointofpride.org/binding" target="_blank" rel="noreferrer">Point of Pride</a>、
+      タッキングは
+      {' '}<a href="https://translifeline.org/tucking-guide/" target="_blank" rel="noreferrer">Trans Lifeline</a>
+      や
+      {' '}<a href="https://fenwayhealth.org/wp-content/uploads/Trans-Health-Tucking-Guide.pdf" target="_blank" rel="noreferrer">Fenway Health</a>
+      のガイドを参考にしています（いずれも英語）。痛みや体調の不安が続くときは、医療機関にご相談ください。
+    </p>
+  </article>
+</BaseLayout>

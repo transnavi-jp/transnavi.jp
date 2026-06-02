@@ -42,7 +42,7 @@ const pathname = Astro.url.pathname;
 const pageName = title.split(' - ')[0].trim();
 const learnPages = new Set([
   '/basics/', '/gender/', '/dysphoria/', '/transition/', '/hrt-effects/', '/fertility/',
-  '/voice/', '/hair-removal/', '/surgery/', '/legal-change/', '/coming-out/',
+  '/voice/', '/presentation/', '/hair-removal/', '/surgery/', '/legal-change/', '/coming-out/',
   '/safety/', '/puberty-blockers/', '/flags/', '/pride/', '/works/', '/bibliography/',
 ]);
 let section: { label: string; href: string } | null = null;
@@ -164,6 +164,7 @@ const breadcrumbLd = showBreadcrumb
             <a href="/dysphoria/">性別違和を知る</a>
             <a href="/transition/">性別移行を知る</a>
             <a href="/hrt-effects/">ホルモン療法で起きること</a>
+            <a href="/presentation/">見た目と、毎日のこと</a>
             <a href="/glossary/">用語集</a>
             <a href="/flags/">プライドフラッグ</a>
             <a href="/pride/">記念日・イベント</a>

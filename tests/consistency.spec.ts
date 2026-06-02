@@ -13,6 +13,7 @@ const contentPages = [
   '/hrt-effects/',
   '/fertility/',
   '/voice/',
+  '/presentation/',
   '/surgery/',
   '/hair-removal/',
   '/legal-change/',
