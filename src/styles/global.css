@@ -1543,6 +1543,11 @@ ul {
   color: #c2185b;
 }
 
+.badge-popular {
+  background: #fff2cf;
+  color: #b07908;
+}
+
 /* ── Pride flags & awareness days ───────────────────────────── */
 
 .flag-grid {

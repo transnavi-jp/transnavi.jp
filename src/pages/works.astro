@@ -42,7 +42,7 @@ const posterInitial = (title: string) => Array.from(title)[0] ?? '?';
       <span>{usedCategories.length}分類</span>
     </div>
 
-    <section class="filter-tabs" aria-label="分類" data-filter-tabs>
+    <section class="filter-tabs" aria-label="分類" data-filter-tabs data-filter-key="categories">
       <button type="button" class="filter-tab" data-filter-tab data-filter-value="" aria-pressed="true">
         すべて
       </button>
@@ -58,6 +58,14 @@ const posterInitial = (title: string) => Array.from(title)[0] ?? '?';
         </button>
       ))}
     </section>
+
+    <div class="filter-group-row">
+      <span class="filter-tabs-label">人気</span>
+      <section class="filter-tabs" aria-label="人気" data-filter-tabs data-filter-key="pop">
+        <button type="button" class="filter-tab" data-filter-tab data-filter-value="" aria-pressed="true">すべて</button>
+        <button type="button" class="filter-tab" data-filter-tab data-filter-value="popular" aria-pressed="false">★ 人気の作品</button>
+      </section>
+    </div>
 
     <form class="index-search" role="search" data-filter-form>
       <label for="works-search">作品を検索</label>
@@ -93,6 +101,7 @@ const posterInitial = (title: string) => Array.from(title)[0] ?? '?';
             <tr
               data-filter-item
               data-categories={work.category}
+              data-pop={work.popular ? 'popular' : ''}
               data-sort-title={work.title}
               data-sort-category={categoryRank.get(work.category) ?? 99}
               data-sort-year={work.year ?? ''}
@@ -118,6 +127,7 @@ const posterInitial = (title: string) => Array.from(title)[0] ?? '?';
                 ) : (
                   <span class="work-title">{work.title}</span>
                 )}
+                {work.popular && <span class="badge badge-popular">★ 人気</span>}
                 {work.adult && <span class="badge badge-adult">R18</span>}
                 {work.series && <span class="work-series">{work.series}</span>}
                 {work.tags && work.tags.length > 0 && (

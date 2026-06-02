@@ -21,7 +21,8 @@
     "tags": [
       "トランス女性",
       "家族"
-    ]
+    ],
+    "popular": true
   },
   {
     "id": "film-katasode-no-uo",
@@ -57,7 +58,8 @@
     "tags": [
       "トランス男性",
       "家族"
-    ]
+    ],
+    "popular": true
   },
   {
     "id": "film-blue-boy-jiken",
@@ -119,7 +121,8 @@
       "トランス男性",
       "思春期・青春",
       "学園"
-    ]
+    ],
+    "popular": true
   },
   {
     "id": "manga-is",
@@ -130,7 +133,8 @@
     "poster": null,
     "tags": [
       "インターセックス"
-    ]
+    ],
+    "popular": true
   },
   {
     "id": "manga-bokura-no-hentai",
@@ -180,7 +184,8 @@
     "tags": [
       "ノンバイナリー・Xジェンダー",
       "思春期・青春"
-    ]
+    ],
+    "popular": true
   },
   {
     "id": "manga-fukakai-na-boku-no-subete-wo",
@@ -191,7 +196,8 @@
     "poster": null,
     "tags": [
       "ノンバイナリー・Xジェンダー"
-    ]
+    ],
+    "popular": true
   },
   {
     "id": "manga-ore-ga-watashi-ni-naru-made",
@@ -217,7 +223,8 @@
       "男の娘",
       "学園",
       "恋愛"
-    ]
+    ],
+    "popular": true
   },
   {
     "id": "manga-tonari-no-trans-shoujo-chan",
@@ -254,7 +261,8 @@
       "トランス男性",
       "学園",
       "思春期・青春"
-    ]
+    ],
+    "popular": true
   },
   {
     "id": "tvdrama-watashi-ga-watashi-de-aru-tame-ni",
@@ -278,7 +286,8 @@
     "tags": [
       "トランス女性",
       "日常"
-    ]
+    ],
+    "popular": true
   },
   {
     "id": "tvdrama-miura-buchou",
@@ -291,7 +300,8 @@
       "トランス女性",
       "性別移行",
       "職場"
-    ]
+    ],
+    "popular": true
   },
   {
     "id": "tvdrama-tora-ni-tsubasa",
@@ -303,7 +313,8 @@
     "tags": [
       "実話・歴史",
       "ジェンダーと社会"
-    ]
+    ],
+    "popular": true
   },
   {
     "id": "tvanime-hourou-musuko",
@@ -317,7 +328,8 @@
       "トランス男性",
       "思春期・青春",
       "学園"
-    ]
+    ],
+    "popular": true
   },
   {
     "id": "tvanime-back-street-girls",
@@ -329,7 +341,8 @@
     "tags": [
       "女装",
       "コメディ"
-    ]
+    ],
+    "popular": true
   },
   {
     "id": "tvanime-senpai-wa-otokonoko",
@@ -342,7 +355,8 @@
       "男の娘",
       "学園",
       "恋愛"
-    ]
+    ],
+    "popular": true
   },
   {
     "id": "game-celeste",
@@ -354,7 +368,8 @@
     "tags": [
       "トランス女性",
       "メンタルヘルス"
-    ]
+    ],
+    "popular": true
   },
   {
     "id": "game-one-night-hot-springs",

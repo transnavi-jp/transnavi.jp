@@ -22,6 +22,8 @@ export interface Work {
   poster?: string | null;
   /** Topical tags describing what the work is about. */
   tags?: string[];
+  /** Widely-known / mainstream work — surfaced with a 人気 badge and filter. */
+  popular?: boolean;
   note?: string;
 }
 
