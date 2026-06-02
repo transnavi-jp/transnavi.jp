@@ -21,18 +21,20 @@ const mapData = { clinics, pois };
 
 <BaseLayout
   title="地図で探す（医療機関・団体・イベント） - とらんすナビ"
-  description="ホルモン療法などの医療機関、当事者団体・拠点、プライドイベントを地図の上でまとめて探せます。"
+  description="ホルモン療法などの医療機関、当事者団体・拠点、大学のLGBTQサークル、公的な相談窓口、プライドイベントを地図の上でまとめて探せます。"
 >
   <article class="article-shell">
     <div class="eyebrow">地図で探す</div>
     <h1>地図で探す</h1>
     <p class="lead">
-      医療機関、団体・拠点、イベントを、地図の上でまとめて見られます。気になるピンをタップすると、掲載ページや公式サイトへ進めます。
+      医療機関、当事者団体・拠点、大学のLGBTQサークル、公的な相談窓口、イベントを、地図の上でまとめて見られます。気になるピンをタップすると、掲載ページや公式サイトへ進めます。
     </p>
 
     <div class="map-legend" aria-label="地図の凡例">
       <label><input type="checkbox" data-map-toggle="clinic" checked /><span class="map-dot map-dot-clinic" aria-hidden="true"></span>医療機関</label>
       <label><input type="checkbox" data-map-toggle="org" checked /><span class="map-dot map-dot-org" aria-hidden="true"></span>団体・拠点</label>
+      <label><input type="checkbox" data-map-toggle="circle" checked /><span class="map-dot map-dot-circle" aria-hidden="true"></span>学生サークル</label>
+      <label><input type="checkbox" data-map-toggle="desk" checked /><span class="map-dot map-dot-desk" aria-hidden="true"></span>相談窓口</label>
       <label><input type="checkbox" data-map-toggle="event" checked /><span class="map-dot map-dot-event" aria-hidden="true"></span>イベント</label>
     </div>
 
@@ -41,7 +43,7 @@ const mapData = { clinics, pois };
     </div>
 
     <p class="resource-section-intro">
-      ピンの位置は、住所をもとにおおよそで表示しています（番地が不明なものは市区町村のおおよその位置です）。正確な所在地や診療内容は、必ず各施設・団体の公式情報で確認してください。
+      ピンの位置は、住所をもとにおおよそで表示しています（番地が不明なものは市区町村のおおよその位置です）。大学のサークルは活動キャンパスのおおよその場所、相談窓口は施設の場所を示しています。学生サークルの活動状況や開催日時は年度で変わることがあります。正確な所在地・活動内容・診療内容は、必ず各施設・団体・窓口の公式情報で確認してください。
     </p>
 
     <nav class="word-chips entry-related" aria-label="関連ページ">

@@ -82,5 +82,222 @@
     "url": "/pride/",
     "lat": 34.73774,
     "lng": 135.341843
+  },
+  {
+    "name": "東京大学TOPIA",
+    "type": "circle",
+    "url": "https://topiaut.wordpress.com/",
+    "lat": 35.660641,
+    "lng": 139.683151
+  },
+  {
+    "name": "東京大学 UT-topos",
+    "type": "circle",
+    "url": "https://sites.google.com/view/uttopos/",
+    "lat": 35.714146,
+    "lng": 139.763214
+  },
+  {
+    "name": "早稲田大学 GLOW",
+    "type": "circle",
+    "url": "https://www.waseda.jp/inst/weekly/circleguide/detail/?id=3271",
+    "lat": 35.708836,
+    "lng": 139.719025
+  },
+  {
+    "name": "明治大学 Arco Iris",
+    "type": "circle",
+    "url": "https://meiji-arcoiris.jimdofree.com/",
+    "lat": 35.670834,
+    "lng": 139.648285
+  },
+  {
+    "name": "慶應義塾大学 LGBT塾生会",
+    "type": "circle",
+    "url": "https://www.instagram.com/jukuseikai/",
+    "lat": 35.649147,
+    "lng": 139.742828
+  },
+  {
+    "name": "立教大学 Rikkyo Pride",
+    "type": "circle",
+    "url": "https://sites.google.com/view/rikkyopride",
+    "lat": 35.729706,
+    "lng": 139.704742
+  },
+  {
+    "name": "上智大学 くまのみ",
+    "type": "circle",
+    "url": "https://www.instagram.com/kumanomi_sophia/",
+    "lat": 35.683189,
+    "lng": 139.732742
+  },
+  {
+    "name": "明治学院大学 カラフル",
+    "type": "circle",
+    "url": "https://gakuseikoujyou.com/lgbtqally%e3%82%b5%e3%83%bc%e3%82%af%e3%83%ab%e3%80%80%e3%82%ab%e3%83%a9%e3%83%95%e3%83%ab/",
+    "lat": 35.636738,
+    "lng": 139.730743
+  },
+  {
+    "name": "東京外国語大学 Pas A Pas",
+    "type": "circle",
+    "url": "https://www.tufs.ac.jp/student/extraordinary/extracurricular.html",
+    "lat": 35.672707,
+    "lng": 139.521042
+  },
+  {
+    "name": "筑波大学 にじひろ",
+    "type": "circle",
+    "url": "https://nijihirotkb.wixsite.com/square2406",
+    "lat": 36.108723,
+    "lng": 140.100632
+  },
+  {
+    "name": "北海道大学 虹の集い",
+    "type": "circle",
+    "url": "https://nijinotsudoi.wixsite.com/hokudai-lgbts",
+    "lat": 43.070446,
+    "lng": 141.347153
+  },
+  {
+    "name": "愛知淑徳大学 Coalook",
+    "type": "circle",
+    "url": "https://www.aasa.ac.jp/life/club/d_nagakute/gender.html",
+    "lat": 35.15873,
+    "lng": 137.031342
+  },
+  {
+    "name": "関西学院大学 Cassis",
+    "type": "circle",
+    "url": "https://x.com/cassis_LGBT",
+    "lat": 34.767162,
+    "lng": 135.34436
+  },
+  {
+    "name": "大阪市人権啓発・相談センター",
+    "type": "desk",
+    "url": "https://www.city.osaka.lg.jp/shimin/page/0000545992.html",
+    "lat": 34.68092,
+    "lng": 135.487747
+  },
+  {
+    "name": "世田谷区 らぷらす",
+    "type": "desk",
+    "url": "https://www.city.setagaya.lg.jp/02409/1034.html",
+    "lat": 35.645275,
+    "lng": 139.674835
+  },
+  {
+    "name": "渋谷区 アイリス",
+    "type": "desk",
+    "url": "https://www.city.shibuya.tokyo.jp/shisetsu/bunka-shisetsu/owada/iris.html",
+    "lat": 35.655972,
+    "lng": 139.70018
+  },
+  {
+    "name": "三鷹市 SOGI相談",
+    "type": "desk",
+    "url": "https://www.city.mitaka.lg.jp/c_service/094/094479.html",
+    "lat": 35.698235,
+    "lng": 139.561203
+  },
+  {
+    "name": "豊島区 エポック10",
+    "type": "desk",
+    "url": "https://www.city.toshima.lg.jp/049/kuse/danjo/004668.html",
+    "lat": 35.727669,
+    "lng": 139.706528
+  },
+  {
+    "name": "よこはまLGBT相談",
+    "type": "desk",
+    "url": "https://www.city.yokohama.lg.jp/kurashi/kyodo-manabi/jinken/lgbt/soudan.html",
+    "lat": 35.462654,
+    "lng": 139.623352
+  },
+  {
+    "name": "京都市 まぁぶるスペース（ウィングス京都）",
+    "type": "desk",
+    "url": "https://www.city.kyoto.lg.jp/bunshi/page/0000311897.html",
+    "lat": 35.007221,
+    "lng": 135.761261
+  },
+  {
+    "name": "国立市 パラソル（SOGI相談）",
+    "type": "desk",
+    "url": "https://kuni-sta.com/sodan/",
+    "lat": 35.699123,
+    "lng": 139.444565
+  },
+  {
+    "name": "SAG徳島",
+    "type": "org",
+    "url": "https://sites.google.com/site/sagtokushima/sag%E5%BE%B3%E5%B3%B6",
+    "lat": 34.203056,
+    "lng": 134.605515
+  },
+  {
+    "name": "金沢にじのま",
+    "type": "org",
+    "url": "https://www.kanazawarainbowpride.com/kanazawa-nijinoma",
+    "lat": 36.558498,
+    "lng": 136.653915
+  },
+  {
+    "name": "にじの集居（京都）",
+    "type": "org",
+    "url": "https://v.hitomachi-kyoto.jp/teikyo/11029",
+    "lat": 35.009357,
+    "lng": 135.736938
+  },
+  {
+    "name": "えひめLGBTセンター 虹力スペース",
+    "type": "org",
+    "url": "https://www.rainbowpride-ehime.org/shisetsu/",
+    "lat": 33.847542,
+    "lng": 132.757965
+  },
+  {
+    "name": "コミュニティセンター akta（新宿）",
+    "type": "org",
+    "url": "https://akta.jp/",
+    "lat": 35.691193,
+    "lng": 139.708771
+  },
+  {
+    "name": "community center ZEL（仙台）",
+    "type": "org",
+    "url": "https://zel-sendai.com/",
+    "lat": 38.265781,
+    "lng": 140.868301
+  },
+  {
+    "name": "コミュニティセンター rise（名古屋）",
+    "type": "org",
+    "url": "https://aln.sakura.ne.jp/rise/",
+    "lat": 35.16605,
+    "lng": 136.912445
+  },
+  {
+    "name": "コミュニティセンター dista（大阪）",
+    "type": "org",
+    "url": "https://www.dista.osaka/",
+    "lat": 34.703491,
+    "lng": 135.504471
+  },
+  {
+    "name": "福岡コミュニティセンター HACO",
+    "type": "org",
+    "url": "http://loveactf.jp/",
+    "lat": 33.583279,
+    "lng": 130.414581
+  },
+  {
+    "name": "同志社大学 Gender Garden",
+    "type": "circle",
+    "url": "https://www.d-live.info/club/registered/1367",
+    "lat": 35.03036585,
+    "lng": 135.7614767
   }
 ]

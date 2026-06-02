@@ -1876,6 +1876,8 @@ ul {
 
 .map-pin-clinic { background: #4ba8ea; }
 .map-pin-org { background: #36b37e; }
+.map-pin-circle { background: #8a6dc6; }
+.map-pin-desk { background: #f2994a; }
 .map-pin-event { background: #ff83b7; }
 
 .map-legend {
@@ -1905,6 +1907,8 @@ ul {
 
 .map-dot-clinic { background: #4ba8ea; }
 .map-dot-org { background: #36b37e; }
+.map-dot-circle { background: #8a6dc6; }
+.map-dot-desk { background: #f2994a; }
 .map-dot-event { background: #ff83b7; }
 
 .map-popup-sub { color: var(--muted); font-size: 0.85em; }
