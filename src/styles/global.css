@@ -539,6 +539,58 @@ ul {
   color: var(--accent-strong);
 }
 
+.entry-related {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--line);
+}
+
+.page-disclaimer {
+  margin: 4px 0 0;
+  padding: 10px 16px;
+  border-left: 4px solid var(--line-strong);
+  border-radius: 0 12px 12px 0;
+  background: var(--pink-soft);
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+.toc {
+  margin: 18px 0;
+  padding: 14px 18px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--paper);
+}
+
+.toc-title {
+  margin: 0 0 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.toc ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 4px;
+}
+
+.toc a {
+  text-decoration: none;
+}
+
+.toc a:hover {
+  text-decoration: underline;
+}
+
+.back-to-top {
+  margin-top: 24px;
+  font-size: 0.9rem;
+}
+
 .soft-quote {
   margin: 16px 0;
   padding: 6px 0 6px 20px;

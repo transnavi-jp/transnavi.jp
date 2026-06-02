@@ -8,20 +8,62 @@ export async function getStaticPaths() {
 }
 
 const { page } = Astro.props;
-const { Content } = await render(page);
+const { Content, headings } = await render(page);
+
+const toc = headings.filter((heading) => heading.depth === 2 && heading.slug);
+const importedAt = new Intl.DateTimeFormat('ja-JP', { dateStyle: 'medium' }).format(page.data.importedAt);
+const isMedical = page.data.sourceCategory?.includes('医療') ?? false;
+
+// Sibling pages in the same imported folder, for forward/back wayfinding.
+const all = await getCollection('imported');
+const dirOf = (id: string) => id.split('/').slice(0, -1).join('/');
+const siblings = all
+  .filter((other) => other.id !== page.id && dirOf(other.id) === dirOf(page.id))
+  .sort((a, b) => a.data.title.localeCompare(b.data.title, 'ja'));
 ---
 
 <BaseLayout title={`${page.data.title} - とらんすナビ`} description={page.data.description}>
-  <article class="article-shell">
+  <article class="article-shell" id="top">
     <div class="eyebrow">{page.data.sourceCategory}</div>
     <h1>{page.data.title}</h1>
     <div class="article-meta">
       <span class="pill">出典: {page.data.sourceProject}</span>
+      <span class="pill">取り込み: {importedAt}</span>
       <span class="pill">確認: 要確認</span>
     </div>
+
+    {isMedical && (
+      <p class="page-disclaimer">
+        情報提供のみを目的としたページです。内容が最新・正確とはかぎりません。治療やお薬のことは、必ず医師に相談してください。
+      </p>
+    )}
+
+    {toc.length > 2 && (
+      <nav class="toc" aria-label="目次">
+        <p class="toc-title">目次</p>
+        <ul>
+          {toc.map((heading) => (
+            <li><a href={`#${heading.slug}`}>{heading.text}</a></li>
+          ))}
+        </ul>
+      </nav>
+    )}
+
     <div class="prose">
       <Content />
     </div>
+
+    <p class="back-to-top"><a href="#top">↑ ページの先頭へ</a></p>
+
+    {siblings.length > 0 && (
+      <nav class="word-chips entry-related" aria-label="関連ページ">
+        {siblings.map((other) => (
+          <a class="word-chip" href={`/library/${other.id}/`}>{other.data.title}</a>
+        ))}
+        <a class="word-chip" href="/clinics/">医療機関を探す</a>
+      </nav>
+    )}
+
     <section class="notice" aria-labelledby="source-info">
       <h2 id="source-info">出典</h2>
       <p>{page.data.sourcePath} から取り込みました。出典元のライセンスは {page.data.sourceLicense} です。</p>
