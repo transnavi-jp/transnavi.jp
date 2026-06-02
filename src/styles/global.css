@@ -217,6 +217,13 @@ h1 {
   letter-spacing: -0.03em;
 }
 
+/* The homepage hero headline shouldn't be capped at 760px (it wrapped at an
+   awkward spot on wide screens); let it use the full width and balance lines. */
+.hero h1 {
+  max-width: none;
+  text-wrap: balance;
+}
+
 h2 {
   margin: 0 0 10px;
   font-size: 1.28rem;
