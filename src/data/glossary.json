@@ -56,7 +56,7 @@
     "avoid": [],
     "disputed": [],
     "source": "Force Outing",
-    "notes": "本人の同意なく、その性自認や性的指向などを第三者に暴露する行為のこと。"
+    "notes": "本人の同意なく、その性同一性や性的指向などを第三者に暴露する行為のこと。"
   },
   {
     "id": "informed-consent",
@@ -238,7 +238,7 @@
     "disputed": [],
     "source": "Coming Out",
     "message": "話すかどうか、誰に・いつ話すかは、いつだってあなたが選んでいい。あなたの安全が、いちばんです。",
-    "notes": "自分の性自認や性的指向を、自らの意思で他者に開示すること。誰に・いつ・どこまで伝えるかは本人が選べる。"
+    "notes": "自分の性同一性や性的指向を、自らの意思で他者に開示すること。誰に・いつ・どこまで伝えるかは本人が選べる。"
   },
   {
     "id": "closeted",
@@ -255,7 +255,7 @@
     "avoid": [],
     "disputed": [],
     "source": "In the Closet",
-    "notes": "自身のトランスジェンダーであることや性自認を、家族・職場・周囲などに公表せず隠している状態のこと。「カミングアウト」の対義的な状態を指す。"
+    "notes": "自身のトランスジェンダーであることや性同一性を、家族・職場・周囲などに公表せず隠している状態のこと。「カミングアウト」の対義的な状態を指す。"
   },
   {
     "id": "clocking",
@@ -330,7 +330,7 @@
   {
     "id": "cisgender",
     "term": "シスジェンダー",
-    "category": "性自認・属性",
+    "category": "性同一性・属性",
     "wikidata": "Q1093205",
     "translations": {
       "en": "Cisgender",
@@ -344,12 +344,12 @@
     "avoid": [],
     "disputed": [],
     "source": "Cisgender",
-    "notes": "出生時に割り当てられた性別と性自認が一致している人のこと。トランスジェンダーの対義語として用いられる。"
+    "notes": "出生時に割り当てられた性別と性同一性が一致している人のこと。トランスジェンダーの対義語として用いられる。"
   },
   {
     "id": "cisgender-woman",
     "term": "シスジェンダー女性",
-    "category": "性自認・属性",
+    "category": "性同一性・属性",
     "wikidata": "Q15145779",
     "translations": {
       "en": "Cisgender Woman",
@@ -363,12 +363,12 @@
     "avoid": [],
     "disputed": [],
     "source": "Cisgender Woman",
-    "notes": "出生時に女性を割り当てられ、性自認も女性である人のこと。シスジェンダーである女性を指す。"
+    "notes": "出生時に女性を割り当てられ、性同一性も女性である人のこと。シスジェンダーである女性を指す。"
   },
   {
     "id": "cisgender-man",
     "term": "シスジェンダー男性",
-    "category": "性自認・属性",
+    "category": "性同一性・属性",
     "wikidata": "Q15145778",
     "translations": {
       "en": "Cisgender Man",
@@ -382,7 +382,7 @@
     "avoid": [],
     "disputed": [],
     "source": "Cisgender Man",
-    "notes": "出生時に男性を割り当てられ、性自認も男性である人のこと。シスジェンダーである男性を指す。"
+    "notes": "出生時に男性を割り当てられ、性同一性も男性である人のこと。シスジェンダーである男性を指す。"
   },
   {
     "id": "estradiol-cypionate",
@@ -434,7 +434,7 @@
     "aliases": [],
     "avoid": [],
     "disputed": [],
-    "notes": "性自認に沿った性別で生活し、周囲にトランスジェンダーであることを明かさずに過ごしている状態のこと。トランスであることを秘めつつも自認していないクローゼット（非公表）とは区別される。",
+    "notes": "性同一性に沿った性別で生活し、周囲にトランスジェンダーであることを明かさずに過ごしている状態のこと。トランスであることを秘めつつも自認していないクローゼット（非公表）とは区別される。",
     "source": "Stealth"
   },
   {
@@ -599,12 +599,12 @@
     "avoid": [],
     "disputed": [],
     "source": "Bathroom access rights",
-    "notes": "自分の性自認に合ったトイレを使えること、またその権利をめぐる話題。"
+    "notes": "自分の性同一性に合ったトイレを使えること、またその権利をめぐる話題。"
   },
   {
     "id": "transgender",
     "term": "トランスジェンダー",
-    "category": "性自認・属性",
+    "category": "性同一性・属性",
     "wikidata": "Q189125",
     "translations": {
       "en": "Transgender",
@@ -623,18 +623,19 @@
     "disputed": [],
     "source": "Transgender",
     "message": "どんなあり方でも、あなたがあなたであることは、誰にも否定できません。",
-    "notes": "出生時に割り当てられた性別と性自認が一致しない人を指す総称。性別移行をするかどうかや、その方法は人によって異なる。"
+    "notes": "出生時に割り当てられた性別と性同一性が一致しない人を指す総称。性別移行をするかどうかや、その方法は人によって異なる。"
   },
   {
     "id": "gender-identity",
-    "term": "性自認",
-    "category": "性自認・属性",
+    "term": "性同一性",
+    "category": "性同一性・属性",
     "translations": {
       "en": "Gender identity",
       "zhHans": "性别认同",
       "zhHant": "性別認同"
     },
     "aliases": [
+      "性自認",
       "ジェンダーアイデンティティ"
     ],
     "avoid": [],
@@ -645,7 +646,7 @@
   {
     "id": "questioning",
     "term": "クエスチョニング",
-    "category": "性自認・属性",
+    "category": "性同一性・属性",
     "translations": {
       "en": "Questioning",
       "zhHans": "探索中",
@@ -657,14 +658,14 @@
     ],
     "avoid": [],
     "disputed": [],
-    "notes": "自分の性自認や性的指向が、まだはっきりしていない、あるいは決めていない・決めない状態。迷いや探索のさなかにいることそのものを指す言葉で、結論を急ぐ必要はありません。",
+    "notes": "自分の性同一性や性的指向が、まだはっきりしていない、あるいは決めていない・決めない状態。迷いや探索のさなかにいることそのものを指す言葉で、結論を急ぐ必要はありません。",
     "source": "Questioning (sexuality and gender)",
     "message": "まだ名前がついていなくても、大丈夫。「わからない」も、ちゃんとあなたの居場所です。"
   },
   {
     "id": "transgender-woman",
     "term": "トランスジェンダー女性",
-    "category": "性自認・属性",
+    "category": "性同一性・属性",
     "wikidata": "Q1052281",
     "translations": {
       "en": "Transgender Woman",
@@ -682,12 +683,12 @@
     ],
     "disputed": [],
     "source": "Transgender Woman / MtF",
-    "notes": "出生時に男性と割り当てられたが、性自認が女性であるトランスジェンダーのこと。MtF（Male to Female）とも呼ばれる。"
+    "notes": "出生時に男性と割り当てられたが、性同一性が女性であるトランスジェンダーのこと。MtF（Male to Female）とも呼ばれる。"
   },
   {
     "id": "transgender-man",
     "term": "トランスジェンダー男性",
-    "category": "性自認・属性",
+    "category": "性同一性・属性",
     "wikidata": "Q1054451",
     "translations": {
       "en": "Transgender Man",
@@ -702,7 +703,7 @@
     "avoid": [],
     "disputed": [],
     "source": "Transgender Man / FtM",
-    "notes": "出生時に女性と割り当てられたが、性自認が男性であるトランスジェンダーのこと。FtM（Female to Male）とも呼ばれる。"
+    "notes": "出生時に女性と割り当てられたが、性同一性が男性であるトランスジェンダーのこと。FtM（Female to Male）とも呼ばれる。"
   },
   {
     "id": "terf",
@@ -743,7 +744,7 @@
     "id": "non-binary",
     "term": "ノンバイナリー",
     "abbr": "NB",
-    "category": "性自認・属性",
+    "category": "性同一性・属性",
     "wikidata": "Q48270",
     "translations": {
       "en": "Non-binary",
@@ -758,7 +759,7 @@
     "disputed": [],
     "source": "Non-binary",
     "message": "どちらか一つを選ばなくても、あなたはちゃんと、あなたのままでいられます。",
-    "notes": "性自認が男性・女性という二分法のいずれにも当てはまらない、あるいはその枠組みにとらわれないあり方を指す。"
+    "notes": "性同一性が男性・女性という二分法のいずれにも当てはまらない、あるいはその枠組みにとらわれないあり方を指す。ノンバイナリーの人の中には、自分をトランスジェンダーだと考える人もいれば、そうは考えない人もいる。どちらの感じ方も否定されるものではない。"
   },
   {
     "id": "passing",
@@ -886,7 +887,7 @@
     "avoid": [],
     "disputed": [],
     "source": "Misgendering",
-    "notes": "その人の性自認とは違う性別で扱ったり、呼んだりすること（わざとかどうかを問わず）。"
+    "notes": "その人の性同一性とは違う性別で扱ったり、呼んだりすること（わざとかどうかを問わず）。"
   },
   {
     "id": "minoxidil",
@@ -966,7 +967,7 @@
     "id": "cross-dresser",
     "term": "異性装者",
     "abbr": "CD",
-    "category": "性自認・属性",
+    "category": "性同一性・属性",
     "wikidata": "Q431604",
     "translations": {
       "en": "Cross-dresser",
@@ -982,7 +983,7 @@
       "異性装症"
     ],
     "disputed": [],
-    "notes": "出生時に割り当てられた性別とは異なる性別の服装を身につけること、またその人を指す。性自認や性的指向とは必ずしも結びつかず、性別移行を意図するとは限らない。",
+    "notes": "出生時に割り当てられた性別とは異なる性別の服装を身につけること、またその人を指す。性同一性や性的指向とは必ずしも結びつかず、性別移行を意図するとは限らない。",
     "source": "Cross-dresser (CD)"
   },
   {
@@ -1108,7 +1109,7 @@
     ],
     "avoid": [],
     "disputed": [],
-    "notes": "性自認や性別表現を理由に、家族など家庭内の成員から暴力を受けた人のこと。",
+    "notes": "性同一性や性別表現を理由に、家族など家庭内の成員から暴力を受けた人のこと。",
     "source": "Domestic Violence"
   },
   {
@@ -1468,7 +1469,7 @@
     "id": "assigned-gender",
     "term": "指定性別",
     "abbr": "AGAB",
-    "category": "性自認・属性",
+    "category": "性同一性・属性",
     "wikidata": "Q20474187",
     "translations": {
       "en": "Assigned Gender",
@@ -1488,7 +1489,7 @@
     ],
     "disputed": [],
     "source": "Assigned Gender/Assigned Sex at Birth",
-    "notes": "出生時に身体的特徴などに基づいて割り当てられた性別のこと。性自認と一致するとは限らない。"
+    "notes": "出生時に身体的特徴などに基づいて割り当てられた性別のこと。性同一性と一致するとは限らない。"
   },
   {
     "id": "self-acceptance",
@@ -1549,7 +1550,7 @@
     "id": "afab",
     "term": "出生時に女性と割り当てられた者",
     "abbr": "AFAB",
-    "category": "性自認・属性",
+    "category": "性同一性・属性",
     "wikidata": "Q56315990",
     "translations": {
       "en": "Assigned Female at Birth",
@@ -1560,14 +1561,14 @@
     "aliases": [],
     "avoid": [],
     "disputed": [],
-    "notes": "出生時に女性と割り当てられた人のこと。性自認とは関係なく、医師により出生時に指定された性別を指す。AFAB（Assigned Female At Birth）の訳語。",
+    "notes": "出生時に女性と割り当てられた人のこと。性同一性とは関係なく、医師により出生時に指定された性別を指す。AFAB（Assigned Female At Birth）の訳語。",
     "source": "Assigned Female at Birth (AFAB)"
   },
   {
     "id": "amab",
     "term": "出生時に男性と割り当てられた者",
     "abbr": "AMAB",
-    "category": "性自認・属性",
+    "category": "性同一性・属性",
     "wikidata": "Q25388691",
     "translations": {
       "en": "Assigned Male at Birth",
@@ -1578,7 +1579,7 @@
     "aliases": [],
     "avoid": [],
     "disputed": [],
-    "notes": "出生時に男性と割り当てられた人のこと。性自認とは関係なく、医師により出生時に指定された性別を指す。AMAB（Assigned Male At Birth）の訳語。",
+    "notes": "出生時に男性と割り当てられた人のこと。性同一性とは関係なく、医師により出生時に指定された性別を指す。AMAB（Assigned Male At Birth）の訳語。",
     "source": "Assigned Male at Birth (AMAB)"
   },
   {
@@ -1724,13 +1725,13 @@
     ],
     "avoid": [],
     "disputed": [],
-    "notes": "性器の形態を性自認に合わせて変える外科手術の総称。腟形成術や精巣摘除術、陰茎形成術などを含む。性別適合手術（SRS）の一部として行われることが多い。",
+    "notes": "性器の形態を性同一性に合わせて変える外科手術の総称。腟形成術や精巣摘除術、陰茎形成術などを含む。性別適合手術（SRS）の一部として行われることが多い。",
     "source": "Genital surgery"
   },
   {
     "id": "transsexualism",
     "term": "性転換症",
-    "category": "性自認・属性",
+    "category": "性同一性・属性",
     "wikidata": "Q190965",
     "translations": {
       "en": "Transsexualism",
@@ -1741,7 +1742,7 @@
     "aliases": [],
     "avoid": [],
     "disputed": [],
-    "notes": "性自認と身体の性が一致せず、医療的な性別移行を望む状態を指した、過去の病理化された診断名。現在は脱病理化が進み、ICD-11では「性別不合」に置き換えられている。",
+    "notes": "性同一性と身体の性が一致せず、医療的な性別移行を望む状態を指した、過去の病理化された診断名。現在は脱病理化が進み、ICD-11では「性別不合」に置き換えられている。",
     "source": "Transsexualism"
   },
   {
@@ -1764,7 +1765,7 @@
     "id": "gender-dysphoria",
     "term": "性別違和",
     "abbr": "GD",
-    "category": "性自認・属性",
+    "category": "性同一性・属性",
     "wikidata": "Q1049021",
     "translations": {
       "en": "Gender Dysphoria",
@@ -1781,7 +1782,7 @@
       "性同一性障害（同義語としては避けたい）"
     ],
     "disputed": [],
-    "notes": "出生時に割り当てられた性別と性自認との不一致から生じる、心理的な苦痛や違和感のこと。ICD-11では「性別不合（性別不一致）」へと脱病理化されたが、心理的な苦痛そのものを指す語として「性別違和」も引き続き用いられる。",
+    "notes": "出生時に割り当てられた性別と性同一性との不一致から生じる、心理的な苦痛や違和感のこと。ICD-11では「性別不合（性別不一致）」へと脱病理化されたが、心理的な苦痛そのものを指す語として「性別違和」も引き続き用いられる。",
     "source": "Gender Dysphoria",
     "message": "その違和感は、わがままではありません。ちゃんと意味のある、大切な感覚です。"
   },
@@ -1822,7 +1823,7 @@
     ],
     "avoid": [],
     "disputed": [],
-    "notes": "性別適合ホルモン療法（Gender-Affirming Hormone Therapy）のこと。性自認に沿った身体的特徴を得るために行うホルモン療法を指す。SOC-8では「替代（Replacement）」より「肯定（Affirming）」の語が推奨されており、欠陥を補うという病理的含意を避ける観点から、HRTに代えてGAHTが用いられる。",
+    "notes": "性別適合ホルモン療法（Gender-Affirming Hormone Therapy）のこと。性同一性に沿った身体的特徴を得るために行うホルモン療法を指す。SOC-8では「替代（Replacement）」より「肯定（Affirming）」の語が推奨されており、欠陥を補うという病理的含意を避ける観点から、HRTに代えてGAHTが用いられる。",
     "source": "Gender-Affirming Hormone Therapy(GAHT)"
   },
   {
@@ -1845,7 +1846,7 @@
       "性転換手術"
     ],
     "disputed": [],
-    "notes": "性自認に合わせて身体的特徴を変えるための外科手術の総称。性器手術や顔面・胸部の手術などを含み、必要とする内容や範囲は人によって異なる。WHO・WPATHのケア基準（SOC-8）では「性別適合手術」という呼称が用いられる。",
+    "notes": "性同一性に合わせて身体的特徴を変えるための外科手術の総称。性器手術や顔面・胸部の手術などを含み、必要とする内容や範囲は人によって異なる。WHO・WPATHのケア基準（SOC-8）では「性別適合手術」という呼称が用いられる。",
     "source": "Gender Affirmation Surgery (GAS)"
   },
   {
@@ -1868,7 +1869,7 @@
   {
     "id": "gender-expression",
     "term": "性別表現",
-    "category": "性自認・属性",
+    "category": "性同一性・属性",
     "wikidata": "Q1496967",
     "translations": {
       "en": "Gender Expression",
@@ -1879,14 +1880,14 @@
     "aliases": [],
     "avoid": [],
     "disputed": [],
-    "notes": "外見・服装・髪型・振る舞い・言葉づかいなどを通して、自分の性のあり方を外に表すこと。性自認や指定性別とは別の概念で、必ずしも一致するとは限らない。",
+    "notes": "外見・服装・髪型・振る舞い・言葉づかいなどを通して、自分の性のあり方を外に表すこと。性同一性や指定性別とは別の概念で、必ずしも一致するとは限らない。",
     "source": "Gender Expression"
   },
   {
     "id": "gender-incongruence",
     "term": "性別不合",
     "abbr": "GI",
-    "category": "性自認・属性",
+    "category": "性同一性・属性",
     "wikidata": "Q56314793",
     "translations": {
       "en": "Gender Incongruence",
@@ -1899,7 +1900,7 @@
       "性同一性障害（旧称・病理化された用語）"
     ],
     "disputed": [],
-    "notes": "ICD-11で用いられる、性自認と出生時に割り当てられた性別との不一致を表す診断名。脱病理化された呼称であり、かつての病理的な診断名「性同一性障害」に置き換わるものとして位置づけられる。",
+    "notes": "ICD-11で用いられる、性同一性と出生時に割り当てられた性別との不一致を表す診断名。脱病理化された呼称であり、かつての病理的な診断名「性同一性障害」に置き換わるものとして位置づけられる。",
     "source": "Gender Incongruence"
   },
   {
@@ -2048,7 +2049,7 @@
     "avoid": [],
     "disputed": [],
     "source": "Conversion Therapy",
-    "notes": "性的指向や性自認を変えようとする心理的・宗教的な介入の総称。科学的根拠がなく有害とされ、近年は法的に規制する動きが広がっている。コンバージョン療法とも呼ばれる。"
+    "notes": "性的指向や性同一性を変えようとする心理的・宗教的な介入の総称。科学的根拠がなく有害とされ、近年は法的に規制する動きが広がっている。コンバージョン療法とも呼ばれる。"
   },
   {
     "id": "electrolysis",
