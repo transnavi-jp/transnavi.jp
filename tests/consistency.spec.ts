@@ -11,6 +11,7 @@ const contentPages = [
   '/dysphoria/',
   '/transition/',
   '/hrt-effects/',
+  '/hrt-medications/',
   '/fertility/',
   '/voice/',
   '/presentation/',

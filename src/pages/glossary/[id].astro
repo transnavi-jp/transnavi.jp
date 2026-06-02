@@ -20,6 +20,7 @@ const P: Record<string, Link> = {
   dysphoria: { href: '/dysphoria/', label: '性別違和を知る' },
   transition: { href: '/transition/', label: '性別移行を知る' },
   hrt: { href: '/hrt-effects/', label: 'ホルモン療法で起きること' },
+  meds: { href: '/hrt-medications/', label: '薬と自己投薬（フラホル）' },
   blockers: { href: '/puberty-blockers/', label: '思春期ブロッカーとは' },
   surgery: { href: '/surgery/', label: '移行のための手術' },
   voice: { href: '/voice/', label: '声を変える練習' },
@@ -39,7 +40,7 @@ const termPages: Record<string, Link[]> = {
   'gender-identity': [P.basics, P.gender], 'gender-expression': [P.presentation],
   'gender-dysphoria': [P.dysphoria], 'gender-incongruence': [P.dysphoria],
   'gender-transition': [P.transition], 'detransition': [P.transition],
-  'gaht': [P.hrt], 'puberty-blocker': [P.blockers],
+  'gaht': [P.hrt, P.meds], 'diy-hrt': [P.meds], 'puberty-blocker': [P.blockers],
   'coming-out': [P.comingout], 'force-outing': [P.comingout, P.safety],
   'passing': [P.presentation], 'rle': [P.presentation],
 };

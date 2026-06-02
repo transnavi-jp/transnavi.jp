@@ -9,6 +9,7 @@ const pages = [
   '/gender/',
   '/dysphoria/',
   '/transition/',
+  '/hrt-medications/',
   '/presentation/',
   '/flags/',
   '/pride/',
