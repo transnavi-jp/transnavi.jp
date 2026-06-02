@@ -290,6 +290,13 @@ ul {
   margin-top: 0;
 }
 
+/* The notice box resets its own heading margin, so give the box itself a top
+   gap when it sits inside a content card (otherwise it touches the element
+   above it). */
+.article-shell .notice {
+  margin-top: 28px;
+}
+
 .topic-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -702,6 +709,29 @@ ul {
 
 .bib-note {
   font-size: 0.88rem;
+}
+
+/* Glossary: meaning-first entry pages + friendlier cards */
+.glossary-def {
+  margin: 6px 0 18px;
+  padding: 14px 18px;
+  border-left: 4px solid var(--accent);
+  border-radius: 0 14px 14px 0;
+  background: var(--accent-soft);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--ink);
+}
+
+.glossary-detail {
+  font-size: 0.95rem;
+}
+
+.glossary-meaning {
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 
 .soft-quote {

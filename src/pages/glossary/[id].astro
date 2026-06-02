@@ -47,19 +47,12 @@ const translations = [
 
 <BaseLayout title={`${entry.term} - とらんすナビ`} description={`${entry.term}に関する用語説明です。`}>
   <article class="article-shell">
-    <div class="eyebrow">用語集</div>
-    <h1>{entry.term}</h1>
-    <dl class="clinic-detail">
-      {entry.abbr && (
-        <div>
-          <dt>略称</dt>
-          <dd>{entry.abbr}</dd>
-        </div>
-      )}
-      <div>
-        <dt>分野</dt>
-        <dd>{entry.category}</dd>
-      </div>
+    <div class="eyebrow">用語集 ・ {entry.category}</div>
+    <h1>{entry.term}{entry.abbr ? `（${entry.abbr}）` : ''}</h1>
+
+    {entry.notes && <p class="glossary-def">{entry.notes}</p>}
+
+    <dl class="clinic-detail glossary-detail">
       {entry.aliases.length > 0 && (
         <div>
           <dt>別名・関連表現</dt>
@@ -68,7 +61,7 @@ const translations = [
       )}
       {translations.length > 0 && (
         <div>
-          <dt>多言語表記</dt>
+          <dt>ほかの言語では</dt>
           <dd>
             <ul>
               {translations.map(([label, value]) => <li>{label}: {value}</li>)}
@@ -78,20 +71,14 @@ const translations = [
       )}
       {entry.avoid.length > 0 && (
         <div>
-          <dt>避けたい表現</dt>
+          <dt>避けたい言い方</dt>
           <dd>{entry.avoid.join('、')}</dd>
         </div>
       )}
       {entry.disputed.length > 0 && (
         <div>
-          <dt>議論がある表現</dt>
+          <dt>議論がある言い方</dt>
           <dd>{entry.disputed.join('、')}</dd>
-        </div>
-      )}
-      {entry.notes && (
-        <div>
-          <dt>補足</dt>
-          <dd>{entry.notes}</dd>
         </div>
       )}
       {entry.wikidata && (

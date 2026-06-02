@@ -4,33 +4,90 @@ import glossaryData from '../../data/glossary.json';
 import type { GlossaryEntry } from '../../types/glossary';
 
 const entries = glossaryData as GlossaryEntry[];
-const categories = [...new Set(entries.map((entry) => entry.category))].sort((a, b) => a.localeCompare(b, 'ja'));
+
+// Friendly, beginner-first category order with plain-language labels.
+const categoryMeta = [
+  { key: '性自認・属性', label: '性のあり方・自認', desc: 'トランスジェンダー、性自認、ノンバイナリーなど、自分の性のあり方に関する言葉。' },
+  { key: '生活・社会', label: '暮らし・社会', desc: 'カミングアウト、パッシングなど、日常や人との関わりに関する言葉。' },
+  { key: '法律・制度', label: '法律・制度', desc: '戸籍や診断書など、手続き・制度に関する言葉。' },
+  { key: 'ホルモン療法', label: 'ホルモン療法', desc: 'ホルモンや薬に関する言葉。' },
+  { key: '手術', label: '手術', desc: '手術や、からだの部位に関する言葉。' },
+  { key: '医療', label: '医療・からだ', desc: '医療やからだの健康に関する言葉。' },
+  { key: '検査', label: '検査', desc: '血液検査などで確認する項目。' },
+  { key: '声', label: '声', desc: '声やボイストレーニングに関する言葉。' },
+  { key: '脱毛', label: '脱毛', desc: '脱毛に関する言葉。' },
+  { key: 'その他', label: 'その他', desc: 'そのほかの言葉。' },
+];
+
+// "First words to know" — surfaced at the top for newcomers.
+const keyTermIds = [
+  'transgender', 'gender-dysphoria', 'gender-identity', 'non-binary',
+  'questioning', 'coming-out', 'gender-transition', 'gaht',
+];
+const byId = new Map(entries.map((e) => [e.id, e]));
+const keyTerms = keyTermIds.map((id) => byId.get(id)).filter(Boolean) as GlossaryEntry[];
+
+const sections = categoryMeta
+  .map((meta) => ({ ...meta, items: entries.filter((e) => e.category === meta.key) }))
+  .filter((s) => s.items.length > 0);
+
+const meaningOf = (entry: GlossaryEntry) => {
+  if (entry.notes) return entry.notes.length > 46 ? entry.notes.slice(0, 46) + '…' : entry.notes;
+  if (entry.aliases.length > 0) return `別名: ${entry.aliases.join('、')}`;
+  return entry.translations.en ?? '';
+};
 ---
 
-<BaseLayout title="用語集 - とらんすナビ" description="トランスジェンダー、医療、制度、生活に関する用語集。">
+<BaseLayout title="用語集 - とらんすナビ" description="トランスジェンダー、医療、制度、生活に関する、やさしい用語集。">
   <article class="article-shell">
     <div class="eyebrow">用語集</div>
     <h1>用語集</h1>
-    <p class="lead">トランスジェンダー、医療、制度、生活に関する用語集。</p>
+    <p class="lead">
+      トランスジェンダーや医療・制度・暮らしに関する言葉を、やさしくまとめました。気になった言葉から、どうぞ。
+    </p>
+
+    <section aria-labelledby="key-terms">
+      <h2 id="key-terms">はじめに知りたい言葉</h2>
+      <div class="word-chips">
+        {keyTerms.map((entry) => (
+          <a class="word-chip" href={`/glossary/${entry.id}/`}>{entry.term}</a>
+        ))}
+      </div>
+    </section>
+
     <div class="clinic-summary" aria-label="掲載件数">
       <span><span data-filter-count>{entries.length}</span>語</span>
-      <span>{categories.length}分野</span>
+      <span>{sections.length}分野</span>
     </div>
+
+    <section class="filter-tabs" aria-label="分野" data-filter-tabs>
+      <button type="button" class="filter-tab" data-filter-tab data-filter-value="" aria-pressed="true">すべて</button>
+      {sections.map((s) => (
+        <button type="button" class="filter-tab" data-filter-tab data-filter-value={s.key} aria-pressed="false">{s.label}</button>
+      ))}
+    </section>
 
     <form class="index-search" role="search" data-filter-form>
       <label for="glossary-search">用語を検索</label>
       <input id="glossary-search" name="q" type="search" autocomplete="off" placeholder="例: HRT、診断書、カミングアウト" data-filter-input />
-      <p id="glossary-search-help">用語、略語、別名、英語名、分野で絞り込めます。</p>
+      <p id="glossary-search-help">用語、略語、別名、英語名で絞り込めます。</p>
     </form>
 
-    {categories.map((category) => (
-      <section aria-labelledby={`glossary-${category}`} data-filter-group>
-        <h2 id={`glossary-${category}`}>{category}</h2>
+    {sections.map((section) => (
+      <section class="glossary-section" data-filter-group aria-labelledby={`glossary-${section.key}`}>
+        <h2 id={`glossary-${section.key}`}>{section.label}</h2>
+        <p class="resource-section-intro">{section.desc}</p>
         <div class="glossary-list">
-          {entries.filter((entry) => entry.category === category).map((entry) => (
-            <a class="glossary-card" href={`/glossary/${entry.id}/`} data-filter-item data-search={[entry.term, entry.abbr, entry.category, entry.translations.en, ...entry.aliases].filter(Boolean).join(' ')}>
+          {section.items.map((entry) => (
+            <a
+              class="glossary-card"
+              href={`/glossary/${entry.id}/`}
+              data-filter-item
+              data-categories={entry.category}
+              data-search={[entry.term, entry.abbr, entry.category, entry.translations.en, ...entry.aliases].filter(Boolean).join(' ')}
+            >
               <span class="clinic-name">{entry.term}{entry.abbr ? `（${entry.abbr}）` : ''}</span>
-              <span>{entry.aliases.length > 0 ? `別名: ${entry.aliases.join('、')}` : entry.translations.en}</span>
+              <span class="glossary-meaning">{meaningOf(entry)}</span>
             </a>
           ))}
         </div>

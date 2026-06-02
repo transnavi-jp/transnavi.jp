@@ -245,9 +245,7 @@
       "es": "En el Clóset"
     },
     "aliases": [],
-    "avoid": [
-      "脱圈"
-    ],
+    "avoid": [],
     "disputed": [],
     "source": "In the Closet"
   },
@@ -335,10 +333,7 @@
     "aliases": [
       "シス"
     ],
-    "avoid": [
-      "正常人",
-      "顺直"
-    ],
+    "avoid": [],
     "disputed": [],
     "source": "Cisgender"
   },
@@ -592,7 +587,9 @@
       "トランス"
     ],
     "avoid": [
-      "变性人"
+      "性転換者",
+      "ニューハーフ",
+      "おかま"
     ],
     "disputed": [],
     "source": "Transgender",
@@ -650,10 +647,8 @@
       "トランス女性"
     ],
     "avoid": [
-      "人妖",
-      "伪娘 (混淆",
-      "冒犯)",
-      "木桶饭"
+      "ニューハーフ",
+      "おかま"
     ],
     "disputed": [],
     "source": "Transgender Woman / MtF"
@@ -1443,9 +1438,8 @@
       "出生時の指定性別"
     ],
     "avoid": [
-      "生理性别",
-      "原生性别",
-      "出生性别"
+      "本来の性別",
+      "生まれつきの性別"
     ],
     "disputed": [],
     "source": "Assigned Gender/Assigned Sex at Birth"
@@ -1706,7 +1700,7 @@
     "aliases": [],
     "avoid": [],
     "disputed": [],
-    "notes": "过时的病理化标签，但在当前中国法律框架下仍使用，使用时需注明",
+    "notes": "性自認と出生時に割り当てられた性別が一致しない状態を指す、かつての病理的な診断名。現在では脱病理化された「性別不合」などに置き換えられた古い用語。",
     "source": "Transsexualism"
   },
   {
@@ -1742,12 +1736,10 @@
       "ジェンダーディスフォリア"
     ],
     "avoid": [
-      "性别认同障碍"
+      "性同一性障害（同義語としては避けたい）"
     ],
-    "disputed": [
-      "性别焦虑（在特定语境可以使用？）"
-    ],
-    "notes": "ICD-11已更新为性别不一致，但在描述心理痛苦时仍常使用性别焦虑",
+    "disputed": [],
+    "notes": "性別と性自認の不一致から生じる持続的な違和感や心理的な苦痛のこと。ICD-11では「性別不合（gender incongruence）」へと脱病理化されたが、心理的な苦痛を表す語として性別違和は今も用いられる。",
     "source": "Gender Dysphoria",
     "message": "その違和感は、わがままではありません。ちゃんと意味のある、大切な感覚です。"
   },
@@ -2159,14 +2151,9 @@
       "es": "Este sitio"
     },
     "aliases": [],
-    "avoid": [
-      "本wiki",
-      "wiki"
-    ],
-    "disputed": [
-      "我们"
-    ],
-    "notes": "统一指代 MtF.wiki 网站本身",
+    "avoid": [],
+    "disputed": [],
+    "notes": "",
     "source": "MtF.wiki"
   },
   {
