@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const groups = [
+  {
+    name: '性別適合手術（SRS / GAS）',
+    items: [
+      '女性化の方向：造腟術（陰茎反転法など）、精巣の摘出（去勢術）',
+      '男性化の方向：胸の手術（乳房切除）、子宮・卵巣の摘出、陰茎形成（metoidioplasty / phalloplasty）',
+    ],
+  },
+  {
+    name: '顔・のど・胸の手術',
+    items: [
+      '顔の手術（FFS など）：輪郭や鼻、額などの印象を変える',
+      '喉仏の手術（甲状軟骨形成）：のどの出っぱりを目立たなくする',
+      '豊胸：胸をふくらませる',
+    ],
+  },
+  {
+    name: '声の手術',
+    items: [
+      '声の女性化手術：声帯などに手を加える方法。まずは練習から始めるのが一般的です（→ 声を変える練習）。',
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="移行のための手術（どれも必須ではありません） - とらんすナビ"
+  description="性別適合手術やFFS、声の手術などの種類のオリエンテーション。どの手術も必須ではなく、選択は人によって違います。"
+>
+  <article class="article-shell">
+    <div class="eyebrow">知る</div>
+    <h1>移行のための手術</h1>
+    <p class="page-disclaimer">
+      情報提供のみを目的としたページです。術式や費用、適応は変わることがあり、最新・正確とはかぎりません。実際の判断は、必ず医師に相談してください。
+    </p>
+    <p class="lead">
+      移行のための手術には、いくつもの種類があります。大切な前提として、<strong>どの手術も「必須」ではありません</strong>。何を選ぶか、何も選ばないかは、人によって違います。
+    </p>
+
+    <section aria-labelledby="kinds">
+      <h2 id="kinds">どんな手術があるか</h2>
+      <p class="resource-section-intro">ここでは「こういうものがある」という入口だけを紹介します。詳しい内容は医療機関で確認してください。</p>
+      {groups.map((group) => (
+        <div class="link-group">
+          <h3 class="link-group-region">{group.name}</h3>
+          <ul class="assure-list assure-list-plain">
+            {group.items.map((item) => <li>{item}</li>)}
+          </ul>
+        </div>
+      ))}
+    </section>
+
+    <section aria-labelledby="reality">
+      <h2 id="reality">現実的なこと</h2>
+      <ul class="assure-list">
+        <li>適応や年齢、診断書（意見書）の要否は、術式や医療機関によって違います。</li>
+        <li>回復には時間がかかり、合併症や術後のケア（造腟術後のダイレーションなど）が必要なものもあります。</li>
+        <li>費用や保険の扱いは複雑です。日本で受ける人も、海外（タイなど）を選ぶ人もいます。</li>
+      </ul>
+    </section>
+
+    <aside class="entry-message" role="note" aria-label="読んでいるあなたへ">
+      <p>急ぐ必要はありません。情報を集めて、信頼できる医師とよく話してから決めて大丈夫です。手術をしてもしなくても、あなたはあなたです。</p>
+    </aside>
+
+    <nav class="word-chips entry-related" aria-label="関連ページ">
+      <a class="word-chip" href="/transition/">性別移行を知る</a>
+      <a class="word-chip" href="/clinics/">医療機関</a>
+      <a class="word-chip" href="/voice/">声を変える練習</a>
+      <a class="word-chip" href="/glossary/">用語集</a>
+    </nav>
+
+    <p class="source-note">
+      術式の詳しい解説は
+      {' '}<a href="https://mtf.wiki/" target="_blank" rel="noreferrer">MtF.wiki</a>
+      や
+      {' '}<a href="https://ftm.wiki/" target="_blank" rel="noreferrer">FtM.wiki</a>
+      なども参考になります（術者一覧は海外中心。日本の制度・費用とは異なります）。費用や保険は<a href="/clinics/">医療機関</a>へ確認してください。
+    </p>
+  </article>
+</BaseLayout>
