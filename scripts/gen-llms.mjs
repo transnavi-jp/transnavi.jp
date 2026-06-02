@@ -134,6 +134,10 @@ index += `- [文芸作品データベース](${SITE}/works/): ${works.length}作
 index += `- [地図で探す](${SITE}/map/): 医療機関・団体・イベントの地図\n`;
 index += `\n## ソース\n- GitHub: https://github.com/transnavi/transnavi.jp\n- ライセンス: コード MIT / コンテンツ CC BY-SA 4.0\n`;
 
-writeFileSync(resolve(dist, 'llms.txt'), index + '\n');
-writeFileSync(resolve(dist, 'llms-full.txt'), full + '\n');
+// Prepend a UTF-8 BOM so browsers/tools always decode as UTF-8 even if a
+// charset header is missing or a stale copy is cached (and so the changed body
+// busts any stale etag).
+const BOM = '\uFEFF';
+writeFileSync(resolve(dist, 'llms.txt'), BOM + index + '\n');
+writeFileSync(resolve(dist, 'llms-full.txt'), BOM + full + '\n');
 console.log(`llms.txt (${index.length}B) + llms-full.txt (${full.length}B) written`);
