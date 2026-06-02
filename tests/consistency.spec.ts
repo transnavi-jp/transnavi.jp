@@ -19,6 +19,7 @@ const contentPages = [
   '/safety/',
   '/puberty-blockers/',
   '/learn/',
+  '/bibliography/',
   '/pride/',
   '/works/',
   '/resources/',

@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import bibData from '../data/bibliography.json';
+import { bibCategoryMeta, type BibEntry } from '../types/bibliography';
+
+const entries = bibData as BibEntry[];
+
+const sections = bibCategoryMeta
+  .map((meta) => ({
+    ...meta,
+    items: entries
+      .filter((entry) => entry.category === meta.key)
+      .sort((a, b) => (a.year < b.year ? -1 : a.year > b.year ? 1 : a.title.localeCompare(b.title, 'ja'))),
+  }))
+  .filter((section) => section.items.length > 0);
+---
+
+<BaseLayout
+  title="文献（書籍・論文） - とらんすナビ"
+  description="トランスジェンダーについて学術的・正確に知りたい人のための、書籍・論文・診療ガイドラインの文献リスト。"
+>
+  <article class="article-shell">
+    <div class="eyebrow">知る</div>
+    <h1>文献（書籍・論文）</h1>
+    <p class="lead">
+      もっと深く、正確に知りたい人へ。トランスジェンダーに関する学術的な書籍や論文、診療ガイドラインをまとめています。小説・映画・漫画などは<a href="/works/">文芸作品</a>へ。
+    </p>
+
+    {sections.map((section) => (
+      <section class="bib-section" aria-labelledby={`bib-${section.key}`}>
+        <h2 id={`bib-${section.key}`}>{section.title}</h2>
+        <p class="resource-section-intro">{section.description}</p>
+        <ul class="bib-list">
+          {section.items.map((item) => (
+            <li class="bib-item">
+              <a class="bib-title" href={item.url} target="_blank" rel="noreferrer">{item.title}</a>
+              <span class="bib-meta">{item.authors}／{item.venue}（{item.year}）</span>
+              {item.note && <span class="bib-note">{item.note}</span>}
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+
+    <p class="source-note">
+      随時追加しています。事実情報の正確さに努めていますが、誤りや追加したい文献があれば<a href="/edit/">情報を送る</a>からお知らせください。リンク先の内容は各発行元に帰属します。
+    </p>
+  </article>
+</BaseLayout>
