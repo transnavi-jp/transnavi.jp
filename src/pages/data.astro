@@ -1,0 +1,117 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import glossaryData from '../data/glossary.json';
+import clinicsData from '../data/clinics.json';
+import worksData from '../data/works.json';
+import bibliographyData from '../data/bibliography.json';
+
+const glossaryCount = glossaryData.length;
+const clinicsCount = clinicsData.length;
+const worksCount = worksData.length;
+const bibliographyCount = bibliographyData.length;
+
+// Downloadable datasets published under /data/ by scripts/gen-data-dump.mjs.
+const datasets = [
+  { file: '/data/transnavi-data.json', label: '全データ（まとめて）', note: '下のすべてを1つにまとめたファイル' },
+  { file: '/data/glossary.json', label: '用語集', note: `${glossaryCount}語（訳語・別名つき）` },
+  { file: '/data/clinics.json', label: '医療機関', note: `${clinicsCount}件` },
+  { file: '/data/works.json', label: '文芸作品データベース', note: `${worksCount}作品` },
+  { file: '/data/bibliography.json', label: '参考文献', note: `${bibliographyCount}件` },
+  { file: '/data/organizations.json', label: '団体・関連サイト', note: 'コミュニティセンター・地域団体など' },
+  { file: '/data/map-pois.json', label: '地図のピン', note: '団体・拠点・イベントの座標' },
+];
+---
+
+<BaseLayout
+  title="データの引用・二次利用 - とらんすナビ"
+  description="とらんすナビ（transnavi.jp）の内容やデータを、引用・二次利用する方法。ライセンス、引用テンプレート、LLM向けテキスト、データダンプ、ソースコードについて。"
+>
+  <article class="article-shell prose">
+    <div class="eyebrow">このサイトについて</div>
+    <h1>データの引用・二次利用</h1>
+    <p class="lead">
+      とらんすナビの内容とデータは、できるだけ自由に使えるように公開しています。研究、記事、別のサイトやアプリ、AI など、用途を問わず役立ててください。お願いは「出どころを書くこと」だけです。
+    </p>
+
+    <h2>ライセンス</h2>
+    <p>
+      文章・データなどのコンテンツは
+      {' '}<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja" rel="license" target="_blank">クリエイティブ・コモンズ 表示-継承 4.0（CC BY-SA 4.0）</a>、
+      サイトのソースコードは
+      {' '}<a href="https://opensource.org/license/mit" rel="license" target="_blank">MIT ライセンス</a>で公開しています。
+    </p>
+    <p>コンテンツを使うときの条件は、ざっくり次のとおりです。</p>
+    <ul>
+      <li><strong>表示（BY）</strong>：出どころ（とらんすナビ / transnavi.jp）と、できればその URL を書いてください。</li>
+      <li><strong>継承（SA）</strong>：改変して再配布するときは、同じ CC BY-SA 4.0 で公開してください。</li>
+      <li>商用・非商用を問わず使えます。</li>
+    </ul>
+    <p class="callout">
+      ただし、医療・法律・安全にかかわる情報は、時間がたつと古くなります。引用するときは「いつ時点の情報か」を添え、最新の内容は各機関の公式情報で確認してください。
+    </p>
+
+    <h2>引用のしかた（テンプレート）</h2>
+    <p>そのまま使える引用の型です。〔　〕の部分を置きかえてください。</p>
+    <h3>ふつうの文章・記事で</h3>
+    <pre class="cite-block"><code>とらんすナビ「〔ページのタイトル〕」transnavi.jp、〔URL〕（〔参照した日〕閲覧）。</code></pre>
+    <p class="muted-note">例：とらんすナビ「用語集」transnavi.jp、https://transnavi.jp/glossary/（2026年6月2日閲覧）。</p>
+    <h3>英語で</h3>
+    <pre class="cite-block"><code>transnavi (とらんすナビ). "〔Page title〕." transnavi.jp, 〔URL〕 (accessed 〔date〕).</code></pre>
+    <h3>BibTeX で</h3>
+    <pre class="cite-block"><code>@misc{'{'}transnavi,
+  author = {'{'}とらんすナビ (transnavi.jp){'}'},
+  title  = {'{'}〔ページのタイトル〕{'}'},
+  url    = {'{'}〔URL〕{'}'},
+  note   = {'{'}参照: 〔日付〕{'}'},
+{'}'}</code></pre>
+
+    <h2>AI・LLM で読み込む</h2>
+    <p>
+      サイト全体を、AI が読みやすいプレーンテキストにまとめたファイルを用意しています（<a href="https://llmstxt.org/" target="_blank" rel="noreferrer">llms.txt</a> の形式）。要約や質問応答に使うときは、こちらが便利です。
+    </p>
+    <ul>
+      <li><a href="/llms.txt">/llms.txt</a> … 索引（各ページの見出しと概要、参照データへのリンク）</li>
+      <li><a href="/llms-full.txt">/llms-full.txt</a> … 全文（用語集 {glossaryCount} 語をふくむ、サイトの本文すべて）</li>
+    </ul>
+
+    <h2>データを丸ごと使う（データダンプ）</h2>
+    <p>
+      医療機関・用語集・作品・文献などは、構造化した JSON でも公開しています。アプリや分析にそのまま使えます。
+    </p>
+    <ul class="data-dump-list">
+      {datasets.map((d) => (
+        <li>
+          <a href={d.file} download>{d.label}</a>
+          <span class="muted-note">{d.note} ・ <code>{d.file}</code></span>
+        </li>
+      ))}
+    </ul>
+    <p class="muted-note">
+      これらは GitHub リポジトリの <code>src/data/</code> から自動生成しています。元データを直接見たい場合は GitHub もどうぞ。
+    </p>
+
+    <h2>ソースコードと修正の提案</h2>
+    <p>
+      サイト自体もオープンソースです。ソースコードとデータは
+      {' '}<a href="https://github.com/transnavi/transnavi.jp" target="_blank" rel="noreferrer">GitHub</a>
+      で公開しています。まちがいの指摘や、情報の追加・修正は、だれでも提案できます。
+    </p>
+    <ul>
+      <li><a href="https://github.com/transnavi/transnavi.jp" target="_blank" rel="noreferrer">GitHub リポジトリ</a>（Issue / Pull Request を歓迎します）</li>
+      <li><a href="/edit/">情報を送る</a>（GitHub を使わない送り方）</li>
+    </ul>
+
+    <h2>お願い</h2>
+    <ul>
+      <li>古い医療・法律情報を「今の情報」として広めないでください。参照日を添えてください。</li>
+      <li>個別の医療機関を、根拠なくランク付け・推奨する形での二次利用は避けてください（<a href="/legal/">掲載について</a>）。</li>
+      <li>当事者の尊厳を損なう使い方はご遠慮ください。</li>
+    </ul>
+
+    <nav class="word-chips entry-related" aria-label="関連ページ">
+      <a class="word-chip" href="/about/">このサイトについて</a>
+      <a class="word-chip" href="/legal/">掲載について</a>
+      <a class="word-chip" href="/edit/">情報を送る</a>
+    </nav>
+  </article>
+</BaseLayout>

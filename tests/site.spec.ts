@@ -21,6 +21,7 @@ const pages = [
   '/library/',
   '/resources/',
   '/about/',
+  '/data/',
 ];
 
 for (const path of pages) {

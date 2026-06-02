@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "postbuild": "node scripts/gen-llms.mjs",
+    "postbuild": "node scripts/gen-llms.mjs && node scripts/gen-data-dump.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",

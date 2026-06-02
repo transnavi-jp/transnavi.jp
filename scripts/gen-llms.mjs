@@ -16,7 +16,7 @@ const sections = [
   { title: '性別移行・からだと医療', routes: ['/transition/', '/puberty-blockers/', '/hrt-effects/', '/hrt-medications/', '/fertility/', '/voice/', '/presentation/', '/hair-removal/', '/surgery/'] },
   { title: '暮らしと社会', routes: ['/coming-out/', '/allies/', '/safety/', '/legal-change/', '/flags/', '/pride/'] },
   { title: '相談・地域', routes: ['/support/', '/clinics/', '/map/'] },
-  { title: 'このサイト', routes: ['/about/', '/legal/', '/edit/'] },
+  { title: 'このサイト', routes: ['/about/', '/data/', '/legal/', '/edit/'] },
 ];
 
 const decode = (s) => s
@@ -132,7 +132,8 @@ index += `- [用語集](${SITE}/glossary/): ${glossary.length}語（全文は ll
 index += `- [医療機関](${SITE}/clinics/): ${clinics.length}件（ホルモン療法・診断など）\n`;
 index += `- [文芸作品データベース](${SITE}/works/): ${works.length}作品\n`;
 index += `- [地図で探す](${SITE}/map/): 医療機関・団体・イベントの地図\n`;
-index += `\n## ソース\n- GitHub: https://github.com/transnavi/transnavi.jp\n- ライセンス: コード MIT / コンテンツ CC BY-SA 4.0\n`;
+index += `- [データダンプ](${SITE}/data/): 構造化JSON（${SITE}/data/transnavi-data.json にまとめて収録）\n`;
+index += `\n## ソース\n- GitHub: https://github.com/transnavi/transnavi.jp\n- データの引用・二次利用: ${SITE}/data/\n- ライセンス: コード MIT / コンテンツ CC BY-SA 4.0\n`;
 
 // Prepend a UTF-8 BOM so browsers/tools always decode as UTF-8 even if a
 // charset header is missing or a stale copy is cached (and so the changed body

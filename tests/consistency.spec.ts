@@ -30,6 +30,7 @@ const contentPages = [
   '/glossary/',
   '/clinics/',
   '/about/',
+  '/data/',
   '/legal/',
 ];
 
