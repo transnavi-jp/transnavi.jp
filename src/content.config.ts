@@ -26,7 +26,7 @@ const resources = defineCollection({
     url: z.string().url(),
     language: z.enum(['ja', 'en', 'zh-Hans', 'zh-Hant', 'ko', 'other']),
     region: z.string().default('global'),
-    category: z.enum(['medical', 'legal', 'community', 'research', 'guide', 'directory']),
+    category: z.enum(['medical', 'legal', 'community', 'research', 'guide', 'directory', 'media']),
     tags: z.array(z.string()).default([]),
     reviewStatus: reviewStatus.default('needs-review'),
     updatedAt: z.coerce.date(),
