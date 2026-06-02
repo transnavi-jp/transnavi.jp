@@ -19,6 +19,7 @@ export const GET: APIRoute = async ({ site }) => {
     '/start/',
     '/support/',
     '/allies/',
+    '/basics/',
     '/gender/',
     '/dysphoria/',
     '/transition/',

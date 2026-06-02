@@ -366,6 +366,25 @@
     "notes": "出生時に女性を割り当てられ、性自認も女性である人のこと。シスジェンダーである女性を指す。"
   },
   {
+    "id": "cisgender-man",
+    "term": "シスジェンダー男性",
+    "category": "性自認・属性",
+    "wikidata": "Q15145778",
+    "translations": {
+      "en": "Cisgender Man",
+      "zhHans": "顺性别男性",
+      "zhHant": "順性別男性",
+      "es": "Hombre Cisgénero"
+    },
+    "aliases": [
+      "シス男性"
+    ],
+    "avoid": [],
+    "disputed": [],
+    "source": "Cisgender Man",
+    "notes": "出生時に男性を割り当てられ、性自認も男性である人のこと。シスジェンダーである男性を指す。"
+  },
+  {
     "id": "estradiol-cypionate",
     "term": "シピオン酸エストラジオール",
     "category": "ホルモン療法",
@@ -664,6 +683,26 @@
     "disputed": [],
     "source": "Transgender Woman / MtF",
     "notes": "出生時に男性と割り当てられたが、性自認が女性であるトランスジェンダーのこと。MtF（Male to Female）とも呼ばれる。"
+  },
+  {
+    "id": "transgender-man",
+    "term": "トランスジェンダー男性",
+    "category": "性自認・属性",
+    "wikidata": "Q1054451",
+    "translations": {
+      "en": "Transgender Man",
+      "zhHans": "跨性别男性",
+      "zhHant": "跨性別男性",
+      "es": "Hombre Transgénero"
+    },
+    "aliases": [
+      "FtM",
+      "トランス男性"
+    ],
+    "avoid": [],
+    "disputed": [],
+    "source": "Transgender Man / FtM",
+    "notes": "出生時に女性と割り当てられたが、性自認が男性であるトランスジェンダーのこと。FtM（Female to Male）とも呼ばれる。"
   },
   {
     "id": "terf",

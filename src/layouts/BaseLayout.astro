@@ -41,7 +41,7 @@ const structuredData = {
 const pathname = Astro.url.pathname;
 const pageName = title.split(' - ')[0].trim();
 const learnPages = new Set([
-  '/gender/', '/dysphoria/', '/transition/', '/hrt-effects/', '/fertility/',
+  '/basics/', '/gender/', '/dysphoria/', '/transition/', '/hrt-effects/', '/fertility/',
   '/voice/', '/hair-removal/', '/surgery/', '/legal-change/', '/coming-out/',
   '/safety/', '/puberty-blockers/', '/flags/', '/pride/', '/works/', '/bibliography/',
 ]);
@@ -159,6 +159,7 @@ const breadcrumbLd = showBreadcrumb
           <div class="footer-col">
             <h2>知る・学ぶ</h2>
             <a href="/learn/">知る・学ぶ（一覧）</a>
+            <a href="/basics/">トランス・シス・ノンバイナリーって？</a>
             <a href="/dysphoria/">性別違和を知る</a>
             <a href="/transition/">性別移行を知る</a>
             <a href="/hrt-effects/">ホルモン療法で起きること</a>

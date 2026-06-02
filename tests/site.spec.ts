@@ -5,6 +5,7 @@ const pages = [
   '/start/',
   '/support/',
   '/allies/',
+  '/basics/',
   '/gender/',
   '/dysphoria/',
   '/transition/',

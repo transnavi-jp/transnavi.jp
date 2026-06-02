@@ -1,0 +1,126 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const kinds = [
+  {
+    name: 'トランス女性（トランスジェンダー女性）',
+    body: '出生時に「男性」とされたけれど、女性として生きる人、自分を女性だと感じる人。MTF（Male to Female）と呼ばれることもあります。',
+    link: '/glossary/transgender-woman/',
+  },
+  {
+    name: 'トランス男性（トランスジェンダー男性）',
+    body: '出生時に「女性」とされたけれど、男性として生きる人、自分を男性だと感じる人。FTM（Female to Male）と呼ばれることもあります。',
+    link: '/glossary/transgender-man/',
+  },
+  {
+    name: 'ノンバイナリー・Xジェンダー',
+    body: '「男性」か「女性」のどちらか一方には、おさまらない人。ずっと真ん中あたり、どちらでもない、時によって変わる、など感じ方はさまざまです。Xジェンダーは日本でよく使われる言葉、ノンバイナリーは国際的に使われる言葉です。',
+    link: '/glossary/non-binary/',
+  },
+];
+---
+
+<BaseLayout
+  title="トランス・シス・ノンバイナリーって？ - とらんすナビ"
+  description="トランスジェンダー、シスジェンダー、ノンバイナリーなど、基本のことばをやさしく説明します。出生時に割り当てられた性別と性自認の違い、性的指向との違いも。"
+>
+  <article class="article-shell">
+    <div class="eyebrow">知る</div>
+    <h1>トランス・シス・ノンバイナリーって？</h1>
+    <p class="lead">
+      性別をめぐる言葉は、たくさんあって戸惑うかもしれません。ここでは、基本のことばをやさしく整理します。ぜんぶ正しく使えなくて大丈夫。「だいたいこういうこと」がわかれば十分です。
+    </p>
+
+    <section aria-labelledby="two-genders">
+      <h2 id="two-genders">まず、ふたつの「性別」</h2>
+      <p>
+        「性別」とひとことで言っても、じつは別々のものが混ざっています。とくに大事なのが、次のふたつです。
+      </p>
+      <div class="concept-grid">
+        <div class="concept-card">
+          <h3>出生時に割り当てられた性別</h3>
+          <p>生まれたとき、主にからだの見た目をもとに「男の子／女の子」と決められたもの。本人が選んだわけではありません。</p>
+        </div>
+        <div class="concept-card">
+          <h3>性自認（こころの性）</h3>
+          <p>自分が自分をどの性別だと感じているか。だれかが見て決めるものではなく、自分の感覚です。</p>
+          <div class="concept-card-links"><a class="concept-more" href="/glossary/gender-identity/">性自認とは →</a></div>
+        </div>
+      </div>
+      <p>
+        この<strong>ふたつが一致する人もいれば、一致しない人もいます</strong>。性別には、ほかにも「性別表現（見た目やふるまい）」などの面があります。くわしくは<a href="/gender/">性別は、男女だけじゃない</a>をどうぞ。
+      </p>
+    </section>
+
+    <section aria-labelledby="cis-trans">
+      <h2 id="cis-trans">シスジェンダーとトランスジェンダー</h2>
+      <div class="concept-grid">
+        <div class="concept-card">
+          <h3>シスジェンダー（シス）</h3>
+          <p>出生時に割り当てられた性別と、性自認が<strong>一致している</strong>人。多くの人がこれにあたります。「ふつう」という意味ではなく、ただのひとつのあり方です。</p>
+          <div class="concept-card-links"><a class="concept-more" href="/glossary/cisgender/">シスジェンダーとは →</a></div>
+        </div>
+        <div class="concept-card">
+          <h3>トランスジェンダー（トランス）</h3>
+          <p>出生時に割り当てられた性別と、性自認が<strong>一致していない</strong>人。いろいろな人を含む「傘」のような言葉です。</p>
+          <div class="concept-card-links"><a class="concept-more" href="/glossary/transgender/">トランスジェンダーとは →</a></div>
+        </div>
+      </div>
+      <p>
+        トランスかどうかは、見た目や、手術・ホルモンをしたかどうかで決まるものではありません。<strong>自分の性自認がそうであれば、それでトランスです。</strong>医療を受けていても、受けていなくても、変わりません。
+      </p>
+    </section>
+
+    <section aria-labelledby="kinds">
+      <h2 id="kinds">トランスの中にも、いろいろある</h2>
+      <p class="resource-section-intro">トランスジェンダーは、ひとつのタイプの人をさす言葉ではありません。代表的な言い方を挙げます。</p>
+      <div class="concept-grid">
+        {kinds.map((kind) => (
+          <div class="concept-card">
+            <h3>{kind.name}</h3>
+            <p>{kind.body}</p>
+            <div class="concept-card-links"><a class="concept-more" href={kind.link}>用語の説明 →</a></div>
+          </div>
+        ))}
+      </div>
+      <p>
+        MTF・FTM は古くからある言い方で、今も使う人がいます。一方で、出発点（生まれた性別）より「今の自分」を大切にしたいと、トランス女性・トランス男性という言い方を好む人もいます。どちらが正しいということはなく、<strong>自分をどう呼ぶかは本人が決めること</strong>です。
+      </p>
+    </section>
+
+    <section aria-labelledby="orientation">
+      <h2 id="orientation">「性自認」と「性的指向」は別のもの</h2>
+      <p>
+        よく混同されますが、このふたつはまったく別の話です。
+      </p>
+      <ul class="assure-list">
+        <li><strong>性自認</strong>は、<em>自分が何者か</em>（男性・女性・どちらでもない…）。</li>
+        <li><strong>性的指向</strong>は、<em>どんな人を好きになるか</em>（異性・同性・複数の性…）。</li>
+      </ul>
+      <p>
+        トランスの人の性的指向も、人それぞれです。トランスだから誰を好きになる、という決まりはありません。
+      </p>
+    </section>
+
+    <section aria-labelledby="labels">
+      <h2 id="labels">ことばは、自分を縛る道具じゃない</h2>
+      <p>
+        ここで挙げた言葉は、自分を理解するための<strong>道具</strong>です。試しに当てはめてみて、しっくりこなければ外していい。あとから変わってもかまいません。
+      </p>
+      <p>
+        今すぐどれか一つに決める必要はありません。「まだわからない」「考えている途中」というあり方にも、<a href="/glossary/questioning/">クエスチョニング</a>という言葉があります。だれかに名前を説明する義務も、ありません。
+      </p>
+    </section>
+
+    <aside class="entry-message" role="note" aria-label="読んでいるあなたへ">
+      <p>言葉を知るのは、自分を箱に入れるためではありません。「あ、この感じには名前があったんだ」と、少し肩の力が抜けるためのものです。あなたのペースで大丈夫です。</p>
+    </aside>
+
+    <nav class="word-chips entry-related" aria-label="関連ページ">
+      <a class="word-chip" href="/gender/">性別は、男女だけじゃない</a>
+      <a class="word-chip" href="/dysphoria/">性別違和を知る</a>
+      <a class="word-chip" href="/transition/">性別移行を知る</a>
+      <a class="word-chip" href="/glossary/">用語集</a>
+    </nav>
+  </article>
+</BaseLayout>

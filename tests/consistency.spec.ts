@@ -6,6 +6,7 @@ const contentPages = [
   '/start/',
   '/support/',
   '/allies/',
+  '/basics/',
   '/gender/',
   '/dysphoria/',
   '/transition/',
