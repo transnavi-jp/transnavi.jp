@@ -10,32 +10,53 @@ export function getStaticPaths() {
 
 const { entry } = Astro.props as { entry: GlossaryEntry };
 
-// Context-aware related links so term pages aren't dead ends. Medical terms
-// point into our gentle 知る layer (which itself links on to /library/ depth
-// and /clinics/), keeping the hierarchy start → transition → topic → depth.
-const knowledgePages: Record<string, { href: string; label: string }> = {
-  'ホルモン療法': { href: '/hrt-effects/', label: 'ホルモン療法で起きること' },
-  '検査': { href: '/hrt-effects/', label: 'ホルモン療法で起きること' },
-  '医療': { href: '/transition/', label: '性別移行を知る' },
-  '手術': { href: '/surgery/', label: '移行のための手術' },
-  '声': { href: '/voice/', label: '声を変える練習' },
-  '脱毛': { href: '/hair-removal/', label: '脱毛の入門' },
+// Further reading: link each term to the page(s) that explain it in depth, so a
+// glossary entry is a doorway into the gentle 知る layer, not a dead end. We use
+// a per-term map first, then category fallbacks, deduped by href.
+type Link = { href: string; label: string };
+const P: Record<string, Link> = {
+  basics: { href: '/basics/', label: 'トランス・シス・ノンバイナリーって？' },
+  gender: { href: '/gender/', label: '性別は、男女だけじゃない' },
+  dysphoria: { href: '/dysphoria/', label: '性別違和を知る' },
+  transition: { href: '/transition/', label: '性別移行を知る' },
+  hrt: { href: '/hrt-effects/', label: 'ホルモン療法で起きること' },
+  blockers: { href: '/puberty-blockers/', label: '思春期ブロッカーとは' },
+  surgery: { href: '/surgery/', label: '移行のための手術' },
+  voice: { href: '/voice/', label: '声を変える練習' },
+  hair: { href: '/hair-removal/', label: '脱毛の入門' },
+  presentation: { href: '/presentation/', label: '見た目と、毎日のこと' },
+  comingout: { href: '/coming-out/', label: 'カミングアウト入門' },
+  safety: { href: '/safety/', label: '安全とこころ' },
+  legal: { href: '/legal-change/', label: '戸籍と名前の変更' },
+  clinics: { href: '/clinics/', label: '医療機関を探す' },
+  start: { href: '/start/', label: 'はじめての方へ' },
 };
-const related: { href: string; label: string }[] = [];
-if (entry.id === 'gender-dysphoria' || entry.id === 'gender-incongruence') {
-  related.push({ href: '/dysphoria/', label: '性別違和を知る' });
-}
-if (entry.category === '性自認・属性') {
-  related.push({ href: '/gender/', label: '性別は、男女だけじゃない' });
-}
+const termPages: Record<string, Link[]> = {
+  'transgender': [P.basics], 'cisgender': [P.basics],
+  'cisgender-woman': [P.basics], 'cisgender-man': [P.basics],
+  'transgender-woman': [P.basics], 'transgender-man': [P.basics],
+  'non-binary': [P.basics, P.gender], 'questioning': [P.start, P.basics],
+  'gender-identity': [P.basics, P.gender], 'gender-expression': [P.presentation],
+  'gender-dysphoria': [P.dysphoria], 'gender-incongruence': [P.dysphoria],
+  'gender-transition': [P.transition], 'detransition': [P.transition],
+  'gaht': [P.hrt], 'puberty-blocker': [P.blockers],
+  'coming-out': [P.comingout], 'force-outing': [P.comingout, P.safety],
+  'passing': [P.presentation], 'rle': [P.presentation],
+};
+const knowledgePages: Record<string, Link> = {
+  'ホルモン療法': P.hrt, '検査': P.hrt, '医療': P.transition,
+  '手術': P.surgery, '声': P.voice, '脱毛': P.hair,
+};
+
+const related: Link[] = [];
+const seen = new Set<string>();
+const add = (item?: Link) => { if (item && !seen.has(item.href)) { seen.add(item.href); related.push(item); } };
+
+(termPages[entry.id] ?? []).forEach(add);
+if (entry.category === '性同一性・属性') { add(P.basics); add(P.gender); }
 const knowledgePage = knowledgePages[entry.category];
-if (knowledgePage) {
-  related.push(knowledgePage);
-  related.push({ href: '/clinics/', label: '医療機関を探す' });
-}
-if (entry.category === '法律・制度') {
-  related.push({ href: '/legal-change/', label: '戸籍と名前の変更' });
-}
+if (knowledgePage) { add(knowledgePage); add(P.clinics); }
+if (entry.category === '法律・制度') add(P.legal);
 
 const translations = [
   ['英語', entry.translations.en],
