@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import References from '../components/References.astro';
 
 const axes = [
   { name: 'からだの特徴（からだの性）', body: '染色体、ホルモン、性腺、性器などの身体的な特徴。ひとつの数字や言葉で表せるものではありません。' },
@@ -90,5 +91,6 @@ const sexAspects = [
       <a class="word-chip" href="/glossary/">用語集</a>
       <a class="word-chip" href="/flags/">プライドフラッグ</a>
     </nav>
+    <References route="/gender/" />
   </article>
 </BaseLayout>

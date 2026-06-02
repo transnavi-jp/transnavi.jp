@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import References from '../components/References.astro';
 
 type Flag = { name: string; colors?: string[]; gradient?: string; svg?: string; note: string };
 
@@ -126,5 +127,6 @@ function swatch(flag: Flag): string {
       <a class="word-chip" href="/gender/">性別は、男女だけじゃない</a>
       <a class="word-chip" href="/glossary/">用語集</a>
     </nav>
+    <References route="/flags/" />
   </article>
 </BaseLayout>

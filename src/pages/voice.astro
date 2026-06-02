@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import References from '../components/References.astro';
 
 const tools = [
   { name: 'Vocal Pitch Monitor', note: 'スマホで自分の声の高さをリアルタイムに表示（Android/iOS）。' },
@@ -79,5 +80,6 @@ const tools = [
       {' '}<a href="https://mtf.wiki/zh-cn/docs/vocal-therapy/" target="_blank" rel="noreferrer">MtF.wiki「嗓音女性化訓練」（中国語）</a>
       や、英語の動画レッスン（YouTube の TransVoiceLessons など）が参考になります。痛みが続くときは医療機関にご相談ください。
     </p>
+    <References route="/voice/" />
   </article>
 </BaseLayout>

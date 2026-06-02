@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import References from '../components/References.astro';
 
 const days = [
   { date: '3月31日', name: '国際トランスジェンダー認知の日（TDOV）', note: 'トランスの人々の存在と歩みを可視化し、祝う日。' },
@@ -103,5 +104,6 @@ const japanEvents = [
       <a class="word-chip" href="/coming-out/">カミングアウト入門</a>
       <a class="word-chip" href="/resources/">関連サイト</a>
     </nav>
+    <References route="/pride/" />
   </article>
 </BaseLayout>

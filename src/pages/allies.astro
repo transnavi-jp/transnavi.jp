@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import References from '../components/References.astro';
 import Mascot from '../components/Mascot.astro';
 
 const tellingTips = [
@@ -50,5 +51,6 @@ const listenTips = [
       <a class="word-chip" href="/glossary/">用語集</a>
       <a class="word-chip" href="/resources/">関連サイト</a>
     </nav>
+    <References route="/allies/" />
   </article>
 </BaseLayout>

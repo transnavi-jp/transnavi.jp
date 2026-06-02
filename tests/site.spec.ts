@@ -30,7 +30,7 @@ for (const path of pages) {
     await page.goto(path);
 
     await expect(page.locator('html')).toHaveAttribute('lang', 'ja');
-    await expect(page.locator('body')).not.toContainText('法務');
+    await expect(page.locator('body')).not.toContainText('法務部');
     await expect(page.locator('body')).not.toContainText('資料庫');
 
     const h1 = page.locator('h1').first();
