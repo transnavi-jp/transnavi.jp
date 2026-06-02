@@ -1,34 +1,6 @@
 {
   "sections": [
     {
-      "key": "trans-groups",
-      "title": "トランスの当事者会・支援団体",
-      "description": "トランスジェンダー・ノンバイナリーの当事者会・自助グループと、支援・アドボカシーの団体。集まりは日時や形式が変わることがあるので、参加する前に各団体の最新の案内を確認してください。",
-      "groups": [
-        {
-          "region": "全国・オンライン",
-          "items": [
-            { "name": "Tネット（トランスジェンダー・ネットワーク・ジャパン）", "url": "https://tnet-japan.com/" },
-            { "name": "gid.jp（性同一性障害・性別違和と共に生きる人々の会）", "url": "https://gid.jp/" },
-            { "name": "Transgender Japan（TGJP）", "url": "https://tgjp.jp/" }
-          ]
-        },
-        {
-          "region": "関東",
-          "items": [
-            { "name": "TG+NBの会（大宮・オンライン）", "url": "https://tgnb.tokyo/" }
-          ]
-        },
-        {
-          "region": "関西",
-          "items": [
-            { "name": "きんきトランス・ミーティング", "url": "https://x.com/kintoramtg" },
-            { "name": "G-Front関西 トランスサロン", "url": "http://www5e.biglobe.ne.jp/~gfront/c-trans.htm" }
-          ]
-        }
-      ]
-    },
-    {
       "key": "community-centers",
       "title": "コミュニティセンター・地域団体",
       "description": "各地の常設センターや地域の当事者団体。",
@@ -59,7 +31,6 @@
         {
           "region": "関西",
           "items": [
-            { "name": "プライドセンター大阪", "url": "https://pridecenter.jp/" },
             { "name": "QWRC（大阪）", "url": "https://qwrc.org/" },
             { "name": "関西クィア映画祭", "url": "https://ja.wikipedia.org/wiki/関西クィア映画祭" }
           ]
