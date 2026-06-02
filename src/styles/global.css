@@ -131,7 +131,7 @@ main {
   box-shadow: var(--shadow-soft);
 }
 
-/* Cuter title: a soft trans-flag pastel (light blue → pink) gradient text fill. */
+/* Cuter title: a trans-flag mirror (blue → pink → lavender → pink → blue). */
 .brand-name {
   display: block;
   margin: 0;
@@ -139,7 +139,7 @@ main {
   font-weight: 800;
   letter-spacing: -0.03em;
   line-height: 1.15;
-  background: linear-gradient(95deg, #7fc8f2 0%, #c4a8e6 50%, #f6aecb 100%);
+  background: linear-gradient(100deg, #5bcefa 0%, #f5a9c4 38%, #cfa9e8 50%, #f5a9c4 62%, #5bcefa 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -516,13 +516,19 @@ ul {
   font-weight: 700;
 }
 
-/* Centred, wrapping pills — for short reassurances (homepage), so they read as
-   a balanced cluster instead of a left-aligned column. */
+/* Reassurances (homepage) as a balanced, centred 2×2 of pills (1 column on
+   narrow screens) — avoids the lopsided 3+1 wrap of a plain flex row. */
 .assure-list-pills {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
   justify-content: center;
   gap: 10px 12px;
+}
+
+@media (max-width: 600px) {
+  .assure-list-pills {
+    grid-template-columns: 1fr;
+  }
 }
 
 .assure-list-pills li {
@@ -1642,6 +1648,20 @@ ul {
   width: 200px;
   max-width: 56%;
   margin: 0 auto 6px;
+}
+
+/* A diverse little crowd at the top of the homepage hero. */
+.hero-people {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0 auto 6px;
+}
+
+.hero-people .mascot {
+  width: clamp(74px, 17vw, 116px);
+  margin: 0 -7px;
 }
 
 @media (max-width: 640px) {

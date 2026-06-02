@@ -1,0 +1,18 @@
+<svg viewBox="0 0 240 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="とらんすナビのキャラクター">
+<defs>
+    <linearGradient id="pd-hair" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e7c9a9"/><stop offset="1" stop-color="#c79c74"/></linearGradient>
+    <linearGradient id="pd-body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ddd0f3"/><stop offset="1" stop-color="#c8b6ec"/></linearGradient>
+    <linearGradient id="pd-coat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#eaf4fe"/></linearGradient>
+  </defs>
+<ellipse cx="120" cy="190" rx="64" ry="11" fill="#9fcef7" opacity="0.22"/>
+
+<path d="M84 188 C80 150 86 128 120 128 C154 128 160 150 156 188 Z" fill="url(#pd-body)"/>
+
+<circle cx="86" cy="158" r="10" fill="#f2d2b1"/><circle cx="154" cy="158" r="10" fill="#f2d2b1"/>
+<circle cx="120" cy="92" r="46" fill="#f2d2b1"/>
+<path d="M70 104 C66 58 92 42 120 42 C148 42 174 58 170 104 C168 86 162 78 162 78 C150 70 134 68 120 68 C106 68 90 70 78 78 C78 78 72 86 70 104 Z" fill="url(#pd-hair)"/>
+<path d="M99 80 q7.5 -3 15 0" fill="none" stroke="#a07a55" stroke-width="2.6" stroke-linecap="round"/><path d="M126 80 q7.5 -3 15 0" fill="none" stroke="#a07a55" stroke-width="2.6" stroke-linecap="round"/><ellipse cx="105" cy="96" rx="4.6" ry="6.2" fill="#4a5d80"/><ellipse cx="135" cy="96" rx="4.6" ry="6.2" fill="#4a5d80"/><circle cx="106.6" cy="93.6" r="1.5" fill="#fff"/><circle cx="136.6" cy="93.6" r="1.5" fill="#fff"/><path d="M113 114 q7 5 14 0" fill="none" stroke="#c98aa0" stroke-width="2.6" stroke-linecap="round"/>
+
+<ellipse cx="92" cy="107" rx="7" ry="4.2" fill="#fbb6ce" opacity="0.6"/><ellipse cx="148" cy="107" rx="7" ry="4.2" fill="#fbb6ce" opacity="0.6"/>
+
+</svg>

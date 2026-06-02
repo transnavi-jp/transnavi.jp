@@ -1,0 +1,18 @@
+<svg viewBox="0 0 240 210" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="とらんすナビのキャラクター">
+<defs>
+    <linearGradient id="pa-hair" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d7c6f0"/><stop offset="1" stop-color="#c3aee8"/></linearGradient>
+    <linearGradient id="pa-body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bfe0fb"/><stop offset="1" stop-color="#9fcef7"/></linearGradient>
+    <linearGradient id="pa-coat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#eaf4fe"/></linearGradient>
+  </defs>
+<ellipse cx="120" cy="190" rx="64" ry="11" fill="#9fcef7" opacity="0.22"/>
+<path d="M58 66 l2.4 6 6 2.4 -6 2.4 -2.4 6 -2.4 -6 -6 -2.4 6 -2.4 z" fill="#ffd1e0"/><path d="M196 78 l2 5 5 2 -5 2 -2 5 -2 -5 -5 -2 5 -2 z" fill="#bfe0fb"/><path d="M176 46 l1.6 4 4 1.6 -4 1.6 -1.6 4 -1.6 -4 -4 -1.6 4 -1.6 z" fill="#ffd1e0"/>
+<path d="M84 188 C80 150 86 128 120 128 C154 128 160 150 156 188 Z" fill="url(#pa-body)"/>
+
+<circle cx="86" cy="158" r="10" fill="#fce9e0"/><circle cx="162" cy="92" r="11" fill="#fce9e0"/>
+<circle cx="120" cy="92" r="46" fill="#fce9e0"/>
+<path d="M75 92 C73 56 96 44 120 44 C144 44 167 56 165 92 C160 78 150 72 150 72 C150 72 150 84 142 86 C138 74 132 70 132 70 C132 70 130 82 124 84 C120 70 112 68 112 68 C112 68 110 82 104 84 C100 72 92 72 92 76 C88 80 82 80 75 92 Z" fill="url(#pa-hair)"/>
+<path d="M99 80 q7.5 -3 15 0" fill="none" stroke="#b3a3d2" stroke-width="2.6" stroke-linecap="round"/><path d="M126 80 q7.5 -3 15 0" fill="none" stroke="#b3a3d2" stroke-width="2.6" stroke-linecap="round"/><path d="M100 98 q5 -5 10 0" fill="none" stroke="#4a5d80" stroke-width="3" stroke-linecap="round"/><path d="M130 98 q5 -5 10 0" fill="none" stroke="#4a5d80" stroke-width="3" stroke-linecap="round"/><path d="M111 113 q9 8 18 0" fill="none" stroke="#c98aa0" stroke-width="2.8" stroke-linecap="round"/>
+
+<ellipse cx="92" cy="107" rx="7" ry="4.2" fill="#fbb6ce" opacity="0.6"/><ellipse cx="148" cy="107" rx="7" ry="4.2" fill="#fbb6ce" opacity="0.6"/>
+
+</svg>

@@ -133,6 +133,12 @@ const SET = {
   'doctor':       { hair: 'pink', hairStyle: 'spiky', skin: 'deep', body: 'blue', expr: 'happy', scene: 'doctor', id: 'd' },
   'support-heart':{ hair: 'brown', hairStyle: 'bob', skin: 'warm', body: 'pink', expr: 'soft', scene: 'heart', id: 'h' },
   'calm':         { hair: 'mint', hairStyle: 'spiky', skin: 'pale', body: 'lilac', expr: 'happy', scene: 'none', id: 'c' },
+  // A diverse little crowd for the homepage hero (varied hair, skin, style).
+  'person-1':     { hair: 'lavender', hairStyle: 'spiky', skin: 'pale', body: 'blue', expr: 'happy', scene: 'wave', id: 'pa' },
+  'person-2':     { hair: 'pink', hairStyle: 'bob', skin: 'warm', body: 'pink', expr: 'soft', scene: 'none', id: 'pb' },
+  'person-3':     { hair: 'blue', hairStyle: 'spiky', skin: 'deep', body: 'mint', expr: 'happy', scene: 'none', id: 'pc' },
+  'person-4':     { hair: 'brown', hairStyle: 'bob', skin: 'warm', body: 'lilac', expr: 'soft', scene: 'none', id: 'pd' },
+  'person-5':     { hair: 'mint', hairStyle: 'spiky', skin: 'pale', body: 'pink', expr: 'happy', scene: 'wave', id: 'pe' },
 };
 if (process.argv[1] && process.argv[1].endsWith('mascot.mjs') && process.argv.includes('--write')) {
   const here = dirname(fileURLToPath(import.meta.url));

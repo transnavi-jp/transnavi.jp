@@ -3,7 +3,7 @@ import mascots from '../data/mascots.json';
 
 interface Props {
   name: keyof typeof mascots;
-  variant?: 'spot' | 'hero';
+  variant?: 'spot' | 'hero' | 'plain';
 }
 const { name, variant = 'spot' } = Astro.props;
 const svg = (mascots as Record<string, string>)[name] ?? '';
