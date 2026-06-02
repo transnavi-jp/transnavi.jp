@@ -19,7 +19,15 @@
     "avoid": [],
     "disputed": [],
     "source": "17β-Estradiol",
-    "notes": "ヒトの体内で分泌される主要なエストロゲンで、エストロゲン製剤の活性成分として性別適合ホルモン療法（GAHT）に用いられる。"
+    "notes": "ヒトの体内で分泌される主要なエストロゲンで、エストロゲン製剤の活性成分として性別適合ホルモン療法（GAHT）に用いられる。",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/エストラジオール",
+      "en": "https://en.wikipedia.org/wiki/Estradiol",
+      "ko": "https://ko.wikipedia.org/wiki/에스트라디올",
+      "es": "https://es.wikipedia.org/wiki/Estradiol",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/雌二醇",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/雌二醇"
+    }
   },
   {
     "id": "gnrh-analogues",
@@ -41,7 +49,12 @@
     "avoid": [],
     "disputed": [],
     "source": "GnRH Analogues",
-    "notes": "性腺刺激ホルモン放出ホルモン（GnRH）の作用を抑え、性ホルモンの分泌を抑制する薬剤。思春期ブロッカーや抗アンドロゲン目的で用いられる。"
+    "notes": "性腺刺激ホルモン放出ホルモン（GnRH）の作用を抑え、性ホルモンの分泌を抑制する薬剤。思春期ブロッカーや抗アンドロゲン目的で用いられる。",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Gonadotropin-releasing_hormone_agonist",
+      "ko": "https://ko.wikipedia.org/wiki/성선자극호르몬분비호르몬_작용제",
+      "es": "https://es.wikipedia.org/wiki/Agonista_de_la_hormona_liberadora_de_gonadotropina"
+    }
   },
   {
     "id": "force-outing",
@@ -61,7 +74,15 @@
     "avoid": [],
     "disputed": [],
     "source": "Force Outing",
-    "notes": "本人の同意なく、その性同一性や性的指向などを第三者に暴露する行為のこと。"
+    "notes": "本人の同意なく、その性同一性や性的指向などを第三者に暴露する行為のこと。",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/アウティング",
+      "en": "https://en.wikipedia.org/wiki/Outing",
+      "ko": "https://ko.wikipedia.org/wiki/아웃팅",
+      "es": "https://es.wikipedia.org/wiki/Sacar_del_armario",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/被出櫃",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/被出櫃"
+    }
   },
   {
     "id": "informed-consent",
@@ -150,7 +171,14 @@
     "avoid": [],
     "disputed": [],
     "notes": "天然の女性ホルモン（エストロゲン）の一つ。作用が弱く、現行のガイドラインでは性別適合ホルモン療法（GAHT）でエストラジオールの代替として用いることは一般に推奨されていない。",
-    "source": "Estriol (E3)"
+    "source": "Estriol (E3)",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/エストリオール",
+      "en": "https://en.wikipedia.org/wiki/Estriol",
+      "es": "https://es.wikipedia.org/wiki/Estriol",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/雌三醇",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/雌三醇"
+    }
   },
   {
     "id": "estrogen",
@@ -171,7 +199,16 @@
     "avoid": [],
     "disputed": [],
     "notes": "卵胞ホルモンとも呼ばれる女性ホルモンの総称。ホルモン療法（HRT）の文脈では、エストラジオールをはじめとするエストロゲン製剤を指して用いられることが多い。",
-    "source": "Estrogen"
+    "source": "Estrogen",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/エストロゲン",
+      "en": "https://en.wikipedia.org/wiki/Estrogen",
+      "ko": "https://ko.wikipedia.org/wiki/에스트로겐",
+      "th": "https://th.wikipedia.org/wiki/เอสโตรเจน",
+      "es": "https://es.wikipedia.org/wiki/Estrógeno",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/雌激素",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/雌激素"
+    }
   },
   {
     "id": "estrone",
@@ -190,7 +227,15 @@
     "avoid": [],
     "disputed": [],
     "notes": "天然のエストロゲンの一つ。エストロン（E1）と呼ばれ、ホルモン療法（HRT）におけるホルモンモニタリングやエストラジオールの代謝に関連して言及される。",
-    "source": "Estrone (E1)"
+    "source": "Estrone (E1)",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/エストロン",
+      "en": "https://en.wikipedia.org/wiki/Estrone",
+      "ko": "https://ko.wikipedia.org/wiki/에스트론",
+      "es": "https://es.wikipedia.org/wiki/Estrona",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/雌酮",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/雌酮"
+    }
   },
   {
     "id": "ethinylestradiol",
@@ -211,7 +256,15 @@
     "avoid": [],
     "disputed": [],
     "source": "Ethinylestradiol (EE)",
-    "notes": "合成エストロゲンの一つ。血栓症などのリスクが高いため、現在の性別適合ホルモン療法（GAHT）では一般にエストラジオールが推奨され、用いられることは少ない。"
+    "notes": "合成エストロゲンの一つ。血栓症などのリスクが高いため、現在の性別適合ホルモン療法（GAHT）では一般にエストラジオールが推奨され、用いられることは少ない。",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/エチニルエストラジオール",
+      "en": "https://en.wikipedia.org/wiki/Ethinylestradiol",
+      "ko": "https://ko.wikipedia.org/wiki/에티닐에스트라다이올",
+      "es": "https://es.wikipedia.org/wiki/Etinilestradiol",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/炔雌醇",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/炔雌醇"
+    }
   },
   {
     "id": "estradiol-enanthate",
@@ -229,7 +282,13 @@
     "avoid": [],
     "disputed": [],
     "source": "Estradiol Enanthate",
-    "notes": "エストラジオールのエステルの一つで、注射剤に用いられる持続型のエストロゲン製剤を指す。"
+    "notes": "エストラジオールのエステルの一つで、注射剤に用いられる持続型のエストロゲン製剤を指す。",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Estradiol_enanthate",
+      "ko": "https://ko.wikipedia.org/wiki/에스트라디올_에난테이트",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/庚酸雌二醇",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/庚酸雌二醇"
+    }
   },
   {
     "id": "coming-out",
@@ -252,7 +311,16 @@
     "disputed": [],
     "source": "Coming Out",
     "message": "話すかどうか、誰に・いつ話すかは、いつだってあなたが選んでいい。あなたの安全が、いちばんです。",
-    "notes": "自分の性同一性や性的指向を、自らの意思で他者に開示すること。誰に・いつ・どこまで伝えるかは本人が選べる。"
+    "notes": "自分の性同一性や性的指向を、自らの意思で他者に開示すること。誰に・いつ・どこまで伝えるかは本人が選べる。",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/カミングアウト",
+      "en": "https://en.wikipedia.org/wiki/Coming_out",
+      "ko": "https://ko.wikipedia.org/wiki/커밍아웃",
+      "th": "https://th.wikipedia.org/wiki/การเปิดเผยอัตลักษณ์ทางเพศของตน",
+      "es": "https://es.wikipedia.org/wiki/Salir_del_armario",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/出櫃",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/出櫃"
+    }
   },
   {
     "id": "closeted",
@@ -270,7 +338,15 @@
     "avoid": [],
     "disputed": [],
     "source": "In the Closet",
-    "notes": "自身のトランスジェンダーであることや性同一性を、家族・職場・周囲などに公表せず隠している状態のこと。「カミングアウト」の対義的な状態を指す。"
+    "notes": "自身のトランスジェンダーであることや性同一性を、家族・職場・周囲などに公表せず隠している状態のこと。「カミングアウト」の対義的な状態を指す。",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/クローゼット_(性的指向)",
+      "en": "https://en.wikipedia.org/wiki/Closeted",
+      "ko": "https://ko.wikipedia.org/wiki/클로짓",
+      "es": "https://es.wikipedia.org/wiki/Estar_en_el_armario",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/深櫃",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/深櫃"
+    }
   },
   {
     "id": "clocking",
@@ -347,7 +423,16 @@
     "avoid": [],
     "disputed": [],
     "source": "Gonadotropins (LH/FSH)",
-    "notes": "下垂体から分泌され性腺を刺激するホルモンの総称で、黄体形成ホルモン（LH）と卵胞刺激ホルモン（FSH）を指す。ホルモン療法の効果判定などで測定される。"
+    "notes": "下垂体から分泌され性腺を刺激するホルモンの総称で、黄体形成ホルモン（LH）と卵胞刺激ホルモン（FSH）を指す。ホルモン療法の効果判定などで測定される。",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/性腺刺激ホルモン",
+      "en": "https://en.wikipedia.org/wiki/Gonadotropin",
+      "ko": "https://ko.wikipedia.org/wiki/생식샘_자극_호르몬",
+      "th": "https://th.wikipedia.org/wiki/โกนาโดโทรฟิน",
+      "es": "https://es.wikipedia.org/wiki/Gonadotropina",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/促性腺激素",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/促性腺激素"
+    }
   },
   {
     "id": "cisgender",
@@ -367,7 +452,15 @@
     "avoid": [],
     "disputed": [],
     "source": "Cisgender",
-    "notes": "出生時に割り当てられた性別と性同一性が一致している人のこと。トランスジェンダーの対義語として用いられる。"
+    "notes": "出生時に割り当てられた性別と性同一性が一致している人のこと。トランスジェンダーの対義語として用いられる。",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/シスジェンダー",
+      "en": "https://en.wikipedia.org/wiki/Cisgender",
+      "ko": "https://ko.wikipedia.org/wiki/시스젠더",
+      "es": "https://es.wikipedia.org/wiki/Cisgénero",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/順性別",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/順性別"
+    }
   },
   {
     "id": "cisgender-woman",
@@ -387,7 +480,10 @@
     "avoid": [],
     "disputed": [],
     "source": "Cisgender Woman",
-    "notes": "出生時に女性を割り当てられ、性同一性も女性である人のこと。シスジェンダーである女性を指す。"
+    "notes": "出生時に女性を割り当てられ、性同一性も女性である人のこと。シスジェンダーである女性を指す。",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Cisgender_woman"
+    }
   },
   {
     "id": "cisgender-man",
@@ -407,7 +503,10 @@
     "avoid": [],
     "disputed": [],
     "source": "Cisgender Man",
-    "notes": "出生時に男性を割り当てられ、性同一性も男性である人のこと。シスジェンダーである男性を指す。"
+    "notes": "出生時に男性を割り当てられ、性同一性も男性である人のこと。シスジェンダーである男性を指す。",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Cisgender_man"
+    }
   },
   {
     "id": "estradiol-cypionate",
@@ -424,7 +523,12 @@
     "avoid": [],
     "disputed": [],
     "source": "Estradiol Cypionate",
-    "notes": "エストラジオールのエステル製剤の一つで、注射によるホルモン療法（HRT）に用いられる。"
+    "notes": "エストラジオールのエステル製剤の一つで、注射によるホルモン療法（HRT）に用いられる。",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Estradiol_cypionate",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/环戊丙酸雌二醇",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/环戊丙酸雌二醇"
+    }
   },
   {
     "id": "dihydrotestosterone",
@@ -445,7 +549,15 @@
     "avoid": [],
     "disputed": [],
     "notes": "テストステロンが5α還元酵素により変換されて生じる強力なアンドロゲン。男性型脱毛（AGA）や術後の抗アンドロゲン管理に関連して話題になることが多い。",
-    "source": "Dihydrotestosterone (DHT)"
+    "source": "Dihydrotestosterone (DHT)",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/ジヒドロテストステロン",
+      "en": "https://en.wikipedia.org/wiki/Dihydrotestosterone",
+      "ko": "https://ko.wikipedia.org/wiki/다이하이드로테스토스테론",
+      "es": "https://es.wikipedia.org/wiki/Dihidrotestosterona",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/双氢睾酮",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/双氢睾酮"
+    }
   },
   {
     "id": "stealth",
@@ -484,7 +596,15 @@
     "avoid": [],
     "disputed": [],
     "source": "Spironolactone",
-    "notes": "抗アンドロゲン作用を持つ薬剤で、性別適合ホルモン療法（GAHT）においてテストステロンの作用を抑える目的で用いられる。本来はカリウム保持性利尿薬。"
+    "notes": "抗アンドロゲン作用を持つ薬剤で、性別適合ホルモン療法（GAHT）においてテストステロンの作用を抑える目的で用いられる。本来はカリウム保持性利尿薬。",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/スピロノラクトン",
+      "en": "https://en.wikipedia.org/wiki/Spironolactone",
+      "ko": "https://ko.wikipedia.org/wiki/스피로놀락톤",
+      "es": "https://es.wikipedia.org/wiki/Espironolactona",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/螺内酯",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/螺内酯"
+    }
   },
   {
     "id": "dilator",
@@ -504,7 +624,12 @@
     "avoid": [],
     "disputed": [],
     "notes": "性別適合手術（造腟術）後に、造設した腟が癒着・収縮しないよう、挿入して一定の深さと幅を保つために用いる拡張器具のこと。",
-    "source": "Vaginal Dilator"
+    "source": "Vaginal Dilator",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Vaginal_dilator",
+      "ko": "https://ko.wikipedia.org/wiki/질확장기",
+      "es": "https://es.wikipedia.org/wiki/Dilatador_vaginal"
+    }
   },
   {
     "id": "chaser",
@@ -521,7 +646,11 @@
     "avoid": [],
     "disputed": [],
     "source": "Chaser",
-    "notes": "トランスジェンダー（特にトランス女性）に性的・恋愛的な関心を向ける人を指す語。フェティッシュ的な対象化を含意することがあり、文脈によっては否定的に受け取られる。"
+    "notes": "トランスジェンダー（特にトランス女性）に性的・恋愛的な関心を向ける人を指す語。フェティッシュ的な対象化を含意することがあり、文脈によっては否定的に受け取られる。",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/トラニーチェイサー",
+      "en": "https://en.wikipedia.org/wiki/Trans_chaser"
+    }
   },
   {
     "id": "dexamethasone",
@@ -540,7 +669,16 @@
     "avoid": [],
     "disputed": [],
     "source": "Dexamethasone",
-    "notes": "副腎皮質ステロイド（合成糖質コルチコイド）の一つ。先天性副腎過形成などで男性ホルモンの過剰産生を抑える目的などに用いられる。"
+    "notes": "副腎皮質ステロイド（合成糖質コルチコイド）の一つ。先天性副腎過形成などで男性ホルモンの過剰産生を抑える目的などに用いられる。",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/デキサメタゾン",
+      "en": "https://en.wikipedia.org/wiki/Dexamethasone",
+      "ko": "https://ko.wikipedia.org/wiki/덱사메타손",
+      "th": "https://th.wikipedia.org/wiki/เดกซาเมทาโซน",
+      "es": "https://es.wikipedia.org/wiki/Dexametasona",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/地塞米松",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/地塞米松"
+    }
   },
   {
     "id": "testosterone",
@@ -562,7 +700,16 @@
     "avoid": [],
     "disputed": [],
     "source": "Testosterone (T)",
-    "notes": "精巣などで主に分泌される代表的なアンドロゲン（男性ホルモン）。トランス女性のホルモン療法では、抗アンドロゲン薬などによってこの作用を抑えることが目標の一つとなる。"
+    "notes": "精巣などで主に分泌される代表的なアンドロゲン（男性ホルモン）。トランス女性のホルモン療法では、抗アンドロゲン薬などによってこの作用を抑えることが目標の一つとなる。",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/テストステロン",
+      "en": "https://en.wikipedia.org/wiki/Testosterone",
+      "ko": "https://ko.wikipedia.org/wiki/테스토스테론",
+      "th": "https://th.wikipedia.org/wiki/เทสโทสเตอโรน",
+      "es": "https://es.wikipedia.org/wiki/Testosterona",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/睾酮",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/睾酮"
+    }
   },
   {
     "id": "deadnaming",
@@ -582,7 +729,14 @@
     "avoid": [],
     "disputed": [],
     "notes": "トランスジェンダーの人が以前使っていたが現在は使わなくなった名前（多くは出生時の名前）で、その人を呼んだり言及したりすること。",
-    "source": "Deadnaming"
+    "source": "Deadnaming",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/デッドネーミング",
+      "en": "https://en.wikipedia.org/wiki/Deadnaming",
+      "es": "https://es.wikipedia.org/wiki/Deadnaming",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/棄名錯稱",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/棄名錯稱"
+    }
   },
   {
     "id": "detransition",
@@ -603,7 +757,14 @@
     "disputed": [],
     "notes": "性別移行を中断したり、元の方向へ戻したりすること、またその過程を指す。",
     "source": "Detransition",
-    "message": "進む道も、立ち止まる道も、引き返す道も、ぜんぶあなたのものです。どんな選択も、責められるものではありません。"
+    "message": "進む道も、立ち止まる道も、引き返す道も、ぜんぶあなたのものです。どんな選択も、責められるものではありません。",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Detransition",
+      "ko": "https://ko.wikipedia.org/wiki/탈성전환",
+      "es": "https://es.wikipedia.org/wiki/Detransición",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/Detrans",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/Detrans"
+    }
   },
   {
     "id": "dutasteride",
@@ -624,7 +785,14 @@
     "avoid": [],
     "disputed": [],
     "notes": "5α還元酵素阻害薬の一つ。テストステロンからDHTへの変換を抑え、男性型脱毛症などの治療に用いられる。",
-    "source": "Dutasteride"
+    "source": "Dutasteride",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/デュタステリド",
+      "en": "https://en.wikipedia.org/wiki/Dutasteride",
+      "es": "https://es.wikipedia.org/wiki/Dutasterida",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/度他雄胺",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/度他雄胺"
+    }
   },
   {
     "id": "bathroom-access",
@@ -666,7 +834,16 @@
     "disputed": [],
     "source": "Transgender",
     "message": "どんなあり方でも、あなたがあなたであることは、誰にも否定できません。",
-    "notes": "出生時に割り当てられた性別と性同一性が一致しない人を指す総称。性別移行をするかどうかや、その方法は人によって異なる。"
+    "notes": "出生時に割り当てられた性別と性同一性が一致しない人を指す総称。性別移行をするかどうかや、その方法は人によって異なる。",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/トランスジェンダー",
+      "en": "https://en.wikipedia.org/wiki/Transgender",
+      "ko": "https://ko.wikipedia.org/wiki/트랜스젠더",
+      "th": "https://th.wikipedia.org/wiki/คนข้ามเพศ",
+      "es": "https://es.wikipedia.org/wiki/Transgénero",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/跨性別",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/跨性別"
+    }
   },
   {
     "id": "gender-identity",
@@ -728,7 +905,16 @@
     ],
     "disputed": [],
     "source": "Transgender Woman / MtF",
-    "notes": "出生時に男性と割り当てられたが、性同一性が女性であるトランスジェンダーのこと。MtF（Male to Female）とも呼ばれる。"
+    "notes": "出生時に男性と割り当てられたが、性同一性が女性であるトランスジェンダーのこと。MtF（Male to Female）とも呼ばれる。",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/トランス女性",
+      "en": "https://en.wikipedia.org/wiki/Trans_woman",
+      "ko": "https://ko.wikipedia.org/wiki/트랜스여성",
+      "th": "https://th.wikipedia.org/wiki/หญิงข้ามเพศ",
+      "es": "https://es.wikipedia.org/wiki/Mujer_trans",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/跨性別女性",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/跨性別女性"
+    }
   },
   {
     "id": "transgender-man",
@@ -748,7 +934,11 @@
     "avoid": [],
     "disputed": [],
     "source": "Transgender Man / FtM",
-    "notes": "出生時に女性と割り当てられたが、性同一性が男性であるトランスジェンダーのこと。FtM（Female to Male）とも呼ばれる。"
+    "notes": "出生時に女性と割り当てられたが、性同一性が男性であるトランスジェンダーのこと。FtM（Female to Male）とも呼ばれる。",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Centuripe_ware",
+      "es": "https://es.wikipedia.org/wiki/Cerámica_de_Centuripa"
+    }
   },
   {
     "id": "terf",
@@ -770,7 +960,16 @@
     "avoid": [],
     "disputed": [],
     "source": "TERF",
-    "notes": "「トランス排除的ラディカルフェミニスト（Trans-Exclusionary Radical Feminist）」の略。フェミニズムの立場をとりながら、トランスジェンダー、とくにトランス女性を女性として認めない主張をする人々を指す。"
+    "notes": "「トランス排除的ラディカルフェミニスト（Trans-Exclusionary Radical Feminist）」の略。フェミニズムの立場をとりながら、トランスジェンダー、とくにトランス女性を女性として認めない主張をする人々を指す。",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/トランス排除的ラディカルフェミニスト",
+      "en": "https://en.wikipedia.org/wiki/TERF_(acronym)",
+      "ko": "https://ko.wikipedia.org/wiki/TERF",
+      "th": "https://th.wikipedia.org/wiki/เทิร์ฟ",
+      "es": "https://es.wikipedia.org/wiki/TERF",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/排跨基女",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/排跨基女"
+    }
   },
   {
     "id": "triptorelin",
@@ -787,7 +986,13 @@
     "avoid": [],
     "disputed": [],
     "notes": "GnRH（性腺刺激ホルモン放出ホルモン）アナログの一つ。思春期ブロッカーや性腺軸の抑制に用いられる。",
-    "source": "Triptorelin"
+    "source": "Triptorelin",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Triptorelin",
+      "es": "https://es.wikipedia.org/wiki/Triptorelina",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/曲普瑞林",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/曲普瑞林"
+    }
   },
   {
     "id": "non-binary",
@@ -811,7 +1016,16 @@
     "disputed": [],
     "source": "Non-binary",
     "message": "どちらか一つを選ばなくても、あなたはちゃんと、あなたのままでいられます。",
-    "notes": "性同一性が男性・女性という二分法のいずれにも当てはまらない、あるいはその枠組みにとらわれないあり方を指す。ノンバイナリーの人の中には、自分をトランスジェンダーだと考える人もいれば、そうは考えない人もいる。どちらの感じ方も否定されるものではない。"
+    "notes": "性同一性が男性・女性という二分法のいずれにも当てはまらない、あるいはその枠組みにとらわれないあり方を指す。ノンバイナリーの人の中には、自分をトランスジェンダーだと考える人もいれば、そうは考えない人もいる。どちらの感じ方も否定されるものではない。",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/ノンバイナリー・ジェンダー",
+      "en": "https://en.wikipedia.org/wiki/Non-binary",
+      "ko": "https://ko.wikipedia.org/wiki/논바이너리",
+      "th": "https://th.wikipedia.org/wiki/นอนไบนารี",
+      "es": "https://es.wikipedia.org/wiki/Género_no_binario",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/非二元性別",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/非二元性別"
+    }
   },
   {
     "id": "passing",
@@ -831,7 +1045,14 @@
     "avoid": [],
     "disputed": [],
     "source": "Pass/Passing",
-    "notes": "服装や振る舞いなどを通して、自認する性別の人として周囲に自然に認識される状態のこと。"
+    "notes": "服装や振る舞いなどを通して、自認する性別の人として周囲に自然に認識される状態のこと。",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Passing_(gender)",
+      "ko": "https://ko.wikipedia.org/wiki/패싱_(젠더)",
+      "es": "https://es.wikipedia.org/wiki/Passing_(identidad_de_género)",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/Passing",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/Passing"
+    }
   },
   {
     "id": "bicalutamide",
@@ -849,7 +1070,14 @@
     ],
     "avoid": [],
     "disputed": [],
-    "source": "Bicalutamide"
+    "source": "Bicalutamide",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/ビカルタミド",
+      "en": "https://en.wikipedia.org/wiki/Bicalutamide",
+      "es": "https://es.wikipedia.org/wiki/Bicalutamida",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/比卡魯胺",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/比卡魯胺"
+    }
   },
   {
     "id": "finasteride",
@@ -869,7 +1097,15 @@
     "avoid": [],
     "disputed": [],
     "notes": "男性型脱毛症などに用いられる5α還元酵素阻害薬。テストステロンからDHTへの変換を抑える。",
-    "source": "Finasteride"
+    "source": "Finasteride",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/フィナステリド",
+      "en": "https://en.wikipedia.org/wiki/Finasteride",
+      "ko": "https://ko.wikipedia.org/wiki/피나스테리드",
+      "es": "https://es.wikipedia.org/wiki/Finasterida",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/非那雄胺",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/非那雄胺"
+    }
   },
   {
     "id": "progesterone",
@@ -890,7 +1126,16 @@
     ],
     "avoid": [],
     "disputed": [],
-    "source": "Progesterone"
+    "source": "Progesterone",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/プロゲステロン",
+      "en": "https://en.wikipedia.org/wiki/Progesterone",
+      "ko": "https://ko.wikipedia.org/wiki/황체_호르몬",
+      "th": "https://th.wikipedia.org/wiki/โพรเจสเทอโรน",
+      "es": "https://es.wikipedia.org/wiki/Progesterona",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/孕酮",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/孕酮"
+    }
   },
   {
     "id": "progestogen",
@@ -910,7 +1155,15 @@
     "avoid": [],
     "disputed": [],
     "notes": "天然の黄体ホルモン（プロゲステロン）と合成黄体ホルモンを含むホルモンの総称。製剤によっては抗アンドロゲン作用を併せ持つものもある。",
-    "source": "Progestogen"
+    "source": "Progestogen",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/ゲスターゲン",
+      "en": "https://en.wikipedia.org/wiki/Progestogen",
+      "ko": "https://ko.wikipedia.org/wiki/프로게스토겐",
+      "es": "https://es.wikipedia.org/wiki/Progestágeno",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/孕激素",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/孕激素"
+    }
   },
   {
     "id": "prolactin",
@@ -949,7 +1202,11 @@
     "avoid": [],
     "disputed": [],
     "source": "Misgendering",
-    "notes": "その人の性同一性とは違う性別で扱ったり、呼んだりすること（わざとかどうかを問わず）。"
+    "notes": "その人の性同一性とは違う性別で扱ったり、呼んだりすること（わざとかどうかを問わず）。",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Misgendering",
+      "es": "https://es.wikipedia.org/wiki/Misgendering"
+    }
   },
   {
     "id": "minoxidil",
@@ -970,7 +1227,16 @@
     "avoid": [],
     "disputed": [],
     "notes": "脱毛症の治療に用いられる外用または内服の薬剤。",
-    "source": "Minoxidil"
+    "source": "Minoxidil",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/ミノキシジル",
+      "en": "https://en.wikipedia.org/wiki/Minoxidil",
+      "ko": "https://ko.wikipedia.org/wiki/미녹시딜",
+      "th": "https://th.wikipedia.org/wiki/ไมน็อกซิดิล",
+      "es": "https://es.wikipedia.org/wiki/Minoxidil",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/米诺地尔",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/米诺地尔"
+    }
   },
   {
     "id": "raloxifene",
@@ -990,7 +1256,15 @@
     "avoid": [],
     "disputed": [],
     "notes": "SERM（選択的エストロゲン受容体モジュレーター）の一つ。ノンバイナリー向けのホルモン療法の選択肢として言及されることがある。",
-    "source": "Raloxifene"
+    "source": "Raloxifene",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/ラロキシフェン",
+      "en": "https://en.wikipedia.org/wiki/Raloxifene",
+      "ko": "https://ko.wikipedia.org/wiki/랄록시펜",
+      "es": "https://es.wikipedia.org/wiki/Raloxifeno",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/雷洛昔芬",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/雷洛昔芬"
+    }
   },
   {
     "id": "laser-hair-removal",
@@ -1009,7 +1283,12 @@
     ],
     "avoid": [],
     "disputed": [],
-    "source": "Laser Hair Removal"
+    "source": "Laser Hair Removal",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/レーザー脱毛",
+      "en": "https://en.wikipedia.org/wiki/Laser_hair_removal",
+      "es": "https://es.wikipedia.org/wiki/Depilación_láser"
+    }
   },
   {
     "id": "estradiol-benzoate",
@@ -1026,7 +1305,11 @@
     "aliases": [],
     "avoid": [],
     "disputed": [],
-    "source": "Estradiol Benzoate (EB)"
+    "source": "Estradiol Benzoate (EB)",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/安息香酸エストラジオール",
+      "en": "https://en.wikipedia.org/wiki/Estradiol_benzoate"
+    }
   },
   {
     "id": "cross-dresser",
@@ -1050,7 +1333,15 @@
     ],
     "disputed": [],
     "notes": "出生時に割り当てられた性別とは異なる性別の服装を身につけること、またその人を指す。性同一性や性的指向とは必ずしも結びつかず、性別移行を意図するとは限らない。",
-    "source": "Cross-dresser (CD)"
+    "source": "Cross-dresser (CD)",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/異性装",
+      "en": "https://en.wikipedia.org/wiki/Cross-dressing",
+      "ko": "https://ko.wikipedia.org/wiki/크로스드레싱",
+      "es": "https://es.wikipedia.org/wiki/Transformismo",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/異性裝扮",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/異性裝扮"
+    }
   },
   {
     "id": "clitoris",
@@ -1071,7 +1362,16 @@
     "avoid": [],
     "disputed": [],
     "notes": "性器手術や性の健康に関する文脈で用いられる解剖学用語。陰核のこと。",
-    "source": "Clitoris"
+    "source": "Clitoris",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/陰核",
+      "en": "https://en.wikipedia.org/wiki/Clitoris",
+      "ko": "https://ko.wikipedia.org/wiki/음핵",
+      "th": "https://th.wikipedia.org/wiki/ปุ่มกระสัน",
+      "es": "https://es.wikipedia.org/wiki/Clítoris",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/陰蒂",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/陰蒂"
+    }
   },
   {
     "id": "penile-inversion-vaginoplasty",
@@ -1109,7 +1409,16 @@
     "avoid": [],
     "disputed": [],
     "notes": "性器手術の結果やケア、解剖の説明でよく用いられる用語。陰唇のこと。",
-    "source": "Labia"
+    "source": "Labia",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/陰唇",
+      "en": "https://en.wikipedia.org/wiki/Labia",
+      "ko": "https://ko.wikipedia.org/wiki/음순",
+      "th": "https://th.wikipedia.org/wiki/แคม_(อวัยวะเพศ)",
+      "es": "https://es.wikipedia.org/wiki/Labios_(genitales)",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/阴唇",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/阴唇"
+    }
   },
   {
     "id": "vocal-pitch",
@@ -1145,7 +1454,10 @@
     ],
     "avoid": [],
     "disputed": [],
-    "source": "Voice Training"
+    "source": "Voice Training",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Voice_training"
+    }
   },
   {
     "id": "voice-feminization-surgery",
@@ -1165,7 +1477,10 @@
     ],
     "avoid": [],
     "disputed": [],
-    "source": "Voice Feminization Surgery (VFS)"
+    "source": "Voice Feminization Surgery (VFS)",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Voice_feminization_surgery"
+    }
   },
   {
     "id": "domestic-violence-survivor",
@@ -1206,7 +1521,11 @@
       "ゼロデプス腟形成術（Zero-depth Vaginoplasty）"
     ],
     "notes": "いわゆる「ゼロデプス」と呼ばれるものは、実際には陰茎切除・精巣摘出・尿道形成・外陰形成など複数の術式を含み、外陰部形成術（Vulvoplasty）と完全に一致するかどうかは議論がある。",
-    "source": "Vulvoplasty"
+    "source": "Vulvoplasty",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Vulvoplasty",
+      "es": "https://es.wikipedia.org/wiki/Vulvoplastia"
+    }
   },
   {
     "id": "outpatient-records",
@@ -1241,7 +1560,14 @@
     ],
     "avoid": [],
     "disputed": [],
-    "source": "Liver Function"
+    "source": "Liver Function",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Liver_function_tests",
+      "ko": "https://ko.wikipedia.org/wiki/간기능_검사",
+      "th": "https://th.wikipedia.org/wiki/การตรวจการทำงานของตับ",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/肝功能測試",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/肝功能測試"
+    }
   },
   {
     "id": "ffs",
@@ -1261,7 +1587,14 @@
     ],
     "avoid": [],
     "disputed": [],
-    "source": "Facial Feminization Surgery (FFS)"
+    "source": "Facial Feminization Surgery (FFS)",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Facial_feminization_surgery",
+      "ko": "https://ko.wikipedia.org/wiki/얼굴_여성화_수술",
+      "es": "https://es.wikipedia.org/wiki/Cirugía_de_feminización_facial",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/面部女性化手术",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/面部女性化手术"
+    }
   },
   {
     "id": "fundamental-frequency",
@@ -1281,7 +1614,16 @@
     "avoid": [],
     "disputed": [],
     "notes": "声帯が振動する速さを表す数値。声の高さ（ピッチ）と関係し、ボイストレーニングで用いられる。",
-    "source": "Fundamental Frequency (F0)"
+    "source": "Fundamental Frequency (F0)",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/基本周波数",
+      "en": "https://en.wikipedia.org/wiki/Fundamental_frequency",
+      "ko": "https://ko.wikipedia.org/wiki/기본_주파수",
+      "th": "https://th.wikipedia.org/wiki/ความถี่มูลฐาน",
+      "es": "https://es.wikipedia.org/wiki/Frecuencia_fundamental",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/基本頻率",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/基本頻率"
+    }
   },
   {
     "id": "estradiol-valerate",
@@ -1301,7 +1643,13 @@
     "avoid": [],
     "disputed": [],
     "source": "Estradiol Valerate (EV)",
-    "notes": "エストラジオールのエステル製剤の一つで、女性化を目的としたホルモン療法（HRT）で用いられるエストロゲン製剤を指す。"
+    "notes": "エストラジオールのエステル製剤の一つで、女性化を目的としたホルモン療法（HRT）で用いられるエストロゲン製剤を指す。",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Estradiol_valerate",
+      "es": "https://es.wikipedia.org/wiki/Valerato_de_estradiol",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/戊酸雌二醇",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/戊酸雌二醇"
+    }
   },
   {
     "id": "estradiol-valerate-injection",
@@ -1351,7 +1699,12 @@
     ],
     "avoid": [],
     "disputed": [],
-    "source": "Conjugated Estrogens"
+    "source": "Conjugated Estrogens",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Conjugated_estrogens",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/結合型雌激素",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/結合型雌激素"
+    }
   },
   {
     "id": "colovaginoplasty",
@@ -1389,7 +1742,12 @@
     ],
     "avoid": [],
     "disputed": [],
-    "source": "Thromboembolism"
+    "source": "Thromboembolism",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/血栓塞栓症",
+      "en": "https://en.wikipedia.org/wiki/Thromboembolism",
+      "ko": "https://ko.wikipedia.org/wiki/혈전색전증"
+    }
   },
   {
     "id": "ymmv",
@@ -1425,7 +1783,13 @@
     "avoid": [],
     "disputed": [],
     "source": "Employment Discrimination",
-    "notes": "性のあり方などを理由に、採用や職場で不利に扱われること。"
+    "notes": "性のあり方などを理由に、採用や職場で不利に扱われること。",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Employment_discrimination",
+      "ko": "https://ko.wikipedia.org/wiki/고용_차별",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/就業歧視",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/就業歧視"
+    }
   },
   {
     "id": "antiandrogen",
@@ -1445,7 +1809,14 @@
     "avoid": [],
     "disputed": [],
     "notes": "アンドロゲン（男性ホルモン）の作用を抑えるために用いられる薬剤の総称。",
-    "source": "Antiandrogen"
+    "source": "Antiandrogen",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/抗アンドロゲン剤",
+      "en": "https://en.wikipedia.org/wiki/Antiandrogen",
+      "es": "https://es.wikipedia.org/wiki/Antiandrógeno",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/抗雄激素",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/抗雄激素"
+    }
   },
   {
     "id": "tracheal-shave",
@@ -1465,7 +1836,14 @@
     "avoid": [],
     "disputed": [],
     "source": "Tracheal Shave",
-    "notes": "甲状軟骨（喉仏）の突出を削って目立たなくする手術のこと。顔の女性化を目的に行われることがある。"
+    "notes": "甲状軟骨（喉仏）の突出を削って目立たなくする手術のこと。顔の女性化を目的に行われることがある。",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/喉頭隆起削除術",
+      "en": "https://en.wikipedia.org/wiki/Chondrolaryngoplasty",
+      "es": "https://es.wikipedia.org/wiki/Condrolaringoplastía",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/喉结缩小术",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/喉结缩小术"
+    }
   },
   {
     "id": "hyperkalemia",
@@ -1484,7 +1862,16 @@
     "avoid": [],
     "disputed": [],
     "notes": "血液中のカリウムが高くなりすぎた状態。スピロノラクトンなど、カリウムを体にためやすい薬を使うときに注意が必要なリスク。",
-    "source": "Hyperkalemia"
+    "source": "Hyperkalemia",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/高カリウム血症",
+      "en": "https://en.wikipedia.org/wiki/Hyperkalemia",
+      "ko": "https://ko.wikipedia.org/wiki/고칼륨혈증",
+      "th": "https://th.wikipedia.org/wiki/ภาวะมีโพแทสเซียมในเลือดมากเกิน",
+      "es": "https://es.wikipedia.org/wiki/Hiperpotasemia",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/高鉀血症",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/高鉀血症"
+    }
   },
   {
     "id": "osteoporosis",
@@ -1505,7 +1892,16 @@
     "avoid": [],
     "disputed": [],
     "notes": "テストステロンの低値やエストロゲンの不足が長期間続くことに関連する骨の健康リスク。",
-    "source": "Osteoporosis"
+    "source": "Osteoporosis",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/骨粗鬆症",
+      "en": "https://en.wikipedia.org/wiki/Osteoporosis",
+      "ko": "https://ko.wikipedia.org/wiki/골다공증",
+      "th": "https://th.wikipedia.org/wiki/โรคกระดูกพรุน",
+      "es": "https://es.wikipedia.org/wiki/Osteoporosis",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/骨質疏鬆症",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/骨質疏鬆症"
+    }
   },
   {
     "id": "bone-metabolism",
@@ -1522,7 +1918,10 @@
     "avoid": [],
     "disputed": [],
     "notes": "骨が作られたり壊されたりする働き。長期のホルモン療法（GAHT）では、骨の健康のために確認されることがある。",
-    "source": "Bone Metabolism"
+    "source": "Bone Metabolism",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Fell_Exhibition_Slate_Mine"
+    }
   },
   {
     "id": "bone-mineral-density",
@@ -1542,7 +1941,15 @@
     ],
     "avoid": [],
     "disputed": [],
-    "source": "Bone Mineral Density (BMD)"
+    "source": "Bone Mineral Density (BMD)",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/骨密度",
+      "en": "https://en.wikipedia.org/wiki/Bone_density",
+      "ko": "https://ko.wikipedia.org/wiki/골밀도",
+      "es": "https://es.wikipedia.org/wiki/Densidad_mineral_ósea",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/骨密度",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/骨密度"
+    }
   },
   {
     "id": "puberty-blocker",
@@ -1561,7 +1968,14 @@
     "avoid": [],
     "disputed": [],
     "notes": "思春期の進行を抑えるために用いられる薬剤。臨床ではGnRHアゴニスト（GnRH類似体）が用いられることが多い。",
-    "source": "Puberty Blocker"
+    "source": "Puberty Blocker",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/二次性徴抑制剤",
+      "en": "https://en.wikipedia.org/wiki/Puberty_blocker",
+      "es": "https://es.wikipedia.org/wiki/Bloqueadores_de_pubertad",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/青春期阻滞剂",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/青春期阻滞剂"
+    }
   },
   {
     "id": "assigned-gender",
@@ -1588,7 +2002,11 @@
     ],
     "disputed": [],
     "source": "Assigned Gender/Assigned Sex at Birth",
-    "notes": "出生時に身体的特徴などに基づいて割り当てられた性別のこと。性同一性と一致するとは限らない。"
+    "notes": "出生時に身体的特徴などに基づいて割り当てられた性別のこと。性同一性と一致するとは限らない。",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Assigned_gender",
+      "es": "https://es.wikipedia.org/wiki/Asignación_de_género"
+    }
   },
   {
     "id": "self-acceptance",
@@ -1608,7 +2026,12 @@
     "disputed": [],
     "source": "Self-acceptance",
     "message": "昔の自分を、責め続けないであげてくださいね。あの子だって、何も見えない霧の中で、必死に迷っていたんだから。",
-    "notes": "ありのままの自分を、自分で受け入れていくこと。"
+    "notes": "ありのままの自分を、自分で受け入れていくこと。",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Self-acceptance",
+      "ko": "https://ko.wikipedia.org/wiki/자기수용",
+      "th": "https://th.wikipedia.org/wiki/การยอมรับตนเอง"
+    }
   },
   {
     "id": "diy-hrt",
@@ -1647,7 +2070,12 @@
     "avoid": [],
     "disputed": [],
     "source": "Real Life Experience (RLE)",
-    "notes": "性別移行を進める前または途中に、望む性別での社会生活を一定期間実際に送ること。かつて医療の前提条件として求められたが、現在のガイドラインでは必須とはされない傾向にある。"
+    "notes": "性別移行を進める前または途中に、望む性別での社会生活を一定期間実際に送ること。かつて医療の前提条件として求められたが、現在のガイドラインでは必須とはされない傾向にある。",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Real-life_experience",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/实际生活体验",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/实际生活体验"
+    }
   },
   {
     "id": "afab",
@@ -1668,7 +2096,10 @@
     "avoid": [],
     "disputed": [],
     "notes": "出生時に女性と割り当てられた人のこと。性同一性とは関係なく、医師により出生時に指定された性別を指す。AFAB（Assigned Female At Birth）の訳語。",
-    "source": "Assigned Female at Birth (AFAB)"
+    "source": "Assigned Female at Birth (AFAB)",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Assigned_female_at_birth"
+    }
   },
   {
     "id": "amab",
@@ -1689,7 +2120,10 @@
     "avoid": [],
     "disputed": [],
     "notes": "出生時に男性と割り当てられた人のこと。性同一性とは関係なく、医師により出生時に指定された性別を指す。AMAB（Assigned Male At Birth）の訳語。",
-    "source": "Assigned Male at Birth (AMAB)"
+    "source": "Assigned Male at Birth (AMAB)",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Assigned_male_at_birth"
+    }
   },
   {
     "id": "psychological-counseling",
@@ -1743,7 +2177,13 @@
     "avoid": [],
     "disputed": [],
     "source": "Cyproterone Acetate (CPA)",
-    "notes": "抗アンドロゲン作用とプロゲストーゲン作用を併せ持つ薬剤で、性別適合ホルモン療法（GAHT）でアンドロゲン抑制のために用いられることがある。"
+    "notes": "抗アンドロゲン作用とプロゲストーゲン作用を併せ持つ薬剤で、性別適合ホルモン療法（GAHT）でアンドロゲン抑制のために用いられることがある。",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Cyproterone_acetate",
+      "es": "https://es.wikipedia.org/wiki/Acetato_de_ciproterona",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/醋酸环丙孕酮",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/醋酸环丙孕酮"
+    }
   },
   {
     "id": "medroxyprogesterone-acetate",
@@ -1764,7 +2204,15 @@
     "avoid": [],
     "disputed": [],
     "notes": "合成プロゲスチンの一つ。女性化ホルモン療法（GAHT）に関する資料では、乳房の発達や精神面への影響、リスクとの関連が議論されることがある。",
-    "source": "Medroxyprogesterone Acetate (MPA)"
+    "source": "Medroxyprogesterone Acetate (MPA)",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/メドロキシプロゲステロン",
+      "en": "https://en.wikipedia.org/wiki/Medroxyprogesterone_acetate",
+      "th": "https://th.wikipedia.org/wiki/เมดร็อกซีโพรเจสเทอโรนอะซีเทต",
+      "es": "https://es.wikipedia.org/wiki/17-acetato_de_medroxiprogesterona",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/醋酸甲羥孕酮",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/醋酸甲羥孕酮"
+    }
   },
   {
     "id": "meningioma",
@@ -1781,7 +2229,14 @@
     "avoid": [],
     "disputed": [],
     "notes": "脳や脊髄を覆う髄膜から生じる腫瘍。酢酸シプロテロンの長期・高用量使用に関連するリスクの一つとして知られる。",
-    "source": "Meningioma"
+    "source": "Meningioma",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/髄膜腫",
+      "en": "https://en.wikipedia.org/wiki/Meningioma",
+      "es": "https://es.wikipedia.org/wiki/Meningioma",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/腦膜瘤",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/腦膜瘤"
+    }
   },
   {
     "id": "sex-hormone",
@@ -1798,7 +2253,11 @@
     "avoid": [],
     "disputed": [],
     "notes": "エストロゲン、黄体ホルモン（プロゲストーゲン）、アンドロゲンなど、性に関わるホルモンの総称。",
-    "source": "Sex Hormone"
+    "source": "Sex Hormone",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Sex_hormones",
+      "es": "https://es.wikipedia.org/wiki/Hormona_sexual"
+    }
   },
   {
     "id": "shbg",
@@ -1818,7 +2277,14 @@
     "avoid": [],
     "disputed": [],
     "notes": "遊離エストラジオールやテストステロンの値の解釈に影響する血漿タンパク質。",
-    "source": "Sex Hormone-Binding Globulin (SHBG)"
+    "source": "Sex Hormone-Binding Globulin (SHBG)",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/性ホルモン結合グロブリン",
+      "en": "https://en.wikipedia.org/wiki/Sex_hormone–binding_globulin",
+      "es": "https://es.wikipedia.org/wiki/Globulina_fijadora_de_hormonas_sexuales",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/性激素结合球蛋白",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/性激素结合球蛋白"
+    }
   },
   {
     "id": "genital-surgery",
@@ -1858,7 +2324,16 @@
     "avoid": [],
     "disputed": [],
     "notes": "性同一性と身体の性が一致せず、医療的な性別移行を望む状態を指した、過去の病理化された診断名。現在は脱病理化が進み、ICD-11では「性別不合」に置き換えられている。",
-    "source": "Transsexualism"
+    "source": "Transsexualism",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/トランスセクシュアリズム",
+      "en": "https://en.wikipedia.org/wiki/Transsexuality",
+      "ko": "https://ko.wikipedia.org/wiki/성전환증",
+      "th": "https://th.wikipedia.org/wiki/ภาวะอยากแปลงเพศ",
+      "es": "https://es.wikipedia.org/wiki/Transexualidad",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/易性癖",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/易性癖"
+    }
   },
   {
     "id": "transgender-certificate",
@@ -1901,7 +2376,16 @@
     "disputed": [],
     "notes": "出生時に割り当てられた性別と性同一性との不一致から生じる、心理的な苦痛や違和感のこと。ICD-11では「性別不合（性別不一致）」へと脱病理化されたが、心理的な苦痛そのものを指す語として「性別違和」も引き続き用いられる。",
     "source": "Gender Dysphoria",
-    "message": "その違和感は、わがままではありません。ちゃんと意味のある、大切な感覚です。"
+    "message": "その違和感は、わがままではありません。ちゃんと意味のある、大切な感覚です。",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/性別違和",
+      "en": "https://en.wikipedia.org/wiki/Gender_dysphoria",
+      "ko": "https://ko.wikipedia.org/wiki/성별_불쾌감",
+      "th": "https://th.wikipedia.org/wiki/ความทุกข์ใจในเพศสภาพ",
+      "es": "https://es.wikipedia.org/wiki/Disforia_de_género",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/性別焦慮",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/性別焦慮"
+    }
   },
   {
     "id": "gender-transition",
@@ -1943,7 +2427,15 @@
     "avoid": [],
     "disputed": [],
     "notes": "性別適合ホルモン療法（Gender-Affirming Hormone Therapy）のこと。性同一性に沿った身体的特徴を得るために行うホルモン療法を指す。SOC-8では「替代（Replacement）」より「肯定（Affirming）」の語が推奨されており、欠陥を補うという病理的含意を避ける観点から、HRTに代えてGAHTが用いられる。",
-    "source": "Gender-Affirming Hormone Therapy(GAHT)"
+    "source": "Gender-Affirming Hormone Therapy(GAHT)",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/性別適合ホルモン療法",
+      "en": "https://en.wikipedia.org/wiki/Gender-affirming_hormone_therapy",
+      "ko": "https://ko.wikipedia.org/wiki/트랜스젠더_호르몬_치료",
+      "es": "https://es.wikipedia.org/wiki/Terapia_hormonal_transgénero",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/性别肯定激素治疗",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/性别肯定激素治疗"
+    }
   },
   {
     "id": "gas",
@@ -1968,7 +2460,15 @@
     ],
     "disputed": [],
     "notes": "性同一性に合わせて身体的特徴を変えるための外科手術の総称。性器手術や顔面・胸部の手術などを含み、必要とする内容や範囲は人によって異なる。WHO・WPATHのケア基準（SOC-8）では「性別適合手術」という呼称が用いられる。",
-    "source": "Gender Affirmation Surgery (GAS)"
+    "source": "Gender Affirmation Surgery (GAS)",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/性別適合手術",
+      "en": "https://en.wikipedia.org/wiki/Gender-affirming_surgery",
+      "ko": "https://ko.wikipedia.org/wiki/성전환_수술",
+      "es": "https://es.wikipedia.org/wiki/Cirugía_de_afirmación_de_género",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/性別肯定手術",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/性別肯定手術"
+    }
   },
   {
     "id": "sex-reassignment-certificate",
@@ -2006,7 +2506,10 @@
     "avoid": [],
     "disputed": [],
     "notes": "外見・服装・髪型・振る舞い・言葉づかいなどを通して、自分の性のあり方を外に表すこと。性同一性や指定性別とは別の概念で、必ずしも一致するとは限らない。",
-    "source": "Gender Expression"
+    "source": "Gender Expression",
+    "wikipedia": {
+      "es": "https://es.wikipedia.org/wiki/Territorio"
+    }
   },
   {
     "id": "gender-incongruence",
@@ -2029,7 +2532,14 @@
     ],
     "disputed": [],
     "notes": "ICD-11で用いられる、性同一性と出生時に割り当てられた性別との不一致を表す診断名。脱病理化された呼称であり、かつての病理的な診断名「性同一性障害」に置き換わるものとして位置づけられる。",
-    "source": "Gender Incongruence"
+    "source": "Gender Incongruence",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/性別不合",
+      "en": "https://en.wikipedia.org/wiki/Gender_incongruence",
+      "es": "https://es.wikipedia.org/wiki/Discordancia_de_género",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/性別不一致",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/性別不一致"
+    }
   },
   {
     "id": "legal-gender-recognition",
@@ -2052,7 +2562,10 @@
     "avoid": [],
     "disputed": [],
     "source": "Legal Gender Recognition",
-    "notes": "戸籍など、法律上の性別を変える手続き。"
+    "notes": "戸籍など、法律上の性別を変える手続き。",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Legal_gender_recognition"
+    }
   },
   {
     "id": "orchiectomy",
@@ -2076,7 +2589,14 @@
     ],
     "disputed": [],
     "source": "Orchiectomy",
-    "notes": "精巣を摘出する手術。性別適合手術の一環として、または抗アンドロゲン薬の代替として行われることがある。"
+    "notes": "精巣を摘出する手術。性別適合手術の一環として、または抗アンドロゲン薬の代替として行われることがある。",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/精巣摘除術",
+      "en": "https://en.wikipedia.org/wiki/Orchiectomy",
+      "es": "https://es.wikipedia.org/wiki/Orquiectomía",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/睾丸切除术",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/睾丸切除术"
+    }
   },
   {
     "id": "vocal-folds",
@@ -2094,7 +2614,15 @@
     "avoid": [],
     "disputed": [],
     "notes": "ボイストレーニングや声の女性化手術における中心的な解剖学用語。声帯のこと。",
-    "source": "Vocal Folds"
+    "source": "Vocal Folds",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/声帯",
+      "en": "https://en.wikipedia.org/wiki/Vocal_cords",
+      "ko": "https://ko.wikipedia.org/wiki/성대",
+      "es": "https://es.wikipedia.org/wiki/Cuerdas_vocales",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/声带",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/声带"
+    }
   },
   {
     "id": "glottoplasty",
@@ -2133,7 +2661,14 @@
     "avoid": [],
     "disputed": [],
     "notes": "エストロゲン受容体に選択的に作用する薬剤の総称。ノンバイナリーの人や、女性化の程度を抑えたいホルモン療法の選択肢として検討されることがある。",
-    "source": "Selective Estrogen Receptor Modulator (SERM)"
+    "source": "Selective Estrogen Receptor Modulator (SERM)",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/選択的エストロゲン受容体修飾薬",
+      "en": "https://en.wikipedia.org/wiki/Selective_estrogen_receptor_modulator",
+      "es": "https://es.wikipedia.org/wiki/Modulador_selectivo_de_los_receptores_estrogénicos",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/選擇性雌激素受體調節劑",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/選擇性雌激素受體調節劑"
+    }
   },
   {
     "id": "prostate",
@@ -2152,7 +2687,16 @@
     "avoid": [],
     "disputed": [],
     "notes": "膀胱の下にある男性の生殖器官のひとつ。トランス女性の健康管理、泌尿器系、性別適合手術の説明などで言及される解剖学的部位。",
-    "source": "Prostate"
+    "source": "Prostate",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/前立腺",
+      "en": "https://en.wikipedia.org/wiki/Prostate",
+      "ko": "https://ko.wikipedia.org/wiki/전립샘",
+      "th": "https://th.wikipedia.org/wiki/ต่อมลูกหมาก",
+      "es": "https://es.wikipedia.org/wiki/Próstata",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/前列腺",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/前列腺"
+    }
   },
   {
     "id": "hair-loss",
@@ -2172,7 +2716,15 @@
     "avoid": [],
     "disputed": [],
     "notes": "頭髪が抜けて薄くなる状態のこと。男性型脱毛症（AGA）を含み、トランス女性ではホルモン療法（HRT）や抗アンドロゲン薬による改善、FFS（顔の女性化手術）に関連して話題になることが多い。",
-    "source": "Hair Loss"
+    "source": "Hair Loss",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/脱毛",
+      "en": "https://en.wikipedia.org/wiki/Alopecia",
+      "ko": "https://ko.wikipedia.org/wiki/탈모증",
+      "es": "https://es.wikipedia.org/wiki/Alopecia",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/脫髮",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/脫髮"
+    }
   },
   {
     "id": "conversion-therapy",
@@ -2192,7 +2744,15 @@
     "avoid": [],
     "disputed": [],
     "source": "Conversion Therapy",
-    "notes": "性的指向や性同一性を変えようとする心理的・宗教的な介入の総称。科学的根拠がなく有害とされ、近年は法的に規制する動きが広がっている。コンバージョン療法とも呼ばれる。"
+    "notes": "性的指向や性同一性を変えようとする心理的・宗教的な介入の総称。科学的根拠がなく有害とされ、近年は法的に規制する動きが広がっている。コンバージョン療法とも呼ばれる。",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/転向療法",
+      "en": "https://en.wikipedia.org/wiki/Conversion_therapy",
+      "ko": "https://ko.wikipedia.org/wiki/전환_치료",
+      "es": "https://es.wikipedia.org/wiki/Terapia_de_reorientación_sexual",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/扭轉治療",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/扭轉治療"
+    }
   },
   {
     "id": "electrolysis",
@@ -2211,7 +2771,10 @@
     ],
     "avoid": [],
     "disputed": [],
-    "source": "Electrolysis"
+    "source": "Electrolysis",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Electrology"
+    }
   },
   {
     "id": "endocrinology",
@@ -2230,7 +2793,16 @@
     "avoid": [],
     "disputed": [],
     "notes": "ホルモンや内分泌に関わる病気を扱う診療科のこと。ホルモン療法（HRT）の受診や経過観察で関わることが多い。",
-    "source": "Endocrinology"
+    "source": "Endocrinology",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/内分泌学",
+      "en": "https://en.wikipedia.org/wiki/Endocrinology",
+      "ko": "https://ko.wikipedia.org/wiki/내분비학",
+      "th": "https://th.wikipedia.org/wiki/วิทยาต่อมไร้ท่อ",
+      "es": "https://es.wikipedia.org/wiki/Endocrinología",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/內分泌學",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/內分泌學"
+    }
   },
   {
     "id": "breast-cancer",
@@ -2249,7 +2821,16 @@
     "avoid": [],
     "disputed": [],
     "notes": "乳房にできる悪性腫瘍。ホルモン療法のリスク評価や定期的な検診（スクリーニング）で話題になることが多い。",
-    "source": "Breast Cancer"
+    "source": "Breast Cancer",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/乳癌",
+      "en": "https://en.wikipedia.org/wiki/Breast_cancer",
+      "ko": "https://ko.wikipedia.org/wiki/유방암",
+      "th": "https://th.wikipedia.org/wiki/มะเร็งเต้านม",
+      "es": "https://es.wikipedia.org/wiki/Cáncer_de_mama",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/乳癌",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/乳癌"
+    }
   },
   {
     "id": "breast-development",
@@ -2284,7 +2865,16 @@
     "avoid": [],
     "disputed": [],
     "notes": "膀胱から体外へ尿を導く管のこと。性別適合手術（性器の手術）やその術後ケアで扱われる解剖学的部位。",
-    "source": "Urethra"
+    "source": "Urethra",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/尿道",
+      "en": "https://en.wikipedia.org/wiki/Urethra",
+      "ko": "https://ko.wikipedia.org/wiki/요도",
+      "th": "https://th.wikipedia.org/wiki/ท่อปัสสาวะ",
+      "es": "https://es.wikipedia.org/wiki/Uretra",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/尿道",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/尿道"
+    }
   },
   {
     "id": "peritoneal-vaginoplasty",
@@ -2324,7 +2914,15 @@
     ],
     "avoid": [],
     "disputed": [],
-    "source": "Breast Augmentation"
+    "source": "Breast Augmentation",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/豊胸手術",
+      "en": "https://en.wikipedia.org/wiki/Breast_augmentation",
+      "ko": "https://ko.wikipedia.org/wiki/유방_확대술",
+      "es": "https://es.wikipedia.org/wiki/Mamoplastia_de_aumento",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/隆乳",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/隆乳"
+    }
   },
   {
     "id": "vaginoplasty",
@@ -2347,6 +2945,14 @@
     "avoid": [],
     "disputed": [],
     "source": "Vaginoplasty",
-    "notes": "腟を形成する外科手術。トランスジェンダー女性に対する性別適合手術（SRS）の一つで、造腟術とも呼ばれる。"
+    "notes": "腟を形成する外科手術。トランスジェンダー女性に対する性別適合手術（SRS）の一つで、造腟術とも呼ばれる。",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/膣形成術",
+      "en": "https://en.wikipedia.org/wiki/Vaginoplasty",
+      "ko": "https://ko.wikipedia.org/wiki/질성형술",
+      "es": "https://es.wikipedia.org/wiki/Vaginoplastia",
+      "zhHans": "https://zh.wikipedia.org/zh-hans/阴道成形术",
+      "zhHant": "https://zh.wikipedia.org/zh-hant/阴道成形术"
+    }
   }
 ]

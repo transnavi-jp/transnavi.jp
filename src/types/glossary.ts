@@ -12,6 +12,15 @@ export interface GlossaryEntry {
     ko?: string;
     th?: string;
   };
+  wikipedia?: {
+    ja?: string;
+    en?: string;
+    zhHans?: string;
+    zhHant?: string;
+    ko?: string;
+    th?: string;
+    es?: string;
+  };
   aliases: string[];
   avoid: string[];
   disputed: string[];

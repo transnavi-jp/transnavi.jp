@@ -67,6 +67,18 @@ const translations = [
   ['タイ語', entry.translations.th],
   ['スペイン語', entry.translations.es],
 ].filter(([, value]) => value);
+
+// Wikipedia articles for this term, in the languages the site supports. Labelled
+// with each language's own name so readers can pick the edition they read.
+const wikipedia = [
+  ['日本語', entry.wikipedia?.ja],
+  ['English', entry.wikipedia?.en],
+  ['한국어', entry.wikipedia?.ko],
+  ['简体中文', entry.wikipedia?.zhHans],
+  ['繁體中文', entry.wikipedia?.zhHant],
+  ['ไทย', entry.wikipedia?.th],
+  ['Español', entry.wikipedia?.es],
+].filter(([, href]) => href) as [string, string][];
 ---
 
 <BaseLayout title={`${entry.term} - とらんすナビ`} description={`${entry.term}に関する用語説明です。`}>
@@ -103,6 +115,18 @@ const translations = [
         <div>
           <dt>議論がある言い方</dt>
           <dd>{entry.disputed.join('、')}</dd>
+        </div>
+      )}
+      {wikipedia.length > 0 && (
+        <div>
+          <dt>Wikipedia で読む</dt>
+          <dd>
+            <ul class="wiki-langs">
+              {wikipedia.map(([label, href]) => (
+                <li><a href={href} target="_blank" rel="noreferrer" lang={label === 'English' ? 'en' : undefined}>{label}</a></li>
+              ))}
+            </ul>
+          </dd>
         </div>
       )}
       {entry.wikidata && (

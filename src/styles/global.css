@@ -84,6 +84,7 @@ a:hover {
    says 公式サイト). */
 .hero-button[href^='http']::after,
 .word-chip[href^='http']::after,
+.wiki-langs a[href^='http']::after,
 .clinic-links a[href^='http']::after {
   content: none;
 }
@@ -900,6 +901,33 @@ ul {
 
 .glossary-detail {
   font-size: 0.95rem;
+}
+
+.wiki-langs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 8px;
+}
+
+.wiki-langs li {
+  margin: 0;
+}
+
+.wiki-langs a {
+  display: inline-block;
+  padding: 2px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--accent-soft);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.wiki-langs a:hover {
+  border-color: var(--accent);
 }
 
 .glossary-meaning {
