@@ -1,22 +1,21 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const hrtOverview = '/library/mtf-wiki-ja/docs/medicine/hrt-overview/';
-
 const sides = [
   {
     name: '社会的な移行',
     body: '名前や呼ばれ方、代名詞、服装や髪型を、自分に合うものに変えていくこと。カミングアウトもここに含まれます。お金や医療がなくても始められる部分が多くあります。',
     links: [
-      { href: '/glossary/coming-out/', label: 'カミングアウト' },
+      { href: '/coming-out/', label: 'カミングアウト入門' },
       { href: '/allies/', label: '周囲の人へ' },
     ],
   },
   {
     name: '医療的な移行',
-    body: 'ホルモン療法や手術など。受けるかどうか、どこまで行うかは自分で選べます。医療的な移行をしないトランスの人もたくさんいます。',
+    body: 'ホルモン療法（HRT）や手術（SRSなど）は、医療的な移行の一部です。受けるかどうか、どこまで行うかは自分で選べます。医療的な移行をしないトランスの人もたくさんいます。',
     links: [
-      { href: hrtOverview, label: 'ホルモン療法の基礎' },
+      { href: '/hrt-effects/', label: 'ホルモン療法で起きること' },
+      { href: '/surgery/', label: '移行のための手術' },
       { href: '/clinics/', label: '医療機関を探す' },
     ],
   },
@@ -24,7 +23,7 @@ const sides = [
     name: '法的な移行',
     body: '改名（家庭裁判所での手続き）や、戸籍の性別の変更など。日本では一定の要件があり、変わりつつあります。',
     links: [
-      { href: '/resources/', label: '改名・手続きの体験談' },
+      { href: '/legal-change/', label: '戸籍と名前の変更' },
     ],
   },
 ];

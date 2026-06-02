@@ -10,9 +10,17 @@ export function getStaticPaths() {
 
 const { entry } = Astro.props as { entry: GlossaryEntry };
 
-// Context-aware related links so term pages aren't dead ends.
-const hrtOverview = '/library/mtf-wiki-ja/docs/medicine/hrt-overview/';
-const medicalCategories = new Set(['ホルモン療法', '医療', '手術', '検査', '脱毛', '声']);
+// Context-aware related links so term pages aren't dead ends. Medical terms
+// point into our gentle 知る layer (which itself links on to /library/ depth
+// and /clinics/), keeping the hierarchy start → transition → topic → depth.
+const knowledgePages: Record<string, { href: string; label: string }> = {
+  'ホルモン療法': { href: '/hrt-effects/', label: 'ホルモン療法で起きること' },
+  '検査': { href: '/hrt-effects/', label: 'ホルモン療法で起きること' },
+  '医療': { href: '/transition/', label: '性別移行を知る' },
+  '手術': { href: '/surgery/', label: '移行のための手術' },
+  '声': { href: '/voice/', label: '声を変える練習' },
+  '脱毛': { href: '/hair-removal/', label: '脱毛の入門' },
+};
 const related: { href: string; label: string }[] = [];
 if (entry.id === 'gender-dysphoria' || entry.id === 'gender-incongruence') {
   related.push({ href: '/dysphoria/', label: '性別違和を知る' });
@@ -20,12 +28,13 @@ if (entry.id === 'gender-dysphoria' || entry.id === 'gender-incongruence') {
 if (entry.category === '性自認・属性') {
   related.push({ href: '/gender/', label: '性別は、男女だけじゃない' });
 }
-if (medicalCategories.has(entry.category)) {
-  related.push({ href: hrtOverview, label: 'ホルモン療法（HRT）の基礎' });
+const knowledgePage = knowledgePages[entry.category];
+if (knowledgePage) {
+  related.push(knowledgePage);
   related.push({ href: '/clinics/', label: '医療機関を探す' });
 }
 if (entry.category === '法律・制度') {
-  related.push({ href: '/articles/', label: '制度・法律の記事' });
+  related.push({ href: '/legal-change/', label: '戸籍と名前の変更' });
 }
 
 const translations = [
