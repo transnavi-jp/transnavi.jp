@@ -1090,7 +1090,7 @@
     "city": "横浜市",
     "address": "〒 220-0023 神奈川県横浜市西区平沼１丁目３８-３横浜 MS ビル 6F",
     "urls": [
-      "https://www.shinjukubiyou.com/introduction/yokohama/"
+      "https://www.shinjukubiyou.com/"
     ],
     "services": [
       "ホルモン療法"
@@ -2979,7 +2979,7 @@
     "address": "東京都豊島区西池袋 1-11-1 ルミネ 10F",
     "phone": "03-5954-1266",
     "urls": [
-      "http://www.metropolitan-clinic.com/index.html"
+      "https://www.metropolitan-clinic.com/"
     ],
     "services": [
       "ホルモン療法"
@@ -3185,7 +3185,7 @@
     "address": "福井県福井市江上町 55-20-4",
     "phone": "0776-59-6600",
     "urls": [
-      "http://www.f-gh.jp/fh/fh.htm"
+      "https://www.f-gh.jp/"
     ],
     "services": [
       "精神科・診断"
