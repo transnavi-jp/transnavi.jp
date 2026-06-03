@@ -1114,7 +1114,7 @@
     "address": "神奈川県相模原市緑区橋本 4-5-12",
     "phone": "042-771-5255",
     "urls": [
-      "http://nishiwakisan.com/"
+      "https://www.nishiwakiiin.com/"
     ],
     "services": [
       "ホルモン療法"
@@ -1417,32 +1417,6 @@
     "lat": 34.710808,
     "lng": 137.726303,
     "geoSource": "city"
-  },
-  {
-    "id": "hrt-ishikawa-fairy",
-    "name": "フェアリークリニック",
-    "displayName": "金沢市・フェアリークリニック",
-    "prefecture": "石川県",
-    "city": "金沢市",
-    "address": "石川県金沢市此花町５?６ライフ金沢第一ビル 3F",
-    "phone": "076-224-2292",
-    "urls": [
-      "http://www.fairy-clinic.jp/"
-    ],
-    "services": [
-      "ホルモン療法"
-    ],
-    "source": {
-      "project": "MtF.wiki",
-      "path": "content/ja/docs/hrt/ishikawa/fairy.md",
-      "license": "CC BY-SA 4.0"
-    },
-    "verificationStatus": "要確認",
-    "importedAt": "2026-06-03",
-    "notes": "- 石川県金沢市此花町５?６ライフ金沢第一ビル 3F\n- 電話：076-224-2292\n- <http://www.fairy-clinic.jp/>\n\n※金沢駅から徒歩 1 分\n\n## みさきのコメント\n\nMTF の方から情報いただきました。  \nフェアリークリニックは 1A 1500 円程度だそうです。",
-    "lat": 36.577362,
-    "lng": 136.650864,
-    "geoSource": "address"
   },
   {
     "id": "hrt-ishikawa-gussuri",
@@ -2330,9 +2304,7 @@
     "prefecture": "東京都",
     "city": "新宿区",
     "address": "東京都新宿区歌舞伎町 1-12-16 歌舞伎町ビル 4F A 室",
-    "urls": [
-      "http://www.myclinic-kabukicho.jp/index.html"
-    ],
+    "urls": [],
     "services": [
       "ホルモン療法"
     ],
@@ -2607,32 +2579,6 @@
     "geoSource": "address"
   },
   {
-    "id": "hrt-tokyo-ritz",
-    "name": "リッツメディカルクリニック青山院",
-    "displayName": "港区・リッツメディカルクリニック青山院",
-    "prefecture": "東京都",
-    "city": "港区",
-    "address": "東京都港区北青山 3-11-7 Ao（アオ）7F",
-    "phone": "03-3797-3911",
-    "urls": [
-      "http://test.ritz-medical.com/care/gender-identity-disorder.html"
-    ],
-    "services": [
-      "ホルモン療法"
-    ],
-    "source": {
-      "project": "MtF.wiki",
-      "path": "content/ja/docs/hrt/tokyo/ritz.md",
-      "license": "CC BY-SA 4.0"
-    },
-    "verificationStatus": "要確認",
-    "importedAt": "2026-06-03",
-    "notes": "美容外科\n\n東京都港区北青山 3-11-7 Ao（アオ）7F\nTEL：03-3797-3911\n<http://test.ritz-medical.com/care/gender-identity-disorder.html>\n※ホルモン関係料金は HP に記載あり。",
-    "lat": 35.663765,
-    "lng": 139.710754,
-    "geoSource": "address"
-  },
-  {
     "id": "hrt-tokyo-lumiere",
     "name": "ルミエールクリニック",
     "displayName": "八王子市・ルミエールクリニック",
@@ -2871,8 +2817,7 @@
     "prefecture": "東京都",
     "city": "渋谷区",
     "urls": [
-      "https://goo.gl/maps/EWcgdAhYaMU1hJ866",
-      "https://shinjuku-ra.jp"
+      "https://goo.gl/maps/EWcgdAhYaMU1hJ866"
     ],
     "services": [
       "ホルモン療法"
@@ -3052,7 +2997,7 @@
     "city": "新宿区",
     "address": "東京都新宿区高田馬場 2 丁目 13-15",
     "urls": [
-      "http://fukushimaiin.plimo.jp/"
+      "https://www.fukushimaiin.com/"
     ],
     "services": [
       "ホルモン療法"
@@ -3302,34 +3247,6 @@
     "notes": "産婦人科（トランスジェンダー外来あり）\n\n- 〒963-8014 福島県郡山市虎丸町23-18\n- 電話：024-932-1637\n- LGBT／トランスジェンダー外来ページ：<https://sakurai-cl.net/lgbt/>\n\n- LGBT 全般の相談を一般外来枠で受け付け（専用枠ではなく通常診療時間帯）\n- カウンセリングを中心に、必要に応じてホルモン注射を実施\n- 性別適合手術後の方は保険適用、それ以外は自費診療\n- 診療時間：午前 9:00〜12:00（新患受付 11:00 まで）／午後 14:00〜17:00（新患受付 16:30 まで）\n- 土曜日：第 1・第 3 土曜のみ（主に若年層向け）\n\n## 料金\n\n| 項目 | 価格 |\n|------|------|\n| ホルモン注射 1 回 | 2,000円未満 |",
     "lat": 37.40044,
     "lng": 140.359634,
-    "geoSource": "city"
-  },
-  {
-    "id": "hrt-hyogo-klady",
-    "name": "川口レディースクリニック",
-    "displayName": "川口レディースクリニック",
-    "prefecture": "兵庫県",
-    "address": "〒657-0846 兵庫県神戸市灘区岩屋北町7-1-30 ラ・メルベーユビル2F",
-    "phone": "078-881-8208",
-    "urls": [
-      "https://klady-clinic.gr.jp/",
-      "https://ssc.doctorqube.com/klady/",
-      "https://primary-care.sysmex.co.jp/speed-search/index.cgi?c=speed_search-2&pk=228",
-      "https://primary-care.sysmex.co.jp/speed-search/index.cgi?c=speed_search-2&pk=225"
-    ],
-    "services": [
-      "ホルモン療法"
-    ],
-    "source": {
-      "project": "MtF.wiki",
-      "path": "content/ja/docs/hrt/hyogo/klady.md",
-      "license": "CC BY-SA 4.0"
-    },
-    "verificationStatus": "要確認",
-    "importedAt": "2026-06-03",
-    "notes": "婦人科\n\n- 〒657-0846 兵庫県神戸市灘区岩屋北町7-1-30 ラ・メルベーユビル2F\n- 予約電話：078-881-8208\n- <https://klady-clinic.gr.jp/>\n\n- 保険証かマイナンバーカードの携帯が必要\n- 現金払いのみ\n\n## コメント\n\nGD・GID の診断書があればホルモン注射が可能  \nとても人気のある婦人科なので初回は3時間以上待つこともあり（筆者は4時間も待った）、余裕を持って行くのがベスト  \n2回目以降は電話やWEBで予約できる <https://ssc.doctorqube.com/klady/>  \n※ホルモン注射のみであれば予約は不要\n\n契約駐車場2台分有\n\n1回の注射は1,100円程度+再診料  \nホルモン検査（E2＋テストステロン）は4,700円程度  \n注射部位は三角筋か大臀筋で選べる  \n※初回はホルモン検査が必要らしい、採血がスムーズになるように水分補給を忘れずにしましょう\n\n検査結果の単位及び基準値について  \nテストステロン：単位：ng/dl, [テストステロン基準値の参考](https://primary-care.sysmex.co.jp/speed-search/index.cgi?c=speed_search-2&pk=228 \"テストステロン基準値\")  \nE2：単位：pg/ml, [E2 基準値の参考](https://primary-care.sysmex.co.jp/speed-search/index.cgi?c=speed_search-2&pk=225 \"エストラジオール基準値\")",
-    "lat": 34.691257,
-    "lng": 135.183075,
     "geoSource": "city"
   },
   {

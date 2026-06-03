@@ -77,12 +77,12 @@ test('医療機関カードに電話と確認状況を表示する', async ({ pa
 test('医療機関リンクを公式サイトと関連ページに分けて表示する', async ({ page }) => {
   await page.goto('/clinics/');
 
-  await page.locator('summary', { hasText: '東京都' }).click();
+  await page.locator('summary', { hasText: '神奈川県' }).click();
 
-  const card = page.locator('[data-filter-item]', { hasText: '新宿南リウマチ膠原病クリニック' });
-  await expect(card.getByRole('link', { name: '公式サイト' })).toHaveAttribute('href', 'https://shinjuku-ra.jp');
+  const card = page.locator('[data-filter-item]', { hasText: '川崎中央クリニック' });
+  await expect(card.getByRole('link', { name: '公式サイト' })).toHaveAttribute('href', 'https://www.kawasaki-biyou.com/');
   await expect(card).toContainText('関連ページ:');
-  await expect(card.getByRole('link', { name: '1' })).toHaveAttribute('href', 'https://goo.gl/maps/EWcgdAhYaMU1hJ866');
+  await expect(card.getByRole('link', { name: '1' })).toHaveAttribute('href', 'https://www.kawasaki-mens.com/mtf/');
 
   await page.goto('/clinics/hrt-kanagawa-kawasaki/');
 
