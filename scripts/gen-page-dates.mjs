@@ -6,7 +6,7 @@ import fs from 'node:fs';
 
 // Prose content pages where "when was this last updated" matters to the reader.
 const ROUTES = [
-  '/start/', '/basics/', '/gender/', '/orientation/', '/intersex/', '/dysphoria/', '/transition/',
+  '/start/', '/faq/', '/basics/', '/gender/', '/orientation/', '/intersex/', '/dysphoria/', '/transition/',
   '/hrt-effects/', '/hrt-medications/', '/fertility/', '/puberty-blockers/', '/voice/',
   '/presentation/', '/hair-removal/', '/surgery/', '/cost/', '/legal-change/', '/coming-out/',
   '/everyday/', '/relationships/', '/allies/', '/safety/', '/guidelines/', '/detransition/', '/about/', '/legal/', '/data/',

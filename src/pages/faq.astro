@@ -1,0 +1,171 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Frequently-asked first questions. Each answer points to the page(s) that go
+// deeper, so the FAQ works as a wayfinding layer into the site.
+const faqGroups = [
+  {
+    title: 'はじめの一歩',
+    items: [
+      {
+        q: '「自分はトランスかもしれない」と思ったら、まず何をすればいい？',
+        a: '急いで答えを出さなくて大丈夫です。まずは「はじめての方へ」から、ゆっくり読みはじめてみてください。「まだわからない」も、ちゃんとひとつの答えです。',
+        links: [{ href: '/start/', label: 'はじめての方へ' }],
+      },
+      {
+        q: 'トランスジェンダー・シスジェンダー・ノンバイナリーって、何がちがうの？',
+        a: '出生時に割り当てられた性別と、自分が感じている性別（性同一性）の関係で整理できます。基本のことばのページでやさしく説明しています。',
+        links: [{ href: '/basics/', label: '基本のことば' }, { href: '/gender/', label: '性別の多様性' }],
+      },
+      {
+        q: '「性的指向」と「性自認（性同一性）」は、どうちがうの？',
+        a: 'だれを好きになるか（性的指向）と、自分がどんな性別か（性同一性）は、別のものさしです。組み合わせは自由です。',
+        links: [{ href: '/orientation/', label: '性的指向と「好き」のいろいろ' }],
+      },
+      {
+        q: '性別違和（性別不合）って何？',
+        a: '自分の性のあり方と、まわりから期待される性別とが食い違うときに、心やからだが感じる自然な反応です。「病気」や「弱さ」ではありません。',
+        links: [{ href: '/dysphoria/', label: '性別違和を知る' }],
+      },
+    ],
+  },
+  {
+    title: 'からだと医療',
+    items: [
+      {
+        q: 'ホルモン療法は、どこで・どうやって始めるの？',
+        a: '日本には大きく二つの道すじ（ガイドラインに沿う道と、自由診療の道）があります。受けられる医療機関は地図でも探せます。',
+        links: [{ href: '/transition/', label: '性別移行を知る' }, { href: '/hrt-effects/', label: 'ホルモン療法で起きること' }, { href: '/clinics/', label: '医療機関' }],
+      },
+      {
+        q: '費用はどれくらいかかる？保険は使える？',
+        a: '多くは自費ですが、認定施設での手術は保険の対象になることがあり、高額療養費や医療費控除など負担を軽くする仕組みもあります。',
+        links: [{ href: '/cost/', label: 'お金のこと・費用の全体像' }],
+      },
+      {
+        q: '手術は、必ず受けないといけないの？',
+        a: 'いいえ。医療的な移行をしてもしなくても、あなたはあなたです。どこまで行うかは自分で選べます。',
+        links: [{ href: '/transition/', label: '性別移行を知る' }, { href: '/surgery/', label: '移行のための手術' }],
+      },
+      {
+        q: '未成年でも、できることはある？',
+        a: '社会的な移行から始める人が多く、思春期ブロッカーという「いったん止める」選択肢もあります。あわてて決めなくて大丈夫です。',
+        links: [{ href: '/transition/', label: '性別移行を知る' }, { href: '/puberty-blockers/', label: '思春期ブロッカーとは' }],
+      },
+      {
+        q: '声や見た目を、自分に近づけたい',
+        a: '声の練習や、服・メイク・脱毛など、お金や医療をかけずに今日から試せる工夫がたくさんあります。',
+        links: [{ href: '/voice/', label: '声を変える練習' }, { href: '/presentation/', label: '見た目と、毎日のこと' }, { href: '/hair-removal/', label: '脱毛の入門' }],
+      },
+    ],
+  },
+  {
+    title: '暮らしと手続き',
+    items: [
+      {
+        q: '名前や、戸籍の性別は変えられる？',
+        a: '改名（家庭裁判所）と戸籍の性別変更には、それぞれ要件と手続きがあります。手続き自体の費用は小さいです。',
+        links: [{ href: '/legal-change/', label: '戸籍と名前の変更' }, { href: '/cost/', label: 'お金のこと' }],
+      },
+      {
+        q: '親や学校に、言うべき？（カミングアウト）',
+        a: 'カミングアウトは義務ではありません。だれに・いつ・どう伝えるかは、すべてあなたが選べます。いちばん大切なのは、あなたの安全です。',
+        links: [{ href: '/coming-out/', label: 'カミングアウト入門' }],
+      },
+      {
+        q: '身近にトランスの人がいる。どう接すればいい？',
+        a: 'まず否定せずに聞くこと、本人の許可なく他の人に伝えないこと、呼んでほしい名前を尊重することが力になります。',
+        links: [{ href: '/allies/', label: '周囲の人へ' }],
+      },
+    ],
+  },
+  {
+    title: '気持ちがつらいとき',
+    items: [
+      {
+        q: '気持ちが揺れる・やめたくなったら？',
+        a: '揺れていい、やめてもいい。脱移行の多くは外からの圧力が理由で、後悔はまれです。どんな道を選んでも、あなたを責める人はここにはいません。',
+        links: [{ href: '/detransition/', label: '気持ちが揺れたとき・脱移行のこと' }],
+      },
+      {
+        q: 'つらくて、今すぐ話したいときは？',
+        a: 'ひとりで抱えこまないでください。電話やチャットで、無料で話せる窓口があります。あなたの存在には価値があります。',
+        links: [{ href: '/support/', label: '相談先' }, { href: '/safety/', label: '安全とこころ' }],
+      },
+    ],
+  },
+];
+
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqGroups.flatMap((g) =>
+    g.items.map((item) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a },
+    })),
+  ),
+};
+---
+
+<BaseLayout
+  title="よくある質問（FAQ） - とらんすナビ"
+  description="トランスジェンダーについて、はじめに知りたいことへの短い答えと、くわしく読めるページへの入り口。はじめの一歩、からだと医療、暮らしと手続き、つらいときのこと。"
+>
+  <article class="article-shell">
+    <div class="eyebrow">よくある質問</div>
+    <h1>よくある質問（FAQ）</h1>
+    <p class="lead">
+      はじめに気になりやすいことを、短くまとめました。それぞれの答えから、くわしいページへ進めます。気になるところから、どうぞ。
+    </p>
+
+    {faqGroups.map((group) => (
+      <section class="article-section" aria-label={group.title}>
+        <h2>{group.title}</h2>
+        {group.items.map((item) => (
+          <div class="faq-item">
+            <h3 class="faq-q">{item.q}</h3>
+            <p class="faq-a">{item.a}</p>
+            <nav class="word-chips" aria-label="関連ページ">
+              {item.links.map((link) => (
+                <a class="word-chip" href={link.href}>{link.label}</a>
+              ))}
+            </nav>
+          </div>
+        ))}
+      </section>
+    ))}
+
+    <aside class="entry-message" role="note" aria-label="読んでいるあなたへ">
+      <p>ここにない質問もあると思います。どこから読んでも、迷ったまま読んでも、大丈夫です。困ったときは<a href="/support/">相談先</a>へ。</p>
+    </aside>
+
+    <nav class="word-chips entry-related" aria-label="関連ページ">
+      <a class="word-chip" href="/start/">はじめての方へ</a>
+      <a class="word-chip" href="/learn/">知る・学ぶ</a>
+      <a class="word-chip" href="/glossary/">用語集</a>
+      <a class="word-chip" href="/sitemap/">サイトの全体</a>
+    </nav>
+  </article>
+  <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
+</BaseLayout>
+
+<style>
+  /* FAQ entries: a question, a short answer, and chips into the deeper pages. */
+  .faq-item {
+    padding: 16px 0;
+    border-top: 1px solid var(--line);
+  }
+  .faq-item:first-of-type {
+    border-top: none;
+  }
+  .faq-q {
+    margin: 0 0 6px;
+    font-size: 1.05rem;
+    color: var(--ink-heading);
+  }
+  .faq-a {
+    margin: 0 0 10px;
+  }
+</style>
