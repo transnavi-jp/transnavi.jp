@@ -495,5 +495,12 @@
     "url": "https://onhospital.org/board_jxkW48/591",
     "lat": 35.151845,
     "lng": 129.034353
+  },
+  {
+    "name": "東亜大学校病院（釜山）",
+    "type": "srs",
+    "url": "https://www.damc.or.kr/",
+    "lat": 35.120175,
+    "lng": 129.018187
   }
 ]
