@@ -64,22 +64,16 @@ const categoryDefinitions = [
   { id: 'mental', label: '精神科（メンタルクリニック）' },
 ] as const;
 
-// Institution type, derived from the name (病院 ≥20 beds; 医院・クリニック are
-// 診療所). Others are specialty-named practices (産婦人科・美容外科 など).
-const typeOf = (name: string): string => {
-  if (name.includes('病院')) return '病院';
-  if (name.includes('クリニック')) return 'クリニック';
-  if (name.includes('医院')) return '医院';
-  if (name.includes('診療所')) return '診療所';
-  return 'その他';
-};
+// Facility scale, by the 医療法 (Medical Care Act) definition: a 病院 is an
+// inpatient facility with 20+ beds, and everything smaller is a 診療所 (≤19
+// beds) — クリニック・医院・専門診療所などはすべて診療所にあたります。Only a
+// facility with 20+ beds may legally be named "病院", so the name is a reliable
+// proxy for the legal category (no per-clinic bed-count data needed).
+const typeOf = (name: string): string => (name.includes('病院') ? '病院' : '診療所');
 const typeDefinitions = [
   { id: '', label: 'すべて' },
-  { id: '病院', label: '病院' },
-  { id: 'クリニック', label: 'クリニック' },
-  { id: '医院', label: '医院' },
-  { id: '診療所', label: '診療所' },
-  { id: 'その他', label: 'その他' },
+  { id: '病院', label: '病院（20床以上）' },
+  { id: '診療所', label: '診療所（クリニック・医院など）' },
 ] as const;
 
 // 地方（region）grouping of the 47 prefectures, for a region-level filter.
@@ -221,8 +215,8 @@ const genreCounts = mapClinics.reduce(
     </div>
 
     <div class="filter-group-row">
-      <span class="filter-tabs-label">施設の種類</span>
-      <section class="filter-tabs" aria-label="施設の種類" data-filter-tabs data-filter-key="types">
+      <span class="filter-tabs-label" title="医療法による区分。病院は20床以上の入院設備をもつ施設、診療所は19床以下（クリニック・医院もここに含まれます）。">施設の規模</span>
+      <section class="filter-tabs" aria-label="施設の規模（医療法による区分）" data-filter-tabs data-filter-key="types">
         {typeDefinitions.map((type) => (
           <button
             type="button"
@@ -308,8 +302,8 @@ const genreCounts = mapClinics.reduce(
                     <dd>{[clinic.prefecture, clinic.city].filter(Boolean).join(' / ')}</dd>
                   </div>
                   <div>
-                    <dt>施設の種類</dt>
-                    <dd>{clinic.type}</dd>
+                    <dt>施設の規模</dt>
+                    <dd>{clinic.type === '病院' ? '病院（20床以上）' : '診療所（19床以下）'}</dd>
                   </div>
                   {clinic.address && (
                     <div>
