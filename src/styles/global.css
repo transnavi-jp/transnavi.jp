@@ -2038,6 +2038,28 @@ ul {
   white-space: nowrap;
 }
 
+/* Back-link (↑) from a reference to its inline marker, and a highlight when a
+   marker is jumped to from the reference list. */
+.ref-back a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.ref-back a:hover {
+  text-decoration: underline;
+}
+
+.cite a {
+  scroll-margin-top: 20px;
+}
+
+.cite a:target {
+  background: var(--accent-soft);
+  border-radius: 3px;
+  outline: 2px solid var(--accent-soft);
+}
+
 .cite {
   font-size: 0.7em;
   line-height: 0;
