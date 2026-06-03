@@ -58,6 +58,7 @@ const prefectureOrder = [
 ];
 
 const categoryDefinitions = [
+  { id: '', label: 'すべて' },
   { id: 'hrt', label: 'ホルモン療法（HRT）' },
   { id: 'srs', label: '性別適合手術（SRS）' },
   { id: 'mental', label: '精神科（メンタルクリニック）' },
@@ -194,7 +195,7 @@ const genreCounts = mapClinics.reduce(
             class="filter-tab"
             data-filter-tab
             data-filter-value={category.id}
-            aria-pressed={category.id === 'hrt' ? 'true' : 'false'}
+            aria-pressed={category.id === '' ? 'true' : 'false'}
           >
             {category.label}
           </button>

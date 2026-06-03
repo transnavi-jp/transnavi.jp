@@ -39,12 +39,12 @@ for (const form of document.querySelectorAll('[data-filter-form]')) {
       if (matches) visible += 1;
     }
 
-    // Collapsed in the initial default view (診療区分=hrt, no other narrowing);
-    // auto-open groups once the reader searches or picks any other filter.
+    // Collapsed in the initial default view (no narrowing — all 診療区分);
+    // auto-open groups once the reader searches or picks any filter.
     const catDim = dims.find((dim) => dim.key === 'categories');
     const narrowed =
       query !== '' ||
-      (catDim ? catDim.active !== 'hrt' : false) ||
+      (catDim ? catDim.active !== '' : false) ||
       dims.some((dim) => dim.key !== 'categories' && dim.active !== '');
 
     for (const group of groups) {
