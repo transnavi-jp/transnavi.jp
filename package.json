@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "postbuild": "node scripts/gen-llms.mjs && node scripts/gen-data-dump.mjs && node scripts/gen-search-index.mjs && node scripts/gen-link-map.mjs",
+    "postbuild": "node scripts/gen-llms.mjs && node scripts/gen-data-dump.mjs && node scripts/gen-search-index.mjs && node scripts/gen-link-map.mjs && node scripts/gen-og-images.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
@@ -25,7 +25,9 @@
     "prebuild": "node scripts/gen-page-dates.mjs && node scripts/gen-citations.mjs"
   },
   "dependencies": {
+    "@resvg/resvg-js": "^2.6.2",
     "astro": "^5",
+    "satori": "^0.26.0",
     "wrangler": "^4.95.0"
   },
   "devDependencies": {
