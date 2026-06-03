@@ -366,43 +366,50 @@
       "title": "Gender incongruence and transgender health in the ICD",
       "url": "https://www.who.int/standards/classifications/frequently-asked-questions/gender-incongruence-and-transgender-health-in-the-icd",
       "publisher": "世界保健機関（WHO）",
-      "lang": "en"
+      "lang": "en",
+      "id": "who-icd11"
     },
     {
       "title": "性別不合に関する診断と治療のガイドライン（第5版）",
       "url": "https://www.jspn.or.jp/modules/advocacy/index.php?content_id=23",
       "publisher": "公益社団法人 日本精神神経学会",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "jspn-guideline"
     },
     {
       "title": "ICD-11で新設された「性の健康に関連する状態群」",
       "url": "https://journal.jspn.or.jp/Disp?style=ofull&vol=124&year=2022&mag=0&number=2&start=134",
       "publisher": "日本精神神経学会（精神神経学雑誌）",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "matsunaga-icd11"
     },
     {
       "title": "Gender dysphoria",
       "url": "https://www.nhs.uk/conditions/gender-dysphoria/",
       "publisher": "National Health Service（英国国民保健サービス, NHS）",
-      "lang": "en"
+      "lang": "en",
+      "id": "nhs-gd"
     },
     {
       "title": "What Is Gender Dysphoria? A Critical Systematic Narrative Review",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6225591/",
       "publisher": "Transgender Health（Mary Ann Liebert／査読付き論文）",
-      "lang": "en"
+      "lang": "en",
+      "id": "th-gd-review"
     },
     {
       "title": "Moving from Gender Dysphoria to Gender Euphoria: Trans Experiences of Positive Gender-Related Emotions",
       "url": "https://bulletin.appliedtransstudies.org/article/1/1-2/6/",
       "publisher": "Bulletin of Applied Transgender Studies（査読付き論文）",
-      "lang": "en"
+      "lang": "en",
+      "id": "euphoria-jacobsen"
     },
     {
       "title": "The Gender Euphoria Scale (GES): a protocol for developing and validating a tool to measure gender euphoria",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10796755/",
       "publisher": "Frontiers in Psychology（査読付き論文）",
-      "lang": "en"
+      "lang": "en",
+      "id": "ges-scale"
     }
   ],
   "/hrt-medications/": [

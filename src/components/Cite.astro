@@ -1,11 +1,41 @@
 ---
-// Inline citation marker, e.g. <Cite route="/dysphoria/" n={4} /> renders a
-// superscript [4] linking to the 4th entry in that page's References list.
+import citations from '../data/citations.json';
+
+// Range-based inline citation. Wrap the exact cited text:
+//   <Cite src="nhs-gd">…the cited span…</Cite>
+// and the wrapped span becomes the citation's scope, with a [n] marker that
+// links to the matching reference. Cite by stable key(s) (src) so references
+// can be reordered without renumbering the prose; n={..} is also accepted.
+// Empty slot (<Cite src="..." />) renders a point citation.
 interface Props {
-  route: string;
-  n: number;
+  src?: string | string[];
+  n?: number | number[];
 }
-const { route, n } = Astro.props;
+const { src, n } = Astro.props;
+
+// Infer the route from the page URL (with/without trailing slash).
+type Ref = { id?: string };
+const all = citations as Record<string, Ref[]>;
+const p = Astro.url.pathname;
+const route = all[p] ? p : all[`${p}/`] ? `${p}/` : p;
+const refs = all[route] ?? [];
 const slug = route.replace(/^\/+|\/+$/g, '').replace(/\//g, '-') || 'home';
+
+const keys = src == null ? [] : Array.isArray(src) ? src : [src];
+const explicit = n == null ? [] : Array.isArray(n) ? n : [n];
+const nums = [
+  ...explicit,
+  ...keys.map((k) => refs.findIndex((r) => r.id === k) + 1),
+].filter((x) => x > 0);
+
+const hasSlot = Astro.slots.has('default');
 ---
-<sup class="cite"><a href={`#ref-${slug}-${n}`} aria-label={`参考文献 ${n}`}>[{n}]</a></sup>
+{nums.length > 0 && (
+  <span class:list={['cited', { 'is-point': !hasSlot }]} data-cite={nums.join(',')}>
+    <slot />
+    <span class="cite-marks"
+      >{nums.map((num) => (
+        <sup class="cite"><a href={`#ref-${slug}-${num}`} aria-label={`参考文献 ${num}`}>[{num}]</a></sup>
+      ))}</span>
+  </span>
+)}

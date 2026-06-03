@@ -1993,10 +1993,31 @@ ul {
   margin-left: -8px;
 }
 
+/* A cited range: the wrapped span carries a faint accent underline so the exact
+   cited text is clear, and highlights on hover/focus. (Distinct from glossary
+   links, which use a dotted purple underline.) */
+.cited {
+  border-bottom: 1px solid rgba(75, 168, 234, 0.45);
+  border-radius: 3px;
+  transition: background-color 120ms ease;
+}
+
+.cited.is-point {
+  border-bottom: none;
+}
+
+.cited:hover,
+.cited:focus-within {
+  background: var(--accent-soft);
+}
+
+.cite-marks {
+  white-space: nowrap;
+}
+
 .cite {
   font-size: 0.7em;
   line-height: 0;
-  white-space: nowrap;
 }
 
 .cite a {
