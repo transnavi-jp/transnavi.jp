@@ -70,13 +70,6 @@
     "lng": 139.700043
   },
   {
-    "name": "関西レインボーフェスタ",
-    "type": "event",
-    "url": "/pride/",
-    "lat": 34.69389,
-    "lng": 135.502228
-  },
-  {
     "name": "K.G. Rainbow Week（関西学院大学）",
     "type": "event",
     "url": "/pride/",
@@ -299,5 +292,82 @@
     "url": "https://www.d-live.info/club/registered/1367",
     "lat": 35.03036585,
     "lng": 135.7614767
+  },
+  {
+    "name": "さっぽろレインボープライド",
+    "type": "event",
+    "url": "https://www.sprrainbowpride.com/",
+    "lat": 43.061016,
+    "lng": 141.356369
+  },
+  {
+    "name": "青森レインボーパレード in 八戸",
+    "type": "event",
+    "url": "https://aomori-pride.jimdofree.com/",
+    "lat": 40.511864,
+    "lng": 141.490005
+  },
+  {
+    "name": "いわてレインボーマーチ",
+    "type": "event",
+    "url": "https://iwatewakamono.net/iwaterainbowmarch",
+    "lat": 39.701927,
+    "lng": 141.15152
+  },
+  {
+    "name": "みやぎにじいろパレード",
+    "type": "event",
+    "url": "https://miyagi-nijiiro-parade.jimdofree.com/",
+    "lat": 38.268803,
+    "lng": 140.876984
+  },
+  {
+    "name": "金沢レインボープライド",
+    "type": "event",
+    "url": "https://www.kanazawarainbowpride.com/",
+    "lat": 36.563732,
+    "lng": 136.657104
+  },
+  {
+    "name": "はままつレインボープライド",
+    "type": "event",
+    "url": "https://hamamatsurainbowpride.com/",
+    "lat": 34.708683,
+    "lng": 137.732437
+  },
+  {
+    "name": "名古屋レインボープライド",
+    "type": "event",
+    "url": "https://nagoyarainbowpride.com/",
+    "lat": 35.171772,
+    "lng": 136.909058
+  },
+  {
+    "name": "レインボーフェスタ！（関西レインボーパレード）",
+    "type": "event",
+    "url": "https://rainbowfesta.org/",
+    "lat": 34.703709,
+    "lng": 135.507889
+  },
+  {
+    "name": "岡山レインボーフェスタ",
+    "type": "event",
+    "url": "https://momoniji.net/parade/",
+    "lat": 34.661198,
+    "lng": 133.920456
+  },
+  {
+    "name": "ひろしまプライドパレード",
+    "type": "event",
+    "url": "https://sites.google.com/view/hpp2025/home",
+    "lat": 34.39159,
+    "lng": 132.462021
+  },
+  {
+    "name": "九州レインボープライド",
+    "type": "event",
+    "url": "https://9rp.biz/",
+    "lat": 33.591537,
+    "lng": 130.402374
   }
 ]

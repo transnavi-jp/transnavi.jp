@@ -23,6 +23,19 @@
           ]
         },
         {
+          "region": "いのち・緊急の相談",
+          "items": [
+            {
+              "name": "TELL Japan（英語のいのちの電話・チャット）",
+              "url": "https://telljp.com/lifeline/"
+            },
+            {
+              "name": "日本いのちの電話連盟（全国の電話相談）",
+              "url": "https://inochinodenwa.org/consultation/"
+            }
+          ]
+        },
+        {
           "region": "電話・相談先のまとめ",
           "items": [
             {
@@ -53,6 +66,23 @@
             {
               "name": "JobRainbow（LGBTQの就活・転職）",
               "url": "https://jobrainbow.jp/"
+            },
+            {
+              "name": "LGBTの家族と友人をつなぐ会",
+              "url": "https://lgbt-family.or.jp/"
+            }
+          ]
+        },
+        {
+          "region": "制度・医療の指針",
+          "items": [
+            {
+              "name": "日本GI（性別不合）学会（ガイドライン・認定医/認定施設）",
+              "url": "http://www.gi-soc.jp/"
+            },
+            {
+              "name": "性別不合に関する診断と治療のガイドライン（日本精神神経学会）",
+              "url": "https://www.jspn.or.jp/modules/advocacy/index.php?content_id=23"
             }
           ]
         }
