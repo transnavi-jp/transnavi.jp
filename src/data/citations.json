@@ -311,6 +311,36 @@
       "id": "apa-the-evidence-against"
     }
   ],
+  "/relationships/": [
+    {
+      "title": "Understanding transgender people, gender identity and gender expression",
+      "url": "https://www.apa.org/topics/lgbtq/transgender-people-gender-identity-gender-expression",
+      "publisher": "American Psychological Association",
+      "lang": "en",
+      "id": "apa-understanding-transgender-people"
+    },
+    {
+      "title": "HIV検査・相談マップ（保健所などでの無料・匿名の検査案内）",
+      "url": "https://www.mhlw.go.jp/hivkensa/",
+      "publisher": "厚生労働省",
+      "lang": "ja",
+      "id": "mhlw-hiv"
+    },
+    {
+      "title": "One-third of amenorrheic transmasculine people on testosterone ovulate",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10982961/",
+      "publisher": "PMC / National Library of Medicine（査読付き論文）",
+      "lang": "en",
+      "id": "pmc-one-third-of"
+    },
+    {
+      "title": "Endocrine Treatment of Gender-Dysphoric/Gender-Incongruent Persons: An Endocrine Society Clinical Practice Guideline (2017)",
+      "url": "https://academic.oup.com/jcem/article/102/11/3869/4157558",
+      "publisher": "The Endocrine Society / The Journal of Clinical Endocrinology & Metabolism",
+      "lang": "en",
+      "id": "academic-endocrine-treatment-of"
+    }
+  ],
   "/cost/": [
     {
       "title": "名の変更許可（家事事件の手続案内）",

@@ -13,7 +13,7 @@
   },
   "/orientation/": {
     "created": "2026-06-02",
-    "updated": "2026-06-03"
+    "updated": "2026-06-04"
   },
   "/intersex/": {
     "created": "2026-06-04",
@@ -45,7 +45,7 @@
   },
   "/voice/": {
     "created": "2026-06-02",
-    "updated": "2026-06-03"
+    "updated": "2026-06-04"
   },
   "/presentation/": {
     "created": "2026-06-02",
@@ -69,15 +69,19 @@
   },
   "/coming-out/": {
     "created": "2026-06-02",
-    "updated": "2026-06-03"
+    "updated": "2026-06-04"
   },
   "/everyday/": {
     "created": "2026-06-03",
     "updated": "2026-06-03"
   },
+  "/relationships/": {
+    "created": "2026-06-04",
+    "updated": "2026-06-04"
+  },
   "/allies/": {
     "created": "2026-06-02",
-    "updated": "2026-06-03"
+    "updated": "2026-06-04"
   },
   "/safety/": {
     "created": "2026-06-02",

@@ -355,6 +355,12 @@ mhlw-high-cost:
   title: 高額療養費制度を利用される皆さまへ
   type: web
   url: https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryouhoken/juuyou/kougakuiryou/index.html
+mhlw-hiv:
+  lang: ja
+  publisher: 厚生労働省
+  title: HIV検査・相談マップ（保健所などでの無料・匿名の検査案内）
+  type: web
+  url: https://www.mhlw.go.jp/hivkensa/
 moj:
   lang: ja
   publisher: 法務省（人権擁護局）

@@ -30,6 +30,7 @@ const NODES = {
   '/clinics/': { label: '医療機関', group: 'support' },
   '/map/': { label: '地図', group: 'support' },
   '/coming-out/': { label: 'カミングアウト', group: 'society' },
+  '/relationships/': { label: '恋愛と性の健康', group: 'society' },
   '/allies/': { label: '周囲の人へ', group: 'society' },
   '/guidelines/': { label: 'SOGIガイドライン', group: 'society' },
   '/safety/': { label: '安全とこころ', group: 'society' },

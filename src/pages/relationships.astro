@@ -1,0 +1,93 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Cite from '../components/Cite.astro';
+import References from '../components/References.astro';
+---
+
+<BaseLayout
+  title="恋愛と性の健康のこと - とらんすナビ"
+  description="トランスの人の恋愛・パートナーシップと、性の健康について。「好き」と「自分の性別」は別のこと。相手に伝えるかは自分で選べること、同意と安全、性感染症の予防、そして「ホルモン療法は避妊にならない」という大切な話を、やさしく正確に。"
+>
+  <article class="article-shell">
+    <div class="eyebrow">知る</div>
+    <h1>恋愛と性の健康のこと</h1>
+    <p class="lead">
+      恋愛も、パートナーシップも、トランスのあなたのものです。「好き」という気持ちと、「自分の性別」は別のこと。むずかしく感じる日があっても、大丈夫。こわがりすぎずに、自分のペースで、試しながらでいいのです。
+    </p>
+
+    <section aria-labelledby="love-is-yours">
+      <h2 id="love-is-yours">「好き」と「自分の性別」は、別もの</h2>
+      <p>
+        だれを好きになるか（<a href="/orientation/">性的指向</a>）と、自分がどんな性別か（性同一性）は、別のものさしです。<Cite src="apa-understanding-transgender-people">トランスの人にも、いろいろな性的指向の人がいます</Cite>。トランスだから恋愛できない、愛されない、ということはありません。あなたは、愛し、愛される人です。
+      </p>
+      <p>
+        惹かれかたの種類や、いろいろな言葉については、<a href="/orientation/">性的指向と「好き」のいろいろ</a>でくわしく扱っています。
+      </p>
+    </section>
+
+    <section aria-labelledby="telling">
+      <h2 id="telling">相手に伝える？（自分のことを話すこと）</h2>
+      <p>
+        自分がトランスであることを、いつ・だれに・どこまで伝えるかは、<strong>あなたが選んでいいこと</strong>です。すべての相手に話す義務はありません。
+      </p>
+      <ul class="assure-list">
+        <li>信頼できて、安心できる相手かどうかを、自分のペースで見ていって大丈夫です。</li>
+        <li>体の関係を考えるときなど、健康や安全のために伝えておきたい場面もあります。どう伝えるかも、あなたが決められます。</li>
+        <li>相手の反応がこわいときは、無理をしないで。安全でないと感じたら、その関係から離れていい。あなたの安全がいちばんです。</li>
+      </ul>
+      <p>
+        伝え方のヒントは<a href="/coming-out/">カミングアウト入門</a>も参考になります。
+      </p>
+    </section>
+
+    <section aria-labelledby="healthy">
+      <h2 id="healthy">健康的な関係って？</h2>
+      <p>
+        いい関係の土台は、<strong>対等さ・安心・同意（コンセント）</strong>です。お互いを尊重し、いやなことは「いや」と言えて、それが受けとめられる関係が健康的です。
+      </p>
+      <ul class="assure-list">
+        <li>相手をコントロールしようとしたり、暴力（言葉の暴力もふくみます）をふるったりするのは、健康的ではありません。</li>
+        <li>「トランスだから」とあなたを下に見たり、秘密を握って言いなりにさせようとする相手には、注意してください。</li>
+        <li>暴力やつらさは、どんな性別・どんな関係（同性どうしもふくめて）でも起こりえます。あなたのせいではありません。</li>
+      </ul>
+      <p>
+        「これは健康的なのかな」と不安になったら、ひとりで抱えず<a href="/support/">相談先</a>へ。<a href="/safety/">安全とこころ</a>もどうぞ。
+      </p>
+    </section>
+
+    <section aria-labelledby="sexual-health">
+      <h2 id="sexual-health">性の健康（からだのことを、安全に）</h2>
+      <p>
+        からだのつきあいを持つなら、知っておきたい基本があります。だれにとっても大切な、ふつうの健康の話です。恥ずかしいことではありません。
+      </p>
+      <ul class="assure-list">
+        <li><strong>同意（コンセント）が、いちばん大事。</strong>お互いが「いいよ」と思えていること。いつでも「やめる」と言っていいこと。</li>
+        <li><strong>性感染症（STI）・HIVの予防。</strong>コンドームなどで防ぐこと、そして気になったら検査を。<Cite src="mhlw-hiv">HIVや性感染症の検査は、保健所などで無料・匿名で受けられます</Cite>。住んでいる地域以外でも受けられます。</li>
+      </ul>
+      <div class="page-disclaimer">
+        <strong>大切な注意：ホルモン療法は、避妊にはなりません。</strong>
+        <ul class="assure-list">
+          <li><Cite src={['pmc-one-third-of', 'academic-endocrine-treatment-of']}>テストステロンを使って月経が止まっていても、子宮・卵巣がある人は妊娠する可能性があります（月経が止まった人でも、実際には排卵していることがあります）</Cite>。</li>
+          <li>エストロゲンを使っていても、精子で相手が妊娠する可能性があります。</li>
+          <li>妊娠を望まないなら、ホルモンとは別に避妊の方法が必要です。妊娠する力・将来子どもをもつことについては<a href="/fertility/">妊孕性と「始める前」の選択</a>へ。</li>
+        </ul>
+      </div>
+      <p>
+        からだは人それぞれです。自分の体に合うかたち、心地よいかたちを、相手と確かめながらで大丈夫です。
+      </p>
+    </section>
+
+    <aside class="entry-message" role="note" aria-label="読んでいるあなたへ">
+      <p>うまくいかない日も、迷う日もあって当たり前。失敗してもいい。こわがらずに、でも自分の安全は大切に。あなたは、大切にされていい人です。</p>
+    </aside>
+
+    <nav class="word-chips entry-related" aria-label="関連ページ">
+      <a class="word-chip" href="/orientation/">性的指向と「好き」のいろいろ</a>
+      <a class="word-chip" href="/coming-out/">カミングアウト入門</a>
+      <a class="word-chip" href="/fertility/">妊孕性と「始める前」の選択</a>
+      <a class="word-chip" href="/safety/">安全とこころ</a>
+      <a class="word-chip" href="/support/">相談先</a>
+    </nav>
+    <References route="/relationships/" />
+  </article>
+</BaseLayout>
