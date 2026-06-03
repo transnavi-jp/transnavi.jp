@@ -96,7 +96,7 @@ const aliasPreview = (entry: GlossaryEntry) => {
               data-search={[entry.term, entry.abbr, entry.category, entry.translations.en, ...entry.aliases].filter(Boolean).join(' ')}
             >
               <span class="clinic-name">{entry.term}{entry.abbr ? `（${entry.abbr}）` : ''}</span>
-              {entry.translations.en && <span class="glossary-en">{entry.translations.en}</span>}
+              {entry.translations.en && <span class="glossary-en" lang="en">{entry.translations.en}</span>}
               {entry.notes && <span class="glossary-meaning">{meaningOf(entry)}</span>}
               {entry.aliases.length > 0 && (
                 <span class="glossary-aliases"><span class="glossary-aliases-label">別名</span>{aliasPreview(entry)}</span>

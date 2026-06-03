@@ -180,7 +180,7 @@ const pageLd = pageDate
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" /></svg>
             </button>
           </form>
-          <button class="theme-toggle" type="button" aria-label="ライトとダークの表示を切り替える" title="表示テーマを切り替える">
+          <button class="theme-toggle" type="button" aria-pressed="false" aria-label="ダークモード" title="表示テーマを切り替える">
             <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" /></svg>
             <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2" /><path d="M12 2.5v2.3M12 19.2v2.3M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.3M19.2 12h2.3M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6" /></svg>
           </button>
@@ -274,12 +274,17 @@ const pageLd = pageDate
     </footer>
     <script is:inline src="/event-banner.js" defer></script>
     <script is:inline>
+      (function () {
+        var b = document.querySelector('.theme-toggle');
+        if (b) b.setAttribute('aria-pressed', String(document.documentElement.getAttribute('data-theme') === 'dark'));
+      })();
       document.addEventListener('click', function (e) {
         var btn = e.target.closest && e.target.closest('.theme-toggle');
         if (!btn) return;
         var dark = document.documentElement.getAttribute('data-theme') === 'dark';
         var next = dark ? 'light' : 'dark';
         document.documentElement.setAttribute('data-theme', next);
+        btn.setAttribute('aria-pressed', String(next === 'dark'));
         try {
           localStorage.setItem('theme', next);
         } catch (e2) {}
