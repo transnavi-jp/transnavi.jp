@@ -21,6 +21,7 @@
     "import:terminology": "node scripts/import-terminology.mjs",
     "import:mtf": "npm run import:mtf-clinics && npm run import:mtf-content && npm run import:terminology",
     "coverage": "node scripts/citation-coverage.mjs",
+    "links": "node scripts/analyze-links.mjs",
     "prebuild": "node scripts/gen-page-dates.mjs && node scripts/gen-citations.mjs"
   },
   "dependencies": {
