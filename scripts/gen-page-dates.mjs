@@ -9,7 +9,7 @@ const ROUTES = [
   '/start/', '/basics/', '/gender/', '/orientation/', '/dysphoria/', '/transition/',
   '/hrt-effects/', '/hrt-medications/', '/fertility/', '/puberty-blockers/', '/voice/',
   '/presentation/', '/hair-removal/', '/surgery/', '/legal-change/', '/coming-out/',
-  '/allies/', '/safety/', '/guidelines/', '/about/', '/legal/', '/data/',
+  '/everyday/', '/allies/', '/safety/', '/guidelines/', '/about/', '/legal/', '/data/',
 ];
 
 const git = (args) => {
