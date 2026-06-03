@@ -34,6 +34,7 @@ const structuredData = {
       name: siteName,
       url: siteUrl,
       logo: new URL('/favicon.svg', Astro.site).toString(),
+      sameAs: ['https://github.com/transnavi/transnavi.jp', 'https://discord.gg/S8NJGeS3Da'],
     },
   ],
 };
@@ -64,6 +65,21 @@ const breadcrumbLd = showBreadcrumb
         name: item.label,
         item: new URL(item.href, Astro.site).toString(),
       })),
+    }
+  : null;
+
+// Freshness for search engines: a WebPage with the git-derived dates.
+const pageLd = pageDate
+  ? {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      '@id': `${canonicalUrl}#webpage`,
+      url: canonicalUrl,
+      name: pageName,
+      inLanguage: 'ja',
+      isPartOf: { '@id': `${siteUrl}#website` },
+      datePublished: pageDate.created,
+      dateModified: pageDate.updated,
     }
   : null;
 ---
@@ -106,6 +122,7 @@ const breadcrumbLd = showBreadcrumb
     <meta name="twitter:image" content={ogImage} />
     <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
     {breadcrumbLd && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbLd)} />}
+    {pageLd && <script type="application/ld+json" set:html={JSON.stringify(pageLd)} />}
     <link rel="canonical" href={canonicalUrl} />
     <link rel="alternate" hreflang="ja" href={canonicalUrl} />
     <link rel="alternate" hreflang="ja-JP" href={canonicalUrl} />

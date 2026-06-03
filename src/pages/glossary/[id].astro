@@ -79,9 +79,29 @@ const wikipedia = [
   ['ไทย', entry.wikipedia?.th],
   ['Español', entry.wikipedia?.es],
 ].filter(([, href]) => href) as [string, string][];
+
+const canonical = new URL(`/glossary/${entry.id}/`, Astro.site).toString();
+const alt = [entry.abbr, ...(entry.aliases ?? [])].filter(Boolean);
+const termLd = {
+  '@context': 'https://schema.org',
+  '@type': 'DefinedTerm',
+  '@id': `${canonical}#term`,
+  name: entry.term,
+  url: canonical,
+  inLanguage: 'ja',
+  ...(alt.length ? { alternateName: alt } : {}),
+  ...(entry.notes ? { description: entry.notes } : {}),
+  inDefinedTermSet: {
+    '@type': 'DefinedTermSet',
+    '@id': new URL('/glossary/', Astro.site).toString(),
+    name: 'とらんすナビ 用語集',
+  },
+  ...(entry.wikidata ? { sameAs: `https://www.wikidata.org/wiki/${entry.wikidata}` } : {}),
+};
 ---
 
 <BaseLayout title={`${entry.term} - とらんすナビ`} description={`${entry.term}に関する用語説明です。`}>
+  <script type="application/ld+json" set:html={JSON.stringify(termLd)} />
   <article class="article-shell">
     <div class="eyebrow">用語集 ・ {entry.category}</div>
     <h1>{entry.term}{entry.abbr ? `（${entry.abbr}）` : ''}</h1>
