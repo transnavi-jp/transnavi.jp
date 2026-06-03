@@ -22,6 +22,7 @@ const pages = [
   '/library/',
   '/resources/',
   '/about/',
+  '/sitemap/',
   '/data/',
 ];
 

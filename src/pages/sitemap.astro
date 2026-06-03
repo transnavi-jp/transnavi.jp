@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Every page on the site, grouped by area.
+const sections = [
+  {
+    title: 'はじめに・基本',
+    items: [
+      { href: '/start/', label: 'はじめての方へ' },
+      { href: '/basics/', label: 'トランス・シス・ノンバイナリーって？' },
+      { href: '/gender/', label: '性別は、男女だけじゃない' },
+      { href: '/orientation/', label: '性的指向と「好き」のいろいろ' },
+      { href: '/dysphoria/', label: '性別違和を知る' },
+      { href: '/learn/', label: '知る・学ぶ（テーマ一覧）' },
+    ],
+  },
+  {
+    title: '移行と、からだ・医療',
+    items: [
+      { href: '/transition/', label: '性別移行を知る' },
+      { href: '/puberty-blockers/', label: '思春期ブロッカーとは' },
+      { href: '/hrt-effects/', label: 'ホルモン療法で起きること' },
+      { href: '/hrt-medications/', label: 'ホルモン療法の薬と、自己投薬（フラホル）' },
+      { href: '/fertility/', label: '妊孕性と「始める前」の選択' },
+      { href: '/voice/', label: '声を変える練習' },
+      { href: '/presentation/', label: '見た目と、毎日のこと' },
+      { href: '/hair-removal/', label: '脱毛の入門' },
+      { href: '/surgery/', label: '移行のための手術' },
+    ],
+  },
+  {
+    title: '相談・医療機関',
+    items: [
+      { href: '/support/', label: '相談先' },
+      { href: '/clinics/', label: '医療機関' },
+      { href: '/map/', label: '地図で探す' },
+    ],
+  },
+  {
+    title: '暮らしと社会',
+    items: [
+      { href: '/coming-out/', label: 'カミングアウト入門' },
+      { href: '/allies/', label: '周囲の人へ' },
+      { href: '/safety/', label: '安全とこころ' },
+      { href: '/legal-change/', label: '戸籍と名前の変更' },
+      { href: '/flags/', label: 'プライドフラッグ' },
+      { href: '/pride/', label: '記念日・イベント' },
+    ],
+  },
+  {
+    title: '調べる・資料',
+    items: [
+      { href: '/glossary/', label: '用語集' },
+      { href: '/works/', label: '文芸作品（映画・漫画など）' },
+      { href: '/bibliography/', label: '参考文献（書籍・論文）' },
+      { href: '/resources/', label: '関連サイト・リンク' },
+    ],
+  },
+  {
+    title: 'このサイト',
+    items: [
+      { href: '/about/', label: 'このサイトについて' },
+      { href: '/data/', label: 'データの引用・二次利用' },
+      { href: '/legal/', label: '掲載について' },
+      { href: '/edit/', label: '情報を送る' },
+    ],
+  },
+];
+const total = sections.reduce((n, s) => n + s.items.length, 0);
+---
+
+<BaseLayout
+  title="サイトの全体（サイトマップ） - とらんすナビ"
+  description="とらんすナビのすべてのページの一覧。テーマごとにまとめています。"
+>
+  <article class="article-shell">
+    <div class="eyebrow">サイトマップ</div>
+    <h1>サイトの全体</h1>
+    <p class="lead">
+      このサイトのページを、テーマごとにまとめました（全{total}ページ）。気になったところから、どうぞ。
+    </p>
+
+    <div class="sitemap-grid">
+      {sections.map((section) => (
+        <section class="sitemap-section" aria-labelledby={`sm-${section.title}`}>
+          <h2 id={`sm-${section.title}`}>{section.title}</h2>
+          <ul>
+            {section.items.map((item) => (
+              <li><a href={item.href}>{item.label}</a></li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+  </article>
+</BaseLayout>

@@ -31,6 +31,7 @@ const contentPages = [
   '/glossary/',
   '/clinics/',
   '/about/',
+  '/sitemap/',
   '/data/',
   '/legal/',
 ];
