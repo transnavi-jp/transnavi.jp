@@ -122,6 +122,28 @@ const breadcrumbLd = showBreadcrumb
     <title>{title}</title>
   </head>
   <body>
+    <aside id="event-banner" class="event-banner" hidden aria-label="記念日・イベントのお知らせ">
+      <div class="event-banner-stripe" aria-hidden="true"></div>
+      <div class="event-banner-inner">
+        <span class="event-banner-emoji" aria-hidden="true"></span>
+        <span class="event-banner-text"></span>
+        <a class="event-banner-link" href="/pride/"></a>
+        <button class="event-banner-close" type="button" aria-label="このお知らせを閉じる">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" /></svg>
+        </button>
+      </div>
+    </aside>
+    <script type="application/json" id="event-banner-data" set:html={JSON.stringify([
+      // Recurring awareness days/months. Each window recurs every year; `lead`
+      // is how many days before the start to begin showing ("very close").
+      // First match (top to bottom) wins.
+      { id: 'pride-month', sm: 6, sd: 1, em: 6, ed: 30, lead: 0, emoji: '🏳️‍🌈', text: '6月はプライド月間（Pride Month）です。', href: '/pride/', cta: '記念日・イベント' },
+      { id: 'tdor-week', sm: 11, sd: 13, em: 11, ed: 20, lead: 2, emoji: '🏳️‍⚧️', text: 'トランスジェンダー認知週間です（11月20日は追悼の日・TDOR）。', href: '/pride/', cta: 'くわしく' },
+      { id: 'tdov', sm: 3, sd: 31, em: 3, ed: 31, lead: 6, emoji: '🏳️‍⚧️', text: '3月31日は国際トランスジェンダー認知の日（TDOV）です。', href: '/pride/', cta: 'くわしく' },
+      { id: 'coming-out-day', sm: 10, sd: 11, em: 10, ed: 11, lead: 3, emoji: '💬', text: '10月11日は国際カミングアウトデーです。', href: '/coming-out/', cta: 'カミングアウトについて' },
+      { id: 'idahobit', sm: 5, sd: 17, em: 5, ed: 17, lead: 3, emoji: '🌈', text: '5月17日は IDAHOBIT（差別に反対する国際デー）です。', href: '/pride/', cta: 'くわしく' },
+      { id: 'nonbinary-day', sm: 7, sd: 14, em: 7, ed: 14, lead: 2, emoji: '💛', text: '7月14日はノンバイナリーの日です。', href: '/flags/', cta: 'フラッグ' },
+    ])} />
     <header class="site-header" id="top">
       <div class="header-top">
         <a class="brand" href="/" aria-label="とらんすナビ ホーム">
@@ -224,6 +246,7 @@ const breadcrumbLd = showBreadcrumb
         <span>コード: <a href="https://opensource.org/license/mit" rel="license">MIT</a></span>
       </div>
     </footer>
+    <script is:inline src="/event-banner.js" defer></script>
     <script is:inline>
       document.addEventListener('click', function (e) {
         var btn = e.target.closest && e.target.closest('.theme-toggle');
