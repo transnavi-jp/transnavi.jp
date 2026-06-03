@@ -7,6 +7,7 @@ interface Props {
 const { route } = Astro.props;
 type Ref = { title: string; url: string; publisher: string; lang: string };
 const refs = (citations as Record<string, Ref[]>)[route] ?? [];
+const slug = route.replace(/^\/+|\/+$/g, '').replace(/\//g, '-') || 'home';
 const langLabel = (l: string) => (l === 'en' ? '英語' : l === 'other' ? '他言語' : '');
 ---
 
@@ -14,8 +15,8 @@ const langLabel = (l: string) => (l === 'en' ? '英語' : l === 'other' ? '他�
   <section class="references" aria-labelledby="references-heading">
     <h2 id="references-heading">参考文献</h2>
     <ol class="reference-list">
-      {refs.map((r) => (
-        <li>
+      {refs.map((r, i) => (
+        <li id={`ref-${slug}-${i + 1}`}>
           <a href={r.url} target="_blank" rel="noreferrer">{r.title}</a>
           <span class="ref-meta">{r.publisher}{langLabel(r.lang) ? `（${langLabel(r.lang)}）` : ''}</span>
         </li>

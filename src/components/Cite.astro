@@ -1,0 +1,11 @@
+---
+// Inline citation marker, e.g. <Cite route="/dysphoria/" n={4} /> renders a
+// superscript [4] linking to the 4th entry in that page's References list.
+interface Props {
+  route: string;
+  n: number;
+}
+const { route, n } = Astro.props;
+const slug = route.replace(/^\/+|\/+$/g, '').replace(/\//g, '-') || 'home';
+---
+<sup class="cite"><a href={`#ref-${slug}-${n}`} aria-label={`参考文献 ${n}`}>[{n}]</a></sup>

@@ -1983,6 +1983,31 @@ ul {
 .reference-list li {
   margin: 10px 0;
   color: var(--ink);
+  scroll-margin-top: 16px;
+}
+
+.reference-list li:target {
+  background: var(--accent-soft);
+  border-radius: 6px;
+  padding: 4px 8px;
+  margin-left: -8px;
+}
+
+.cite {
+  font-size: 0.7em;
+  line-height: 0;
+  white-space: nowrap;
+}
+
+.cite a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+  padding: 0 1px;
+}
+
+.cite a:hover {
+  text-decoration: underline;
 }
 
 .ref-meta {
