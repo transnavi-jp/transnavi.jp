@@ -63,6 +63,10 @@
     "created": "2026-06-02",
     "updated": "2026-06-03"
   },
+  "/everyday/": {
+    "created": "2026-06-03",
+    "updated": "2026-06-03"
+  },
   "/allies/": {
     "created": "2026-06-02",
     "updated": "2026-06-03"
@@ -75,13 +79,17 @@
     "created": "2026-06-03",
     "updated": "2026-06-03"
   },
+  "/detransition/": {
+    "created": "2026-06-03",
+    "updated": "2026-06-03"
+  },
   "/about/": {
     "created": "2026-06-02",
-    "updated": "2026-06-02"
+    "updated": "2026-06-03"
   },
   "/legal/": {
     "created": "2026-06-02",
-    "updated": "2026-06-02"
+    "updated": "2026-06-03"
   },
   "/data/": {
     "created": "2026-06-02",

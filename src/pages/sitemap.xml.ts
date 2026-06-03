@@ -26,6 +26,7 @@ export const GET: APIRoute = async ({ site }) => {
     '/gender/',
     '/dysphoria/',
     '/transition/',
+    '/detransition/',
     '/hrt-effects/',
     '/hrt-medications/',
     '/fertility/',

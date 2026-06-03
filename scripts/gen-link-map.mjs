@@ -15,6 +15,7 @@ const NODES = {
   '/dysphoria/': { label: '性別違和', group: 'start' },
   '/learn/': { label: '知る・学ぶ', group: 'start' },
   '/transition/': { label: '性別移行', group: 'medical' },
+  '/detransition/': { label: '揺れ・脱移行', group: 'medical' },
   '/puberty-blockers/': { label: '思春期ブロッカー', group: 'medical' },
   '/hrt-effects/': { label: 'ホルモンの効果', group: 'medical' },
   '/hrt-medications/': { label: 'ホルモンの薬', group: 'medical' },

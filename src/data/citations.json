@@ -279,6 +279,36 @@
       "publisher": "特定非営利活動法人にじいろ学校",
       "lang": "ja",
       "id": "nijikou-aro-ace"
+    },
+    {
+      "title": "The evidence against “conversion therapy”",
+      "url": "https://www.apa.org/topics/lgbtq/evidence-against-conversion-therapy",
+      "publisher": "American Psychological Association",
+      "lang": "en",
+      "id": "apa-the-evidence-against"
+    }
+  ],
+  "/detransition/": [
+    {
+      "title": "Factors Leading to “Detransition” Among Transgender and Gender Diverse People in the United States (Turban et al., 2021)",
+      "url": "https://www.liebertpub.com/doi/10.1089/lgbt.2020.0437",
+      "publisher": "LGBT Health",
+      "lang": "en",
+      "id": "turban-factors-leading-to"
+    },
+    {
+      "title": "Regret after Gender-affirmation Surgery: A Systematic Review and Meta-analysis of Prevalence (Bustos et al., 2021)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33968550/",
+      "publisher": "Plastic and Reconstructive Surgery – Global Open",
+      "lang": "en",
+      "id": "bustos-regret-after-gender"
+    },
+    {
+      "title": "The evidence against “conversion therapy”",
+      "url": "https://www.apa.org/topics/lgbtq/evidence-against-conversion-therapy",
+      "publisher": "American Psychological Association",
+      "lang": "en",
+      "id": "apa-the-evidence-against"
     }
   ],
   "/basics/": [

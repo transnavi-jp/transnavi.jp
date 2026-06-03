@@ -46,7 +46,7 @@ const pageName = title.split(' - ')[0].trim();
 const learnPages = new Set([
   '/basics/', '/gender/', '/orientation/', '/dysphoria/', '/transition/', '/hrt-effects/', '/hrt-medications/', '/fertility/',
   '/voice/', '/presentation/', '/hair-removal/', '/surgery/', '/legal-change/', '/coming-out/',
-  '/everyday/', '/safety/', '/puberty-blockers/', '/flags/', '/pride/', '/works/', '/bibliography/',
+  '/everyday/', '/safety/', '/puberty-blockers/', '/detransition/', '/flags/', '/pride/', '/works/', '/bibliography/',
 ]);
 let section: { label: string; href: string } | null = null;
 if (learnPages.has(pathname)) section = { label: '知る・学ぶ', href: '/learn/' };
