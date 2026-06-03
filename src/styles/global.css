@@ -2768,6 +2768,8 @@ ul {
 :root[data-theme='dark'] .site-nav a:hover {
   background: rgba(124, 152, 224, 0.16);
 }
+:root[data-theme='dark'] .topic-item,
+:root[data-theme='dark'] .article-link,
 :root[data-theme='dark'] .glossary-card,
 :root[data-theme='dark'] .clinic-card {
   background: #262438;
