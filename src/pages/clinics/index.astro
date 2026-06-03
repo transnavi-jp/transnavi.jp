@@ -7,7 +7,7 @@ import { splitClinicUrls } from '../../utils/clinic-links';
 
 const clinics = clinicsData as Clinic[];
 const surgeryPattern = /(SRS|睾丸摘出|性別適合)/i;
-const mentalPattern = /(精神科|心療内科|心理|メンタル)/;
+const mentalPattern = /(精神科|心療内科|心理|メンタル|こころ)/;
 const explicitSrsClinicIds = new Set([
   'hrt-hokkaido-chuuou-sapmed',
 ]);
@@ -117,11 +117,14 @@ const clinicsWithCategories = clinics.map((clinic) => {
     categories.add('hrt');
   }
 
+  // Mental/diagnosis is decided only by the authoritative service field, the
+  // clinic id, or the clinic's own name. We deliberately do NOT scan `notes`:
+  // most HRT clinics mention 診断・精神科 there only as a prerequisite ("他院で
+  // 診断を受けた方の…"), which wrongly tagged HRT (even urology) clinics as mental.
   if (
     clinic.id.startsWith('psyco') ||
     clinic.services.some((service) => service.includes('精神') || service.includes('診断')) ||
-    mentalPattern.test(clinic.name) ||
-    mentalPattern.test(clinic.notes)
+    mentalPattern.test(clinic.name)
   ) {
     categories.add('mental');
   }
