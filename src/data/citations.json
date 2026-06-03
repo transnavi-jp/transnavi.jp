@@ -4,37 +4,43 @@
       "title": "Standards of Care for the Health of Transgender and Gender Diverse People, Version 8 (WPATH SOC-8)",
       "url": "https://www.tandfonline.com/doi/full/10.1080/26895269.2022.2100644",
       "publisher": "World Professional Association for Transgender Health / International Journal of Transgender Health",
-      "lang": "en"
+      "lang": "en",
+      "id": "tandfonline-standards-of-care"
     },
     {
       "title": "Endocrine Treatment of Gender-Dysphoric/Gender-Incongruent Persons: An Endocrine Society Clinical Practice Guideline (2017)",
       "url": "https://academic.oup.com/jcem/article/102/11/3869/4157558",
       "publisher": "The Endocrine Society / The Journal of Clinical Endocrinology & Metabolism",
-      "lang": "en"
+      "lang": "en",
+      "id": "academic-endocrine-treatment-of"
     },
     {
       "title": "性同一性障害に関する診断と治療のガイドライン（第4版改）",
       "url": "https://www.jspn.or.jp/uploads/uploads/files/activity/gid_guideline_no4_20180120.pdf",
       "publisher": "日本精神神経学会 性同一性障害に関する委員会",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "jspn-4"
     },
     {
       "title": "性同一性障害者の性別の取扱いの特例に関する法律（平成15年法律第111号）",
       "url": "https://laws.e-gov.go.jp/law/415AC0100000111/",
       "publisher": "デジタル庁 e-Gov法令検索",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "laws-15-111"
     },
     {
       "title": "性別の取扱いの変更（家事事件の手続案内）",
       "url": "https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_23/index.html",
       "publisher": "裁判所（最高裁判所）",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "courts"
     },
     {
       "title": "名の変更許可（家事事件の手続案内）",
       "url": "https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_20/index.html",
       "publisher": "裁判所（最高裁判所）",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "courts-2"
     }
   ],
   "/hrt-effects/": [
@@ -42,37 +48,43 @@
       "title": "Standards of Care for the Health of Transgender and Gender Diverse People, Version 8 (WPATH SOC-8)",
       "url": "https://www.tandfonline.com/doi/full/10.1080/26895269.2022.2100644",
       "publisher": "World Professional Association for Transgender Health / International Journal of Transgender Health",
-      "lang": "en"
+      "lang": "en",
+      "id": "tandfonline-standards-of-care"
     },
     {
       "title": "Overview of feminizing hormone therapy — Guidelines for the Primary and Gender-Affirming Care of Transgender and Gender Nonbinary People",
       "url": "https://transcare.ucsf.edu/guidelines/feminizing-hormone-therapy",
       "publisher": "UCSF Gender Affirming Health Program",
-      "lang": "en"
+      "lang": "en",
+      "id": "transcare-overview-of-feminizing"
     },
     {
       "title": "An Introduction to Hormone Therapy for Transfeminine People",
       "url": "https://transfemscience.org/articles/transfem-intro/",
       "publisher": "Transfeminine Science",
-      "lang": "en"
+      "lang": "en",
+      "id": "transfemscience-an-introduction-to"
     },
     {
       "title": "性同一性障害に関する診断と治療のガイドライン（第4版）",
       "url": "https://www.jspn.or.jp/uploads/uploads/files/activity/journal_114_11_gid_guideline_no4.pdf",
       "publisher": "日本精神神経学会 性同一性障害に関する委員会",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "jspn-4-2"
     },
     {
       "title": "One-third of amenorrheic transmasculine people on testosterone ovulate",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10982961/",
       "publisher": "PMC / National Library of Medicine（査読付き論文）",
-      "lang": "en"
+      "lang": "en",
+      "id": "pmc-one-third-of"
     },
     {
-      "title": "Endocrine Treatment of Gender-Dysphoric/Gender-Incongruent Persons: An Endocrine Society Clinical Practice Guideline",
+      "title": "Endocrine Treatment of Gender-Dysphoric/Gender-Incongruent Persons: An Endocrine Society Clinical Practice Guideline (2017)",
       "url": "https://academic.oup.com/jcem/article/102/11/3869/4157558",
       "publisher": "The Endocrine Society / The Journal of Clinical Endocrinology & Metabolism",
-      "lang": "en"
+      "lang": "en",
+      "id": "academic-endocrine-treatment-of"
     }
   ],
   "/presentation/": [
@@ -80,31 +92,36 @@
       "title": "Health impact of chest binding among transgender adults: a community-engaged, cross-sectional study",
       "url": "https://pubmed.ncbi.nlm.nih.gov/27300085/",
       "publisher": "Peitzmeier S, et al. / Culture, Health & Sexuality（査読付き）",
-      "lang": "en"
+      "lang": "en",
+      "id": "pubmed-health-impact-of"
     },
     {
       "title": "Understanding the health effects of binding and tucking for gender affirmation",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6798434/",
       "publisher": "Poteat T, Malik M, Cooney E / Journal of Clinical and Translational Science (2018)",
-      "lang": "en"
+      "lang": "en",
+      "id": "pmc-understanding-the-health"
     },
     {
       "title": "Tucking Practices and Attributed Health Effects in Transfeminine Individuals",
       "url": "https://pubmed.ncbi.nlm.nih.gov/38312458/",
       "publisher": "Malik M, et al. / Transgender Health (2024)",
-      "lang": "en"
+      "lang": "en",
+      "id": "pubmed-tucking-practices-and"
     },
     {
       "title": "Standards of Care for the Health of Transgender and Gender Diverse People, Version 8 (SOC-8)",
       "url": "https://wpath.org/publications/soc8/",
       "publisher": "World Professional Association for Transgender Health",
-      "lang": "en"
+      "lang": "en",
+      "id": "wpath-standards-of-care"
     },
     {
-      "title": "性別不合に関する診断と治療のガイドライン（第4版改）",
+      "title": "性同一性障害に関する診断と治療のガイドライン（第4版改）",
       "url": "https://www.jspn.or.jp/uploads/uploads/files/activity/gid_guideline_no4_20180120.pdf",
-      "publisher": "日本精神神経学会",
-      "lang": "ja"
+      "publisher": "日本精神神経学会 性同一性障害に関する委員会",
+      "lang": "ja",
+      "id": "jspn-4"
     }
   ],
   "/surgery/": [
@@ -112,13 +129,15 @@
       "title": "Principles and outcomes of gender-affirming vaginoplasty (Nat Rev Urol. 2023)",
       "url": "https://pubmed.ncbi.nlm.nih.gov/36726039/",
       "publisher": "Nature Reviews Urology（査読付き総説）",
-      "lang": "en"
+      "lang": "en",
+      "id": "pubmed-principles-and-outcomes"
     },
     {
       "title": "手術に係わる認定施設一覧（保険適用の前提となる認定施設）",
       "url": "http://www.gi-soc.jp/ninteishisetsuichiran.html",
       "publisher": "日本GI（性別不合）学会",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "gi-soc"
     }
   ],
   "/puberty-blockers/": [
@@ -126,31 +145,36 @@
       "title": "Standards of Care for the Health of Transgender and Gender Diverse People, Version 8 (WPATH SOC-8)",
       "url": "https://www.tandfonline.com/doi/full/10.1080/26895269.2022.2100644",
       "publisher": "World Professional Association for Transgender Health / International Journal of Transgender Health",
-      "lang": "en"
+      "lang": "en",
+      "id": "tandfonline-standards-of-care"
     },
     {
       "title": "Endocrine Treatment of Gender-Dysphoric/Gender-Incongruent Persons: An Endocrine Society Clinical Practice Guideline (2017)",
       "url": "https://academic.oup.com/jcem/article/102/11/3869/4157558",
       "publisher": "The Endocrine Society / The Journal of Clinical Endocrinology & Metabolism",
-      "lang": "en"
+      "lang": "en",
+      "id": "academic-endocrine-treatment-of"
     },
     {
       "title": "Puberty Blockers: A Review of GnRH Analogues in Transgender Youth",
       "url": "https://transfemscience.org/articles/puberty-blockers/",
       "publisher": "Transfeminine Science",
-      "lang": "en"
+      "lang": "en",
+      "id": "transfemscience-puberty-blockers-a"
     },
     {
       "title": "Pubertal blockers for transgender and gender-diverse youth",
       "url": "https://www.mayoclinic.org/diseases-conditions/gender-dysphoria/in-depth/pubertal-blockers/art-20459075",
       "publisher": "Mayo Clinic",
-      "lang": "en"
+      "lang": "en",
+      "id": "mayoclinic-pubertal-blockers-for"
     },
     {
       "title": "性別不合に関する診断と治療のガイドライン（第5版）",
       "url": "https://www.jspn.or.jp/modules/advocacy/index.php?content_id=23",
       "publisher": "日本精神神経学会（JSPN）",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "jspn-guideline"
     }
   ],
   "/legal-change/": [
@@ -158,207 +182,240 @@
       "title": "名の変更許可（家事事件の手続案内）",
       "url": "https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_20/index.html",
       "publisher": "裁判所（最高裁判所）",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "courts-2"
     },
     {
       "title": "性別の取扱いの変更（家事事件の手続案内）",
       "url": "https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_23/index.html",
       "publisher": "裁判所（最高裁判所）",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "courts"
     },
     {
       "title": "性同一性障害者の性別の取扱いの特例に関する法律（平成15年法律第111号）",
       "url": "https://laws.e-gov.go.jp/law/415AC0100000111/",
       "publisher": "デジタル庁 e-Gov法令検索",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "laws-15-111"
     },
     {
       "title": "特例法第3条第2項に規定する診断書の記載要領について",
       "url": "https://www.mhlw.go.jp/general/seido/syakai/sei32/",
       "publisher": "厚生労働省",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "mhlw-3-2"
     },
     {
       "title": "性別の取扱いの変更要件の一部を無効とした最高裁令和5年10月25日決定について",
       "url": "https://www.toben.or.jp/know/iinkai/seibyoudou/column/51025.html",
       "publisher": "東京弁護士会",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "toben-5-10-25"
     },
     {
-      "title": "性別不合に関する診断と治療のガイドライン",
+      "title": "性別不合に関する診断と治療のガイドライン（第5版）",
       "url": "https://www.jspn.or.jp/modules/advocacy/index.php?content_id=23",
-      "publisher": "日本精神神経学会 / 日本GI（性別不合）学会",
-      "lang": "ja"
+      "publisher": "日本精神神経学会（JSPN）",
+      "lang": "ja",
+      "id": "jspn-guideline"
     }
   ],
   "/safety/": [
     {
-      "title": "Gender incongruence and transgender health in the ICD (FAQ)",
+      "title": "Gender incongruence and transgender health in the ICD",
       "url": "https://www.who.int/standards/classifications/frequently-asked-questions/gender-incongruence-and-transgender-health-in-the-icd",
       "publisher": "世界保健機関（WHO）",
-      "lang": "en"
+      "lang": "en",
+      "id": "who-icd11"
     },
     {
       "title": "Expecting Rejection: Understanding the Minority Stress Experiences of Transgender and Gender-Nonconforming Individuals",
       "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5685272/",
       "publisher": "Rood BA, et al. / Transgender Health（査読付き論文）",
-      "lang": "en"
+      "lang": "en",
+      "id": "ncbi-expecting-rejection-understanding"
     },
     {
       "title": "電話相談窓口（よりそいホットライン）｜まもろうよ こころ",
       "url": "https://www.mhlw.go.jp/mamorouyokokoro/soudan/tel/",
       "publisher": "厚生労働省",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "mhlw"
     },
     {
       "title": "あかるい職場応援団（ハラスメント・SOGIハラ・アウティングの防止）",
       "url": "https://www.no-harassment.mhlw.go.jp/",
       "publisher": "厚生労働省",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "no-harassment-sogi"
     }
   ],
   "/orientation/": [
     {
-      "title": "Understanding transgender people, gender identity and gender expression（性同一性と性的指向は同じではない、と明記）",
+      "title": "Understanding transgender people, gender identity and gender expression",
       "url": "https://www.apa.org/topics/lgbtq/transgender-people-gender-identity-gender-expression",
       "publisher": "American Psychological Association",
-      "lang": "en"
+      "lang": "en",
+      "id": "apa-understanding-transgender-people"
     },
     {
-      "title": "The Report of the 2015 U.S. Transgender Survey（トランスの人の性的指向の内訳）",
+      "title": "The Report of the 2015 U.S. Transgender Survey",
       "url": "https://transequality.org/issues/us-transgender-survey",
       "publisher": "National Center for Transgender Equality",
-      "lang": "en"
+      "lang": "en",
+      "id": "transequality-the-report-of"
     },
     {
       "title": "アセクシュアル/アロマンティック入門 性的惹かれや恋愛感情を持たない人たち（松浦優）",
       "url": "https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-721352-2",
       "publisher": "集英社新書",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "shueisha"
     },
     {
       "title": "用語一覧（Aro/Ace ほか）",
       "url": "https://www.nijikou.com/%E7%94%A8%E8%AA%9E%E4%B8%80%E8%A6%A7/",
       "publisher": "特定非営利活動法人にじいろ学校",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "nijikou-aro-ace"
     }
   ],
   "/basics/": [
     {
-      "title": "Answers to Your Questions About Transgender People, Gender Identity, and Gender Expression",
+      "title": "Understanding transgender people, gender identity and gender expression",
       "url": "https://www.apa.org/topics/lgbtq/transgender-people-gender-identity-gender-expression",
-      "publisher": "American Psychological Association（米国心理学会, APA）",
-      "lang": "en"
+      "publisher": "American Psychological Association",
+      "lang": "en",
+      "id": "apa-understanding-transgender-people"
     },
     {
       "title": "A Glossary: Defining Transgender Terms",
       "url": "https://www.apa.org/monitor/2018/09/ce-corner-glossary",
       "publisher": "American Psychological Association（米国心理学会, APA）/ Monitor on Psychology",
-      "lang": "en"
+      "lang": "en",
+      "id": "apa-a-glossary-defining"
     },
     {
       "title": "性別不合および性別違和",
       "url": "https://www.msdmanuals.com/ja-jp/home/10-%E5%BF%83%E3%81%AE%E5%81%A5%E5%BA%B7%E5%95%8F%E9%A1%8C/%E6%80%A7%E5%88%A5%E9%81%95%E5%92%8C/%E6%80%A7%E5%88%A5%E9%81%95%E5%92%8C",
       "publisher": "MSD（Merck）マニュアル家庭版",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "msdmanuals"
     },
     {
       "title": "性的指向及びジェンダーアイデンティティの多様性に関する国民の理解の増進に関する法律",
       "url": "https://www.japaneselawtranslation.go.jp/ja/laws/view/4835",
       "publisher": "法務省 日本法令外国語訳データベースシステム",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "japaneselawtranslation"
     },
     {
       "title": "性別不合に関する診断と治療のガイドライン（第5版）",
       "url": "https://www.jspn.or.jp/modules/advocacy/index.php?content_id=23",
-      "publisher": "公益社団法人 日本精神神経学会 / 日本GI（性別不合）学会",
-      "lang": "ja"
+      "publisher": "日本精神神経学会（JSPN）",
+      "lang": "ja",
+      "id": "jspn-guideline"
     },
     {
       "title": "Standards of Care for the Health of Transgender and Gender Diverse People, Version 8",
       "url": "https://pubmed.ncbi.nlm.nih.gov/36238954/",
       "publisher": "World Professional Association for Transgender Health / International Journal of Transgender Health (PubMed: 36238954)",
-      "lang": "en"
+      "lang": "en",
+      "id": "pubmed-standards-of-care"
     },
     {
       "title": "What's the difference between being transgender or transsexual and having an intersex condition?",
       "url": "https://isna.org/faq/transgender/",
       "publisher": "Intersex Society of North America（北米インターセックス協会, ISNA）",
-      "lang": "en"
+      "lang": "en",
+      "id": "isna-what-s-the"
     },
     {
       "title": "Intersex",
       "url": "https://my.clevelandclinic.org/health/articles/16324-intersex",
       "publisher": "Cleveland Clinic（クリーブランド・クリニック）",
-      "lang": "en"
+      "lang": "en",
+      "id": "my-intersex"
     },
     {
       "title": "APA Resolution on Gender Identity Change Efforts（ジェンダーの多様性は正常であり、性同一性を変えようとする試み＝転向療法は効果がなく有害）",
       "url": "https://www.apa.org/about/policy/resolution-gender-identity-change-efforts.pdf",
       "publisher": "American Psychological Association",
-      "lang": "en"
+      "lang": "en",
+      "id": "apa-apa-resolution-on"
     },
     {
       "title": "The evidence against “conversion therapy”",
       "url": "https://www.apa.org/topics/lgbtq/evidence-against-conversion-therapy",
       "publisher": "American Psychological Association",
-      "lang": "en"
+      "lang": "en",
+      "id": "apa-the-evidence-against"
     },
     {
       "title": "提言「性的マイノリティの権利保障をめざして（Ⅱ）― トランスジェンダーの尊厳を保障するための法整備に向けて」",
       "url": "https://www.scj.go.jp/ja/info/kohyo/kohyo-24-t297-4-abstract.html",
       "publisher": "日本学術会議",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "scj"
     }
   ],
   "/gender/": [
     {
-      "title": "Answers to your questions about transgender people, gender identity, and gender expression",
+      "title": "Understanding transgender people, gender identity and gender expression",
       "url": "https://www.apa.org/topics/lgbtq/transgender-people-gender-identity-gender-expression",
-      "publisher": "American Psychological Association (APA)",
-      "lang": "en"
+      "publisher": "American Psychological Association",
+      "lang": "en",
+      "id": "apa-understanding-transgender-people"
     },
     {
       "title": "Gender",
       "url": "https://apastyle.apa.org/style-grammar-guidelines/bias-free-language/gender",
       "publisher": "American Psychological Association (APA)",
-      "lang": "en"
+      "lang": "en",
+      "id": "apastyle-gender"
     },
     {
       "title": "Standards of Care for the Health of Transgender and Gender Diverse People, Version 8 (WPATH SOC-8)",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9553112/",
       "publisher": "World Professional Association for Transgender Health (WPATH) / International Journal of Transgender Health",
-      "lang": "en"
+      "lang": "en",
+      "id": "pmc-standards-of-care"
     },
     {
       "title": "性分化疾患（一般の皆様へ）",
       "url": "https://jspe.umin.jp/public/seibunka.html",
       "publisher": "日本小児内分泌学会",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "jspe"
     },
     {
       "title": "性分化疾患｜一般の皆様へ",
       "url": "https://www.j-endo.jp/modules/patient/index.php?content_id=85",
       "publisher": "日本内分泌学会",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "j-endo"
     },
     {
-      "title": "性別不合に関する診断と治療のガイドライン",
+      "title": "性別不合に関する診断と治療のガイドライン（第5版）",
       "url": "https://www.jspn.or.jp/modules/advocacy/index.php?content_id=23",
-      "publisher": "日本精神神経学会",
-      "lang": "ja"
+      "publisher": "日本精神神経学会（JSPN）",
+      "lang": "ja",
+      "id": "jspn-guideline"
     },
     {
       "title": "性的指向・ジェンダーアイデンティティ（性自認）を理由とする偏見や差別をなくしましょう",
       "url": "https://www.moj.go.jp/JINKEN/jinken04_00126.html",
       "publisher": "法務省（人権擁護局）",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "moj"
     },
     {
       "title": "Fact Sheet: Intersex",
       "url": "https://www.ohchr.org/sites/default/files/Documents/Issues/Discrimination/LGBT/FactSheets/UNFE_FactSheet_Intersex_EN.pdf",
       "publisher": "国連人権高等弁務官事務所（OHCHR）／UN Free & Equal",
-      "lang": "en"
+      "lang": "en",
+      "id": "ohchr-fact-sheet-intersex"
     }
   ],
   "/dysphoria/": [
@@ -372,7 +429,7 @@
     {
       "title": "性別不合に関する診断と治療のガイドライン（第5版）",
       "url": "https://www.jspn.or.jp/modules/advocacy/index.php?content_id=23",
-      "publisher": "公益社団法人 日本精神神経学会",
+      "publisher": "日本精神神経学会（JSPN）",
       "lang": "ja",
       "id": "jspn-guideline"
     },
@@ -416,132 +473,153 @@
     {
       "title": "Endocrine Treatment of Gender-Dysphoric/Gender-Incongruent Persons: An Endocrine Society Clinical Practice Guideline (2017)",
       "url": "https://academic.oup.com/jcem/article/102/11/3869/4157558",
-      "publisher": "The Endocrine Society / Journal of Clinical Endocrinology & Metabolism (Oxford Academic)",
-      "lang": "en"
+      "publisher": "The Endocrine Society / The Journal of Clinical Endocrinology & Metabolism",
+      "lang": "en",
+      "id": "academic-endocrine-treatment-of"
     },
     {
       "title": "Practical Guidelines for Transgender Hormone Treatment",
       "url": "https://www.bumc.bu.edu/endo/clinics/transgender-medicine/guidelines/",
       "publisher": "Boston University School of Medicine, Department of Endocrinology",
-      "lang": "en"
+      "lang": "en",
+      "id": "bumc-practical-guidelines-for"
     },
     {
       "title": "Restrictions in use of cyproterone due to meningioma risk",
       "url": "https://www.ema.europa.eu/en/news/restrictions-use-cyproterone-due-meningioma-risk",
       "publisher": "European Medicines Agency (EMA)",
-      "lang": "en"
+      "lang": "en",
+      "id": "ema-restrictions-in-use"
     },
     {
       "title": "性同一性障害に関する診断と治療のガイドライン（第4版）",
       "url": "https://www.jspn.or.jp/uploads/uploads/files/activity/journal_114_11_gid_guideline_no4.pdf",
-      "publisher": "日本精神神経学会（性同一性障害に関する委員会）",
-      "lang": "ja"
+      "publisher": "日本精神神経学会 性同一性障害に関する委員会",
+      "lang": "ja",
+      "id": "jspn-4-2"
     },
     {
       "title": "The Utility of Potassium Monitoring in Gender-Diverse Adolescents Taking Spironolactone",
       "url": "https://academic.oup.com/jes/article/3/5/1031/5426795",
       "publisher": "Journal of the Endocrine Society (Oxford Academic)",
-      "lang": "en"
+      "lang": "en",
+      "id": "academic-the-utility-of"
     },
     {
       "title": "医薬品等を海外から購入しようとされる方へ",
       "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iyakuhin/kojinyunyu/index.html",
       "publisher": "厚生労働省",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "mhlw-2"
     },
     {
       "title": "Standards of Care for the Health of Transgender and Gender Diverse People, Version 8 (SOC-8)",
       "url": "https://wpath.org/publications/soc8/",
-      "publisher": "World Professional Association for Transgender Health (WPATH)",
-      "lang": "en"
+      "publisher": "World Professional Association for Transgender Health",
+      "lang": "en",
+      "id": "wpath-standards-of-care"
     }
   ],
   "/fertility/": [
     {
-      "title": "Standards of Care for the Health of Transgender and Gender Diverse People, Version 8 (SOC-8)",
+      "title": "Standards of Care for the Health of Transgender and Gender Diverse People, Version 8 (WPATH SOC-8)",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9553112/",
-      "publisher": "World Professional Association for Transgender Health (WPATH) / International Journal of Transgender Health, 2022",
-      "lang": "en"
+      "publisher": "World Professional Association for Transgender Health (WPATH) / International Journal of Transgender Health",
+      "lang": "en",
+      "id": "pmc-standards-of-care"
     },
     {
       "title": "Endocrine Treatment of Gender-Dysphoric/Gender-Incongruent Persons: An Endocrine Society Clinical Practice Guideline (2017)",
       "url": "https://academic.oup.com/jcem/article/102/11/3869/4157558",
-      "publisher": "Endocrine Society / The Journal of Clinical Endocrinology & Metabolism",
-      "lang": "en"
+      "publisher": "The Endocrine Society / The Journal of Clinical Endocrinology & Metabolism",
+      "lang": "en",
+      "id": "academic-endocrine-treatment-of"
     },
     {
       "title": "Gender dysphoria",
       "url": "https://www.nhs.uk/conditions/gender-dysphoria/treatment/",
       "publisher": "National Health Service (NHS), UK",
-      "lang": "en"
+      "lang": "en",
+      "id": "nhs-gender-dysphoria"
     },
     {
-      "title": "Histological evidence of ovulation in amenorrheic transmasculine people on testosterone",
+      "title": "One-third of amenorrheic transmasculine people on testosterone ovulate",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10982961/",
-      "publisher": "Cell Reports Medicine (Cell Press), 2024",
-      "lang": "en"
+      "publisher": "PMC / National Library of Medicine（査読付き論文）",
+      "lang": "en",
+      "id": "pmc-one-third-of"
     },
     {
       "title": "Gender-affirming hormone therapy: Effect on semen quality and use of fertility preservation",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12670484/",
       "publisher": "Andrology (Wiley), 2026",
-      "lang": "en"
+      "lang": "en",
+      "id": "pmc-gender-affirming-hormone"
     },
     {
       "title": "妊孕性／妊孕性温存について",
       "url": "https://www.j-sfp.org/fertility/",
       "publisher": "一般社団法人 日本がん・生殖医療学会（JSFP）",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "j-sfp"
     },
     {
       "title": "倫理委員会報告「未受精卵子および卵巣組織の凍結・保存に関する指針」（2018）",
       "url": "http://www.jsrm.or.jp/guideline-statem/guideline_2018_01.html",
       "publisher": "一般社団法人 日本生殖医学会（JSRM）",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "jsrm-2018"
     },
     {
       "title": "小児，思春期・若年がん患者の妊孕性温存に関する診療ガイドライン",
       "url": "http://www.jsco-cpg.jp/fertility/guideline/",
       "publisher": "一般社団法人 日本癌治療学会（JSCO）",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "jsco-cpg"
     }
   ],
   "/voice/": [
     {
-      "title": "Standards of Care for the Health of Transgender and Gender Diverse People, Version 8 (SOC-8)",
+      "title": "Standards of Care for the Health of Transgender and Gender Diverse People, Version 8 (WPATH SOC-8)",
       "url": "https://www.tandfonline.com/doi/full/10.1080/26895269.2022.2100644",
-      "publisher": "World Professional Association for Transgender Health (WPATH) / International Journal of Transgender Health",
-      "lang": "en"
+      "publisher": "World Professional Association for Transgender Health / International Journal of Transgender Health",
+      "lang": "en",
+      "id": "tandfonline-standards-of-care"
     },
     {
       "title": "Gender-Affirming Voice and Communication",
       "url": "https://www.asha.org/practice-portal/professional-issues/gender-affirming-voice-and-communication/",
       "publisher": "American Speech-Language-Hearing Association (ASHA)",
-      "lang": "en"
+      "lang": "en",
+      "id": "asha-gender-affirming-voice"
     },
     {
       "title": "Voice and Communication Change for Transgender and Gender-Diverse People（一般向け）",
       "url": "https://www.asha.org/public/speech/disorders/voice-and-communication-change-for-transgender-people/",
       "publisher": "American Speech-Language-Hearing Association (ASHA)",
-      "lang": "en"
+      "lang": "en",
+      "id": "asha-voice-and-communication"
     },
     {
       "title": "Trans and Gender-Diverse Voice and Communication Therapy: Competency Framework",
       "url": "https://www.rcslt.org/wp-content/uploads/media/Project/RCSLT/rcslt-trans-and-gender-diverse-voice-comm-therapy-2019.pdf",
       "publisher": "Royal College of Speech and Language Therapists (RCSLT)",
-      "lang": "en"
+      "lang": "en",
+      "id": "rcslt-trans-and-gender"
     },
     {
       "title": "男性から女性型性同一性障害症例の音声外科手術に伴うリハビリテーション治療",
       "url": "https://www.jstage.jst.go.jp/article/larynx/34/2/34_114/_article/-char/ja",
       "publisher": "日本喉頭科学会（学術誌『喉頭』）／ J-STAGE",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "jstage"
     },
     {
       "title": "性別違和・性別不合・GIDの症状・診断・治療方法",
       "url": "https://www.kyoto3387.jp/voice/disease05.html",
       "publisher": "医療法人顕夢会 京都耳鼻咽喉音聲手術医院（一色クリニック系列）",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "kyoto3387-gid"
     }
   ],
   "/hair-removal/": [
@@ -549,37 +627,43 @@
       "title": "Laser Hair Removal",
       "url": "https://my.clevelandclinic.org/health/treatments/21757-laser-hair-removal",
       "publisher": "Cleveland Clinic（米国・著名病院の患者向け医療情報）",
-      "lang": "en"
+      "lang": "en",
+      "id": "my-laser-hair-removal"
     },
     {
       "title": "Presurgical Laser Hair Removal: Protocoling a Safe and Effective Procedure for Transgender Patients",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8363989/",
       "publisher": "Dermatologic Surgery / PMC（査読付き論文）",
-      "lang": "en"
+      "lang": "en",
+      "id": "pmc-presurgical-laser-hair"
     },
     {
       "title": "A Review of Best Practices for Gender-Affirming Laser Hair Removal",
       "url": "https://pubmed.ncbi.nlm.nih.gov/39589846/",
       "publisher": "PubMed掲載の総説（査読付き）",
-      "lang": "en"
+      "lang": "en",
+      "id": "pubmed-a-review-of"
     },
     {
       "title": "医師免許を有しない者による脱毛行為等の取扱いについて",
       "url": "https://www.mhlw.go.jp/web/t_doc?dataId=00ta6731&dataType=1&pageNo=1",
       "publisher": "厚生労働省（医政局医事課長通知・一次情報）",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "mhlw-3"
     },
     {
       "title": "なくならない脱毛施術による危害",
       "url": "https://www.kokusen.go.jp/pdf/n-20170511_1.pdf",
       "publisher": "独立行政法人国民生活センター（官公庁系の公的機関）",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "kokusen"
     },
     {
       "title": "医療脱毛に関する合意声明",
       "url": "https://www.igaku-datumou-gakkai.com/about1-cw7o",
       "publisher": "日本医学脱毛学会（専門学会）",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "igaku-datumou-gakkai"
     }
   ],
   "/coming-out/": [
@@ -587,93 +671,108 @@
       "title": "The Coming Out Handbook",
       "url": "https://www.thetrevorproject.org/resources/guide/the-coming-out-handbook/",
       "publisher": "The Trevor Project",
-      "lang": "en"
+      "lang": "en",
+      "id": "thetrevorproject-the-coming-out"
     },
     {
       "title": "Understanding sexual orientation and homosexuality",
       "url": "https://www.apa.org/topics/lgbtq/orientation",
       "publisher": "American Psychological Association（米国心理学会）",
-      "lang": "en"
+      "lang": "en",
+      "id": "apa-understanding-sexual-orientation"
     },
     {
       "title": "職場と性的指向・性自認をめぐる現状",
       "url": "https://www.mhlw.go.jp/content/000625158.pdf",
       "publisher": "厚生労働省",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "mhlw-4"
     },
     {
       "title": "職場におけるパワーハラスメント対策等",
       "url": "https://www.mhlw.go.jp/content/11900000/001338359.pdf",
       "publisher": "厚生労働省",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "mhlw-5"
     },
     {
-      "title": "性的マイノリティに関する偏見や差別をなくしましょう",
+      "title": "性的指向・ジェンダーアイデンティティ（性自認）を理由とする偏見や差別をなくしましょう",
       "url": "https://www.moj.go.jp/JINKEN/jinken04_00126.html",
-      "publisher": "法務省 人権擁護局",
-      "lang": "ja"
+      "publisher": "法務省（人権擁護局）",
+      "lang": "ja",
+      "id": "moj"
     },
     {
       "title": "Protectiveness of Family Sexual Orientation Support",
       "url": "https://www.thetrevorproject.org/research-briefs/protectiveness-of-family-sexual-orientation-support-nov-2022/",
       "publisher": "The Trevor Project（研究ブリーフ）",
-      "lang": "en"
+      "lang": "en",
+      "id": "thetrevorproject-protectiveness-of-famil"
     },
     {
       "title": "Family Acceptance of LGBT Adolescents Protects Against Depression, Substance Abuse and Suicidal Behavior",
       "url": "https://familyproject.sfsu.edu/family-acceptance-lgbt-adolescents-protects-against-depression-substance-abuse-and-suicidal",
       "publisher": "Family Acceptance Project, San Francisco State University（Caitlin Ryan）",
-      "lang": "en"
+      "lang": "en",
+      "id": "familyproject-family-acceptance-of"
     },
     {
       "title": "性同一性障害に係る児童生徒に対するきめ細かな対応の実施等について",
       "url": "https://www.mext.go.jp/b_menu/houdou/27/04/1357468.htm",
       "publisher": "文部科学省（初等中等教育局児童生徒課）",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "mext"
     }
   ],
   "/allies/": [
     {
-      "title": "Family Acceptance in Adolescence and the Health of LGBT Young Adults",
+      "title": "Family Acceptance of LGBT Adolescents Protects Against Depression, Substance Abuse and Suicidal Behavior",
       "url": "https://familyproject.sfsu.edu/family-acceptance-lgbt-adolescents-protects-against-depression-substance-abuse-and-suicidal",
-      "publisher": "Family Acceptance Project, San Francisco State University（Caitlin Ryan et al., Journal of Child and Adolescent Psychiatric Nursing, 2010）",
-      "lang": "en"
+      "publisher": "Family Acceptance Project, San Francisco State University（Caitlin Ryan）",
+      "lang": "en",
+      "id": "familyproject-family-acceptance-of"
     },
     {
       "title": "What does the scholarly research say about the link between family acceptance and LGBT youth well-being?",
       "url": "https://whatweknow.inequality.cornell.edu/topics/lgbt-equality/what-does-the-scholarly-research-say-about-the-acceptancerejection-of-lgbt-youth-2/",
       "publisher": "Cornell University, What We Know Project",
-      "lang": "en"
+      "lang": "en",
+      "id": "whatweknow-what-does-the"
     },
     {
       "title": "Accepting Adults Reduce Suicide Attempts Among LGBTQ Youth",
       "url": "https://www.thetrevorproject.org/research-briefs/accepting-adults-reduce-suicide-attempts-among-lgbtq-youth/",
       "publisher": "The Trevor Project（2019年研究ブリーフ、全米調査 n=25,896）",
-      "lang": "en"
+      "lang": "en",
+      "id": "thetrevorproject-accepting-adults-reduce"
     },
     {
       "title": "Chosen Name Use Is Linked to Reduced Depressive Symptoms, Suicidal Ideation, and Suicidal Behavior Among Transgender Youth",
       "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6165713/",
       "publisher": "Russell, Pollitt, Li & Grossman, Journal of Adolescent Health（2018）",
-      "lang": "en"
+      "lang": "en",
+      "id": "pmc-chosen-name-use"
     },
     {
       "title": "2020 Resolution on Supporting Sexual/Gender Diverse Children and Adolescents in Schools",
       "url": "https://www.apa.org/pi/lgbt/resources/policy/gender-diverse-children",
       "publisher": "American Psychological Association（APA, 2020）",
-      "lang": "en"
+      "lang": "en",
+      "id": "apa-2020-resolution-on"
     },
     {
       "title": "性同一性障害に係る児童生徒に対するきめ細かな対応の実施等について",
       "url": "https://www.mext.go.jp/b_menu/houdou/27/04/1357468.htm",
-      "publisher": "文部科学省",
-      "lang": "ja"
+      "publisher": "文部科学省（初等中等教育局児童生徒課）",
+      "lang": "ja",
+      "id": "mext"
     },
     {
       "title": "知っておきたい「カミングアウト」と「アウティング」",
       "url": "https://www.tokyo-jinken.or.jp/site/tokyojinken/tj-98-column.html",
       "publisher": "公益財団法人 東京都人権啓発センター（TOKYO人権 第98号, 2023）",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "tokyo-jinken"
     }
   ],
   "/flags/": [
@@ -681,49 +780,57 @@
       "title": "Who Designed the Transgender Flag?",
       "url": "https://www.si.edu/stories/who-designed-transgender-flag",
       "publisher": "Smithsonian Institution（スミソニアン協会）",
-      "lang": "en"
+      "lang": "en",
+      "id": "si-who-designed-the"
     },
     {
       "title": "Rainbow Flag",
       "url": "https://www.glbthistory.org/rainbow-flag",
       "publisher": "GLBT Historical Society（GLBT歴史協会）",
-      "lang": "en"
+      "lang": "en",
+      "id": "glbthistory-rainbow-flag"
     },
     {
       "title": "Rainbow Flag: Color Meanings",
       "url": "https://gilbertbaker.com/rainbow-flag-color-meanings/",
       "publisher": "Gilbert Baker Foundation（ギルバート・ベイカー財団）",
-      "lang": "en"
+      "lang": "en",
+      "id": "gilbertbaker-rainbow-flag-color"
     },
     {
       "title": "PROGRESS INITIATIVE",
       "url": "https://progress.gay/",
       "publisher": "quasar.digital（Daniel Quasar 公式）",
-      "lang": "en"
+      "lang": "en",
+      "id": "progress-progress-initiative"
     },
     {
       "title": "The intersex flag",
       "url": "https://morgancarpenter.com/intersex-flag/",
       "publisher": "Morgan Carpenter（インターセックス・フラッグ考案者 公式）",
-      "lang": "en"
+      "lang": "en",
+      "id": "morgancarpenter-the-intersex-flag"
     },
     {
       "title": "Michael Page",
       "url": "https://www.queerarthistory.com/uncategorized/michael-page-bisexual-pride-flag-1998/",
       "publisher": "Queer Art History",
-      "lang": "en"
+      "lang": "en",
+      "id": "queerarthistory-michael-page"
     },
     {
       "title": "Flags of the LGBTIQ Community",
       "url": "https://outrightinternational.org/insights/flags-lgbtiq-community",
       "publisher": "Outright International（国際LGBTIQ人権NGO）",
-      "lang": "en"
+      "lang": "en",
+      "id": "outrightinternational-flags-of-the"
     },
     {
       "title": "Non-binary flag",
       "url": "https://en.wikipedia.org/wiki/Non-binary_flag",
       "publisher": "Wikipedia（出典付き総説）",
-      "lang": "en"
+      "lang": "en",
+      "id": "en-non-binary-flag"
     }
   ],
   "/pride/": [
@@ -731,61 +838,71 @@
       "title": "International Transgender Day of Visibility",
       "url": "https://www.pbs.org/newshour/nation/the-history-behind-international-transgender-day-of-visibility",
       "publisher": "PBS NewsHour",
-      "lang": "en"
+      "lang": "en",
+      "id": "pbs-international-transgender-day"
     },
     {
       "title": "About May 17",
       "url": "https://www.idahobit.org/about-may-17/",
       "publisher": "IDAHOBIT (official campaign site, Australia)",
-      "lang": "en"
+      "lang": "en",
+      "id": "idahobit-about-may-17"
     },
     {
       "title": "History and Overview",
       "url": "https://guides.loc.gov/lesbian-gay-bisexual-transgender-queer-pride/history-overview",
       "publisher": "アメリカ議会図書館 (Library of Congress) Research Guides",
-      "lang": "en"
+      "lang": "en",
+      "id": "guides-history-and-overview"
     },
     {
       "title": "About",
       "url": "https://www.loc.gov/lgbt-pride-month/about/",
       "publisher": "アメリカ議会図書館 (Library of Congress)",
-      "lang": "en"
+      "lang": "en",
+      "id": "loc-about"
     },
     {
       "title": "National Coming Out Day",
       "url": "https://www.hrc.org/resources/national-coming-out-day",
       "publisher": "Human Rights Campaign (HRC)",
-      "lang": "en"
+      "lang": "en",
+      "id": "hrc-national-coming-out"
     },
     {
       "title": "Intersex Awareness Day",
       "url": "https://interactadvocates.org/intersex-awareness-day/",
       "publisher": "interACT: Advocates for Intersex Youth",
-      "lang": "en"
+      "lang": "en",
+      "id": "interactadvocates-intersex-awareness-day"
     },
     {
       "title": "Intersex Awareness Day",
       "url": "https://intersexday.org/en/intersex-awareness-day/",
       "publisher": "Intersex Day Project",
-      "lang": "en"
+      "lang": "en",
+      "id": "intersexday-intersex-awareness-day"
     },
     {
       "title": "Celebrate Bisexuality Day",
       "url": "https://en.wikipedia.org/wiki/Celebrate_Bisexuality_Day",
       "publisher": "Wikipedia (well-cited overview)",
-      "lang": "en"
+      "lang": "en",
+      "id": "en-celebrate-bisexuality-day"
     },
     {
       "title": "Transgender Day of Remembrance (TDOR)",
       "url": "https://glaad.org/tdor/",
       "publisher": "GLAAD",
-      "lang": "en"
+      "lang": "en",
+      "id": "glaad-transgender-day-of"
     },
     {
       "title": "東京レインボープライドの沿革",
       "url": "https://tokyorainbowpride.org/profile/history/",
       "publisher": "特定非営利活動法人 東京レインボープライド",
-      "lang": "ja"
+      "lang": "ja",
+      "id": "tokyorainbowpride"
     }
   ]
 }

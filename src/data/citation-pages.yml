@@ -1,0 +1,144 @@
+# Which references (and in what order = display number) appear on each page.
+/transition/:
+  - tandfonline-standards-of-care
+  - academic-endocrine-treatment-of
+  - jspn-4
+  - laws-15-111
+  - courts
+  - courts-2
+/hrt-effects/:
+  - tandfonline-standards-of-care
+  - transcare-overview-of-feminizing
+  - transfemscience-an-introduction-to
+  - jspn-4-2
+  - pmc-one-third-of
+  - academic-endocrine-treatment-of
+/presentation/:
+  - pubmed-health-impact-of
+  - pmc-understanding-the-health
+  - pubmed-tucking-practices-and
+  - wpath-standards-of-care
+  - jspn-4
+/surgery/:
+  - pubmed-principles-and-outcomes
+  - gi-soc
+/puberty-blockers/:
+  - tandfonline-standards-of-care
+  - academic-endocrine-treatment-of
+  - transfemscience-puberty-blockers-a
+  - mayoclinic-pubertal-blockers-for
+  - jspn-guideline
+/legal-change/:
+  - courts-2
+  - courts
+  - laws-15-111
+  - mhlw-3-2
+  - toben-5-10-25
+  - jspn-guideline
+/safety/:
+  - who-icd11
+  - ncbi-expecting-rejection-understanding
+  - mhlw
+  - no-harassment-sogi
+/orientation/:
+  - apa-understanding-transgender-people
+  - transequality-the-report-of
+  - shueisha
+  - nijikou-aro-ace
+/basics/:
+  - apa-understanding-transgender-people
+  - apa-a-glossary-defining
+  - msdmanuals
+  - japaneselawtranslation
+  - jspn-guideline
+  - pubmed-standards-of-care
+  - isna-what-s-the
+  - my-intersex
+  - apa-apa-resolution-on
+  - apa-the-evidence-against
+  - scj
+/gender/:
+  - apa-understanding-transgender-people
+  - apastyle-gender
+  - pmc-standards-of-care
+  - jspe
+  - j-endo
+  - jspn-guideline
+  - moj
+  - ohchr-fact-sheet-intersex
+/dysphoria/:
+  - who-icd11
+  - jspn-guideline
+  - matsunaga-icd11
+  - nhs-gd
+  - th-gd-review
+  - euphoria-jacobsen
+  - ges-scale
+/hrt-medications/:
+  - academic-endocrine-treatment-of
+  - bumc-practical-guidelines-for
+  - ema-restrictions-in-use
+  - jspn-4-2
+  - academic-the-utility-of
+  - mhlw-2
+  - wpath-standards-of-care
+/fertility/:
+  - pmc-standards-of-care
+  - academic-endocrine-treatment-of
+  - nhs-gender-dysphoria
+  - pmc-one-third-of
+  - pmc-gender-affirming-hormone
+  - j-sfp
+  - jsrm-2018
+  - jsco-cpg
+/voice/:
+  - tandfonline-standards-of-care
+  - asha-gender-affirming-voice
+  - asha-voice-and-communication
+  - rcslt-trans-and-gender
+  - jstage
+  - kyoto3387-gid
+/hair-removal/:
+  - my-laser-hair-removal
+  - pmc-presurgical-laser-hair
+  - pubmed-a-review-of
+  - mhlw-3
+  - kokusen
+  - igaku-datumou-gakkai
+/coming-out/:
+  - thetrevorproject-the-coming-out
+  - apa-understanding-sexual-orientation
+  - mhlw-4
+  - mhlw-5
+  - moj
+  - thetrevorproject-protectiveness-of-famil
+  - familyproject-family-acceptance-of
+  - mext
+/allies/:
+  - familyproject-family-acceptance-of
+  - whatweknow-what-does-the
+  - thetrevorproject-accepting-adults-reduce
+  - pmc-chosen-name-use
+  - apa-2020-resolution-on
+  - mext
+  - tokyo-jinken
+/flags/:
+  - si-who-designed-the
+  - glbthistory-rainbow-flag
+  - gilbertbaker-rainbow-flag-color
+  - progress-progress-initiative
+  - morgancarpenter-the-intersex-flag
+  - queerarthistory-michael-page
+  - outrightinternational-flags-of-the
+  - en-non-binary-flag
+/pride/:
+  - pbs-international-transgender-day
+  - idahobit-about-may-17
+  - guides-history-and-overview
+  - loc-about
+  - hrc-national-coming-out
+  - interactadvocates-intersex-awareness-day
+  - intersexday-intersex-awareness-day
+  - en-celebrate-bisexuality-day
+  - glaad-transgender-day-of
+  - tokyorainbowpride

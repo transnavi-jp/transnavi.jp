@@ -1,0 +1,639 @@
+# Central bibliography (Hayagriva format, with a `lang` extension).
+# Each reference is keyed by a citation key and reused across pages via
+# citation-pages.yml. Cite inline with <Cite src="key">…</Cite>.
+academic-endocrine-treatment-of:
+  lang: en
+  publisher: The Endocrine Society / The Journal of Clinical Endocrinology & Metabolism
+  title: >-
+    Endocrine Treatment of Gender-Dysphoric/Gender-Incongruent Persons: An Endocrine Society
+    Clinical Practice Guideline (2017)
+  type: article
+  url: https://academic.oup.com/jcem/article/102/11/3869/4157558
+academic-the-utility-of:
+  lang: en
+  publisher: Journal of the Endocrine Society (Oxford Academic)
+  title: The Utility of Potassium Monitoring in Gender-Diverse Adolescents Taking Spironolactone
+  type: article
+  url: https://academic.oup.com/jes/article/3/5/1031/5426795
+apa-2020-resolution-on:
+  lang: en
+  publisher: American Psychological Association（APA, 2020）
+  title: 2020 Resolution on Supporting Sexual/Gender Diverse Children and Adolescents in Schools
+  type: web
+  url: https://www.apa.org/pi/lgbt/resources/policy/gender-diverse-children
+apa-a-glossary-defining:
+  lang: en
+  publisher: American Psychological Association（米国心理学会, APA）/ Monitor on Psychology
+  title: "A Glossary: Defining Transgender Terms"
+  type: web
+  url: https://www.apa.org/monitor/2018/09/ce-corner-glossary
+apa-apa-resolution-on:
+  lang: en
+  publisher: American Psychological Association
+  title: APA Resolution on Gender Identity Change Efforts（ジェンダーの多様性は正常であり、性同一性を変えようとする試み＝転向療法は効果がなく有害）
+  type: web
+  url: https://www.apa.org/about/policy/resolution-gender-identity-change-efforts.pdf
+apa-the-evidence-against:
+  lang: en
+  publisher: American Psychological Association
+  title: The evidence against “conversion therapy”
+  type: web
+  url: https://www.apa.org/topics/lgbtq/evidence-against-conversion-therapy
+apa-understanding-sexual-orientation:
+  lang: en
+  publisher: American Psychological Association（米国心理学会）
+  title: Understanding sexual orientation and homosexuality
+  type: web
+  url: https://www.apa.org/topics/lgbtq/orientation
+apa-understanding-transgender-people:
+  lang: en
+  publisher: American Psychological Association
+  title: Understanding transgender people, gender identity and gender expression
+  type: web
+  url: https://www.apa.org/topics/lgbtq/transgender-people-gender-identity-gender-expression
+apastyle-gender:
+  lang: en
+  publisher: American Psychological Association (APA)
+  title: Gender
+  type: web
+  url: https://apastyle.apa.org/style-grammar-guidelines/bias-free-language/gender
+asha-gender-affirming-voice:
+  lang: en
+  publisher: American Speech-Language-Hearing Association (ASHA)
+  title: Gender-Affirming Voice and Communication
+  type: web
+  url: >-
+    https://www.asha.org/practice-portal/professional-issues/gender-affirming-voice-and-communication/
+asha-voice-and-communication:
+  lang: en
+  publisher: American Speech-Language-Hearing Association (ASHA)
+  title: Voice and Communication Change for Transgender and Gender-Diverse People（一般向け）
+  type: web
+  url: >-
+    https://www.asha.org/public/speech/disorders/voice-and-communication-change-for-transgender-people/
+bumc-practical-guidelines-for:
+  lang: en
+  publisher: Boston University School of Medicine, Department of Endocrinology
+  title: Practical Guidelines for Transgender Hormone Treatment
+  type: web
+  url: https://www.bumc.bu.edu/endo/clinics/transgender-medicine/guidelines/
+courts:
+  lang: ja
+  publisher: 裁判所（最高裁判所）
+  title: 性別の取扱いの変更（家事事件の手続案内）
+  type: web
+  url: https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_23/index.html
+courts-2:
+  lang: ja
+  publisher: 裁判所（最高裁判所）
+  title: 名の変更許可（家事事件の手続案内）
+  type: web
+  url: https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_20/index.html
+ema-restrictions-in-use:
+  lang: en
+  publisher: European Medicines Agency (EMA)
+  title: Restrictions in use of cyproterone due to meningioma risk
+  type: web
+  url: https://www.ema.europa.eu/en/news/restrictions-use-cyproterone-due-meningioma-risk
+en-celebrate-bisexuality-day:
+  lang: en
+  publisher: Wikipedia (well-cited overview)
+  title: Celebrate Bisexuality Day
+  type: web
+  url: https://en.wikipedia.org/wiki/Celebrate_Bisexuality_Day
+en-non-binary-flag:
+  lang: en
+  publisher: Wikipedia（出典付き総説）
+  title: Non-binary flag
+  type: web
+  url: https://en.wikipedia.org/wiki/Non-binary_flag
+euphoria-jacobsen:
+  lang: en
+  publisher: Bulletin of Applied Transgender Studies（査読付き論文）
+  title: >-
+    Moving from Gender Dysphoria to Gender Euphoria: Trans Experiences of Positive Gender-Related
+    Emotions
+  type: article
+  url: https://bulletin.appliedtransstudies.org/article/1/1-2/6/
+familyproject-family-acceptance-of:
+  lang: en
+  publisher: Family Acceptance Project, San Francisco State University（Caitlin Ryan）
+  title: >-
+    Family Acceptance of LGBT Adolescents Protects Against Depression, Substance Abuse and Suicidal
+    Behavior
+  type: web
+  url: >-
+    https://familyproject.sfsu.edu/family-acceptance-lgbt-adolescents-protects-against-depression-substance-abuse-and-suicidal
+ges-scale:
+  lang: en
+  publisher: Frontiers in Psychology（査読付き論文）
+  title: >-
+    The Gender Euphoria Scale (GES): a protocol for developing and validating a tool to measure
+    gender euphoria
+  type: article
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10796755/
+gi-soc:
+  lang: ja
+  publisher: 日本GI（性別不合）学会
+  title: 手術に係わる認定施設一覧（保険適用の前提となる認定施設）
+  type: web
+  url: http://www.gi-soc.jp/ninteishisetsuichiran.html
+gilbertbaker-rainbow-flag-color:
+  lang: en
+  publisher: Gilbert Baker Foundation（ギルバート・ベイカー財団）
+  title: "Rainbow Flag: Color Meanings"
+  type: web
+  url: https://gilbertbaker.com/rainbow-flag-color-meanings/
+glaad-transgender-day-of:
+  lang: en
+  publisher: GLAAD
+  title: Transgender Day of Remembrance (TDOR)
+  type: web
+  url: https://glaad.org/tdor/
+glbthistory-rainbow-flag:
+  lang: en
+  publisher: GLBT Historical Society（GLBT歴史協会）
+  title: Rainbow Flag
+  type: web
+  url: https://www.glbthistory.org/rainbow-flag
+guides-history-and-overview:
+  lang: en
+  publisher: アメリカ議会図書館 (Library of Congress) Research Guides
+  title: History and Overview
+  type: web
+  url: https://guides.loc.gov/lesbian-gay-bisexual-transgender-queer-pride/history-overview
+hrc-national-coming-out:
+  lang: en
+  publisher: Human Rights Campaign (HRC)
+  title: National Coming Out Day
+  type: web
+  url: https://www.hrc.org/resources/national-coming-out-day
+idahobit-about-may-17:
+  lang: en
+  publisher: IDAHOBIT (official campaign site, Australia)
+  title: About May 17
+  type: web
+  url: https://www.idahobit.org/about-may-17/
+igaku-datumou-gakkai:
+  lang: ja
+  publisher: 日本医学脱毛学会（専門学会）
+  title: 医療脱毛に関する合意声明
+  type: web
+  url: https://www.igaku-datumou-gakkai.com/about1-cw7o
+interactadvocates-intersex-awareness-day:
+  lang: en
+  publisher: "interACT: Advocates for Intersex Youth"
+  title: Intersex Awareness Day
+  type: web
+  url: https://interactadvocates.org/intersex-awareness-day/
+intersexday-intersex-awareness-day:
+  lang: en
+  publisher: Intersex Day Project
+  title: Intersex Awareness Day
+  type: web
+  url: https://intersexday.org/en/intersex-awareness-day/
+isna-what-s-the:
+  lang: en
+  publisher: Intersex Society of North America（北米インターセックス協会, ISNA）
+  title: What's the difference between being transgender or transsexual and having an intersex condition?
+  type: web
+  url: https://isna.org/faq/transgender/
+j-endo:
+  lang: ja
+  publisher: 日本内分泌学会
+  title: 性分化疾患｜一般の皆様へ
+  type: web
+  url: https://www.j-endo.jp/modules/patient/index.php?content_id=85
+j-sfp:
+  lang: ja
+  publisher: 一般社団法人 日本がん・生殖医療学会（JSFP）
+  title: 妊孕性／妊孕性温存について
+  type: web
+  url: https://www.j-sfp.org/fertility/
+japaneselawtranslation:
+  lang: ja
+  publisher: 法務省 日本法令外国語訳データベースシステム
+  title: 性的指向及びジェンダーアイデンティティの多様性に関する国民の理解の増進に関する法律
+  type: web
+  url: https://www.japaneselawtranslation.go.jp/ja/laws/view/4835
+jsco-cpg:
+  lang: ja
+  publisher: 一般社団法人 日本癌治療学会（JSCO）
+  title: 小児，思春期・若年がん患者の妊孕性温存に関する診療ガイドライン
+  type: web
+  url: http://www.jsco-cpg.jp/fertility/guideline/
+jspe:
+  lang: ja
+  publisher: 日本小児内分泌学会
+  title: 性分化疾患（一般の皆様へ）
+  type: web
+  url: https://jspe.umin.jp/public/seibunka.html
+jspn-4:
+  lang: ja
+  publisher: 日本精神神経学会 性同一性障害に関する委員会
+  title: 性同一性障害に関する診断と治療のガイドライン（第4版改）
+  type: web
+  url: https://www.jspn.or.jp/uploads/uploads/files/activity/gid_guideline_no4_20180120.pdf
+jspn-4-2:
+  lang: ja
+  publisher: 日本精神神経学会 性同一性障害に関する委員会
+  title: 性同一性障害に関する診断と治療のガイドライン（第4版）
+  type: article
+  url: https://www.jspn.or.jp/uploads/uploads/files/activity/journal_114_11_gid_guideline_no4.pdf
+jspn-guideline:
+  lang: ja
+  publisher: 日本精神神経学会（JSPN）
+  title: 性別不合に関する診断と治療のガイドライン（第5版）
+  type: web
+  url: https://www.jspn.or.jp/modules/advocacy/index.php?content_id=23
+jsrm-2018:
+  lang: ja
+  publisher: 一般社団法人 日本生殖医学会（JSRM）
+  title: 倫理委員会報告「未受精卵子および卵巣組織の凍結・保存に関する指針」（2018）
+  type: web
+  url: http://www.jsrm.or.jp/guideline-statem/guideline_2018_01.html
+jstage:
+  lang: ja
+  publisher: 日本喉頭科学会（学術誌『喉頭』）／ J-STAGE
+  title: 男性から女性型性同一性障害症例の音声外科手術に伴うリハビリテーション治療
+  type: article
+  url: https://www.jstage.jst.go.jp/article/larynx/34/2/34_114/_article/-char/ja
+kokusen:
+  lang: ja
+  publisher: 独立行政法人国民生活センター（官公庁系の公的機関）
+  title: なくならない脱毛施術による危害
+  type: web
+  url: https://www.kokusen.go.jp/pdf/n-20170511_1.pdf
+kyoto3387-gid:
+  lang: ja
+  publisher: 医療法人顕夢会 京都耳鼻咽喉音聲手術医院（一色クリニック系列）
+  title: 性別違和・性別不合・GIDの症状・診断・治療方法
+  type: web
+  url: https://www.kyoto3387.jp/voice/disease05.html
+laws-15-111:
+  lang: ja
+  publisher: デジタル庁 e-Gov法令検索
+  title: 性同一性障害者の性別の取扱いの特例に関する法律（平成15年法律第111号）
+  type: web
+  url: https://laws.e-gov.go.jp/law/415AC0100000111/
+loc-about:
+  lang: en
+  publisher: アメリカ議会図書館 (Library of Congress)
+  title: About
+  type: web
+  url: https://www.loc.gov/lgbt-pride-month/about/
+matsunaga-icd11:
+  lang: ja
+  publisher: 日本精神神経学会（精神神経学雑誌）
+  title: ICD-11で新設された「性の健康に関連する状態群」
+  type: article
+  url: https://journal.jspn.or.jp/Disp?style=ofull&vol=124&year=2022&mag=0&number=2&start=134
+mayoclinic-pubertal-blockers-for:
+  lang: en
+  publisher: Mayo Clinic
+  title: Pubertal blockers for transgender and gender-diverse youth
+  type: web
+  url: >-
+    https://www.mayoclinic.org/diseases-conditions/gender-dysphoria/in-depth/pubertal-blockers/art-20459075
+mext:
+  lang: ja
+  publisher: 文部科学省（初等中等教育局児童生徒課）
+  title: 性同一性障害に係る児童生徒に対するきめ細かな対応の実施等について
+  type: web
+  url: https://www.mext.go.jp/b_menu/houdou/27/04/1357468.htm
+mhlw:
+  lang: ja
+  publisher: 厚生労働省
+  title: 電話相談窓口（よりそいホットライン）｜まもろうよ こころ
+  type: web
+  url: https://www.mhlw.go.jp/mamorouyokokoro/soudan/tel/
+mhlw-2:
+  lang: ja
+  publisher: 厚生労働省
+  title: 医薬品等を海外から購入しようとされる方へ
+  type: web
+  url: https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iyakuhin/kojinyunyu/index.html
+mhlw-3:
+  lang: ja
+  publisher: 厚生労働省（医政局医事課長通知・一次情報）
+  title: 医師免許を有しない者による脱毛行為等の取扱いについて
+  type: web
+  url: https://www.mhlw.go.jp/web/t_doc?dataId=00ta6731&dataType=1&pageNo=1
+mhlw-3-2:
+  lang: ja
+  publisher: 厚生労働省
+  title: 特例法第3条第2項に規定する診断書の記載要領について
+  type: web
+  url: https://www.mhlw.go.jp/general/seido/syakai/sei32/
+mhlw-4:
+  lang: ja
+  publisher: 厚生労働省
+  title: 職場と性的指向・性自認をめぐる現状
+  type: web
+  url: https://www.mhlw.go.jp/content/000625158.pdf
+mhlw-5:
+  lang: ja
+  publisher: 厚生労働省
+  title: 職場におけるパワーハラスメント対策等
+  type: web
+  url: https://www.mhlw.go.jp/content/11900000/001338359.pdf
+moj:
+  lang: ja
+  publisher: 法務省（人権擁護局）
+  title: 性的指向・ジェンダーアイデンティティ（性自認）を理由とする偏見や差別をなくしましょう
+  type: web
+  url: https://www.moj.go.jp/JINKEN/jinken04_00126.html
+morgancarpenter-the-intersex-flag:
+  lang: en
+  publisher: Morgan Carpenter（インターセックス・フラッグ考案者 公式）
+  title: The intersex flag
+  type: web
+  url: https://morgancarpenter.com/intersex-flag/
+msdmanuals:
+  lang: ja
+  publisher: MSD（Merck）マニュアル家庭版
+  title: 性別不合および性別違和
+  type: web
+  url: >-
+    https://www.msdmanuals.com/ja-jp/home/10-%E5%BF%83%E3%81%AE%E5%81%A5%E5%BA%B7%E5%95%8F%E9%A1%8C/%E6%80%A7%E5%88%A5%E9%81%95%E5%92%8C/%E6%80%A7%E5%88%A5%E9%81%95%E5%92%8C
+my-intersex:
+  lang: en
+  publisher: Cleveland Clinic（クリーブランド・クリニック）
+  title: Intersex
+  type: web
+  url: https://my.clevelandclinic.org/health/articles/16324-intersex
+my-laser-hair-removal:
+  lang: en
+  publisher: Cleveland Clinic（米国・著名病院の患者向け医療情報）
+  title: Laser Hair Removal
+  type: web
+  url: https://my.clevelandclinic.org/health/treatments/21757-laser-hair-removal
+ncbi-expecting-rejection-understanding:
+  lang: en
+  publisher: Rood BA, et al. / Transgender Health（査読付き論文）
+  title: >-
+    Expecting Rejection: Understanding the Minority Stress Experiences of Transgender and
+    Gender-Nonconforming Individuals
+  type: article
+  url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5685272/
+nhs-gd:
+  lang: en
+  publisher: National Health Service（英国国民保健サービス, NHS）
+  title: Gender dysphoria
+  type: web
+  url: https://www.nhs.uk/conditions/gender-dysphoria/
+nhs-gender-dysphoria:
+  lang: en
+  publisher: National Health Service (NHS), UK
+  title: Gender dysphoria
+  type: web
+  url: https://www.nhs.uk/conditions/gender-dysphoria/treatment/
+nijikou-aro-ace:
+  lang: ja
+  publisher: 特定非営利活動法人にじいろ学校
+  title: 用語一覧（Aro/Ace ほか）
+  type: web
+  url: https://www.nijikou.com/%E7%94%A8%E8%AA%9E%E4%B8%80%E8%A6%A7/
+no-harassment-sogi:
+  lang: ja
+  publisher: 厚生労働省
+  title: あかるい職場応援団（ハラスメント・SOGIハラ・アウティングの防止）
+  type: web
+  url: https://www.no-harassment.mhlw.go.jp/
+ohchr-fact-sheet-intersex:
+  lang: en
+  publisher: 国連人権高等弁務官事務所（OHCHR）／UN Free & Equal
+  title: "Fact Sheet: Intersex"
+  type: web
+  url: >-
+    https://www.ohchr.org/sites/default/files/Documents/Issues/Discrimination/LGBT/FactSheets/UNFE_FactSheet_Intersex_EN.pdf
+outrightinternational-flags-of-the:
+  lang: en
+  publisher: Outright International（国際LGBTIQ人権NGO）
+  title: Flags of the LGBTIQ Community
+  type: web
+  url: https://outrightinternational.org/insights/flags-lgbtiq-community
+pbs-international-transgender-day:
+  lang: en
+  publisher: PBS NewsHour
+  title: International Transgender Day of Visibility
+  type: web
+  url: >-
+    https://www.pbs.org/newshour/nation/the-history-behind-international-transgender-day-of-visibility
+pmc-chosen-name-use:
+  lang: en
+  publisher: Russell, Pollitt, Li & Grossman, Journal of Adolescent Health（2018）
+  title: >-
+    Chosen Name Use Is Linked to Reduced Depressive Symptoms, Suicidal Ideation, and Suicidal
+    Behavior Among Transgender Youth
+  type: article
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6165713/
+pmc-gender-affirming-hormone:
+  lang: en
+  publisher: Andrology (Wiley), 2026
+  title: "Gender-affirming hormone therapy: Effect on semen quality and use of fertility preservation"
+  type: article
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12670484/
+pmc-one-third-of:
+  lang: en
+  publisher: PMC / National Library of Medicine（査読付き論文）
+  title: One-third of amenorrheic transmasculine people on testosterone ovulate
+  type: article
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10982961/
+pmc-presurgical-laser-hair:
+  lang: en
+  publisher: Dermatologic Surgery / PMC（査読付き論文）
+  title: >-
+    Presurgical Laser Hair Removal: Protocoling a Safe and Effective Procedure for Transgender
+    Patients
+  type: article
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8363989/
+pmc-standards-of-care:
+  lang: en
+  publisher: >-
+    World Professional Association for Transgender Health (WPATH) / International Journal of
+    Transgender Health
+  title: >-
+    Standards of Care for the Health of Transgender and Gender Diverse People, Version 8 (WPATH
+    SOC-8)
+  type: article
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9553112/
+pmc-understanding-the-health:
+  lang: en
+  publisher: Poteat T, Malik M, Cooney E / Journal of Clinical and Translational Science (2018)
+  title: Understanding the health effects of binding and tucking for gender affirmation
+  type: article
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6798434/
+progress-progress-initiative:
+  lang: en
+  publisher: quasar.digital（Daniel Quasar 公式）
+  title: PROGRESS INITIATIVE
+  type: web
+  url: https://progress.gay/
+pubmed-a-review-of:
+  lang: en
+  publisher: PubMed掲載の総説（査読付き）
+  title: A Review of Best Practices for Gender-Affirming Laser Hair Removal
+  type: article
+  url: https://pubmed.ncbi.nlm.nih.gov/39589846/
+pubmed-health-impact-of:
+  lang: en
+  publisher: Peitzmeier S, et al. / Culture, Health & Sexuality（査読付き）
+  title: >-
+    Health impact of chest binding among transgender adults: a community-engaged, cross-sectional
+    study
+  type: article
+  url: https://pubmed.ncbi.nlm.nih.gov/27300085/
+pubmed-principles-and-outcomes:
+  lang: en
+  publisher: Nature Reviews Urology（査読付き総説）
+  title: Principles and outcomes of gender-affirming vaginoplasty (Nat Rev Urol. 2023)
+  type: article
+  url: https://pubmed.ncbi.nlm.nih.gov/36726039/
+pubmed-standards-of-care:
+  lang: en
+  publisher: >-
+    World Professional Association for Transgender Health / International Journal of Transgender
+    Health (PubMed: 36238954)
+  title: Standards of Care for the Health of Transgender and Gender Diverse People, Version 8
+  type: article
+  url: https://pubmed.ncbi.nlm.nih.gov/36238954/
+pubmed-tucking-practices-and:
+  lang: en
+  publisher: Malik M, et al. / Transgender Health (2024)
+  title: Tucking Practices and Attributed Health Effects in Transfeminine Individuals
+  type: article
+  url: https://pubmed.ncbi.nlm.nih.gov/38312458/
+queerarthistory-michael-page:
+  lang: en
+  publisher: Queer Art History
+  title: Michael Page
+  type: web
+  url: https://www.queerarthistory.com/uncategorized/michael-page-bisexual-pride-flag-1998/
+rcslt-trans-and-gender:
+  lang: en
+  publisher: Royal College of Speech and Language Therapists (RCSLT)
+  title: "Trans and Gender-Diverse Voice and Communication Therapy: Competency Framework"
+  type: web
+  url: >-
+    https://www.rcslt.org/wp-content/uploads/media/Project/RCSLT/rcslt-trans-and-gender-diverse-voice-comm-therapy-2019.pdf
+scj:
+  lang: ja
+  publisher: 日本学術会議
+  title: 提言「性的マイノリティの権利保障をめざして（Ⅱ）― トランスジェンダーの尊厳を保障するための法整備に向けて」
+  type: web
+  url: https://www.scj.go.jp/ja/info/kohyo/kohyo-24-t297-4-abstract.html
+shueisha:
+  lang: ja
+  publisher: 集英社新書
+  title: アセクシュアル/アロマンティック入門 性的惹かれや恋愛感情を持たない人たち（松浦優）
+  type: web
+  url: https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-721352-2
+si-who-designed-the:
+  lang: en
+  publisher: Smithsonian Institution（スミソニアン協会）
+  title: Who Designed the Transgender Flag?
+  type: web
+  url: https://www.si.edu/stories/who-designed-transgender-flag
+tandfonline-standards-of-care:
+  lang: en
+  publisher: >-
+    World Professional Association for Transgender Health / International Journal of Transgender
+    Health
+  title: >-
+    Standards of Care for the Health of Transgender and Gender Diverse People, Version 8 (WPATH
+    SOC-8)
+  type: article
+  url: https://www.tandfonline.com/doi/full/10.1080/26895269.2022.2100644
+th-gd-review:
+  lang: en
+  publisher: Transgender Health（Mary Ann Liebert／査読付き論文）
+  title: What Is Gender Dysphoria? A Critical Systematic Narrative Review
+  type: article
+  url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6225591/
+thetrevorproject-accepting-adults-reduce:
+  lang: en
+  publisher: The Trevor Project（2019年研究ブリーフ、全米調査 n=25,896）
+  title: Accepting Adults Reduce Suicide Attempts Among LGBTQ Youth
+  type: web
+  url: >-
+    https://www.thetrevorproject.org/research-briefs/accepting-adults-reduce-suicide-attempts-among-lgbtq-youth/
+thetrevorproject-protectiveness-of-famil:
+  lang: en
+  publisher: The Trevor Project（研究ブリーフ）
+  title: Protectiveness of Family Sexual Orientation Support
+  type: web
+  url: >-
+    https://www.thetrevorproject.org/research-briefs/protectiveness-of-family-sexual-orientation-support-nov-2022/
+thetrevorproject-the-coming-out:
+  lang: en
+  publisher: The Trevor Project
+  title: The Coming Out Handbook
+  type: web
+  url: https://www.thetrevorproject.org/resources/guide/the-coming-out-handbook/
+toben-5-10-25:
+  lang: ja
+  publisher: 東京弁護士会
+  title: 性別の取扱いの変更要件の一部を無効とした最高裁令和5年10月25日決定について
+  type: web
+  url: https://www.toben.or.jp/know/iinkai/seibyoudou/column/51025.html
+tokyo-jinken:
+  lang: ja
+  publisher: 公益財団法人 東京都人権啓発センター（TOKYO人権 第98号, 2023）
+  title: 知っておきたい「カミングアウト」と「アウティング」
+  type: web
+  url: https://www.tokyo-jinken.or.jp/site/tokyojinken/tj-98-column.html
+tokyorainbowpride:
+  lang: ja
+  publisher: 特定非営利活動法人 東京レインボープライド
+  title: 東京レインボープライドの沿革
+  type: web
+  url: https://tokyorainbowpride.org/profile/history/
+transcare-overview-of-feminizing:
+  lang: en
+  publisher: UCSF Gender Affirming Health Program
+  title: >-
+    Overview of feminizing hormone therapy — Guidelines for the Primary and Gender-Affirming Care of
+    Transgender and Gender Nonbinary People
+  type: web
+  url: https://transcare.ucsf.edu/guidelines/feminizing-hormone-therapy
+transequality-the-report-of:
+  lang: en
+  publisher: National Center for Transgender Equality
+  title: The Report of the 2015 U.S. Transgender Survey
+  type: web
+  url: https://transequality.org/issues/us-transgender-survey
+transfemscience-an-introduction-to:
+  lang: en
+  publisher: Transfeminine Science
+  title: An Introduction to Hormone Therapy for Transfeminine People
+  type: web
+  url: https://transfemscience.org/articles/transfem-intro/
+transfemscience-puberty-blockers-a:
+  lang: en
+  publisher: Transfeminine Science
+  title: "Puberty Blockers: A Review of GnRH Analogues in Transgender Youth"
+  type: web
+  url: https://transfemscience.org/articles/puberty-blockers/
+whatweknow-what-does-the:
+  lang: en
+  publisher: Cornell University, What We Know Project
+  title: >-
+    What does the scholarly research say about the link between family acceptance and LGBT youth
+    well-being?
+  type: web
+  url: >-
+    https://whatweknow.inequality.cornell.edu/topics/lgbt-equality/what-does-the-scholarly-research-say-about-the-acceptancerejection-of-lgbt-youth-2/
+who-icd11:
+  lang: en
+  publisher: 世界保健機関（WHO）
+  title: Gender incongruence and transgender health in the ICD
+  type: web
+  url: >-
+    https://www.who.int/standards/classifications/frequently-asked-questions/gender-incongruence-and-transgender-health-in-the-icd
+wpath-standards-of-care:
+  lang: en
+  publisher: World Professional Association for Transgender Health
+  title: Standards of Care for the Health of Transgender and Gender Diverse People, Version 8 (SOC-8)
+  type: web
+  url: https://wpath.org/publications/soc8/

@@ -20,7 +20,8 @@
     "import:mtf-content": "node scripts/import-mtf-ja-content.mjs",
     "import:terminology": "node scripts/import-terminology.mjs",
     "import:mtf": "npm run import:mtf-clinics && npm run import:mtf-content && npm run import:terminology",
-    "coverage": "node scripts/citation-coverage.mjs"
+    "coverage": "node scripts/citation-coverage.mjs",
+    "prebuild": "node scripts/gen-citations.mjs"
   },
   "dependencies": {
     "astro": "^5",
@@ -31,6 +32,7 @@
     "@cloudflare/workers-types": "^4.20260531.1",
     "@playwright/test": "^1.60.0",
     "@types/node": "^25.9.1",
+    "js-yaml": "^4.2.0",
     "typescript": "^5.9.3"
   }
 }
