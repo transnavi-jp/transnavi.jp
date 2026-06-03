@@ -442,9 +442,30 @@ ul {
    (detail is a hover tooltip); the header nav is hidden on the home page. */
 .hero-nav {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  flex-direction: column;
+  gap: 12px;
   margin-top: 24px;
+}
+
+/* Prominent first entry (はじめての方へ), then a compact grid of the rest so
+   the wayfinding stays short on phones (2 columns) and tidy on desktop. */
+.hero-button-lead {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 1.05rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.hero-button-compact {
+  padding: 11px 12px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
 }
 
 .hero-actions {
@@ -549,8 +570,8 @@ ul {
 .route-item {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 8px 12px;
+  align-items: baseline;
+  gap: 4px 12px;
   padding: 14px 18px;
   border: 1px solid var(--line);
   border-radius: 16px;
@@ -569,15 +590,17 @@ ul {
 
 .route-when {
   font-weight: 700;
+  flex: 1 1 auto;
 }
 
-.route-arrow {
-  color: var(--accent);
-  font-weight: 700;
-}
-
-.route-to {
+/* Arrow + destination stay together and right-align as a unit, so on a narrow
+   screen the line breaks *before* the arrow rather than after it. */
+.route-dest {
   margin-left: auto;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  white-space: nowrap;
   color: var(--accent);
   font-weight: 700;
 }
