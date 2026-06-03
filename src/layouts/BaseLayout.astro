@@ -70,10 +70,23 @@ const breadcrumbLd = showBreadcrumb
 <html lang="ja" dir="ltr">
   <head>
     <meta charset="utf-8" />
+    <script is:inline>
+      // Set the colour theme before paint (no flash): saved choice, else system.
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t !== 'light' && t !== 'dark') {
+            t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+          }
+          document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#ffd6e8" />
+    <meta name="theme-color" content="#ffd6e8" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#171826" media="(prefers-color-scheme: dark)" />
     <meta http-equiv="content-language" content="ja" />
     <meta property="og:site_name" content={siteName} />
     <meta property="og:title" content={title} />
@@ -118,12 +131,18 @@ const breadcrumbLd = showBreadcrumb
             <span class="brand-subtitle">{subtitle}</span>
           </span>
         </a>
-        <form class="header-search" role="search" action="/search/" method="get">
-          <input type="search" name="q" aria-label="サイト内を検索" placeholder="検索…" autocomplete="off" />
-          <button type="submit" aria-label="検索する">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" /></svg>
+        <div class="header-tools">
+          <form class="header-search" role="search" action="/search/" method="get">
+            <input type="search" name="q" aria-label="サイト内を検索" placeholder="検索…" autocomplete="off" />
+            <button type="submit" aria-label="検索する">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m21 21-4.3-4.3" /></svg>
+            </button>
+          </form>
+          <button class="theme-toggle" type="button" aria-label="ライトとダークの表示を切り替える" title="表示テーマを切り替える">
+            <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" /></svg>
+            <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2" /><path d="M12 2.5v2.3M12 19.2v2.3M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.3M19.2 12h2.3M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6" /></svg>
           </button>
-        </form>
+        </div>
       </div>
       {pathname !== '/' && (
         <nav class="site-nav" aria-label="主要なページ">
@@ -205,5 +224,17 @@ const breadcrumbLd = showBreadcrumb
         <span>コード: <a href="https://opensource.org/license/mit" rel="license">MIT</a></span>
       </div>
     </footer>
+    <script is:inline>
+      document.addEventListener('click', function (e) {
+        var btn = e.target.closest && e.target.closest('.theme-toggle');
+        if (!btn) return;
+        var dark = document.documentElement.getAttribute('data-theme') === 'dark';
+        var next = dark ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        try {
+          localStorage.setItem('theme', next);
+        } catch (e2) {}
+      });
+    </script>
   </body>
 </html>

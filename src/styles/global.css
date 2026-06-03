@@ -2408,3 +2408,124 @@ ul {
     margin-left: 0;
   }
 }
+
+/* ===========================================================================
+   Dark mode. A soft, dusky blue-purple palette (not flat black) that keeps the
+   pink/blue accents and rounded, gentle feel while being easy on the eyes.
+   Applied by an early inline script that sets data-theme on <html> from the
+   saved choice or the system preference (see BaseLayout).
+   =========================================================================== */
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --bg: linear-gradient(180deg, #1c1832 0%, #181a2c 46%, #161a27 100%);
+  --bg-flat: #171826;
+  --paper: rgba(43, 41, 66, 0.72);
+  --paper-strong: rgba(52, 50, 78, 0.92);
+  --surface: #2a2840;
+  --ink: #e5e3f3;
+  --muted: #abb0cd;
+  --ink-heading: #f2effb;
+  --line: rgba(150, 170, 230, 0.2);
+  --line-strong: rgba(255, 160, 200, 0.38);
+  --line-hover: rgba(255, 150, 196, 0.55);
+  --accent: #74bbf2;
+  --accent-strong: #ff9ecb;
+  --accent-soft: rgba(99, 148, 222, 0.22);
+  --accent-term: #bb9ee8;
+  --pink-soft: rgba(72, 46, 66, 0.55);
+  --shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+  --shadow-soft: 0 8px 22px rgba(0, 0, 0, 0.34);
+  --shadow-hover: 0 16px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* A gentle pink/blue aurora at the top, dimmed for the dark background. */
+:root[data-theme='dark'] body {
+  background:
+    radial-gradient(circle at top left, rgba(255, 130, 180, 0.1), transparent 26%),
+    radial-gradient(circle at top right, rgba(120, 180, 250, 0.1), transparent 28%),
+    var(--bg);
+}
+
+/* Override the surfaces / text that hardcode light colours. */
+:root[data-theme='dark'] .brand-name {
+  color: #7cc0f5;
+}
+:root[data-theme='dark'] .eyebrow {
+  color: #d4c2f0;
+}
+:root[data-theme='dark'] .site-nav a:hover {
+  background: rgba(124, 152, 224, 0.16);
+}
+:root[data-theme='dark'] .glossary-card,
+:root[data-theme='dark'] .clinic-card {
+  background: #262438;
+}
+:root[data-theme='dark'] .notice {
+  background: linear-gradient(180deg, rgba(64, 46, 72, 0.6), rgba(42, 41, 64, 0.55));
+}
+:root[data-theme='dark'] .entry-message {
+  background: linear-gradient(180deg, var(--pink-soft), rgba(42, 41, 64, 0.55));
+}
+:root[data-theme='dark'] .bib-lang-en {
+  background: rgba(255, 131, 183, 0.18);
+  color: #ff9ecb;
+}
+:root[data-theme='dark'] .bib-lang-zh {
+  background: rgba(242, 153, 74, 0.18);
+  color: #f4b079;
+}
+:root[data-theme='dark'] .badge-adult {
+  background: rgba(255, 131, 183, 0.2);
+  color: #ff9ec8;
+}
+:root[data-theme='dark'] .badge-popular {
+  background: rgba(242, 201, 76, 0.2);
+  color: #f3c969;
+}
+
+/* Theme toggle button (header). */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--paper-strong);
+  box-shadow: var(--shadow-soft);
+  color: var(--accent);
+  cursor: pointer;
+  transition: color 120ms ease, background 120ms ease, transform 120ms ease;
+}
+
+.theme-toggle:hover {
+  color: var(--accent-strong);
+  transform: translateY(-1px);
+}
+
+.theme-toggle svg {
+  width: 19px;
+  height: 19px;
+}
+
+.theme-icon-sun {
+  display: none;
+}
+
+:root[data-theme='dark'] .theme-icon-sun {
+  display: block;
+}
+
+:root[data-theme='dark'] .theme-icon-moon {
+  display: none;
+}
+
+.header-tools {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
