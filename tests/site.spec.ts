@@ -101,7 +101,7 @@ test('医療機関一覧を診療区分タブで切り替えられる', async ({
   await expect(page.locator('.clinic-name-link', { hasText: '青葉心理クリニック' })).toBeVisible();
   await expect(page.locator('.clinic-name-link', { hasText: '水戸中央クリニック' })).toBeHidden();
 
-  await page.getByRole('button', { name: '性別適合手術（SRS）' }).click();
+  await page.getByRole('button', { name: '手術', exact: true }).click();
 
   await expect(page.locator('.clinic-name-link', { hasText: '札幌医科大学付属病院' })).toBeVisible();
   await expect(page.locator('.clinic-name-link', { hasText: '青葉心理クリニック' })).toBeHidden();

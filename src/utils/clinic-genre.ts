@@ -1,20 +1,18 @@
 import type { Clinic } from '../types/clinic';
 
-export type ClinicGenre = 'hrt' | 'mental' | 'srs';
+// Top-level 診療区分 (care-purpose, not hospital department): hormones, diagnosis,
+// or surgery. These are tags — a facility can have several (a GID centre does
+// all three). 手術 is an umbrella; the specific procedure is a sub-type below.
+export type ClinicGenre = 'hrt' | 'mental' | 'surgery';
+export type SurgeryType = 'SRS' | 'VFS' | 'FFS';
 
-// Mental/diagnosis is decided only by the authoritative service field, the
-// clinic id, or the clinic's own name (こころ included so e.g. 武蔵小杉Jこころの
-// クリニック is caught). We deliberately never scan `notes`: most HRT clinics
-// mention 診断・精神科 there only as a prerequisite, which used to mis-tag HRT
-// (even urology) clinics as mental.
 const mentalPattern = /(精神科|心療内科|心理|メンタル|こころ)/;
 
-// HRT / beauty clinics that also perform orchiectomy or SRS, plus 札幌医大.
-// The dedicated SRS hospitals all use ids that start with "srs". We use an
-// explicit allow-list instead of scanning `notes`, because notes also contain
-// "SRSは実施せず紹介" / "術後の方" / タイでのSRS推薦状, which are not SRS providers.
-const srsCapableClinicIds = new Set<string>([
-  'hrt-hokkaido-chuuou-sapmed', // 札幌医科大学付属病院
+// HRT / beauty clinics that also perform orchiectomy or SRS, plus 札幌医大. The
+// dedicated surgery facilities carry the procedure in their `services`, so they
+// are detected automatically; these have it only in `notes`, hence an allow-list.
+const surgeryClinicIds = new Set<string>([
+  'hrt-hokkaido-chuuou-sapmed',
   'hrt-aichi-nagumo',
   'hrt-kanagawa-kawasaki',
   'hrt-osaka-amore',
@@ -28,13 +26,18 @@ const srsCapableClinicIds = new Set<string>([
   'hrt-tokyo-gender-clinic',
 ]);
 
+const offersSurgery = (clinic: Clinic) =>
+  clinic.id.startsWith('srs') ||
+  clinic.id.startsWith('vfs') ||
+  surgeryClinicIds.has(clinic.id) ||
+  clinic.services.some((s) => s.includes('手術'));
+
 export function categoriesOf(clinic: Clinic): ClinicGenre[] {
   const categories = new Set<ClinicGenre>();
 
   if (clinic.id.startsWith('hrt') || clinic.services.some((service) => service.includes('ホルモン'))) {
     categories.add('hrt');
   }
-
   if (
     clinic.id.startsWith('psyco') ||
     clinic.services.some((service) => service.includes('精神') || service.includes('診断')) ||
@@ -42,15 +45,30 @@ export function categoriesOf(clinic: Clinic): ClinicGenre[] {
   ) {
     categories.add('mental');
   }
-
-  if (clinic.id.startsWith('srs') || srsCapableClinicIds.has(clinic.id)) {
-    categories.add('srs');
+  if (offersSurgery(clinic)) {
+    categories.add('surgery');
   }
 
   return [...categories];
 }
 
-// One pin colour per clinic: surgery-capable first, then HRT, then mental.
+// Sub-types of 手術. VFS = 声の女性化, SRS = 性別適合（去勢・造腟など）, FFS = 顔の
+// 女性化 (no facilities tagged yet — added when data exists).
+export function surgeryTypesOf(clinic: Clinic): SurgeryType[] {
+  const t = new Set<SurgeryType>();
+  if (clinic.services.some((s) => s.includes('声'))) t.add('VFS');
+  if (clinic.services.some((s) => s.includes('FFS') || s.includes('顔の女性化'))) t.add('FFS');
+  if (
+    clinic.id.startsWith('srs') ||
+    surgeryClinicIds.has(clinic.id) ||
+    clinic.services.some((s) => s.includes('性別適合'))
+  ) {
+    t.add('SRS');
+  }
+  return [...t];
+}
+
+// One pin colour per facility: surgery first (most specialised), then HRT, then mental.
 export function primaryGenre(categories: string[]): ClinicGenre {
-  return categories.includes('srs') ? 'srs' : categories.includes('hrt') ? 'hrt' : 'mental';
+  return categories.includes('surgery') ? 'surgery' : categories.includes('hrt') ? 'hrt' : 'mental';
 }

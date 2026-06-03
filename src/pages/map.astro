@@ -7,21 +7,17 @@ import { categoriesOf, primaryGenre } from '../utils/clinic-genre';
 
 const clinics = (clinicsData as Clinic[])
   .filter((c) => typeof c.lat === 'number' && typeof c.lng === 'number')
-  .map((c) => {
-    // SRS-capable facilities get the distinct 手術（SRS）pin (matching the
-    // overseas SRS pins); HRT/mental clinics stay one generic 医療機関 colour
-    // so the global map's legend doesn't need to split them.
-    const genre = primaryGenre(categoriesOf(c)) === 'srs' ? 'srs' : 'clinic';
-    return {
-      id: c.id,
-      name: c.name,
-      area: [c.prefecture, c.city].filter(Boolean).join(' '),
-      approx: c.geoSource !== 'address',
-      genre,
-      lat: c.lat,
-      lng: c.lng,
-    };
-  });
+  .map((c) => ({
+    id: c.id,
+    name: c.name,
+    area: [c.prefecture, c.city].filter(Boolean).join(' '),
+    approx: c.geoSource !== 'address',
+    // Coloured by 診療区分 (ホルモン療法 / 精神科・診断 / 手術) — the same buckets as
+    // the /clinics/ finder, so the two pages are consistent.
+    genre: primaryGenre(categoriesOf(c)),
+    lat: c.lat,
+    lng: c.lng,
+  }));
 
 const pois = poisData as { name: string; type: string; url: string; lat: number; lng: number }[];
 const mapData = { clinics, pois };
@@ -29,19 +25,19 @@ const mapData = { clinics, pois };
 
 <BaseLayout
   title="地図で探す（医療機関・団体・イベント） - とらんすナビ"
-  description="ホルモン療法などの医療機関、性別適合手術（SRS）の病院（日本・タイ・韓国）、声の手術（音声外科）の医療機関、当事者団体・拠点、大学のLGBTQサークル、公的な相談窓口、プライドイベントを地図の上でまとめて探せます。"
+  description="医療機関を診療区分（ホルモン療法・精神科や診断・手術）の色で表示。性別適合手術（SRS）の病院（日本・タイ・韓国）や声の手術（VFS）、当事者団体・拠点、大学のLGBTQサークル、公的な相談窓口、プライドイベントも地図の上でまとめて探せます。"
 >
   <article class="article-shell">
     <div class="eyebrow">地図で探す</div>
     <h1>地図で探す</h1>
     <p class="lead">
-      医療機関、性別適合手術（SRS）の病院、声の手術（音声外科）の医療機関、当事者団体・拠点、大学のLGBTQサークル、公的な相談窓口、イベントを、地図の上でまとめて見られます。気になるピンをタップすると、掲載ページや公式サイトへ進めます。地図は最初は日本を表示しますが、引いて（ズームアウトして）いくと、タイや韓国などのSRS病院も表示されます。
+      医療機関を診療区分ごとの色（ホルモン療法・精神科や診断・手術）で表示し、あわせて当事者団体・拠点、大学のLGBTQサークル、公的な相談窓口、イベントも地図の上でまとめて見られます。「手術」には性別適合手術（SRS）や声の手術（VFS）などが含まれます。気になるピンをタップすると、掲載ページや公式サイトへ進めます。地図は最初は日本を表示しますが、引いて（ズームアウトして）いくと、タイや韓国などのSRS病院も表示されます。
     </p>
 
-    <div class="map-legend" aria-label="地図の凡例">
-      <label><input type="checkbox" data-map-toggle="clinic" checked /><span class="map-dot map-dot-clinic" aria-hidden="true"></span>医療機関</label>
-      <label><input type="checkbox" data-map-toggle="srs" checked /><span class="map-dot map-dot-srs" aria-hidden="true"></span>手術（SRS）</label>
-      <label><input type="checkbox" data-map-toggle="voice" checked /><span class="map-dot map-dot-voice" aria-hidden="true"></span>声の手術</label>
+    <div class="map-legend" aria-label="地図の凡例（診療区分ほか）">
+      <label><input type="checkbox" data-map-toggle="hrt" checked /><span class="map-dot map-dot-hrt" aria-hidden="true"></span>ホルモン療法</label>
+      <label><input type="checkbox" data-map-toggle="mental" checked /><span class="map-dot map-dot-mental" aria-hidden="true"></span>精神科・診断</label>
+      <label><input type="checkbox" data-map-toggle="surgery" checked /><span class="map-dot map-dot-surgery" aria-hidden="true"></span>手術（SRS・声など）</label>
       <label><input type="checkbox" data-map-toggle="org" checked /><span class="map-dot map-dot-org" aria-hidden="true"></span>団体・拠点</label>
       <label><input type="checkbox" data-map-toggle="circle" checked /><span class="map-dot map-dot-circle" aria-hidden="true"></span>学生サークル</label>
       <label><input type="checkbox" data-map-toggle="desk" checked /><span class="map-dot map-dot-desk" aria-hidden="true"></span>相談窓口</label>
@@ -53,7 +49,7 @@ const mapData = { clinics, pois };
     </div>
 
     <p class="resource-section-intro">
-      ピンの位置は、住所をもとにおおよそで表示しています（番地が不明なものは市区町村のおおよその位置です）。大学のサークルは活動キャンパスのおおよその場所、相談窓口は施設の場所を示しています。学生サークルの活動状況や開催日時は年度で変わることがあります。「手術（SRS）」には、日本のGI学会認定施設などに加えて、海外（タイ・韓国）でよく知られた病院も含みます。海外で受ける場合の費用・言葉・術後ケア・戸籍変更の書類などの注意は<a href="/surgery/">移行のための手術</a>を確認してください。正確な所在地・活動内容・診療内容は、必ず各施設・団体・窓口の公式情報で確認してください。当サイトは特定の施設をすすめたり順位づけしたりはしません。
+      ピンの位置は、住所をもとにおおよそで表示しています（番地が不明なものは市区町村のおおよその位置です）。大学のサークルは活動キャンパスのおおよその場所、相談窓口は施設の場所を示しています。学生サークルの活動状況や開催日時は年度で変わることがあります。「手術」には、性別適合手術（SRS）や声の手術（VFS）などが含まれ、日本のGI学会認定施設などに加えて、海外（タイ・韓国）でよく知られたSRS病院も含みます。海外で受ける場合の費用・言葉・術後ケア・戸籍変更の書類などの注意は<a href="/surgery/">移行のための手術</a>を確認してください。正確な所在地・活動内容・診療内容は、必ず各施設・団体・窓口の公式情報で確認してください。当サイトは特定の施設をすすめたり順位づけしたりはしません。
     </p>
 
     <nav class="word-chips entry-related" aria-label="関連ページ">

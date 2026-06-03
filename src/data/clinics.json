@@ -3652,5 +3652,57 @@
     "lat": 26.35405,
     "lng": 127.835503,
     "geoSource": "address"
+  },
+  {
+    "id": "vfs-kyoto-ent",
+    "name": "京都耳鼻咽喉音聲手術医院",
+    "displayName": "京都市・京都耳鼻咽喉音聲手術医院（京都駅前院）",
+    "prefecture": "京都府",
+    "city": "京都市",
+    "address": "京都府京都市南区東九条北烏丸町3-5",
+    "phone": "075-682-6060",
+    "urls": [
+      "https://kyoto-ekimae3387.jp/transgender-outpatient/"
+    ],
+    "services": [
+      "声の手術（VFS）"
+    ],
+    "lat": 34.98175,
+    "lng": 135.758423,
+    "source": {
+      "project": "とらんすナビ",
+      "path": "",
+      "license": ""
+    },
+    "verificationStatus": "要確認",
+    "importedAt": "2026-06-03",
+    "notes": "声の女性化手術（音声外科・VFS）に対応していると公表している医療機関。甲状軟骨形成術IV型・ウェンドラー声帯短縮術など。診療内容・費用・受診条件は変わることがあります。受ける前に必ず公式情報で確認してください。",
+    "geoSource": "address"
+  },
+  {
+    "id": "vfs-tokyo-met-ent",
+    "name": "メトロポリタンENTサージクリニック東京",
+    "displayName": "中央区・メトロポリタンENTサージクリニック東京",
+    "prefecture": "東京都",
+    "city": "中央区",
+    "address": "東京都中央区日本橋2-8-1 東京日本橋タワー アネックス3F",
+    "phone": "03-6910-8187",
+    "urls": [
+      "https://met-ent-tokyo.com/surgery/voice/"
+    ],
+    "services": [
+      "声の手術（VFS）"
+    ],
+    "lat": 35.681808,
+    "lng": 139.775116,
+    "source": {
+      "project": "とらんすナビ",
+      "path": "",
+      "license": ""
+    },
+    "verificationStatus": "要確認",
+    "importedAt": "2026-06-03",
+    "notes": "声の女性化手術（音声外科・VFS）に対応していると公表している医療機関。甲状軟骨形成術IV型・ウェンドラー声帯短縮術など。診療内容・費用・受診条件は変わることがあります。受ける前に必ず公式情報で確認してください。",
+    "geoSource": "address"
   }
 ]

@@ -4,7 +4,7 @@ import Mascot from '../../components/Mascot.astro';
 import clinicsData from '../../data/clinics.json';
 import type { Clinic } from '../../types/clinic';
 import { splitClinicUrls } from '../../utils/clinic-links';
-import { categoriesOf, primaryGenre } from '../../utils/clinic-genre';
+import { categoriesOf, primaryGenre, surgeryTypesOf } from '../../utils/clinic-genre';
 
 const clinics = clinicsData as Clinic[];
 const prefectureOrder = [
@@ -60,7 +60,7 @@ const prefectureOrder = [
 const categoryDefinitions = [
   { id: '', label: 'すべて' },
   { id: 'hrt', label: 'ホルモン療法（HRT）' },
-  { id: 'srs', label: '性別適合手術（SRS）' },
+  { id: 'surgery', label: '手術' },
   { id: 'mental', label: '精神科（メンタルクリニック）' },
 ] as const;
 
@@ -100,11 +100,12 @@ const regionDefinitions = [
   { id: '九州・沖縄', label: '九州・沖縄' },
 ] as const;
 
-// Categorisation (hrt / mental / srs) lives in a shared util so the embedded
-// map here and the global /map/ colour pins by the same rules.
+// Categorisation (hrt / mental / surgery, with surgery sub-types) lives in a
+// shared util so the embedded map here and the global /map/ use the same rules.
 const clinicsWithCategories = clinics.map((clinic) => ({
   ...clinic,
   categories: categoriesOf(clinic),
+  surgeryTypes: surgeryTypesOf(clinic),
   type: typeOf(clinic.name),
   region: regionOf(clinic.prefecture),
   links: splitClinicUrls(clinic.urls),
@@ -160,7 +161,7 @@ const genreCounts = mapClinics.reduce(
     <div class="map-legend" aria-label="地図の凡例（診療区分）">
       <label><input type="checkbox" data-map-toggle="hrt" checked /><span class="map-dot map-dot-hrt" aria-hidden="true"></span>ホルモン療法<span class="map-legend-count">{genreCounts.hrt ?? 0}</span></label>
       <label><input type="checkbox" data-map-toggle="mental" checked /><span class="map-dot map-dot-mental" aria-hidden="true"></span>精神科・診断<span class="map-legend-count">{genreCounts.mental ?? 0}</span></label>
-      <label><input type="checkbox" data-map-toggle="srs" checked /><span class="map-dot map-dot-srs" aria-hidden="true"></span>手術（SRS）<span class="map-legend-count">{genreCounts.srs ?? 0}</span></label>
+      <label><input type="checkbox" data-map-toggle="surgery" checked /><span class="map-dot map-dot-surgery" aria-hidden="true"></span>手術<span class="map-legend-count">{genreCounts.surgery ?? 0}</span></label>
     </div>
     <div id="map" class="map-canvas clinic-map" role="application" aria-label="医療機関の地図">
       <p class="map-fallback">地図を表示するには JavaScript が必要です。下の一覧からも探せます。</p>
@@ -249,9 +250,10 @@ const genreCounts = mapClinics.reduce(
               class="clinic-card"
               data-filter-item
               data-categories={clinic.categories.join(',')}
+              data-surgery-types={clinic.surgeryTypes.join(',')}
               data-types={clinic.type}
               data-regions={clinic.region}
-              data-search={[clinic.name, clinic.displayName, clinic.region, clinic.prefecture, clinic.city, clinic.address, clinic.phone, clinic.type, ...clinic.services].filter(Boolean).join(' ')}
+              data-search={[clinic.name, clinic.displayName, clinic.region, clinic.prefecture, clinic.city, clinic.address, clinic.phone, clinic.type, ...clinic.services, ...clinic.surgeryTypes].filter(Boolean).join(' ')}
             >
               <div class="clinic-card-header">
                 <div>

@@ -2424,6 +2424,7 @@ ul {
 .map-pin-hrt { background: #4ba8ea; }
 .map-pin-mental { background: #36b37e; }
 .map-pin-srs { background: #e8589b; }
+.map-pin-surgery { background: #e8589b; }
 .map-pin-voice { background: #11b3c6; }
 
 .map-legend {
@@ -2459,6 +2460,7 @@ ul {
 .map-dot-hrt { background: #4ba8ea; }
 .map-dot-mental { background: #36b37e; }
 .map-dot-srs { background: #e8589b; }
+.map-dot-surgery { background: #e8589b; }
 .map-dot-voice { background: #11b3c6; }
 
 .map-legend-count {
