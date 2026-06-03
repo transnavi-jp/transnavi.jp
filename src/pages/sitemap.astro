@@ -56,6 +56,7 @@ const sections = [
       { href: '/works/', label: '文芸作品（映画・漫画など）' },
       { href: '/bibliography/', label: '参考文献（書籍・論文）' },
       { href: '/resources/', label: '関連サイト・リンク' },
+      { href: '/library/', label: '資料集（取り込んだ解説）' },
     ],
   },
   {
@@ -94,5 +95,24 @@ const total = sections.reduce((n, s) => n + s.items.length, 0);
         </section>
       ))}
     </div>
+
+    <section class="link-map-section" aria-labelledby="link-map-heading">
+      <h2 id="link-map-heading">リンクマップ</h2>
+      <p class="resource-section-intro">
+        主なページが、おたがいにどうつながっているかの図です。丸をドラッグして動かしたり、タップ／クリックでそのページへ移動できます。色はテーマのグループを表します。
+      </p>
+      <div id="link-map" class="link-map" role="application" aria-label="サイト内リンクの図">
+        <noscript><p class="resource-section-intro">この図の表示には JavaScript が必要です。上の一覧から、すべてのページへたどれます。</p></noscript>
+      </div>
+      <ul class="link-map-legend" aria-hidden="true">
+        <li><span class="lm-dot" style="background:#4ba8ea"></span>はじめに・基本</li>
+        <li><span class="lm-dot" style="background:#e8589b"></span>移行と医療</li>
+        <li><span class="lm-dot" style="background:#36b37e"></span>相談・医療機関</li>
+        <li><span class="lm-dot" style="background:#f2994a"></span>暮らしと社会</li>
+        <li><span class="lm-dot" style="background:#8a6dc6"></span>調べる・資料</li>
+        <li><span class="lm-dot" style="background:#8d97ad"></span>このサイト</li>
+      </ul>
+    </section>
   </article>
+  <script is:inline src="/link-map.js" defer></script>
 </BaseLayout>
