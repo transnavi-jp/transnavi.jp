@@ -29,18 +29,19 @@ const mapData = { clinics, pois };
 
 <BaseLayout
   title="地図で探す（医療機関・団体・イベント） - とらんすナビ"
-  description="ホルモン療法などの医療機関、性別適合手術（SRS）の病院（日本・タイ・韓国）、当事者団体・拠点、大学のLGBTQサークル、公的な相談窓口、プライドイベントを地図の上でまとめて探せます。"
+  description="ホルモン療法などの医療機関、性別適合手術（SRS）の病院（日本・タイ・韓国）、声の手術（音声外科）の医療機関、当事者団体・拠点、大学のLGBTQサークル、公的な相談窓口、プライドイベントを地図の上でまとめて探せます。"
 >
   <article class="article-shell">
     <div class="eyebrow">地図で探す</div>
     <h1>地図で探す</h1>
     <p class="lead">
-      医療機関、性別適合手術（SRS）の病院、当事者団体・拠点、大学のLGBTQサークル、公的な相談窓口、イベントを、地図の上でまとめて見られます。気になるピンをタップすると、掲載ページや公式サイトへ進めます。地図は最初は日本を表示しますが、引いて（ズームアウトして）いくと、タイや韓国などのSRS病院も表示されます。
+      医療機関、性別適合手術（SRS）の病院、声の手術（音声外科）の医療機関、当事者団体・拠点、大学のLGBTQサークル、公的な相談窓口、イベントを、地図の上でまとめて見られます。気になるピンをタップすると、掲載ページや公式サイトへ進めます。地図は最初は日本を表示しますが、引いて（ズームアウトして）いくと、タイや韓国などのSRS病院も表示されます。
     </p>
 
     <div class="map-legend" aria-label="地図の凡例">
       <label><input type="checkbox" data-map-toggle="clinic" checked /><span class="map-dot map-dot-clinic" aria-hidden="true"></span>医療機関</label>
       <label><input type="checkbox" data-map-toggle="srs" checked /><span class="map-dot map-dot-srs" aria-hidden="true"></span>手術（SRS）</label>
+      <label><input type="checkbox" data-map-toggle="voice" checked /><span class="map-dot map-dot-voice" aria-hidden="true"></span>声の手術</label>
       <label><input type="checkbox" data-map-toggle="org" checked /><span class="map-dot map-dot-org" aria-hidden="true"></span>団体・拠点</label>
       <label><input type="checkbox" data-map-toggle="circle" checked /><span class="map-dot map-dot-circle" aria-hidden="true"></span>学生サークル</label>
       <label><input type="checkbox" data-map-toggle="desk" checked /><span class="map-dot map-dot-desk" aria-hidden="true"></span>相談窓口</label>

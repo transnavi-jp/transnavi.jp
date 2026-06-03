@@ -432,5 +432,19 @@
     "url": "https://www.damc.or.kr/",
     "lat": 35.120175,
     "lng": 129.018187
+  },
+  {
+    "name": "京都耳鼻咽喉音聲手術医院（京都駅前院）",
+    "type": "voice",
+    "url": "https://kyoto-ekimae3387.jp/transgender-outpatient/",
+    "lat": 34.98175,
+    "lng": 135.758423
+  },
+  {
+    "name": "メトロポリタンENTサージクリニック東京",
+    "type": "voice",
+    "url": "https://met-ent-tokyo.com/surgery/voice/",
+    "lat": 35.681808,
+    "lng": 139.775116
   }
 ]
