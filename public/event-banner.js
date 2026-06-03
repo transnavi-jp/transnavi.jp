@@ -35,10 +35,12 @@
     }
     if (!active) return;
 
-    // Respect a dismissal for this occurrence (id + year).
-    var key = 'eb-dismiss-' + active.id + '-' + year;
+    // Dismissal is session-scoped (sessionStorage): closing it hides the banner
+    // for the current browsing session, but it comes back on the next visit so
+    // an accidental close doesn't make it vanish for the whole month.
+    var key = 'eb-dismiss-' + active.id;
     try {
-      if (localStorage.getItem(key)) return;
+      if (sessionStorage.getItem(key)) return;
     } catch (e2) {}
 
     el.querySelector('.event-banner-emoji').textContent = active.emoji || '🏳️‍🌈';
@@ -51,7 +53,7 @@
     el.querySelector('.event-banner-close').addEventListener('click', function () {
       el.hidden = true;
       try {
-        localStorage.setItem(key, '1');
+        sessionStorage.setItem(key, '1');
       } catch (e3) {}
     });
   }

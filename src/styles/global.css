@@ -2608,8 +2608,25 @@ ul {
 @media (max-width: 600px) {
   .event-banner-inner {
     flex-wrap: wrap;
-    padding: 8px 16px;
-    gap: 6px 8px;
-    font-size: 0.85rem;
+    padding: 7px 14px;
+    gap: 3px 7px;
+    font-size: 0.8rem;
+    line-height: 1.45;
+  }
+  .event-banner-emoji {
+    font-size: 1rem;
+  }
+  .event-banner-text {
+    flex: 1 1 auto;
+  }
+  /* Close button keeps to the first line's right edge. */
+  .event-banner-close {
+    order: 1;
+    width: 24px;
+    height: 24px;
+  }
+  .event-banner-link {
+    order: 2;
+    flex-basis: 100%;
   }
 }
