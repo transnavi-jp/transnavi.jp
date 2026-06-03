@@ -60,14 +60,16 @@ test('医療機関一覧を検索できる', async ({ page }) => {
   await expect(page.locator('[data-filter-count]')).toHaveText('1');
 });
 
-test('医療機関カードに電話と公式サイトリンクを表示する', async ({ page }) => {
+test('医療機関カードに電話と確認状況を表示する', async ({ page }) => {
   await page.goto('/clinics/');
 
   await page.locator('summary', { hasText: '岩手県' }).click();
 
+  // 大日向医院's website is down, so its URL was dropped; the card still shows
+  // the phone and status, and falls back to 公式サイト未確認.
   const card = page.locator('[data-filter-item]', { hasText: '大日向医院' });
   await expect(card).toContainText('電話: 019-662-5530');
-  await expect(card.getByRole('link', { name: '公式サイト' })).toHaveAttribute('href', 'https://www.oohinataclinic.com/');
+  await expect(card).toContainText('公式サイト未確認');
   await expect(card).toContainText('ホルモン療法 / 要確認');
 });
 
