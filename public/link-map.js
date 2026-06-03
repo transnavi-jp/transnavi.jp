@@ -17,7 +17,8 @@
     term: '#c9a9ec',
   };
   var FOCAL = 760;
-  var AUTO = 0.0021;
+  var REDUCE = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var AUTO = REDUCE ? 0 : 0.0021; // no gentle auto-spin if reduced motion is requested
 
   function el(name, attrs) {
     var n = document.createElementNS(SVGNS, name);
@@ -288,6 +289,8 @@
     }
     function start() { if (running) return; running = true; raf = requestAnimationFrame(loop); }
     function stop() { running = false; if (raf) cancelAnimationFrame(raf); raf = null; }
+    // Reduced motion: settle the layout up front so it appears static, not spinning.
+    if (REDUCE) { for (var s = 0; s < 280; s++) { physics(); alpha *= 0.985; } }
     render();
     if ('IntersectionObserver' in window) {
       new IntersectionObserver(function (ents) { ents.forEach(function (en) { en.isIntersecting ? start() : stop(); }); }, { threshold: 0.01 }).observe(host);
