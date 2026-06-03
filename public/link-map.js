@@ -223,12 +223,16 @@
     }
 
     var pointers = new Map();
-    var moved = false, lx = 0, ly = 0, downNode = null, pinchDist = 0, pinchMid = null;
+    var moved = false, lx = 0, ly = 0, downNode = null, pinchDist = 0, pinchMid = null, middle = false;
     function twoPointers() { var a = []; pointers.forEach(function (p) { a.push(p); }); return a; }
+    // Middle button: drag to pan, click a node to open it in a new tab. Block the
+    // browser's middle-click autoscroll / aux navigation.
+    svg.addEventListener('mousedown', function (e) { if (e.button === 1) e.preventDefault(); });
+    svg.addEventListener('auxclick', function (e) { e.preventDefault(); });
     svg.addEventListener('pointerdown', function (e) {
       svg.setPointerCapture(e.pointerId);
       pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
-      if (pointers.size === 1) { moved = false; lx = e.clientX; ly = e.clientY; var v = vb(e.clientX, e.clientY); downNode = ptHit(v.x, v.y); }
+      if (pointers.size === 1) { moved = false; middle = e.button === 1; lx = e.clientX; ly = e.clientY; var v = vb(e.clientX, e.clientY); downNode = ptHit(v.x, v.y); }
       else if (pointers.size === 2) { var ps = twoPointers(); pinchDist = Math.hypot(ps[0].x - ps[1].x, ps[0].y - ps[1].y); pinchMid = { x: (ps[0].x + ps[1].x) / 2, y: (ps[0].y + ps[1].y) / 2 }; downNode = null; }
     });
     svg.addEventListener('pointermove', function (e) {
@@ -246,7 +250,7 @@
       var dx = e.clientX - lx, dy = e.clientY - ly;
       if (Math.abs(dx) + Math.abs(dy) > 3) moved = true;
       lx = e.clientX; ly = e.clientY;
-      if (e.shiftKey) { var k2 = vb(0, 0).k; panX += dx * k2; panY += dy * k2; }
+      if (middle || e.shiftKey) { var k2 = vb(0, 0).k; panX += dx * k2; panY += dy * k2; }
       else { rotY += dx * 0.008; rotX = Math.max(-1.2, Math.min(1.2, rotX + dy * 0.006)); }
       if (!running) render();
     });
@@ -255,7 +259,11 @@
       var wasSingle = pointers.size === 1;
       pointers.delete(e.pointerId);
       if (pointers.size === 1) { var rp = twoPointers()[0]; lx = rp.x; ly = rp.y; pinchMid = null; pinchDist = 0; }
-      if (pointers.size === 0 && wasSingle && !moved && downNode) location.href = downNode.id;
+      if (pointers.size === 0 && wasSingle && !moved && downNode) {
+        if (middle) window.open(downNode.id, '_blank', 'noopener');
+        else location.href = downNode.id;
+      }
+      if (pointers.size === 0) middle = false;
     }
     svg.addEventListener('pointerup', endPointer);
     svg.addEventListener('pointercancel', endPointer);
