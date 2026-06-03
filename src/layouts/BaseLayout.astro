@@ -102,6 +102,7 @@ const pageLd = pageDate
             t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
           }
           document.documentElement.setAttribute('data-theme', t);
+          if (localStorage.getItem('furigana') === 'on') document.documentElement.setAttribute('data-furigana', 'on');
         } catch (e) {}
       })();
     </script>
@@ -188,6 +189,9 @@ const pageLd = pageDate
           <button class="theme-toggle" type="button" aria-pressed="false" aria-label="ダークモード" title="表示テーマを切り替える">
             <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" /></svg>
             <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2" /><path d="M12 2.5v2.3M12 19.2v2.3M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.3M19.2 12h2.3M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6" /></svg>
+          </button>
+          <button class="furigana-toggle" type="button" aria-pressed="false" aria-label="ふりがなを表示" title="漢字にふりがなを表示する">
+            <span aria-hidden="true">ふ</span>
           </button>
         </div>
       </div>
@@ -281,19 +285,29 @@ const pageLd = pageDate
     <script is:inline src="/event-banner.js" defer></script>
     <script is:inline>
       (function () {
+        var el = document.documentElement;
         var b = document.querySelector('.theme-toggle');
-        if (b) b.setAttribute('aria-pressed', String(document.documentElement.getAttribute('data-theme') === 'dark'));
+        if (b) b.setAttribute('aria-pressed', String(el.getAttribute('data-theme') === 'dark'));
+        var f = document.querySelector('.furigana-toggle');
+        if (f) f.setAttribute('aria-pressed', String(el.getAttribute('data-furigana') === 'on'));
       })();
       document.addEventListener('click', function (e) {
+        var el = document.documentElement;
         var btn = e.target.closest && e.target.closest('.theme-toggle');
-        if (!btn) return;
-        var dark = document.documentElement.getAttribute('data-theme') === 'dark';
-        var next = dark ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', next);
-        btn.setAttribute('aria-pressed', String(next === 'dark'));
-        try {
-          localStorage.setItem('theme', next);
-        } catch (e2) {}
+        if (btn) {
+          var next = el.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+          el.setAttribute('data-theme', next);
+          btn.setAttribute('aria-pressed', String(next === 'dark'));
+          try { localStorage.setItem('theme', next); } catch (e2) {}
+          return;
+        }
+        var fbtn = e.target.closest && e.target.closest('.furigana-toggle');
+        if (fbtn) {
+          var on = el.getAttribute('data-furigana') === 'on';
+          if (on) el.removeAttribute('data-furigana'); else el.setAttribute('data-furigana', 'on');
+          fbtn.setAttribute('aria-pressed', String(!on));
+          try { localStorage.setItem('furigana', on ? 'off' : 'on'); } catch (e3) {}
+        }
       });
     </script>
   </body>

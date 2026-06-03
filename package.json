@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "postbuild": "node scripts/gen-llms.mjs && node scripts/gen-data-dump.mjs && node scripts/gen-search-index.mjs && node scripts/gen-link-map.mjs && node scripts/gen-og-images.mjs",
+    "postbuild": "node scripts/gen-llms.mjs && node scripts/gen-data-dump.mjs && node scripts/gen-search-index.mjs && node scripts/gen-link-map.mjs && node scripts/gen-og-images.mjs && node scripts/gen-furigana.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",
@@ -27,6 +27,9 @@
   "dependencies": {
     "@resvg/resvg-js": "^2.6.2",
     "astro": "^5",
+    "kuroshiro": "^1.2.0",
+    "kuroshiro-analyzer-kuromoji": "^1.1.0",
+    "node-html-parser": "^7.1.0",
     "satori": "^0.26.0",
     "wrangler": "^4.95.0"
   },

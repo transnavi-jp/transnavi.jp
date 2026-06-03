@@ -2797,8 +2797,9 @@ ul {
   color: #f3c969;
 }
 
-/* Theme toggle button (header). */
-.theme-toggle {
+/* Theme + furigana toggle buttons (header). */
+.theme-toggle,
+.furigana-toggle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2815,9 +2816,38 @@ ul {
   transition: color 120ms ease, background 120ms ease, transform 120ms ease;
 }
 
-.theme-toggle:hover {
+.theme-toggle:hover,
+.furigana-toggle:hover {
   color: var(--accent-strong);
   transform: translateY(-1px);
+}
+
+/* The furigana toggle shows a hiragana glyph; lights up when furigana is on. */
+.furigana-toggle span {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1;
+}
+:root[data-furigana='on'] .furigana-toggle {
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  border-color: var(--line-hover);
+}
+
+/* Ruby readings: present in the markup but hidden until the reader turns them
+   on with the ふ toggle (data-furigana="on"). rp parens are for legacy only. */
+main rt {
+  display: none;
+  font-size: 0.62em;
+  font-weight: 400;
+  color: var(--muted);
+  user-select: none;
+}
+main rp {
+  display: none;
+}
+:root[data-furigana='on'] main rt {
+  display: revert;
 }
 
 .theme-toggle svg {
@@ -2955,5 +2985,45 @@ ul {
     animation-iteration-count: 1 !important;
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* Three header buttons (search + theme + ふりがな) must still fit small phones
+   without overflowing; shrink them and the brand a little below 600px. */
+@media (max-width: 600px) {
+  .site-header {
+    padding: 14px;
+  }
+  /* wrap is a safety net: if the row still can't fit, tools drop below rather
+     than overflow the viewport. The shrink below normally avoids needing it. */
+  .header-top {
+    gap: 8px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+  .header-tools {
+    gap: 6px;
+    margin-left: auto;
+  }
+  .theme-toggle,
+  .furigana-toggle,
+  .header-search button {
+    width: 34px;
+    height: 34px;
+  }
+  .theme-toggle svg {
+    width: 16px;
+    height: 16px;
+  }
+  .furigana-toggle span {
+    font-size: 15px;
+  }
+  .brand-mark {
+    width: 50px;
+    height: 50px;
+    flex-basis: 50px;
+  }
+  .brand-name {
+    font-size: clamp(1.15rem, 5vw, 2rem);
   }
 }
