@@ -124,6 +124,7 @@ const breadcrumbLd = showBreadcrumb
     <title>{title}</title>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">本文へスキップ</a>
     <aside id="event-banner" class="event-banner" hidden aria-label="記念日・イベントのお知らせ">
       <div class="event-banner-stripe" aria-hidden="true"></div>
       <div class="event-banner-inner">
@@ -183,7 +184,7 @@ const breadcrumbLd = showBreadcrumb
         </nav>
       )}
     </header>
-    <main>
+    <main id="main-content">
       {showBreadcrumb && (
         <nav class="breadcrumbs" aria-label="パンくずリスト">
           {breadcrumbTrail.map((item) => (

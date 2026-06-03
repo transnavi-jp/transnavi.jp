@@ -29,6 +29,32 @@
   box-sizing: border-box;
 }
 
+/* Visible focus ring for keyboard users (suppressed on mouse click). */
+:focus-visible {
+  outline: 2.5px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Skip to content: hidden until focused (first tab stop). */
+.skip-link {
+  position: absolute;
+  left: 8px;
+  top: -52px;
+  z-index: 200;
+  padding: 9px 18px;
+  border-radius: 0 0 12px 12px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: var(--shadow-soft);
+  transition: top 130ms ease;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 html {
   background: var(--bg-flat);
 }
@@ -224,7 +250,7 @@ main {
   font-size: 0.95rem;
 }
 
-.header-search input:focus {
+.header-search input:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -732,7 +758,7 @@ ul {
   fill: var(--accent-strong);
 }
 
-.lm-term-node:focus {
+.lm-term-node:focus:not(:focus-visible) {
   outline: none;
 }
 
@@ -796,7 +822,7 @@ ul {
   stroke-width: 1.6;
 }
 
-.lm-node:focus {
+.lm-node:focus:not(:focus-visible) {
   outline: none;
 }
 
