@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Cite from '../components/Cite.astro';
 import References from '../components/References.astro';
 ---
 
@@ -17,7 +18,7 @@ import References from '../components/References.astro';
     <section aria-labelledby="not-illness">
       <h2 id="not-illness">あなたは「病気」ではありません</h2>
       <p>
-        トランスジェンダーであることや性別不合は、こころの病気ではありません。世界保健機関（WHO）の ICD-11 でも、精神疾患の分類から外れました。つらさがあるとすれば、それはあなた自身の問題ではなく、多くは周囲や社会との関係から生じるものです。
+        <Cite src="who-icd11">トランスジェンダーであることや性別不合は、こころの病気ではありません</Cite>。<Cite src="who-icd11">世界保健機関（WHO）の ICD-11 でも、精神疾患の分類から外れました</Cite>。つらさがあるとすれば、それはあなた自身の問題ではなく、<Cite src="ncbi-expecting-rejection-understanding">多くは周囲や社会との関係から生じるものです</Cite>。
       </p>
     </section>
 
@@ -27,7 +28,7 @@ import References from '../components/References.astro';
         気持ちがしんどいとき、相談できる窓口があります。まずは<a href="/support/">相談先</a>のページを見てみてください。
       </p>
       <ul class="assure-list assure-list-plain">
-        <li><a href="https://www.mhlw.go.jp/mamorouyokokoro/yorisoi/" target="_blank" rel="noreferrer">よりそいホットライン</a>（24時間・無料。性的マイノリティ専門の窓口もあります）</li>
+        <li><a href="https://www.mhlw.go.jp/mamorouyokokoro/yorisoi/" target="_blank" rel="noreferrer">よりそいホットライン</a>（24時間・無料。<Cite src="mhlw">性的マイノリティ専門の窓口もあります</Cite>）</li>
         <li>お住まいの自治体の LGBT 相談窓口</li>
         <li>学校のスクールカウンセラー、信頼できる先生</li>
       </ul>
@@ -37,7 +38,7 @@ import References from '../components/References.astro';
     <section aria-labelledby="protect">
       <h2 id="protect">身を守るために</h2>
       <ul class="assure-list">
-        <li>本人の許可なく性のあり方を広められること（アウティング）には注意。信頼できる相手から少しずつ。</li>
+        <li><Cite src="no-harassment-sogi">本人の許可なく性のあり方を広められること</Cite>（アウティング）には注意。信頼できる相手から少しずつ。</li>
         <li>ハラスメントや暴力を受けたら、あなたは悪くありません。記録を残し、安全な人や窓口に相談を。</li>
         <li>家族からの拒絶や経済的なことが心配なときも、相談できる団体があります（<a href="/resources/">関連サイト</a>）。</li>
         <li>安心して過ごせる人やコミュニティとつながることは、大きな支えになります。</li>

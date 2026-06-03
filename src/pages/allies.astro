@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Cite from '../components/Cite.astro';
 import References from '../components/References.astro';
 import Mascot from '../components/Mascot.astro';
 
@@ -36,7 +37,7 @@ const listenTips = [
     </ul>
 
     <h2>身近な人から打ち明けられたら</h2>
-    <p>大切な人から打ち明けられたとき、あなたの最初のひと言は、その人がほっとできるかどうかを大きく左右します。</p>
+    <p><Cite src={['familyproject-family-acceptance-of', 'whatweknow-what-does-the', 'thetrevorproject-accepting-adults-reduce']}>大切な人から打ち明けられたとき、あなたの最初のひと言は、その人がほっとできるかどうかを大きく左右します</Cite>。</p>
     <ul class="assure-list">
       {listenTips.map((tip) => <li>{tip}</li>)}
     </ul>

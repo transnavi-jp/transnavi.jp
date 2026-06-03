@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Cite from '../components/Cite.astro';
 import References from '../components/References.astro';
 
 const silhouette = [
@@ -82,9 +83,9 @@ const silhouette = [
       <div class="page-disclaimer">
         <strong>安全のために：</strong>
         <ul class="assure-list">
-          <li>包帯・ガムテープ・ラップ・きついコルセットなどで締めるのは<strong>絶対にやめてください</strong>。肋骨を痛めたり、呼吸ができなくなったりする危険があります。</li>
+          <li>包帯・ガムテープ・ラップ・きついコルセットなどで締めるのは<strong>絶対にやめてください</strong>。<Cite src={['pubmed-health-impact-of', 'pmc-understanding-the-health']}>肋骨を痛めたり、呼吸ができなくなったりする危険があります</Cite>。</li>
           <li><strong>専用のバインダー</strong>を、きつすぎない正しいサイズで使います（サイズ選びがいちばん大切です）。</li>
-          <li>連続して着けるのは<strong>1日8時間まで</strong>を目安に。毎日は避けて、休む日をつくります。</li>
+          <li>連続して着けるのは<strong>1日8時間まで</strong>を目安に。<Cite src={['pubmed-health-impact-of', 'pmc-understanding-the-health']}>毎日は避けて、休む日をつくります</Cite>。</li>
           <li><strong>寝るときは外します。</strong>激しい運動のときも外すか、スポーツブラに替えます。</li>
           <li>痛み・しびれ・息苦しさ・皮膚のトラブルが出たら、<strong>すぐに外して</strong>休んでください。</li>
         </ul>
@@ -97,9 +98,9 @@ const silhouette = [
         <strong>安全のために：</strong>
         <ul class="assure-list">
           <li><strong>痛いほど押し込まないでください。</strong>無理に力を加えるのは禁物です。</li>
-          <li>慣れるまでは短い時間から。連続は<strong>8時間まで</strong>を目安に、毎日は避けます。</li>
+          <li><Cite src={['pmc-understanding-the-health', 'pubmed-tucking-practices-and']}>慣れるまでは短い時間から</Cite>。連続は<strong>8時間まで</strong>を目安に、毎日は避けます。</li>
           <li><strong>寝るときは外します。</strong>家にいて安全なときは、ほどいて体を休めましょう。</li>
-          <li>尿路感染や皮膚のかぶれ、精巣の不快感などのリスクがあります。鋭い痛み・しびれが出たら、すぐにほどいてください。</li>
+          <li><Cite src={['pmc-understanding-the-health', 'pubmed-tucking-practices-and']}>尿路感染や皮膚のかぶれ、精巣の不快感などのリスクがあります</Cite>。鋭い痛み・しびれが出たら、すぐにほどいてください。</li>
           <li>ガフや下着は<strong>使うたびに洗います</strong>（衛生のためにとても大切です）。</li>
         </ul>
       </div>
@@ -111,7 +112,7 @@ const silhouette = [
     <section aria-labelledby="hygiene">
       <h2 id="hygiene">衛生とスキンケア</h2>
       <ul class="assure-list">
-        <li>ホルモン療法を始めると、肌質（脂っぽさ・乾燥）が変わることがあります。そのときどきに合わせて、スキンケアを見直してください。</li>
+        <li><Cite src={['wpath-standards-of-care', 'jspn-4']}>ホルモン療法を始めると、肌質（脂っぽさ・乾燥）が変わることがあります</Cite>。そのときどきに合わせて、スキンケアを見直してください。</li>
         <li>バインダーやガフは清潔に保ち、肌を休ませる時間をつくります。汗をかいたら、こまめに着替えましょう。</li>
         <li>ムダ毛の処理は、肌を傷つけない範囲で無理なく。レーザーや電気脱毛については<a href="/hair-removal/">脱毛の入門</a>をどうぞ。</li>
       </ul>

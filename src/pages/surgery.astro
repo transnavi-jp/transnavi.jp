@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Cite from '../components/Cite.astro';
 import References from '../components/References.astro';
 
 // FFS is a set of procedures, not one operation.
@@ -32,12 +33,12 @@ const ffsParts = [
 
       <h3>造腟術（性別適合手術・SRS）</h3>
       <p>
-        陰茎・陰嚢の組織を使って、腟と外陰部（陰核や小陰唇など）を形成する手術です。女性化の手術の中でも大きなもので、「性別適合手術（SRS）」と呼ばれることが多くあります。あわせて精巣の摘出（去勢術）を行います。
+        <Cite src="pubmed-principles-and-outcomes">陰茎・陰嚢の組織を使って、腟と外陰部（陰核や小陰唇など）を形成する手術です</Cite>。女性化の手術の中でも大きなもので、「性別適合手術（SRS）」と呼ばれることが多くあります。あわせて精巣の摘出（去勢術）を行います。
       </p>
       <ul class="assure-list assure-list-plain">
-        <li>方法：もとの組織を使う「陰茎反転法」が代表的です。組織が足りないときなどに、腸の一部を使う方法（S状結腸法）もあります。</li>
-        <li>術後のケア：作った腟の深さと形を保つため、はじめは毎日、その後も定期的に<strong>ダイレーション（拡張器による拡張）</strong>を続ける必要があります。長くつきあうケアです。</li>
-        <li>回復・リスク：入院と、数週間〜数か月の回復が必要です。出血・感染・排尿のトラブルなどの合併症もあり、術者の経験がとても大切です。</li>
+        <li>方法：<Cite src="pubmed-principles-and-outcomes">もとの組織を使う「陰茎反転法」が代表的です</Cite>。<Cite src="pubmed-principles-and-outcomes">組織が足りないときなどに、腸の一部を使う方法（S状結腸法）もあります</Cite>。</li>
+        <li>術後のケア：<Cite src="pubmed-principles-and-outcomes">作った腟の深さと形を保つため、はじめは毎日、その後も定期的に</Cite><strong>ダイレーション（拡張器による拡張）</strong>を続ける必要があります。長くつきあうケアです。</li>
+        <li>回復・リスク：入院と、数週間〜数か月の回復が必要です。<Cite src="pubmed-principles-and-outcomes">出血・感染・排尿のトラブルなどの合併症もあり、術者の経験がとても大切です</Cite>。</li>
         <li>日本と海外：日本でも受けられますが、要件・費用・待ち時間などから、タイなどの海外を選ぶ人もいます。</li>
       </ul>
 
@@ -112,7 +113,7 @@ const ffsParts = [
       <h2 id="where">手術を受ける場所（国内・海外）</h2>
       <h3>国内の施設と、保険のこと</h3>
       <p>
-        性別適合手術を<strong>保険適用</strong>で受けるには、原則として日本GI（性別不合）学会の<strong>認定施設</strong>で、ガイドラインに沿って受けることが条件です（さらに、それまでホルモン療法を受けていないことなどの条件があります。くわしくは<a href="/transition/">性別移行を知る</a>の「二つの道すじ」へ）。認定施設は本ページ更新時点で全国に約10か所で、大学病院などが中心です。地域にかたよりがあり、近くにないこともあります。
+        性別適合手術を<strong>保険適用</strong><Cite src="gi-soc">で受けるには、原則として日本GI（性別不合）学会の</Cite><strong>認定施設</strong>で、ガイドラインに沿って受けることが条件です（さらに、それまでホルモン療法を受けていないことなどの条件があります。くわしくは<a href="/transition/">性別移行を知る</a>の「二つの道すじ」へ）。<Cite src="gi-soc">認定施設は本ページ更新時点で全国に約10か所で、大学病院などが中心です</Cite>。地域にかたよりがあり、近くにないこともあります。
       </p>
       <p>
         最新の一覧は、<a href="http://www.gi-soc.jp/ninteishisetsuichiran.html" target="_blank" rel="noreferrer">日本GI（性別不合）学会「手術に係わる認定施設」</a>で確認できます。（当サイトは特定の施設をすすめたり、順位づけしたりはしません。）

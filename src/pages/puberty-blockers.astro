@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Cite from '../components/Cite.astro';
 import References from '../components/References.astro';
 ---
 
@@ -14,34 +15,34 @@ import References from '../components/References.astro';
       情報提供のみを目的としたページです。若年者への使用は、専門の医療機関で慎重に判断されるものです。実際のことは、必ず専門の医師に相談してください。
     </p>
     <p class="lead">
-      思春期ブロッカー（GnRHアナログ）は、二次性徴を<strong>一時的に止める</strong>ためのお薬です。エストロゲンやテストステロンといったホルモン療法とは、別のものです。
+      <Cite src={['tandfonline-standards-of-care', 'academic-endocrine-treatment-of', 'transfemscience-puberty-blockers-a', 'mayoclinic-pubertal-blockers-for']}>思春期ブロッカー（GnRHアナログ）は、二次性徴を</Cite><strong>一時的に止める</strong>ためのお薬です。<Cite src={['academic-endocrine-treatment-of', 'transfemscience-puberty-blockers-a']}>エストロゲンやテストステロンといったホルモン療法とは、別のものです</Cite>。
     </p>
 
     <section aria-labelledby="how">
       <h2 id="how">どういうもの？</h2>
       <p>
-        思春期に進む体の変化（声変わり、ひげ、乳房の発達など）を、一時的に止めます。「急いで決めなくてよい時間」をつくる、という考え方の選択肢です。
+        <Cite src={['transfemscience-puberty-blockers-a', 'mayoclinic-pubertal-blockers-for']}>思春期に進む体の変化（声変わり、ひげ、乳房の発達など）を、一時的に止めます</Cite>。「急いで決めなくてよい時間」をつくる、という考え方の選択肢です。
       </p>
     </section>
 
     <section aria-labelledby="who">
       <h2 id="who">誰のための選択肢？</h2>
       <p>
-        おもに、思春期を迎えるころの若年者が対象です。本人と家族、専門の医療者が、よく話し合って慎重に検討する判断になります。
+        <Cite src={['tandfonline-standards-of-care', 'academic-endocrine-treatment-of', 'jspn-guideline']}>おもに、思春期を迎えるころの若年者が対象です</Cite>。<Cite src={['tandfonline-standards-of-care', 'jspn-guideline']}>本人と家族、専門の医療者が、よく話し合って慎重に検討する判断になります</Cite>。
       </p>
     </section>
 
     <section aria-labelledby="reversible">
       <h2 id="reversible">元に戻る？</h2>
       <p>
-        ブロッカーを止めれば、本来の思春期が進むとされています。ただし、これは専門的で、研究や制度が今も動いているテーマです。海外でもガイドラインや法規制が国によって異なり、変化し続けています。断定的な情報には注意し、必ず専門の医療機関で確認してください。
+        <Cite src={['academic-endocrine-treatment-of', 'transfemscience-puberty-blockers-a', 'mayoclinic-pubertal-blockers-for']}>ブロッカーを止めれば、本来の思春期が進むとされています</Cite>。ただし、これは専門的で、研究や制度が今も動いているテーマです。<Cite src={['tandfonline-standards-of-care', 'mayoclinic-pubertal-blockers-for']}>海外でもガイドラインや法規制が国によって異なり、変化し続けています</Cite>。断定的な情報には注意し、必ず専門の医療機関で確認してください。
       </p>
     </section>
 
     <section aria-labelledby="japan">
       <h2 id="japan">日本では</h2>
       <p>
-        日本では、若年者へのブロッカーの使用は、限られた専門の医療機関で、慎重な条件のもとに行われます。提供状況や費用には制約があります。
+        <Cite src="jspn-guideline">日本では、若年者へのブロッカーの使用は、限られた専門の医療機関で、慎重な条件のもとに行われます</Cite>。提供状況や費用には制約があります。
       </p>
     </section>
 

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Cite from '../components/Cite.astro';
 import References from '../components/References.astro';
 
 const hrtOverview = '/library/mtf-wiki-ja/docs/medicine/hrt-overview/';
@@ -49,11 +50,11 @@ const testosterone = [
 
     <section aria-labelledby="estro">
       <h2 id="estro">エストロゲン（女性化）の方向</h2>
-      <p>エストロゲンと、必要に応じて抗アンドロゲン薬を使います。おもな変化の目安です。</p>
+      <p><Cite src={['transcare-overview-of-feminizing', 'transfemscience-an-introduction-to', 'academic-endocrine-treatment-of']}>エストロゲンと、必要に応じて抗アンドロゲン薬を使います</Cite>。おもな変化の目安です。</p>
       <ul class="assure-list assure-list-plain">
         {estrogen.map((e) => <li>{e}</li>)}
       </ul>
-      <p><strong>戻る変化・戻らない変化：</strong>多くは中止すると戻りますが、ふくらんだ乳房や、生殖機能への影響は、戻らないことがあります。</p>
+      <p><strong>戻る変化・戻らない変化：</strong><Cite src={['tandfonline-standards-of-care', 'transcare-overview-of-feminizing', 'academic-endocrine-treatment-of']}>多くは中止すると戻りますが、ふくらんだ乳房や、生殖機能への影響は、戻らないことがあります</Cite>。</p>
     </section>
 
     <section aria-labelledby="testo">
@@ -62,8 +63,8 @@ const testosterone = [
       <ul class="assure-list assure-list-plain">
         {testosterone.map((t) => <li>{t}</li>)}
       </ul>
-      <p><strong>戻る変化・戻らない変化：</strong>声・体毛・陰核の変化などは、基本的に戻りません。</p>
-      <p><strong>大切な注意：</strong>月経が止まっても、それは避妊ではありません。月経がなくても妊娠することがあります。</p>
+      <p><strong>戻る変化・戻らない変化：</strong><Cite src={['tandfonline-standards-of-care', 'academic-endocrine-treatment-of']}>声・体毛・陰核の変化などは、基本的に戻りません</Cite>。</p>
+      <p><strong>大切な注意：</strong>月経が止まっても、それは避妊ではありません。<Cite src={['pmc-one-third-of', 'academic-endocrine-treatment-of']}>月経がなくても妊娠することがあります</Cite>。</p>
     </section>
 
     <section aria-labelledby="nonbinary">
@@ -71,7 +72,7 @@ const testosterone = [
       <p>ホルモン療法は、「完全に女性化する」か「完全に男性化する」かの二択ではありません。自分の望む見た目や感覚に合わせて、進め方を選べることがあります。</p>
       <ul class="assure-list">
         <li>少ない量で使って、変化をゆるやかにする。</li>
-        <li>思春期ブロッカーだけを使って、二次性徴の進みを抑える。</li>
+        <li><Cite src={['tandfonline-standards-of-care', 'academic-endocrine-treatment-of']}>思春期ブロッカーだけを使って、二次性徴の進みを抑える</Cite>。</li>
         <li>あるところまでで止める、途中で目標を見直す。</li>
       </ul>
       <p>「男性的でも女性的でもない」「その中間の」見た目を望む人もいます。どんな変化を、どこまで望むかは人それぞれです。自分の望みを医師に伝えれば、ペースを一緒に決めていけます。ただし少ない量でも体質によってはリスクがあるので、必ず検査を受けながら進めてください。</p>
@@ -79,7 +80,7 @@ const testosterone = [
 
     <section aria-labelledby="before">
       <h2 id="before">始める前に考えること</h2>
-      <p>ホルモン療法は、妊孕性（子どもをもつ力）に影響することがあります。希望があるかもしれない人は、始める前に<a href="/fertility/">妊孕性と「始める前」の選択</a>も読んでみてください。</p>
+      <p><Cite src={['tandfonline-standards-of-care', 'jspn-4-2', 'academic-endocrine-treatment-of']}>ホルモン療法は、妊孕性（子どもをもつ力）に影響することがあります</Cite>。希望があるかもしれない人は、始める前に<a href="/fertility/">妊孕性と「始める前」の選択</a>も読んでみてください。</p>
     </section>
 
     <section aria-labelledby="more">

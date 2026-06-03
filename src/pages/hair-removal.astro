@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Cite from '../components/Cite.astro';
 import References from '../components/References.astro';
 
 const areas = [
@@ -66,11 +67,11 @@ const areas = [
       <div class="concept-grid">
         <div class="concept-card">
           <h3>レーザー脱毛</h3>
-          <p>黒い毛に反応する光をあてる方法。広い範囲を比較的早く処理できます。白髪や色の薄い毛には効きにくく、回数を重ねる必要があります。</p>
+          <p><Cite src={['my-laser-hair-removal', 'pubmed-a-review-of']}>黒い毛に反応する光をあてる方法。広い範囲を比較的早く処理できます。白髪や色の薄い毛には効きにくく、回数を重ねる必要があります</Cite>。</p>
         </div>
         <div class="concept-card">
           <h3>電気（ニードル）脱毛</h3>
-          <p>毛穴ひとつずつに処理する方法。白髪にも効き、恒久的とされますが、時間がかかり、痛みも強めです。仕上げや、レーザーで残った毛に向きます。</p>
+          <p><Cite src={['my-laser-hair-removal', 'pubmed-a-review-of']}>毛穴ひとつずつに処理する方法。白髪にも効き、恒久的とされますが、時間がかかり、痛みも強めです</Cite>。仕上げや、レーザーで残った毛に向きます。</p>
         </div>
       </div>
       <p>多くの人は、まずレーザーで全体を減らし、残った毛や白髪を電気脱毛で仕上げる、という組み合わせをとります。</p>
@@ -93,7 +94,7 @@ const areas = [
       <ul class="assure-list">
         <li>新しい方法・新しい製品は、まず<strong>パッチテスト</strong>から。</li>
         <li>脱毛やワックスの前後は、肌が敏感になります。<strong>日焼けを避け、保湿</strong>を。</li>
-        <li>赤み・痛み・化膿・強いかゆみが続くときは、無理をせず皮膚科へ。</li>
+        <li><Cite src="kokusen">赤み・痛み・化膿・強いかゆみが続くときは、無理をせず皮膚科へ</Cite>。</li>
         <li>デリケートゾーン（VIO）は、自己処理で深追いしないこと。心配なときは医療機関で。</li>
       </ul>
     </section>
@@ -101,10 +102,10 @@ const areas = [
     <section aria-labelledby="japan">
       <h2 id="japan">日本での「医療脱毛」と「サロン」の違い</h2>
       <p>
-        日本では、医療機関で行う<strong>医療脱毛</strong>と、エステなどの<strong>脱毛サロン（光脱毛）</strong>が区別されています。効果の強さ、安全管理、費用が異なります。長く付き合うことになるので、理解のある施設を選べると安心です。
+        日本では、医療機関で行う<strong>医療脱毛</strong>と、エステなどの<strong>脱毛サロン（光脱毛）</strong>が区別されています。<Cite src={['mhlw-3', 'igaku-datumou-gakkai']}>効果の強さ、安全管理、費用が異なります</Cite>。長く付き合うことになるので、理解のある施設を選べると安心です。
       </p>
       <p>
-        医療脱毛は、病院やクリニックの<strong>皮膚科・美容皮膚科</strong>などで受けられます。トランスジェンダーの脱毛は、ほとんどが<strong>自費診療（保険適用外）</strong>です。費用は部位・回数・施設によって幅があり、ヒゲ全体だと数万円〜十数万円ほどかかることもあります。総額の見積もりを、はじめに確認しておくと安心です。
+        医療脱毛は、病院やクリニックの<strong>皮膚科・美容皮膚科</strong>などで受けられます。<Cite src="igaku-datumou-gakkai">トランスジェンダーの脱毛は、ほとんどが</Cite><strong>自費診療（保険適用外）</strong>です。費用は部位・回数・施設によって幅があり、ヒゲ全体だと数万円〜十数万円ほどかかることもあります。総額の見積もりを、はじめに確認しておくと安心です。
       </p>
     </section>
 

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Cite from '../components/Cite.astro';
 import References from '../components/References.astro';
 ---
 
@@ -20,7 +21,7 @@ import References from '../components/References.astro';
     <section aria-labelledby="why">
       <h2 id="why">なぜ「始める前」なのか</h2>
       <p>
-        ホルモン療法を続けると、妊孕性が下がることがあります。中止すれば戻る人もいますが、<strong>戻る保証はありません</strong>。だから、可能性を残したい場合は、始める前のほうが選択肢が多くなります。
+        <Cite src={['pmc-standards-of-care', 'academic-endocrine-treatment-of', 'nhs-gender-dysphoria']}>ホルモン療法を続けると、妊孕性が下がることがあります</Cite>。<Cite src={['academic-endocrine-treatment-of', 'nhs-gender-dysphoria']}>中止すれば戻る人もいますが</Cite>、<strong>戻る保証はありません</strong>。だから、可能性を残したい場合は、始める前のほうが選択肢が多くなります。
       </p>
       <p>もちろん、子どもをもつことを望まない人もいます。どちらでも大丈夫です。これは「考えておくと後悔が減るかもしれない」という話です。</p>
     </section>
@@ -30,11 +31,11 @@ import References from '../components/References.astro';
       <div class="concept-grid">
         <div class="concept-card">
           <h3>エストロゲンを使う方向</h3>
-          <p>始める前に<strong>精子を凍結保存</strong>しておく選択があります。中止後に部分的に回復することもありますが、不確実です。</p>
+          <p>始める前に<strong>精子を凍結保存</strong>しておく選択があります。<Cite src={['pmc-standards-of-care', 'academic-endocrine-treatment-of', 'pmc-gender-affirming-hormone']}>中止後に部分的に回復することもありますが、不確実です</Cite>。</p>
         </div>
         <div class="concept-card">
           <h3>テストステロンを使う方向</h3>
-          <p><strong>卵子・受精卵・卵巣組織の凍結</strong>という選択があります。中止後に月経が戻ることは多いですが、保証はありません。</p>
+          <p><strong>卵子・受精卵・卵巣組織の凍結</strong>という選択があります。<Cite src={['pmc-standards-of-care', 'academic-endocrine-treatment-of', 'jsrm-2018']}>中止後に月経が戻ることは多いですが、保証はありません</Cite>。</p>
         </div>
       </div>
     </section>
@@ -42,14 +43,14 @@ import References from '../components/References.astro';
     <section aria-labelledby="contraception">
       <h2 id="contraception">大切な注意：避妊ではありません</h2>
       <p>
-        テストステロンで月経が止まっても、それは避妊ではありません。月経がなくても妊娠することがあります。必要なときは、別に避妊を考えてください。
+        <Cite src={['pmc-standards-of-care', 'pmc-one-third-of']}>テストステロンで月経が止まっても、それは避妊ではありません。月経がなくても妊娠することがあります</Cite>。必要なときは、別に避妊を考えてください。
       </p>
     </section>
 
     <section aria-labelledby="reality">
       <h2 id="reality">急かさないけれど、時間に敏感です</h2>
       <p>
-        無理に急ぐ必要はありませんが、これは「始める前」だからこそ広がる選択です。日本では、凍結保存を扱う施設や費用、受け入れの条件に差があり、多くが自費です。具体的な施設は<a href="/clinics/">医療機関</a>や専門のクリニックで確認してください。
+        無理に急ぐ必要はありませんが、これは「始める前」だからこそ広がる選択です。<Cite src={['j-sfp', 'jsrm-2018', 'jsco-cpg']}>日本では、凍結保存を扱う施設や費用、受け入れの条件に差があり、多くが自費です</Cite>。具体的な施設は<a href="/clinics/">医療機関</a>や専門のクリニックで確認してください。
       </p>
     </section>
 

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Cite from '../components/Cite.astro';
 import References from '../components/References.astro';
 
 const tools = [
@@ -37,7 +38,7 @@ const tools = [
 
     <section aria-labelledby="masc">
       <h2 id="masc">男性化の基本</h2>
-      <p>テストステロンを使うと声は自然に低くなることが多いですが、声が変わってからも、共鳴を下げ抑揚を落ち着かせる「話し方」の練習は役立ちます。ホルモンを使わない場合も、話し方の練習で印象は変えられます。</p>
+      <p><Cite src="tandfonline-standards-of-care">テストステロンを使うと声は自然に低くなることが多いですが</Cite>、声が変わってからも、共鳴を下げ抑揚を落ち着かせる「話し方」の練習は役立ちます。ホルモンを使わない場合も、話し方の練習で印象は変えられます。</p>
     </section>
 
     <section aria-labelledby="how">
@@ -61,7 +62,7 @@ const tools = [
     <section aria-labelledby="help">
       <h2 id="help">一人で難しいときは</h2>
       <p>
-        言語聴覚士（ST）による声の指導を受けられる医療機関もあります。声のトレーニングを解説した資料や、当事者による発信は<a href="/resources/">関連サイト</a>にもまとまっています。
+        <Cite src={['asha-gender-affirming-voice', 'rcslt-trans-and-gender', 'jstage']}>言語聴覚士（ST）による声の指導を受けられる医療機関もあります</Cite>。声のトレーニングを解説した資料や、当事者による発信は<a href="/resources/">関連サイト</a>にもまとまっています。
       </p>
     </section>
 
@@ -71,7 +72,7 @@ const tools = [
         声は多くの場合トレーニングで変えていけますが、<strong>手術</strong>という選択肢もあります。とくに女性化でピッチ（高さ）を上げたいとき、トレーニングだけでは届きにくい人が選ぶことがあります。代表的なものに、声帯を短くして高さを上げる<strong>ウェンドラー声帯短縮術（グロットプラスティ）</strong>や、甲状軟骨を操作する<strong>甲状軟骨形成術IV型（輪状甲状軟骨接近術）</strong>があります。
       </p>
       <p>
-        ただし、手術は<strong>後戻りがしにくく</strong>、結果には個人差があります。高さは上がっても、声の幅や響き、抑揚はトレーニングで整える必要が残ることもあります。多くの専門家は、<strong>まず音声トレーニングから始め</strong>、必要に応じて手術を検討することをすすめています。受けるときは、経験のある専門の医療機関でよく相談してください。
+        ただし、手術は<strong>後戻りがしにくく</strong>、結果には個人差があります。<Cite src={['tandfonline-standards-of-care', 'jstage']}>高さは上がっても、声の幅や響き、抑揚はトレーニングで整える必要が残ることもあります</Cite>。多くの専門家は、<strong>まず音声トレーニングから始め</strong>、必要に応じて手術を検討することをすすめています。受けるときは、経験のある専門の医療機関でよく相談してください。
       </p>
     </section>
 

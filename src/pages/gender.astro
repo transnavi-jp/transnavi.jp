@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Cite from '../components/Cite.astro';
 import References from '../components/References.astro';
 
 const axes = [
@@ -48,15 +49,15 @@ const sexAspects = [
       ))}
     </dl>
     <p>
-      これらは、それぞれ別のものです。からだの特徴によって、その人の性同一性や性的指向が決まるわけではありません。
+      <Cite src={['apa-understanding-transgender-people', 'apastyle-gender']}>これらは、それぞれ別のものです。からだの特徴によって、その人の性同一性や性的指向が決まるわけではありません</Cite>。
     </p>
 
     <h2>見た目や「らしさ」は、性別そのものではない</h2>
     <p>
-      <a href="/glossary/gender-expression/">性別表現</a>（服装・髪型・ふるまい・話し方など、外に表れるあらわし方）は、<a href="/glossary/gender-identity/">性同一性</a>（自分が感じている性別）とは別のものです。スカートをはく男性も、ボーイッシュな女性もいます。見た目が「らしくない」からといって、その人の性別が変わるわけではありません。
+      <a href="/glossary/gender-expression/">性別表現</a>（服装・髪型・ふるまい・話し方など、外に表れるあらわし方）は、<a href="/glossary/gender-identity/">性同一性</a>（自分が感じている性別）とは別のものです。<Cite src="apa-understanding-transgender-people">スカートをはく男性も、ボーイッシュな女性もいます。見た目が「らしくない」からといって、その人の性別が変わるわけではありません</Cite>。
     </p>
     <p>
-      「男の子はこう」「女の子はこう」という決めつけ（ジェンダーのステレオタイプ）は、社会や時代がつくってきたもので、ルールではありません。色や服、遊び、仕事、好きなものに、もともと「男女」はないのです。
+      <Cite src={['apa-understanding-transgender-people', 'apastyle-gender']}>「男の子はこう」「女の子はこう」という決めつけ（ジェンダーのステレオタイプ）は、社会や時代がつくってきたもので、ルールではありません</Cite>。色や服、遊び、仕事、好きなものに、もともと「男女」はないのです。
     </p>
     <p>
       だから、もし「自分は〇〇が好きだから」「〇〇っぽくないから、本当の女性／男性ではないのかも」と感じても、心配いりません。<strong>自分の性別を証明するために、ステレオタイプどおりにふるまう必要はありません。</strong>あなたの性同一性は、見た目や好みで決まるものではないからです。
@@ -67,16 +68,16 @@ const sexAspects = [
 
     <h2>「身体的性別」は、ひとつの単純な事実ではない</h2>
     <p>
-      「身体的性別」や「生物学的な性」は、しばしば動かしがたい事実のように語られます。けれども実際には、それ自体がいくつもの要素の集まりです。
+      <Cite src={['jspe', 'j-endo', 'ohchr-fact-sheet-intersex']}>「身体的性別」や「生物学的な性」は、しばしば動かしがたい事実のように語られます。けれども実際には、それ自体がいくつもの要素の集まりです</Cite>。
     </p>
     <ul class="assure-list assure-list-plain">
       {sexAspects.map((aspect) => <li>{aspect}</li>)}
     </ul>
     <p>
-      これらは多くの場合そろっていますが、いつも一致するとはかぎりません。生まれつき、典型的な男性・女性のどちらにも完全にはあてはまらないからだの人もいます（インターセックス／性分化疾患）。
+      <Cite src={['jspe', 'j-endo', 'ohchr-fact-sheet-intersex']}>これらは多くの場合そろっていますが、いつも一致するとはかぎりません。生まれつき、典型的な男性・女性のどちらにも完全にはあてはまらないからだの人もいます</Cite>（インターセックス／性分化疾患）。
     </p>
     <p>
-      つまり「からだの性」も、きれいに二つへ分けられるとはかぎりません。出生時に割り当てられた性別は、主に外性器の見た目などをもとに付けられたラベルであり、その人のすべてを表すものではありません。
+      つまり「からだの性」も、きれいに二つへ分けられるとはかぎりません。<Cite src={['pmc-standards-of-care', 'ohchr-fact-sheet-intersex']}>出生時に割り当てられた性別は、主に外性器の見た目などをもとに付けられたラベルであり、その人のすべてを表すものではありません</Cite>。
     </p>
 
     <aside class="entry-message" role="note" aria-label="読んでいるあなたへ">

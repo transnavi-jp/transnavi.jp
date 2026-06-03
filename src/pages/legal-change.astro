@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Cite from '../components/Cite.astro';
 import References from '../components/References.astro';
 ---
 
@@ -20,7 +21,7 @@ import References from '../components/References.astro';
     <section aria-labelledby="rename">
       <h2 id="rename">名前の変更（改名）</h2>
       <p>
-        改名は、<strong>家庭裁判所</strong>に「名の変更許可」を申し立てて行います。許可には「正当な事由」が必要で、トランスの場合は、性別違和や、その名前を通称として使ってきた実績などが考慮されることがあります。
+        改名は、<strong>家庭裁判所</strong>に「名の変更許可」を申し立てて行います。<Cite src="courts-2">許可には「正当な事由」が必要で、トランスの場合は、性別違和や、その名前を通称として使ってきた実績などが考慮されることがあります</Cite>。
       </p>
       <p>戸籍の性別を変えなくても、改名だけを行うことはできます。</p>
     </section>
@@ -28,12 +29,12 @@ import References from '../components/References.astro';
     <section aria-labelledby="gender">
       <h2 id="gender">戸籍の性別の変更</h2>
       <p>
-        戸籍上の性別の変更は、「性同一性障害者の性別の取扱いの特例に関する法律」（特例法）にもとづいて、家庭裁判所が判断します。年齢や婚姻の有無、未成年の子の有無などの要件に加えて、からだに関する要件が定められてきました。
+        <Cite src={['courts', 'laws-15-111']}>戸籍上の性別の変更は、「性同一性障害者の性別の取扱いの特例に関する法律」（特例法）にもとづいて、家庭裁判所が判断します</Cite>。<Cite src="laws-15-111">年齢や婚姻の有無、未成年の子の有無などの要件に加えて、からだに関する要件が定められてきました</Cite>。
       </p>
       <p>
-        この、からだに関する要件は、近年大きく動いています。<strong>2023年には、生殖機能をなくす手術を求める要件について、最高裁判所が憲法違反と判断しました。</strong>もう一つの「外観」に関する要件についても、各地の裁判所で判断が続いています。状況は変わりつつあるため、最新の情報を確認することが大切です。
+        この、からだに関する要件は、近年大きく動いています。<strong><Cite src="toben-5-10-25">2023年には、生殖機能をなくす手術を求める要件について、最高裁判所が憲法違反と判断しました</Cite>。</strong><Cite src="toben-5-10-25">もう一つの「外観」に関する要件についても、各地の裁判所で判断が続いています</Cite>。状況は変わりつつあるため、最新の情報を確認することが大切です。
       </p>
-      <p>手続きには、医師の診断書（意見書）が必要になります。</p>
+      <p><Cite src={['mhlw-3-2', 'jspn-guideline']}>手続きには、医師の診断書（意見書）が必要になります</Cite>。</p>
     </section>
 
     <section aria-labelledby="after">
