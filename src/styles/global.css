@@ -211,7 +211,6 @@ h3 {
 }
 
 h1 {
-  max-width: 760px;
   margin: 24px 0 16px;
   font-size: clamp(1.8rem, 3vw, 2.25rem);
   font-weight: 800;
@@ -219,11 +218,11 @@ h1 {
   letter-spacing: -0.03em;
 }
 
-/* The homepage hero headline shouldn't be capped at 760px (it wrapped at an
-   awkward spot on wide screens); let it use the full width and balance lines. */
+/* The homepage hero headline uses the full width (text-wrap: pretty fills each
+   line and only tidies the last one, rather than balancing into short lines). */
 .hero h1 {
   max-width: none;
-  text-wrap: balance;
+  text-wrap: pretty;
 }
 
 h2 {
@@ -297,7 +296,6 @@ ul {
 }
 
 .lead {
-  max-width: 760px;
   font-size: clamp(1.05rem, 2vw, 1.16rem);
   color: var(--ink);
 }
@@ -1492,16 +1490,8 @@ ul {
 /* Keep long-form reading text at a comfortable measure, but only constrain the
    text blocks themselves — never the card. Every card (.article-shell) stays the
    full width so it lines up with the header and footer. */
-.prose > p,
-.prose > ul,
-.prose > ol,
-.prose > h2,
-.prose > h3,
-.prose > h4,
-.prose > blockquote,
-.prose > dl {
-  max-width: 760px;
-}
+/* Prose fills the content card; the card itself (max-width 980px) is the
+   measure, so text doesn't strand empty space on the right. */
 
 .article-meta {
   display: flex;
