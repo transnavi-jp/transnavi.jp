@@ -32,10 +32,9 @@ const sections = categoryMeta
   .map((meta) => ({ ...meta, items: entries.filter((e) => e.category === meta.key) }))
   .filter((s) => s.items.length > 0);
 
-const meaningOf = (entry: GlossaryEntry) => {
-  if (entry.notes) return entry.notes.length > 46 ? entry.notes.slice(0, 46) + '…' : entry.notes;
-  return entry.translations.en ?? '';
-};
+// Short Japanese meaning (the English name is shown separately on every card).
+const meaningOf = (entry: GlossaryEntry) =>
+  entry.notes ? (entry.notes.length > 46 ? entry.notes.slice(0, 46) + '…' : entry.notes) : '';
 
 // Show a couple of aliases inline so people who know a term by another name can
 // spot it; keep it short so cards stay scannable.
@@ -97,7 +96,8 @@ const aliasPreview = (entry: GlossaryEntry) => {
               data-search={[entry.term, entry.abbr, entry.category, entry.translations.en, ...entry.aliases].filter(Boolean).join(' ')}
             >
               <span class="clinic-name">{entry.term}{entry.abbr ? `（${entry.abbr}）` : ''}</span>
-              <span class="glossary-meaning">{meaningOf(entry)}</span>
+              {entry.translations.en && <span class="glossary-en">{entry.translations.en}</span>}
+              {entry.notes && <span class="glossary-meaning">{meaningOf(entry)}</span>}
               {entry.aliases.length > 0 && (
                 <span class="glossary-aliases"><span class="glossary-aliases-label">別名</span>{aliasPreview(entry)}</span>
               )}
