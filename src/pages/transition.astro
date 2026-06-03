@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Cite from '../components/Cite.astro';
 import References from '../components/References.astro';
 
 const sides = [
@@ -81,7 +82,7 @@ const sides = [
       <div class="concept-grid">
         <div class="concept-card">
           <h3>ガイドラインに沿う道</h3>
-          <p>日本GI（性別不合）学会のガイドラインに沿って、複数の精神科医による診断などの段階を踏む方法です。時間と手続きはかかりますが、一定の条件で<strong><a href="/glossary/gas/">性別適合手術</a>が保険適用</strong>になります。大学病院などが中心です。</p>
+          <p><Cite src="jspn-4">日本GI（性別不合）学会のガイドラインに沿って、複数の精神科医による診断などの段階を踏む方法です</Cite>。時間と手続きはかかりますが、一定の条件で<strong><a href="/glossary/gas/">性別適合手術</a>が保険適用</strong>になります。大学病院などが中心です。</p>
         </div>
         <div class="concept-card">
           <h3>自由診療（インフォームド・コンセント型）の道</h3>
@@ -103,7 +104,7 @@ const sides = [
       </p>
       <ul class="assure-list">
         <li><strong>社会的な移行から始めることが多い。</strong>名前や呼ばれ方、服装などは、医療なしでも試せます。合わなければ戻すこともできます。</li>
-        <li><strong>思春期ブロッカーという「いったん止める」選択肢。</strong>二次性徴を一時的に抑えて、考える時間をつくるための薬です。すぐにホルモン療法や手術へ進むという意味ではありません。<a href="/puberty-blockers/">思春期ブロッカー</a>でくわしく説明しています。</li>
+        <li><strong>思春期ブロッカーという「いったん止める」選択肢。</strong><Cite src={['tandfonline-standards-of-care', 'academic-endocrine-treatment-of']}>二次性徴を一時的に抑えて、考える時間をつくるための薬です</Cite>。すぐにホルモン療法や手術へ進むという意味ではありません。<a href="/puberty-blockers/">思春期ブロッカー</a>でくわしく説明しています。</li>
         <li><strong>ホルモン療法や手術には、年齢や同意などの条件がある。</strong>日本では未成年の医療には保護者の関わりが必要なことが多く、扱える医療機関も限られます。児童・思春期の性別の悩みに対応している窓口に相談するのが近道です。</li>
         <li><strong>信頼できる大人がいると心強い。</strong>家族でも、学校の先生やスクールカウンセラー、相談機関でもかまいません。ひとりで抱え込まなくて大丈夫です。</li>
       </ul>
@@ -115,10 +116,10 @@ const sides = [
     <section aria-labelledby="legal-note">
       <h2 id="legal-note">日本の制度について</h2>
       <p>
-        日本では、戸籍上の性別を変えるための要件が「性同一性障害者の性別の取扱いの特例に関する法律」で定められています。2023年には、要件のうち生殖機能をなくす手術を求める規定について、最高裁判所が憲法違反と判断しました。制度は今も動いている途中です。
+        <Cite src="laws-15-111">日本では、戸籍上の性別を変えるための要件が「性同一性障害者の性別の取扱いの特例に関する法律」で定められています</Cite>。2023年には、要件のうち生殖機能をなくす手術を求める規定について、最高裁判所が憲法違反と判断しました。制度は今も動いている途中です。
       </p>
       <p>
-        手続きの実際や費用、最新の状況は変わることがあります。<a href="/clinics/">医療機関</a>や公的な窓口、<a href="/resources/">関連サイト</a>で確認してください。
+        改名や戸籍の性別変更などの<Cite src={['courts', 'courts-2']}>手続きの実際</Cite>や費用、最新の状況は変わることがあります。<a href="/clinics/">医療機関</a>や公的な窓口、<a href="/resources/">関連サイト</a>で確認してください。
       </p>
     </section>
 
