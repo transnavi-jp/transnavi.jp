@@ -21,7 +21,7 @@
     "import:terminology": "node scripts/import-terminology.mjs",
     "import:mtf": "npm run import:mtf-clinics && npm run import:mtf-content && npm run import:terminology",
     "coverage": "node scripts/citation-coverage.mjs",
-    "prebuild": "node scripts/gen-citations.mjs"
+    "prebuild": "node scripts/gen-page-dates.mjs && node scripts/gen-citations.mjs"
   },
   "dependencies": {
     "astro": "^5",

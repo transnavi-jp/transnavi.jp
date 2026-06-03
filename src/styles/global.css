@@ -1870,6 +1870,19 @@ ul {
   color: var(--muted);
 }
 
+/* Per-page freshness line (date derived from git history). */
+.page-updated {
+  max-width: 980px;
+  margin: 4px auto 0;
+  padding: 0 28px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.page-updated time {
+  font-weight: 700;
+}
+
 .source-note code {
   font-size: 0.95em;
 }

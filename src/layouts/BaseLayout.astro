@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import pageDates from '../data/page-dates.json';
 
 interface Props {
   title?: string;
@@ -39,6 +40,7 @@ const structuredData = {
 
 // Breadcrumbs (auto-derived from the path; no per-page props needed).
 const pathname = Astro.url.pathname;
+const pageDate = (pageDates as Record<string, { created: string; updated: string }>)[pathname];
 const pageName = title.split(' - ')[0].trim();
 const learnPages = new Set([
   '/basics/', '/gender/', '/orientation/', '/dysphoria/', '/transition/', '/hrt-effects/', '/hrt-medications/', '/fertility/',
@@ -194,6 +196,11 @@ const breadcrumbLd = showBreadcrumb
         </nav>
       )}
       <slot />
+      {pageDate && (
+        <p class="page-updated">
+          このページは <time datetime={pageDate.updated}>{pageDate.updated}</time> に更新しました（{pageDate.created} 公開）。情報は変わることがあります。とくに医療・制度・費用は、最新の内容を各機関の公式情報でご確認ください。
+        </p>
+      )}
       {showBreadcrumb && <a class="back-top" href="#top">↑ ページの先頭へ</a>}
     </main>
     <footer class="site-footer">
