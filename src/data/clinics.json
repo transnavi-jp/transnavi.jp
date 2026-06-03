@@ -3477,5 +3477,180 @@
     "lat": 43.058239,
     "lng": 141.3535,
     "geoSource": "address"
+  },
+  {
+    "id": "srs-chiba-gyotoku",
+    "name": "行徳総合病院",
+    "displayName": "市川市・行徳総合病院",
+    "prefecture": "千葉県",
+    "city": "市川市",
+    "address": "千葉県市川市加藤新田二6-1",
+    "urls": [
+      "https://gyo-toku.jp/med-dept/gi.html"
+    ],
+    "services": [
+      "性別適合手術（SRS）"
+    ],
+    "source": {
+      "project": "とらんすナビ",
+      "path": "",
+      "license": ""
+    },
+    "verificationStatus": "要確認",
+    "importedAt": "2026-06-03",
+    "notes": "性別適合手術（SRS）に対応する施設（日本GI（性別不合）学会の認定施設など）。\n\n- 診療科・受診条件・実施している術式は施設によって異なります。\n- 多くは、診断やホルモン療法を経て、紹介や所定の手続きを必要とします。\n- 受診前に必ず公式サイトで最新の情報を確認してください。",
+    "lat": 35.694016,
+    "lng": 139.918213,
+    "geoSource": "address"
+  },
+  {
+    "id": "srs-tokyo-kyorin",
+    "name": "杏林大学医学部付属病院",
+    "displayName": "三鷹市・杏林大学医学部付属病院",
+    "prefecture": "東京都",
+    "city": "三鷹市",
+    "address": "東京都三鷹市新川6-20-2",
+    "urls": [
+      "https://www.kyorin-prs.com/gid.html"
+    ],
+    "services": [
+      "性別適合手術（SRS）"
+    ],
+    "source": {
+      "project": "とらんすナビ",
+      "path": "",
+      "license": ""
+    },
+    "verificationStatus": "要確認",
+    "importedAt": "2026-06-03",
+    "notes": "性別適合手術（SRS）に対応する施設（日本GI（性別不合）学会の認定施設など）。\n\n- 診療科・受診条件・実施している術式は施設によって異なります。\n- 多くは、診断やホルモン療法を経て、紹介や所定の手続きを必要とします。\n- 受診前に必ず公式サイトで最新の情報を確認してください。",
+    "lat": 35.677597,
+    "lng": 139.565598,
+    "geoSource": "address"
+  },
+  {
+    "id": "srs-yamanashi-u",
+    "name": "山梨大学医学部附属病院",
+    "displayName": "中央市・山梨大学医学部附属病院",
+    "prefecture": "山梨県",
+    "city": "中央市",
+    "address": "山梨県中央市下河東1110",
+    "urls": [
+      "https://www.med.yamanashi.ac.jp/medicine/plasticsurg/gid.html"
+    ],
+    "services": [
+      "性別適合手術（SRS）"
+    ],
+    "source": {
+      "project": "とらんすナビ",
+      "path": "",
+      "license": ""
+    },
+    "verificationStatus": "要確認",
+    "importedAt": "2026-06-03",
+    "notes": "性別適合手術（SRS）に対応する施設（日本GI（性別不合）学会の認定施設など）。\n\n- 診療科・受診条件・実施している術式は施設によって異なります。\n- 多くは、診断やホルモン療法を経て、紹介や所定の手続きを必要とします。\n- 受診前に必ず公式サイトで最新の情報を確認してください。",
+    "lat": 35.6092,
+    "lng": 138.538177,
+    "geoSource": "address"
+  },
+  {
+    "id": "srs-toyama-u",
+    "name": "富山大学附属病院",
+    "displayName": "富山市・富山大学附属病院",
+    "prefecture": "富山県",
+    "city": "富山市",
+    "address": "富山県富山市杉谷2630",
+    "urls": [
+      "https://www.hosp.u-toyama.ac.jp/medical/gender/"
+    ],
+    "services": [
+      "性別適合手術（SRS）"
+    ],
+    "source": {
+      "project": "とらんすナビ",
+      "path": "",
+      "license": ""
+    },
+    "verificationStatus": "要確認",
+    "importedAt": "2026-06-03",
+    "notes": "性別適合手術（SRS）に対応する施設（日本GI（性別不合）学会の認定施設など）。\n\n- 診療科・受診条件・実施している術式は施設によって異なります。\n- 多くは、診断やホルモン療法を経て、紹介や所定の手続きを必要とします。\n- 受診前に必ず公式サイトで最新の情報を確認してください。",
+    "lat": 36.679882,
+    "lng": 137.140549,
+    "geoSource": "address"
+  },
+  {
+    "id": "srs-aichi-nagoya-u",
+    "name": "名古屋大学医学部附属病院",
+    "displayName": "名古屋市・名古屋大学医学部附属病院",
+    "prefecture": "愛知県",
+    "city": "名古屋市",
+    "address": "愛知県名古屋市昭和区鶴舞町65",
+    "urls": [
+      "https://urology-nagoya-u.jp/treatment/disease/gid.php"
+    ],
+    "services": [
+      "性別適合手術（SRS）"
+    ],
+    "source": {
+      "project": "とらんすナビ",
+      "path": "",
+      "license": ""
+    },
+    "verificationStatus": "要確認",
+    "importedAt": "2026-06-03",
+    "notes": "性別適合手術（SRS）に対応する施設（日本GI（性別不合）学会の認定施設など）。\n\n- 診療科・受診条件・実施している術式は施設によって異なります。\n- 多くは、診断やホルモン療法を経て、紹介や所定の手続きを必要とします。\n- 受診前に必ず公式サイトで最新の情報を確認してください。",
+    "lat": 35.157745,
+    "lng": 136.921539,
+    "geoSource": "address"
+  },
+  {
+    "id": "srs-okayama-u",
+    "name": "岡山大学病院",
+    "displayName": "岡山市・岡山大学病院",
+    "prefecture": "岡山県",
+    "city": "岡山市",
+    "address": "岡山県岡山市北区鹿田町2-5-1",
+    "urls": [
+      "https://okayama-gender.jp/srs.html"
+    ],
+    "services": [
+      "性別適合手術（SRS）"
+    ],
+    "source": {
+      "project": "とらんすナビ",
+      "path": "",
+      "license": ""
+    },
+    "verificationStatus": "要確認",
+    "importedAt": "2026-06-03",
+    "notes": "性別適合手術（SRS）に対応する施設（日本GI（性別不合）学会の認定施設など）。\n\n- 診療科・受診条件・実施している術式は施設によって異なります。\n- 多くは、診断やホルモン療法を経て、紹介や所定の手続きを必要とします。\n- 受診前に必ず公式サイトで最新の情報を確認してください。",
+    "lat": 34.65099,
+    "lng": 133.920837,
+    "geoSource": "address"
+  },
+  {
+    "id": "srs-okinawa-chubu",
+    "name": "沖縄県立中部病院",
+    "displayName": "うるま市・沖縄県立中部病院",
+    "prefecture": "沖縄県",
+    "city": "うるま市",
+    "address": "沖縄県うるま市宮里281",
+    "urls": [
+      "https://chubuweb.hosp.pref.okinawa.jp/departments/jender/"
+    ],
+    "services": [
+      "性別適合手術（SRS）"
+    ],
+    "source": {
+      "project": "とらんすナビ",
+      "path": "",
+      "license": ""
+    },
+    "verificationStatus": "要確認",
+    "importedAt": "2026-06-03",
+    "notes": "性別適合手術（SRS）に対応する施設（日本GI（性別不合）学会の認定施設など）。\n\n- 診療科・受診条件・実施している術式は施設によって異なります。\n- 多くは、診断やホルモン療法を経て、紹介や所定の手続きを必要とします。\n- 受診前に必ず公式サイトで最新の情報を確認してください。",
+    "lat": 26.35405,
+    "lng": 127.835503,
+    "geoSource": "address"
   }
 ]

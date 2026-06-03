@@ -3,17 +3,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import clinicsData from '../data/clinics.json';
 import poisData from '../data/map-pois.json';
 import type { Clinic } from '../types/clinic';
+import { categoriesOf, primaryGenre } from '../utils/clinic-genre';
 
 const clinics = (clinicsData as Clinic[])
   .filter((c) => typeof c.lat === 'number' && typeof c.lng === 'number')
-  .map((c) => ({
-    id: c.id,
-    name: c.name,
-    area: [c.prefecture, c.city].filter(Boolean).join(' '),
-    approx: c.geoSource !== 'address',
-    lat: c.lat,
-    lng: c.lng,
-  }));
+  .map((c) => {
+    // SRS-capable facilities get the distinct 手術（SRS）pin (matching the
+    // overseas SRS pins); HRT/mental clinics stay one generic 医療機関 colour
+    // so the global map's legend doesn't need to split them.
+    const genre = primaryGenre(categoriesOf(c)) === 'srs' ? 'srs' : 'clinic';
+    return {
+      id: c.id,
+      name: c.name,
+      area: [c.prefecture, c.city].filter(Boolean).join(' '),
+      approx: c.geoSource !== 'address',
+      genre,
+      lat: c.lat,
+      lng: c.lng,
+    };
+  });
 
 const pois = poisData as { name: string; type: string; url: string; lat: number; lng: number }[];
 const mapData = { clinics, pois };

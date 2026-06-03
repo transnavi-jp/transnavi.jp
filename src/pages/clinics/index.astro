@@ -4,13 +4,9 @@ import Mascot from '../../components/Mascot.astro';
 import clinicsData from '../../data/clinics.json';
 import type { Clinic } from '../../types/clinic';
 import { splitClinicUrls } from '../../utils/clinic-links';
+import { categoriesOf, primaryGenre } from '../../utils/clinic-genre';
 
 const clinics = clinicsData as Clinic[];
-const surgeryPattern = /(SRS|睾丸摘出|性別適合)/i;
-const mentalPattern = /(精神科|心療内科|心理|メンタル|こころ)/;
-const explicitSrsClinicIds = new Set([
-  'hrt-hokkaido-chuuou-sapmed',
-]);
 const prefectureOrder = [
   '北海道',
   '青森県',
@@ -109,38 +105,15 @@ const regionDefinitions = [
   { id: '九州・沖縄', label: '九州・沖縄' },
 ] as const;
 
-const clinicsWithCategories = clinics.map((clinic) => {
-  const categories = new Set<string>();
-  const links = splitClinicUrls(clinic.urls);
-
-  if (clinic.id.startsWith('hrt') || clinic.services.some((service) => service.includes('ホルモン'))) {
-    categories.add('hrt');
-  }
-
-  // Mental/diagnosis is decided only by the authoritative service field, the
-  // clinic id, or the clinic's own name. We deliberately do NOT scan `notes`:
-  // most HRT clinics mention 診断・精神科 there only as a prerequisite ("他院で
-  // 診断を受けた方の…"), which wrongly tagged HRT (even urology) clinics as mental.
-  if (
-    clinic.id.startsWith('psyco') ||
-    clinic.services.some((service) => service.includes('精神') || service.includes('診断')) ||
-    mentalPattern.test(clinic.name)
-  ) {
-    categories.add('mental');
-  }
-
-  if (explicitSrsClinicIds.has(clinic.id) || surgeryPattern.test(clinic.notes)) {
-    categories.add('srs');
-  }
-
-  return {
-    ...clinic,
-    categories: [...categories],
-    type: typeOf(clinic.name),
-    region: regionOf(clinic.prefecture),
-    links,
-  };
-});
+// Categorisation (hrt / mental / srs) lives in a shared util so the embedded
+// map here and the global /map/ colour pins by the same rules.
+const clinicsWithCategories = clinics.map((clinic) => ({
+  ...clinic,
+  categories: categoriesOf(clinic),
+  type: typeOf(clinic.name),
+  region: regionOf(clinic.prefecture),
+  links: splitClinicUrls(clinic.urls),
+}));
 
 const prefectures = [...new Set(clinics.map((clinic) => clinic.prefecture))].sort((a, b) => {
   const indexA = prefectureOrder.indexOf(a);
@@ -160,8 +133,6 @@ const groupedClinics = prefectures.map((prefecture) => ({
 // Data for an embedded clinics-only map (reuses /map.js). Only clinics with
 // coordinates; no orgs/events here. Each pin is coloured by its 診療区分:
 // surgery-capable first, then HRT, then mental.
-const genreOf = (categories: string[]): string =>
-  categories.includes('srs') ? 'srs' : categories.includes('hrt') ? 'hrt' : 'mental';
 const mapClinics = clinicsWithCategories
   .filter((clinic) => typeof clinic.lat === 'number' && typeof clinic.lng === 'number')
   .map((clinic) => ({
@@ -169,7 +140,7 @@ const mapClinics = clinicsWithCategories
     name: clinic.name,
     area: [clinic.prefecture, clinic.city].filter(Boolean).join(' '),
     approx: clinic.geoSource !== 'address',
-    genre: genreOf(clinic.categories),
+    genre: primaryGenre(clinic.categories),
     lat: clinic.lat,
     lng: clinic.lng,
   }));

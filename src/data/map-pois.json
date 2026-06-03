@@ -371,69 +371,6 @@
     "lng": 130.402374
   },
   {
-    "name": "札幌医科大学附属病院",
-    "type": "srs",
-    "url": "https://web.sapmed.ac.jp/uro/guide/gid.html",
-    "lat": 43.055676,
-    "lng": 141.333206
-  },
-  {
-    "name": "行徳総合病院（千葉）",
-    "type": "srs",
-    "url": "https://gyo-toku.jp/med-dept/gi.html",
-    "lat": 35.694016,
-    "lng": 139.918213
-  },
-  {
-    "name": "杏林大学医学部付属病院（三鷹）",
-    "type": "srs",
-    "url": "https://www.kyorin-prs.com/gid.html",
-    "lat": 35.677597,
-    "lng": 139.565598
-  },
-  {
-    "name": "山梨大学医学部附属病院",
-    "type": "srs",
-    "url": "https://www.med.yamanashi.ac.jp/medicine/plasticsurg/gid.html",
-    "lat": 35.6092,
-    "lng": 138.538177
-  },
-  {
-    "name": "富山大学附属病院",
-    "type": "srs",
-    "url": "https://www.hosp.u-toyama.ac.jp/medical/gender/",
-    "lat": 36.679882,
-    "lng": 137.140549
-  },
-  {
-    "name": "名古屋大学医学部附属病院",
-    "type": "srs",
-    "url": "https://urology-nagoya-u.jp/treatment/disease/gid.php",
-    "lat": 35.157745,
-    "lng": 136.921539
-  },
-  {
-    "name": "岡山大学病院",
-    "type": "srs",
-    "url": "https://okayama-gender.jp/srs.html",
-    "lat": 34.65099,
-    "lng": 133.920837
-  },
-  {
-    "name": "沖縄県立中部病院",
-    "type": "srs",
-    "url": "https://chubuweb.hosp.pref.okinawa.jp/departments/jender/",
-    "lat": 26.35405,
-    "lng": 127.835503
-  },
-  {
-    "name": "ナグモクリニック（GID外来・東京）",
-    "type": "srs",
-    "url": "https://www.gidcenter.com/",
-    "lat": 35.689297,
-    "lng": 139.744202
-  },
-  {
     "name": "PAI／プリーチャ美容研究所（バンコク）",
     "type": "srs",
     "url": "https://pai.co.th/",
