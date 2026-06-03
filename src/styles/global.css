@@ -519,6 +519,7 @@ ul {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.5em;
   padding: 12px 20px;
   border: 1px solid var(--line);
   border-radius: 14px;
@@ -545,6 +546,13 @@ ul {
 
 .hero-button-primary:hover {
   color: #fff;
+}
+
+/* Inline brand/logo icon inside a button (e.g. the Discord mark). */
+.btn-icon {
+  width: 1.2em;
+  height: 1.2em;
+  flex-shrink: 0;
 }
 
 .assure-list {
