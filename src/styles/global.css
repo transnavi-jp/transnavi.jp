@@ -362,6 +362,9 @@ main {
     border: none;
     background: transparent;
     box-shadow: none;
+    /* Collapsed to a fixed icon button: never let the form shrink below the
+       button, or the button overflows and overlaps the theme toggle. */
+    flex-shrink: 0;
   }
   .header-search input {
     display: none;
@@ -2668,6 +2671,16 @@ ul {
     width: 60px;
     height: 60px;
     flex-basis: 60px;
+  }
+
+  /* Shrink the (nowrap) title on small screens so the brand + search + theme
+     toggle fit on one row without overflowing or overlapping. */
+  .brand-name {
+    font-size: clamp(1.45rem, 6vw, 2rem);
+  }
+
+  .header-top {
+    gap: 10px;
   }
 
   .topic-list {
