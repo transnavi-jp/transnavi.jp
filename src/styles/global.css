@@ -717,6 +717,48 @@ ul {
   pointer-events: none;
 }
 
+/* Optional glossary-term layer: small diamonds. */
+.lm-term-node {
+  cursor: pointer;
+}
+
+.lm-term-node polygon {
+  stroke: rgba(255, 255, 255, 0.7);
+  stroke-width: 0.5;
+}
+
+.lm-term-node:hover polygon,
+.lm-term-node:focus polygon {
+  fill: var(--accent-strong);
+}
+
+.lm-term-node:focus {
+  outline: none;
+}
+
+.lm-term-edge {
+  stroke: var(--accent-term);
+  stroke-width: 0.8;
+  opacity: 0.25;
+}
+
+.link-map-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin: 4px 0 2px;
+  font-size: 0.9rem;
+  color: var(--muted);
+  cursor: pointer;
+  user-select: none;
+}
+
+.link-map-toggle input {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent);
+}
+
 .lm-node:hover circle,
 .lm-node:focus circle {
   stroke: var(--ink-heading);

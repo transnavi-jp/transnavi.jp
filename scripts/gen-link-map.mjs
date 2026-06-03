@@ -78,5 +78,38 @@ const links = [...pairs].map((k) => {
   return { source, target };
 });
 
-fs.writeFileSync('dist/link-map.json', JSON.stringify({ nodes, links }));
-console.log(`link-map.json: ${nodes.length} nodes, ${links.length} links`);
+// Optional glossary layer: a small node per term, linked to the article(s) that
+// actually reference it in content (the /glossary/ index listing is ignored, or
+// it would link every term). Unreferenced terms hang off the /glossary/ hub.
+const glossary = JSON.parse(fs.readFileSync('src/data/glossary.json', 'utf8'));
+const termLabel = {};
+for (const g of glossary) termLabel[`/glossary/${g.id}/`] = g.term;
+
+const termRefs = new Map();
+for (const route of Object.keys(NODES)) {
+  if (route === '/sitemap/' || route === '/glossary/') continue;
+  const file = route === '/' ? 'dist/index.html' : `dist${route}index.html`;
+  if (!fs.existsSync(file)) continue;
+  let main = (fs.readFileSync(file, 'utf8').match(/<main[^>]*>([\s\S]*?)<\/main>/) || [])[1] || '';
+  main = main.replace(/<nav class="breadcrumbs"[\s\S]*?<\/nav>/, '').replace(/<a class="back-top"[\s\S]*?<\/a>/, '');
+  for (const m of main.matchAll(/href="(\/glossary\/[^"/]+\/)"/g)) {
+    const t = norm(m[1]);
+    if (!termLabel[t]) continue;
+    if (!termRefs.has(t)) termRefs.set(t, new Set());
+    termRefs.get(t).add(route);
+  }
+}
+
+const terms = [];
+const termLinks = [];
+for (const [route, label] of Object.entries(termLabel)) {
+  const file = `dist${route}index.html`;
+  if (!fs.existsSync(file)) continue;
+  terms.push({ id: route, label });
+  const refs = termRefs.get(route);
+  if (refs && refs.size) for (const p of refs) termLinks.push({ source: route, target: p });
+  else termLinks.push({ source: route, target: '/glossary/' });
+}
+
+fs.writeFileSync('dist/link-map.json', JSON.stringify({ nodes, links, terms, termLinks }));
+console.log(`link-map.json: ${nodes.length} nodes, ${links.length} links, ${terms.length} terms, ${termLinks.length} term-links`);
