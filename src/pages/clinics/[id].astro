@@ -13,9 +13,51 @@ export function getStaticPaths() {
 const { clinic } = Astro.props as { clinic: Clinic };
 const links = splitClinicUrls(clinic.urls);
 const capabilities = capabilitiesOf(clinic);
+const capLabels = capabilities.map((cap) => CAPABILITY_LABELS[cap]);
+const canonical = new URL(`/clinics/${clinic.id}/`, Astro.site).toString();
+
+// Location + documented services in the description, so long-tail searches like
+// 「<県名> ホルモン療法 病院」/「MtF クリニック <地名>」can surface this page.
+const place = [clinic.prefecture, clinic.city].filter(Boolean).join('');
+const seoDescription =
+  `${place}のトランスジェンダー対応の医療機関。`
+  + (capLabels.length ? `${capLabels.join('・')}などの掲載情報。` : 'ホルモン療法など。')
+  + '受診条件・費用・対応は変わることがあるため、必ず医療機関にご確認ください。';
+
+// MedicalClinic structured data: factual (name, address, geo, telephone, the
+// documented services) — not an endorsement or ranking, per the 掲載 policy.
+const clinicLd = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalClinic',
+  '@id': `${canonical}#clinic`,
+  name: clinic.name,
+  url: canonical,
+  inLanguage: 'ja',
+  ...(clinic.phone ? { telephone: clinic.phone } : {}),
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'JP',
+    addressRegion: clinic.prefecture,
+    ...(clinic.city ? { addressLocality: clinic.city } : {}),
+    ...(clinic.address ? { streetAddress: clinic.address } : {}),
+  },
+  ...(typeof clinic.lat === 'number' && typeof clinic.lng === 'number'
+    ? { geo: { '@type': 'GeoCoordinates', latitude: clinic.lat, longitude: clinic.lng } }
+    : {}),
+  ...(links.officialUrls.length ? { sameAs: links.officialUrls } : {}),
+  ...(capabilities.length
+    ? {
+        availableService: capabilities.map((cap) => ({
+          '@type': cap.startsWith('gaht') ? 'MedicalTherapy' : 'MedicalProcedure',
+          name: CAPABILITY_LABELS[cap],
+        })),
+      }
+    : {}),
+};
 ---
 
-<BaseLayout title={`${clinic.name} - とらんすナビ`} description={`${clinic.displayName}の医療機関情報。`}>
+<BaseLayout title={`${clinic.name}（${clinic.prefecture}）- とらんすナビ`} description={seoDescription}>
+  <script type="application/ld+json" set:html={JSON.stringify(clinicLd)} />
   <article class="article-shell">
     <div class="eyebrow">医療機関</div>
     <h1>{clinic.name}</h1>
