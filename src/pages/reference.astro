@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const items = [
+  { href: '/works/', title: '文芸作品', desc: '映画・ドラマ・漫画・ゲームなど、トランスやLGBTQ+に関わる作品のデータベース。' },
+  { href: '/bibliography/', title: '参考文献（書籍・論文）', desc: '学術的な書籍・論文・ガイドラインの一覧。深く知りたい人へ。' },
+  { href: '/resources/', title: '関連サイト・リンク', desc: '外部サイト、当事者団体、発信・メディア、リンク集。' },
+  { href: '/library/', title: '資料集（取り込んだ解説）', desc: '外部の解説を、出典を明記して取り込んだ資料。' },
+  { href: '/glossary/', title: '用語集', desc: 'トランスジェンダーに関する言葉の一覧。' },
+];
+---
+
+<BaseLayout
+  title="資料・リンク - とらんすナビ"
+  description="文芸作品、参考文献（書籍・論文）、関連サイト・リンク、資料集、用語集。さらに調べたいときの入り口をまとめました。"
+>
+  <article class="article-shell">
+    <div class="eyebrow">資料・リンク</div>
+    <h1>資料・リンク</h1>
+    <p class="lead">
+      作品、文献、外部サイトなど、さらに調べたいときの入り口をまとめました。気になったところから、どうぞ。
+    </p>
+
+    <div class="topic-list">
+      {items.map((item) => (
+        <a class="topic-item article-link" href={item.href}>
+          <strong>{item.title}</strong>
+          <span>{item.desc}</span>
+        </a>
+      ))}
+    </div>
+  </article>
+</BaseLayout>

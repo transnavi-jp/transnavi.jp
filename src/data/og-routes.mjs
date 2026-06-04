@@ -7,7 +7,7 @@ export const OG_GROUPS = {
   '移行と医療': ['/transition/', '/detransition/', '/puberty-blockers/', '/hrt-effects/', '/hrt-medications/', '/fertility/', '/voice/', '/presentation/', '/hair-removal/', '/surgery/', '/cost/'],
   '相談・医療機関': ['/support/', '/clinics/', '/map/'],
   '暮らしと社会': ['/coming-out/', '/relationships/', '/everyday/', '/allies/', '/guidelines/', '/safety/', '/legal-change/', '/flags/', '/pride/'],
-  '調べる・資料': ['/search/', '/glossary/', '/works/', '/bibliography/', '/resources/', '/library/'],
+  '調べる・資料': ['/reference/', '/search/', '/glossary/', '/works/', '/bibliography/', '/resources/', '/library/'],
   'このサイト': ['/about/', '/data/', '/legal/', '/edit/', '/sitemap/'],
 };
 

@@ -38,6 +38,7 @@ const NODES = {
   '/legal-change/': { label: '戸籍と名前', group: 'society' },
   '/flags/': { label: 'フラッグ', group: 'society' },
   '/pride/': { label: '記念日', group: 'society' },
+  '/reference/': { label: '資料・リンク', group: 'reference' },
   '/search/': { label: '検索', group: 'reference' },
   '/glossary/': { label: '用語集', group: 'reference' },
   '/works/': { label: '文芸作品', group: 'reference' },

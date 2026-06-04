@@ -50,13 +50,41 @@ const pageName = title.split(' - ')[0].trim();
 const learnPages = new Set([
   '/basics/', '/gender/', '/orientation/', '/intersex/', '/dysphoria/', '/transition/', '/hrt-effects/', '/hrt-medications/', '/fertility/',
   '/voice/', '/presentation/', '/hair-removal/', '/surgery/', '/cost/', '/legal-change/', '/coming-out/',
-  '/everyday/', '/relationships/', '/safety/', '/puberty-blockers/', '/detransition/', '/flags/', '/pride/', '/works/', '/bibliography/',
+  '/everyday/', '/relationships/', '/safety/', '/puberty-blockers/', '/detransition/', '/flags/', '/pride/',
 ]);
+// 資料・リンク gathers the 文芸 / 文献 / リンク / 資料集 pages under one nav entry.
+const referencePages = new Set(['/reference/', '/works/', '/bibliography/', '/resources/']);
+const isGlossaryDetail = pathname.startsWith('/glossary/') && pathname !== '/glossary/';
+const isClinicDetail = pathname.startsWith('/clinics/') && pathname !== '/clinics/';
+const isLibrary = pathname.startsWith('/library/');
+
 let section: { label: string; href: string } | null = null;
-if (learnPages.has(pathname)) section = { label: '知る・学ぶ', href: '/learn/' };
-else if (pathname.startsWith('/glossary/') && pathname !== '/glossary/') section = { label: '用語集', href: '/glossary/' };
-else if (pathname.startsWith('/clinics/') && pathname !== '/clinics/') section = { label: '医療機関', href: '/clinics/' };
-else if (pathname.startsWith('/library/') && pathname !== '/library/') section = { label: '資料集', href: '/library/' };
+if (referencePages.has(pathname) || isLibrary) section = { label: '資料・リンク', href: '/reference/' };
+else if (learnPages.has(pathname)) section = { label: '知る・学ぶ', href: '/learn/' };
+else if (isGlossaryDetail) section = { label: '用語集', href: '/glossary/' };
+else if (isClinicDetail) section = { label: '医療機関', href: '/clinics/' };
+
+// Header nav + which entry is "current" for this page (highlighted).
+const navItems = [
+  { href: '/start/', label: 'はじめての方へ' },
+  { href: '/learn/', label: '知る・学ぶ' },
+  { href: '/glossary/', label: '用語集' },
+  { href: '/support/', label: '相談先' },
+  { href: '/clinics/', label: '医療機関' },
+  { href: '/map/', label: '地図' },
+  { href: '/reference/', label: '資料・リンク' },
+  { href: '/sitemap/', label: 'サイトマップ' },
+];
+const activeNav =
+  pathname === '/start/' ? '/start/'
+  : pathname === '/support/' ? '/support/'
+  : pathname === '/map/' ? '/map/'
+  : pathname === '/sitemap/' ? '/sitemap/'
+  : (pathname === '/glossary/' || isGlossaryDetail) ? '/glossary/'
+  : (pathname === '/clinics/' || isClinicDetail) ? '/clinics/'
+  : (referencePages.has(pathname) || isLibrary) ? '/reference/'
+  : (pathname === '/learn/' || learnPages.has(pathname)) ? '/learn/'
+  : null;
 const breadcrumbTrail = [{ label: 'ホーム', href: '/' }, ...(section ? [section] : [])];
 const showBreadcrumb = pathname !== '/';
 const breadcrumbLd = showBreadcrumb
@@ -196,16 +224,13 @@ const pageLd = pageDate
       </div>
       {pathname !== '/' && (
         <nav class="site-nav" aria-label="主要なページ">
-          <a href="/start/">はじめての方へ</a>
-          <a href="/learn/">知る・学ぶ</a>
-          <a href="/glossary/">用語集</a>
-          <a href="/support/">相談先</a>
-          <a href="/clinics/">医療機関</a>
-          <a href="/map/">地図</a>
-          <a href="/works/">文芸</a>
-          <a href="/bibliography/">文献</a>
-          <a href="/resources/">リンク</a>
-          <a href="/sitemap/">サイトマップ</a>
+          {navItems.map((item) => (
+            <a
+              href={item.href}
+              class:list={[{ 'is-active': item.href === activeNav }]}
+              aria-current={item.href === activeNav ? 'page' : undefined}
+            >{item.label}</a>
+          ))}
         </nav>
       )}
     </header>
