@@ -56,7 +56,7 @@ for (const path of pages) {
 test('医療機関ページは主観的コメント欄を表示しない', async ({ page }) => {
   await page.goto('/clinics/hrt-tokyo-gender-clinic/');
 
-  await expect(page.locator('h1')).toContainText('東京ジェンダークリニック');
+  expect(await textNoRuby(page.locator('h1'))).toContain('東京ジェンダークリニック');
   await expect(page.locator('body')).not.toContainText('取り込み時の記録');
   await expect(page.locator('body')).not.toContainText('おすすめ');
   expect(await textNoRuby(page.locator('body'))).toContain('特定の医療機関をすすめるものではありません');
@@ -164,7 +164,7 @@ test('MtF.wiki の免責事項を自サイトの資料として掲載しない',
 test('関連サイトページに 2345.LGBT 由来の外部リンクを表示する', async ({ page }) => {
   await page.goto('/resources/');
 
-  await expect(page.locator('h1')).toContainText('関連サイト');
+  expect(await textNoRuby(page.locator('h1'))).toContain('関連サイト');
   await expect(page.getByRole('link', { name: /全国医療地図/ })).toBeVisible();
   await expect(page.getByRole('link', { name: /日本 GID\/GD と共に生きる人々の会/ })).toBeVisible();
   await expect(page.getByRole('link', { name: /はじめてのトランスジェンダー trans101\.jp/ })).toBeVisible();
@@ -175,7 +175,7 @@ test('関連サイトページに 2345.LGBT 由来の外部リンクを表示す
 test('文芸作品データベースに 2345.LGBT 由来の作品を掲載する', async ({ page }) => {
   await page.goto('/works/');
 
-  await expect(page.locator('h1')).toContainText('文芸作品');
+  expect(await textNoRuby(page.locator('h1'))).toContain('文芸作品');
   await expect(page.locator('body')).toContainText('片袖の魚');
   await expect(page.locator('body')).toContainText('三浦部長、本日付けで女性になります。');
 });

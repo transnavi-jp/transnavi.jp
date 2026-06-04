@@ -29,15 +29,13 @@ const htmlFiles = fs
 // identity matters (screen-reader navigation, labels, exact-text tests), and
 // ruby would split it. Furigana stays on the body prose, which is the point.
 const SKIP = new Set(['SCRIPT', 'STYLE', 'SVG', 'CODE', 'PRE', 'RUBY', 'NOSCRIPT',
-  'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'LABEL', 'BUTTON', 'SELECT', 'OPTION', 'SUMMARY']);
+  'LABEL', 'BUTTON', 'SELECT', 'OPTION', 'SUMMARY']);
 // Navigation chrome (buttons / chips / nav / breadcrumbs): short labels where
 // furigana adds little and would split accessible names. Keep ruby in prose only.
-// Skip the live link map, the filter search controls, and the PILL-shaped link
-// rows (top nav, home buttons, word-chips): ruby's height/width breaks their
-// alignment and wraps them. Footer text links, breadcrumbs and body prose keep
-// furigana, so the reader still gets readings on the navigation labels.
-const SKIP_CLASS = ['link-map-legend', 'link-map-toggle', 'filter-bar',
-  'site-nav', 'hero-nav', 'hero-button', 'route-list', 'route-item', 'word-chips', 'word-chip'];
+// Only skip the live link map and the filter search controls. Pills (nav, chips,
+// home buttons) keep furigana — the CSS lays them out inline-block so the ruby
+// doesn't break their alignment.
+const SKIP_CLASS = ['link-map-legend', 'link-map-toggle', 'filter-bar'];
 // Interactive filter lists (clinics / glossary / works / resources): the cards,
 // groups and tabs are searchable data, not reading prose. Ruby there would split
 // the text that client-side search and tests match. Keep furigana on the page's
