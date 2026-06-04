@@ -3,10 +3,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import References from '../components/References.astro';
 import Cite from '../components/Cite.astro';
 
-const GDB = 'https://genderdysphoria.fyi/en';
+// Link the deeper explanations to the Japanese translation of The Gender
+// Dysphoria Bible (a community preview hosted at bible.transnavi.jp; the JA
+// chapter slugs are the same words as kind.name). The original is CC BY-NC-SA.
+const GDB_JA = 'https://bible.transnavi.jp/ja';
 
 // 違和のいろいろな形。説明は当サイトで独自に書き、詳しい解説は
-// The Gender Dysphoria Bible（CC BY-NC-SA）へリンクしています。
+// The Gender Dysphoria Bible（CC BY-NC-SA）の日本語訳へリンクしています。
 const kinds = [
   { name: '身体的違和', en: 'physical-dysphoria',
     body: '自分のからだの特徴（体つき、声、毛、胸、性器など）に対して感じる違和。鏡を見たくない、写真がつらい、といった形でも現れます。' },
@@ -119,7 +122,7 @@ const kinds = [
           <div class="concept-card">
             <h3>{kind.name}</h3>
             <p>{kind.body}</p>
-            <a class="concept-more" href={`${GDB}/${kind.en}`} target="_blank" rel="noreferrer">詳しく（英語）→</a>
+            <a class="concept-more" href={`${GDB_JA}/${kind.name}/`} target="_blank" rel="noreferrer">くわしく（日本語訳）→</a>
           </div>
         ))}
       </div>
@@ -132,12 +135,12 @@ const kinds = [
       </p>
       <p>
         つらさ（違和）よりも先に、この喜びのほうから自分に気づく人もいます。「何が苦しいか」だけでなく「何が心地よいか」も、自分を知る手がかりになります。
-        <a href={`${GDB}/euphoria`} target="_blank" rel="noreferrer">詳しく（英語）→</a>
+        <a href={`${GDB_JA}/性別高揚感/`} target="_blank" rel="noreferrer">くわしく（日本語訳）→</a>
       </p>
     </section>
 
     <aside class="entry-message" role="note" aria-label="読んでいるあなたへ">
-      <p>「自分は本物のトランスではないのかも」と感じても、大丈夫。その迷いは、とても多くの人が通る道です。何かの基準を満たさないと当事者になれない、ということはありません。<a href={`${GDB}/impostor-syndrome`} target="_blank" rel="noreferrer">（インポスター症候群について・英語）</a></p>
+      <p>「自分は本物のトランスではないのかも」と感じても、大丈夫。その迷いは、とても多くの人が通る道です。何かの基準を満たさないと当事者になれない、ということはありません。<a href={`${GDB_JA}/インポスター症候群/`} target="_blank" rel="noreferrer">（インポスター症候群について・日本語訳）</a></p>
     </aside>
 
     <nav class="word-chips entry-related" aria-label="関連ページ">
@@ -151,7 +154,9 @@ const kinds = [
     <p class="source-note">
       「違和のいろいろな形」という整理は、
       {' '}<a href="https://genderdysphoria.fyi/" target="_blank" rel="noreferrer">The Gender Dysphoria Bible（性別違和バイブル）</a>
-      （CC BY-NC-SA）を参考にしています。本ページの文章は当サイトが独自に書いたものです。各項目の詳しい解説は同書へ（日本語訳が進行中です）。
+      （Jocelyn Badgley ほか、CC BY-NC-SA）を参考にしています。本ページの文章は当サイトが独自に書いたものです。各項目の「くわしく」は、有志による
+      {' '}<a href="https://bible.transnavi.jp/ja/" target="_blank" rel="noreferrer">日本語訳（プレビュー版）</a>
+      にリンクしています（原文は上記サイト。今後、本家への反映を予定しています）。
     </p>
     <References route="/dysphoria/" />
   </article>
