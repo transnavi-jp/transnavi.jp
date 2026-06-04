@@ -19,14 +19,27 @@ const DICT = fs.existsSync('node_modules/kuromoji/dict')
 const tokenizer = await new Promise((res, rej) =>
   kuromoji.builder({ dicPath: DICT }).build((e, t) => (e ? rej(e) : res(t))));
 
-const pageDates = JSON.parse(fs.readFileSync('src/data/page-dates.json', 'utf8'));
-const routes = ['/', '/faq/', '/learn/', ...Object.keys(pageDates)];
-const SKIP = new Set(['SCRIPT', 'STYLE', 'SVG', 'CODE', 'PRE', 'RUBY', 'NOSCRIPT']);
+// Every built HTML page (glossary, clinics, library… included), not a curated
+// list, so the toggle reveals ふりがな everywhere.
+const htmlFiles = fs
+  .readdirSync('dist', { recursive: true })
+  .filter((f) => typeof f === 'string' && f.endsWith('.html'))
+  .map((f) => 'dist/' + f);
+// Headings and interactive controls are skipped: their accessible name / text
+// identity matters (screen-reader navigation, labels, exact-text tests), and
+// ruby would split it. Furigana stays on the body prose, which is the point.
+const SKIP = new Set(['SCRIPT', 'STYLE', 'SVG', 'CODE', 'PRE', 'RUBY', 'NOSCRIPT',
+  'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'LABEL', 'BUTTON', 'SELECT', 'OPTION', 'SUMMARY']);
 // Navigation chrome (buttons / chips / nav / breadcrumbs): short labels where
 // furigana adds little and would split accessible names. Keep ruby in prose only.
 const SKIP_CLASS = ['hero-nav', 'hero-button', 'route-list', 'route-item', 'site-nav',
   'word-chips', 'word-chip', 'footer-nav', 'breadcrumbs', 'back-top', 'eyebrow',
   'link-map-legend', 'link-map-toggle', 'filter-bar', 'concept-card-links'];
+// Interactive filter lists (clinics / glossary / works / resources): the cards,
+// groups and tabs are searchable data, not reading prose. Ruby there would split
+// the text that client-side search and tests match. Keep furigana on the page's
+// surrounding prose, not inside these.
+const SKIP_ATTR = ['data-filter-item', 'data-filter-group', 'data-filter-tabs', 'data-filter-set'];
 
 const KANJI = /[㐀-鿿豈-﫿]/;
 const isKanji = (s) => KANJI.test(s);
@@ -77,7 +90,10 @@ function processChildren(node) {
       const ruby = furigana(child.text);
       if (ruby != null) { parts.push(ruby); changed = true; } else parts.push(child.toString());
     } else if (child instanceof HTMLElement) {
-      const skip = SKIP.has(child.tagName) || SKIP_CLASS.some((c) => child.classList.contains(c));
+      const attrs = child.attributes;
+      const skip = SKIP.has(child.tagName)
+        || SKIP_CLASS.some((c) => child.classList.contains(c))
+        || SKIP_ATTR.some((a) => a in attrs);
       if (!skip) changed = processChildren(child) || changed;
       parts.push(child.toString());
     } else {
@@ -91,9 +107,7 @@ function processChildren(node) {
 const MAIN_RE = /(<main id="main-content"[^>]*>)([\s\S]*?)(<\/main>)/;
 let n = 0;
 let rubies = 0;
-for (const route of [...new Set(routes)]) {
-  const file = route === '/' ? 'dist/index.html' : `dist${route}index.html`;
-  if (!fs.existsSync(file)) continue;
+for (const file of htmlFiles) {
   const html = fs.readFileSync(file, 'utf8');
   const m = html.match(MAIN_RE);
   if (!m) continue;
