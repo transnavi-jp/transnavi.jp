@@ -381,6 +381,9 @@ main {
 main {
   display: grid;
   gap: 24px;
+  /* Guard against horizontal overflow on small screens (e.g. furigana ruby
+     overhang on iOS Safari, or a long token) without adding a scrollbar. */
+  overflow-x: clip;
 }
 
 /* Grid items default to min-width:auto, which refuses to shrink below their
