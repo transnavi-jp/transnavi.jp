@@ -178,7 +178,7 @@ main {
 .empty-state,
 .article-meta,
 .topic-item p,
-.article-link span,
+.article-link span:not(.furi),
 .clinic-card span:not(.clinic-name),
 .glossary-card span:not(.clinic-name):not(.glossary-en),
 .clinic-summary,
@@ -2868,6 +2868,14 @@ ul {
   background: var(--accent-soft);
   color: var(--accent-strong);
   border-color: var(--line-hover);
+}
+
+/* Wrapper that gen-furigana puts around each annotated text run. It keeps a run
+   that sprouted several <ruby> as a SINGLE inline box, so a flex/grid label is
+   one item (not one item per ruby). Inline + normal wrapping = the label flows
+   and wraps as words, with readings sitting above. */
+.furi {
+  display: inline;
 }
 
 /* Ruby readings: present in the markup but hidden until the reader turns them

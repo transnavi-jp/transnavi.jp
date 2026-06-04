@@ -91,7 +91,12 @@ function processChildren(node) {
   for (const child of node.childNodes) {
     if (child instanceof TextNode) {
       const ruby = furigana(child.text);
-      if (ruby != null) { parts.push(ruby); changed = true; } else parts.push(child.toString());
+      // Wrap the annotated run in a single inline <span class="furi">. This keeps
+      // a text node as ONE node even after it sprouts multiple <ruby> elements,
+      // so flex/grid buttons (hero buttons, chips…) see one label item instead of
+      // one flex item per ruby — which is what made labels stack character by
+      // character when furigana was on.
+      if (ruby != null) { parts.push(`<span class="furi">${ruby}</span>`); changed = true; } else parts.push(child.toString());
     } else if (child instanceof HTMLElement) {
       const attrs = child.attributes;
       const skip = SKIP.has(child.tagName)
