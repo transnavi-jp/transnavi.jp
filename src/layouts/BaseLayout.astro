@@ -218,7 +218,10 @@ const pageLd = pageDate
             <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2" /><path d="M12 2.5v2.3M12 19.2v2.3M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.3M19.2 12h2.3M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6" /></svg>
           </button>
           <button class="furigana-toggle" type="button" aria-pressed="false" aria-label="ふりがなを表示" title="漢字にふりがなを表示する">
-            <span aria-hidden="true">ふ</span>
+            {/* The ふ glyph as an SVG path (from the site font, M PLUS Rounded 1c)
+                so it is not a stray "ふ" text node for screen readers, text
+                browsers or crawlers — the button's name comes from aria-label. */}
+            <svg viewBox="50 -757 918 817" aria-hidden="true" focusable="false"><g transform="scale(1,-1)"><path fill="currentColor" d="M710 636Q622 620 571.0 581.5Q520 543 520 500Q520 471 538.0 439.5Q556 408 603 355Q662 289 684.5 243.5Q707 198 707 150Q707 54 639.5 -3.0Q572 -60 460 -60Q398 -60 331 -36Q309 -28 299.5 -5.5Q290 17 299 40L301 45Q309 66 331.0 75.5Q353 85 375 77Q422 60 454 60Q503 60 533.5 85.0Q564 110 564 150Q564 183 546.0 216.0Q528 249 476 303Q424 358 402.0 400.5Q380 443 380 487Q380 566 472 640Q473 641 473.0 642.0Q473 643 472 643H287Q264 643 247.0 660.0Q230 677 230.0 700.0Q230 723 247.0 740.0Q264 757 287 757H710Q733 757 750.0 740.0Q767 723 767 700Q767 676 750.5 658.5Q734 641 710 636ZM778 429Q800 439 823.0 431.0Q846 423 857 401Q917 285 965 148Q973 126 962.0 105.5Q951 85 929 78L921 75Q898 68 877.5 79.0Q857 90 850 112Q806 236 745 352Q734 372 741.0 393.5Q748 415 769 425ZM83 77Q61 86 53.5 107.5Q46 129 56 150Q107 260 147 383Q155 406 175.5 417.5Q196 429 219 424L228 422Q251 417 263.0 396.5Q275 376 268 354Q229 229 169 103Q159 81 136.0 72.5Q113 64 91 73Z"/></g></svg>
           </button>
         </div>
       </div>
