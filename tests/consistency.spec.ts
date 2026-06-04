@@ -73,6 +73,8 @@ test.describe('レイアウトの一貫性', () => {
     await page.goto('/');
     // The header nav is hidden on the home page; the hero carries the wayfinding.
     await expect(page.locator('.site-nav')).toHaveCount(0);
-    await expect(page.locator('.hero-nav').getByRole('link', { name: /はじめての方へ/ })).toBeVisible();
+    // match by href (the visible label may carry furigana <ruby>, which Playwright
+    // folds into the accessible name)
+    await expect(page.locator('.hero-nav a[href="/start/"]')).toBeVisible();
   });
 });

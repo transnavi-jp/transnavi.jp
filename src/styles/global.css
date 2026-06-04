@@ -598,7 +598,9 @@ ul {
 }
 
 .resource-section-intro {
-  margin: 0 0 16px;
+  /* Top margin so it never touches a block above it (e.g. a list); under a
+     heading, margin-collapsing keeps the gap tidy. */
+  margin: 16px 0;
   font-size: 0.95rem;
 }
 
@@ -2839,17 +2841,17 @@ ul {
 
 /* Ruby readings: present in the markup but hidden until the reader turns them
    on with the ふ toggle (data-furigana="on"). rp parens are for legacy only. */
-main rt {
+rt {
   display: none;
   font-size: 0.62em;
   font-weight: 400;
   color: var(--muted);
   user-select: none;
 }
-main rp {
+rp {
   display: none;
 }
-:root[data-furigana='on'] main rt {
+:root[data-furigana='on'] rt {
   display: revert;
 }
 

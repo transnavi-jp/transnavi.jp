@@ -32,9 +32,10 @@ const SKIP = new Set(['SCRIPT', 'STYLE', 'SVG', 'CODE', 'PRE', 'RUBY', 'NOSCRIPT
   'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'LABEL', 'BUTTON', 'SELECT', 'OPTION', 'SUMMARY']);
 // Navigation chrome (buttons / chips / nav / breadcrumbs): short labels where
 // furigana adds little and would split accessible names. Keep ruby in prose only.
-const SKIP_CLASS = ['hero-nav', 'hero-button', 'route-list', 'route-item', 'site-nav',
-  'word-chips', 'word-chip', 'footer-nav', 'breadcrumbs', 'back-top', 'eyebrow',
-  'link-map-legend', 'link-map-toggle', 'filter-bar', 'concept-card-links'];
+// Only skip places where ruby would genuinely interfere: the live link map and
+// the filter search controls. Nav, footer, breadcrumbs and chips ARE annotated
+// (the reader wants furigana on functional parts too).
+const SKIP_CLASS = ['link-map-legend', 'link-map-toggle', 'filter-bar'];
 // Interactive filter lists (clinics / glossary / works / resources): the cards,
 // groups and tabs are searchable data, not reading prose. Ruby there would split
 // the text that client-side search and tests match. Keep furigana on the page's
@@ -62,7 +63,9 @@ function rubyToken(surface, readingKata) {
     prefix += s[0]; s = s.slice(1); r = r.slice(1);
   }
   if (!isKanji(s) || !r) return esc(surface); // nothing clean to annotate
-  return esc(prefix) + `<ruby>${esc(s)}<rt>${esc(r)}</rt></ruby>` + esc(suffix);
+  // aria-hidden on the reading: screen readers (and Playwright's accessible-name
+  // / text locators) use the base kanji, not the hiragana gloss.
+  return esc(prefix) + `<ruby>${esc(s)}<rt aria-hidden="true">${esc(r)}</rt></ruby>` + esc(suffix);
 }
 
 const cache = new Map();
@@ -104,18 +107,30 @@ function processChildren(node) {
   return changed;
 }
 
-const MAIN_RE = /(<main id="main-content"[^>]*>)([\s\S]*?)(<\/main>)/;
+// Annotate the header (brand + nav), the main content, and the footer.
+const REGIONS = [
+  /(<header class="site-header"[^>]*>)([\s\S]*?)(<\/header>)/,
+  /(<main id="main-content"[^>]*>)([\s\S]*?)(<\/main>)/,
+  /(<footer class="site-footer"[^>]*>)([\s\S]*?)(<\/footer>)/,
+];
 let n = 0;
 let rubies = 0;
 for (const file of htmlFiles) {
-  const html = fs.readFileSync(file, 'utf8');
-  const m = html.match(MAIN_RE);
-  if (!m) continue;
-  const frag = parse(m[2]);
-  processChildren(frag);
-  const out = frag.toString();
-  rubies += (out.match(/<ruby>/g) || []).length;
-  fs.writeFileSync(file, html.replace(MAIN_RE, m[1] + out + m[3]));
-  n++;
+  let html = fs.readFileSync(file, 'utf8');
+  let touched = false;
+  for (const RE of REGIONS) {
+    const m = html.match(RE);
+    if (!m) continue;
+    const frag = parse(m[2]);
+    processChildren(frag);
+    const out = frag.toString();
+    rubies += (out.match(/<ruby>/g) || []).length;
+    html = html.replace(RE, m[1] + out + m[3]);
+    touched = true;
+  }
+  if (touched) {
+    fs.writeFileSync(file, html);
+    n++;
+  }
 }
 console.log(`furigana: annotated ${n} pages, ${rubies} ruby (${cache.size} phrases cached)`);
