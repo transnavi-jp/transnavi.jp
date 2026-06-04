@@ -52,6 +52,7 @@ export const GET: APIRoute = async ({ site }) => {
     '/about/',
     '/map/',
     '/clinics/',
+    '/clinics/hormone-therapy/',
     '/edit/',
     '/glossary/',
     '/guidelines/',

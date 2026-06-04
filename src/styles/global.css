@@ -1889,6 +1889,64 @@ ul {
   line-height: 1.7;
 }
 
+/* Hormone-therapy clinic finder landing page: a crawlable, region-grouped list. */
+.ht-region {
+  margin: 18px 0;
+}
+
+.ht-region-name {
+  margin: 0 0 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--line);
+  font-size: 1.02rem;
+  color: var(--ink-heading);
+}
+
+.ht-clinic-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.ht-clinic {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 10px;
+}
+
+.ht-clinic > a {
+  font-weight: 600;
+}
+
+.ht-clinic-city {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.ht-clinic-tags {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.ht-faq > div {
+  margin: 0 0 14px;
+}
+
+.ht-faq dt {
+  font-weight: 700;
+  color: var(--ink-heading);
+  margin-bottom: 4px;
+}
+
+.ht-faq dd {
+  margin: 0;
+  line-height: 1.85;
+}
+
 .index-search {
   display: grid;
   gap: 8px;

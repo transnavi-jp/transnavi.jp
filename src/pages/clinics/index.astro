@@ -148,7 +148,7 @@ const genreCounts = mapClinics.reduce(
 );
 ---
 
-<BaseLayout title="医療機関 - とらんすナビ" description="ホルモン療法や診断に関する医療機関。">
+<BaseLayout title="医療機関一覧（ホルモン療法・性別適合手術ができる病院・クリニック） - とらんすナビ" description="トランスジェンダーのホルモン療法（MtF・FtM）や性別適合手術、診断に対応する全国の病院・クリニックを、地域別・診療区分別に探せます。地図・検索つき。受診前に必ず各医療機関へご確認ください。">
   <article class="article-shell">
     <div class="eyebrow">医療機関</div>
     <Mascot name="doctor" />
@@ -157,7 +157,7 @@ const genreCounts = mapClinics.reduce(
       ホルモン療法や診断に関する医療機関。受診条件、診断書の要否、費用、診療内容は変わることがあります。
     </p>
     <p>予約前に必ず医療機関へ確認してください。口コミ、ランキング、推奨表現は掲載しません。詳しくは<a href="/legal/">掲載について</a>を確認してください。</p>
-    <p>ホルモン療法そのものについて先に知りたいときは、<a href="/hrt-effects/">ホルモン療法で起きること</a>もどうぞ。診療内容の用語は<a href="/glossary/">用語集</a>で調べられます。</p>
+    <p>ホルモン療法そのものについて先に知りたいときは、<a href="/hrt-effects/">ホルモン療法で起きること</a>もどうぞ。診療内容の用語は<a href="/glossary/">用語集</a>で調べられます。<a href="/clinics/hormone-therapy/">ホルモン療法ができる病院・クリニック一覧</a>に地域別でまとめたページもあります。</p>
 
     <div class="map-legend" aria-label="地図の凡例（診療区分）">
       <label><input type="checkbox" data-map-toggle="hrt" checked /><span class="map-dot map-dot-hrt" aria-hidden="true"></span>ホルモン療法<span class="map-legend-count">{genreCounts.hrt ?? 0}</span></label>
