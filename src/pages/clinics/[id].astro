@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import clinicsData from '../../data/clinics.json';
 import type { Clinic } from '../../types/clinic';
 import { splitClinicUrls } from '../../utils/clinic-links';
+import { capabilitiesOf, CAPABILITY_LABELS } from '../../utils/clinic-genre';
 
 export function getStaticPaths() {
   const clinics = clinicsData as Clinic[];
@@ -11,6 +12,7 @@ export function getStaticPaths() {
 
 const { clinic } = Astro.props as { clinic: Clinic };
 const links = splitClinicUrls(clinic.urls);
+const capabilities = capabilitiesOf(clinic);
 ---
 
 <BaseLayout title={`${clinic.name} - とらんすナビ`} description={`${clinic.displayName}の医療機関情報。`}>
@@ -18,6 +20,19 @@ const links = splitClinicUrls(clinic.urls);
     <div class="eyebrow">医療機関</div>
     <h1>{clinic.name}</h1>
     <p class="lead">{clinic.displayName}</p>
+
+    {capabilities.length > 0 && (
+      <ul class="clinic-tags" aria-label="公開情報で確認できた対応">
+        {capabilities.map((cap) => (
+          <li class:list={['clinic-tag', cap.startsWith('gaht') ? 'clinic-tag-gaht' : 'clinic-tag-surgery']}>
+            {CAPABILITY_LABELS[cap]}
+          </li>
+        ))}
+      </ul>
+    )}
+    <p class="clinic-tags-note">
+      タグは、公開情報で確認できた対応です。<strong>タグがないことは、対応していないという意味ではありません。</strong>実際に受けられるかどうかは、かならず医療機関にご確認ください。
+    </p>
 
     <dl class="clinic-detail">
       <div>

@@ -72,3 +72,53 @@ export function surgeryTypesOf(clinic: Clinic): SurgeryType[] {
 export function primaryGenre(categories: string[]): ClinicGenre {
   return categories.includes('surgery') ? 'surgery' : categories.includes('hrt') ? 'hrt' : 'mental';
 }
+
+// Finer-grained "what is documented here" tags, derived ONLY from what the data
+// actually states (structured services + the free-text notes). The absence of a
+// tag is NOT a claim that a facility doesn't offer it — much of the imported data
+// simply doesn't say. The UI says so; we never infer a negative. This keeps the
+// tags honest and within the site's no-capability-claims policy.
+export type Capability =
+  | 'gaht-feminizing'
+  | 'gaht-masculinizing'
+  | 'surgery-srs'
+  | 'surgery-vfs'
+  | 'surgery-ffs'
+  | 'surgery-breast';
+
+export const CAPABILITY_LABELS: Record<Capability, string> = {
+  'gaht-feminizing': '女性化ホルモン（MtF）',
+  'gaht-masculinizing': '男性化ホルモン（FtM）',
+  'surgery-srs': '性別適合手術（SRS）',
+  'surgery-vfs': '声の手術（VFS）',
+  'surgery-ffs': '顔の手術（FFS）',
+  'surgery-breast': '豊胸',
+};
+
+// Direction is only claimed when the notes name it (MtF/FtM or 女性化/男性化
+// ホルモン). Plain "ホルモン療法" with no direction yields no GAHT tag.
+const FEMINIZING = /(ＭＴＦ|MTF|MtF|mtf|男性から女性|女性化ホルモン|女性ホルモン)/;
+const MASCULINIZING = /(ＦＴＭ|FTM|FtM|ftm|女性から男性|男性化ホルモン|男性ホルモン)/;
+const BREAST_AUG = /(豊胸|豊乳|乳房増大|バストアップ)/;
+const VFS_TEXT = /(ＶＦＳ|VFS|声の(女性化)?手術|音声の?手術|声帯手術)/;
+const FFS_TEXT = /(ＦＦＳ|FFS|顔面女性化|顔の女性化)/;
+
+export function capabilitiesOf(clinic: Clinic): Capability[] {
+  const text = `${clinic.notes ?? ''} ${clinic.services.join(' ')}`;
+  const caps: Capability[] = [];
+
+  // GAHT direction is gated on the facility actually doing hormones, so a
+  // surgery-only clinic that mentions "MtF" in passing isn't tagged as GAHT.
+  if (categoriesOf(clinic).includes('hrt')) {
+    if (FEMINIZING.test(text)) caps.push('gaht-feminizing');
+    if (MASCULINIZING.test(text)) caps.push('gaht-masculinizing');
+  }
+
+  const surgery = surgeryTypesOf(clinic);
+  if (surgery.includes('SRS')) caps.push('surgery-srs');
+  if (surgery.includes('VFS') || VFS_TEXT.test(text)) caps.push('surgery-vfs');
+  if (surgery.includes('FFS') || FFS_TEXT.test(text)) caps.push('surgery-ffs');
+  if (BREAST_AUG.test(text)) caps.push('surgery-breast');
+
+  return caps;
+}

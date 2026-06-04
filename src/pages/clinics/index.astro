@@ -4,7 +4,7 @@ import Mascot from '../../components/Mascot.astro';
 import clinicsData from '../../data/clinics.json';
 import type { Clinic } from '../../types/clinic';
 import { splitClinicUrls } from '../../utils/clinic-links';
-import { categoriesOf, primaryGenre, surgeryTypesOf } from '../../utils/clinic-genre';
+import { categoriesOf, primaryGenre, surgeryTypesOf, capabilitiesOf, CAPABILITY_LABELS } from '../../utils/clinic-genre';
 
 const clinics = clinicsData as Clinic[];
 const prefectureOrder = [
@@ -106,6 +106,7 @@ const clinicsWithCategories = clinics.map((clinic) => ({
   ...clinic,
   categories: categoriesOf(clinic),
   surgeryTypes: surgeryTypesOf(clinic),
+  capabilities: capabilitiesOf(clinic),
   type: typeOf(clinic.name),
   region: regionOf(clinic.prefecture),
   links: splitClinicUrls(clinic.urls),
@@ -175,6 +176,10 @@ const genreCounts = mapClinics.reduce(
       {' '}<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap</a> を利用しています。
     </p>
     <p>病院では、特定の医師や診療科だけがトランス関連の診療に対応していることがあります。予約のときに「ホルモン療法に対応していますか」「担当はどの先生ですか」と確認すると確実です。専門の医師を探す手がかりとして、<a href="http://www.gi-soc.jp/" target="_blank" rel="noreferrer">日本GI（性別不合）学会</a>の<a href="http://www.gi-soc.jp/ninteiiichiran.html" target="_blank" rel="noreferrer">認定医一覧</a>も役立ちます（当サイトは特定の医師をすすめたり順位づけしたりはしません）。</p>
+
+    <p class="clinic-tags-note">
+      各施設のカードには、公開情報で確認できた対応を<strong>タグ</strong>で表示しています（<a href="/glossary/gaht/">女性化／男性化ホルモン</a>、<a href="/glossary/gas/">SRS</a>・<a href="/glossary/voice-feminization-surgery/">VFS</a>・<a href="/glossary/ffs/">FFS</a>・豊胸など）。<strong>タグがないことは、対応していないという意味ではありません。</strong>もとの情報に書かれていないだけのこともあります。実際に受けられるかどうかは、かならず各医療機関にご確認ください。
+    </p>
 
     <div class="clinic-summary" aria-label="掲載件数">
       <span><span data-filter-count>{clinics.length}</span>件</span>
@@ -253,7 +258,7 @@ const genreCounts = mapClinics.reduce(
               data-surgery-types={clinic.surgeryTypes.join(',')}
               data-types={clinic.type}
               data-regions={clinic.region}
-              data-search={[clinic.name, clinic.displayName, clinic.region, clinic.prefecture, clinic.city, clinic.address, clinic.phone, clinic.type, ...clinic.services, ...clinic.surgeryTypes].filter(Boolean).join(' ')}
+              data-search={[clinic.name, clinic.displayName, clinic.region, clinic.prefecture, clinic.city, clinic.address, clinic.phone, clinic.type, ...clinic.services, ...clinic.surgeryTypes, ...clinic.capabilities.map((cap) => CAPABILITY_LABELS[cap])].filter(Boolean).join(' ')}
             >
               <div class="clinic-card-header">
                 <div>
@@ -273,6 +278,15 @@ const genreCounts = mapClinics.reduce(
                 {clinic.phone && <span>電話: {clinic.phone}</span>}
                 <span>{clinic.services.join('、')} / {clinic.verificationStatus}</span>
               </div>
+              {clinic.capabilities.length > 0 && (
+                <ul class="clinic-tags" aria-label="公開情報で確認できた対応">
+                  {clinic.capabilities.map((cap) => (
+                    <li class:list={['clinic-tag', cap.startsWith('gaht') ? 'clinic-tag-gaht' : 'clinic-tag-surgery']}>
+                      {CAPABILITY_LABELS[cap]}
+                    </li>
+                  ))}
+                </ul>
+              )}
               <div class="clinic-links">
                 {clinic.links.officialUrls.length > 0 ? (
                   clinic.links.officialUrls.map((url) => (
