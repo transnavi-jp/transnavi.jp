@@ -32,10 +32,12 @@ const SKIP = new Set(['SCRIPT', 'STYLE', 'SVG', 'CODE', 'PRE', 'RUBY', 'NOSCRIPT
   'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'LABEL', 'BUTTON', 'SELECT', 'OPTION', 'SUMMARY']);
 // Navigation chrome (buttons / chips / nav / breadcrumbs): short labels where
 // furigana adds little and would split accessible names. Keep ruby in prose only.
-// Only skip places where ruby would genuinely interfere: the live link map and
-// the filter search controls. Nav, footer, breadcrumbs and chips ARE annotated
-// (the reader wants furigana on functional parts too).
-const SKIP_CLASS = ['link-map-legend', 'link-map-toggle', 'filter-bar'];
+// Skip the live link map, the filter search controls, and the PILL-shaped link
+// rows (top nav, home buttons, word-chips): ruby's height/width breaks their
+// alignment and wraps them. Footer text links, breadcrumbs and body prose keep
+// furigana, so the reader still gets readings on the navigation labels.
+const SKIP_CLASS = ['link-map-legend', 'link-map-toggle', 'filter-bar',
+  'site-nav', 'hero-nav', 'hero-button', 'route-list', 'route-item', 'word-chips', 'word-chip'];
 // Interactive filter lists (clinics / glossary / works / resources): the cards,
 // groups and tabs are searchable data, not reading prose. Ruby there would split
 // the text that client-side search and tests match. Keep furigana on the page's
