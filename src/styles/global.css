@@ -193,23 +193,17 @@ main {
 }
 
 .site-nav {
-  display: flex;
-  flex-wrap: wrap;
-  /* align pills by their text baseline so furigana <ruby> (which adds height
-     above the text) doesn't push some labels out of line; the readings just
-     extend upward. */
-  align-items: baseline;
-  gap: 10px 12px;
-  margin-top: 20px;
+  /* Plain inline-flow (NOT flexbox): inline-block pills wrap like text and
+     align by baseline, so furigana <ruby> can sit above a label without
+     breaking the row's alignment or overflowing. */
+  margin-top: 16px;
 }
 
 .site-nav a {
-  display: inline-flex;
-  align-items: center;
-  flex-shrink: 0;
-  white-space: nowrap;
-  min-height: 40px;
-  padding: 4px 14px;
+  display: inline-block;
+  margin: 0 8px 8px 0;
+  padding: 8px 14px;
+  line-height: 1.45;
   border: 1px solid var(--line);
   border-radius: 999px;
   background: var(--paper);
@@ -511,11 +505,9 @@ ul {
 }
 
 .eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 34px;
-  padding: 0 12px;
+  display: inline-block;
+  padding: 6px 12px;
+  line-height: 1.4;
   border-radius: 999px;
   background: linear-gradient(90deg, rgba(153, 216, 253, 0.32), rgba(255, 195, 213, 0.42));
   color: #5c7097;
@@ -1068,20 +1060,17 @@ ul {
 }
 
 .word-chips {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 8px;
-  margin: 14px 0;
+  /* inline-flow chips (NOT flexbox) so furigana <ruby> renders above the text
+     and chips wrap as whole pills without squishing the label. */
+  margin: 14px 0 6px;
 }
 
 .word-chip {
-  display: inline-flex;
-  flex-shrink: 0;
-  /* keep each chip's label on one line so furigana <ruby> doesn't make the text
-     wrap character-by-character; the row wraps whole chips instead. */
-  white-space: nowrap;
+  display: inline-block;
+  max-width: 100%;
+  margin: 0 8px 8px 0;
   padding: 6px 14px;
+  line-height: 1.5;
   border-radius: 999px;
   border: 1px solid var(--line);
   background: var(--paper);
@@ -1110,19 +1099,29 @@ ul {
 }
 
 .entry-related .word-chip {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  padding: 15px 18px;
+  /* Plain block flow (NOT grid/flex): a furigana label like 基本のことば becomes
+     <ruby>基本</ruby>のことば — a <ruby> element plus a text node. Under grid/flex
+     those are two separate items and get pushed apart; in block flow they stay
+     inline and wrap as whole words, with the ruby sitting above the text. The
+     arrow is absolutely positioned so it stays pinned to the right regardless. */
+  display: block;
+  position: relative;
+  max-width: none;
+  margin: 0;
+  padding: 15px 42px 15px 18px;
   border-radius: 16px;
   box-shadow: var(--shadow-soft);
   font-size: 0.95rem;
+  line-height: 1.5;
   color: var(--ink);
 }
 
 .entry-related .word-chip::after {
   content: '→';
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  transform: translateY(-50%);
   color: var(--accent);
   font-weight: 800;
 }
