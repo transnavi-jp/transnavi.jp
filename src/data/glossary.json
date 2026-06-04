@@ -3110,5 +3110,129 @@
     "source": "Intersex",
     "message": "あなたのからだは、まちがいではありません。あなたのことばで、あなたを語っていい。",
     "notes": "生まれつき、染色体・性腺・ホルモン・からだのつくりなどが、典型的な男性・女性のどちらの定義にも完全には当てはまらない、さまざまな体の状態の総称。医学では「性分化疾患（DSD）」、また「体の性の様々な発達」とも呼ばれる。からだの特徴の話で、性同一性や性的指向とは別の軸。「第三の性」を意味する語ではないが、特定の性別に押し込めるものでもなく、性同一性は人によってさまざま（男性・女性・ノンバイナリーなど。トランスジェンダーの人もいる）。トランスジェンダーとは別の概念だが、重なる人もおり、LGBTQIA＋の一部とされる。"
+  },
+  {
+    "id": "homosexuality",
+    "term": "同性愛",
+    "category": "性的指向",
+    "wikidata": "Q6636",
+    "translations": {
+      "en": "Homosexuality",
+      "zhHans": "同性恋",
+      "zhHant": "同性戀",
+      "ko": "동성애"
+    },
+    "aliases": [
+      "ゲイ",
+      "レズビアン",
+      "ホモセクシュアル"
+    ],
+    "avoid": [],
+    "disputed": [],
+    "notes": "自分と同じ性別の人に、恋愛的・性的に惹かれること。男性なら「ゲイ」、女性なら「レズビアン」と呼ばれることが多い。「同性／異性」という分け方は、性別を男女のふたつに分ける見方（性別二元論）を前提にしているため、ノンバイナリーの人などには当てはまりにくいこともある。",
+    "source": "Homosexuality",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/同性愛",
+      "en": "https://en.wikipedia.org/wiki/Homosexuality"
+    }
+  },
+  {
+    "id": "heterosexuality",
+    "term": "異性愛",
+    "category": "性的指向",
+    "wikidata": "Q1035954",
+    "translations": {
+      "en": "Heterosexuality",
+      "zhHans": "异性恋",
+      "zhHant": "異性戀",
+      "ko": "이성애"
+    },
+    "aliases": [
+      "ヘテロセクシュアル",
+      "ストレート",
+      "ヘテロ"
+    ],
+    "avoid": [],
+    "disputed": [],
+    "notes": "自分とは異なる性別の人に、恋愛的・性的に惹かれること。「ヘテロ」「ストレート」とも。これも「同性／異性」という、性別を男女に分ける見方（性別二元論）を前提にした言葉で、いちばん多数派とされるが、「ふつう」で「正しい」あり方というわけではない。",
+    "source": "Heterosexuality",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/異性愛",
+      "en": "https://en.wikipedia.org/wiki/Heterosexuality"
+    }
+  },
+  {
+    "id": "bisexuality",
+    "term": "両性愛",
+    "category": "性的指向",
+    "wikidata": "Q43200",
+    "translations": {
+      "en": "Bisexuality",
+      "zhHans": "双性恋",
+      "zhHant": "雙性戀",
+      "ko": "양성애"
+    },
+    "aliases": [
+      "バイセクシュアル",
+      "バイ"
+    ],
+    "avoid": [],
+    "disputed": [],
+    "notes": "男女どちらの性別の人にも、またはふたつ以上の性別の人に、恋愛的・性的に惹かれること。「バイ」とも。相手の性別をあまり問わずに惹かれる場合は、パンセクシュアルという言葉が使われることもある。どちらか一方に惹かれる時期があっても、両性愛でなくなるわけではない。",
+    "source": "Bisexuality",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/両性愛",
+      "en": "https://en.wikipedia.org/wiki/Bisexuality"
+    }
+  },
+  {
+    "id": "asexuality",
+    "term": "無性愛",
+    "category": "性的指向",
+    "wikidata": "Q724351",
+    "translations": {
+      "en": "Asexuality",
+      "zhHans": "无性恋",
+      "zhHant": "無性戀",
+      "ko": "무성애"
+    },
+    "aliases": [
+      "アセクシュアル",
+      "エース",
+      "Aセクシュアル",
+      "ace"
+    ],
+    "avoid": [],
+    "disputed": [],
+    "notes": "他者に性的に惹かれにくい、または惹かれないあり方。「エース（ace）」とも。白か黒かではなくグラデーションがあり、強い信頼が生まれてはじめて惹かれるデミセクシュアルなどもある。恋愛的に惹かれにくいアロマンティックとは別のものさしで、組み合わせは人それぞれ。「欠けている」ことでも、性別違和のしるしでもない。",
+    "source": "Asexuality",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/無性愛",
+      "en": "https://en.wikipedia.org/wiki/Asexuality"
+    }
+  },
+  {
+    "id": "gender-binarism",
+    "term": "性別二元論",
+    "category": "性同一性・属性",
+    "wikidata": "Q5530970",
+    "translations": {
+      "en": "Gender binary",
+      "zhHans": "性别二元论",
+      "zhHant": "性別二元論",
+      "ko": "성별 이분법"
+    },
+    "aliases": [
+      "性別二元制",
+      "ジェンダー・バイナリー"
+    ],
+    "avoid": [],
+    "disputed": [],
+    "notes": "人の性別を「男」か「女」のふたつだけに分け、その二種類しかないとする考え方・社会の枠組み。とてもよくある前提だけれど、絶対の真実ではなく、ひとつの「ものの見方（信念）」にすぎない。実際の性別のあり方は連続的で、ノンバイナリーやインターセックスなど、この枠に収まらない人たちがいる。",
+    "source": "Gender binary",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/性別二元制",
+      "en": "https://en.wikipedia.org/wiki/Gender_binary"
+    }
   }
 ]

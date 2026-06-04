@@ -32,6 +32,7 @@ const P: Record<string, Link> = {
   clinics: { href: '/clinics/', label: '医療機関を探す' },
   start: { href: '/start/', label: 'はじめての方へ' },
   intersex: { href: '/intersex/', label: 'インターセックス・性分化疾患（DSD）のこと' },
+  orientation: { href: '/orientation/', label: '性的指向と「好き」のいろいろ' },
 };
 const termPages: Record<string, Link[]> = {
   'transgender': [P.basics], 'cisgender': [P.basics],
@@ -57,6 +58,7 @@ const add = (item?: Link) => { if (item && !seen.has(item.href)) { seen.add(item
 
 (termPages[entry.id] ?? []).forEach(add);
 if (entry.category === '性同一性・属性') { add(P.basics); add(P.gender); }
+if (entry.category === '性的指向') { add(P.orientation); add(P.basics); }
 const knowledgePage = knowledgePages[entry.category];
 if (knowledgePage) { add(knowledgePage); add(P.clinics); }
 if (entry.category === '法律・制度') add(P.legal);

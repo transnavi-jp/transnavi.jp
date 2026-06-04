@@ -9,6 +9,7 @@ const entries = glossaryData as GlossaryEntry[];
 // Friendly, beginner-first category order with plain-language labels.
 const categoryMeta = [
   { key: '性同一性・属性', label: '性のあり方', desc: 'トランスジェンダー、性同一性、ノンバイナリーなど、自分の性のあり方に関する言葉。' },
+  { key: '性的指向', label: '性的指向（好きになる相手）', desc: '同性愛、異性愛、無性愛など、「だれに惹かれるか」に関する言葉。自分の性別（性同一性）とは別のものさしです。' },
   { key: '生活・社会', label: '暮らし・社会', desc: 'カミングアウト、パッシングなど、日常や人との関わりに関する言葉。' },
   { key: '法律・制度', label: '法律・制度', desc: '戸籍や診断書など、手続き・制度に関する言葉。' },
   { key: 'ホルモン療法', label: 'ホルモン療法', desc: 'ホルモンや薬に関する言葉。' },
@@ -95,8 +96,10 @@ const aliasPreview = (entry: GlossaryEntry) => {
               data-categories={entry.category}
               data-search={[entry.term, entry.abbr, entry.category, entry.translations.en, ...entry.aliases].filter(Boolean).join(' ')}
             >
-              <span class="clinic-name">{entry.term}{entry.abbr ? `（${entry.abbr}）` : ''}</span>
-              {entry.translations.en && <span class="glossary-en" lang="en">{entry.translations.en}</span>}
+              <span class="glossary-card-head">
+                <span class="clinic-name">{entry.term}{entry.abbr ? `（${entry.abbr}）` : ''}</span>
+                {entry.translations.en && <span class="glossary-en" lang="en">{entry.translations.en}</span>}
+              </span>
               {entry.notes && <span class="glossary-meaning">{meaningOf(entry)}</span>}
               {entry.aliases.length > 0 && (
                 <span class="glossary-aliases"><span class="glossary-aliases-label">別名</span>{aliasPreview(entry)}</span>
