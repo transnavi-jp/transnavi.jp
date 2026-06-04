@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import clinicsData from '../../data/clinics.json';
 import type { Clinic } from '../../types/clinic';
 import { splitClinicUrls } from '../../utils/clinic-links';
-import { capabilitiesOf, CAPABILITY_LABELS } from '../../utils/clinic-genre';
+import { capabilitiesOf, CAPABILITY_LABELS, isGiCertified } from '../../utils/clinic-genre';
 
 export function getStaticPaths() {
   const clinics = clinicsData as Clinic[];
@@ -63,8 +63,11 @@ const clinicLd = {
     <h1>{clinic.name}</h1>
     <p class="lead">{clinic.displayName}</p>
 
-    {capabilities.length > 0 && (
+    {(capabilities.length > 0 || isGiCertified(clinic)) && (
       <ul class="clinic-tags" aria-label="公開情報で確認できた対応">
+        {isGiCertified(clinic) && (
+          <li class="clinic-tag clinic-tag-certified">GI学会認定施設</li>
+        )}
         {capabilities.map((cap) => (
           <li class:list={['clinic-tag', cap.startsWith('gaht') ? 'clinic-tag-gaht' : 'clinic-tag-surgery']}>
             {CAPABILITY_LABELS[cap]}
@@ -74,6 +77,9 @@ const clinicLd = {
     )}
     <p class="clinic-tags-note">
       タグは、公開情報で確認できた対応です。<strong>タグがないことは、対応していないという意味ではありません。</strong>実際に受けられるかどうかは、かならず医療機関にご確認ください。
+      {isGiCertified(clinic) && (
+        <span>「GI学会認定施設」は、日本GI（性別不合）学会の認定施設（保険適用での性別適合手術が受けられる施設）です。最新の認定状況は<a href="http://www.gi-soc.jp/" target="_blank" rel="noreferrer">学会の一覧</a>でご確認ください。</span>
+      )}
     </p>
 
     <dl class="clinic-detail">

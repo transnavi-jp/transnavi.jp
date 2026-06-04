@@ -4,7 +4,7 @@ import Mascot from '../../components/Mascot.astro';
 import clinicsData from '../../data/clinics.json';
 import type { Clinic } from '../../types/clinic';
 import { splitClinicUrls } from '../../utils/clinic-links';
-import { categoriesOf, primaryGenre, surgeryTypesOf, capabilitiesOf, CAPABILITY_LABELS } from '../../utils/clinic-genre';
+import { categoriesOf, primaryGenre, surgeryTypesOf, capabilitiesOf, CAPABILITY_LABELS, isGiCertified } from '../../utils/clinic-genre';
 
 const clinics = clinicsData as Clinic[];
 const prefectureOrder = [
@@ -107,6 +107,7 @@ const clinicsWithCategories = clinics.map((clinic) => ({
   categories: categoriesOf(clinic),
   surgeryTypes: surgeryTypesOf(clinic),
   capabilities: capabilitiesOf(clinic),
+  giCertified: isGiCertified(clinic),
   type: typeOf(clinic.name),
   region: regionOf(clinic.prefecture),
   links: splitClinicUrls(clinic.urls),
@@ -258,7 +259,7 @@ const genreCounts = mapClinics.reduce(
               data-surgery-types={clinic.surgeryTypes.join(',')}
               data-types={clinic.type}
               data-regions={clinic.region}
-              data-search={[clinic.name, clinic.displayName, clinic.region, clinic.prefecture, clinic.city, clinic.address, clinic.phone, clinic.type, ...clinic.services, ...clinic.surgeryTypes, ...clinic.capabilities.map((cap) => CAPABILITY_LABELS[cap])].filter(Boolean).join(' ')}
+              data-search={[clinic.name, clinic.displayName, clinic.region, clinic.prefecture, clinic.city, clinic.address, clinic.phone, clinic.type, ...clinic.services, ...clinic.surgeryTypes, ...clinic.capabilities.map((cap) => CAPABILITY_LABELS[cap]), clinic.giCertified ? 'GI学会認定施設 保険適用' : ''].filter(Boolean).join(' ')}
             >
               <div class="clinic-card-header">
                 <div>
@@ -278,8 +279,11 @@ const genreCounts = mapClinics.reduce(
                 {clinic.phone && <span>電話: {clinic.phone}</span>}
                 <span>{clinic.services.join('、')} / {clinic.verificationStatus}</span>
               </div>
-              {clinic.capabilities.length > 0 && (
+              {(clinic.capabilities.length > 0 || clinic.giCertified) && (
                 <ul class="clinic-tags" aria-label="公開情報で確認できた対応">
+                  {clinic.giCertified && (
+                    <li class="clinic-tag clinic-tag-certified">GI学会認定施設</li>
+                  )}
                   {clinic.capabilities.map((cap) => (
                     <li class:list={['clinic-tag', cap.startsWith('gaht') ? 'clinic-tag-gaht' : 'clinic-tag-surgery']}>
                       {CAPABILITY_LABELS[cap]}

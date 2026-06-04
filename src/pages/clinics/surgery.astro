@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import clinicsData from '../../data/clinics.json';
 import type { Clinic } from '../../types/clinic';
-import { categoriesOf, capabilitiesOf, CAPABILITY_LABELS } from '../../utils/clinic-genre';
+import { categoriesOf, capabilitiesOf, CAPABILITY_LABELS, isGiCertified } from '../../utils/clinic-genre';
 
 const prefectureOrder = [
   '北海道', '青森県', '岩手県', '宮城県', '秋田県', '山形県', '福島県', '茨城県', '栃木県', '群馬県',
@@ -72,6 +72,8 @@ const faqLd = {
     <div class="clinic-summary" aria-label="掲載件数">
       <span>手術に対応 <strong>{surgery.length}</strong> 件</span>
       <span>SRS {count('surgery-srs')} 件</span>
+      <span>睾丸摘出術 {count('surgery-orchiectomy')} 件</span>
+      <span>乳房切除 {count('surgery-mastectomy')} 件</span>
       <span>声の手術（VFS）{count('surgery-vfs')} 件</span>
       <span>豊胸 {count('surgery-breast')} 件</span>
     </div>
@@ -90,6 +92,7 @@ const faqLd = {
       <h2 id="list">手術に対応する医療機関（地域別）</h2>
       <p>
         各施設のタグは、公開情報で確認できた対応です。<strong>タグがないことは、対応していないという意味ではありません。</strong>
+        <span class="clinic-tag clinic-tag-certified">GI学会認定施設</span>のしるしは、日本GI（性別不合）学会の認定施設（保険適用での性別適合手術が受けられる施設）を示します。網羅ではなく、最新の認定状況は<a href="http://www.gi-soc.jp/" target="_blank" rel="noreferrer">学会の一覧</a>でご確認ください。
       </p>
       {byPrefecture.map((group) => (
         <div class="finder-region">
@@ -99,8 +102,11 @@ const faqLd = {
               <li class="finder-clinic">
                 <a href={`/clinics/${clinic.id}/`}>{clinic.name}</a>
                 <span class="finder-clinic-city">{clinic.city}</span>
-                {clinic.caps.length > 0 && (
+                {(clinic.caps.length > 0 || isGiCertified(clinic)) && (
                   <span class="finder-clinic-tags">
+                    {isGiCertified(clinic) && (
+                      <span class="clinic-tag clinic-tag-certified">GI学会認定施設</span>
+                    )}
                     {clinic.caps.map((cap) => (
                       <span class:list={['clinic-tag', cap.startsWith('gaht') ? 'clinic-tag-gaht' : 'clinic-tag-surgery']}>
                         {CAPABILITY_LABELS[cap]}

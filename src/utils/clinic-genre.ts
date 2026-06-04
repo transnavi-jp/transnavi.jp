@@ -82,6 +82,11 @@ export type Capability =
   | 'gaht-feminizing'
   | 'gaht-masculinizing'
   | 'surgery-srs'
+  | 'surgery-vaginoplasty'
+  | 'surgery-orchiectomy'
+  | 'surgery-phalloplasty'
+  | 'surgery-hysterectomy'
+  | 'surgery-mastectomy'
   | 'surgery-vfs'
   | 'surgery-ffs'
   | 'surgery-breast';
@@ -90,6 +95,11 @@ export const CAPABILITY_LABELS: Record<Capability, string> = {
   'gaht-feminizing': '女性化ホルモン（MtF）',
   'gaht-masculinizing': '男性化ホルモン（FtM）',
   'surgery-srs': '性別適合手術（SRS）',
+  'surgery-vaginoplasty': '造腟術',
+  'surgery-orchiectomy': '睾丸摘出術',
+  'surgery-phalloplasty': '陰茎形成術',
+  'surgery-hysterectomy': '子宮・卵巣摘出',
+  'surgery-mastectomy': '乳房切除（胸オペ）',
   'surgery-vfs': '声の手術（VFS）',
   'surgery-ffs': '顔の手術（FFS）',
   'surgery-breast': '豊胸',
@@ -99,6 +109,14 @@ export const CAPABILITY_LABELS: Record<Capability, string> = {
 // ホルモン). Plain "ホルモン療法" with no direction yields no GAHT tag.
 const FEMINIZING = /(ＭＴＦ|MTF|MtF|mtf|男性から女性|女性化ホルモン|女性ホルモン)/;
 const MASCULINIZING = /(ＦＴＭ|FTM|FtM|ftm|女性から男性|男性化ホルモン|男性ホルモン)/;
+// Specific procedures, named in the notes. Genital/internal ones are more precise
+// than the generic SRS umbrella, so when one is found the umbrella is suppressed
+// (e.g. an orchiectomy-only clinic should not read as offering full SRS).
+const ORCHIECTOMY = /睾丸摘出|精巣摘出|去勢/;
+const VAGINOPLASTY = /造腟|造膣|腟形成|膣形成/;
+const PHALLOPLASTY = /陰茎形成|陰茎再建/;
+const HYSTERECTOMY = /子宮摘出|卵巣摘出|子宮全摘|内性器摘出/;
+const MASTECTOMY = /乳房切除|乳腺摘出|胸オペ/;
 const BREAST_AUG = /(豊胸|豊乳|乳房増大|バストアップ)/;
 const VFS_TEXT = /(ＶＦＳ|VFS|声の(女性化)?手術|音声の?手術|声帯手術)/;
 const FFS_TEXT = /(ＦＦＳ|FFS|顔面女性化|顔の女性化)/;
@@ -115,10 +133,38 @@ export function capabilitiesOf(clinic: Clinic): Capability[] {
   }
 
   const surgery = surgeryTypesOf(clinic);
-  if (surgery.includes('SRS')) caps.push('surgery-srs');
+  const vaginoplasty = VAGINOPLASTY.test(text);
+  const orchiectomy = ORCHIECTOMY.test(text);
+  const phalloplasty = PHALLOPLASTY.test(text);
+  const hysterectomy = HYSTERECTOMY.test(text);
+  const hasSpecificGenital = vaginoplasty || orchiectomy || phalloplasty || hysterectomy;
+
+  // The generic 性別適合手術（SRS） umbrella — only when no specific genital
+  // procedure is named (otherwise the specific tag is shown instead, for accuracy).
+  if (surgery.includes('SRS') && !hasSpecificGenital) caps.push('surgery-srs');
+  if (vaginoplasty) caps.push('surgery-vaginoplasty');
+  if (orchiectomy) caps.push('surgery-orchiectomy');
+  if (phalloplasty) caps.push('surgery-phalloplasty');
+  if (hysterectomy) caps.push('surgery-hysterectomy');
+  if (MASTECTOMY.test(text)) caps.push('surgery-mastectomy');
   if (surgery.includes('VFS') || VFS_TEXT.test(text)) caps.push('surgery-vfs');
   if (surgery.includes('FFS') || FFS_TEXT.test(text)) caps.push('surgery-ffs');
   if (BREAST_AUG.test(text)) caps.push('surgery-breast');
 
   return caps;
 }
+
+// 日本GI（性別不合）学会の認定施設 — the facilities where 性別適合手術 can be
+// covered by insurance. From the society's published list (gi-soc.jp) and the
+// facilities' own pages; confirmed entries only. Certification changes over time
+// and this is NOT exhaustive, so the UI links readers to the official list.
+const GI_CERTIFIED_IDS = new Set<string>([
+  'srs-okayama-u',              // 岡山大学病院
+  'srs-yamanashi-u',            // 山梨大学医学部附属病院
+  'srs-aichi-nagoya-u',         // 名古屋大学医学部附属病院
+  'hrt-hokkaido-chuuou-sapmed', // 札幌医科大学附属病院
+  'srs-okinawa-chubu',          // 沖縄県立中部病院
+  'srs-chiba-gyotoku',          // 行徳総合病院（2021年認定）
+]);
+
+export const isGiCertified = (clinic: Clinic): boolean => GI_CERTIFIED_IDS.has(clinic.id);
