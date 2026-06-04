@@ -2894,6 +2894,12 @@ rp {
   display: revert;
 }
 
+/* On the vivid gradient buttons (はじめての方へ, Discord…) the label is white, so
+   the muted-gray reading would be near-invisible. Use a soft white instead. */
+.hero-button-primary rt {
+  color: rgba(255, 255, 255, 0.85);
+}
+
 .theme-toggle svg {
   width: 19px;
   height: 19px;
