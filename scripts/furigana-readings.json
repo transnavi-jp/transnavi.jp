@@ -1,0 +1,4 @@
+{
+  "_comment": "Phrase-level reading overrides for cases the tokenizer gets wrong. Key = exact substring containing ONE kanji run; value = the correct reading for that kanji run. Example: in はじめての方へ, 方 means 'person' and should read かた, but kuromoji defaults to ほう. Keys starting with _ are ignored. Matched longest-first.",
+  "はじめての方へ": "かた"
+}
