@@ -93,15 +93,15 @@ const faqLd = {
         各施設のタグは、公開情報で確認できた対応です。<strong>タグがないことは、対応していないという意味ではありません。</strong>
       </p>
       {byPrefecture.map((group) => (
-        <div class="ht-region">
-          <h3 class="ht-region-name">{group.prefecture}</h3>
-          <ul class="ht-clinic-list">
+        <div class="finder-region">
+          <h3 class="finder-region-name">{group.prefecture}</h3>
+          <ul class="finder-clinic-list">
             {group.items.map((clinic) => (
-              <li class="ht-clinic">
+              <li class="finder-clinic">
                 <a href={`/clinics/${clinic.id}/`}>{clinic.name}</a>
-                <span class="ht-clinic-city">{clinic.city}</span>
+                <span class="finder-clinic-city">{clinic.city}</span>
                 {clinic.caps.length > 0 && (
-                  <span class="ht-clinic-tags">
+                  <span class="finder-clinic-tags">
                     {clinic.caps.map((cap) => (
                       <span class:list={['clinic-tag', cap.startsWith('gaht') ? 'clinic-tag-gaht' : 'clinic-tag-surgery']}>
                         {CAPABILITY_LABELS[cap]}
@@ -121,7 +121,7 @@ const faqLd = {
 
     <section aria-labelledby="faq">
       <h2 id="faq">よくある質問</h2>
-      <dl class="ht-faq">
+      <dl class="finder-faq">
         {faqs.map((item) => (
           <div>
             <dt>{item.q}</dt>

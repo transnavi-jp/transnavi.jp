@@ -1889,12 +1889,12 @@ ul {
   line-height: 1.7;
 }
 
-/* Hormone-therapy clinic finder landing page: a crawlable, region-grouped list. */
-.ht-region {
+/* Clinic finder landing pages (hormone, surgery…): a crawlable region-grouped list. */
+.finder-region {
   margin: 18px 0;
 }
 
-.ht-region-name {
+.finder-region-name {
   margin: 0 0 8px;
   padding-bottom: 4px;
   border-bottom: 1px solid var(--line);
@@ -1902,7 +1902,7 @@ ul {
   color: var(--ink-heading);
 }
 
-.ht-clinic-list {
+.finder-clinic-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1910,39 +1910,39 @@ ul {
   gap: 8px;
 }
 
-.ht-clinic {
+.finder-clinic {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
   gap: 6px 10px;
 }
 
-.ht-clinic > a {
+.finder-clinic > a {
   font-weight: 600;
 }
 
-.ht-clinic-city {
+.finder-clinic-city {
   font-size: 0.82rem;
   color: var(--muted);
 }
 
-.ht-clinic-tags {
+.finder-clinic-tags {
   display: inline-flex;
   flex-wrap: wrap;
   gap: 6px;
 }
 
-.ht-faq > div {
+.finder-faq > div {
   margin: 0 0 14px;
 }
 
-.ht-faq dt {
+.finder-faq dt {
   font-weight: 700;
   color: var(--ink-heading);
   margin-bottom: 4px;
 }
 
-.ht-faq dd {
+.finder-faq dd {
   margin: 0;
   line-height: 1.85;
 }
@@ -2956,11 +2956,11 @@ ul {
   transform: translateY(-1px);
 }
 
-/* The furigana toggle shows a hiragana glyph; lights up when furigana is on. */
-.furigana-toggle span {
-  font-size: 18px;
-  font-weight: 800;
-  line-height: 1;
+/* The furigana toggle shows the ふ glyph as an SVG (not text); lights up when
+   furigana is on. fill:currentColor, so it follows the button's color. */
+.furigana-toggle svg {
+  width: 20px;
+  height: 18px;
 }
 :root[data-furigana='on'] .furigana-toggle {
   background: var(--accent-soft);
@@ -3163,8 +3163,9 @@ rp {
     width: 16px;
     height: 16px;
   }
-  .furigana-toggle span {
-    font-size: 15px;
+  .furigana-toggle svg {
+    width: 17px;
+    height: 15px;
   }
   .brand-mark {
     width: 50px;
