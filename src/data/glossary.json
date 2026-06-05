@@ -3794,5 +3794,58 @@
     "wikipedia": {
       "en": "https://en.wikipedia.org/wiki/Drag_queen"
     }
+  },
+  {
+    "id": "aromantic",
+    "term": "アロマンティック",
+    "category": "性的指向",
+    "translations": {
+      "en": "Aromantic"
+    },
+    "aliases": [
+      "アロ",
+      "aro",
+      "Aロマンティック"
+    ],
+    "avoid": [],
+    "disputed": [],
+    "notes": "他者に恋愛的に惹かれにくい、または惹かれないあり方。「アロ（aro）」とも。白か黒かではなくグラデーションがある。性的に惹かれにくいアセクシュアルとは別のものさしで、組み合わせは人それぞれ。恋愛をしないことは「欠けている」ことでも「冷たい」ことでもない。",
+    "source": "Aromanticism",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Aromanticism"
+    }
+  },
+  {
+    "id": "demisexual",
+    "term": "デミセクシュアル",
+    "category": "性的指向",
+    "translations": {
+      "en": "Demisexual"
+    },
+    "aliases": [
+      "デミセクシャル",
+      "demisexual"
+    ],
+    "avoid": [],
+    "disputed": [],
+    "notes": "強い感情的なつながり（信頼や絆）が生まれてはじめて、相手に性的に惹かれるあり方。アセクシュアルのスペクトラムの一つとされる。恋愛的指向でのデミロマンティックも同じ考え方。",
+    "source": "Demisexuality"
+  },
+  {
+    "id": "graysexual",
+    "term": "グレーセクシュアル",
+    "category": "性的指向",
+    "translations": {
+      "en": "Graysexual"
+    },
+    "aliases": [
+      "グレーセクシャル",
+      "グレーアセクシュアル",
+      "graysexual"
+    ],
+    "avoid": [],
+    "disputed": [],
+    "notes": "性的に惹かれることがまれ、またはごく弱いあり方。アセクシュアルと、そうでない人のあいだのグラデーションにあたる。恋愛的指向での同様のあり方はグレーロマンティックと呼ばれる。",
+    "source": "Gray asexuality"
   }
 ]
