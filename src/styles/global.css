@@ -1382,6 +1382,45 @@ ul {
   margin: 14px 0 4px;
 }
 
+/* Vertical timeline (history page): a marked dot per entry on a left rail. */
+.timeline {
+  list-style: none;
+  margin: 16px 0 8px;
+  padding: 0;
+}
+
+.timeline > li {
+  position: relative;
+  padding: 0 0 22px 26px;
+  border-left: 2px solid var(--line);
+}
+
+.timeline > li:last-child {
+  padding-bottom: 4px;
+}
+
+.timeline > li::before {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--paper);
+}
+
+.timeline-year {
+  font-weight: 800;
+  color: var(--ink-heading);
+}
+
+.timeline-event {
+  margin: 4px 0 0;
+  line-height: 1.85;
+}
+
 .concept-card {
   padding: 16px 18px;
   border: 1px solid var(--line);

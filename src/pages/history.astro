@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Accurate, gentle overview timeline of transgender history (world + Japan).
+// Dates verified against mainstream sources; the 2023 rulings especially.
+const world = [
+  { year: '古くから', event: '世界中の多くの文化に、男女の枠におさまらない性のあり方を生きた人々がいました。北米先住民の「トゥースピリット」、南アジアの「ヒジュラ」など。トランスジェンダーは、けっして新しい存在ではありません。' },
+  { year: '1919年', event: 'ドイツ・ベルリンに、性のあり方を研究する「性科学研究所」が設立されます（マグヌス・ヒルシュフェルト）。先駆的な性別適合の医療も行われました。' },
+  { year: '1930年代', event: '研究所で初期の性別適合手術が行われます。しかし1933年、ナチスによって研究所は破壊され、多くの資料が焼かれました。' },
+  { year: '1952年', event: 'クリスティン・ジョーゲンセンの性別移行が大きく報道され、トランスジェンダーの存在が世界に広く知られるきっかけになりました。' },
+  { year: '1969年', event: 'アメリカ・ニューヨークの「ストーンウォール」で、性的マイノリティへの差別に抗議する出来事（ストーンウォールの反乱）。トランスの人々も大きな役割を果たし、いまのプライドの起源の一つになりました。' },
+  { year: '1979年', event: 'トランスジェンダーの医療に関する国際的な専門家団体が設立され、ケアの指針（SOC）がつくられます（のちのWPATH）。' },
+  { year: '2018年', event: 'WHOが、ICD-11で「性別不合」を精神疾患の分類から外します（脱病理化）。「トランスであることは病気ではない」という国際的な合意です。' },
+];
+const japan = [
+  { year: '1969年', event: 'いわゆる「ブルーボーイ事件」で、性別適合手術を行った医師が有罪とされます。これ以降、日本では長らく手術が表立って行われなくなりました。' },
+  { year: '1997年', event: '日本精神神経学会が「性同一性障害に関する診断と治療のガイドライン」を策定します。' },
+  { year: '1998年', event: '埼玉医科大学で、正式な医療として日本で初めての性別適合手術が行われます。' },
+  { year: '2003年', event: '「性同一性障害者の性別の取扱いの特例に関する法律」（特例法）が成立（翌2004年施行）。家庭裁判所の審判で、戸籍上の性別を変更できるようになりました。' },
+  { year: '2008年', event: '特例法が改正され、「子がいないこと」の要件が「未成年の子がいないこと」へ緩和されます。' },
+  { year: '2018年', event: '一定の条件のもとで、性別適合手術が公的医療保険の対象になりました。' },
+  { year: '2023年6月', event: '「LGBT理解増進法」が成立します。' },
+  { year: '2023年7月', event: '最高裁が、経済産業省のトランス女性職員の女性トイレ使用を制限した対応を違法と判断しました。' },
+  { year: '2023年10月', event: '最高裁（大法廷）が、戸籍の性別変更に生殖機能をなくす手術を求める特例法の要件を「違憲」と判断しました。大きな転換点です。' },
+];
+---
+
+<BaseLayout
+  title="トランスジェンダーの歴史（年表） - とらんすナビ"
+  description="トランスジェンダーの歴史を、世界と日本の年表でやさしくたどります。ブルーボーイ事件、特例法（2003年）、2023年の最高裁の違憲判断まで。あなたは、長い歴史の続きにいます。"
+>
+  <article class="article-shell prose">
+    <div class="eyebrow">知る</div>
+    <h1>トランスジェンダーの歴史</h1>
+    <p class="lead">
+      トランスジェンダーの人は、どの時代にも、どの地域にも生きてきました。あなたは、ひとりで生まれた特別な「例外」ではなく、長い歴史の続きにいます。ここでは、世界と日本の歩みを、ざっくりとした年表でたどります。
+    </p>
+
+    <div class="page-disclaimer">
+      これは大きな流れをつかむための、ごく一部の出来事です。年表にのらない無数の人たちの暮らしや、声をあげた人たちの積み重ねの上に、今があります。
+    </div>
+
+    <section aria-labelledby="world">
+      <h2 id="world">世界の歩み</h2>
+      <ol class="timeline">
+        {world.map((item) => (
+          <li>
+            <span class="timeline-year">{item.year}</span>
+            <p class="timeline-event">{item.event}</p>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section aria-labelledby="japan">
+      <h2 id="japan">日本の歩み</h2>
+      <ol class="timeline">
+        {japan.map((item) => (
+          <li>
+            <span class="timeline-year">{item.year}</span>
+            <p class="timeline-event">{item.event}</p>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section aria-labelledby="meaning">
+      <h2 id="meaning">歴史を知ることの意味</h2>
+      <p>
+        歴史には、前に進んだ出来事も、つらい差別や弾圧の出来事もあります。まっすぐに良くなってきた、という単純な話ではありません。それでも、いつの時代にも自分らしく生きようとした人たちがいて、その積み重ねが、いまのあなたの選択肢につながっています。
+      </p>
+      <p>
+        制度はこれからも変わっていきます。最新の状況は<a href="/legal-change/">戸籍と名前の変更</a>や<a href="/transition/">性別移行を知る</a>で確認してください。言葉の意味は<a href="/glossary/">用語集</a>へ。
+      </p>
+    </section>
+
+    <p class="source-note">
+      参考：アセクシュアル・アロマンティックを中心に歴史をまとめた
+      {' '}<a href="https://acearobu.com/history/" target="_blank" rel="noreferrer">acearobu「歴史」</a>、
+      {' '}<a href="https://www.hrw.org/ja/news/2023/10/26/victory-transgender-rights-japan" target="_blank" rel="noreferrer">Human Rights Watch</a> や
+      {' '}<a href="https://www.amnesty.or.jp/news/2023/1026_10093.html" target="_blank" rel="noreferrer">アムネスティ</a>（2023年の最高裁判断）など。年表は大きな流れの紹介です。
+    </p>
+
+    <nav class="word-chips entry-related" aria-label="関連ページ">
+      <a class="word-chip" href="/legal-change/">戸籍と名前の変更</a>
+      <a class="word-chip" href="/transition/">性別移行を知る</a>
+      <a class="word-chip" href="/pride/">プライドの記念日・イベント</a>
+      <a class="word-chip" href="/learn/">知る・学ぶ</a>
+    </nav>
+  </article>
+</BaseLayout>

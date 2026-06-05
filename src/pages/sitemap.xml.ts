@@ -47,6 +47,7 @@ export const GET: APIRoute = async ({ site }) => {
     '/reference/',
     '/flags/',
     '/pride/',
+    '/history/',
     '/works/',
     '/bibliography/',
     '/about/',
