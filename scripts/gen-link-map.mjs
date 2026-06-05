@@ -117,5 +117,51 @@ for (const [route, label] of Object.entries(termLabel)) {
   else termLinks.push({ source: route, target: '/glossary/' });
 }
 
-fs.writeFileSync('dist/link-map.json', JSON.stringify({ nodes, links, terms, termLinks }));
-console.log(`link-map.json: ${nodes.length} nodes, ${links.length} links, ${terms.length} terms, ${termLinks.length} term-links`);
+// PageRank over the internal authority graph (main pages + glossary term pages)
+// as a query-independent IMPORTANCE prior for search ranking. The stored `links`
+// are undirected and `termLinks` are reversed (term -> referrer, for the force
+// graph), so we add both directions of every edge and run PageRank on the
+// resulting undirected graph — importance ≈ how central a page/term is.
+function pageRank(nodeIds, edges, { damping = 0.85, iterations = 80 } = {}) {
+  const index = new Map(nodeIds.map((id, i) => [id, i]));
+  const N = nodeIds.length;
+  const outs = Array.from({ length: N }, () => []);
+  const outDeg = new Array(N).fill(0);
+  for (const [s, t] of edges) {
+    if (!index.has(s) || !index.has(t)) continue;
+    outs[index.get(s)].push(index.get(t));
+    outDeg[index.get(s)] += 1;
+  }
+  let pr = new Array(N).fill(1 / N);
+  for (let it = 0; it < iterations; it++) {
+    let dangling = 0;
+    for (let i = 0; i < N; i++) if (outDeg[i] === 0) dangling += pr[i];
+    const base = (1 - damping) / N + (damping * dangling) / N;
+    const next = new Array(N).fill(base);
+    for (let i = 0; i < N; i++) {
+      if (outDeg[i] === 0) continue;
+      const share = (damping * pr[i]) / outDeg[i];
+      for (const j of outs[i]) next[j] += share;
+    }
+    pr = next;
+  }
+  const out = {};
+  nodeIds.forEach((id, i) => (out[id] = pr[i]));
+  return out;
+}
+
+const prNodes = [...new Set([...nodes.map((n) => n.id), ...terms.map((t) => t.id)])];
+const prEdges = [];
+for (const l of links) prEdges.push([l.source, l.target], [l.target, l.source]);
+for (const tl of termLinks) prEdges.push([tl.source, tl.target], [tl.target, tl.source]);
+const pagerank = pageRank(prNodes, prEdges);
+
+fs.writeFileSync('dist/link-map.json', JSON.stringify({ nodes, links, terms, termLinks, pagerank }));
+const prTop = Object.entries(pagerank)
+  .sort((a, b) => b[1] - a[1])
+  .slice(0, 3)
+  .map(([k]) => k)
+  .join(', ');
+console.log(
+  `link-map.json: ${nodes.length} nodes, ${links.length} links, ${terms.length} terms, ${termLinks.length} term-links; PageRank top: ${prTop}`,
+);

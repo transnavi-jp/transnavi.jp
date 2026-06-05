@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "postbuild": "node scripts/gen-css-charset.mjs && node scripts/gen-llms.mjs && node scripts/gen-data-dump.mjs && node scripts/gen-search-index.mjs && node scripts/gen-link-map.mjs && node scripts/gen-og-images.mjs && node scripts/gen-furigana.mjs",
+    "postbuild": "node scripts/gen-css-charset.mjs && node scripts/gen-llms.mjs && node scripts/gen-data-dump.mjs && node scripts/gen-link-map.mjs && node scripts/gen-search-index.mjs && node scripts/gen-og-images.mjs && node scripts/gen-furigana.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "check": "astro check",

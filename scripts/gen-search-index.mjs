@@ -120,6 +120,25 @@ for (const f of fs.readdirSync('src/content/resources')) {
   });
 }
 
+// Attach a query-independent IMPORTANCE prior `r` (0..1) from the link-graph
+// PageRank built in gen-link-map (which runs first in postbuild). Normalised by
+// the max so the most central page/term is 1.0; entries not in the graph
+// (clinics, works, external links) get no `r` and so receive no boost. The
+// matcher folds this in multiplicatively, see public/search-core.js.
+try {
+  const { pagerank } = JSON.parse(fs.readFileSync(`${DIST}/link-map.json`, 'utf8'));
+  if (pagerank && Object.keys(pagerank).length) {
+    const maxPr = Math.max(...Object.values(pagerank));
+    for (const e of entries) {
+      const pr = pagerank[e.u];
+      if (pr) e.r = Math.round((pr / maxPr) * 1000) / 1000;
+    }
+  }
+} catch (err) {
+  console.warn(`search-index: no PageRank prior attached (${err.message})`);
+}
+
 fs.writeFileSync(`${DIST}/search-index.json`, JSON.stringify(entries));
 const kb = (fs.statSync(`${DIST}/search-index.json`).size / 1024).toFixed(0);
-console.log(`search-index.json: ${entries.length} entries, ${kb}KB`);
+const withR = entries.filter((e) => e.r != null).length;
+console.log(`search-index.json: ${entries.length} entries (${withR} with importance prior), ${kb}KB`);

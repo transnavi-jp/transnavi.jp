@@ -1,0 +1,349 @@
+[
+  {
+    "query": "自分はトランスかもしれない",
+    "intent": "A questioning, anxious user who suspects they might be trans and wants guidance on what to do / how to think about it, not a dictionary definition.",
+    "idealUrl": "/start/",
+    "alsoGood": [
+      "/glossary/transgender/",
+      "/basics/"
+    ],
+    "kind": "topic"
+  },
+  {
+    "query": "トランス シス ノンバイナリー 違い",
+    "intent": "Wants a beginner-friendly explanation of the basic identity vocabulary and how trans/cis/non-binary differ.",
+    "idealUrl": "/basics/",
+    "alsoGood": [
+      "/glossary/non-binary/",
+      "/gender/"
+    ],
+    "kind": "topic"
+  },
+  {
+    "query": "性自認とは",
+    "intent": "Looking up exactly what gender identity / 性自認 means, including the 性自認 vs 性同一性 vs ジェンダーアイデンティティ nuance.",
+    "idealUrl": "/glossary/gender-identity/",
+    "alsoGood": [
+      "/basics/"
+    ],
+    "kind": "exact-term"
+  },
+  {
+    "query": "性別違和ってなに",
+    "intent": "Wants to understand what gender dysphoria feels like and that there's no threshold to be trans — needs the explainer, not a one-line gloss.",
+    "idealUrl": "/dysphoria/",
+    "alsoGood": [
+      "/glossary/gender-dysphoria/",
+      "/glossary/gender-incongruence/"
+    ],
+    "kind": "topic"
+  },
+  {
+    "query": "クエスチョニング",
+    "intent": "Exact glossary lookup of 'questioning' — the state of not yet knowing one's gender/orientation.",
+    "idealUrl": "/glossary/questioning/",
+    "alsoGood": [
+      "/start/"
+    ],
+    "kind": "exact-term"
+  },
+  {
+    "query": "Xジェンダー",
+    "intent": "Japanese-specific non-binary umbrella term; wants to know what it means and where they fit — no dedicated stub, so the gender-spectrum explainer is best.",
+    "idealUrl": "/gender/",
+    "alsoGood": [
+      "/glossary/non-binary/",
+      "/glossary/genderqueer/"
+    ],
+    "kind": "topic"
+  },
+  {
+    "query": "好きになる性別と自分の性別 関係ある？",
+    "intent": "Confused about whether sexual orientation and gender identity are the same thing; wants reassurance they're separate axes.",
+    "idealUrl": "/orientation/",
+    "alsoGood": [
+      "/glossary/sexual-orientation/",
+      "/glossary/gender-identity/"
+    ],
+    "kind": "topic"
+  },
+  {
+    "query": "インターセックス 第三の性",
+    "intent": "Common misconception search — thinks intersex means a 'third sex'; the intersex page explicitly corrects this and explains DSD accurately.",
+    "idealUrl": "/intersex/",
+    "alsoGood": [
+      "/glossary/intersex/",
+      "/gender/"
+    ],
+    "kind": "ambiguous"
+  },
+  {
+    "query": "のんばいなりー",
+    "intent": "Kana-only spelling of non-binary; wants the definition of the identity term.",
+    "idealUrl": "/glossary/non-binary/",
+    "alsoGood": [
+      "/gender/",
+      "/basics/"
+    ],
+    "kind": "typo-or-kana"
+  },
+  {
+    "query": "ホルモン 胸 いつから",
+    "intent": "Wants to know when breasts start developing on estrogen HRT and the general timeline of changes.",
+    "idealUrl": "/hrt-effects/",
+    "alsoGood": [
+      "/glossary/breast-development/",
+      "/hrt-medications/"
+    ],
+    "kind": "topic"
+  },
+  {
+    "query": "フラホル やり方",
+    "intent": "Asking about DIY/self-administered HRT (フラホル) using common slang; wants the practical+risk explainer, not just a one-line definition.",
+    "idealUrl": "/hrt-medications/",
+    "alsoGood": [
+      "/glossary/diy-hrt/"
+    ],
+    "kind": "topic"
+  },
+  {
+    "query": "SRS",
+    "intent": "Looking up sex reassignment surgery; ambiguous between understanding what the surgery is and finding where to get it, but a lay user typing the bare acronym most wants the explainer of what SRS involves.",
+    "idealUrl": "/surgery/",
+    "alsoGood": [
+      "/glossary/gas/",
+      "/clinics/"
+    ],
+    "kind": "ambiguous"
+  },
+  {
+    "query": "思春期ブロッカー 副作用 元に戻る",
+    "intent": "A teen/parent worried whether puberty blockers are reversible and what the effects are; wants the explainer page.",
+    "idealUrl": "/puberty-blockers/",
+    "alsoGood": [
+      "/glossary/puberty-blocker/",
+      "/glossary/gnrh-analogues/"
+    ],
+    "kind": "topic"
+  },
+  {
+    "query": "声 高くしたい mtf 練習",
+    "intent": "Trans-fem user wanting to feminize their voice through practice at home; wants the voice-training explainer, NOT voice surgery.",
+    "idealUrl": "/voice/",
+    "alsoGood": [
+      "/glossary/voice-training/",
+      "/glossary/voice-feminization-surgery/"
+    ],
+    "kind": "topic"
+  },
+  {
+    "query": "ひげ 永久脱毛 レーザー 電気 どっち",
+    "intent": "Comparing permanent hair removal methods (laser vs electrolysis) for facial hair; wants the overview that contrasts both, not a single-method glossary stub.",
+    "idealUrl": "/hair-removal/",
+    "alsoGood": [
+      "/glossary/electrolysis/",
+      "/glossary/laser-hair-removal/"
+    ],
+    "kind": "topic"
+  },
+  {
+    "query": "女性ホルモン 病院 探したい",
+    "intent": "Wants to find a clinic/hospital that provides feminizing hormone therapy.",
+    "idealUrl": "/clinics/",
+    "alsoGood": [
+      "/hrt-medications/",
+      "/hrt-effects/"
+    ],
+    "kind": "topic"
+  },
+  {
+    "query": "ホルモン始める前に 精子 凍結",
+    "intent": "Worried about fertility before starting HRT; considering sperm freezing and wants the fertility-preservation explainer.",
+    "idealUrl": "/fertility/",
+    "alsoGood": [
+      "/glossary/diy-hrt/"
+    ],
+    "kind": "topic"
+  },
+  {
+    "query": "性転換手術 費用 保険",
+    "intent": "Asking how much transition surgery costs and whether insurance applies; wants the cost/finance overview, not a surgery technique page.",
+    "idealUrl": "/cost/",
+    "alsoGood": [
+      "/surgery/",
+      "/glossary/gas/"
+    ],
+    "kind": "ambiguous"
+  },
+  {
+    "query": "戸籍 性別 変更 やり方",
+    "intent": "Wants to know how to legally change the sex marker on their family register (戸籍), the actual procedure and requirements.",
+    "idealUrl": "/legal-change/",
+    "alsoGood": [
+      "/glossary/legal-gender-recognition/",
+      "/glossary/transgender-certificate/"
+    ],
+    "kind": "topic"
+  },
+  {
+    "query": "特例法 要件 手術なし",
+    "intent": "Looking for the current requirements under the GID special-cases law (特例法), specifically whether surgery is still required after the 2023 supreme court ruling.",
+    "idealUrl": "/legal-change/",
+    "alsoGood": [],
+    "kind": "topic"
+  },
+  {
+    "query": "名前 変えたい 改名 トランス",
+    "intent": "Wants to change their legal first name; needs the family-court name-change (改名) procedure for trans people.",
+    "idealUrl": "/legal-change/",
+    "alsoGood": [
+      "/glossary/deadname/"
+    ],
+    "kind": "topic"
+  },
+  {
+    "query": "カミングアウト したい 親",
+    "intent": "A (likely young) person wanting guidance on whether and how to come out to family.",
+    "idealUrl": "/coming-out/",
+    "alsoGood": [
+      "/glossary/coming-out/",
+      "/support/"
+    ],
+    "kind": "topic"
+  },
+  {
+    "query": "アウティング とは",
+    "intent": "Looking up the precise meaning of the term 'outing' (being exposed without consent) — a definition lookup.",
+    "idealUrl": "/glossary/force-outing/",
+    "alsoGood": [
+      "/safety/",
+      "/allies/"
+    ],
+    "kind": "exact-term"
+  },
+  {
+    "query": "子供から打ち明けられた どうすれば",
+    "intent": "A parent/friend whose loved one just came out to them, wanting to know how to respond well — the receiver's perspective, not their own coming out.",
+    "idealUrl": "/allies/",
+    "alsoGood": [
+      "/coming-out/",
+      "/glossary/ally/"
+    ],
+    "kind": "ambiguous"
+  },
+  {
+    "query": "しにたい 相談 lgbt",
+    "intent": "A distressed user in crisis wanting someone to talk to right now — needs hotline numbers and where to reach out.",
+    "idealUrl": "/support/",
+    "alsoGood": [
+      "/safety/"
+    ],
+    "kind": "topic"
+  },
+  {
+    "query": "そぎ がいどらいん 学校",
+    "intent": "Wants official SOGI guidelines for schools/workplaces (kana-spelled SOGI) — a link collection to point to or cite.",
+    "idealUrl": "/guidelines/",
+    "alsoGood": [
+      "/glossary/sogi/",
+      "/allies/"
+    ],
+    "kind": "typo-or-kana"
+  },
+  {
+    "query": "トイレ どっち 使う 不安",
+    "intent": "Anxious about which restroom to use day-to-day; wants practical reassurance and tips, not a legal definition.",
+    "idealUrl": "/everyday/",
+    "alsoGood": [
+      "/glossary/bathroom-access/",
+      "/safety/"
+    ],
+    "kind": "topic"
+  },
+  {
+    "query": "HRT",
+    "intent": "Bare abbreviation — user wants to know what hormone therapy is and what it does to the body, not a one-line glossary definition",
+    "idealUrl": "/hrt-effects/",
+    "alsoGood": [
+      "/hrt-medications/",
+      "/glossary/gaht/"
+    ],
+    "kind": "ambiguous"
+  },
+  {
+    "query": "ふらほる",
+    "intent": "Pure-hiragana of フラホル (DIY/self-medicated HRT); a user considering or curious about self-medication wants the real explainer on why it's risky and how to stay safe, not just the term stub",
+    "idealUrl": "/hrt-medications/",
+    "alsoGood": [
+      "/glossary/diy-hrt/"
+    ],
+    "kind": "typo-or-kana"
+  },
+  {
+    "query": "GID",
+    "intent": "Outdated abbreviation (gender identity disorder / 性同一性障害); user is trying to understand the concept of gender dysphoria. No GID glossary stub exists, and the clinic that literally says 'GID 外来' is NOT what they want",
+    "idealUrl": "/dysphoria/",
+    "alsoGood": [
+      "/glossary/gender-incongruence/",
+      "/glossary/gender-dysphoria/"
+    ],
+    "kind": "ambiguous"
+  },
+  {
+    "query": "声",
+    "intent": "Single broad word — most users typing just '声' want to learn how to change/train their voice at home, the explainer, not the surgery glossary stub",
+    "idealUrl": "/voice/",
+    "alsoGood": [
+      "/glossary/voice-training/",
+      "/glossary/voice-feminization-surgery/"
+    ],
+    "kind": "ambiguous"
+  },
+  {
+    "query": "名前 変更",
+    "intent": "Broad word — user wants the practical how-to for legally changing their name (家庭裁判所 改名), not the deadname glossary stub",
+    "idealUrl": "/legal-change/",
+    "alsoGood": [
+      "/glossary/deadname/"
+    ],
+    "kind": "ambiguous"
+  },
+  {
+    "query": "ホルモン",
+    "intent": "Single broad word — a beginner wants an overview of what hormone therapy changes; the effects explainer is the best landing, ahead of any specific drug or clinic",
+    "idealUrl": "/hrt-effects/",
+    "alsoGood": [
+      "/hrt-medications/",
+      "/glossary/gaht/"
+    ],
+    "kind": "ambiguous"
+  },
+  {
+    "query": "MtF",
+    "intent": "Bare abbreviation — user wants the meaning of MtF (trans woman); this is a definitional lookup so the glossary stub is correct over any explainer",
+    "idealUrl": "/glossary/transgender-woman/",
+    "alsoGood": [
+      "/basics/"
+    ],
+    "kind": "exact-term"
+  },
+  {
+    "query": "せいべついわ",
+    "intent": "Pure-hiragana of 性別違和 with a tiny dropped vowel; distressed user wants to understand the feeling, so the explainer beats the glossary stub",
+    "idealUrl": "/dysphoria/",
+    "alsoGood": [
+      "/glossary/gender-dysphoria/"
+    ],
+    "kind": "typo-or-kana"
+  },
+  {
+    "query": "SRS 病院",
+    "intent": "Abbreviation (sex reassignment surgery) plus broad word 病院 — user wants the list of clinics/hospitals that do surgery, not the term definition",
+    "idealUrl": "/clinics/",
+    "alsoGood": [
+      "/glossary/gas/",
+      "/surgery/"
+    ],
+    "kind": "ambiguous"
+  }
+]
