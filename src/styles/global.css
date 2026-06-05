@@ -8,9 +8,16 @@
   --line: rgba(154, 207, 243, 0.55);
   --line-strong: rgba(255, 182, 209, 0.75);
   --accent: #4ba8ea;
+  /* Text-link blue: darker than --accent so body links clear WCAG AA (4.66:1 on
+     white) while --accent stays for soft fills/borders/icons. */
+  --link: #1a78c2;
+  /* Solid-fill interactive elements (buttons) that carry text on top: a darker
+     fill so the label clears AA (white on #1a78c2 = 4.66:1). */
+  --btn-fill: #1a78c2;
+  --btn-ink: #ffffff;
   --accent-strong: #ff83b7;
   --accent-soft: #eef7ff;
-  --accent-term: #8a6dc6;
+  --accent-term: #7a58bd;
   --pink-soft: #fff0f7;
   --shadow: 0 14px 40px rgba(154, 207, 243, 0.18);
   --shadow-soft: 0 8px 22px rgba(255, 166, 204, 0.14);
@@ -31,7 +38,7 @@
 
 /* Visible focus ring for keyboard users (suppressed on mouse click). */
 :focus-visible {
-  outline: 2.5px solid var(--accent);
+  outline: 2.5px solid var(--link);
   outline-offset: 2px;
 }
 
@@ -43,8 +50,8 @@
   z-index: 200;
   padding: 9px 18px;
   border-radius: 0 0 12px 12px;
-  background: var(--accent);
-  color: #fff;
+  background: var(--btn-fill);
+  color: var(--btn-ink);
   font-weight: 700;
   text-decoration: none;
   box-shadow: var(--shadow-soft);
@@ -73,7 +80,7 @@ body {
 }
 
 a {
-  color: var(--accent);
+  color: var(--link);
   text-decoration-thickness: 1.5px;
   text-underline-offset: 0.2em;
 }
@@ -1912,8 +1919,8 @@ ul {
 .link-chip-lang {
   padding: 0 7px;
   border-radius: 999px;
-  background: var(--accent);
-  color: #fff;
+  background: var(--btn-fill);
+  color: var(--btn-ink);
   font-size: 0.66rem;
   font-weight: 700;
   line-height: 1.8;
@@ -2432,8 +2439,8 @@ ul {
   gap: 7px;
   padding: 9px 18px;
   border-radius: 999px;
-  background: var(--accent);
-  color: #fff;
+  background: var(--btn-fill);
+  color: var(--btn-ink);
   font-weight: 800;
   font-size: 1.05rem;
   letter-spacing: 0.02em;
@@ -3262,6 +3269,11 @@ ul {
   --line-strong: rgba(255, 160, 200, 0.38);
   --line-hover: rgba(255, 150, 196, 0.55);
   --accent: #74bbf2;
+  --link: #74bbf2;
+  /* In dark mode the button keeps its light-blue pop but takes dark text
+     (#10203a on #74bbf2 = 7.86:1) instead of white, which was illegible. */
+  --btn-fill: #74bbf2;
+  --btn-ink: #10203a;
   --accent-strong: #ff9ecb;
   --accent-soft: rgba(99, 148, 222, 0.22);
   --accent-term: #bb9ee8;
