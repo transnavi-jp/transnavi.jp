@@ -5,6 +5,10 @@ url: https://morning.kodansha.co.jp/a/kamataniyuhki.html
 language: ja
 region: japan
 category: media
+topicTags:
+  - ノンバイナリー
+  - 性的指向
+  - 当事者の言葉
 tags:
   - Xジェンダー
   - アセクシュアル

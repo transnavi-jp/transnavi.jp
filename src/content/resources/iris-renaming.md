@@ -4,7 +4,10 @@ description: "トランス当事者が、家庭裁判所での改名手続きや
 url: https://iris-lgbt.com/blogs/real_experience_of_renaming
 language: ja
 region: japan
-category: guide
+category: legal
+topicTags:
+  - 法律・制度
+  - 当事者の言葉
 tags:
   - 改名
   - 家庭裁判所

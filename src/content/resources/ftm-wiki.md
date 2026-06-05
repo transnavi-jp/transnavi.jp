@@ -5,6 +5,10 @@ url: https://ftm.wiki/
 language: zh-Hans
 region: global
 category: guide
+topicTags:
+  - FtM・男性化
+  - ホルモン療法
+  - 手術
 tags:
   - FtM
   - トランス男性

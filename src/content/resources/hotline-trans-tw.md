@@ -5,6 +5,11 @@ url: https://hotline.org.tw/lgbt/transgender
 language: zh-Hant
 region: taiwan
 category: guide
+topicTags:
+  - アイデンティティ
+  - ホルモン療法
+  - 当事者の言葉
+  - コミュニティ文化
 tags:
   - 台湾
   - 基礎知識

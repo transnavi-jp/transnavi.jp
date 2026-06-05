@@ -5,6 +5,10 @@ url: https://niji-recruiting.com/2022/02/15/1009/
 language: ja
 region: japan
 category: media
+topicTags:
+  - FtM・男性化
+  - 人間関係
+  - 当事者の言葉
 tags:
   - 体験談
   - FtM

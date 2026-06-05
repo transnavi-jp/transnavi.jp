@@ -5,6 +5,9 @@ url: http://wasadasan.com/voice2/hormon-byouin/
 language: ja
 region: japan
 category: directory
+topicTags:
+  - ホルモン療法
+  - MtF・女性化
 tags:
   - MtF
   - HRT

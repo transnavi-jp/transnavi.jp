@@ -2,8 +2,20 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import organizations from '../data/organizations.json';
+import poisData from '../data/map-pois.json';
 
 const resources = await getCollection('resources');
+
+// Embedded map of the place-based community resources (orgs, student circles,
+// support desks, events) — the non-clinic POIs, reusing /map.js.
+const resourceMapPois = (poisData as { name: string; type: string; url: string; lat: number; lng: number }[]).filter(
+  (p) => p.type !== 'surgery',
+);
+const resourceMapData = { clinics: [], pois: resourceMapPois };
+const poiTypeCounts = resourceMapPois.reduce(
+  (acc, p) => ((acc[p.type] = (acc[p.type] ?? 0) + 1), acc),
+  {} as Record<string, number>,
+);
 
 // Predefined search chips — common tags/regions, so people can filter by tapping
 // instead of typing (clicking sets the search box; see public/filter-index.js).
@@ -65,6 +77,22 @@ const langLabels: Record<string, string> = {
       <span>{tabs.length}分類</span>
     </div>
 
+    <section class="resource-map" aria-label="団体・拠点の地図">
+      <div class="map-legend" aria-label="地図の凡例">
+        <label><input type="checkbox" data-map-toggle="org" checked /><span class="map-dot map-dot-org" aria-hidden="true"></span>団体・拠点<span class="map-legend-count">{poiTypeCounts.org ?? 0}</span></label>
+        <label><input type="checkbox" data-map-toggle="circle" checked /><span class="map-dot map-dot-circle" aria-hidden="true"></span>学生サークル<span class="map-legend-count">{poiTypeCounts.circle ?? 0}</span></label>
+        <label><input type="checkbox" data-map-toggle="desk" checked /><span class="map-dot map-dot-desk" aria-hidden="true"></span>相談窓口<span class="map-legend-count">{poiTypeCounts.desk ?? 0}</span></label>
+        <label><input type="checkbox" data-map-toggle="event" checked /><span class="map-dot map-dot-event" aria-hidden="true"></span>イベント<span class="map-legend-count">{poiTypeCounts.event ?? 0}</span></label>
+      </div>
+      <div id="map" class="map-canvas" role="application" aria-label="団体・拠点・相談窓口・イベントの地図">
+        <p class="map-fallback">地図を表示するには JavaScript が必要です。下の一覧からも探せます。</p>
+      </div>
+      <p class="clinic-map-note">
+        場所のわかる団体・拠点・相談窓口・イベントを地図にしています。
+        <a class="map-everything-link" href="/map/">医療機関もふくむ地図を見る →</a>
+      </p>
+    </section>
+
     <section class="filter-tabs" aria-label="分類" data-filter-tabs>
       <button type="button" class="filter-tab" data-filter-tab data-filter-value="" aria-pressed="true">すべて</button>
       {tabs.map((tab) => (
@@ -99,15 +127,15 @@ const langLabels: Record<string, string> = {
               title={resource.data.description}
               data-filter-item
               data-categories={section.key}
-              data-search={[resource.data.title, resource.data.description, ...resource.data.tags].join(' ')}
+              data-search={[resource.data.title, resource.data.description, ...resource.data.tags, ...resource.data.topicTags].join(' ')}
             >
               <span class="link-chip-title">{resource.data.title}</span>
               {resource.data.language !== 'ja' && langLabels[resource.data.language] && (
                 <span class="link-chip-lang">{langLabels[resource.data.language]}</span>
               )}
-              {resource.data.tags.length > 0 && (
+              {(resource.data.topicTags.length > 0 ? resource.data.topicTags : resource.data.tags).length > 0 && (
                 <span class="link-chip-tags">
-                  {resource.data.tags.slice(0, 3).map((tag) => (
+                  {(resource.data.topicTags.length > 0 ? resource.data.topicTags : resource.data.tags).slice(0, 4).map((tag) => (
                     <span class="link-chip-tag">{tag}</span>
                   ))}
                 </span>
@@ -158,5 +186,9 @@ const langLabels: Record<string, string> = {
       （CC0）をもとに、当サイトで追加・更新しています。リンク先の内容は各運営者に帰属します。
     </p>
   </article>
+  <script type="application/json" id="map-data" set:html={JSON.stringify(resourceMapData)} />
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
+  <script is:inline src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+  <script is:inline src="/map.js" defer></script>
   <script is:inline src="/filter-index.js" defer></script>
 </BaseLayout>

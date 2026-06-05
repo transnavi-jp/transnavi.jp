@@ -5,6 +5,10 @@ url: https://teamrans.jp/
 language: ja
 region: japan
 category: community
+topicTags:
+  - コミュニティ文化
+  - 差別・偏見
+  - 当事者の言葉
 tags:
   - 当事者
   - 医療アクセス

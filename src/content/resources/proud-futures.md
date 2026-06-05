@@ -5,6 +5,10 @@ url: https://www.proudfutures.org/
 language: ja
 region: japan
 category: community
+topicTags:
+  - メンタルヘルス
+  - 人間関係
+  - コミュニティ文化
 tags:
   - 若者支援
   - 子ども

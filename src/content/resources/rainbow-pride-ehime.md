@@ -5,6 +5,10 @@ url: https://www.rainbowpride-ehime.org/
 language: ja
 region: japan
 category: community
+topicTags:
+  - コミュニティ文化
+  - 人間関係
+  - メンタルヘルス
 tags:
   - 愛媛
   - 松山

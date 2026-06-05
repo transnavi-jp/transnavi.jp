@@ -5,6 +5,11 @@ url: https://rle.wiki/
 language: zh-Hans
 region: global
 category: guide
+topicTags:
+  - ジェンダー表現
+  - 人間関係
+  - 当事者の言葉
+  - コミュニティ文化
 tags:
   - RLE
   - 実生活

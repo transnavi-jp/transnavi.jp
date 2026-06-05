@@ -5,6 +5,11 @@ url: https://www.youtube.com/channel/UCTQZKCd-p5zTOW6Ff5sFssg
 language: ja
 region: japan
 category: media
+topicTags:
+  - FtM・男性化
+  - 当事者の言葉
+  - 人間関係
+  - コミュニティ文化
 tags:
   - トランス男性
   - FtM

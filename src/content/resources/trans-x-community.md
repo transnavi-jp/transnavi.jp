@@ -5,6 +5,11 @@ url: https://trans-x-gender.com/
 language: ja
 region: japan
 category: community
+topicTags:
+  - アイデンティティ
+  - ノンバイナリー
+  - 人間関係
+  - コミュニティ文化
 tags:
   - 当事者コミュニティ
   - 性別違和

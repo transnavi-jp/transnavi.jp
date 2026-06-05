@@ -5,6 +5,11 @@ url: https://245family.jimdofree.com/
 language: ja
 region: japan
 category: community
+topicTags:
+  - 人間関係
+  - メンタルヘルス
+  - コミュニティ文化
+  - アイデンティティ
 tags:
   - 子ども
   - 家族

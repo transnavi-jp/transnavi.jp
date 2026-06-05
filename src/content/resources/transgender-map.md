@@ -5,6 +5,12 @@ url: https://www.transgendermap.com/
 language: en
 region: global
 category: guide
+topicTags:
+  - 法律・制度
+  - 手術
+  - ホルモン療法
+  - アイデンティティ
+  - 医学用語
 tags:
   - 移行
   - ガイド

@@ -5,6 +5,9 @@ url: https://rainbowsoup.net/
 language: ja
 region: japan
 category: community
+topicTags:
+  - コミュニティ文化
+  - メンタルヘルス
 tags:
   - 福岡
   - コミュニティ

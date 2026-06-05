@@ -5,6 +5,11 @@ url: https://otomejuku.jp/
 language: ja
 region: japan
 category: guide
+topicTags:
+  - MtF・女性化
+  - ジェンダー表現
+  - 脱毛
+  - 声
 tags:
   - MtF
   - 情報

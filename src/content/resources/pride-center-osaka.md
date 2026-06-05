@@ -5,6 +5,9 @@ url: https://pridecenter.jp/
 language: ja
 region: japan
 category: community
+topicTags:
+  - コミュニティ文化
+  - メンタルヘルス
 tags:
   - コミュニティスペース
   - 相談

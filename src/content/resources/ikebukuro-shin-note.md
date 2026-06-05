@@ -5,6 +5,10 @@ url: https://note.com/singh_ike
 language: ja
 region: japan
 category: media
+topicTags:
+  - ホルモン療法
+  - 手術
+  - 医学用語
 tags:
   - 発信
   - 医療

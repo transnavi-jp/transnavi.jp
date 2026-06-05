@@ -5,6 +5,11 @@ url: https://trans101.jp/
 language: ja
 region: japan
 category: guide
+topicTags:
+  - アイデンティティ
+  - 医学用語
+  - 差別・偏見
+  - 人間関係
 tags:
   - 入門
   - 用語

@@ -5,6 +5,12 @@ url: https://mtf.wiki/ja/
 language: ja
 region: global
 category: guide
+topicTags:
+  - MtF・女性化
+  - ホルモン療法
+  - 手術
+  - 医学用語
+  - 薬
 tags:
   - MtF
   - transfeminine

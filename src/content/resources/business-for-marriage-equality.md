@@ -5,6 +5,9 @@ url: https://bformarriageequality.net/
 language: ja
 region: japan
 category: legal
+topicTags:
+  - 法律・制度
+  - 差別・偏見
 tags:
   - 婚姻の平等
   - 企業

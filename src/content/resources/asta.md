@@ -5,6 +5,10 @@ url: https://asta.themedia.jp/
 language: ja
 region: japan
 category: community
+topicTags:
+  - 差別・偏見
+  - コミュニティ文化
+  - 人間関係
 tags:
   - 出張授業
   - 啓発

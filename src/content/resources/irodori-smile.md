@@ -5,6 +5,12 @@ url: https://www.irodorismile.org/
 language: ja
 region: japan
 category: community
+topicTags:
+  - コミュニティ文化
+  - 人間関係
+  - 声
+  - MtF・女性化
+  - 当事者の言葉
 tags:
   - 当事者会
   - 居場所

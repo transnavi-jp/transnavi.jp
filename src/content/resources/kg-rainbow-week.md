@@ -5,6 +5,10 @@ url: https://kgrainbowweek.com/
 language: ja
 region: japan
 category: community
+topicTags:
+  - コミュニティ文化
+  - 差別・偏見
+  - 人間関係
 tags:
   - イベント
   - 大学

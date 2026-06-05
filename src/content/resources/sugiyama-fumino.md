@@ -5,6 +5,10 @@ url: https://fuminos.com/
 language: ja
 region: japan
 category: media
+topicTags:
+  - FtM・男性化
+  - 当事者の言葉
+  - コミュニティ文化
 tags:
   - トランス男性
   - FtM

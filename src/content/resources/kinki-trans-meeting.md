@@ -5,6 +5,10 @@ url: https://x.com/kintoramtg
 language: ja
 region: japan
 category: community
+topicTags:
+  - コミュニティ文化
+  - 人間関係
+  - メンタルヘルス
 tags:
   - 当事者会
   - トランスジェンダー

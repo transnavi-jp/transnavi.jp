@@ -5,6 +5,9 @@ url: https://g-pit.com/gidclinics/
 language: ja
 region: japan
 category: directory
+topicTags:
+  - ホルモン療法
+  - MtF・女性化
 tags:
   - 医療機関
   - 地図

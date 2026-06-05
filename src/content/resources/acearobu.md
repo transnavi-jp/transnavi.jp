@@ -5,6 +5,11 @@ url: https://acearobu.com/
 language: ja
 region: japan
 category: guide
+topicTags:
+  - 性的指向
+  - アイデンティティ
+  - 医学用語
+  - 歴史的な語
 tags:
   - 用語集
   - アセクシュアル

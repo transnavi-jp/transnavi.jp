@@ -5,6 +5,10 @@ url: https://nijibridge.jp/
 language: ja
 region: japan
 category: research
+topicTags:
+  - 法律・制度
+  - 差別・偏見
+  - コミュニティ文化
 tags:
   - データ
   - 調査

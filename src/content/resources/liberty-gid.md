@@ -5,6 +5,11 @@ url: https://gid-liberty.com/
 language: ja
 region: japan
 category: community
+topicTags:
+  - コミュニティ文化
+  - 人間関係
+  - 当事者の言葉
+  - アイデンティティ
 tags:
   - 当事者会
   - 性別不合

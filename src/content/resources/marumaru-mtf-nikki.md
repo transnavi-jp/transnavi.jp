@@ -5,6 +5,10 @@ url: https://note.com/maru2blog
 language: ja
 region: japan
 category: media
+topicTags:
+  - MtF・女性化
+  - 当事者の言葉
+  - 手術
 tags:
   - ブログ
   - MtF

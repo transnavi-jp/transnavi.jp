@@ -5,6 +5,11 @@ url: https://rebitlgbt.org/
 language: ja
 region: japan
 category: community
+topicTags:
+  - メンタルヘルス
+  - 人間関係
+  - コミュニティ文化
+  - 差別・偏見
 tags:
   - 支援団体
   - 若者支援

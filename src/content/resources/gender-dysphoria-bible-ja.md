@@ -5,6 +5,12 @@ url: https://bible.transnavi.jp/ja/
 language: ja
 region: global
 category: guide
+topicTags:
+  - アイデンティティ
+  - メンタルヘルス
+  - 当事者の言葉
+  - 医学用語
+  - からだ・解剖
 tags:
   - 性別違和
   - 解説

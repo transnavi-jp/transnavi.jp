@@ -5,6 +5,9 @@ url: https://lgbtetc.jp/
 language: ja
 region: japan
 category: legal
+topicTags:
+  - 法律・制度
+  - 差別・偏見
 tags:
   - 法制度
   - 提言

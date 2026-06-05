@@ -5,6 +5,11 @@ url: https://www.maedaryo.com/
 language: ja
 region: japan
 category: media
+topicTags:
+  - FtM・男性化
+  - 人間関係
+  - 当事者の言葉
+  - 差別・偏見
 tags:
   - トランス男性
   - FtM

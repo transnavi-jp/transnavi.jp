@@ -5,6 +5,11 @@ url: https://x.com/hatakeno_tomato
 language: ja
 region: japan
 category: media
+topicTags:
+  - MtF・女性化
+  - 当事者の言葉
+  - 差別・偏見
+  - コミュニティ文化
 tags:
   - トランス女性
   - MtF

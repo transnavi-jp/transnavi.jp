@@ -5,6 +5,12 @@ url: https://x.com/ffs_trans
 language: ja
 region: japan
 category: media
+topicTags:
+  - 手術
+  - 声
+  - ホルモン療法
+  - MtF・女性化
+  - からだ・解剖
 tags:
   - 発信
   - FFS

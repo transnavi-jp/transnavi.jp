@@ -5,6 +5,11 @@ url: https://www.youtube.com/@xg_official
 language: ja
 region: japan
 category: media
+topicTags:
+  - ノンバイナリー
+  - FtM・男性化
+  - 当事者の言葉
+  - コミュニティ文化
 tags:
   - ノンバイナリー
   - トランスマスキュリン

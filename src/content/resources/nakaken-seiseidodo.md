@@ -5,6 +5,11 @@ url: https://www.youtube.com/channel/UCAO_5kAa3nyfShxRJp2_jlw
 language: ja
 region: japan
 category: media
+topicTags:
+  - ノンバイナリー
+  - 性的指向
+  - 当事者の言葉
+  - コミュニティ文化
 tags:
   - Xジェンダー
   - アセクシュアル

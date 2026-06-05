@@ -5,6 +5,10 @@ url: https://lgbt-family.or.jp/
 language: ja
 region: japan
 category: community
+topicTags:
+  - 人間関係
+  - カミングアウト
+  - コミュニティ文化
 tags:
   - 家族
   - 当事者支援

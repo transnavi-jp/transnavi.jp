@@ -5,6 +5,10 @@ url: https://joseika.com
 language: ja
 region: japan
 category: guide
+topicTags:
+  - MtF・女性化
+  - ホルモン療法
+  - からだ・解剖
 tags:
   - 個人サイト
   - MtF

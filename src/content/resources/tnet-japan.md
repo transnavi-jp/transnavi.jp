@@ -5,6 +5,10 @@ url: https://tnet-japan.com/
 language: ja
 region: japan
 category: community
+topicTags:
+  - 法律・制度
+  - 差別・偏見
+  - コミュニティ文化
 tags:
   - 当事者団体
   - 提言

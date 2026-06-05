@@ -5,6 +5,11 @@ url: https://x.com/LadyTanya_Tokyo
 language: ja
 region: japan
 category: media
+topicTags:
+  - MtF・女性化
+  - 人間関係
+  - 当事者の言葉
+  - 差別・偏見
 tags:
   - トランス女性
   - MtF

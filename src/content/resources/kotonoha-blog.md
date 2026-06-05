@@ -4,7 +4,10 @@ description: "「ことのは」さんが運営する、当事者目線の個人
 url: https://www.tukinasikotonoha.com
 language: ja
 region: japan
-category: guide
+category: media
+topicTags:
+  - 当事者の言葉
+  - コミュニティ文化
 tags:
   - ブログ
   - 体験

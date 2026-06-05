@@ -5,6 +5,11 @@ url: https://atarunakamura.com/
 language: ja
 region: japan
 category: media
+topicTags:
+  - MtF・女性化
+  - 当事者の言葉
+  - カミングアウト
+  - コミュニティ文化
 tags:
   - トランス女性
   - MtF

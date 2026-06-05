@@ -1,4 +1,5 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import glossaryData from '../../data/glossary.json';
 import pageTags from '../../data/page-tags.json';
@@ -7,9 +8,11 @@ import type { GlossaryEntry } from '../../types/glossary';
 
 const entries = glossaryData as GlossaryEntry[];
 const pt = pageTags as Record<string, { title: string; tags: string[] }>;
+const resources = await getCollection('resources');
 const countOf = (label: string) =>
   entries.filter((e) => (e.tags ?? []).includes(label)).length +
-  Object.values(pt).filter((v) => v.tags.includes(label)).length;
+  Object.values(pt).filter((v) => v.tags.includes(label)).length +
+  resources.filter((r) => (r.data.topicTags ?? []).includes(label)).length;
 ---
 
 <BaseLayout

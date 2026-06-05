@@ -5,6 +5,10 @@ url: https://stonewalljapan.org/
 language: en
 region: japan
 category: community
+topicTags:
+  - コミュニティ文化
+  - 人間関係
+  - 性的指向
 tags:
   - 英語
   - 外国籍

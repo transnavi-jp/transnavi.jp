@@ -1,4 +1,5 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import glossaryData from '../../data/glossary.json';
 import pageTags from '../../data/page-tags.json';
@@ -18,6 +19,9 @@ const terms = entries.filter((e) => (e.tags ?? []).includes(label));
 const pages = Object.entries(pt)
   .filter(([, v]) => v.tags.includes(label))
   .map(([route, v]) => ({ route, title: v.title }));
+const resources = (await getCollection('resources'))
+  .filter((r) => (r.data.topicTags ?? []).includes(label))
+  .sort((a, b) => a.data.title.localeCompare(b.data.title, 'ja'));
 
 // Sibling tags = tags sharing a branch in the taxonomy (the "near" part of the tree).
 const siblings = new Set<string>();
@@ -36,6 +40,7 @@ siblings.delete(label);
     <div class="clinic-summary" aria-label="件数">
       <span>{terms.length} 語</span>
       <span>{pages.length} ページ</span>
+      <span>{resources.length} サイト</span>
     </div>
 
     {pages.length > 0 && (
@@ -57,6 +62,17 @@ siblings.delete(label);
             <a class="word-chip" href={`/glossary/${t.id}/`}>{t.term}</a>
           ))}
         </div>
+      </section>
+    )}
+
+    {resources.length > 0 && (
+      <section aria-labelledby="tag-resources">
+        <h2 id="tag-resources">関連サイト</h2>
+        <ul class="tag-page-list">
+          {resources.map((r) => (
+            <li><a href={r.data.url} target="_blank" rel="noreferrer">{r.data.title}</a></li>
+          ))}
+        </ul>
       </section>
     )}
 

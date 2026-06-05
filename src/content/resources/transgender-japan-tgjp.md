@@ -5,6 +5,10 @@ url: https://tgjp.jp/
 language: ja
 region: japan
 category: community
+topicTags:
+  - 差別・偏見
+  - コミュニティ文化
+  - 法律・制度
 tags:
   - トランスマーチ
   - アドボカシー

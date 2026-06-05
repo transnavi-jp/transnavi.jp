@@ -5,6 +5,10 @@ url: https://www.youtube.com/@AokiKanon
 language: ja
 region: japan
 category: media
+topicTags:
+  - インターセックス
+  - アイデンティティ
+  - 当事者の言葉
 tags:
   - 性分化疾患
   - DSD

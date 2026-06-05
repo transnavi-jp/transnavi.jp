@@ -5,6 +5,10 @@ url: https://www.youtube.com/@satsukipon
 language: ja
 region: japan
 category: media
+topicTags:
+  - MtF・女性化
+  - 声
+  - 当事者の言葉
 tags:
   - YouTube
   - トランス女性

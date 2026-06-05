@@ -5,6 +5,10 @@ url: https://tokyorainbowpride.com/
 language: ja
 region: japan
 category: community
+topicTags:
+  - コミュニティ文化
+  - 人間関係
+  - 差別・偏見
 tags:
   - プライド
   - イベント

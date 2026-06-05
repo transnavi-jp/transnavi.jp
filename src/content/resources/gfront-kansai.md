@@ -5,6 +5,10 @@ url: http://www5e.biglobe.ne.jp/~gfront/
 language: ja
 region: japan
 category: community
+topicTags:
+  - コミュニティ文化
+  - 人間関係
+  - 性的指向
 tags:
   - 当事者会
   - トランスジェンダー

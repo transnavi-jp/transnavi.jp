@@ -5,6 +5,10 @@ url: https://ah-yeah.com/
 language: ja
 region: japan
 category: media
+topicTags:
+  - MtF・女性化
+  - 法律・制度
+  - 当事者の言葉
 tags:
   - トランス女性
   - MtF

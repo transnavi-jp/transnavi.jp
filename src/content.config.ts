@@ -13,6 +13,9 @@ const resources = defineCollection({
     region: z.string().default('global'),
     category: z.enum(['medical', 'legal', 'community', 'research', 'guide', 'directory', 'media']),
     tags: z.array(z.string()).default([]),
+    // Controlled-vocabulary tags (src/data/tag-taxonomy.ts) for the site-wide
+    // /tags/ system; the free-form `tags` above stay for search.
+    topicTags: z.array(z.string()).default([]),
     reviewStatus: reviewStatus.default('needs-review'),
     updatedAt: z.coerce.date(),
   }),

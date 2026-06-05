@@ -5,6 +5,10 @@ url: https://www.instagram.com/baaaakuuuu/
 language: ja
 region: japan
 category: media
+topicTags:
+  - ノンバイナリー
+  - ジェンダー表現
+  - 当事者の言葉
 tags:
   - ノンバイナリー
   - ジェンダーレス

@@ -5,6 +5,10 @@ url: https://fairs-fair.org/
 language: ja
 region: japan
 category: community
+topicTags:
+  - 法律・制度
+  - 差別・偏見
+  - コミュニティ文化
 tags:
   - 情報発信
   - アドボカシー

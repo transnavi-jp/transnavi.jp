@@ -5,6 +5,10 @@ url: https://pflag.org/glossary/
 language: en
 region: global
 category: guide
+topicTags:
+  - 医学用語
+  - 人間関係
+  - アイデンティティ
 tags:
   - 用語集
   - 家族

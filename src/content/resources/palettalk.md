@@ -4,7 +4,11 @@ description: "ジェンダーやセクシュアリティを、マンガやイラ
 url: https://palettalk.com/
 language: ja
 region: japan
-category: media
+category: guide
+topicTags:
+  - アイデンティティ
+  - 性的指向
+  - ジェンダー表現
 tags:
   - 発信
   - マンガ

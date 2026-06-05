@@ -5,6 +5,11 @@ url: https://genderdysphoria.fyi/
 language: en
 region: global
 category: guide
+topicTags:
+  - アイデンティティ
+  - メンタルヘルス
+  - 医学用語
+  - 当事者の言葉
 tags:
   - 性別違和
   - 解説

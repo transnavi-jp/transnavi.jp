@@ -5,6 +5,10 @@ url: https://www.uruwa-law.com/
 language: ja
 region: japan
 category: media
+topicTags:
+  - MtF・女性化
+  - 法律・制度
+  - 差別・偏見
 tags:
   - トランス女性
   - MtF

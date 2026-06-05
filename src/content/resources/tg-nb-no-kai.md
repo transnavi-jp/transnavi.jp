@@ -5,6 +5,10 @@ url: https://tgnb.tokyo/
 language: ja
 region: japan
 category: community
+topicTags:
+  - コミュニティ文化
+  - ノンバイナリー
+  - 当事者の言葉
 tags:
   - 当事者会
   - トランスジェンダー

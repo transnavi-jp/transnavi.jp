@@ -5,6 +5,11 @@ url: https://www.instagram.com/_genking_/
 language: ja
 region: japan
 category: media
+topicTags:
+  - MtF・女性化
+  - ジェンダー表現
+  - 当事者の言葉
+  - コミュニティ文化
 tags:
   - トランス女性
   - MtF

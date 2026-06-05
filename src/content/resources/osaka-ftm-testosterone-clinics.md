@@ -5,6 +5,10 @@ url: https://note.com/ftm_info/n/n942b73da9c73
 language: ja
 region: japan
 category: directory
+topicTags:
+  - FtM・男性化
+  - ホルモン療法
+  - 薬
 tags:
   - FtM
   - HRT

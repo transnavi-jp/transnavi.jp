@@ -5,6 +5,9 @@ url: https://docs.gaht.guide/
 language: zh-Hans
 region: global
 category: medical
+topicTags:
+  - ホルモン療法
+  - 医学用語
 tags:
   - ホルモン療法
   - GAHT

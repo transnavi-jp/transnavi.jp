@@ -5,6 +5,10 @@ url: https://gid.jp
 language: ja
 region: japan
 category: community
+topicTags:
+  - アイデンティティ
+  - コミュニティ文化
+  - 法律・制度
 tags:
   - 当事者団体
   - 支援団体

@@ -5,6 +5,10 @@ url: https://hrt.gumi.gay/transfeminine-hrt
 language: en
 region: global
 category: medical
+topicTags:
+  - ホルモン療法
+  - MtF・女性化
+  - 医学用語
 tags:
   - ホルモン療法
   - MtF

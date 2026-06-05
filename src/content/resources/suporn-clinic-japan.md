@@ -5,6 +5,9 @@ url: https://supornclinic.jp
 language: ja
 region: japan
 category: guide
+topicTags:
+  - 手術
+  - MtF・女性化
 tags:
   - 手術
   - 海外医療

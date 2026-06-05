@@ -5,6 +5,9 @@ url: https://link.mtf.wiki/maps/jp
 language: ja
 region: japan
 category: directory
+topicTags:
+  - ホルモン療法
+  - 手術
 tags:
   - 医療機関
   - 地図

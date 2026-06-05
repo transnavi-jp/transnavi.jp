@@ -4,7 +4,11 @@ description: "性別不合・性別違和の診療に関わる専門職の学会
 url: http://www.gi-soc.jp/
 language: ja
 region: japan
-category: research
+category: medical
+topicTags:
+  - 医学用語
+  - ホルモン療法
+  - 手術
 tags:
   - 学会
   - 医療

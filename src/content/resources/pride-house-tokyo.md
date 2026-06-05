@@ -5,6 +5,11 @@ url: https://pridehouse.jp/legacy/
 language: ja
 region: japan
 category: community
+topicTags:
+  - メンタルヘルス
+  - 人間関係
+  - コミュニティ文化
+  - アイデンティティ
 tags:
   - 居場所
   - 相談

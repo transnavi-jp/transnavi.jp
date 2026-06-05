@@ -5,6 +5,11 @@ url: https://yayoi-shirasaki.info/
 language: ja
 region: japan
 category: media
+topicTags:
+  - FtM・男性化
+  - ノンバイナリー
+  - からだ・解剖
+  - 当事者の言葉
 tags:
   - ブログ
   - FtM

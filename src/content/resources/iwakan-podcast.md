@@ -5,6 +5,11 @@ url: https://iwakan-magazine.com/podcast/
 language: ja
 region: japan
 category: media
+topicTags:
+  - アイデンティティ
+  - 性的指向
+  - 当事者の言葉
+  - コミュニティ文化
 tags:
   - ポッドキャスト
   - ジェンダー

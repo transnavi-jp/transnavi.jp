@@ -5,6 +5,10 @@ url: https://equal.kiramayo.dpdns.org
 language: zh-Hans
 region: china
 category: community
+topicTags:
+  - コミュニティ文化
+  - 当事者の言葉
+  - MtF・女性化
 tags:
   - 中国
   - 当事者団体

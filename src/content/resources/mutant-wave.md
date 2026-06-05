@@ -5,6 +5,11 @@ url: https://www.youtube.com/@mutantwave3
 language: ja
 region: japan
 category: media
+topicTags:
+  - FtM・男性化
+  - 当事者の言葉
+  - コミュニティ文化
+  - ジェンダー表現
 tags:
   - トランス男性
   - FtM

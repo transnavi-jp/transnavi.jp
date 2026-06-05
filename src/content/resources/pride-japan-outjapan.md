@@ -5,6 +5,11 @@ url: https://www.outjapan.co.jp/pride_japan/
 language: ja
 region: japan
 category: media
+topicTags:
+  - 法律・制度
+  - 差別・偏見
+  - コミュニティ文化
+  - 当事者の言葉
 tags:
   - メディア
   - ニュース

@@ -5,6 +5,10 @@ url: https://digital.transchinese.org/
 language: zh-Hans
 region: global
 category: research
+topicTags:
+  - 法律・制度
+  - 医学用語
+  - 歴史的な語
 tags:
   - 文献
   - アーカイブ

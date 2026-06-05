@@ -5,6 +5,11 @@ url: https://24zzz-lgbt.com/
 language: ja
 region: japan
 category: community
+topicTags:
+  - 人間関係
+  - メンタルヘルス
+  - コミュニティ文化
+  - カミングアウト
 tags:
   - 若者支援
   - 10代

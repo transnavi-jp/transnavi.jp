@@ -5,6 +5,11 @@ url: https://transgender.tapcpr.org/
 language: zh-Hant
 region: taiwan
 category: community
+topicTags:
+  - 法律・制度
+  - 差別・偏見
+  - 当事者の言葉
+  - コミュニティ文化
 tags:
   - 台湾
   - 性別変更

@@ -4,7 +4,10 @@ description: "さまざまな当事者の体験談を掲載するメディアの
 url: https://lgbter.jp/noise_cat/mtf/
 language: ja
 region: japan
-category: guide
+category: media
+topicTags:
+  - MtF・女性化
+  - 当事者の言葉
 tags:
   - MtF
   - 体験談

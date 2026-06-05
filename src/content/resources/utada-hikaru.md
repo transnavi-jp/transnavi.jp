@@ -5,6 +5,10 @@ url: https://www.utadahikaru.jp/
 language: ja
 region: japan
 category: media
+topicTags:
+  - ノンバイナリー
+  - 当事者の言葉
+  - カミングアウト
 tags:
   - ノンバイナリー
   - 音楽

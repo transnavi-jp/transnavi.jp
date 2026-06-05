@@ -5,6 +5,11 @@ url: https://www.thetrevorproject.org/resources/category/gender-identity/
 language: en
 region: global
 category: guide
+topicTags:
+  - アイデンティティ
+  - カミングアウト
+  - メンタルヘルス
+  - 人間関係
 tags:
   - 若者
   - 性自認

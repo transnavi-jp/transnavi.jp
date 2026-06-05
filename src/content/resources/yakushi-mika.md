@@ -5,6 +5,10 @@ url: https://x.com/yakun28
 language: ja
 region: japan
 category: media
+topicTags:
+  - FtM・男性化
+  - 当事者の言葉
+  - メンタルヘルス
 tags:
   - トランス男性
   - FtM

@@ -4,7 +4,12 @@ description: Xジェンダーに関する情報を発信しているサイトで
 url: https://ftxmtx-x-gender.com
 language: ja
 region: japan
-category: community
+category: guide
+topicTags:
+  - ノンバイナリー
+  - アイデンティティ
+  - 当事者の言葉
+  - コミュニティ文化
 tags:
   - Xジェンダー
   - 当事者団体

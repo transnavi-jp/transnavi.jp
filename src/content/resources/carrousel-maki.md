@@ -5,6 +5,11 @@ url: https://ameblo.jp/carrousel-maki/
 language: ja
 region: japan
 category: media
+topicTags:
+  - MtF・女性化
+  - 当事者の言葉
+  - コミュニティ文化
+  - 歴史的な語
 tags:
   - トランス女性
   - MtF
