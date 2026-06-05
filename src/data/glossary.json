@@ -4182,9 +4182,7 @@
     "translations": {
       "en": "Queer"
     },
-    "aliases": [
-      "Queer"
-    ],
+    "aliases": [],
     "tags": [
       "アイデンティティ",
       "性的指向",
@@ -4208,9 +4206,7 @@
       "en": "Sexual orientation",
       "ko": "성적 지향"
     },
-    "aliases": [
-      "Sexual orientation"
-    ],
+    "aliases": [],
     "tags": [
       "性的指向",
       "アイデンティティ",
@@ -4231,9 +4227,7 @@
     "translations": {
       "en": "Romantic orientation"
     },
-    "aliases": [
-      "Romantic orientation"
-    ],
+    "aliases": [],
     "tags": [
       "性的指向",
       "アイデンティティ",
@@ -4277,8 +4271,7 @@
     },
     "aliases": [
       "パンセクシャル",
-      "パン",
-      "Pansexual"
+      "パン"
     ],
     "tags": [
       "性的指向",
@@ -4301,8 +4294,7 @@
     },
     "aliases": [
       "Aジェンダー",
-      "無性別",
-      "agender"
+      "無性別"
     ],
     "tags": [
       "アイデンティティ",
@@ -4321,9 +4313,7 @@
     "translations": {
       "en": "Genderqueer"
     },
-    "aliases": [
-      "Genderqueer"
-    ],
+    "aliases": [],
     "tags": [
       "アイデンティティ",
       "ノンバイナリー",
@@ -4344,9 +4334,7 @@
     "translations": {
       "en": "Bigender"
     },
-    "aliases": [
-      "Bigender"
-    ],
+    "aliases": [],
     "tags": [
       "アイデンティティ",
       "ノンバイナリー",
@@ -4366,8 +4354,7 @@
     },
     "aliases": [
       "デミガール",
-      "デミボーイ",
-      "Demigender"
+      "デミボーイ"
     ],
     "tags": [
       "アイデンティティ",
@@ -4386,9 +4373,7 @@
     "translations": {
       "en": "Neutrois"
     },
-    "aliases": [
-      "Neutrois"
-    ],
+    "aliases": [],
     "tags": [
       "アイデンティティ",
       "ノンバイナリー",
@@ -4406,9 +4391,7 @@
     "translations": {
       "en": "Xenogender"
     },
-    "aliases": [
-      "Xenogender"
-    ],
+    "aliases": [],
     "tags": [
       "アイデンティティ",
       "ノンバイナリー",
@@ -4427,9 +4410,7 @@
     "translations": {
       "en": "Genderflux"
     },
-    "aliases": [
-      "Genderflux"
-    ],
+    "aliases": [],
     "tags": [
       "アイデンティティ",
       "ノンバイナリー",
@@ -4450,7 +4431,6 @@
     "aliases": [
       "アンドロジーン",
       "中性的",
-      "androgynous",
       "androgyne"
     ],
     "tags": [
@@ -4476,8 +4456,7 @@
     "aliases": [
       "ジェンダー・ダイバース",
       "ジェンダー・バリアント",
-      "GNC",
-      "gender nonconforming"
+      "GNC"
     ],
     "tags": [
       "ジェンダー表現",
@@ -4496,8 +4475,7 @@
       "en": "Transfeminine"
     },
     "aliases": [
-      "トランスフェム",
-      "transfeminine"
+      "トランスフェム"
     ],
     "tags": [
       "アイデンティティ",
@@ -4518,8 +4496,7 @@
       "en": "Transmasculine"
     },
     "aliases": [
-      "トランスマスク",
-      "transmasculine"
+      "トランスマスク"
     ],
     "tags": [
       "アイデンティティ",
@@ -4540,8 +4517,7 @@
       "en": "Transphobia"
     },
     "aliases": [
-      "トランス嫌悪",
-      "transphobia"
+      "トランス嫌悪"
     ],
     "tags": [
       "差別・偏見",
@@ -4564,8 +4540,7 @@
       "en": "Homophobia"
     },
     "aliases": [
-      "同性愛嫌悪",
-      "homophobia"
+      "同性愛嫌悪"
     ],
     "tags": [
       "性的指向",
@@ -4588,8 +4563,7 @@
       "en": "Heteronormativity"
     },
     "aliases": [
-      "異性愛規範",
-      "heteronormativity"
+      "異性愛規範"
     ],
     "tags": [
       "差別・偏見",
@@ -4610,9 +4584,7 @@
     "translations": {
       "en": "Cisgenderism"
     },
-    "aliases": [
-      "cisgenderism"
-    ],
+    "aliases": [],
     "tags": [
       "差別・偏見",
       "反トランスの主張"
@@ -4630,8 +4602,7 @@
       "en": "Gender critical"
     },
     "aliases": [
-      "GC",
-      "gender critical"
+      "GC"
     ],
     "tags": [
       "差別・偏見",
@@ -4650,9 +4621,7 @@
     "translations": {
       "en": "Transgenderism"
     },
-    "aliases": [
-      "transgenderism"
-    ],
+    "aliases": [],
     "tags": [
       "差別・偏見",
       "反トランスの主張",
@@ -4670,9 +4639,7 @@
     "translations": {
       "en": "Microaggression"
     },
-    "aliases": [
-      "microaggression"
-    ],
+    "aliases": [],
     "tags": [
       "差別・偏見",
       "人間関係",
@@ -4694,8 +4661,7 @@
       "en": "Drag queen"
     },
     "aliases": [
-      "ドラァグ",
-      "drag queen"
+      "ドラァグ"
     ],
     "tags": [
       "ジェンダー表現",
@@ -4744,8 +4710,7 @@
       "en": "Demisexual"
     },
     "aliases": [
-      "デミセクシャル",
-      "demisexual"
+      "デミセクシャル"
     ],
     "tags": [
       "性的指向",
@@ -4766,8 +4731,7 @@
     },
     "aliases": [
       "グレーセクシャル",
-      "グレーアセクシュアル",
-      "graysexual"
+      "グレーアセクシュアル"
     ],
     "tags": [
       "性的指向",
