@@ -142,7 +142,18 @@ main {
    so it still lines up with the header/footer cards).
    ===================================================================== */
 .main-col {
+  /* Carries the inter-block spacing that used to come from main's grid gap
+     (homepage sections, the article + updated-note, etc.), now that the content
+     lives one level deeper. */
+  display: grid;
+  gap: 24px;
   min-width: 0; /* let the grid column shrink instead of overflowing */
+}
+
+/* Same overflow guard the old `main > *` gave: let wide children (e.g. the works
+   table) shrink to the track so they scroll instead of widening the card. */
+.main-col > * {
+  min-width: 0;
 }
 
 .page-toc[hidden] {
