@@ -50,16 +50,27 @@ export const SYN = {
   相談: ['相談先', '窓口', 'ホットライン'],
 };
 
+// Normalised-key view of the hand-curated SYN, so a synonym fires regardless of
+// the query's kana/width: norm() folds katakana→hiragana and strips long-vowel
+// marks, so ほるもん and ホルモン collapse to the same key.
+const SYN_N = Object.create(null);
+for (const k of Object.keys(SYN)) {
+  const nk = norm(k);
+  if (nk) SYN_N[nk] = [...(SYN_N[nk] || []), ...SYN[k]];
+}
+
 // Synonyms loaded at runtime (the glossary alias cliques from
 // dist/search-synonyms.json), merged with the hand-curated SYN above. Lets a
 // search for any name of a concept (性自認) also match pages that use another
 // (性同一性), so synonymous queries return essentially the same result set.
+// Keyed by norm() too, for the same kana/width insensitivity.
 const EXTRA_SYN = Object.create(null);
 
 export function addSynonyms(map) {
   if (!map) return;
   for (const k of Object.keys(map)) {
-    const key = k.normalize('NFKC').toLowerCase();
+    const key = norm(k);
+    if (!key) continue;
     EXTRA_SYN[key] = [...new Set([...(EXTRA_SYN[key] || []), ...map[k]])];
   }
 }
@@ -67,8 +78,8 @@ export function addSynonyms(map) {
 export function expand(rawTerms) {
   const ex = new Set();
   for (const raw of rawTerms) {
-    const key = raw.normalize('NFKC').toLowerCase();
-    for (const list of [SYN[key], EXTRA_SYN[key]]) {
+    const key = norm(raw);
+    for (const list of [SYN_N[key], EXTRA_SYN[key]]) {
       if (list) for (const s of list) ex.add(norm(s));
     }
   }
