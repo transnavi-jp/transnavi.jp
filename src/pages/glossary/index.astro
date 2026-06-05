@@ -2,9 +2,13 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Mascot from '../../components/Mascot.astro';
 import glossaryData from '../../data/glossary.json';
+import glossaryReadings from '../../data/glossary-readings.json';
 import type { GlossaryEntry } from '../../types/glossary';
 
 const entries = glossaryData as GlossaryEntry[];
+// Hiragana readings of kanji terms/aliases (built in prebuild) so the filter can
+// match an entry typed by its reading. See scripts/gen-glossary-readings.mjs.
+const readings = glossaryReadings as Record<string, string>;
 
 // Friendly, beginner-first category order with plain-language labels.
 const categoryMeta = [
@@ -97,7 +101,7 @@ const aliasPreview = (entry: GlossaryEntry) => {
               href={`/glossary/${entry.id}/`}
               data-filter-item
               data-categories={entry.category}
-              data-search={[entry.term, entry.abbr, entry.category, entry.translations.en, ...entry.aliases].filter(Boolean).join(' ')}
+              data-search={[entry.term, entry.abbr, entry.category, entry.translations.en, ...entry.aliases, readings[entry.id]].filter(Boolean).join(' ')}
             >
               <span class="glossary-card-head">
                 <span class="clinic-name">{entry.term}{entry.abbr ? `（${entry.abbr}）` : ''}</span>

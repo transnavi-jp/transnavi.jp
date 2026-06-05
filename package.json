@@ -22,7 +22,7 @@
     "import:mtf": "npm run import:mtf-clinics && npm run import:mtf-content && npm run import:terminology",
     "coverage": "node scripts/citation-coverage.mjs",
     "links": "node scripts/analyze-links.mjs",
-    "prebuild": "node scripts/gen-page-dates.mjs && node scripts/gen-citations.mjs"
+    "prebuild": "node scripts/gen-page-dates.mjs && node scripts/gen-citations.mjs && node scripts/gen-glossary-readings.mjs"
   },
   "dependencies": {
     "@resvg/resvg-js": "^2.6.2",

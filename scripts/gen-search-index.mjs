@@ -66,10 +66,11 @@ for (const file of walk(DIST)) {
   entries.push({ u: route, t: title, k: sectionLabel(route), x: text.slice(0, 1600) });
 }
 
-// 2. Glossary terms
+// 2. Glossary terms (readings let a kanji term be found by its kana reading)
 const glossary = JSON.parse(fs.readFileSync('src/data/glossary.json', 'utf8'));
+const glossaryReadings = JSON.parse(fs.readFileSync('src/data/glossary-readings.json', 'utf8'));
 for (const g of glossary) {
-  const extra = [g.abbr, ...(g.aliases || []), g.translations?.en, g.translations?.zhHans, g.term]
+  const extra = [g.abbr, ...(g.aliases || []), g.translations?.en, g.translations?.zhHans, g.term, glossaryReadings[g.id]]
     .filter(Boolean)
     .join(' ');
   entries.push({ u: `/glossary/${g.id}/`, t: g.term, k: '用語', x: `${extra} ${g.notes || ''}`.slice(0, 400) });

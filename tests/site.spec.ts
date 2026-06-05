@@ -154,6 +154,27 @@ test('用語集を検索できる', async ({ page }) => {
   await expect(page.locator('[data-filter-count]')).toHaveText('1');
 });
 
+test('用語集を読み（ひらがな）・別名・略語でも検索できる', async ({ page }) => {
+  await page.goto('/glossary/');
+  const search = page.getByLabel('用語を検索');
+
+  // A kanji term found by its hiragana reading (built into the search blob).
+  await search.fill('せいべついわ');
+  await expect(page.locator('.glossary-card .clinic-name', { hasText: '性別違和' }).first()).toBeVisible();
+
+  // A katakana alias of a kanji term.
+  await search.fill('ジェンダーアイデンティティ');
+  await expect(page.locator('.glossary-card .clinic-name', { hasText: '性同一性' }).first()).toBeVisible();
+
+  // An abbreviation alias.
+  await search.fill('SRS');
+  await expect(page.locator('.glossary-card .clinic-name', { hasText: '性別適合手術' }).first()).toBeVisible();
+
+  // A small typo still matches via the fuzzy fallback.
+  await search.fill('せいべついあ');
+  await expect(page.locator('.glossary-card .clinic-name', { hasText: '性別違和' }).first()).toBeVisible();
+});
+
 test('MtF.wiki の免責事項を自サイトの資料として掲載しない', async ({ page }) => {
   await page.goto('/library/');
 
