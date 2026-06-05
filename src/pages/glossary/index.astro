@@ -111,6 +111,11 @@ const aliasPreview = (entry: GlossaryEntry) => {
               {entry.aliases.length > 0 && (
                 <span class="glossary-aliases"><span class="glossary-aliases-label">別名</span><span class="glossary-aliases-text">{aliasPreview(entry)}</span></span>
               )}
+              {entry.tags && entry.tags.length > 0 && (
+                <span class="glossary-card-tags">
+                  {entry.tags.map((t) => <span class="glossary-card-tag">{t}</span>)}
+                </span>
+              )}
               <span class="glossary-match-hint" data-filter-hint hidden></span>
             </a>
           ))}

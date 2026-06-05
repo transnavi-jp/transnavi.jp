@@ -146,7 +146,7 @@ for (const form of document.querySelectorAll('[data-filter-form]')) {
   // Opt-in match highlighting (the glossary): mark the matched substring on each
   // card's visible text, kana/alias-aware, the same way /search/ does.
   const highlightOn = form.hasAttribute('data-filter-highlight');
-  const HL_SELECTOR = '.clinic-name, .glossary-en, .glossary-meaning, .glossary-aliases-text';
+  const HL_SELECTOR = '.clinic-name, .glossary-en, .glossary-meaning, .glossary-aliases-text, .glossary-card-tag';
   const items = [...root.querySelectorAll('[data-filter-item]')].map((el) => {
     const hay = norm(el.dataset.search ?? el.textContent ?? '');
     const hlNodes = highlightOn

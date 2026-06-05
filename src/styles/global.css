@@ -1835,6 +1835,26 @@ ul {
   overflow-wrap: anywhere;
 }
 
+/* Small subtle tag chips on each glossary index card (display only — the card
+   itself is a link; filter by tag via the search box or a term page's chips). */
+.glossary-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.glossary-card-tag {
+  padding: 0 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--bg-flat);
+  color: var(--muted);
+  font-size: 0.66rem;
+  line-height: 1.7;
+  white-space: nowrap;
+}
+
 .glossary-match-hint[hidden] {
   display: none;
 }
