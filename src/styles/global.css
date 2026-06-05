@@ -547,11 +547,33 @@ main {
   line-height: 1.7;
 }
 
-.search-result-snip mark {
+.search-result mark,
+.glossary-card mark {
   background: var(--accent-soft);
   color: var(--ink-heading);
   border-radius: 4px;
   padding: 0 2px;
+}
+
+/* Shown when a result matched on an alias/abbreviation that isn't in the title
+   or snippet (e.g. SRS → 性別適合手術), so every result reveals why it matched. */
+.search-result-alias {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.search-result-alias-label {
+  flex: none;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--ink-heading);
+  font-size: 0.7rem;
+  letter-spacing: 0.02em;
 }
 
 /* On phones the brand is large, so collapse the header search to a tidy icon
@@ -1738,6 +1760,24 @@ ul {
   color: var(--ink-heading);
   font-size: 0.7rem;
   letter-spacing: 0.02em;
+}
+
+/* Shown by the filter when a card matched on something not otherwise visible
+   (a reading, category, or an alias beyond the preview) — reveals the hit. */
+.glossary-match-hint {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: 2px;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+.glossary-match-hint[hidden] {
+  display: none;
 }
 
 .soft-quote {

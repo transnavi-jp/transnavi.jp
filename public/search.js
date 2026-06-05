@@ -120,36 +120,106 @@
   }
 
   const esc = (s) =>
-    s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    (s || '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
-  function snippet(text, rawTerms) {
-    if (!text) return '';
-    let idx = -1;
-    let hit = '';
-    for (const raw of rawTerms) {
-      const i = text.indexOf(raw);
-      if (i >= 0 && (idx < 0 || i < idx)) {
-        idx = i;
-        hit = raw;
+  // Normalise a string per-character the way norm() does, keeping a map from each
+  // normalised character back to the source character it came from — so a match
+  // found in normalised space (kana-folded, NFKC, punctuation-stripped) can be
+  // highlighted on the ORIGINAL text. This is what lets ほるもん highlight
+  // ホルモン, and ジェンダーアイデンティティ highlight ジェンダー・アイデンティティ.
+  function normMapped(text) {
+    const chars = [...text];
+    let n = '';
+    const map = [];
+    for (let i = 0; i < chars.length; i++) {
+      let c = chars[i].normalize('NFKC').toLowerCase();
+      c = c.replace(/[ァ-ヶ]/g, (k) => String.fromCharCode(k.charCodeAt(0) - 0x60));
+      c = c.replace(/[ー゛゜・･\s　.,、。!?！？"'「」『』（）()\[\]【】〜~_\-/]/g, '');
+      for (const ch of c) {
+        n += ch;
+        map.push(i);
       }
     }
-    if (idx < 0) {
-      const head = text.slice(0, 96);
-      return esc(head) + (text.length > 96 ? '…' : '');
-    }
-    const start = Math.max(0, idx - 32);
-    const end = Math.min(text.length, idx + 64);
-    let frag = text.slice(start, end);
-    let html = esc(frag);
-    // highlight every raw term occurrence in the fragment
-    for (const raw of rawTerms) {
-      if (!raw) continue;
-      html = html.replace(new RegExp(esc(raw).replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'), (m) => `<mark>${m}</mark>`);
-    }
-    return (start > 0 ? '…' : '') + html + (end < text.length ? '…' : '');
+    return { chars, n, map };
   }
 
-  function render(results, rawTerms, els) {
+  // Wrap every (normalised) occurrence of any term in <mark>, mapped back onto
+  // the original characters. Returns escaped HTML.
+  function highlight(text, terms) {
+    if (!text) return '';
+    const { chars, n, map } = normMapped(text);
+    const ranges = [];
+    for (const t of terms) {
+      if (!t) continue;
+      let from = 0;
+      let idx;
+      while ((idx = n.indexOf(t, from)) !== -1) {
+        ranges.push([map[idx], map[idx + t.length - 1] + 1]);
+        from = idx + t.length;
+      }
+    }
+    if (!ranges.length) return esc(text);
+    ranges.sort((a, b) => a[0] - b[0]);
+    const merged = [];
+    for (const r of ranges) {
+      const last = merged[merged.length - 1];
+      if (last && r[0] <= last[1]) last[1] = Math.max(last[1], r[1]);
+      else merged.push([r[0], r[1]]);
+    }
+    let out = '';
+    let pos = 0;
+    for (const [s, e] of merged) {
+      out += esc(chars.slice(pos, s).join('')) + '<mark>' + esc(chars.slice(s, e).join('')) + '</mark>';
+      pos = e;
+    }
+    return out + esc(chars.slice(pos).join(''));
+  }
+
+  // First original-character index where any term matches (normalised), or -1.
+  function firstMatch(text, terms) {
+    const { n, map } = normMapped(text);
+    let best = -1;
+    for (const t of terms) {
+      if (!t) continue;
+      const idx = n.indexOf(t);
+      if (idx !== -1 && (best < 0 || map[idx] < best)) best = map[idx];
+    }
+    return best;
+  }
+
+  // A window of the body text centred on the first match, with matches marked.
+  function snippet(text, terms) {
+    if (!text) return '';
+    const chars = [...text];
+    const pos = firstMatch(text, terms);
+    if (pos < 0) {
+      return esc(chars.slice(0, 96).join('')) + (chars.length > 96 ? '…' : '');
+    }
+    const start = Math.max(0, pos - 32);
+    const end = Math.min(chars.length, pos + 64);
+    const frag = chars.slice(start, end).join('');
+    return (start > 0 ? '…' : '') + highlight(frag, terms) + (end < chars.length ? '…' : '');
+  }
+
+  // Which of an entry's own keywords (the `a` field: aliases / readings / abbr /
+  // English) a query term matched — shown when the title and body carry no
+  // visible hit, so a result always reveals WHY it matched (e.g. SRS → 性別適合手術).
+  function matchedKeywords(a, terms) {
+    if (!a) return [];
+    const out = [];
+    const seen = new Set();
+    for (const tok of a.split(/[\s　]+/)) {
+      const tn = norm(tok);
+      if (!tn || seen.has(tok)) continue;
+      if (terms.some((t) => tn.includes(t) || t.includes(tn))) {
+        seen.add(tok);
+        out.push(tok);
+      }
+    }
+    return out;
+  }
+
+  function render(results, terms, els) {
     if (!results.length) {
       els.status.textContent = '見つかりませんでした。別のことばや、ひらがな・カタカナを変えて試してみてください。';
       els.results.innerHTML = '';
@@ -159,11 +229,23 @@
     els.results.innerHTML = results
       .map(({ e }) => {
         const ext = e.ext ? ' target="_blank" rel="noreferrer"' : '';
+        const titleHtml = highlight(e.t, terms);
+        const snipHtml = snippet(e.x, terms);
+        // Guarantee a visible highlight: if neither the title nor the snippet
+        // marked anything, surface the matched alias/abbr instead.
+        const showAlias = !titleHtml.includes('<mark>') && !snipHtml.includes('<mark>');
+        const kw = showAlias ? matchedKeywords(e.a, terms) : [];
+        const aliasHtml = kw.length
+          ? `<span class="search-result-alias"><span class="search-result-alias-label">別名</span><span>${kw
+              .map((k) => highlight(k, terms))
+              .join('、')}</span></span>`
+          : '';
         return (
           `<a class="search-result" href="${esc(e.u)}"${ext}>` +
           `<span class="search-result-head"><span class="search-result-kind">${esc(e.k)}</span>` +
-          `<span class="search-result-title">${esc(e.t)}</span></span>` +
-          `<span class="search-result-snip">${snippet(e.x, rawTerms)}</span>` +
+          `<span class="search-result-title">${titleHtml}</span></span>` +
+          (snipHtml ? `<span class="search-result-snip">${snipHtml}</span>` : '') +
+          aliasHtml +
           `</a>`
         );
       })
@@ -195,8 +277,8 @@
       }
       status.textContent = '検索中…';
       await load();
-      const rawTerms = q.trim().split(/[\s　]+/).filter(Boolean);
-      render(run(q), rawTerms, els);
+      const terms = q.trim().split(/[\s　]+/).map(norm).filter(Boolean);
+      render(run(q), terms, els);
     }
 
     input.addEventListener('input', () => {
