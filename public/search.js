@@ -61,8 +61,9 @@
     const index = await res.json();
     PREP = index.map((e) => {
       const tn = norm(e.t);
+      const an = norm(e.a || ''); // entry's own keywords (aliases/readings); high signal
       const xn = norm(e.x);
-      return { e, tn, xn, tg: new Set(bigrams(tn)), xg: new Set(bigrams(xn)) };
+      return { e, tn, an, xn, tg: new Set(bigrams(tn)), ag: new Set(bigrams(an)), xg: new Set(bigrams(xn)) };
     });
     return PREP;
   }
@@ -91,19 +92,23 @@
         const tg = bigrams(t);
         let s = 0;
         if (p.tn.includes(t)) s = 120 + t.length * 2;
+        else if (p.an.includes(t)) s = 80 + t.length; // alias / reading match beats a body mention
         else if (p.xn.includes(t)) s = 45 + t.length;
         else {
           const dt = dice(tg, p.tg);
+          const da = dice(tg, p.ag);
           const dx = dice(tg, p.xg);
           if (dt >= 0.5) s = 34 * dt;
+          else if (da >= 0.5) s = 26 * da;
           else if (dx >= 0.5) s = 16 * dx;
-          else if (dt >= 0.34 || dx >= 0.34) s = 8 * Math.max(dt, dx);
+          else if (dt >= 0.34 || da >= 0.34 || dx >= 0.34) s = 8 * Math.max(dt, da, dx);
         }
         if (s > 0) matchedTerms++;
         score += s;
       }
       for (const st of synTerms) {
         if (p.tn.includes(st)) score += 22;
+        else if (p.an.includes(st)) score += 14;
         else if (p.xn.includes(st)) score += 9;
       }
       // For multi-word queries, prefer entries matching more of the terms.

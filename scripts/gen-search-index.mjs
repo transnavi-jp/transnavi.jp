@@ -66,14 +66,18 @@ for (const file of walk(DIST)) {
   entries.push({ u: route, t: title, k: sectionLabel(route), x: text.slice(0, 1600) });
 }
 
-// 2. Glossary terms (readings let a kanji term be found by its kana reading)
+// 2. Glossary terms. The entry's own keywords (abbr, aliases, English, and the
+//    kanji readings) go in a dedicated `a` field that the matcher scores ABOVE a
+//    body-text mention — so searching an alias (性自認) ranks 性同一性 above the
+//    pages that merely mention the word in prose. The definition stays in `x`
+//    for the result snippet.
 const glossary = JSON.parse(fs.readFileSync('src/data/glossary.json', 'utf8'));
 const glossaryReadings = JSON.parse(fs.readFileSync('src/data/glossary-readings.json', 'utf8'));
 for (const g of glossary) {
-  const extra = [g.abbr, ...(g.aliases || []), g.translations?.en, g.translations?.zhHans, g.term, glossaryReadings[g.id]]
+  const keywords = [g.abbr, ...(g.aliases || []), g.translations?.en, g.translations?.zhHans, g.term, glossaryReadings[g.id]]
     .filter(Boolean)
     .join(' ');
-  entries.push({ u: `/glossary/${g.id}/`, t: g.term, k: '用語', x: `${extra} ${g.notes || ''}`.slice(0, 400) });
+  entries.push({ u: `/glossary/${g.id}/`, t: g.term, k: '用語', a: keywords, x: (g.notes || '').slice(0, 400) });
 }
 
 // 3. Clinics
