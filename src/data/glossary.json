@@ -3234,5 +3234,147 @@
       "ja": "https://ja.wikipedia.org/wiki/性別二元制",
       "en": "https://en.wikipedia.org/wiki/Gender_binary"
     }
+  },
+  {
+    "id": "transmedicalism",
+    "term": "トランスメディカリズム",
+    "category": "性同一性・属性",
+    "translations": {
+      "en": "Transmedicalism"
+    },
+    "aliases": [
+      "トランスメディカリスト"
+    ],
+    "avoid": [],
+    "disputed": [],
+    "notes": "トランスジェンダーであるには性別違和や医療的な移行が必要だ、とする考え方。違和の感じ方や移行のしかたは人によってさまざまで、この考え方は、医療を望まない人やノンバイナリーの人を締め出す「線引き（ゲートキーピング）」につながると批判されることも多い。この立場をとる人を「トゥルースカム」と呼ぶことがある。",
+    "source": "Transmedicalism",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Transmedicalism"
+    }
+  },
+  {
+    "id": "truscum",
+    "term": "トゥルースカム",
+    "category": "性同一性・属性",
+    "translations": {
+      "en": "Truscum"
+    },
+    "aliases": [],
+    "avoid": [],
+    "disputed": [],
+    "notes": "トランスメディカリズム（トランスであるには性別違和が必要だとする考え）の立場をとる人を指す、おもにネット上の言葉。もともとはこの立場を批判する側がつけた呼び名。反対の立場は「テュキュート」と呼ばれる。",
+    "source": "Truscum"
+  },
+  {
+    "id": "tucute",
+    "term": "テュキュート",
+    "category": "性同一性・属性",
+    "translations": {
+      "en": "Tucute"
+    },
+    "aliases": [],
+    "avoid": [],
+    "disputed": [],
+    "notes": "トランスメディカリズムに反対する立場をとる人を指す、おもにネット上の言葉。トランスであるために、性別違和や医療的な移行は必ずしも必要ではない、と考える。「トゥルースカム」と対比して使われる。",
+    "source": "Tucute"
+  },
+  {
+    "id": "transvestigation",
+    "term": "トランスベスティゲーション",
+    "category": "その他",
+    "translations": {
+      "en": "Transvestigation"
+    },
+    "aliases": [],
+    "avoid": [],
+    "disputed": [],
+    "notes": "有名人などについて、体の細かい特徴を根拠に「本当は隠れたトランスジェンダーだ」と決めつけようとする、根拠のない陰謀論的な言いがかり。シスジェンダーの人にもトランスの人にも向けられ、容姿をあげつらう差別的なハラスメントで、医学的・科学的な裏づけはまったくない。",
+    "source": "Transvestigation"
+  },
+  {
+    "id": "cisnormativity",
+    "term": "シスノーマティビティ",
+    "category": "生活・社会",
+    "translations": {
+      "en": "Cisnormativity"
+    },
+    "aliases": [
+      "シス中心主義"
+    ],
+    "avoid": [],
+    "disputed": [],
+    "notes": "「だれもがシスジェンダー（出生時に割り当てられた性別と性同一性が一致する人）である」と当然のように前提する、社会のものの見方や仕組み。書類・施設・言葉づかいの多くがこの前提でできていて、トランスの人が見えにくくされたり、困りごとが生まれたりする。",
+    "source": "Cisnormativity"
+  },
+  {
+    "id": "deadname",
+    "term": "デッドネーム",
+    "category": "生活・社会",
+    "translations": {
+      "en": "Deadname"
+    },
+    "aliases": [
+      "旧名"
+    ],
+    "avoid": [],
+    "disputed": [],
+    "notes": "トランスの人が、移行する前に使っていた・出生時につけられた名前のこと。本人が手放した名前を、本人の意に反して使うこと（デッドネーミング）は、相手を傷つける行為とされる。よかれと思っても、過去の名前を持ち出さないのが基本。",
+    "source": "Deadnaming",
+    "wikipedia": {
+      "en": "https://en.wikipedia.org/wiki/Deadnaming"
+    }
+  },
+  {
+    "id": "egg",
+    "term": "エッグ",
+    "category": "その他",
+    "translations": {
+      "en": "Egg"
+    },
+    "aliases": [],
+    "avoid": [],
+    "disputed": [],
+    "notes": "まだ自分がトランスジェンダーだと気づいていない・受け入れていない段階のトランスの人を、あとから振り返って指すことのあるネットスラング。自覚することを「殻を破る（egg crack）」とたとえる。自分や他人を決めつけたり、急かしたりするための言葉ではない。",
+    "source": "Egg"
+  },
+  {
+    "id": "ally",
+    "term": "アライ",
+    "category": "生活・社会",
+    "translations": {
+      "en": "Ally"
+    },
+    "aliases": [
+      "アライアンス"
+    ],
+    "avoid": [],
+    "disputed": [],
+    "notes": "自分は当事者ではないけれど、LGBTQ＋の人たちを理解し、支え、ともに行動する人のこと。完璧である必要はなく、学び続け、まちがえたら直し、必要なときに声をあげる姿勢が大切とされる。",
+    "source": "Straight ally"
+  },
+  {
+    "id": "gender-role",
+    "term": "性役割",
+    "category": "性同一性・属性",
+    "wikidata": "Q1775415",
+    "translations": {
+      "en": "Gender role",
+      "zhHans": "性别角色",
+      "zhHant": "性別角色",
+      "ko": "성 역할"
+    },
+    "aliases": [
+      "ジェンダーロール",
+      "性別役割"
+    ],
+    "avoid": [],
+    "disputed": [],
+    "notes": "「男らしさ」「女らしさ」など、社会がそれぞれの性別に対して期待する役割・ふるまい・見た目のこと。時代や文化によって変わるもので、絶対のものではない。性別表現や性同一性とは別の概念。",
+    "source": "Gender role",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/性役割",
+      "en": "https://en.wikipedia.org/wiki/Gender_role"
+    }
   }
 ]
