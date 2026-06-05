@@ -84,8 +84,11 @@ const aliasPreview = (entry: GlossaryEntry) => {
     </form>
 
     {sections.map((section) => (
-      <section class="glossary-section" data-filter-group aria-labelledby={`glossary-${section.key}`}>
-        <h2 id={`glossary-${section.key}`}>{section.label}</h2>
+      <details class="glossary-section" data-filter-group data-filter-default-open open aria-labelledby={`glossary-${section.key}`}>
+        <summary class="glossary-section-summary">
+          <h2 id={`glossary-${section.key}`}>{section.label}</h2>
+          <span class="glossary-section-count"><span data-filter-group-count>{section.items.length}</span> 語</span>
+        </summary>
         <p class="resource-section-intro">{section.desc}</p>
         <div class="glossary-list">
           {section.items.map((entry) => (
@@ -107,7 +110,7 @@ const aliasPreview = (entry: GlossaryEntry) => {
             </a>
           ))}
         </div>
-      </section>
+      </details>
     ))}
     <p class="empty-state" data-filter-empty hidden>条件に合う用語は見つかりませんでした。</p>
   </article>

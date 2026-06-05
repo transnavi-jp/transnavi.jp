@@ -795,6 +795,48 @@ ul {
   margin-top: 10px;
 }
 
+/* Collapsible glossary category sections (default open, user-collapsible). */
+.glossary-section {
+  border-top: 1px solid var(--line);
+  margin-top: 6px;
+}
+
+.glossary-section-summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  list-style: none;
+  padding: 6px 4px;
+}
+
+.glossary-section-summary::-webkit-details-marker {
+  display: none;
+}
+
+.glossary-section-summary::before {
+  content: '\25B8'; /* ▸, rotates to ▾ when open */
+  color: var(--accent);
+  font-weight: 800;
+  transition: transform 120ms ease;
+}
+
+.glossary-section[open] > .glossary-section-summary::before {
+  transform: rotate(90deg);
+}
+
+.glossary-section-summary h2 {
+  margin: 0;
+}
+
+.glossary-section-count {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
 .resource-section-intro {
   /* Top margin so it never touches a block above it (e.g. a list); under a
      heading, margin-collapsing keeps the gap tidy. */

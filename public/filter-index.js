@@ -85,7 +85,15 @@ for (const form of document.querySelectorAll('[data-filter-form]')) {
     for (const group of groups) {
       const visibleItems = [...group.querySelectorAll('[data-filter-item]:not([hidden])')];
       group.hidden = visibleItems.length === 0;
-      group.open = visibleItems.length > 0 && narrowed;
+      // data-filter-default-open groups (glossary categories) sit open and are
+      // user-collapsible; while searching they auto-open only where there's a
+      // match, and reopen when the query clears. Others (clinic regions) stay
+      // closed until a search/filter narrows them.
+      if ('filterDefaultOpen' in group.dataset) {
+        group.open = !narrowed || visibleItems.length > 0;
+      } else {
+        group.open = visibleItems.length > 0 && narrowed;
+      }
 
       const groupCount = group.querySelector('[data-filter-group-count]');
       if (groupCount) groupCount.textContent = String(visibleItems.length);
