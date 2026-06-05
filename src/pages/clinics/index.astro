@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Mascot from '../../components/Mascot.astro';
 import clinicsData from '../../data/clinics.json';
+import poisData from '../../data/map-pois.json';
 import type { Clinic } from '../../types/clinic';
 import { splitClinicUrls } from '../../utils/clinic-links';
 import { categoriesOf, primaryGenre, surgeryTypesOf, capabilitiesOf, CAPABILITY_LABELS, isGiCertified } from '../../utils/clinic-genre';
@@ -142,11 +143,18 @@ const mapClinics = clinicsWithCategories
     lat: clinic.lat,
     lng: clinic.lng,
   }));
-const clinicMapData = { clinics: mapClinics, pois: [] };
+// Overseas SRS hospitals (タイ・韓国) live in map-pois.json as type 'surgery'.
+// Show them on this embedded map too, so it matches the global /map/ (which was
+// showing 9 surgery pins the clinic map omitted). The list below stays domestic.
+const overseasSurgery = (poisData as { name: string; type: string; url: string; lat: number; lng: number }[])
+  .filter((p) => p.type === 'surgery');
+const clinicMapData = { clinics: mapClinics, pois: overseasSurgery };
 const genreCounts = mapClinics.reduce(
   (acc, clinic) => ((acc[clinic.genre] = (acc[clinic.genre] ?? 0) + 1), acc),
   {} as Record<string, number>,
 );
+// The 手術 legend counts map pins, so include the overseas SRS surgery pins.
+genreCounts.surgery = (genreCounts.surgery ?? 0) + overseasSurgery.length;
 ---
 
 <BaseLayout title="医療機関一覧（ホルモン療法・性別適合手術ができる病院・クリニック） - とらんすナビ" description="トランスジェンダーのホルモン療法（MtF・FtM）や性別適合手術、診断に対応する全国の病院・クリニックを、地域別・診療区分別に探せます。地図・検索つき。受診前に必ず各医療機関へご確認ください。">
@@ -169,7 +177,7 @@ const genreCounts = mapClinics.reduce(
       <p class="map-fallback">地図を表示するには JavaScript が必要です。下の一覧からも探せます。</p>
     </div>
     <p class="clinic-map-note">
-      ピンの色は診療区分、位置は住所からのおおよそです（番地が不明なものは市区町村のあたり）。ピンをタップすると掲載ページへ進めます。
+      ピンの色は診療区分、位置は住所からのおおよそです（番地が不明なものは市区町村のあたり）。ピンをタップすると掲載ページへ進めます。海外（タイ・韓国）でよく知られたSRS病院も「手術」として地図に表示しています（下の一覧は国内の医療機関です）。
       <a class="map-everything-link" href="/map/">当事者団体・イベントもふくむ地図を見る →</a>
     </p>
     <p class="source-note">
