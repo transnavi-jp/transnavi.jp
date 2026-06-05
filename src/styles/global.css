@@ -1352,6 +1352,30 @@ ul {
 /* "関連ページ / 次に読む" navigation: render as big buttons (not small text
    chips). Only applies to .entry-related navs — the glossary term cloud
    (.word-chips without .entry-related) keeps the small pill style. */
+/* Same-field term links on a glossary detail page: a labelled cloud of small
+   pills linking to neighbouring terms in the same category. */
+.entry-siblings {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--line);
+}
+
+.entry-siblings-label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+/* When the same-field cloud is present it already draws the divider, so the
+   related-pages nav below it doesn't need its own top border. */
+.entry-siblings + .entry-related {
+  margin-top: 18px;
+  padding-top: 0;
+  border-top: none;
+}
+
 .entry-related {
   margin-top: 24px;
   padding-top: 18px;

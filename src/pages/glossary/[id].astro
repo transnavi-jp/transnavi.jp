@@ -63,6 +63,16 @@ const knowledgePage = knowledgePages[entry.category];
 if (knowledgePage) { add(knowledgePage); add(P.clinics); }
 if (entry.category === '法律・制度') add(P.legal);
 
+// Same-field terms: link each entry to a handful of its category siblings (the
+// next ones in a circular window), so glossary pages aren't dead-ends — readers
+// can hop between neighbouring words and crawlers see the terms interlinked
+// instead of every term funnelling only into the index.
+const allEntries = glossaryData as GlossaryEntry[];
+const catList = allEntries.filter((e) => e.category === entry.category);
+const sIdx = catList.findIndex((e) => e.id === entry.id);
+const siblings: GlossaryEntry[] = [];
+for (let i = 1; i <= 6 && i < catList.length; i++) siblings.push(catList[(sIdx + i) % catList.length]);
+
 const translations = [
   ['英語', entry.translations.en],
   ['韓国語', entry.translations.ko],
@@ -174,6 +184,17 @@ const termLd = {
       <aside class="entry-message" role="note" aria-label="読んでいるあなたへ">
         <p>{entry.message}</p>
       </aside>
+    )}
+
+    {siblings.length > 0 && (
+      <nav class="entry-siblings" aria-label="同じ分野の用語">
+        <span class="entry-siblings-label">同じ分野のことば</span>
+        <div class="word-chips">
+          {siblings.map((s) => (
+            <a class="word-chip" href={`/glossary/${s.id}/`}>{s.term}</a>
+          ))}
+        </div>
+      </nav>
     )}
 
     <nav class="word-chips entry-related" aria-label="関連ページ">
