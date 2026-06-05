@@ -3,3 +3,11 @@
 
 /llms-full.txt
   Content-Type: text/plain; charset=utf-8
+
+# Astro fingerprints everything under /_astro/ with a content hash in the
+# filename, so a changed file gets a new URL — these can be cached forever.
+# Non-fingerprinted assets at stable URLs (search.js, search-index.json, the
+# page HTML, etc.) are intentionally left to the default revalidation so a
+# deploy is picked up immediately.
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
