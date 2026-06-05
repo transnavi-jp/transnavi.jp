@@ -50,11 +50,27 @@ export const SYN = {
   相談: ['相談先', '窓口', 'ホットライン'],
 };
 
+// Synonyms loaded at runtime (the glossary alias cliques from
+// dist/search-synonyms.json), merged with the hand-curated SYN above. Lets a
+// search for any name of a concept (性自認) also match pages that use another
+// (性同一性), so synonymous queries return essentially the same result set.
+const EXTRA_SYN = Object.create(null);
+
+export function addSynonyms(map) {
+  if (!map) return;
+  for (const k of Object.keys(map)) {
+    const key = k.normalize('NFKC').toLowerCase();
+    EXTRA_SYN[key] = [...new Set([...(EXTRA_SYN[key] || []), ...map[k]])];
+  }
+}
+
 export function expand(rawTerms) {
   const ex = new Set();
   for (const raw of rawTerms) {
     const key = raw.normalize('NFKC').toLowerCase();
-    if (SYN[key]) for (const s of SYN[key]) ex.add(norm(s));
+    for (const list of [SYN[key], EXTRA_SYN[key]]) {
+      if (list) for (const s of list) ex.add(norm(s));
+    }
   }
   return [...ex].filter(Boolean);
 }
@@ -121,21 +137,23 @@ export function prepare(index) {
 }
 
 // The query-independent importance prior (link-graph PageRank, field `r` on each
-// entry). Evaluated offline (scripts/eval-search.mjs) against the labelled set:
-// applying it MULTIPLICATIVELY is inert here (steep relevance tiers + a hub-
-// concentrated PageRank), so production uses it as a strict TIE-BREAK instead —
-// importance only reorders results whose relevance is within TIE_EPS, lifting
-// the more central page among genuine ties without ever regressing a clear
-// match. PR_WEIGHT is kept for the multiplicative path the eval still A/Bs.
-export const PR_WEIGHT = 0.35;
-export const TIE_EPS = 0.05;
+// entry). Measured offline (scripts/eval-search.mjs) against the labelled set,
+// and the verdict is that it does NOT help this corpus: multiplicatively it is
+// inert (steep relevance tiers + a hub-concentrated PageRank), and once glossary
+// synonym expansion is added it is net-negative even as a tie-break (it trades
+// hit@1 / MRR for a little hit@10). So importance is OFF by default (prWeight 0,
+// tieEps 0). The signal (`r`) and both code paths are kept so the eval can keep
+// A/B-ing it and we can re-check if the link graph grows. The wins that shipped
+// were query trimming (above) and synonym expansion (expand / addSynonyms).
+export const PR_WEIGHT = 0.35; // eval-only A/B knob; not applied in production
+export const TIE_EPS = 0.05; // eval-only A/B knob; not applied in production
 
 // Rank the prepared index against a query. Options (all overridable so the
 // offline eval can A/B them): prWeight = importance-prior strength; trim = strip
 // trailing boilerplate suffixes; tieEps = if >0, apply importance as a strict
 // tie-break (reorder only results whose relevance scores are within tieEps of
 // each other) instead of multiplicatively.
-export function search(prep, query, { prWeight = PR_WEIGHT, trim = true, tieEps = TIE_EPS, limit = 50 } = {}) {
+export function search(prep, query, { prWeight = 0, trim = true, tieEps = 0, limit = 50 } = {}) {
   const rawTerms = String(query).trim().split(/[\s　]+/).filter(Boolean);
   if (!rawTerms.length) return [];
   const terms = queryTerms(rawTerms, { trim });

@@ -142,3 +142,23 @@ fs.writeFileSync(`${DIST}/search-index.json`, JSON.stringify(entries));
 const kb = (fs.statSync(`${DIST}/search-index.json`).size / 1024).toFixed(0);
 const withR = entries.filter((e) => e.r != null).length;
 console.log(`search-index.json: ${entries.length} entries (${withR} with importance prior), ${kb}KB`);
+
+// Synonym map for query expansion: every glossary entry's term + abbreviation +
+// aliases are names for the SAME concept, so they are mutual synonyms. Searching
+// any one (e.g. 性自認) then also matches pages that use another (性同一性,
+// ジェンダーアイデンティティ), giving the near-identical result SET the names
+// share. Keyed by NFKC+lowercase (the form public/search-core.js expand() keys
+// on); short keys (<2 chars) are skipped to avoid noisy single-letter triggers.
+const synonyms = {};
+for (const g of glossary) {
+  const members = [...new Set([g.term, g.abbr, ...(g.aliases || [])].filter(Boolean))];
+  if (members.length < 2) continue;
+  for (const m of members) {
+    const key = m.normalize('NFKC').toLowerCase();
+    if (key.length < 2) continue;
+    const others = members.filter((x) => x !== m);
+    synonyms[key] = [...new Set([...(synonyms[key] || []), ...others])];
+  }
+}
+fs.writeFileSync(`${DIST}/search-synonyms.json`, JSON.stringify(synonyms));
+console.log(`search-synonyms.json: ${Object.keys(synonyms).length} synonym keys`);

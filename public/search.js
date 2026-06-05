@@ -3,7 +3,7 @@
 // highlighting. The normalisation, fuzzy matching and ranking live in
 // search-core.js so the offline relevance evaluation (scripts/eval-search.mjs)
 // scores with the exact same code that ships here.
-import { norm, bigrams, expand, prepare, search } from '/search-core.js';
+import { norm, bigrams, expand, prepare, search, addSynonyms } from '/search-core.js';
 
 (function () {
   'use strict';
@@ -12,8 +12,9 @@ import { norm, bigrams, expand, prepare, search } from '/search-core.js';
 
   async function load() {
     if (PREP) return PREP;
-    const res = await fetch('/search-index.json');
-    PREP = prepare(await res.json());
+    const [idxRes, synRes] = await Promise.all([fetch('/search-index.json'), fetch('/search-synonyms.json')]);
+    addSynonyms(await synRes.json().catch(() => null)); // glossary alias synonyms (best-effort)
+    PREP = prepare(await idxRes.json());
     return PREP;
   }
 

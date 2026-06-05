@@ -10,10 +10,15 @@
 // Requires a prior `npm run build` so dist/search-index.json carries the `r`
 // (PageRank) field. Grades: idealUrl = 3 (the one best page), alsoGood = 1.
 import fs from 'node:fs';
-import { prepare, search } from '../public/search-core.js';
+import { prepare, search, addSynonyms } from '../public/search-core.js';
 
 const index = JSON.parse(fs.readFileSync('dist/search-index.json', 'utf8'));
 const judged = JSON.parse(fs.readFileSync('scripts/search-eval-set.json', 'utf8'));
+try {
+  addSynonyms(JSON.parse(fs.readFileSync('dist/search-synonyms.json', 'utf8')));
+} catch {
+  /* no synonyms file — evaluate without */
+}
 const prep = prepare(index);
 const K = 10;
 
