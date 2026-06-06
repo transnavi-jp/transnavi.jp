@@ -6,8 +6,8 @@ export const OG_GROUPS = {
   'はじめに・基本': ['/start/', '/faq/', '/basics/', '/gender/', '/orientation/', '/intersex/', '/dysphoria/', '/learn/'],
   '移行と医療': ['/transition/', '/detransition/', '/puberty-blockers/', '/hrt-effects/', '/hrt-medications/', '/fertility/', '/voice/', '/presentation/', '/hair-removal/', '/surgery/', '/cost/'],
   '相談・医療機関': ['/support/', '/clinics/', '/map/'],
-  '暮らしと社会': ['/coming-out/', '/relationships/', '/everyday/', '/allies/', '/guidelines/', '/safety/', '/legal-change/', '/flags/', '/pride/'],
-  '調べる・資料': ['/reference/', '/search/', '/glossary/', '/works/', '/bibliography/', '/resources/', '/library/'],
+  '暮らしと社会': ['/coming-out/', '/relationships/', '/everyday/', '/school/', '/allies/', '/guidelines/', '/safety/', '/legal-change/', '/flags/', '/pride/', '/history/'],
+  '調べる・資料': ['/reference/', '/search/', '/glossary/', '/works/', '/bibliography/', '/resources/', '/library/', '/tags/'],
   'このサイト': ['/about/', '/data/', '/legal/', '/edit/', '/sitemap/'],
 };
 
@@ -20,7 +20,7 @@ export const slugForRoute = (route) =>
 
 // Detail collections share their index card (e.g. every /glossary/x/ uses the
 // /glossary/ card) so we don't render hundreds of images.
-const COLLECTION_BASES = ['/glossary/', '/clinics/', '/library/'];
+const COLLECTION_BASES = ['/glossary/', '/clinics/', '/library/', '/tags/'];
 
 // The card a given pathname should use, or null to fall back to /og-image.png.
 export function ogCardFor(pathname) {
