@@ -3,6 +3,7 @@ import type { APIRoute } from 'astro';
 import clinicsData from '../data/clinics.json';
 import glossaryData from '../data/glossary.json';
 import pageDates from '../data/page-dates.json';
+import { TAGS } from '../data/tag-taxonomy';
 import type { Clinic } from '../types/clinic';
 import type { GlossaryEntry } from '../types/glossary';
 
@@ -25,6 +26,7 @@ export const GET: APIRoute = async ({ site }) => {
     '/allies/',
     '/basics/',
     '/gender/',
+    '/orientation/',
     '/intersex/',
     '/dysphoria/',
     '/transition/',
@@ -64,14 +66,20 @@ export const GET: APIRoute = async ({ site }) => {
     '/search/',
     '/data/',
     '/sitemap/',
+    '/tags/',
+    ...Object.values(TAGS).map((t) => `/tags/${t.slug}/`),
     ...clinics.map((clinic) => `/clinics/${clinic.id}/`),
     ...glossary.map((entry) => `/glossary/${entry.id}/`),
     ...imported.map((page) => `/library/${page.id}/`),
   ];
 
+  // lastmod from page-dates where we have them, else a clinic's importedAt date.
+  const clinicDate = Object.fromEntries(
+    clinics.filter((c) => c.importedAt).map((c) => [`/clinics/${c.id}/`, c.importedAt as string]),
+  );
   const entries = [...new Set(paths)].map((path) => ({
     url: new URL(path, site).toString(),
-    lastmod: dates[path]?.updated,
+    lastmod: dates[path]?.updated ?? clinicDate[path],
   }));
   const body = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
