@@ -1,5 +1,13 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import pageTags from '../data/page-tags.json';
+import { tagSlug } from '../data/tag-taxonomy';
+
+// Tags come from the site-wide controlled vocabulary (src/data/page-tags.json),
+// the same tags shown on each article and on /tags/. Only the reading pages are
+// tagged; index/database pages (用語集・地図など) have none, so they show no chips.
+const tagsFor = (href: string): string[] =>
+  ((pageTags as Record<string, { title: string; tags: string[] }>)[href]?.tags ?? []).slice(0, 4);
 
 const groups = [
   {
@@ -10,11 +18,10 @@ const groups = [
       { href: '/orientation/', title: '性的指向と「好き」のいろいろ', desc: 'だれを好きになるか（性的指向）は、自分の性別とは別のこと。アロ・エースや、いろいろな「惹かれ」も。' },
       { href: '/intersex/', title: 'インターセックス・性分化疾患（DSD）のこと', desc: '生まれつきのからだの話。「男でも女でもない第三の性」ではないこと、トランスとの違いと重なり。' },
       { href: '/dysphoria/', title: '性別違和を知る', desc: '性別違和とは何か、どんな形で現れるのか。性別高揚感についても。' },
-      { href: '/glossary/', title: '用語集', desc: 'トランスジェンダーに関する基本的な言葉の一覧。' },
     ],
   },
   {
-    title: '自分のこれから',
+    title: 'はじめの一歩・これから',
     items: [
       { href: '/start/', title: 'はじめての方へ', desc: 'まだよくわからない、というところから読めます。' },
       { href: '/transition/', title: '性別移行を知る', desc: '社会的・医療的・法的な側面と、「急がなくていい」という考え方。' },
@@ -36,10 +43,11 @@ const groups = [
       { href: '/surgery/', title: '移行のための手術', desc: '手術の種類のオリエンテーション。どれも必須ではありません。' },
       { href: '/cost/', title: 'お金のこと・費用の全体像', desc: '自費が基本のこと、手続きや手術の目安、高額療養費・医療費控除など負担を軽くする仕組み。' },
       { href: '/clinics/', title: '医療機関', desc: '地域ごとの医療機関一覧。' },
+      { href: '/map/', title: '地図で探す', desc: '医療機関や当事者の集まる場所・相談窓口を、地図の上でまとめて。' },
     ],
   },
   {
-    title: '暮らしと社会',
+    title: '暮らしと人間関係',
     items: [
       { href: '/coming-out/', title: 'カミングアウト入門', desc: '誰に・いつ・どう伝える？　義務ではありません。' },
       { href: '/relationships/', title: '恋愛と性の健康のこと', desc: '「好き」と性別は別。相手に伝えるかは自由。同意・安全と、ホルモンは避妊にならない話。' },
@@ -47,11 +55,26 @@ const groups = [
       { href: '/allies/', title: '周囲の人へ', desc: '伝えるとき、そして打ち明けられたとき。' },
       { href: '/guidelines/', title: '学校・職場・自治体のSOGIガイドライン', desc: '配慮のよりどころになる、公式ガイドラインのリンク集。' },
       { href: '/safety/', title: '安全とこころ', desc: 'つらいときの相談先、身を守るための基本。' },
+    ],
+  },
+  {
+    title: '文化・歴史',
+    items: [
       { href: '/flags/', title: 'プライドフラッグ', desc: '旗やシンボルの色に込められた意味。' },
       { href: '/pride/', title: 'プライドの記念日・イベント', desc: 'LGBTQ+ に関する記念日・週間・月間と、日本のイベント。' },
-      { href: '/history/', title: 'トランスジェンダーの歴史', desc: '世界と日本の歩みを年表で。あなたは長い歴史の続きにいます。' },
+      { href: '/history/', title: 'トランスジェンダーの歴史', desc: '世界と日本の歩みを年表で。世界各地の多様な性のあり方にもふれています。' },
       { href: '/works/', title: '文芸作品', desc: '映画・ドラマ・漫画・ゲームなどの作品データベース。' },
+    ],
+  },
+  {
+    title: '調べる・もっと知る',
+    items: [
+      { href: '/glossary/', title: '用語集', desc: 'トランスジェンダーに関する基本的な言葉の一覧。' },
+      { href: '/faq/', title: 'よくある質問（FAQ）', desc: 'はじめに気になりやすい疑問への、みじかい答え。' },
       { href: '/bibliography/', title: '文献（書籍・論文）', desc: '学術的な書籍・論文・ガイドラインの一覧。深く知りたい人へ。' },
+      { href: '/resources/', title: '関連サイト・団体', desc: '当事者団体・コミュニティ・相談窓口など、外部サイトのリンク集。' },
+      { href: '/library/', title: '資料集', desc: '既存の資料を、確認しやすい形で整理したアーカイブ。' },
+      { href: '/reference/', title: '資料・リンク（まとめ）', desc: 'さらに調べたいときの入り口。文芸作品・文献・関連サイト・資料集・用語集をまとめています。' },
     ],
   },
 ];
@@ -59,25 +82,37 @@ const groups = [
 
 <BaseLayout
   title="知る・学ぶ - とらんすナビ"
-  description="性別や性別違和、移行、医療、暮らしについて知るためのページの一覧。気になったところから読めます。"
+  description="性別や性別違和、移行、医療、暮らし、文化や歴史について知るためのページの一覧。テーマごとに整理しています。気になったところから読めます。"
 >
   <article class="article-shell">
     <div class="eyebrow">知る</div>
     <h1>知る・学ぶ</h1>
     <p class="lead">
-      性別や性別違和、これからのこと、からだや暮らしについて、知るためのページをまとめました。順番はありません。気になったところから、どうぞ。はじめに気になりやすいことは、<a href="/faq/">よくある質問（FAQ）</a>にも短くまとめています。
+      性別や性別違和、これからのこと、からだや暮らし、文化や歴史について、知るためのページをテーマごとにまとめました。順番はありません。気になったところから、どうぞ。各ページのタグから、同じ話題のページや用語をたどることもできます。はじめに気になりやすいことは、<a href="/faq/">よくある質問（FAQ）</a>にも短くまとめています。
     </p>
 
     {groups.map((group) => (
       <section class="article-section" aria-label={group.title}>
         <h2>{group.title}</h2>
         <div class="topic-list">
-          {group.items.map((item) => (
-            <a class="topic-item article-link" href={item.href}>
-              <strong>{item.title}</strong>
-              <span>{item.desc}</span>
-            </a>
-          ))}
+          {group.items.map((item) => {
+            const tags = tagsFor(item.href);
+            return (
+              <div class="topic-cell">
+                <a class="topic-item article-link" href={item.href}>
+                  <strong>{item.title}</strong>
+                  <span>{item.desc}</span>
+                </a>
+                {tags.length > 0 && (
+                  <div class="topic-tags" aria-label="話題のタグ">
+                    {tags.map((t) => tagSlug(t) && (
+                      <a class="page-tag" href={`/tags/${tagSlug(t)}/`}>{t}</a>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
       </section>
     ))}

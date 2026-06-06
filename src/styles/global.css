@@ -773,6 +773,30 @@ ul {
   background: linear-gradient(180deg, var(--paper-strong), rgba(239, 248, 255, 0.88));
 }
 
+/* A grid cell wraps the card link plus an independent row of tag chips, so the
+   whole card stays one big link while the chips remain their own links (no
+   nested <a>). The card grows to keep rows aligned; chips sit just below it. */
+.topic-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.topic-cell > .topic-item {
+  flex: 1 1 auto;
+}
+
+.topic-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 8px 6px 0;
+}
+
+.topic-tags .page-tag {
+  font-size: 0.72rem;
+  padding: 1px 10px;
+}
+
 .article-list,
 .clinic-list,
 .glossary-list {
