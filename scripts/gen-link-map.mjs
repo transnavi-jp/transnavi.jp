@@ -36,6 +36,7 @@ const NODES = {
   '/guidelines/': { label: 'SOGIガイドライン', group: 'society' },
   '/safety/': { label: '安全とこころ', group: 'society' },
   '/everyday/': { label: '日常の場面', group: 'society' },
+  '/school/': { label: '学校でのこと', group: 'society' },
   '/legal-change/': { label: '戸籍と名前', group: 'society' },
   '/flags/': { label: 'フラッグ', group: 'society' },
   '/pride/': { label: '記念日', group: 'society' },
