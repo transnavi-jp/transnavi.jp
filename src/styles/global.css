@@ -773,6 +773,16 @@ ul {
   background: linear-gradient(180deg, var(--paper-strong), rgba(239, 248, 255, 0.88));
 }
 
+/* Keep card descriptions to two lines max so the grid stays tidy across
+   viewports (the direct-child <span> is the description; .furi is nested). */
+.topic-item > span {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+}
+
 .article-list,
 .clinic-list,
 .glossary-list {
