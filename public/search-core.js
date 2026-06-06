@@ -202,9 +202,14 @@ export function search(prep, query, { prWeight = 0, trim = true, tieEps = 0, lim
     if (terms.length > 1) rel += matchedTerms * 6;
     if (rel > 0) {
       const r = p.e.r || 0;
+      // Imported library articles (k='資料') are in-depth but secondary: gently
+      // demote them so they don't outrank the site's own primary pages on a
+      // near-tie (e.g. a テストステロン import beating /hrt-effects/ for ホルモン),
+      // while still surfacing high when they're clearly the most relevant.
+      const demote = p.e.k === '資料' ? 0.8 : 1;
       // Importance prior: as a soft multiplicative lift (default), or — when
       // tieEps is set — kept separate so it only breaks near-ties.
-      const score = tieEps > 0 ? rel : rel * (1 + prWeight * r);
+      const score = (tieEps > 0 ? rel : rel * (1 + prWeight * r)) * demote;
       out.push({ e: p.e, score, rel, r });
     }
   }
