@@ -1,13 +1,5 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import pageTags from '../data/page-tags.json';
-import { tagSlug } from '../data/tag-taxonomy';
-
-// Tags come from the site-wide controlled vocabulary (src/data/page-tags.json),
-// the same tags shown on each article and on /tags/. Only the reading pages are
-// tagged; index/database pages (用語集・地図など) have none, so they show no chips.
-const tagsFor = (href: string): string[] =>
-  ((pageTags as Record<string, { title: string; tags: string[] }>)[href]?.tags ?? []).slice(0, 4);
 
 const groups = [
   {
@@ -95,24 +87,12 @@ const groups = [
       <section class="article-section" aria-label={group.title}>
         <h2>{group.title}</h2>
         <div class="topic-list">
-          {group.items.map((item) => {
-            const tags = tagsFor(item.href);
-            return (
-              <div class="topic-item topic-card">
-                <a class="topic-card-link" href={item.href}>
-                  <strong>{item.title}</strong>
-                  <span>{item.desc}</span>
-                </a>
-                {tags.length > 0 && (
-                  <div class="topic-tags" aria-label="話題のタグ">
-                    {tags.map((t) => tagSlug(t) && (
-                      <a class="page-tag" href={`/tags/${tagSlug(t)}/`}>{t}</a>
-                    ))}
-                  </div>
-                )}
-              </div>
-            );
-          })}
+          {group.items.map((item) => (
+            <a class="topic-item article-link" href={item.href}>
+              <strong>{item.title}</strong>
+              <span>{item.desc}</span>
+            </a>
+          ))}
         </div>
       </section>
     ))}
