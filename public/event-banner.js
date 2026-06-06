@@ -25,6 +25,9 @@
     var active = null;
     for (var i = 0; i < events.length; i++) {
       var ev = events[i];
+      // A one-off dated event (e.g. a specific year's pride) sets `year`; skip it
+      // in any other year. Entries without `year` recur every year as before.
+      if (ev.year && ev.year !== year) continue;
       var start = new Date(year, ev.sm - 1, ev.sd);
       if (ev.lead) start.setDate(start.getDate() - ev.lead);
       var end = new Date(year, ev.em - 1, ev.ed);

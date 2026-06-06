@@ -22,15 +22,16 @@ const days = [
 // 時期が決まっている近日のイベント（過ぎたら見直してください）。
 const upcoming = [
   {
-    date: '2026年6月4日（木）',
-    name: 'プライドデモ（渋谷）',
-    place: '東京・渋谷',
-    note: '渋谷で行われるプライドのデモ行進。集合時間や経路などの最新情報は、主催者の案内をご確認ください。',
+    date: '2026年6月6日（土）・7日（日）',
+    name: 'Tokyo Pride 2026（プライドフェスティバル＆パレード）',
+    place: '東京・代々木公園',
+    note: 'アジア最大級のプライドイベント。パレードやステージなど。日程・参加方法の最新情報は公式サイトでご確認ください。',
+    url: 'https://pride.tokyo/',
   },
 ];
 
 const japanEvents = [
-  { when: '例年 春〜初夏ごろ', name: '東京レインボープライド（Tokyo Pride）', note: '東京・渋谷／代々木などで開催される、国内最大級のプライドイベント。' },
+  { when: '例年 春〜初夏ごろ', name: '東京レインボープライド（Tokyo Pride）', note: '東京・渋谷／代々木などで開催される、国内最大級のプライドイベント。', url: 'https://pride.tokyo/' },
   { when: '例年 5月ごろ', name: 'K.G. Rainbow Week（関西学院大学）', note: 'IDAHOBIT に合わせて関西学院大学で開かれる、性の多様性に関する年次イベント。' },
   { when: '例年 秋ごろ', name: '関西レインボーフェスタ', note: '大阪で開催されるプライドイベント。' },
 ];
@@ -90,7 +91,9 @@ const japanEvents = [
           <li class="day-item">
             <span class="day-date">{event.when}</span>
             <div class="day-body">
-              <span class="day-name">{event.name}</span>
+              <span class="day-name">
+                {event.url ? <a href={event.url} target="_blank" rel="noreferrer">{event.name}</a> : event.name}
+              </span>
               <span class="day-note">{event.note}</span>
             </div>
           </li>
