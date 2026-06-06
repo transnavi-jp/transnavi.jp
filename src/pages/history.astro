@@ -1,20 +1,45 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-// Accurate, gentle overview timeline of transgender history (world + Japan).
-// Dates verified against mainstream sources; the 2023 rulings especially.
-// Inline encyclopedia links (Japanese Wikipedia preferred, else English /
-// authoritative source), researched & verified per subject. Article titles are
-// percent-encoded so every href is pure ASCII (safe through the furigana pass).
+// Accurate, gentle overview of transgender / gender-diverse history.
+// Structure: living cultures around the world (region-grouped) → world timeline
+// → East Asia (connecting Japan to its neighbours) → Japan. Less Western-centric.
+// Dates verified against mainstream sources; links are researched & verified
+// (Japanese Wikipedia preferred, else English / authoritative). Article titles
+// are percent-encoded so every href is pure ASCII (safe through the furigana pass).
 const wp = (lang: string, title: string) =>
   `https://${lang}.wikipedia.org/wiki/${encodeURIComponent(title.replace(/ /g, '_'))}`;
 const a = (text: string, href: string) => `<a href="${href}" target="_blank" rel="noreferrer">${text}</a>`;
 const L = {
+  // cross-cultural living traditions
   twospirit: wp('en', 'Two-spirit'),
   hijra: wp('ja', 'ヒジュラー'),
+  khawajaSira: wp('en', 'Khawaja sira'),
+  waria: wp('en', 'Waria'),
   bugis: wp('en', 'Gender in Bugis society'),
+  kathoey: wp('en', 'Kathoey'),
+  bakla: wp('en', 'Bakla'),
+  babaylan: wp('en', 'Filipino shamans'),
+  makNyah: wp('en', 'Mak nyah'),
+  faafafine: wp('en', 'Faʻafafine'),
+  fakaleiti: wp('en', 'Fakaleitī'),
+  mahu: wp('en', 'Māhū'),
+  takatapui: wp('en', 'Takatāpui'),
+  mukhannath: wp('en', 'Mukhannath'),
+  khanith: wp('en', 'Khanith'),
+  yanDaudu: wp('en', 'Yan daudu'),
+  mudokoDako: wp('en', 'Mudoko dako'),
+  muxe: wp('en', 'Muxe'),
+  travesti: wp('en', 'Travesti (gender identity)'),
+  nadleehi: wp('en', 'Nádleehi'),
+  winkte: wp('en', 'Winkte'),
+  lhamana: wp('en', 'Lhamana'),
+  ardhanari: wp('ja', 'アルダナーリーシュヴァラ'),
+  galaPriests: wp('en', 'Gala (priests)'),
+  // world timeline
   cybele: wp('ja', 'キュベレー'),
   deon: wp('ja', 'シュヴァリエ・デオン'),
+  criminalTribesAct: wp('en', 'Criminal Tribes Act'),
   wewha: wp('en', "We'wha"),
   hirschfeld: wp('ja', 'マグヌス・ヒルシュフェルト'),
   institut: wp('ja', '性科学研究所'),
@@ -28,9 +53,13 @@ const L = {
   marsha: wp('ja', 'マーシャ・P・ジョンソン'),
   sylvia: wp('en', 'Sylvia Rivera'),
   star: wp('en', 'Street Transvestite Action Revolutionaries'),
+  srs: wp('ja', '性別適合手術'),
   richards: wp('en', 'Renée Richards'),
   wpath: wp('en', 'World Professional Association for Transgender Health'),
   dsm: wp('ja', '精神疾患の診断・統計マニュアル'),
+  iranTrans: wp('en', 'Transgender rights in Iran'),
+  molkara: wp('en', 'Maryam Khatoon Molkara'),
+  saRights: wp('en', 'LGBT rights in South Africa'),
   tdor: wp('ja', 'トランスジェンダー追悼の日'),
   yogyakarta: wp('ja', 'ジョグジャカルタ原則'),
   thirdgender: wp('ja', '第3の性別'),
@@ -42,18 +71,41 @@ const L = {
   pakistan: wp('ja', 'パキスタンのLGBTの権利'),
   bostock: wp('en', 'Bostock v. Clayton County'),
   germany: wp('en', 'Self-Determination Act (Germany)'),
+  // east asia
+  chinaTrans: wp('en', 'Transgender people in China'),
+  jinXing: wp('ja', '金星 (ダンサー)'),
+  harisu: wp('ja', 'ハ・リス'),
+  koreaRights: wp('ja', '大韓民国におけるLGBTの権利'),
+  hkW: wp('en', 'W v Registrar of Marriages'),
+  taiwanRights: wp('ja', '中華民国におけるLGBTの権利'),
+  audreyTang: wp('ja', '唐鳳'),
+  // japan
   blueboy: wp('ja', 'ブルーボーイ事件'),
   jspn: wp('ja', '日本精神神経学会'),
   saitama: wp('ja', '埼玉医科大学'),
-  srs: wp('ja', '性別適合手術'),
   tokurei: wp('ja', '性同一性障害者の性別の取扱いの特例に関する法律'),
   partnership: wp('ja', '渋谷区男女平等及び多様性を尊重する社会を推進する条例'),
   rikai: wp('ja', '性的指向及びジェンダーアイデンティティの多様性に関する国民の理解の増進に関する法律'),
 };
+
+// Living traditions around the world (not a timeline — these are continuous
+// cultural identities, each its own thing). Region label + gentle HTML body.
+const cultures = [
+  { region: '南アジア', body: `インド・パキスタン・バングラデシュの${a('ヒジュラー', L.hijra)}は、古代の文献やムガル帝国の宮廷にも登場する、長い歴史をもつ「第三の性」の人々です。パキスタンでは${a('クワジャ・シラ', L.khawajaSira)}とも呼ばれます。` },
+  { region: '東南アジア', body: `インドネシアの${a('ワリア', L.waria)}や${a('ブギの社会に伝わる5つのジェンダー', L.bugis)}（祭司ビッス）、タイの${a('カトゥーイ', L.kathoey)}、フィリピンの${a('バクラ', L.bakla)}（スペイン以前の祭司${a('バビラン', L.babaylan)}）、マレーシアの${a('マッニャー', L.makNyah)}など、地域ごとの呼び名とあり方があります。` },
+  { region: '太平洋（オセアニア）', body: `ポリネシアには、男女の「あいだ」に立つ人を家族や地域が受け入れてきた文化が広くあります。サモアの${a('ファアファフィネ', L.faafafine)}、トンガの${a('レイティ', L.fakaleiti)}、ハワイ・タヒチの${a('マフー', L.mahu)}、マオリの${a('タカタープイ', L.takatapui)}、クック諸島のアカヴァイネなど。` },
+  { region: '中東・イスラム圏', body: `イスラム初期の記録に残る${a('ムハンナス', L.mukhannath)}や、オマーンの${a('ハニース', L.khanith)}など、男女のあいだに位置づけられる役割が古くから知られていました。` },
+  { region: 'アフリカ', body: `ナイジェリア・ハウサの${a('ヤン・ダウダ', L.yanDaudu)}、ウガンダの${a('ムドコ・ダコ', L.mudokoDako)}、エチオピアのアシュティメ、アンゴラのチバドスなど、植民地化の前から各地に多様な性のあり方が伝えられてきました。` },
+  { region: 'ラテンアメリカ', body: `メキシコ・サポテクの社会で古くから大切にされてきた${a('ムシェ', L.muxe)}や、南米で当事者が誇りの名に育ててきた${a('トラベスティ', L.travesti)}など。` },
+  { region: '北米先住民', body: `各民族の多様なあり方を尊重してまとめて指す現代の総称が${a('トゥー・スピリット', L.twospirit)}です。ナバホの${a('ナドレーヒ', L.nadleehi)}、ラコタの${a('ウィンクテ', L.winkte)}、ズニの${a('ラマナ', L.lhamana)}など、民族ごとに固有の名とあり方があります。` },
+  { region: '古代の世界', body: `古代インドには男神と女神が一体となった${a('アルダナーリーシュヴァラ', L.ardhanari)}の姿があり、『カーマ・スートラ』にも「第三の性」が記されています。古代メソポタミアで女神に仕えた${a('ガラ', L.galaPriests)}と呼ばれる人々のように、解釈に議論のあるものもあります。` },
+];
+
 const world = [
-  { year: '古くから', event: `世界中の多くの文化に、男女の枠におさまらない性のあり方を生きた人々がいました。北米先住民の「${a('トゥースピリット', L.twospirit)}」、南アジアの「${a('ヒジュラ', L.hijra)}」、インドネシア・${a('ブギス', L.bugis)}の社会に伝わる複数の性のあり方など。トランスジェンダーは、けっして新しい存在ではありません。` },
+  { year: '古くから', event: `世界中の多くの文化に、男女の枠におさまらない性のあり方がありました（上の「世界の文化のなかの多様な性」を参照）。トランスジェンダーは、けっして新しい存在ではありません。` },
   { year: '紀元前3世紀ごろ', event: `古代ローマでは、女神${a('キュベレー', L.cybele)}に仕える「ガリ」と呼ばれる人々が、女性の装いで生きていたと伝えられます。性別の境界をこえる生き方は、古代の各地に記録されています。` },
   { year: '1777年', event: `フランスの外交官${a('シュヴァリエ・デオン', L.deon)}が、女性として生きることを公に認められます。当時のヨーロッパでも広く知られた人物でした。` },
+  { year: '1871年', event: `イギリス支配下のインドで${a('刑事部族法', L.criminalTribesAct)}が定められ、ヒジュラーの人々が「犯罪者」として登録されました。植民地時代には、各地にあった多様な性のあり方が法律で抑え込まれていきました。` },
   { year: '1886年', event: `北米先住民ズニの「ラマナ」だった${a('ウェウハ', L.wewha)}が、ワシントンを訪れ、半年ほど滞在しました。トゥースピリットの存在を、当時の社会に印象づけた人です。` },
   { year: '1910年', event: `ドイツの医師${a('マグヌス・ヒルシュフェルト', L.hirschfeld)}が著書のなかで、性別をこえて装い生きる人々について論じ、専門の言葉を使い始めます。` },
   { year: '1919年', event: `ドイツ・ベルリンに、性のあり方を研究する「${a('性科学研究所', L.institut)}」が設立されます（マグヌス・ヒルシュフェルト）。先駆的な性別適合の医療も行われました。` },
@@ -63,9 +115,12 @@ const world = [
   { year: '1966年', event: `アメリカ・サンフランシスコの「${a('コンプトンズ・カフェテリア', L.comptons)}」で、トランスの人々が差別的な扱いに立ち上がりました。ストーンウォールより前の、大切な抵抗の一つです。同じころ、医師${a('ハリー・ベンジャミン', L.benjamin)}の著書や大学の専門外来など、医療の動きも広がりました。` },
   { year: '1969年', event: `アメリカ・ニューヨークの「ストーンウォール」で、性的マイノリティへの差別に抗議する出来事（${a('ストーンウォールの反乱', L.stonewall)}）。トランスの人々も大きな役割を果たし、いまのプライドの起源の一つになりました。` },
   { year: '1970年', event: `${a('マーシャ・P・ジョンソン', L.marsha)}と${a('シルビア・リベラ', L.sylvia)}が、行き場のないトランスの若者を支える団体「${a('STAR', L.star)}」を立ち上げます。当事者どうしの支え合いの、はやい例です。` },
+  { year: '1975年', event: `タイで最初の${a('性別適合手術', L.srs)}が行われます。のちにタイは、世界各地から人が訪れる手術の拠点の一つになりました。` },
   { year: '1977年', event: `アメリカで、トランス女性のテニス選手${a('レネイ・リチャーズ', L.richards)}が、女子大会への出場をめぐる裁判で勝訴します。スポーツと性別をめぐる、はやい時期の判断でした。` },
   { year: '1979年', event: `トランスジェンダーの医療に関する国際的な専門家団体が設立され、ケアの指針（SOC）がつくられます（のちの${a('WPATH', L.wpath)}）。` },
   { year: '1980年', event: `アメリカ精神医学会の診断基準「${a('DSM-III', L.dsm)}」に、はじめて関連する診断名が登場します。当時は性的逸脱と同じ枠に置かれるなど、いまとは大きく見方が異なりました。` },
+  { year: '1987年', event: `イランで、宗教指導者ホメイニ師が性別適合手術はイスラム法に反しないとする判断を示します（${a('イランのトランスジェンダー', L.iranTrans)}）。トランス女性の${a('マリヤム・モルカラ', L.molkara)}の訴えが、大きな後押しになりました。一方で同性愛は今も認められないなど、課題も残ります。` },
+  { year: '1996年', event: `${a('南アフリカ', L.saRights)}が、性的指向による差別を禁じることを憲法に明記した世界で初めての国になりました。2003年には戸籍上の性別変更を認める法律も定めます。` },
   { year: '1999年', event: `「${a('トランスジェンダー追悼の日', L.tdor)}（TDOR）」が始まります。差別や暴力で亡くなった人たちを、毎年11月20日に世界各地で追悼します。` },
   { year: '2007年', event: `性的指向と性自認に関する人権の国際的な指針「${a('ジョグジャカルタ原則', L.yogyakarta)}」がまとめられます。同じ年、ネパールの最高裁が「${a('第三の性', L.thirdgender)}」を法的に認めました。` },
   { year: '2012年', event: `アルゼンチンが、本人の自己申告だけで法律上の性別を変えられる「${a('ジェンダー・アイデンティティ法', L.argentina)}」を成立させます。手術や診断を求めない、世界の先がけとなる法律でした。` },
@@ -76,6 +131,17 @@ const world = [
   { year: '2020年', event: `アメリカの連邦最高裁が、トランスジェンダーであることを理由とした職場での解雇は違法だと判断しました（${a('ボストック判決', L.bostock)}）。` },
   { year: '2024年', event: `ドイツが、本人の意思で法律上の性別と名前を変えられる「${a('自己決定法', L.germany)}」を成立させます。世界の流れは、いまも動き続けています。` },
 ];
+
+// East Asia: connects Japan to its neighbours (China, Korea, Hong Kong, Taiwan).
+const eastAsia = [
+  { year: '1983年', event: `中国・北京の病院で、${a('中国で初めての本格的な性別適合手術', L.chinaTrans)}が行われます。` },
+  { year: '1990年代', event: `${a('金星', L.jinXing)}さんが手術を受け、中国で公に認められた最初のトランス女性のひとりとして知られる、ダンサー・司会者になりました。` },
+  { year: '2002年', event: `韓国で、歌手・女優の${a('ハ・リス', L.harisu)}さんの戸籍上の性別変更が認められ、社会に広く知られるきっかけになりました。` },
+  { year: '2006年', event: `韓国の最高裁（大法院）が、戸籍の性別変更を認めるための指針を示します（${a('大韓民国のLGBTの権利', L.koreaRights)}）。法律がないなかで、裁判所が道筋をつくりました。` },
+  { year: '2013年', event: `香港の最高裁が、トランス女性のWさんが望む性別で結婚できると判断します（${a('W対婚姻登記官', L.hkW)}）。` },
+  { year: '2021年', event: `台湾の裁判所が、性別適合手術を性別変更の必須条件とすることは認められないと判断します（${a('中華民国のLGBTの権利', L.taiwanRights)}）。デジタル担当大臣を務めた${a('オードリー・タン', L.audreyTang)}さんなど、当事者の活躍も知られています。` },
+];
+
 const japan = [
   { year: '1969年', event: `いわゆる「${a('ブルーボーイ事件', L.blueboy)}」で、性別適合手術を行った医師が有罪とされます。これ以降、日本では長らく手術が表立って行われなくなりました。` },
   { year: '1997年', event: `${a('日本精神神経学会', L.jspn)}が「性同一性障害に関する診断と治療のガイドライン」を策定します。` },
@@ -94,23 +160,51 @@ const japan = [
 
 <BaseLayout
   title="トランスジェンダーの歴史（年表） - とらんすナビ"
-  description="トランスジェンダーの歴史を、世界と日本の年表でやさしくたどります。ブルーボーイ事件、特例法（2003年）、DSM・ICDの脱病理化、2023〜2024年の最高裁・高裁の違憲判断まで。あなたは、長い歴史の続きにいます。"
+  description="トランスジェンダーの歴史を、世界の文化・世界の歩み・東アジア・日本の年表でやさしくたどります。ヒジュラーやムシェ、トゥー・スピリットなど各地の多様な性の文化から、各国の制度の歩みまで。あなたは、長い歴史の続きにいます。"
 >
   <article class="article-shell prose">
     <div class="eyebrow">知る</div>
     <h1>トランスジェンダーの歴史</h1>
     <p class="lead">
-      トランスジェンダーの人は、どの時代にも、どの地域にも生きてきました。あなたは、ひとりで生まれた特別な「例外」ではなく、長い歴史の続きにいます。ここでは、世界と日本の歩みを、ざっくりとした年表でたどります。
+      トランスジェンダーの人は、どの時代にも、どの地域にも生きてきました。あなたは、ひとりで生まれた特別な「例外」ではなく、長い歴史の続きにいます。ここでは、世界の文化のなかにある多様な性のあり方と、世界・東アジア・日本の歩みを、やさしくたどります。
     </p>
 
     <div class="page-disclaimer">
       これは大きな流れをつかむための、ごく一部の出来事です。年表にのらない無数の人たちの暮らしや、声をあげた人たちの積み重ねの上に、今があります。気になる人名や出来事は、リンク先（多くはウィキペディア）でさらにくわしく知ることができます。
     </div>
 
+    <section aria-labelledby="cultures">
+      <h2 id="cultures">世界の文化のなかの多様な性</h2>
+      <p>
+        性別が男女の二つだけではない、という考え方や生き方は、世界の多くの文化に古くからありました。トランスジェンダーは、近代の西洋で生まれた新しいものではありません。ここでは、ほんの一部を地域ごとに紹介します。
+      </p>
+      {cultures.map((c) => (
+        <p set:html={`<strong>${c.region}</strong>　${c.body}`}></p>
+      ))}
+      <div class="page-disclaimer">
+        ここで紹介したのは、それぞれの文化に根ざした独自のあり方です。いまの「トランスジェンダー」という言葉と重なる部分もありますが、まったく同じではありません。宗教的な役割や社会的な事情から生まれたものもあり、性自認とそのまま結びつけられないものもあります。それぞれの文脈のなかで、大切にされてきました。
+      </div>
+    </section>
+
     <section aria-labelledby="world">
       <h2 id="world">世界の歩み</h2>
       <ol class="timeline">
         {world.map((item) => (
+          <li>
+            <span class="timeline-year">{item.year}</span>
+            <p class="timeline-event" set:html={item.event}></p>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section aria-labelledby="east-asia">
+      <h2 id="east-asia">東アジアの歩み</h2>
+      <p>
+        日本の歩みは、東アジアの近隣の動きともゆるやかにつながっています。中国・韓国・香港・台湾でも、当事者の人たちや裁判所が、少しずつ道をひらいてきました。
+      </p>
+      <ol class="timeline">
+        {eastAsia.map((item) => (
           <li>
             <span class="timeline-year">{item.year}</span>
             <p class="timeline-event" set:html={item.event}></p>
@@ -134,7 +228,7 @@ const japan = [
     <section aria-labelledby="meaning">
       <h2 id="meaning">歴史を知ることの意味</h2>
       <p>
-        歴史には、前に進んだ出来事も、つらい差別や弾圧の出来事もあります。まっすぐに良くなってきた、という単純な話ではありません。それでも、いつの時代にも自分らしく生きようとした人たちがいて、その積み重ねが、いまのあなたの選択肢につながっています。
+        歴史には、前に進んだ出来事も、つらい差別や弾圧の出来事もあります。まっすぐに良くなってきた、という単純な話ではありません。それでも、いつの時代にも、どの土地にも、自分らしく生きようとした人たちがいて、その積み重ねが、いまのあなたの選択肢につながっています。
       </p>
       <p>
         制度はこれからも変わっていきます。最新の状況は<a href="/legal-change/">戸籍と名前の変更</a>や<a href="/transition/">性別移行を知る</a>で確認してください。言葉の意味は<a href="/glossary/">用語集</a>へ。
@@ -142,11 +236,11 @@ const japan = [
     </section>
 
     <p class="source-note">
-      参考：各言語版ウィキペディアの「トランスジェンダーの歴史」関連項目、
+      参考：各言語版ウィキペディアの「トランスジェンダーの歴史」や各地の文化・人物・制度に関する項目、
       {' '}アセクシュアル・アロマンティックを中心に歴史をまとめた
       {' '}<a href="https://acearobu.com/history/" target="_blank" rel="noreferrer">acearobu「歴史」</a>、
       {' '}<a href="https://www.hrw.org/ja/news/2023/10/26/victory-transgender-rights-japan" target="_blank" rel="noreferrer">Human Rights Watch</a> や
-      {' '}<a href="https://www.amnesty.or.jp/news/2023/1026_10093.html" target="_blank" rel="noreferrer">アムネスティ</a>（2023年の最高裁判断）など。年表は大きな流れの紹介です。世界各地の出来事には、解釈や年代に幅のあるものもふくまれます。
+      {' '}<a href="https://www.amnesty.or.jp/news/2023/1026_10093.html" target="_blank" rel="noreferrer">アムネスティ</a>（2023年の最高裁判断）など。世界各地の出来事には、解釈や年代に幅のあるものもふくまれます。各文化のあり方は、その文脈のなかで理解されるべきものです。
     </p>
 
     <nav class="word-chips entry-related" aria-label="関連ページ">
