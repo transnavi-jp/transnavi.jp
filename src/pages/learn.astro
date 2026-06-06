@@ -98,8 +98,8 @@ const groups = [
           {group.items.map((item) => {
             const tags = tagsFor(item.href);
             return (
-              <div class="topic-cell">
-                <a class="topic-item article-link" href={item.href}>
+              <div class="topic-item topic-card">
+                <a class="topic-card-link" href={item.href}>
                   <strong>{item.title}</strong>
                   <span>{item.desc}</span>
                 </a>
