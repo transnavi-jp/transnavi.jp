@@ -105,18 +105,34 @@ const breadcrumbLd = showBreadcrumb
     }
   : null;
 
-// Freshness for search engines: a WebPage with the git-derived dates.
+// Per-page structured data with the git-derived dates. Health/medical pages are
+// MedicalWebPage (eligible for medical rich results); other dated content pages
+// are Article (headline/author/publisher/image); the rest stay implicit WebPage.
+const MEDICAL_ROUTES = new Set([
+  '/hrt-effects/', '/hrt-medications/', '/surgery/', '/puberty-blockers/', '/fertility/',
+  '/voice/', '/hair-removal/', '/transition/', '/detransition/', '/dysphoria/', '/cost/',
+]);
+const pageKind = pageDate ? (MEDICAL_ROUTES.has(pathname) ? 'MedicalWebPage' : 'Article') : null;
 const pageLd = pageDate
   ? {
       '@context': 'https://schema.org',
-      '@type': 'WebPage',
+      '@type': pageKind,
       '@id': `${canonicalUrl}#webpage`,
       url: canonicalUrl,
       name: pageName,
+      headline: pageName,
+      description,
       inLanguage: 'ja',
       isPartOf: { '@id': `${siteUrl}#website` },
+      mainEntityOfPage: canonicalUrl,
+      image: ogImage,
       datePublished: pageDate.created,
       dateModified: pageDate.updated,
+      author: { '@id': `${siteUrl}#organization` },
+      publisher: { '@id': `${siteUrl}#organization` },
+      ...(pageKind === 'MedicalWebPage'
+        ? { lastReviewed: pageDate.updated, medicalAudience: { '@type': 'MedicalAudience', audienceType: 'Patient' } }
+        : {}),
     }
   : null;
 ---
@@ -141,13 +157,16 @@ const pageLd = pageDate
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
+    {pathname === '/search/' && <meta name="robots" content="noindex,follow" />}
     <meta name="theme-color" content="#ffd6e8" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#171826" media="(prefers-color-scheme: dark)" />
     <meta http-equiv="content-language" content="ja" />
     <meta property="og:site_name" content={siteName} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={pageDate ? 'article' : 'website'} />
+    {pageDate && <meta property="article:published_time" content={pageDate.created} />}
+    {pageDate && <meta property="article:modified_time" content={pageDate.updated} />}
     <meta property="og:locale" content="ja_JP" />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={ogImage} />
@@ -167,7 +186,17 @@ const pageLd = pageDate
     <link rel="sitemap" href="/sitemap.xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    {/* Load the font CSS without blocking render: fetch as print, then apply.
+        display=swap already shows text in the fallback immediately. */}
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&display=swap" rel="stylesheet" />
+    </noscript>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
     <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
