@@ -2,6 +2,7 @@
 title: "HRT 治療期間の観察・モニタリング"
 description: "MtF.wiki 日本語版から取り込んだ医療情報です。"
 sourceProject: "MtF.wiki"
+sourceUrl: https://mtf.wiki/
 sourcePath: "content/ja/docs/medicine/monitoring.md"
 sourceLicense: "CC BY-SA 4.0"
 sourceCategory: "医療情報"

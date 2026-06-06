@@ -2,6 +2,7 @@
 title: "Links"
 description: "MtF.wiki 日本語版から取り込んだ基礎情報です。"
 sourceProject: "MtF.wiki"
+sourceUrl: https://mtf.wiki/
 sourcePath: "content/ja/docs/links.md"
 sourceLicense: "CC BY-SA 4.0"
 sourceCategory: "基礎情報"

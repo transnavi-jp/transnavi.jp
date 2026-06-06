@@ -2,6 +2,7 @@
 title: "HRTの効き方の個人差と、血液検査のこと"
 description: "ホルモン療法（HRT）の効き方には大きな個人差があること、投与経路による違い、血液検査でみること、注意したい禁忌について、やさしくまとめた解説です（トランスサークルの記事を日本語に抄訳・再構成）。"
 sourceProject: "トランスサークル（TransCircle）"
+sourceUrl: https://transcircle.org/
 sourcePath: "https://blog.transcircle.org/posts/hrt-choices-individual-differences/"
 sourceLicense: "CC BY-SA 4.0（原文を日本語に抄訳・再構成したもの）"
 sourceCategory: "医療情報"

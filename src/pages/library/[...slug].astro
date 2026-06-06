@@ -27,7 +27,9 @@ const siblings = all
     <div class="eyebrow">{page.data.sourceCategory}</div>
     <h1>{page.data.title}</h1>
     <div class="article-meta">
-      <span class="pill">出典: {page.data.sourceProject}</span>
+      <span class="pill">出典: {page.data.sourceUrl
+        ? <a href={page.data.sourceUrl} target="_blank" rel="noreferrer">{page.data.sourceProject}</a>
+        : page.data.sourceProject}</span>
       <span class="pill">取り込み: {importedAt}</span>
       <span class="pill">確認: 要確認</span>
     </div>

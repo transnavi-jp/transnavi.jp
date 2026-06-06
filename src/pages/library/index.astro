@@ -11,7 +11,7 @@ const pages = (await getCollection('imported')).sort((a, b) => a.data.title.loca
 const sources = [...new Set(pages.map((page) => page.data.sourceProject))];
 const groups = sources.map((source) => {
   const items = pages.filter((page) => page.data.sourceProject === source);
-  return { source, license: items[0]?.data.sourceLicense ?? '', items };
+  return { source, url: items[0]?.data.sourceUrl, license: items[0]?.data.sourceLicense ?? '', items };
 });
 ---
 
@@ -32,7 +32,9 @@ const groups = sources.map((source) => {
 
     {groups.map((group, i) => (
       <section aria-labelledby={`src-${i}`}>
-        <h2 id={`src-${i}`}>{group.source}</h2>
+        <h2 id={`src-${i}`}>
+          {group.url ? <a href={group.url} target="_blank" rel="noreferrer">{group.source}</a> : group.source}
+        </h2>
         <p class="resource-section-intro">ライセンス: {group.license}</p>
         <div class="article-list">
           {group.items.map((page) => (

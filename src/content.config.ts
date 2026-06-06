@@ -50,6 +50,7 @@ const imported = defineCollection({
     title: z.string(),
     description: z.string(),
     sourceProject: z.string(),
+    sourceUrl: z.string().url().optional(),
     sourcePath: z.string(),
     sourceLicense: z.string(),
     sourceCategory: z.string(),

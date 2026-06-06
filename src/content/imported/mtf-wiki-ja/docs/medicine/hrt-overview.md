@@ -2,6 +2,7 @@
 title: "HRT について"
 description: "MtF.wiki 日本語版から取り込んだ医療情報です。"
 sourceProject: "MtF.wiki"
+sourceUrl: https://mtf.wiki/
 sourcePath: "content/ja/docs/medicine/hrt-overview.md"
 sourceLicense: "CC BY-SA 4.0"
 sourceCategory: "医療情報"
