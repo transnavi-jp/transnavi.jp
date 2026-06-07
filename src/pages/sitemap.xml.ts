@@ -22,6 +22,7 @@ export const GET: APIRoute = async ({ site }) => {
     '/',
     '/start/',
     '/faq/',
+    '/myths/',
     '/support/',
     '/allies/',
     '/parents/',

@@ -10,6 +10,7 @@ const NODES = {
   '/': { label: 'ホーム', group: 'start' },
   '/start/': { label: 'はじめての方へ', group: 'start' },
   '/faq/': { label: 'よくある質問', group: 'start' },
+  '/myths/': { label: 'よくある誤解', group: 'start' },
   '/basics/': { label: '基本のことば', group: 'start' },
   '/gender/': { label: '性別の多様性', group: 'start' },
   '/orientation/': { label: '性的指向', group: 'start' },

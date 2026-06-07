@@ -3,7 +3,7 @@
 // drift. The homepage keeps the hand-made /og-image.png (ogCardFor returns null).
 
 export const OG_GROUPS = {
-  'はじめに・基本': ['/start/', '/faq/', '/basics/', '/gender/', '/orientation/', '/intersex/', '/dysphoria/', '/learn/'],
+  'はじめに・基本': ['/start/', '/faq/', '/myths/', '/basics/', '/gender/', '/orientation/', '/intersex/', '/dysphoria/', '/learn/'],
   '移行と医療': ['/transition/', '/detransition/', '/puberty-blockers/', '/hrt-effects/', '/hrt-medications/', '/fertility/', '/voice/', '/presentation/', '/hair-removal/', '/surgery/', '/cost/'],
   '相談・医療機関': ['/support/', '/clinics/', '/map/'],
   '暮らしと社会': ['/coming-out/', '/relationships/', '/everyday/', '/school/', '/allies/', '/parents/', '/guidelines/', '/safety/', '/legal-change/', '/flags/', '/pride/', '/history/'],

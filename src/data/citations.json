@@ -990,6 +990,71 @@
       "id": "apa-the-evidence-against"
     }
   ],
+  "/myths/": [
+    {
+      "title": "Gender incongruence and transgender health in the ICD",
+      "url": "https://www.who.int/standards/classifications/frequently-asked-questions/gender-incongruence-and-transgender-health-in-the-icd",
+      "publisher": "世界保健機関（WHO）",
+      "lang": "en",
+      "id": "who-icd11"
+    },
+    {
+      "title": "The evidence against “conversion therapy”",
+      "url": "https://www.apa.org/topics/lgbtq/evidence-against-conversion-therapy",
+      "publisher": "American Psychological Association",
+      "lang": "en",
+      "id": "apa-the-evidence-against"
+    },
+    {
+      "title": "Understanding transgender people, gender identity and gender expression",
+      "url": "https://www.apa.org/topics/lgbtq/transgender-people-gender-identity-gender-expression",
+      "publisher": "American Psychological Association",
+      "lang": "en",
+      "id": "apa-understanding-transgender-people"
+    },
+    {
+      "title": "Family Acceptance of LGBT Adolescents Protects Against Depression, Substance Abuse and Suicidal Behavior",
+      "url": "https://familyproject.sfsu.edu/family-acceptance-lgbt-adolescents-protects-against-depression-substance-abuse-and-suicidal",
+      "publisher": "Family Acceptance Project, San Francisco State University（Caitlin Ryan）",
+      "lang": "en",
+      "id": "familyproject-family-acceptance-of"
+    },
+    {
+      "title": "Regret after Gender-affirmation Surgery: A Systematic Review and Meta-analysis of Prevalence (Bustos et al., 2021)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33968550/",
+      "publisher": "Plastic and Reconstructive Surgery – Global Open",
+      "lang": "en",
+      "id": "bustos-regret-after-gender"
+    },
+    {
+      "title": "Factors Leading to “Detransition” Among Transgender and Gender Diverse People in the United States (Turban et al., 2021)",
+      "url": "https://www.liebertpub.com/doi/10.1089/lgbt.2020.0437",
+      "publisher": "LGBT Health",
+      "lang": "en",
+      "id": "turban-factors-leading-to"
+    },
+    {
+      "title": "Gender Identity Nondiscrimination Laws in Public Accommodations: a Review of Evidence Regarding Safety and Privacy in Public Restrooms, Locker Rooms, and Changing Rooms",
+      "url": "https://williamsinstitute.law.ucla.edu/publications/ma-public-accommodations/",
+      "publisher": "Hasenbush ら／Sexuality Research and Social Policy 2018（Williams Institute）",
+      "lang": "en",
+      "id": "williamsinstitute-public-accommodations"
+    },
+    {
+      "title": "Transgender People Over Four Times More Likely than Cisgender People to Be Victims of Violent Crime",
+      "url": "https://williamsinstitute.law.ucla.edu/press/ncvs-trans-press-release/",
+      "publisher": "Williams Institute, UCLA School of Law（全米犯罪被害調査NCVSの分析）",
+      "lang": "en",
+      "id": "williamsinstitute-ncvs-trans"
+    },
+    {
+      "title": "知っておきたい「カミングアウト」と「アウティング」",
+      "url": "https://www.tokyo-jinken.or.jp/site/tokyojinken/tj-98-column.html",
+      "publisher": "公益財団法人 東京都人権啓発センター（TOKYO人権 第98号, 2023）",
+      "lang": "ja",
+      "id": "tokyo-jinken"
+    }
+  ],
   "/flags/": [
     {
       "title": "Who Designed the Transgender Flag?",

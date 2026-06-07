@@ -1,0 +1,192 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Cite from '../components/Cite.astro';
+import References from '../components/References.astro';
+
+// よくある誤解（myth / fact）。誤解と、その隣にやさしい事実を置き、くわしく
+// 読めるページへ橋渡しする。事実の根拠には出典をつける。`cite` は本文の末尾に
+// 出典マーカー[n]として表示される（参照キーは citation-pages.yml の /myths/）。
+const mythGroups = [
+  {
+    title: '「そういう存在」についての誤解',
+    items: [
+      {
+        myth: 'トランスジェンダーは心の病気で、治して「もとに戻す」もの。',
+        truth: 'トランスであること自体は、治す対象ではありません。世界の診断基準（ICD-11）でも、精神疾患の分類から外れています。性自認や性的指向を変えようとする「転向（コンバージョン）療法」は効果がなく、むしろ心の健康を害すると、専門家の団体が一致して否定しています。',
+        cite: ['who-icd11', 'apa-the-evidence-against'],
+        links: [{ href: '/dysphoria/', label: '性別違和を知る' }, { href: '/basics/', label: 'きほんのこと' }],
+      },
+      {
+        myth: '性自認は「誰を好きになるか」で決まる。トランスって、つまりゲイのこと。',
+        truth: '「自分がどんな性別か（性自認）」と「誰を好きになるか（性的指向）」は、別々のものさしです。トランスの人のなかにも、異性が好きな人・同性が好きな人・どちらも、あるいはどちらでもない人がいます。',
+        cite: ['apa-understanding-transgender-people'],
+        links: [{ href: '/orientation/', label: '性的指向と「好き」のいろいろ' }, { href: '/basics/', label: 'きほんのこと' }],
+      },
+      {
+        myth: '最近SNSで急に増えた、一時的な流行にすぎない。',
+        truth: '性別の多様なあり方は、今に始まったことではありません。世界の各地に、昔から多様な性を生きてきた人びとがいます。増えたように見えるのは、語るための言葉と、安心して話せる場所が、少しずつ増えてきたからです。',
+        cite: ['apa-understanding-transgender-people'],
+        links: [{ href: '/history/', label: 'トランスジェンダーの歴史' }, { href: '/basics/', label: 'きほんのこと' }],
+      },
+      {
+        myth: 'ノンバイナリーやXジェンダーは、中途半端で、本気じゃない。',
+        truth: '男性・女性のどちらか、という枠にしっくりこないあり方も、ごく自然な性のかたちのひとつです。二つの性別の枠に収まらない生き方は、世界の各地に古くからあります。',
+        links: [{ href: '/gender/', label: '性別は、男女だけじゃない' }, { href: '/glossary/non-binary/', label: 'ノンバイナリー' }],
+      },
+      {
+        myth: '親の育て方や、まわりの環境のせいでトランスになる。',
+        truth: '性自認は、育て方や本人の落ち度で決まるものではありません。誰のせいでもありません。',
+        cite: ['apa-understanding-transgender-people'],
+        links: [{ href: '/parents/', label: '保護者の方へ' }, { href: '/basics/', label: 'きほんのこと' }],
+      },
+      {
+        myth: '子どもや若者が言う性別の悩みは、ただの気の迷い。',
+        truth: '気持ちが一時的に揺れることもありますが、頭から否定されると、本人は「わかってもらえない」と感じて孤立しやすくなります。まず受けとめてもらえた経験は、その後の心の健康を守ることが、研究で示されています。',
+        cite: ['familyproject-family-acceptance-of'],
+        links: [{ href: '/parents/', label: '保護者の方へ' }, { href: '/dysphoria/', label: '性別違和を知る' }],
+      },
+    ],
+  },
+  {
+    title: '移行と医療についての誤解',
+    items: [
+      {
+        myth: '手術やホルモンをしていないと、「本物のトランス」ではない。',
+        truth: '移行のかたちは人それぞれで、医療は必須ではありません。何をするか・しないかを選ぶのは、本人です。どこまで進んでいても、いなくても、あなたはあなたです。',
+        links: [{ href: '/transition/', label: '性別移行を知る' }, { href: '/basics/', label: 'きほんのこと' }],
+      },
+      {
+        myth: '相談したら、子どもがすぐに手術やホルモンを受けさせられる。',
+        truth: '実際には、名前や服装など社会的な移行から始めることが多く、未成年では「二次性徴をいったん止めて、考える時間をつくる」思春期ブロッカーという選択肢もあります。医療は、本人の年齢・希望・専門家との相談のうえで、慎重に段階を踏んで進めるものです。',
+        links: [{ href: '/puberty-blockers/', label: '思春期ブロッカーとは' }, { href: '/transition/', label: '性別移行を知る' }],
+      },
+      {
+        myth: '移行しても、すぐに後悔してやめる人がほとんど。',
+        truth: '移行を後悔する人や、移行をやめる（脱移行する）人はいますが、その割合は低いと報告されています。脱移行の理由も、性自認が変わったというより、周囲の偏見や家族・経済の事情など、外からの圧力によることが多いと示されています。揺れることも、立ち止まることも、おかしなことではありません。',
+        cite: ['bustos-regret-after-gender', 'turban-factors-leading-to'],
+        links: [{ href: '/detransition/', label: '気持ちが揺れたとき・脱移行のこと' }],
+      },
+    ],
+  },
+  {
+    title: '暮らしと、まわりの人についての誤解',
+    items: [
+      {
+        myth: 'トランス女性がトイレや更衣室を悪用して、女性が危険にさらされる。',
+        truth: 'トランスの人が性自認に沿ってトイレを使えるようにしても、トイレでの安全やプライバシーの問題が増えたという証拠はない、と複数の研究が示しています。むしろトランスの人のほうが、トイレで嫌がらせや暴力の被害に遭いやすい立場にあります。',
+        cite: ['williamsinstitute-public-accommodations', 'williamsinstitute-ncvs-trans'],
+        links: [{ href: '/everyday/', label: 'トイレ・更衣室・身分証など' }, { href: '/safety/', label: '安全とこころ' }],
+      },
+      {
+        myth: '打ち明けられたら、心配だから、まわりの人にも教えてあげたほうがいい。',
+        truth: '本人の同意なく、その人のことを他の人に伝えること（アウティング）は避けてください。誰にいつ伝えるかは、本人が決めることです。よかれと思った行動が、信頼関係を壊し、本人を危険にさらすことがあります。',
+        cite: ['tokyo-jinken'],
+        links: [{ href: '/allies/', label: '周囲の人へ' }, { href: '/coming-out/', label: 'カミングアウト入門' }],
+      },
+      {
+        myth: '見た目で「男か女か」はわかるはず。「らしく」見えないとおかしい。',
+        truth: '見た目や声で、その人の性別が決まるわけではありません。「それらしく見える」かどうかは、その人らしさの本質ではありません。どんな見た目でも、その人の性別は、その人のものです。',
+        links: [{ href: '/presentation/', label: '見た目と、毎日のこと' }, { href: '/gender/', label: '性別は、男女だけじゃない' }],
+      },
+    ],
+  },
+];
+
+const mythLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: mythGroups.flatMap((g) =>
+    g.items.map((item) => ({
+      '@type': 'Question',
+      name: `「${item.myth}」というのは本当？`,
+      acceptedAnswer: { '@type': 'Answer', text: item.truth },
+    })),
+  ),
+};
+---
+
+<BaseLayout
+  title="よくある誤解 - とらんすナビ"
+  description="トランスジェンダーをめぐって、よく見聞きする誤解と、その隣にあるやさしい事実。病気なの？　流行なの？　すぐ後悔する？　トイレは危ない？　出典つきで、ひとつずつ、おだやかに。"
+>
+  <article class="article-shell">
+    <div class="eyebrow">知る</div>
+    <h1>よくある誤解</h1>
+    <p class="lead">
+      トランスジェンダーをめぐっては、いろいろな言葉が飛びかっています。なかには、事実とずれたまま広がっているものもあります。ここでは、よく見聞きする誤解と、その隣にある事実を、ひとつずつ並べてみました。誰かを言い負かすためではなく、安心して読むための材料として。事実には、確かめられる出典をつけています。
+    </p>
+
+    {mythGroups.map((group) => (
+      <section class="article-section" aria-label={group.title}>
+        <h2>{group.title}</h2>
+        {group.items.map((item) => (
+          <div class="myth-item">
+            <p class="myth-claim"><span class="myth-tag myth-tag-no">誤解</span>「{item.myth}」</p>
+            <p class="myth-truth">
+              <span class="myth-tag myth-tag-yes">ほんとうは</span>{item.truth}{item.cite && <Cite src={item.cite} />}
+            </p>
+            <nav class="word-chips" aria-label="くわしく読む">
+              {item.links.map((link) => (
+                <a class="word-chip" href={link.href}>{link.label}</a>
+              ))}
+            </nav>
+          </div>
+        ))}
+      </section>
+    ))}
+
+    <aside class="entry-message" role="note" aria-label="読んでいるあなたへ">
+      <p>誤解にぶつかると、心が削られます。でも、あなたが誰かに証明しなければならないことは、何ひとつありません。事実は、あなたの味方です。</p>
+    </aside>
+
+    <nav class="word-chips entry-related" aria-label="関連ページ">
+      <a class="word-chip" href="/faq/">よくある質問（FAQ）</a>
+      <a class="word-chip" href="/basics/">きほんのこと</a>
+      <a class="word-chip" href="/parents/">保護者の方へ</a>
+      <a class="word-chip" href="/allies/">周囲の人へ</a>
+      <a class="word-chip" href="/glossary/">用語集</a>
+      <a class="word-chip" href="/learn/">知る・学ぶ</a>
+    </nav>
+    <References route="/myths/" />
+  </article>
+  <script type="application/ld+json" set:html={JSON.stringify(mythLd)} />
+</BaseLayout>
+
+<style>
+  /* 誤解 → ほんとうは のペア。誤解は控えめに、事実をはっきり見せる。 */
+  .myth-item {
+    padding: 18px 0;
+    border-top: 1px solid var(--line);
+  }
+  .myth-item:first-of-type {
+    border-top: none;
+  }
+  .myth-claim {
+    margin: 0 0 8px;
+    color: var(--ink);
+    opacity: 0.72;
+  }
+  .myth-truth {
+    margin: 0 0 10px;
+    color: var(--ink-heading);
+  }
+  .myth-tag {
+    display: inline-block;
+    margin-right: 8px;
+    padding: 1px 9px;
+    border-radius: 999px;
+    font-size: 0.76rem;
+    font-weight: 700;
+    white-space: nowrap;
+    vertical-align: 0.1em;
+  }
+  .myth-tag-no {
+    background: rgba(63, 74, 98, 0.08);
+    color: var(--ink);
+  }
+  .myth-tag-yes {
+    background: var(--accent-soft);
+    color: var(--ink-heading);
+    border: 1px solid var(--line);
+  }
+</style>

@@ -707,6 +707,22 @@ who-icd11:
   type: web
   url: >-
     https://www.who.int/standards/classifications/frequently-asked-questions/gender-incongruence-and-transgender-health-in-the-icd
+williamsinstitute-ncvs-trans:
+  lang: en
+  publisher: Williams Institute, UCLA School of Law（全米犯罪被害調査NCVSの分析）
+  title: >-
+    Transgender People Over Four Times More Likely than Cisgender People to Be Victims of Violent
+    Crime
+  type: web
+  url: https://williamsinstitute.law.ucla.edu/press/ncvs-trans-press-release/
+williamsinstitute-public-accommodations:
+  lang: en
+  publisher: Hasenbush ら／Sexuality Research and Social Policy 2018（Williams Institute）
+  title: >-
+    Gender Identity Nondiscrimination Laws in Public Accommodations: a Review of Evidence Regarding
+    Safety and Privacy in Public Restrooms, Locker Rooms, and Changing Rooms
+  type: article
+  url: https://williamsinstitute.law.ucla.edu/publications/ma-public-accommodations/
 wpath-standards-of-care:
   lang: en
   publisher: World Professional Association for Transgender Health
