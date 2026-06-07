@@ -7,7 +7,6 @@ region: japan
 category: directory
 topicTags:
   - ホルモン療法
-  - MtF・女性化
 tags:
   - 医療機関
   - 地図
@@ -15,4 +14,4 @@ reviewStatus: needs-review
 updatedAt: 2026-06-01
 ---
 
-2345.LGBT 日本語版のリンク集をもとに整理した関連サイトです。
+ホルモン治療に対応する医療機関を地域別にまとめた外部の一覧です。掲載内容は変わることがあるので、受診前に各院の最新情報をご確認ください。

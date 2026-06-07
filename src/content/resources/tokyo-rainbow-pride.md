@@ -1,7 +1,7 @@
 ---
 title: "認定NPO法人 東京レインボープライド"
 description: "東京で開催される国内最大級のプライドイベントを運営する団体です。"
-url: https://tokyorainbowpride.com/
+url: https://tokyorainbowpride.org/
 language: ja
 region: japan
 category: community
