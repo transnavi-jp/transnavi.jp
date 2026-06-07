@@ -265,6 +265,22 @@
       "id": "no-harassment-sogi"
     }
   ],
+  "/school/": [
+    {
+      "title": "性同一性障害に係る児童生徒に対するきめ細かな対応の実施等について",
+      "url": "https://www.mext.go.jp/b_menu/houdou/27/04/1357468.htm",
+      "publisher": "文部科学省（初等中等教育局児童生徒課）",
+      "lang": "ja",
+      "id": "mext"
+    },
+    {
+      "title": "性同一性障害や性的指向・性自認に係る、児童生徒に対するきめ細かな対応等の実施について（教職員向け）",
+      "url": "https://www.mext.go.jp/b_menu/houdou/28/04/1369211.htm",
+      "publisher": "文部科学省",
+      "lang": "ja",
+      "id": "mext-2016"
+    }
+  ],
   "/orientation/": [
     {
       "title": "Understanding transgender people, gender identity and gender expression",
@@ -928,6 +944,50 @@
       "publisher": "公益財団法人 東京都人権啓発センター（TOKYO人権 第98号, 2023）",
       "lang": "ja",
       "id": "tokyo-jinken"
+    }
+  ],
+  "/parents/": [
+    {
+      "title": "Family Rejection as a Predictor of Negative Health Outcomes in White and Latino Lesbian, Gay, and Bisexual Young Adults",
+      "url": "https://familyproject.sfsu.edu/family-rejection-lesbian-gay-and-bisexual-adolescents-negative-health-outcomes",
+      "publisher": "Family Acceptance Project／Pediatrics 2009（Caitlin Ryan ら）",
+      "lang": "en",
+      "id": "familyproject-family-rejection"
+    },
+    {
+      "title": "Family Acceptance of LGBT Adolescents Protects Against Depression, Substance Abuse and Suicidal Behavior",
+      "url": "https://familyproject.sfsu.edu/family-acceptance-lgbt-adolescents-protects-against-depression-substance-abuse-and-suicidal",
+      "publisher": "Family Acceptance Project, San Francisco State University（Caitlin Ryan）",
+      "lang": "en",
+      "id": "familyproject-family-acceptance-of"
+    },
+    {
+      "title": "Accepting Adults Reduce Suicide Attempts Among LGBTQ Youth",
+      "url": "https://www.thetrevorproject.org/research-briefs/accepting-adults-reduce-suicide-attempts-among-lgbtq-youth/",
+      "publisher": "The Trevor Project（2019年研究ブリーフ、全米調査 n=25,896）",
+      "lang": "en",
+      "id": "thetrevorproject-accepting-adults-reduce"
+    },
+    {
+      "title": "Protectiveness of Family Sexual Orientation Support",
+      "url": "https://www.thetrevorproject.org/research-briefs/protectiveness-of-family-sexual-orientation-support-nov-2022/",
+      "publisher": "The Trevor Project（研究ブリーフ）",
+      "lang": "en",
+      "id": "thetrevorproject-protectiveness-of-famil"
+    },
+    {
+      "title": "LGBTQユース。過去1年で約半数が自殺を考え、約14%が自殺未遂。10代では53.9%が自殺念慮、19.6%が自殺未遂を経験",
+      "url": "https://prtimes.jp/main/html/rd/p/000000073.000047512.html",
+      "publisher": "認定NPO法人ReBit「LGBTQ子ども・若者調査2022」（PR TIMES プレスリリース）",
+      "lang": "ja",
+      "id": "rebit-2022-youth"
+    },
+    {
+      "title": "The evidence against “conversion therapy”",
+      "url": "https://www.apa.org/topics/lgbtq/evidence-against-conversion-therapy",
+      "publisher": "American Psychological Association",
+      "lang": "en",
+      "id": "apa-the-evidence-against"
     }
   ],
   "/flags/": [

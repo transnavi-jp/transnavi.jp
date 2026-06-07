@@ -136,6 +136,15 @@ familyproject-family-acceptance-of:
   type: web
   url: >-
     https://familyproject.sfsu.edu/family-acceptance-lgbt-adolescents-protects-against-depression-substance-abuse-and-suicidal
+familyproject-family-rejection:
+  lang: en
+  publisher: Family Acceptance Project／Pediatrics 2009（Caitlin Ryan ら）
+  title: >-
+    Family Rejection as a Predictor of Negative Health Outcomes in White and Latino Lesbian, Gay,
+    and Bisexual Young Adults
+  type: article
+  url: >-
+    https://familyproject.sfsu.edu/family-rejection-lesbian-gay-and-bisexual-adolescents-negative-health-outcomes
 ges-scale:
   lang: en
   publisher: Frontiers in Psychology（査読付き論文）
@@ -565,6 +574,13 @@ rcslt-trans-and-gender:
   type: web
   url: >-
     https://www.rcslt.org/wp-content/uploads/media/Project/RCSLT/rcslt-trans-and-gender-diverse-voice-comm-therapy-2019.pdf
+rebit-2022-youth:
+  lang: ja
+  publisher: 認定NPO法人ReBit「LGBTQ子ども・若者調査2022」（PR TIMES プレスリリース）
+  title: >-
+    LGBTQユース。過去1年で約半数が自殺を考え、約14%が自殺未遂。10代では53.9%が自殺念慮、19.6%が自殺未遂を経験
+  type: web
+  url: https://prtimes.jp/main/html/rd/p/000000073.000047512.html
 scj:
   lang: ja
   publisher: 日本学術会議

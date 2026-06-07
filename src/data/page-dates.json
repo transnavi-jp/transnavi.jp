@@ -73,11 +73,11 @@
   },
   "/coming-out/": {
     "created": "2026-06-02",
-    "updated": "2026-06-04"
+    "updated": "2026-06-07"
   },
   "/everyday/": {
     "created": "2026-06-03",
-    "updated": "2026-06-05"
+    "updated": "2026-06-07"
   },
   "/relationships/": {
     "created": "2026-06-04",
@@ -85,7 +85,11 @@
   },
   "/allies/": {
     "created": "2026-06-02",
-    "updated": "2026-06-05"
+    "updated": "2026-06-07"
+  },
+  "/parents/": {
+    "created": "2026-06-07",
+    "updated": "2026-06-07"
   },
   "/safety/": {
     "created": "2026-06-02",
@@ -93,7 +97,7 @@
   },
   "/guidelines/": {
     "created": "2026-06-03",
-    "updated": "2026-06-03"
+    "updated": "2026-06-07"
   },
   "/detransition/": {
     "created": "2026-06-03",

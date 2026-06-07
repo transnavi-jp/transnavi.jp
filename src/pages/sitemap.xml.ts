@@ -24,6 +24,7 @@ export const GET: APIRoute = async ({ site }) => {
     '/faq/',
     '/support/',
     '/allies/',
+    '/parents/',
     '/basics/',
     '/gender/',
     '/orientation/',

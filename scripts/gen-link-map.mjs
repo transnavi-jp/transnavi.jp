@@ -33,6 +33,7 @@ const NODES = {
   '/coming-out/': { label: 'カミングアウト', group: 'society' },
   '/relationships/': { label: '恋愛と性の健康', group: 'society' },
   '/allies/': { label: '周囲の人へ', group: 'society' },
+  '/parents/': { label: '保護者の方へ', group: 'society' },
   '/guidelines/': { label: 'SOGIガイドライン', group: 'society' },
   '/safety/': { label: '安全とこころ', group: 'society' },
   '/everyday/': { label: '日常の場面', group: 'society' },
