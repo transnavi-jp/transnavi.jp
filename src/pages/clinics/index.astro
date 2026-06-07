@@ -156,6 +156,32 @@ const genreCounts = mapClinics.reduce(
 );
 // The 手術 legend counts map pins, so include the overseas SRS surgery pins.
 genreCounts.surgery = (genreCounts.surgery ?? 0) + overseasSurgery.length;
+
+// 対応・タグ filter: the same per-facility capability tags shown on the cards
+// (女性化／男性化ホルモン, SRS とその術式, VFS/FFS/豊胸…), plus GI学会認定 as a
+// pseudo-tag. Only tags at least one facility documents are offered, so there are
+// no empty options. Absence of a tag is NEVER a claim a facility doesn't offer it
+// (the note above the list says so); filtering only narrows to where it's stated.
+const capabilityFilterOrder = [
+  'gaht-feminizing', 'gaht-masculinizing',
+  'surgery-srs', 'surgery-vaginoplasty', 'surgery-orchiectomy', 'surgery-phalloplasty',
+  'surgery-hysterectomy', 'surgery-mastectomy', 'surgery-breast', 'surgery-vfs', 'surgery-ffs',
+  'gi-certified',
+] as const;
+const capabilityFilterLabels: Record<string, string> = { ...CAPABILITY_LABELS, 'gi-certified': 'GI学会認定施設' };
+const capabilityCounts: Record<string, number> = {};
+for (const clinic of clinicsWithCategories) {
+  for (const cap of clinic.capabilities) capabilityCounts[cap] = (capabilityCounts[cap] ?? 0) + 1;
+  if (clinic.giCertified) capabilityCounts['gi-certified'] = (capabilityCounts['gi-certified'] ?? 0) + 1;
+}
+const capabilityDefinitions = [
+  { id: '', label: 'すべて' },
+  ...capabilityFilterOrder
+    .filter((id) => capabilityCounts[id])
+    .map((id) => ({ id, label: capabilityFilterLabels[id] })),
+];
+const capabilityValuesOf = (clinic: (typeof clinicsWithCategories)[number]): string =>
+  [...clinic.capabilities, clinic.giCertified ? 'gi-certified' : ''].filter(Boolean).join(',');
 ---
 
 <BaseLayout title="医療機関一覧（ホルモン療法・性別適合手術ができる病院・クリニック） - とらんすナビ" description="トランスジェンダーのホルモン療法（MtF・FtM）や性別適合手術、診断に対応する全国の病院・クリニックを、地域別・診療区分別に探せます。地図・検索つき。受診前に必ず各医療機関へご確認ください。">
@@ -188,7 +214,7 @@ genreCounts.surgery = (genreCounts.surgery ?? 0) + overseasSurgery.length;
     <p>病院では、特定の医師や診療科だけがトランス関連の診療に対応していることがあります。予約のときに「ホルモン療法に対応していますか」「担当はどの先生ですか」と確認すると確実です。専門の医師を探す手がかりとして、<a href="http://www.gi-soc.jp/" target="_blank" rel="noreferrer">日本GI（性別不合）学会</a>の<a href="http://www.gi-soc.jp/ninteiiichiran.html" target="_blank" rel="noreferrer">認定医一覧</a>や、LGBTQ+への理解と支援を表明した医師を地域から探せる<a href="https://www.healthcare.novartis.co.jp/medicalallynetwork/allymap" target="_blank" rel="noreferrer">Ally表明医師マップ</a>（ノバルティス ファーマ）も役立ちます（当サイトは特定の医師をすすめたり順位づけしたりはしません）。</p>
 
     <p class="clinic-tags-note">
-      各施設のカードには、公開情報で確認できた対応を<strong>タグ</strong>で表示しています（<a href="/glossary/gaht/">女性化／男性化ホルモン</a>、<a href="/glossary/gas/">SRS</a>・<a href="/glossary/voice-feminization-surgery/">VFS</a>・<a href="/glossary/ffs/">FFS</a>・豊胸など）。<strong>タグがないことは、対応していないという意味ではありません。</strong>もとの情報に書かれていないだけのこともあります。実際に受けられるかどうかは、かならず各医療機関にご確認ください。
+      各施設のカードには、公開情報で確認できた対応を<strong>タグ</strong>で表示しています（<a href="/glossary/gaht/">女性化／男性化ホルモン</a>、<a href="/glossary/gas/">SRS</a>・<a href="/glossary/voice-feminization-surgery/">VFS</a>・<a href="/glossary/ffs/">FFS</a>・豊胸など）。<strong>タグがないことは、対応していないという意味ではありません。</strong>もとの情報に書かれていないだけのこともあります。実際に受けられるかどうかは、かならず各医療機関にご確認ください。「対応・タグ」で絞り込むと、その対応が情報に明記されている施設だけが表示されます（明記がないだけの施設は、隠れてしまうことがあります）。
     </p>
 
     <div class="clinic-summary" aria-label="掲載件数">
@@ -208,6 +234,23 @@ genreCounts.surgery = (genreCounts.surgery ?? 0) + overseasSurgery.length;
             aria-pressed={category.id === '' ? 'true' : 'false'}
           >
             {category.label}
+          </button>
+        ))}
+      </section>
+    </div>
+
+    <div class="filter-group-row">
+      <span class="filter-tabs-label">対応・タグ</span>
+      <section class="filter-tabs" aria-label="対応・タグ" data-filter-tabs data-filter-key="capabilities">
+        {capabilityDefinitions.map((cap) => (
+          <button
+            type="button"
+            class="filter-tab"
+            data-filter-tab
+            data-filter-value={cap.id}
+            aria-pressed={cap.id === '' ? 'true' : 'false'}
+          >
+            {cap.label}
           </button>
         ))}
       </section>
@@ -266,6 +309,7 @@ genreCounts.surgery = (genreCounts.surgery ?? 0) + overseasSurgery.length;
               data-filter-item
               data-categories={clinic.categories.join(',')}
               data-surgery-types={clinic.surgeryTypes.join(',')}
+              data-capabilities={capabilityValuesOf(clinic)}
               data-types={clinic.type}
               data-regions={clinic.region}
               data-search={[clinic.name, clinic.displayName, clinic.region, clinic.prefecture, clinic.city, clinic.address, clinic.phone, clinic.type, ...clinic.services, ...clinic.surgeryTypes, ...clinic.capabilities.map((cap) => CAPABILITY_LABELS[cap]), clinic.giCertified ? 'GI学会認定施設 保険適用' : ''].filter(Boolean).join(' ')}

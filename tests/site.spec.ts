@@ -129,6 +129,24 @@ test('医療機関一覧を診療区分タブで切り替えられる', async ({
   await expect(page.locator('.clinic-name-link', { hasText: '青葉心理クリニック' })).toBeHidden();
 });
 
+test('医療機関一覧を対応・タグ（GI学会認定など）で絞り込める', async ({ page }) => {
+  await page.goto('/clinics/');
+
+  // 「対応・タグ」フィルタは、カードに表示されているタグ（GI学会認定など）で絞り込める。
+  await page.getByRole('button', { name: 'GI学会認定施設' }).click();
+
+  // GI学会認定施設だけが残る（現データでは6件）。
+  await expect(page.locator('[data-filter-count]')).toHaveText('6');
+  await expect(page.locator('.clinic-name-link', { hasText: '札幌医科大学付属病院' })).toBeVisible();
+  // 認定のない精神科クリニックは隠れる。
+  await expect(page.locator('.clinic-name-link', { hasText: '青葉心理クリニック' })).toBeHidden();
+
+  // 別のタグ（男性化ホルモン）に切り替えると、認定外科病院は外れFtM対応が残る。
+  await page.getByRole('button', { name: '男性化ホルモン（FtM）' }).click();
+  await expect(page.locator('.clinic-name-link', { hasText: '札幌医科大学付属病院' })).toBeHidden();
+  await expect(page.locator('[data-filter-item]:not([hidden])').first()).toBeVisible();
+});
+
 test('医療機関カードを展開して詳細を見られる', async ({ page }) => {
   await page.goto('/clinics/');
 
