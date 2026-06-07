@@ -290,6 +290,22 @@
       "id": "tokyo-np-trans-toilet"
     }
   ],
+  "/pronouns/": [
+    {
+      "title": "Chosen Name Use Is Linked to Reduced Depressive Symptoms, Suicidal Ideation, and Suicidal Behavior Among Transgender Youth",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6165713/",
+      "publisher": "Russell, Pollitt, Li & Grossman, Journal of Adolescent Health（2018）",
+      "lang": "en",
+      "id": "pmc-chosen-name-use"
+    },
+    {
+      "title": "Understanding transgender people, gender identity and gender expression",
+      "url": "https://www.apa.org/topics/lgbtq/transgender-people-gender-identity-gender-expression",
+      "publisher": "American Psychological Association",
+      "lang": "en",
+      "id": "apa-understanding-transgender-people"
+    }
+  ],
   "/orientation/": [
     {
       "title": "Understanding transgender people, gender identity and gender expression",

@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Cite from '../components/Cite.astro';
+import References from '../components/References.astro';
+
+const firstPerson = [
+  { word: '私（わたし）', note: 'だれでも使える、ていねいな一人称。フォーマルな場面の定番。' },
+  { word: 'わたし・あたし', note: 'やわらかい響き。「あたし」はより親しい・くだけた感じ。' },
+  { word: '僕（ぼく）', note: 'やわらかめの自称。年齢や場面を問わず使う人がいます。' },
+  { word: '俺（おれ）', note: 'くだけた、力の入った響き。仲のよい間柄で。' },
+  { word: 'うち', note: '関西などでよく使われる、性別を感じさせにくい自称。' },
+  { word: '自分（じぶん）', note: '性別を出しにくい一人称。スポーツや職場でも。' },
+  { word: '名前で呼ぶ', note: '「〇〇はね」と自分の名前を一人称にする人もいます。' },
+];
+---
+
+<BaseLayout
+  title="一人称と呼ばれ方のこと（僕・私・さん付け・通称名） - とらんすナビ"
+  description="自分をどう呼ぶか（僕・俺・私・うち・自分など）、人からどう呼ばれるか（さん・くん・ちゃん・名前）。日本語の一人称や呼称、通称名のこと、そして無理なく試したり伝えたりするヒントを、やさしくまとめました。"
+>
+  <article class="article-shell prose">
+    <div class="eyebrow">暮らす</div>
+    <h1>一人称と、呼ばれ方のこと</h1>
+    <p class="lead">
+      自分のことを「僕」と呼ぶか「私」と呼ぶか。人から「くん」と呼ばれるか「さん」と呼ばれるか。こうした小さなことばは、毎日くりかえし耳にするぶん、しっくりこないとじわじわつらく、しっくりくるとほっとするものです。どれを選んでも、あとから変えても大丈夫。ここでは、一人称や呼ばれ方、名前のことを、いっしょに見ていきます。あなたのペースで。
+    </p>
+
+    <section aria-labelledby="first-person">
+      <h2 id="first-person">一人称のこと（僕・私・うち…）</h2>
+      <p>
+        日本語の一人称には、いろいろな響きがあります。「男性っぽい」「女性っぽい」と言われることもありますが、はっきり決まったルールがあるわけではなく、地域や場面、その人の好みで、ずいぶん自由に使われています。だから、自分にいちばんしっくりくるものを選んでいいし、相手や場面によって使い分けてもかまいません。
+      </p>
+      <ul class="assure-list">
+        {firstPerson.map((item) => (
+          <li><strong>{item.word}</strong>：{item.note}</li>
+        ))}
+      </ul>
+      <p>
+        まずは、頭のなかで言ってみる、日記やSNSで使ってみる、といった小さな試し方から。声に出すのは、安心できる相手とのあいだからで大丈夫です。
+      </p>
+    </section>
+
+    <section aria-labelledby="called">
+      <h2 id="called">人からの呼ばれ方（さん・くん・ちゃん）</h2>
+      <p>
+        「くん」「ちゃん」「さん」、呼び捨て、あだ名。どう呼ばれるかも、あなたが心地よいかどうかで選んでいいことです。<Cite src="pmc-chosen-name-use">呼んでほしい名前や呼び方で呼ばれている人ほど、こころの健康が保たれ、つらさが少ない、という研究もあります</Cite>。わがままなことではありません。
+      </p>
+      <p>
+        「さん」付けは、性別をことさら出さずに使える、ていねいな呼び方です。学校でも、男女で「くん・さん」を分けず、みんな「さん」で呼ぶところが増えています。呼び方を変えてほしいときは、「これからは〇〇って呼んでもらえるとうれしい」と、伝えやすい人から少しずつお願いしてみてください。
+      </p>
+    </section>
+
+    <section aria-labelledby="name">
+      <h2 id="name">名前のこと</h2>
+      <p>
+        使いたい名前（通称名・つうしょうめい）を、ふだんの場面で使うことができます。学校や職場、メール、名札などで認められることがあり、まずは相談から始められます（<a href="/everyday/">日常の場面</a>・<a href="/school/">学校でのこと</a>）。戸籍の名前そのものを変えたいときは、家庭裁判所での改名という手続きもあります（<a href="/legal-change/">戸籍と名前の変更</a>）。
+      </p>
+      <p>
+        旧来の名前（<a href="/glossary/deadname/">デッドネーム</a>）で呼ばれるのは、つらくて当然です。直してほしいときはお願いしてよいですし、難しい相手には、無理をしなくて大丈夫です。
+      </p>
+    </section>
+
+    <section aria-labelledby="third-person">
+      <h2 id="third-person">三人称・代名詞のこと</h2>
+      <p>
+        他の人があなたを話題にするときの「彼・彼女・あの人・その子」などの言い方も、希望を伝えていいものです。日本語の会話では、名前や「さん」で済ませて、三人称をあまり使わないことも多く、それも一つの方法です。
+      </p>
+      <p>
+        英語などでは、she・he のほかに、男女どちらかに限らない they（単数の they）を使う人もいます（<Cite src="apa-understanding-transgender-people">人によって望む代名詞はさまざまで、それを尊重することが大切だとされています</Cite>）。プロフィールに「呼んでほしい代名詞」を書いておく、という伝え方もあります。
+      </p>
+    </section>
+
+    <section aria-labelledby="try">
+      <h2 id="try">試してみる・伝えてみる</h2>
+      <p>急に全部を決めたり、まわりに伝えたりしなくて大丈夫です。小さく試すところから。</p>
+      <ul class="assure-list">
+        <li>頭のなかや、ひとりごとで言ってみる。</li>
+        <li>日記や、名前を知られないSNS・オンラインの場で使ってみる。</li>
+        <li>安心できる友だちや、同じ経験をした人とのあいだで使ってみる。</li>
+        <li>しっくりこなければ、いつでも変えていい。「これだ」が見つからない時期があっても大丈夫です。</li>
+      </ul>
+      <p>
+        だれかに「こう呼んでほしい」と伝えるときのコツは、<a href="/coming-out/">カミングアウト入門</a>に。まわりの人に読んでほしいことは、<a href="/allies/">周囲の人へ</a>にまとめています。
+      </p>
+    </section>
+
+    <aside class="entry-message" role="note" aria-label="読んでいるあなたへ">
+      <p>自分をどう呼ぶか、どう呼ばれたいか。それは、あなたが自分を大切にする練習でもあります。正解はありません。心地よいほうへ、ゆっくりどうぞ。</p>
+    </aside>
+
+    <nav class="word-chips entry-related" aria-label="関連ページ">
+      <a class="word-chip" href="/everyday/">日常の場面</a>
+      <a class="word-chip" href="/coming-out/">カミングアウト入門</a>
+      <a class="word-chip" href="/school/">学校でのこと</a>
+      <a class="word-chip" href="/allies/">周囲の人へ</a>
+      <a class="word-chip" href="/legal-change/">戸籍と名前の変更</a>
+      <a class="word-chip" href="/glossary/">用語集</a>
+    </nav>
+    <References route="/pronouns/" />
+  </article>
+</BaseLayout>
