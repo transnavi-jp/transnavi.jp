@@ -56,6 +56,13 @@ const imported = defineCollection({
     sourceCategory: z.string(),
     importedAt: z.coerce.date(),
     reviewStatus: reviewStatus.default('needs-review'),
+    // The site's own (hand-written) page on this topic, so readers can be sent
+    // to our content first rather than mistaking this adaptation for it.
+    ownPage: z.string().optional(),
+    // Explicit, reader-facing notes of where THIS adaptation departs from the
+    // original beyond translation (corrections, removed content, reframings),
+    // so source content and our edits are clearly distinguishable.
+    editNotes: z.array(z.string()).optional(),
   }),
 });
 

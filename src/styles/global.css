@@ -1529,6 +1529,44 @@ ul {
   color: var(--muted);
 }
 
+/* Provenance banner + edit-notes for imported /library/ articles, so an
+   adaptation is never mistaken for the site's own writing. */
+.import-notice {
+  margin: 0 0 14px;
+  padding: 13px 18px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 14px 14px 0;
+  background: var(--accent-soft);
+  font-size: 0.9rem;
+}
+.import-notice p {
+  margin: 0 0 8px;
+}
+.import-notice p:last-child {
+  margin: 0;
+}
+.import-editnotes {
+  margin: 14px 0;
+  padding: 10px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  font-size: 0.9rem;
+}
+.import-editnotes > summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--ink-heading);
+}
+.import-editnotes ul {
+  margin: 8px 0 0;
+  padding-left: 1.2em;
+}
+.import-editnotes li {
+  margin: 4px 0;
+}
+
 .toc {
   margin: 18px 0;
   padding: 14px 18px;

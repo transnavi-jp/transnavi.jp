@@ -26,6 +26,19 @@ const siblings = all
   <article class="article-shell">
     <div class="eyebrow">{page.data.sourceCategory}</div>
     <h1>{page.data.title}</h1>
+    <aside class="import-notice" role="note" aria-label="このページについて">
+      <p>
+        <strong>これは「取り込み記事」です。</strong>{page.data.sourceProject} の記事を、当サイトが日本語に翻訳・再構成（抄訳）したものです。当サイトが一から書いた解説ではなく、原文の内容や、翻訳・編集の過程に由来する誤りが含まれることがあります。
+      </p>
+      <p>
+        {page.data.ownPage && (<>同じテーマの<a href={page.data.ownPage}><strong>当サイト自身の解説</strong></a>もあります。まずはそちらをどうぞ。{' '}</>)}
+        原文（{page.data.sourceUrl
+          ? <a href={page.data.sourceUrl} target="_blank" rel="noreferrer">{page.data.sourceProject}</a>
+          : page.data.sourceProject}、{page.data.sourceLicense.split('（')[0]}）と読み比べられます。
+        {isMedical && ' 内容が最新・正確とはかぎりません。治療やお薬のことは、必ず医師に相談してください。'}
+      </p>
+    </aside>
+
     <div class="article-meta">
       <span class="pill">出典: {page.data.sourceUrl
         ? <a href={page.data.sourceUrl} target="_blank" rel="noreferrer">{page.data.sourceProject}</a>
@@ -34,10 +47,14 @@ const siblings = all
       <span class="pill">確認: 要確認</span>
     </div>
 
-    {isMedical && (
-      <p class="page-disclaimer">
-        情報提供のみを目的としたページです。内容が最新・正確とはかぎりません。治療やお薬のことは、必ず医師に相談してください。
-      </p>
+    {page.data.editNotes && page.data.editNotes.length > 0 && (
+      <details class="import-editnotes">
+        <summary>当サイトによる主な変更・注記（原文との違い）</summary>
+        <p>この記事は原文そのままではありません。日本語への翻訳・再構成にくわえ、当サイトが次の修正・編集を加えています。{isMedical && '（自己投薬の手順・入手先・価格などは省いています。）'}これら以外の内容は、原文に由来します。</p>
+        <ul>
+          {page.data.editNotes.map((note) => <li>{note}</li>)}
+        </ul>
+      </details>
     )}
 
     {toc.length > 2 && (
