@@ -31,7 +31,7 @@ const siblings = all
         <strong>これは「取り込み記事」です。</strong>{page.data.sourceProject} の記事を、当サイトが日本語に翻訳・再構成（抄訳）したものです。当サイトが一から書いた解説ではなく、原文の内容や、翻訳・編集の過程に由来する誤りが含まれることがあります。
       </p>
       <p>
-        {page.data.ownPage && (<>同じテーマの<a href={page.data.ownPage}><strong>当サイト自身の解説</strong></a>もあります。まずはそちらをどうぞ。{' '}</>)}
+        {page.data.ownPage && (<>同じテーマについて<a href={page.data.ownPage}><strong>当サイトが書いた解説</strong></a>もあります。まずはそちらをどうぞ。{' '}</>)}
         原文（{page.data.sourceUrl
           ? <a href={page.data.sourceUrl} target="_blank" rel="noreferrer">{page.data.sourceProject}</a>
           : page.data.sourceProject}、{page.data.sourceLicense.split('（')[0]}）と読み比べられます。
