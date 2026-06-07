@@ -171,12 +171,22 @@ for (const form of document.querySelectorAll('[data-filter-form]')) {
   // ANDed together, so 診療区分 and 施設の種類 narrow jointly.
   const dims = [...root.querySelectorAll('[data-filter-tabs]')].map((group) => {
     const tabs = [...group.querySelectorAll('[data-filter-tab]')];
+    // A dimension is single-select by default; data-filter-multi makes it a
+    // multi-select facet (OR within the facet: a card matches if it has ANY of
+    // the chosen values). Single dims keep a string `active`; multi dims keep a
+    // Set of chosen non-empty values.
+    const multi = group.hasAttribute('data-filter-multi');
+    const pressed = tabs
+      .filter((tab) => tab.getAttribute('aria-pressed') === 'true')
+      .map((tab) => tab.dataset.filterValue ?? '');
     return {
       key: group.dataset.filterKey || 'categories',
       tabs,
-      active: tabs.find((tab) => tab.getAttribute('aria-pressed') === 'true')?.dataset.filterValue ?? '',
+      multi,
+      active: multi ? new Set(pressed.filter(Boolean)) : (pressed[0] ?? ''),
     };
   });
+  const dimActive = (dim) => (dim.multi ? dim.active.size > 0 : dim.active !== '');
 
   const update = () => {
     const query = norm(input.value.trim());
@@ -190,8 +200,12 @@ for (const form of document.querySelectorAll('[data-filter-form]')) {
       let matchesQuery = query === '' || item.hay.includes(query);
       if (!matchesQuery && queryGrams) matchesQuery = coverage(queryGrams, item.grams) >= 0.75;
       const matchesDims = dims.every((dim) => {
-        if (dim.active === '') return true;
         const values = (item.el.dataset[dim.key] ?? '').split(',').filter(Boolean);
+        if (dim.multi) {
+          if (dim.active.size === 0) return true;
+          return values.some((value) => dim.active.has(value));
+        }
+        if (dim.active === '') return true;
         return values.includes(dim.active);
       });
       const matches = matchesQuery && matchesDims;
@@ -242,11 +256,7 @@ for (const form of document.querySelectorAll('[data-filter-form]')) {
 
     // Collapsed in the initial default view (no narrowing — all 診療区分);
     // auto-open groups once the reader searches or picks any filter.
-    const catDim = dims.find((dim) => dim.key === 'categories');
-    const narrowed =
-      query !== '' ||
-      (catDim ? catDim.active !== '' : false) ||
-      dims.some((dim) => dim.key !== 'categories' && dim.active !== '');
+    const narrowed = query !== '' || dims.some(dimActive);
 
     for (const group of groups) {
       const visibleItems = [...group.querySelectorAll('[data-filter-item]:not([hidden])')];
@@ -293,9 +303,22 @@ for (const form of document.querySelectorAll('[data-filter-form]')) {
   for (const dim of dims) {
     for (const tab of dim.tabs) {
       tab.addEventListener('click', () => {
-        dim.active = tab.dataset.filterValue ?? '';
-        for (const currentTab of dim.tabs) {
-          currentTab.setAttribute('aria-pressed', currentTab === tab ? 'true' : 'false');
+        const value = tab.dataset.filterValue ?? '';
+        if (dim.multi) {
+          // Empty value is the "すべて" reset; otherwise toggle this value.
+          if (value === '') dim.active.clear();
+          else if (dim.active.has(value)) dim.active.delete(value);
+          else dim.active.add(value);
+          for (const currentTab of dim.tabs) {
+            const tabValue = currentTab.dataset.filterValue ?? '';
+            const on = tabValue === '' ? dim.active.size === 0 : dim.active.has(tabValue);
+            currentTab.setAttribute('aria-pressed', on ? 'true' : 'false');
+          }
+        } else {
+          dim.active = value;
+          for (const currentTab of dim.tabs) {
+            currentTab.setAttribute('aria-pressed', currentTab === tab ? 'true' : 'false');
+          }
         }
         update();
       });

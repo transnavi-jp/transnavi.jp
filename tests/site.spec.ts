@@ -129,11 +129,12 @@ test('医療機関一覧を診療区分タブで切り替えられる', async ({
   await expect(page.locator('.clinic-name-link', { hasText: '青葉心理クリニック' })).toBeHidden();
 });
 
-test('医療機関一覧を対応・タグ（GI学会認定など）で絞り込める', async ({ page }) => {
+test('医療機関一覧を「くわしい対応」で複数選択して絞り込める', async ({ page }) => {
   await page.goto('/clinics/');
 
-  // 「対応・タグ」フィルタは、カードに表示されているタグ（GI学会認定など）で絞り込める。
-  await page.getByRole('button', { name: 'GI学会認定施設' }).click();
+  // 「くわしい対応」フィルタは、カードのタグ（GI学会認定など）で絞り込める。
+  const gi = page.getByRole('button', { name: 'GI学会認定施設' });
+  await gi.click();
 
   // GI学会認定施設だけが残る（現データでは6件）。
   await expect(page.locator('[data-filter-count]')).toHaveText('6');
@@ -141,10 +142,19 @@ test('医療機関一覧を対応・タグ（GI学会認定など）で絞り込
   // 認定のない精神科クリニックは隠れる。
   await expect(page.locator('.clinic-name-link', { hasText: '青葉心理クリニック' })).toBeHidden();
 
-  // 別のタグ（男性化ホルモン）に切り替えると、認定外科病院は外れFtM対応が残る。
-  await page.getByRole('button', { name: '男性化ホルモン（FtM）' }).click();
+  // 複数選択（OR）：女性化ホルモンも足すと、GI認定 か 女性化ホルモン のどちらかに広がる。
+  const mtf = page.getByRole('button', { name: '女性化ホルモン（MtF）' });
+  await mtf.click();
+  await expect(gi).toHaveAttribute('aria-pressed', 'true');
+  await expect(mtf).toHaveAttribute('aria-pressed', 'true');
+  // GI認定の札幌医大はGIタグで依然表示。件数は6より増える。
+  await expect(page.locator('.clinic-name-link', { hasText: '札幌医科大学付属病院' })).toBeVisible();
+  expect(await page.locator('[data-filter-item]:not([hidden])').count()).toBeGreaterThan(6);
+
+  // GIを外すと女性化ホルモンだけになり、女性化タグのない札幌医大は隠れる。
+  await gi.click();
+  await expect(gi).toHaveAttribute('aria-pressed', 'false');
   await expect(page.locator('.clinic-name-link', { hasText: '札幌医科大学付属病院' })).toBeHidden();
-  await expect(page.locator('[data-filter-item]:not([hidden])').first()).toBeVisible();
 });
 
 test('医療機関カードを展開して詳細を見られる', async ({ page }) => {
