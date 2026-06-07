@@ -1013,11 +1013,67 @@
       "id": "apa-understanding-transgender-people"
     },
     {
+      "title": "ROGD Statement: there are no sound empirical studies of Rapid-Onset Gender Dysphoria",
+      "url": "https://www.caaps.co/rogd-statement",
+      "publisher": "Coalition for the Advancement and Application of Psychological Science（CAAPS、米国心理学会ほか60団体以上が賛同）",
+      "lang": "en",
+      "id": "caaps-rogd-statement"
+    },
+    {
+      "title": "Xジェンダーはなぜ名乗られたのか ― カテゴリーの力能を規定する社会的文脈に着目して ―",
+      "url": "https://www.jstage.jst.go.jp/article/kantoh/2020/33/2020_133/_article/-char/ja/",
+      "publisher": "武内今日子／年報社会学論集 33号（関東社会学会, 2020）133-144頁",
+      "lang": "ja",
+      "id": "takeuchi-xgender"
+    },
+    {
       "title": "Family Acceptance of LGBT Adolescents Protects Against Depression, Substance Abuse and Suicidal Behavior",
       "url": "https://familyproject.sfsu.edu/family-acceptance-lgbt-adolescents-protects-against-depression-substance-abuse-and-suicidal",
       "publisher": "Family Acceptance Project, San Francisco State University（Caitlin Ryan）",
       "lang": "en",
       "id": "familyproject-family-acceptance-of"
+    },
+    {
+      "title": "性別不合に関する診断と治療のガイドライン（第5版）",
+      "url": "https://www.jspn.or.jp/modules/advocacy/index.php?content_id=23",
+      "publisher": "日本精神神経学会（JSPN）",
+      "lang": "ja",
+      "id": "jspn-guideline"
+    },
+    {
+      "title": "性同一性障害に係る児童生徒に対するきめ細かな対応の実施等について",
+      "url": "https://www.mext.go.jp/b_menu/houdou/27/04/1357468.htm",
+      "publisher": "文部科学省（初等中等教育局児童生徒課）",
+      "lang": "ja",
+      "id": "mext"
+    },
+    {
+      "title": "Puberty Blockers: A Review of GnRH Analogues in Transgender Youth",
+      "url": "https://transfemscience.org/articles/puberty-blockers/",
+      "publisher": "Transfeminine Science",
+      "lang": "en",
+      "id": "transfemscience-puberty-blockers-a"
+    },
+    {
+      "title": "Standards of Care for the Health of Transgender and Gender Diverse People, Version 8 (WPATH SOC-8)",
+      "url": "https://www.tandfonline.com/doi/full/10.1080/26895269.2022.2100644",
+      "publisher": "World Professional Association for Transgender Health / International Journal of Transgender Health",
+      "lang": "en",
+      "id": "tandfonline-standards-of-care"
+    },
+    {
+      "title": "Endocrine Treatment of Gender-Dysphoric/Gender-Incongruent Persons: An Endocrine Society Clinical Practice Guideline (2017)",
+      "url": "https://academic.oup.com/jcem/article/102/11/3869/4157558",
+      "publisher": "The Endocrine Society / The Journal of Clinical Endocrinology & Metabolism",
+      "lang": "en",
+      "id": "academic-endocrine-treatment-of"
+    },
+    {
+      "title": "Standards of Care for the Health of Transgender and Gender Diverse People, Version 8 (WPATH SOC-8)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9553112/",
+      "publisher": "World Professional Association for Transgender Health (WPATH) / International Journal of Transgender Health",
+      "lang": "en",
+      "id": "pmc-standards-of-care"
     },
     {
       "title": "Regret after Gender-affirmation Surgery: A Systematic Review and Meta-analysis of Prevalence (Bustos et al., 2021)",
@@ -1034,6 +1090,48 @@
       "id": "turban-factors-leading-to"
     },
     {
+      "title": "性別の取扱いの変更要件の一部を無効とした最高裁令和5年10月25日決定について",
+      "url": "https://www.toben.or.jp/know/iinkai/seibyoudou/column/51025.html",
+      "publisher": "東京弁護士会",
+      "lang": "ja",
+      "id": "toben-5-10-25"
+    },
+    {
+      "title": "外観手術なしで性別変更認める 広島高裁、男性から女性",
+      "url": "https://www.nikkei.com/article/DGXZQOUE101IZ0Q4A710C2000000/",
+      "publisher": "日本経済新聞",
+      "lang": "ja",
+      "id": "hiroshima-2024-07-10"
+    },
+    {
+      "title": "性同一性障害者の性別の取扱いの特例に関する法律（平成15年法律第111号）",
+      "url": "https://laws.e-gov.go.jp/law/415AC0100000111/",
+      "publisher": "デジタル庁 e-Gov法令検索",
+      "lang": "ja",
+      "id": "laws-15-111"
+    },
+    {
+      "title": "性的指向及びジェンダーアイデンティティの多様性に関する国民の理解の増進に関する法律",
+      "url": "https://www.japaneselawtranslation.go.jp/ja/laws/view/4835",
+      "publisher": "法務省 日本法令外国語訳データベースシステム",
+      "lang": "ja",
+      "id": "japaneselawtranslation"
+    },
+    {
+      "title": "性別の取扱いの変更（家事事件の手続案内）",
+      "url": "https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_23/index.html",
+      "publisher": "裁判所（最高裁判所）",
+      "lang": "ja",
+      "id": "courts"
+    },
+    {
+      "title": "名の変更許可（家事事件の手続案内）",
+      "url": "https://www.courts.go.jp/saiban/syurui/syurui_kazi/kazi_06_20/index.html",
+      "publisher": "裁判所（最高裁判所）",
+      "lang": "ja",
+      "id": "courts-2"
+    },
+    {
       "title": "Gender Identity Nondiscrimination Laws in Public Accommodations: a Review of Evidence Regarding Safety and Privacy in Public Restrooms, Locker Rooms, and Changing Rooms",
       "url": "https://williamsinstitute.law.ucla.edu/publications/ma-public-accommodations/",
       "publisher": "Hasenbush ら／Sexuality Research and Social Policy 2018（Williams Institute）",
@@ -1048,11 +1146,39 @@
       "id": "williamsinstitute-ncvs-trans"
     },
     {
+      "title": "Understanding sexual orientation and homosexuality",
+      "url": "https://www.apa.org/topics/lgbtq/orientation",
+      "publisher": "American Psychological Association（米国心理学会）",
+      "lang": "en",
+      "id": "apa-understanding-sexual-orientation"
+    },
+    {
+      "title": "Chosen Name Use Is Linked to Reduced Depressive Symptoms, Suicidal Ideation, and Suicidal Behavior Among Transgender Youth",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6165713/",
+      "publisher": "Russell, Pollitt, Li & Grossman, Journal of Adolescent Health（2018）",
+      "lang": "en",
+      "id": "pmc-chosen-name-use"
+    },
+    {
+      "title": "あかるい職場応援団（ハラスメント・SOGIハラ・アウティングの防止）",
+      "url": "https://www.no-harassment.mhlw.go.jp/",
+      "publisher": "厚生労働省",
+      "lang": "ja",
+      "id": "no-harassment-sogi"
+    },
+    {
       "title": "知っておきたい「カミングアウト」と「アウティング」",
       "url": "https://www.tokyo-jinken.or.jp/site/tokyojinken/tj-98-column.html",
       "publisher": "公益財団法人 東京都人権啓発センター（TOKYO人権 第98号, 2023）",
       "lang": "ja",
       "id": "tokyo-jinken"
+    },
+    {
+      "title": "Gender Identity 5 Years After Social Transition",
+      "url": "https://publications.aap.org/pediatrics/article/150/2/e2021056082/186992/Gender-Identity-5-Years-After-Social-Transition",
+      "publisher": "Olson KR ら／Pediatrics 2022;150(2):e2021056082（米国小児科学会）",
+      "lang": "en",
+      "id": "olson-gender-identity-5-years"
     }
   ],
   "/flags/": [
