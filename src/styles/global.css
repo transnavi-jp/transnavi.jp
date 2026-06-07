@@ -1696,8 +1696,9 @@ ul {
 /* "← 用語集にもどる" at the top of a term page; returns to the list's scroll
    position when the reader came from there (see the inline script). */
 .glossary-back {
-  display: inline-block;
-  margin-bottom: 12px;
+  display: block;
+  width: fit-content;
+  margin-bottom: 14px;
   font-size: 0.88rem;
   font-weight: 600;
   color: var(--accent);

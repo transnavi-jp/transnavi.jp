@@ -127,7 +127,7 @@ const termLd = {
   <script type="application/ld+json" set:html={JSON.stringify(termLd)} />
   <article class="article-shell">
     <a href="/glossary/" class="glossary-back" data-glossary-back>← 用語集にもどる</a>
-    <div class="eyebrow">用語集 ・ {entry.category}</div>
+    <div class="eyebrow">{entry.category}</div>
     <h1>{entry.term}{entry.abbr ? `（${entry.abbr}）` : ''}</h1>
 
     {entry.notes && <p class="glossary-def">{entry.notes}</p>}
