@@ -31,6 +31,6 @@ npm run build
 
 ## ライセンス
 
-コードは MIT License で公開します。
+コードは [MIT License](LICENSE.md) で公開します。
 
-本文、記事、掲載情報、説明文などのコンテンツは CC BY-SA 4.0 で公開します。
+本文、記事、掲載情報、説明文などのコンテンツは [CC BY-SA 4.0](CONTENT_LICENSE.md) で公開します。

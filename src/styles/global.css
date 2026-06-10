@@ -3015,7 +3015,6 @@ a.glossary-card-tag:hover {
   border: 1px solid var(--line);
   border-radius: 999px;
   background: var(--paper-strong);
-  box-shadow: var(--shadow-soft);
   color: var(--ink-heading);
   font-size: 0.76rem;
   font-weight: 800;
@@ -3024,8 +3023,9 @@ a.glossary-card-tag:hover {
 }
 
 .license-pill:hover {
-  border-color: var(--line-hover);
-  color: var(--accent-strong);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--link);
 }
 
 .license-icon-group {
