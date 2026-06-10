@@ -2,12 +2,43 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Cite from '../components/Cite.astro';
 import References from '../components/References.astro';
+
+// FAQPage 構造化データ。答えは本文（出典つき）と一致させ、確定していないこと
+// （外観要件は法律に残り最終判断はこれから）は断定しない。
+const faqs = [
+  {
+    q: '手術なしで戸籍の性別は変えられますか？',
+    a: '要件は変わりつつあります。2023年に最高裁が生殖不能要件（生殖機能をなくす手術を求める要件）を憲法違反と判断し、2024年には広島高裁が「外観」要件についても、手術を受けていない当事者の性別変更を認めました。ただし外観要件そのものは特例法にまだ残っていて、最高裁の最終的な判断や法改正はこれからです。個別のケースは弁護士や当事者団体に確認してください。',
+  },
+  {
+    q: '特例法の要件はどう変わりましたか？',
+    a: '年齢・婚姻・未成年の子に関する要件に加えて、「からだ」に関する2つの要件（生殖不能要件・外観要件）が定められてきました。このうち生殖不能要件は2023年に違憲とされ、外観要件もホルモン療法などによる近い外見で満たしうるという判断が2024年に示されています。',
+  },
+  {
+    q: '性別変更に必要な診断書とは何ですか？',
+    a: '家庭裁判所への申立てには、医師の診断書（意見書）が必要になります。申立て自体の費用は小さく、診断書や要件を満たすための医療のほうに費用がかかります。',
+  },
+  {
+    q: '改名（名前の変更）だけでもできますか？',
+    a: 'できます。戸籍の性別を変えなくても、家庭裁判所に「名の変更許可」を申し立てて改名だけを行うことは可能です。',
+  },
+];
+const faqLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((item) => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: { '@type': 'Answer', text: item.a },
+  })),
+};
 ---
 
 <BaseLayout
-  title="戸籍と名前の変更（改名・戸籍の性別変更） - とらんすナビ"
-  description="日本での改名（家庭裁判所）と、戸籍の性別変更（特例法）の手続きの全体像。要件は近年変わりつつあります。"
+  title="戸籍と名前の変更（改名・手術なしでの性別変更） - とらんすナビ"
+  description="日本での改名（家庭裁判所）と、戸籍の性別変更（特例法）の手続きの全体像。手術なしでの性別変更をめぐる2023・2024年の最高裁・高裁の判断もまとめています。"
 >
+  <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
   <article class="article-shell">
     <div class="eyebrow">知る</div>
     <h1>戸籍と名前の変更</h1>
@@ -31,6 +62,7 @@ import References from '../components/References.astro';
       <p>
         <Cite src={['courts', 'laws-15-111']}>戸籍上の性別の変更は、「性同一性障害者の性別の取扱いの特例に関する法律」（特例法）にもとづいて、家庭裁判所が判断します</Cite>。<Cite src="laws-15-111">年齢や婚姻の有無、未成年の子の有無などの要件に加えて、からだに関する要件が定められてきました</Cite>。
       </p>
+      <h3 id="no-surgery">手術なしで戸籍の性別は変えられる？（2023・2024年の判断）</h3>
       <p>
         この、からだに関する要件は、近年大きく動いています。<strong><Cite src="toben-5-10-25">2023年には、生殖機能をなくす手術を求める要件（生殖不能要件）について、最高裁判所が憲法違反と判断しました</Cite>。</strong>さらに<strong><Cite src={['hiroshima-2024-07-10', 'lgbtetc-3042']}>2024年には、もう一つの「外観」に関する要件についても、広島高裁が「違憲の疑いがある」とし、手術を受けていない当事者の性別変更を認めました</Cite></strong>。<Cite src={['hiroshima-2024-07-10', 'lgbtetc-3042']}>この判断では、外観要件はホルモン療法などによる近い外見でも満たしうる、とされています</Cite>。ただし、外観要件そのものは法律にまだ残っていて、最高裁の最終的な判断や法改正はこれからです。いまの要件は変わりつつあるので、弁護士や当事者団体など専門のところで確かめてください。
       </p>
@@ -53,6 +85,18 @@ import References from '../components/References.astro';
       <p>
         手続きの具体的な進め方や、いまの要件の状況は、弁護士や当事者団体に相談すると確実です。<a href="/support/">相談先</a>や、<a href="/resources/">関連サイト</a>の法制度に関わる団体も参考にしてください。
       </p>
+    </section>
+
+    <section aria-labelledby="faq">
+      <h2 id="faq">よくある質問</h2>
+      <dl class="finder-faq">
+        {faqs.map((item) => (
+          <div>
+            <dt>{item.q}</dt>
+            <dd>{item.a}</dd>
+          </div>
+        ))}
+      </dl>
     </section>
 
     <nav class="word-chips entry-related" aria-label="関連ページ">
