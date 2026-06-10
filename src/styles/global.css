@@ -4,7 +4,10 @@
   --paper: rgba(255, 255, 255, 0.82);
   --paper-strong: rgba(255, 255, 255, 0.94);
   --ink: #3f4a62;
-  --muted: #6f7894;
+  /* Darkened from #6f7894 so caption/meta text clears WCAG AA (4.5:1) even on
+     the tinted card backgrounds (pink-soft / accent-soft), where the old value
+     dropped to ~3.98:1. */
+  --muted: #5f6885;
   --line: rgba(154, 207, 243, 0.55);
   --line-strong: rgba(255, 182, 209, 0.75);
   --accent: #4ba8ea;
@@ -16,6 +19,12 @@
   --btn-fill: #1a78c2;
   --btn-ink: #ffffff;
   --accent-strong: #ff83b7;
+  /* AA-safe pink for use as TEXT (and white-on-pink fills): the light
+     --accent-strong (#ff83b7) only reaches ~2.3:1, so anywhere the pink carries
+     meaningful text — link hovers, the current-TOC marker, the クライシス hotline
+     hover — uses this deeper rose instead (5.2:1 on white, 5.2:1 white-on-fill).
+     --accent-strong stays for borders, soft fills, shadows, and SVG decoration. */
+  --accent-strong-text: #c2356f;
   --accent-soft: #eef7ff;
   --accent-term: #7a58bd;
   --pink-soft: #fff0f7;
@@ -86,7 +95,7 @@ a {
 }
 
 a:hover {
-  color: var(--accent-strong);
+  color: var(--accent-strong-text);
 }
 
 /* Glossary/term links read like dictionary terms: a distinct purple with a
@@ -99,7 +108,7 @@ a:hover {
 
 .article-shell a[href^='/glossary/']:not(.hero-button):not(.word-chip):not(.glossary-tag):not(.glossary-card-link):hover,
 .intro a[href^='/glossary/']:not(.hero-button):not(.word-chip):not(.glossary-tag):not(.glossary-card-link):hover {
-  color: var(--accent-strong);
+  color: var(--accent-strong-text);
 }
 
 /* External links get a small ↗ mark in content areas (not on button/chip-style
@@ -223,7 +232,7 @@ main {
 .page-toc-list a.is-current {
   border-left-color: var(--accent);
   background: var(--accent-soft);
-  color: var(--accent-strong);
+  color: var(--accent-strong-text);
   font-weight: 700;
 }
 
@@ -256,7 +265,7 @@ main {
 .page-toc-fab.is-open {
   background: var(--accent-soft);
   border-color: var(--line-hover);
-  color: var(--accent-strong);
+  color: var(--accent-strong-text);
 }
 
 .page-toc-pop {
@@ -900,7 +909,7 @@ ul {
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.06em;
-  color: var(--accent-strong);
+  color: var(--accent-strong-text);
 }
 
 .entry-message p {
@@ -1356,7 +1365,7 @@ ul {
 
 .word-chip:hover {
   border-color: var(--line-hover);
-  color: var(--accent-strong);
+  color: var(--accent-strong-text);
 }
 
 /* "関連ページ / 次に読む" navigation: render as big buttons (not small text
@@ -1744,7 +1753,7 @@ ul {
 }
 
 .glossary-back:hover {
-  color: var(--accent-strong);
+  color: var(--accent-strong-text);
   text-decoration: underline;
 }
 
@@ -2104,7 +2113,9 @@ a.glossary-card-tag:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(120deg, var(--accent), var(--accent-strong));
+  /* Deeper endpoints than --accent/--accent-strong so the white step number
+     clears contrast on the badge (the light originals gave white ~2.3-2.6:1). */
+  background: linear-gradient(120deg, var(--link), var(--accent-strong-text));
   color: #fff;
   font-weight: 800;
 }
@@ -2270,7 +2281,7 @@ a.glossary-card-tag:hover {
 }
 
 .clinic-name-link:hover .clinic-name {
-  color: var(--accent-strong);
+  color: var(--accent-strong-text);
 }
 
 .clinic-name {
@@ -2295,7 +2306,7 @@ a.glossary-card-tag:hover {
 
 .clinic-expand-button[aria-expanded='true'] {
   border-color: var(--line-hover);
-  color: var(--accent-strong);
+  color: var(--accent-strong-text);
 }
 
 .clinic-meta,
@@ -2719,7 +2730,7 @@ a.glossary-card-tag:hover {
 }
 
 .hotline-tel:hover {
-  background: var(--accent-strong);
+  background: var(--accent-strong-text);
   color: #fff;
 }
 
@@ -2952,7 +2963,7 @@ a.glossary-card-tag:hover {
 }
 
 .footer-col a:hover {
-  color: var(--accent-strong);
+  color: var(--accent-strong-text);
   text-decoration: underline;
 }
 
@@ -3677,7 +3688,7 @@ a.glossary-card-tag:hover {
 
 .theme-toggle:hover,
 .furigana-toggle:hover {
-  color: var(--accent-strong);
+  color: var(--accent-strong-text);
   transform: translateY(-1px);
 }
 
@@ -3689,7 +3700,7 @@ a.glossary-card-tag:hover {
 }
 :root[data-furigana='on'] .furigana-toggle {
   background: var(--accent-soft);
-  color: var(--accent-strong);
+  color: var(--accent-strong-text);
   border-color: var(--line-hover);
 }
 
@@ -3800,7 +3811,7 @@ rp {
 }
 
 .event-banner-link:hover {
-  color: var(--accent-strong);
+  color: var(--accent-strong-text);
 }
 
 .event-banner-close {
