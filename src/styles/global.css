@@ -2916,8 +2916,7 @@ a.glossary-card-tag:hover {
 .footer-main {
   display: grid;
   gap: 18px;
-  justify-items: center;
-  text-align: center;
+  justify-items: stretch;
 }
 
 .footer-brand {
@@ -2948,6 +2947,7 @@ a.glossary-card-tag:hover {
   margin: 0;
   color: var(--muted);
   line-height: 1.7;
+  text-align: left;
 }
 
 .footer-nav {
@@ -2960,10 +2960,11 @@ a.glossary-card-tag:hover {
 .footer-col {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   gap: 6px;
   min-width: 0;
   padding: 12px 8px;
+  text-align: left;
 }
 
 .footer-col h2 {
@@ -2976,7 +2977,7 @@ a.glossary-card-tag:hover {
 
 .footer-col a {
   display: inline-flex;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
   padding: 2px 4px;
   border-radius: 8px;
