@@ -2922,7 +2922,7 @@ a.glossary-card-tag:hover {
 .footer-brand {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 12px;
 }
 
@@ -2952,8 +2952,9 @@ a.glossary-card-tag:hover {
 
 .footer-nav {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  align-items: start;
+  gap: 16px 14px;
   width: 100%;
 }
 
@@ -3075,10 +3076,16 @@ a.glossary-card-tag:hover {
   line-height: 1.7;
 }
 
+@media (max-width: 780px) {
+  .footer-nav {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 600px) {
   .footer-nav {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px 12px;
+    gap: 12px;
   }
 
   .footer-col {
@@ -3092,7 +3099,7 @@ a.glossary-card-tag:hover {
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 360px) {
   .footer-nav {
     grid-template-columns: 1fr;
   }
