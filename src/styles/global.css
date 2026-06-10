@@ -849,6 +849,10 @@ ul {
   margin-top: 6px;
 }
 
+.glossary-section + .glossary-section {
+  margin-top: 24px;
+}
+
 .glossary-section-summary {
   display: flex;
   align-items: center;
