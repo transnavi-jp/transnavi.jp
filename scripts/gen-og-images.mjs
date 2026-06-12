@@ -7,7 +7,7 @@ import fs from 'node:fs';
 import satori from 'satori';
 import { Resvg } from '@resvg/resvg-js';
 import { loadDefaultJapaneseParser } from 'budoux';
-import { OG_ROUTES, ROUTE_CATEGORY, slugForRoute } from '../src/data/og-routes.mjs';
+import { OG_ROUTES, ROUTE_CATEGORY, COLLECTION_CATEGORY, slugForRoute } from '../src/data/og-routes.mjs';
 
 const FONT_BOLD = fs.readFileSync('scripts/assets/MPLUSRounded1c-Bold.ttf');
 const LOGO = 'data:image/png;base64,' + fs.readFileSync('public/icon-192.png').toString('base64');
@@ -95,13 +95,33 @@ function card(title, category) {
   ]);
 }
 
+// Collection detail pages (every built /glossary/x/, /clinics/x/, …) each get
+// their own card so a shared glossary term or clinic previews with its own name
+// instead of the generic index card.
+function walkRoutes(dir) {
+  const out = [];
+  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (e.isDirectory()) out.push(...walkRoutes(`${dir}/${e.name}`));
+    else if (e.name === 'index.html') out.push(`${dir.replace(/^dist/, '')}/`);
+  }
+  return out;
+}
+const detailRoutes = Object.keys(COLLECTION_CATEGORY).flatMap((base) => {
+  const dir = `dist${base}`.replace(/\/$/, '');
+  return fs.existsSync(dir) ? walkRoutes(dir).filter((r) => r !== base) : [];
+});
+
+const categoryFor = (route) =>
+  ROUTE_CATEGORY[route] ??
+  Object.entries(COLLECTION_CATEGORY).find(([base]) => route.startsWith(base))?.[1];
+
 fs.rmSync('dist/og', { recursive: true, force: true });
 fs.mkdirSync('dist/og', { recursive: true });
 let n = 0;
-for (const route of OG_ROUTES) {
+for (const route of [...OG_ROUTES, ...detailRoutes]) {
   const title = titleFor(route);
   if (!title) continue;
-  const svg = await satori(card(title, ROUTE_CATEGORY[route]), {
+  const svg = await satori(card(title, categoryFor(route)), {
     width: 1200, height: 630,
     fonts: [{ name: 'M PLUS Rounded 1c', data: FONT_BOLD, weight: 700, style: 'normal' }],
   });
@@ -109,4 +129,4 @@ for (const route of OG_ROUTES) {
   fs.writeFileSync(`dist/og/${slugForRoute(route)}.png`, png);
   n++;
 }
-console.log(`og images: ${n} cards written to dist/og/`);
+console.log(`og images: ${n} cards written to dist/og/ (${detailRoutes.length} collection entries)`);

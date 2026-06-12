@@ -18,17 +18,22 @@ export const ROUTE_CATEGORY = Object.fromEntries(
 export const slugForRoute = (route) =>
   route === '/' ? 'home' : route.replace(/^\/|\/$/g, '').replace(/\//g, '-');
 
-// Detail collections share their index card (e.g. every /glossary/x/ uses the
-// /glossary/ card) so we don't render hundreds of images.
-const COLLECTION_BASES = ['/glossary/', '/clinics/', '/library/', '/tags/'];
+// Detail collections get their own per-entry card (rendered from the built
+// page's <title> in gen-og-images), labelled with the collection's name.
+export const COLLECTION_CATEGORY = {
+  '/glossary/': '用語集',
+  '/clinics/': '医療機関',
+  '/library/': '資料集',
+  '/tags/': 'タグ',
+};
 
 // The card a given pathname should use, or null to fall back to /og-image.png.
 export function ogCardFor(pathname) {
   if (pathname === '/') return null;
   if (ROUTE_CATEGORY[pathname]) return { route: pathname, slug: slugForRoute(pathname), category: ROUTE_CATEGORY[pathname] };
-  for (const base of COLLECTION_BASES) {
+  for (const [base, category] of Object.entries(COLLECTION_CATEGORY)) {
     if (pathname.startsWith(base) && pathname !== base) {
-      return { route: base, slug: slugForRoute(base), category: ROUTE_CATEGORY[base] };
+      return { route: pathname, slug: slugForRoute(pathname), category };
     }
   }
   return null;
