@@ -69,7 +69,7 @@ export function surgeryTypesOf(clinic: Clinic): SurgeryType[] {
 }
 
 // One pin colour per facility: surgery first (most specialised), then HRT, then mental.
-export function primaryGenre(categories: string[]): ClinicGenre {
+export function primaryGenre(categories: ClinicGenre[]): ClinicGenre {
   return categories.includes('surgery') ? 'surgery' : categories.includes('hrt') ? 'hrt' : 'mental';
 }
 
