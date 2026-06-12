@@ -28,24 +28,33 @@ walk(pagesDir);
 // Pull inline citation keys/numbers from a page's source.
 function inlineCites(src, refs) {
   const cited = new Set(); // resolved 1-based numbers
-  let count = 0, ranges = 0, broken = [];
+  let count = 0, ranges = 0, dynamic = 0, broken = [];
   const idIndex = new Map(refs.map((r, i) => [r.id, i + 1]));
+  const addKey = (k) => (idIndex.has(k) ? cited.add(idIndex.get(k)) : broken.push(k));
   for (const m of src.matchAll(/<Cite\b([^>]*?)(\/>|>)/g)) {
     count++;
     const attrs = m[1];
     const isRange = m[2] === '>'; // has children (wrapping a span)
     if (isRange) ranges++;
-    // src="key" | src={['a','b']} | src="a"
+    // src="key" | src={['a','b']} | src={item.cite} (data-driven)
     const srcM = attrs.match(/\bsrc=(?:"([^"]+)"|\{([^}]+)\})/);
     if (srcM) {
-      const raw = srcM[1] ?? srcM[2];
-      for (const k of raw.match(/['"]([^'"]+)['"]/g)?.map((s) => s.slice(1, -1)) ?? [raw.trim()]) {
-        if (idIndex.has(k)) cited.add(idIndex.get(k));
-        else broken.push(k);
+      if (srcM[1] != null) addKey(srcM[1]); // src="key" — always a literal
+      else {
+        const quoted = srcM[2].match(/['"]([^'"]+)['"]/g)?.map((s) => s.slice(1, -1));
+        if (quoted) quoted.forEach(addKey);
+        else dynamic++; // src={item.cite} — keys live in the page's data literals
       }
     }
     const nM = attrs.match(/\bn=\{?\s*\[?([0-9,\s]+)\]?\s*\}?/);
     if (nM) for (const num of nM[1].split(',').map((s) => Number(s.trim())).filter(Boolean)) cited.add(num);
+  }
+  // A dynamic src (e.g. <Cite src={item.cite} />) means the keys are declared in
+  // the page's own data literals — resolve `cite: ['a', 'b']` / `cite: 'a'` there.
+  if (dynamic) {
+    for (const m of src.matchAll(/\bcite:\s*(\[[^\]]*\]|'[^']*'|"[^"]*")/g)) {
+      for (const k of m[1].match(/['"]([^'"]+)['"]/g)?.map((s) => s.slice(1, -1)) ?? []) addKey(k);
+    }
   }
   return { count, ranges, cited, broken };
 }
