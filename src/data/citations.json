@@ -1206,6 +1206,78 @@
       "id": "olson-gender-identity-5-years"
     }
   ],
+  "/faq/": [
+    {
+      "title": "Gender incongruence and transgender health in the ICD",
+      "url": "https://www.who.int/standards/classifications/frequently-asked-questions/gender-incongruence-and-transgender-health-in-the-icd",
+      "publisher": "世界保健機関（WHO）",
+      "lang": "en",
+      "id": "who-icd11"
+    },
+    {
+      "title": "性別不合に関する診断と治療のガイドライン（第5版）",
+      "url": "https://www.jspn.or.jp/modules/advocacy/index.php?content_id=23",
+      "publisher": "日本精神神経学会（JSPN）",
+      "lang": "ja",
+      "id": "jspn-guideline"
+    },
+    {
+      "title": "性別不合および性別違和",
+      "url": "https://www.msdmanuals.com/ja-jp/home/10-%E5%BF%83%E3%81%AE%E5%81%A5%E5%BA%B7%E5%95%8F%E9%A1%8C/%E6%80%A7%E5%88%A5%E9%81%95%E5%92%8C/%E6%80%A7%E5%88%A5%E9%81%95%E5%92%8C",
+      "publisher": "MSD（Merck）マニュアル家庭版",
+      "lang": "ja",
+      "id": "msdmanuals"
+    },
+    {
+      "title": "性同一性障害者の性別の取扱いの特例に関する法律（平成15年法律第111号）",
+      "url": "https://laws.e-gov.go.jp/law/415AC0100000111/",
+      "publisher": "デジタル庁 e-Gov法令検索",
+      "lang": "ja",
+      "id": "laws-15-111"
+    },
+    {
+      "title": "性別の取扱いの変更要件の一部を無効とした最高裁令和5年10月25日決定について",
+      "url": "https://www.toben.or.jp/know/iinkai/seibyoudou/column/51025.html",
+      "publisher": "東京弁護士会",
+      "lang": "ja",
+      "id": "toben-5-10-25"
+    },
+    {
+      "title": "外観手術なしで性別変更認める 広島高裁、男性から女性",
+      "url": "https://www.nikkei.com/article/DGXZQOUE101IZ0Q4A710C2000000/",
+      "publisher": "日本経済新聞",
+      "lang": "ja",
+      "id": "hiroshima-2024-07-10"
+    },
+    {
+      "title": "Factors Leading to “Detransition” Among Transgender and Gender Diverse People in the United States (Turban et al., 2021)",
+      "url": "https://www.liebertpub.com/doi/10.1089/lgbt.2020.0437",
+      "publisher": "LGBT Health",
+      "lang": "en",
+      "id": "turban-factors-leading-to"
+    },
+    {
+      "title": "Regret after Gender-affirmation Surgery: A Systematic Review and Meta-analysis of Prevalence (Bustos et al., 2021)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33968550/",
+      "publisher": "Plastic and Reconstructive Surgery – Global Open",
+      "lang": "en",
+      "id": "bustos-regret-after-gender"
+    },
+    {
+      "title": "電話相談窓口（よりそいホットライン）｜まもろうよ こころ",
+      "url": "https://www.mhlw.go.jp/mamorouyokokoro/soudan/tel/",
+      "publisher": "厚生労働省",
+      "lang": "ja",
+      "id": "mhlw"
+    },
+    {
+      "title": "性的指向及びジェンダーアイデンティティの多様性に関する国民の理解の増進に関する法律",
+      "url": "https://www.japaneselawtranslation.go.jp/ja/laws/view/4835",
+      "publisher": "法務省 日本法令外国語訳データベースシステム",
+      "lang": "ja",
+      "id": "japaneselawtranslation"
+    }
+  ],
   "/flags/": [
     {
       "title": "Who Designed the Transgender Flag?",

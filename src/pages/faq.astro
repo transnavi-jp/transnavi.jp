@@ -1,8 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Cite from '../components/Cite.astro';
+import References from '../components/References.astro';
 
 // Frequently-asked first questions. Each answer points to the page(s) that go
-// deeper, so the FAQ works as a wayfinding layer into the site.
+// deeper, so the FAQ works as a wayfinding layer into the site. Answers that
+// make checkable factual claims carry a `cite` field (optional string[]).
 const faqGroups = [
   {
     title: 'はじめの一歩',
@@ -25,11 +28,13 @@ const faqGroups = [
       {
         q: '性別違和って何？',
         a: '自分の性のあり方と、まわりから期待される性別とが食い違うときに、心やからだが感じる自然な反応です。医療では「性別不合」（ICD-11）とも呼ばれ、つらさがあること自体が前提ではありません。「病気」や「弱さ」ではありません。',
+        cite: ['who-icd11', 'jspn-guideline'],
         links: [{ href: '/dysphoria/', label: '性別違和を知る' }],
       },
       {
         q: 'トランスジェンダーって、病気なの？',
         a: 'いいえ。世界の診断基準（ICD-11）でも、トランスであること自体は精神疾患の分類から外れました。「性別違和」や「性別不合」という言葉は、つらさを受けとめてケアにつなげるためのもので、あなたの存在を否定するものではありません。',
+        cite: ['who-icd11', 'jspn-guideline'],
         links: [{ href: '/dysphoria/', label: '性別違和を知る' }, { href: '/glossary/gender-incongruence/', label: '性別不合' }],
       },
       {
@@ -95,6 +100,7 @@ const faqGroups = [
       {
         q: '「性同一性障害」という言葉は、今も使うの？',
         a: '医療の世界では呼び方が新しくなっています。アメリカの診断基準（DSM-5）では「性別違和」、世界基準（ICD-11）では「性別不合」と呼ばれ、ICD-11では精神疾患の分類からも外れました。「性同一性障害」は古い言い方で、いまも法律や手続きでは使われますが、人を指して使うのは避けたい言葉です。',
+        cite: ['who-icd11', 'msdmanuals', 'laws-15-111'],
         links: [{ href: '/dysphoria/', label: '性別違和を知る' }, { href: '/glossary/gender-incongruence/', label: '性別不合' }, { href: '/history/', label: '歴史（年表）' }],
       },
     ],
@@ -130,6 +136,7 @@ const faqGroups = [
       {
         q: '法改正で、戸籍の性別変更は変わったの？',
         a: '2023年に「生殖機能をなくす手術」を求める要件が憲法違反とされ、2024年には「外観」に関する要件についても、手術を受けていない人の変更を認めた高裁の判断が出ました。状況は動いているので、最新は専門のところで確認してください。',
+        cite: ['toben-5-10-25', 'hiroshima-2024-07-10'],
         links: [{ href: '/legal-change/', label: '戸籍と名前の変更' }],
       },
     ],
@@ -140,11 +147,13 @@ const faqGroups = [
       {
         q: '気持ちが揺れる・やめたくなったら？',
         a: '揺れていい、やめてもいい。脱移行の多くは外からの圧力が理由で、後悔はまれです。どんな道を選んでも、あなたを責める人はここにはいません。',
+        cite: ['turban-factors-leading-to', 'bustos-regret-after-gender'],
         links: [{ href: '/detransition/', label: '気持ちが揺れたとき・脱移行のこと' }],
       },
       {
         q: 'つらくて、今すぐ話したいときは？',
         a: 'ひとりで抱えこまないでください。よりそいホットライン（0120-279-338／24時間・無料・匿名）など、電話やチャットで無料で話せる窓口があります。あなたの存在には価値があります。',
+        cite: ['mhlw'],
         links: [{ href: '/support/', label: '相談先' }, { href: '/safety/', label: '安全とこころ' }],
       },
       {
@@ -170,11 +179,13 @@ const faqGroups = [
       {
         q: '差別は、法律で禁止されているの？',
         a: '2023年に「LGBT理解増進法」ができましたが、これは理解を広めるための法律で、差別を直接禁止・処罰するものではありません。差別をなくす取り組みは、これからも続いています。',
+        cite: ['japaneselawtranslation'],
         links: [{ href: '/safety/', label: '安全とこころ' }, { href: '/guidelines/', label: 'SOGIガイドライン' }],
       },
       {
         q: '国に、理解を広げるための方針はあるの？（基本計画）',
         a: '2023年の理解増進法にもとづいて、国はSOGIへの理解を広げるための「基本計画」を定めることになっています（おおむね3年ごとに見直し）。学校や職場での取り組みの後押しが期待される一方、実効性には課題も指摘されています。',
+        cite: ['japaneselawtranslation'],
         links: [{ href: '/guidelines/', label: 'SOGIガイドライン' }, { href: '/history/', label: '歴史（年表）' }],
       },
     ],
@@ -211,7 +222,7 @@ const faqLd = {
         {group.items.map((item) => (
           <div class="faq-item">
             <h3 class="faq-q">{item.q}</h3>
-            <p class="faq-a">{item.a}</p>
+            <p class="faq-a">{item.a}{item.cite && <Cite src={item.cite} />}</p>
             <nav class="word-chips" aria-label="関連ページ">
               {item.links.map((link) => (
                 <a class="word-chip" href={link.href}>{link.label}</a>
@@ -233,6 +244,7 @@ const faqLd = {
       <a class="word-chip" href="/glossary/">用語集</a>
       <a class="word-chip" href="/sitemap/">サイトの全体</a>
     </nav>
+    <References route="/faq/" />
   </article>
   <script type="application/ld+json" set:html={JSON.stringify(faqLd)} />
 </BaseLayout>
