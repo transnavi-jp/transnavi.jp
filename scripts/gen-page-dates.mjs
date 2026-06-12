@@ -15,7 +15,8 @@ const ROUTES = [
 const git = (args) => {
   try {
     return execSync(`git ${args}`, { encoding: 'utf8' }).trim();
-  } catch {
+  } catch (err) {
+    console.warn(`page-dates: git ${args.split(' ')[0]} failed (${err.message.split('\n')[0]}) — date will be missing`);
     return '';
   }
 };

@@ -107,7 +107,8 @@ for (const f of fs.readdirSync('src/content/resources')) {
   let fm;
   try {
     fm = yaml.load(m[1]) || {};
-  } catch {
+  } catch (err) {
+    console.warn(`search-index: skipping resource ${f} — bad frontmatter (${err.message.split('\n')[0]})`);
     continue;
   }
   if (!fm.url || !fm.title) continue;

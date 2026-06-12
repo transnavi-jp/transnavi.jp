@@ -77,7 +77,10 @@ const loadMap = (file) => {
   try {
     const raw = JSON.parse(fs.readFileSync(file, 'utf8'));
     return Object.fromEntries(Object.entries(raw).filter(([k]) => !k.startsWith('_')));
-  } catch { return {}; }
+  } catch (err) {
+    console.warn(`furigana: ${file} not loaded (${err.message}) — overrides won't apply`);
+    return {};
+  }
 };
 const GLOSSES = loadMap('scripts/furigana-glosses.json');
 // Phrase-level reading overrides: { phrase-with-one-kanji-run: correct-reading }.
