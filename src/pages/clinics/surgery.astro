@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import clinicsData from '../../data/clinics.json';
 import type { Clinic } from '../../types/clinic';
-import { categoriesOf, capabilitiesOf, CAPABILITY_LABELS, isGiCertified } from '../../utils/clinic-genre';
+import { categoriesOf, capabilitiesOf, CAPABILITY_LABELS, isGiCertified, type Capability } from '../../utils/clinic-genre';
 
 const prefectureOrder = [
   '北海道', '青森県', '岩手県', '宮城県', '秋田県', '山形県', '福島県', '茨城県', '栃木県', '群馬県',
@@ -21,7 +21,7 @@ const byPrefecture = prefectureOrder
   .map((prefecture) => ({ prefecture, items: surgery.filter((clinic) => clinic.prefecture === prefecture) }))
   .filter((group) => group.items.length > 0);
 
-const count = (cap: string) => surgery.filter((clinic) => clinic.caps.includes(cap)).length;
+const count = (cap: Capability) => surgery.filter((clinic) => clinic.caps.includes(cap)).length;
 
 const faqs = [
   {
