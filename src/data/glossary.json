@@ -65,7 +65,11 @@
       "en": "https://en.wikipedia.org/wiki/Gonadotropin-releasing_hormone_agonist",
       "ko": "https://ko.wikipedia.org/wiki/성선자극호르몬분비호르몬_작용제",
       "es": "https://es.wikipedia.org/wiki/Agonista_de_la_hormona_liberadora_de_gonadotropina"
-    }
+    },
+    "seeAlso": [
+      "puberty-blocker",
+      "triptorelin"
+    ]
   },
   {
     "id": "force-outing",
@@ -99,7 +103,11 @@
       "es": "https://es.wikipedia.org/wiki/Sacar_del_armario",
       "zhHans": "https://zh.wikipedia.org/zh-hans/被出櫃",
       "zhHant": "https://zh.wikipedia.org/zh-hant/被出櫃"
-    }
+    },
+    "seeAlso": [
+      "coming-out",
+      "deadnaming"
+    ]
   },
   {
     "id": "informed-consent",
@@ -124,7 +132,11 @@
     "avoid": [],
     "disputed": [],
     "source": "Informed Consent Model",
-    "notes": "リスクや効果について十分な説明を受けたうえで、本人の同意に基づいてホルモン療法などの医療を開始する考え方。精神科などによる事前の診断・許可を必須とせず、本人の自己決定を尊重する。"
+    "notes": "リスクや効果について十分な説明を受けたうえで、本人の同意に基づいてホルモン療法などの医療を開始する考え方。精神科などによる事前の診断・許可を必須とせず、本人の自己決定を尊重する。",
+    "seeAlso": [
+      "standards-of-care",
+      "diy-hrt"
+    ]
   },
   {
     "id": "estradiol-gel",
@@ -261,7 +273,12 @@
       "es": "https://es.wikipedia.org/wiki/Estrógeno",
       "zhHans": "https://zh.wikipedia.org/zh-hans/雌激素",
       "zhHant": "https://zh.wikipedia.org/zh-hant/雌激素"
-    }
+    },
+    "seeAlso": [
+      "17b-estradiol",
+      "testosterone",
+      "sex-hormone"
+    ]
   },
   {
     "id": "estrone",
@@ -397,7 +414,12 @@
       "es": "https://es.wikipedia.org/wiki/Salir_del_armario",
       "zhHans": "https://zh.wikipedia.org/zh-hans/出櫃",
       "zhHant": "https://zh.wikipedia.org/zh-hant/出櫃"
-    }
+    },
+    "seeAlso": [
+      "closeted",
+      "force-outing",
+      "deadnaming"
+    ]
   },
   {
     "id": "closeted",
@@ -429,7 +451,11 @@
       "es": "https://es.wikipedia.org/wiki/Estar_en_el_armario",
       "zhHans": "https://zh.wikipedia.org/zh-hans/深櫃",
       "zhHant": "https://zh.wikipedia.org/zh-hant/深櫃"
-    }
+    },
+    "seeAlso": [
+      "coming-out",
+      "stealth"
+    ]
   },
   {
     "id": "clocking",
@@ -453,7 +479,10 @@
     "avoid": [],
     "disputed": [],
     "source": "Clocking",
-    "notes": "本人が明かしていないのに、見た目や声などから「トランスジェンダーではないか」と気づかれてしまうこと。"
+    "notes": "本人が明かしていないのに、見た目や声などから「トランスジェンダーではないか」と気づかれてしまうこと。",
+    "seeAlso": [
+      "passing"
+    ]
   },
   {
     "id": "standards-of-care",
@@ -478,7 +507,11 @@
     "avoid": [],
     "disputed": [],
     "source": "Standards of Care",
-    "notes": "トランスジェンダーの人へのケアの、国際的なよりどころとなる指針。WPATH（世界トランスジェンダー・ヘルス専門家協会）が定める「SOC（Standards of Care）」が代表的で、ホルモン療法や手術の進め方の参考にされる。"
+    "notes": "トランスジェンダーの人へのケアの、国際的なよりどころとなる指針。WPATH（世界トランスジェンダー・ヘルス専門家協会）が定める「SOC（Standards of Care）」が代表的で、ホルモン療法や手術の進め方の参考にされる。",
+    "seeAlso": [
+      "gatekeeping",
+      "informed-consent"
+    ]
   },
   {
     "id": "gatekeeping",
@@ -502,7 +535,10 @@
     "avoid": [],
     "disputed": [],
     "notes": "医療者や精神科の専門職が、長期間の実生活体験（RLE）や煩雑な診断書の要求など高いハードルを設け、トランスジェンダー当事者が医療資源にアクセスするのを制限する行為を指す。WPATH SOC-8 はこうした傾向の緩和を目指し、インフォームド・コンセント（自己決定）モデルの普及を進めている。",
-    "source": "Gatekeeping"
+    "source": "Gatekeeping",
+    "seeAlso": [
+      "standards-of-care"
+    ]
   },
   {
     "id": "gonadotropins",
@@ -571,7 +607,12 @@
       "es": "https://es.wikipedia.org/wiki/Cisgénero",
       "zhHans": "https://zh.wikipedia.org/zh-hans/順性別",
       "zhHant": "https://zh.wikipedia.org/zh-hant/順性別"
-    }
+    },
+    "seeAlso": [
+      "transgender",
+      "cisgender-woman",
+      "cisgender-man"
+    ]
   },
   {
     "id": "cisgender-woman",
@@ -598,7 +639,11 @@
     "notes": "出生時に女性を割り当てられ、性同一性も女性である人のこと。シスジェンダーである女性を指す。",
     "wikipedia": {
       "en": "https://en.wikipedia.org/wiki/Cisgender_woman"
-    }
+    },
+    "seeAlso": [
+      "cisgender",
+      "transgender-woman"
+    ]
   },
   {
     "id": "cisgender-man",
@@ -625,7 +670,11 @@
     "notes": "出生時に男性を割り当てられ、性同一性も男性である人のこと。シスジェンダーである男性を指す。",
     "wikipedia": {
       "en": "https://en.wikipedia.org/wiki/Cisgender_man"
-    }
+    },
+    "seeAlso": [
+      "cisgender",
+      "transgender-man"
+    ]
   },
   {
     "id": "estradiol-cypionate",
@@ -712,7 +761,11 @@
     "avoid": [],
     "disputed": [],
     "notes": "性同一性に沿った性別で生活し、周囲にトランスジェンダーであることを明かさずに過ごしている状態のこと。カミングアウトしていない状態（クローゼット）と近いが、ステルスは性別移行を経て、自認する性別で日常を送りながらトランスであることを明かさないことを指すことが多い。",
-    "source": "Stealth"
+    "source": "Stealth",
+    "seeAlso": [
+      "passing",
+      "closeted"
+    ]
   },
   {
     "id": "spironolactone",
@@ -878,7 +931,12 @@
       "es": "https://es.wikipedia.org/wiki/Testosterona",
       "zhHans": "https://zh.wikipedia.org/zh-hans/睾酮",
       "zhHant": "https://zh.wikipedia.org/zh-hant/睾酮"
-    }
+    },
+    "seeAlso": [
+      "estrogen",
+      "sex-hormone",
+      "dihydrotestosterone"
+    ]
   },
   {
     "id": "deadnaming",
@@ -911,7 +969,11 @@
       "es": "https://es.wikipedia.org/wiki/Deadnaming",
       "zhHans": "https://zh.wikipedia.org/zh-hans/棄名錯稱",
       "zhHant": "https://zh.wikipedia.org/zh-hant/棄名錯稱"
-    }
+    },
+    "seeAlso": [
+      "deadname",
+      "misgendering"
+    ]
   },
   {
     "id": "detransition",
@@ -944,7 +1006,11 @@
       "es": "https://es.wikipedia.org/wiki/Detransición",
       "zhHans": "https://zh.wikipedia.org/zh-hans/Detrans",
       "zhHant": "https://zh.wikipedia.org/zh-hant/Detrans"
-    }
+    },
+    "seeAlso": [
+      "gender-transition",
+      "questioning"
+    ]
   },
   {
     "id": "dutasteride",
@@ -1041,7 +1107,14 @@
       "es": "https://es.wikipedia.org/wiki/Transgénero",
       "zhHans": "https://zh.wikipedia.org/zh-hans/跨性別",
       "zhHant": "https://zh.wikipedia.org/zh-hant/跨性別"
-    }
+    },
+    "seeAlso": [
+      "cisgender",
+      "gender-identity",
+      "transgender-woman",
+      "transgender-man",
+      "non-binary"
+    ]
   },
   {
     "id": "gender-identity",
@@ -1067,7 +1140,12 @@
     "source": "Gender identity",
     "wikipedia": {
       "ja": "https://ja.wikipedia.org/wiki/性同一性"
-    }
+    },
+    "seeAlso": [
+      "gender-expression",
+      "assigned-gender",
+      "sogi"
+    ]
   },
   {
     "id": "questioning",
@@ -1091,7 +1169,10 @@
     "disputed": [],
     "notes": "自分の性同一性や性的指向が、まだはっきりしていない、あるいは決めていない・決めない状態。迷いや探索のさなかにいることそのものを指す言葉で、結論を急ぐ必要はありません。",
     "source": "Questioning (sexuality and gender)",
-    "message": "まだ名前がついていなくても、大丈夫。「わからない」も、ちゃんとあなたの居場所です。"
+    "message": "まだ名前がついていなくても、大丈夫。「わからない」も、ちゃんとあなたの居場所です。",
+    "seeAlso": [
+      "gender-identity"
+    ]
   },
   {
     "id": "transgender-woman",
@@ -1130,7 +1211,12 @@
       "es": "https://es.wikipedia.org/wiki/Mujer_trans",
       "zhHans": "https://zh.wikipedia.org/zh-hans/跨性別女性",
       "zhHant": "https://zh.wikipedia.org/zh-hant/跨性別女性"
-    }
+    },
+    "seeAlso": [
+      "transgender",
+      "transfeminine",
+      "amab"
+    ]
   },
   {
     "id": "transgender-man",
@@ -1159,7 +1245,12 @@
     "wikipedia": {
       "en": "https://en.wikipedia.org/wiki/Centuripe_ware",
       "es": "https://es.wikipedia.org/wiki/Cerámica_de_Centuripa"
-    }
+    },
+    "seeAlso": [
+      "transgender",
+      "transmasculine",
+      "afab"
+    ]
   },
   {
     "id": "terf",
@@ -1195,7 +1286,11 @@
       "es": "https://es.wikipedia.org/wiki/TERF",
       "zhHans": "https://zh.wikipedia.org/zh-hans/排跨基女",
       "zhHant": "https://zh.wikipedia.org/zh-hant/排跨基女"
-    }
+    },
+    "seeAlso": [
+      "gender-critical",
+      "transphobia"
+    ]
   },
   {
     "id": "triptorelin",
@@ -1263,7 +1358,13 @@
       "es": "https://es.wikipedia.org/wiki/Género_no_binario",
       "zhHans": "https://zh.wikipedia.org/zh-hans/非二元性別",
       "zhHant": "https://zh.wikipedia.org/zh-hant/非二元性別"
-    }
+    },
+    "seeAlso": [
+      "genderqueer",
+      "agender",
+      "genderfluid",
+      "bigender"
+    ]
   },
   {
     "id": "genderfluid",
@@ -1290,7 +1391,11 @@
     "disputed": [],
     "source": "Genderfluid",
     "message": "今日の自分と明日の自分が違っても、どちらもちゃんとあなたです。",
-    "notes": "性同一性が時とともに揺れ動く・変化するあり方。ある時は男性寄り、別の時は女性寄り、中間やどちらでもないなど、感じ方が一定ではない。ノンバイナリーの一つとして語られることが多い。"
+    "notes": "性同一性が時とともに揺れ動く・変化するあり方。ある時は男性寄り、別の時は女性寄り、中間やどちらでもないなど、感じ方が一定ではない。ノンバイナリーの一つとして語られることが多い。",
+    "seeAlso": [
+      "non-binary",
+      "genderflux"
+    ]
   },
   {
     "id": "passing",
@@ -1323,7 +1428,11 @@
       "zhHans": "https://zh.wikipedia.org/zh-hans/Passing",
       "zhHant": "https://zh.wikipedia.org/zh-hant/Passing",
       "ja": "https://ja.wikipedia.org/wiki/パッシング"
-    }
+    },
+    "seeAlso": [
+      "clocking",
+      "stealth"
+    ]
   },
   {
     "id": "bicalutamide",
@@ -1518,7 +1627,11 @@
     "wikipedia": {
       "en": "https://en.wikipedia.org/wiki/Misgendering",
       "es": "https://es.wikipedia.org/wiki/Misgendering"
-    }
+    },
+    "seeAlso": [
+      "deadnaming",
+      "passing"
+    ]
   },
   {
     "id": "minoxidil",
@@ -1616,7 +1729,10 @@
       "en": "https://en.wikipedia.org/wiki/Laser_hair_removal",
       "es": "https://es.wikipedia.org/wiki/Depilación_láser"
     },
-    "notes": "レーザーの光で毛根にはたらきかけ、毛を減らしていく脱毛方法。広い範囲を比較的短時間で処理しやすい。白髪や産毛には効きにくく、医療機関で行う。"
+    "notes": "レーザーの光で毛根にはたらきかけ、毛を減らしていく脱毛方法。広い範囲を比較的短時間で処理しやすい。白髪や産毛には効きにくく、医療機関で行う。",
+    "seeAlso": [
+      "electrolysis"
+    ]
   },
   {
     "id": "estradiol-benzoate",
@@ -1799,7 +1915,12 @@
     "avoid": [],
     "disputed": [],
     "source": "Vocal Pitch",
-    "notes": "声の高さのこと。声の印象を左右する要素の一つだが、高さだけでなく、共鳴や話し方も印象に大きく関わる。ボイストレーニングで調整できる。"
+    "notes": "声の高さのこと。声の印象を左右する要素の一つだが、高さだけでなく、共鳴や話し方も印象に大きく関わる。ボイストレーニングで調整できる。",
+    "seeAlso": [
+      "fundamental-frequency",
+      "resonance",
+      "voice-training"
+    ]
   },
   {
     "id": "voice-training",
@@ -1826,7 +1947,11 @@
     "wikipedia": {
       "en": "https://en.wikipedia.org/wiki/Voice_training"
     },
-    "notes": "声の高さ・共鳴・話し方などを、練習によって望む方向に近づけていく取り組み。お金や医療がなくても自宅で始められる部分が多い。言語聴覚士などの指導を受ける方法もある。"
+    "notes": "声の高さ・共鳴・話し方などを、練習によって望む方向に近づけていく取り組み。お金や医療がなくても自宅で始められる部分が多い。言語聴覚士などの指導を受ける方法もある。",
+    "seeAlso": [
+      "vocal-pitch",
+      "voice-feminization-surgery"
+    ]
   },
   {
     "id": "voice-feminization-surgery",
@@ -1856,7 +1981,11 @@
     "wikipedia": {
       "en": "https://en.wikipedia.org/wiki/Voice_feminization_surgery"
     },
-    "notes": "声を高く・女性的にすることを目的とした手術の総称（声帯短縮術など）。手術で変えられるのはおもに高さで、共鳴や話し方はトレーニングが必要なことが多い。"
+    "notes": "声を高く・女性的にすることを目的とした手術の総称（声帯短縮術など）。手術で変えられるのはおもに高さで、共鳴や話し方はトレーニングが必要なことが多い。",
+    "seeAlso": [
+      "glottoplasty",
+      "voice-training"
+    ]
   },
   {
     "id": "domestic-violence-survivor",
@@ -2000,7 +2129,11 @@
       "zhHans": "https://zh.wikipedia.org/zh-hans/面部女性化手术",
       "zhHant": "https://zh.wikipedia.org/zh-hant/面部女性化手术"
     },
-    "notes": "額・鼻・あご・のどぼとけなど、顔の骨格や輪郭を女性的な印象に近づける手術の総称（FFS）。部位や方法はさまざまで、希望に応じて選べる。"
+    "notes": "額・鼻・あご・のどぼとけなど、顔の骨格や輪郭を女性的な印象に近づける手術の総称（FFS）。部位や方法はさまざまで、希望に応じて選べる。",
+    "seeAlso": [
+      "tracheal-shave",
+      "gas"
+    ]
   },
   {
     "id": "fundamental-frequency",
@@ -2286,7 +2419,13 @@
       "es": "https://es.wikipedia.org/wiki/Antiandrógeno",
       "zhHans": "https://zh.wikipedia.org/zh-hans/抗雄激素",
       "zhHant": "https://zh.wikipedia.org/zh-hant/抗雄激素"
-    }
+    },
+    "seeAlso": [
+      "spironolactone",
+      "cyproterone-acetate",
+      "bicalutamide",
+      "gnrh-analogues"
+    ]
   },
   {
     "id": "tracheal-shave",
@@ -2481,7 +2620,11 @@
       "es": "https://es.wikipedia.org/wiki/Bloqueadores_de_pubertad",
       "zhHans": "https://zh.wikipedia.org/zh-hans/青春期阻滞剂",
       "zhHant": "https://zh.wikipedia.org/zh-hant/青春期阻滞剂"
-    }
+    },
+    "seeAlso": [
+      "gnrh-analogues",
+      "gaht"
+    ]
   },
   {
     "id": "assigned-gender",
@@ -2517,7 +2660,12 @@
     "wikipedia": {
       "en": "https://en.wikipedia.org/wiki/Assigned_gender",
       "es": "https://es.wikipedia.org/wiki/Asignación_de_género"
-    }
+    },
+    "seeAlso": [
+      "afab",
+      "amab",
+      "gender-identity"
+    ]
   },
   {
     "id": "self-acceptance",
@@ -2572,7 +2720,11 @@
     "avoid": [],
     "disputed": [],
     "source": "DIY HRT",
-    "notes": "医療機関を通さず、自分で薬を入手して行うホルモン療法（フラホルとも）。安く始めやすく見えても、量の調整や副作用の確認がむずかしく、健康上のリスクがある。"
+    "notes": "医療機関を通さず、自分で薬を入手して行うホルモン療法（フラホルとも）。安く始めやすく見えても、量の調整や副作用の確認がむずかしく、健康上のリスクがある。",
+    "seeAlso": [
+      "gaht",
+      "informed-consent"
+    ]
   },
   {
     "id": "rle",
@@ -2602,7 +2754,11 @@
       "en": "https://en.wikipedia.org/wiki/Real-life_experience",
       "zhHans": "https://zh.wikipedia.org/zh-hans/实际生活体验",
       "zhHant": "https://zh.wikipedia.org/zh-hant/实际生活体验"
-    }
+    },
+    "seeAlso": [
+      "gender-transition",
+      "standards-of-care"
+    ]
   },
   {
     "id": "afab",
@@ -2631,7 +2787,11 @@
     "source": "Assigned Female at Birth (AFAB)",
     "wikipedia": {
       "en": "https://en.wikipedia.org/wiki/Assigned_female_at_birth"
-    }
+    },
+    "seeAlso": [
+      "amab",
+      "assigned-gender"
+    ]
   },
   {
     "id": "amab",
@@ -2660,7 +2820,11 @@
     "source": "Assigned Male at Birth (AMAB)",
     "wikipedia": {
       "en": "https://en.wikipedia.org/wiki/Assigned_male_at_birth"
-    }
+    },
+    "seeAlso": [
+      "afab",
+      "assigned-gender"
+    ]
   },
   {
     "id": "psychological-counseling",
@@ -2710,7 +2874,11 @@
     "source": "Diagnosis Certificate",
     "wikipedia": {
       "ja": "https://ja.wikipedia.org/wiki/診断書"
-    }
+    },
+    "seeAlso": [
+      "legal-gender-recognition",
+      "gender-dysphoria"
+    ]
   },
   {
     "id": "cyproterone-acetate",
@@ -2889,7 +3057,12 @@
     "avoid": [],
     "disputed": [],
     "notes": "性器の形態を性同一性に合わせて変える外科手術の総称。腟形成術や精巣摘除術、陰茎形成術などを含む。性別適合手術（SRS）の一部として行われることが多い。",
-    "source": "Genital surgery"
+    "source": "Genital surgery",
+    "seeAlso": [
+      "gas",
+      "vaginoplasty",
+      "orchiectomy"
+    ]
   },
   {
     "id": "transsexualism",
@@ -2928,7 +3101,11 @@
       "es": "https://es.wikipedia.org/wiki/Transexualidad",
       "zhHans": "https://zh.wikipedia.org/zh-hans/易性癖",
       "zhHant": "https://zh.wikipedia.org/zh-hant/易性癖"
-    }
+    },
+    "seeAlso": [
+      "gender-incongruence",
+      "transgender"
+    ]
   },
   {
     "id": "transgender-certificate",
@@ -2991,7 +3168,12 @@
       "es": "https://es.wikipedia.org/wiki/Disforia_de_género",
       "zhHans": "https://zh.wikipedia.org/zh-hans/性別焦慮",
       "zhHant": "https://zh.wikipedia.org/zh-hant/性別焦慮"
-    }
+    },
+    "seeAlso": [
+      "gender-incongruence",
+      "gender-identity",
+      "gender-transition"
+    ]
   },
   {
     "id": "gender-transition",
@@ -3018,7 +3200,13 @@
     "source": "Transitioning (transgender)",
     "wikipedia": {
       "ja": "https://ja.wikipedia.org/wiki/性別移行"
-    }
+    },
+    "seeAlso": [
+      "rle",
+      "gaht",
+      "gas",
+      "legal-gender-recognition"
+    ]
   },
   {
     "id": "gaht",
@@ -3055,7 +3243,13 @@
       "es": "https://es.wikipedia.org/wiki/Terapia_hormonal_transgénero",
       "zhHans": "https://zh.wikipedia.org/zh-hans/性别肯定激素治疗",
       "zhHant": "https://zh.wikipedia.org/zh-hant/性别肯定激素治疗"
-    }
+    },
+    "seeAlso": [
+      "estrogen",
+      "testosterone",
+      "antiandrogen",
+      "diy-hrt"
+    ]
   },
   {
     "id": "gas",
@@ -3095,7 +3289,14 @@
       "es": "https://es.wikipedia.org/wiki/Cirugía_de_afirmación_de_género",
       "zhHans": "https://zh.wikipedia.org/zh-hans/性別肯定手術",
       "zhHant": "https://zh.wikipedia.org/zh-hant/性別肯定手術"
-    }
+    },
+    "seeAlso": [
+      "vaginoplasty",
+      "mastectomy",
+      "metoidioplasty",
+      "phalloplasty",
+      "genital-surgery"
+    ]
   },
   {
     "id": "sex-reassignment-certificate",
@@ -3144,7 +3345,12 @@
     "source": "Gender Expression",
     "wikipedia": {
       "es": "https://es.wikipedia.org/wiki/Territorio"
-    }
+    },
+    "seeAlso": [
+      "gender-identity",
+      "gender-nonconforming",
+      "androgynous"
+    ]
   },
   {
     "id": "gender-incongruence",
@@ -3180,7 +3386,11 @@
       "es": "https://es.wikipedia.org/wiki/Discordancia_de_género",
       "zhHans": "https://zh.wikipedia.org/zh-hans/性別不一致",
       "zhHant": "https://zh.wikipedia.org/zh-hant/性別不一致"
-    }
+    },
+    "seeAlso": [
+      "gender-dysphoria",
+      "transsexualism"
+    ]
   },
   {
     "id": "legal-gender-recognition",
@@ -3210,7 +3420,11 @@
     "notes": "戸籍など、法律上の性別を変える手続き。日本では「性同一性障害者の性別の取扱いの特例に関する法律」（特例法）にもとづくが、要件は近年の裁判で大きく見直されつつある（2023年に生殖不能要件が違憲とされたなど）。",
     "wikipedia": {
       "en": "https://en.wikipedia.org/wiki/Legal_gender_recognition"
-    }
+    },
+    "seeAlso": [
+      "diagnosis-certificate",
+      "sex-reassignment-certificate"
+    ]
   },
   {
     "id": "orchiectomy",
@@ -3304,7 +3518,11 @@
     "avoid": [],
     "disputed": [],
     "source": "Glottoplasty",
-    "notes": "声帯の前方を癒着させて声帯の振動長を短くし、声の高さを上げる手術のこと。声の女性化を目的に行われることがある。"
+    "notes": "声帯の前方を癒着させて声帯の振動長を短くし、声の高さを上げる手術のこと。声の女性化を目的に行われることがある。",
+    "seeAlso": [
+      "voice-feminization-surgery",
+      "vocal-folds"
+    ]
   },
   {
     "id": "serm",
@@ -3467,7 +3685,10 @@
     "wikipedia": {
       "en": "https://en.wikipedia.org/wiki/Electrology"
     },
-    "notes": "毛穴に細い針を入れ、電気で毛根を処理していく脱毛方法（ニードル脱毛）。白髪や産毛にも効き、永久的な脱毛が期待できる一方、時間がかかる。"
+    "notes": "毛穴に細い針を入れ、電気で毛根を処理していく脱毛方法（ニードル脱毛）。白髪や産毛にも効き、永久的な脱毛が期待できる一方、時間がかかる。",
+    "seeAlso": [
+      "laser-hair-removal"
+    ]
   },
   {
     "id": "endocrinology",
@@ -3686,7 +3907,13 @@
       "es": "https://es.wikipedia.org/wiki/Vaginoplastia",
       "zhHans": "https://zh.wikipedia.org/zh-hans/阴道成形术",
       "zhHant": "https://zh.wikipedia.org/zh-hant/阴道成形术"
-    }
+    },
+    "seeAlso": [
+      "penile-inversion-vaginoplasty",
+      "colovaginoplasty",
+      "peritoneal-vaginoplasty",
+      "dilator"
+    ]
   },
   {
     "id": "mastectomy",
@@ -3720,7 +3947,11 @@
       "es": "https://es.wikipedia.org/wiki/Mastectomía",
       "zhHans": "https://zh.wikipedia.org/zh-hans/乳房切除术",
       "zhHant": "https://zh.wikipedia.org/zh-hant/乳房切除术"
-    }
+    },
+    "seeAlso": [
+      "gas",
+      "breast-development"
+    ]
   },
   {
     "id": "metoidioplasty",
@@ -3798,7 +4029,11 @@
     "avoid": [],
     "disputed": [],
     "source": "Sexual orientation and gender identity",
-    "notes": "Sexual Orientation and Gender Identity（性的指向と性自認）の頭文字。LGBTのように特定の少数者を指すのではなく、すべての人がもつ属性として性のあり方をとらえる言い方。性表現（Gender Expression）を加えて SOGIE と書くこともある。"
+    "notes": "Sexual Orientation and Gender Identity（性的指向と性自認）の頭文字。LGBTのように特定の少数者を指すのではなく、すべての人がもつ属性として性のあり方をとらえる言い方。性表現（Gender Expression）を加えて SOGIE と書くこともある。",
+    "seeAlso": [
+      "sexual-orientation",
+      "gender-identity"
+    ]
   },
   {
     "id": "intersex",
@@ -3863,7 +4098,12 @@
     "wikipedia": {
       "ja": "https://ja.wikipedia.org/wiki/同性愛",
       "en": "https://en.wikipedia.org/wiki/Homosexuality"
-    }
+    },
+    "seeAlso": [
+      "heterosexuality",
+      "bisexuality",
+      "sexual-orientation"
+    ]
   },
   {
     "id": "heterosexuality",
@@ -3892,7 +4132,11 @@
     "wikipedia": {
       "ja": "https://ja.wikipedia.org/wiki/異性愛",
       "en": "https://en.wikipedia.org/wiki/Heterosexuality"
-    }
+    },
+    "seeAlso": [
+      "homosexuality",
+      "sexual-orientation"
+    ]
   },
   {
     "id": "bisexuality",
@@ -3921,7 +4165,11 @@
     "wikipedia": {
       "ja": "https://ja.wikipedia.org/wiki/両性愛",
       "en": "https://en.wikipedia.org/wiki/Bisexuality"
-    }
+    },
+    "seeAlso": [
+      "pansexual",
+      "sexual-orientation"
+    ]
   },
   {
     "id": "asexuality",
@@ -3953,7 +4201,12 @@
     "wikipedia": {
       "ja": "https://ja.wikipedia.org/wiki/無性愛",
       "en": "https://en.wikipedia.org/wiki/Asexuality"
-    }
+    },
+    "seeAlso": [
+      "aromantic",
+      "demisexual",
+      "graysexual"
+    ]
   },
   {
     "id": "gender-binarism",
@@ -4107,7 +4360,10 @@
     "source": "Deadnaming",
     "wikipedia": {
       "en": "https://en.wikipedia.org/wiki/Deadnaming"
-    }
+    },
+    "seeAlso": [
+      "deadnaming"
+    ]
   },
   {
     "id": "egg",
@@ -4218,7 +4474,13 @@
     "source": "Sexual orientation",
     "wikipedia": {
       "en": "https://en.wikipedia.org/wiki/Sexual_orientation"
-    }
+    },
+    "seeAlso": [
+      "romantic-orientation",
+      "sogi",
+      "homosexuality",
+      "bisexuality"
+    ]
   },
   {
     "id": "romantic-orientation",
@@ -4239,7 +4501,12 @@
     "source": "Romantic orientation",
     "wikipedia": {
       "en": "https://en.wikipedia.org/wiki/Romantic_orientation"
-    }
+    },
+    "seeAlso": [
+      "sexual-orientation",
+      "split-attraction-model",
+      "aromantic"
+    ]
   },
   {
     "id": "split-attraction-model",
@@ -4304,7 +4571,11 @@
     "avoid": [],
     "disputed": [],
     "notes": "自分には性別（ジェンダー）がない、または性別という枠組みにあてはまらないと感じるあり方。ノンバイナリーの一つとされることが多い。",
-    "source": "Agender"
+    "source": "Agender",
+    "seeAlso": [
+      "non-binary",
+      "neutrois"
+    ]
   },
   {
     "id": "genderqueer",
@@ -4325,7 +4596,11 @@
     "source": "Genderqueer",
     "wikipedia": {
       "en": "https://en.wikipedia.org/wiki/Genderqueer"
-    }
+    },
+    "seeAlso": [
+      "non-binary",
+      "genderfluid"
+    ]
   },
   {
     "id": "bigender",
@@ -4486,7 +4761,11 @@
     "avoid": [],
     "disputed": [],
     "notes": "出生時に男性と割り当てられ、より女性的な方向にあるトランスの人を広く指す言葉。トランス女性だけでなく、その方向のノンバイナリーの人をふくむこともある。",
-    "source": "Transfeminine"
+    "source": "Transfeminine",
+    "seeAlso": [
+      "transgender-woman",
+      "transmasculine"
+    ]
   },
   {
     "id": "transmasculine",
@@ -4507,7 +4786,11 @@
     "avoid": [],
     "disputed": [],
     "notes": "出生時に女性と割り当てられ、より男性的な方向にあるトランスの人を広く指す言葉。トランス男性だけでなく、その方向のノンバイナリーの人をふくむこともある。",
-    "source": "Transmasculine"
+    "source": "Transmasculine",
+    "seeAlso": [
+      "transgender-man",
+      "transfeminine"
+    ]
   },
   {
     "id": "transphobia",
@@ -4530,7 +4813,12 @@
     "source": "Transphobia",
     "wikipedia": {
       "en": "https://en.wikipedia.org/wiki/Transphobia"
-    }
+    },
+    "seeAlso": [
+      "homophobia",
+      "cisnormativity",
+      "microaggression"
+    ]
   },
   {
     "id": "homophobia",
@@ -4612,7 +4900,11 @@
     "avoid": [],
     "disputed": [],
     "notes": "おもにトランスジェンダーの権利に反対する立場が自称する言葉。実際にはトランス排除的な主張をさすことが多く、当事者からはトランス差別的だと批判される。TERFと近い。",
-    "source": "Gender critical"
+    "source": "Gender critical",
+    "seeAlso": [
+      "terf",
+      "transphobia"
+    ]
   },
   {
     "id": "transgenderism",

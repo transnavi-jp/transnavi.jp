@@ -29,6 +29,9 @@ export interface GlossaryEntry {
   disputed: string[];
   notes?: string;
   source?: string;
+  /** Hand-curated related glossary ids (antonyms, complements, umbrella terms),
+   *  rendered as 「関連することば」 ahead of the automatic category siblings. */
+  seeAlso?: string[];
   /** Optional gentle message shown to readers (e.g. a self-compassion note). */
   message?: string;
 }
