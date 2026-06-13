@@ -1289,7 +1289,8 @@
     },
     "seeAlso": [
       "gender-critical",
-      "transphobia"
+      "transphobia",
+      "tra"
     ]
   },
   {
@@ -4032,7 +4033,8 @@
     "notes": "Sexual Orientation and Gender Identity（性的指向と性自認）の頭文字。LGBTのように特定の少数者を指すのではなく、すべての人がもつ属性として性のあり方をとらえる言い方。性表現（Gender Expression）を加えて SOGIE と書くこともある。",
     "seeAlso": [
       "sexual-orientation",
-      "gender-identity"
+      "gender-identity",
+      "lgbt"
     ]
   },
   {
@@ -4903,7 +4905,8 @@
     "source": "Gender critical",
     "seeAlso": [
       "terf",
-      "transphobia"
+      "transphobia",
+      "tra"
     ]
   },
   {
@@ -5033,5 +5036,67 @@
     "disputed": [],
     "notes": "性的に惹かれることがまれ、またはごく弱いあり方。アセクシュアルと、そうでない人のあいだのグラデーションにあたる。恋愛的指向での同様のあり方はグレーロマンティックと呼ばれる。",
     "source": "Gray asexuality"
+  },
+  {
+    "id": "lgbt",
+    "term": "LGBT",
+    "category": "性同一性・属性",
+    "translations": {
+      "en": "LGBT",
+      "zhHans": "LGBT",
+      "zhHant": "LGBT",
+      "ko": "LGBT"
+    },
+    "aliases": [
+      "LGBTQ",
+      "LGBTQ＋",
+      "LGBTQ+",
+      "LGBTQIA＋",
+      "性的マイノリティ",
+      "セクシュアルマイノリティ"
+    ],
+    "tags": [
+      "アイデンティティ",
+      "性的指向",
+      "コミュニティ文化"
+    ],
+    "avoid": [],
+    "disputed": [],
+    "notes": "レズビアン（Lesbian）・ゲイ（Gay）・バイセクシュアル（Bisexual）・トランスジェンダー（Transgender）の頭文字をとった言葉で、性的マイノリティ全体をあらわす総称としても使われる。はじめの3つ（LGB）は性的指向、Tは性同一性のことで、別々のものさし。クィアやクエスチョニングの「Q」を加えてLGBTQ、さらにインターセックスやアセクシュアルなどを加えてLGBTQIA＋と書くこともある。すべての人をうまく表せるわけではなく、この言葉を使わない当事者もいる。",
+    "source": "LGBT",
+    "wikipedia": {
+      "ja": "https://ja.wikipedia.org/wiki/LGBT",
+      "en": "https://en.wikipedia.org/wiki/LGBT"
+    },
+    "seeAlso": [
+      "sogi",
+      "queer",
+      "intersex"
+    ]
+  },
+  {
+    "id": "tra",
+    "term": "TRA",
+    "category": "生活・社会",
+    "translations": {
+      "en": "TRA"
+    },
+    "aliases": [
+      "トランス活動家"
+    ],
+    "tags": [
+      "差別・偏見",
+      "反トランスの主張",
+      "避けたい言い方"
+    ],
+    "avoid": [],
+    "disputed": [],
+    "notes": "「トランスの権利を求める活動家（Trans Rights Activist）」の略。文字どおりにはトランスジェンダーの権利を支持する人を指すが、実際には、トランスの権利に反対する人たちが相手を揶揄・非難するためのレッテルとして使うことが多い言葉。陰謀論的な意味合いをこめて使われることもある。",
+    "source": "TRA",
+    "seeAlso": [
+      "terf",
+      "gender-critical",
+      "transphobia"
+    ]
   }
 ]
