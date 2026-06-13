@@ -3,7 +3,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import clinicsData from '../../data/clinics.json';
 import type { Clinic } from '../../types/clinic';
 import { splitClinicUrls } from '../../utils/clinic-links';
-import { capabilitiesOf, CAPABILITY_LABELS, isGiCertified, isOverseas, countryIso } from '../../utils/clinic-genre';
+import { categoriesOf, capabilitiesOf, CAPABILITY_LABELS, isGiCertified, isOverseas, countryIso } from '../../utils/clinic-genre';
+import type { ClinicGenre } from '../../utils/clinic-genre';
+import { tagSlug } from '../../data/tag-taxonomy';
 
 export function getStaticPaths() {
   const clinics = clinicsData as Clinic[];
@@ -13,6 +15,15 @@ export function getStaticPaths() {
 const { clinic } = Astro.props as { clinic: Clinic };
 const links = splitClinicUrls(clinic.urls);
 const capabilities = capabilitiesOf(clinic);
+
+// Controlled-vocabulary topic tags for this clinic (from its 診療区分), so a
+// clinic page is a doorway into the site-wide tag system (/tags/), like content
+// pages are. Maps the genre buckets to the matching tag labels in tag-taxonomy.
+const GENRE_TAG: Record<ClinicGenre, string> = { hrt: 'ホルモン療法', mental: 'メンタルヘルス', surgery: '手術' };
+const topicTags = categoriesOf(clinic)
+  .map((genre) => GENRE_TAG[genre])
+  .map((label) => ({ label, slug: tagSlug(label) }))
+  .filter((tag): tag is { label: string; slug: string } => Boolean(tag.slug));
 const capLabels = capabilities.map((cap) => CAPABILITY_LABELS[cap]);
 const canonical = new URL(`/clinics/${clinic.id}/`, Astro.site).toString();
 
@@ -83,6 +94,15 @@ const clinicLd = {
         <span>「GI学会認定施設」は、日本GI（性別不合）学会の認定施設（保険適用での性別適合手術が受けられる施設）です。最新の認定状況は<a href="http://www.gi-soc.jp/" target="_blank" rel="noreferrer">学会の一覧</a>でご確認ください。</span>
       )}
     </p>
+
+    {topicTags.length > 0 && (
+      <nav class="page-tags" aria-label="このページのタグ">
+        <span class="page-tags-label">タグ</span>
+        {topicTags.map((tag) => (
+          <a class="page-tag" href={`/tags/${tag.slug}/`}>{tag.label}</a>
+        ))}
+      </nav>
+    )}
 
     <dl class="clinic-detail">
       <div>
