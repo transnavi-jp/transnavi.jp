@@ -29,8 +29,16 @@ const surgeryClinicIds = new Set<string>([
 const offersSurgery = (clinic: Clinic) =>
   clinic.id.startsWith('srs') ||
   clinic.id.startsWith('vfs') ||
+  clinic.id.startsWith('ffs') ||
   surgeryClinicIds.has(clinic.id) ||
   clinic.services.some((s) => s.includes('手術'));
+
+// A facility is overseas when it carries a `country` (domestic clinics omit it).
+export const isOverseas = (clinic: Clinic): boolean => Boolean(clinic.country) && clinic.country !== '日本';
+
+// ISO 3166-1 alpha-2 for the countries we list, for structured-data addressCountry.
+const COUNTRY_ISO: Record<string, string> = { 日本: 'JP', タイ: 'TH', 韓国: 'KR' };
+export const countryIso = (clinic: Clinic): string => COUNTRY_ISO[clinic.country ?? '日本'] ?? 'JP';
 
 export function categoriesOf(clinic: Clinic): ClinicGenre[] {
   const categories = new Set<ClinicGenre>();
@@ -57,7 +65,7 @@ export function categoriesOf(clinic: Clinic): ClinicGenre[] {
 export function surgeryTypesOf(clinic: Clinic): SurgeryType[] {
   const t = new Set<SurgeryType>();
   if (clinic.services.some((s) => s.includes('声'))) t.add('VFS');
-  if (clinic.services.some((s) => s.includes('FFS') || s.includes('顔の女性化'))) t.add('FFS');
+  if (clinic.id.startsWith('ffs') || clinic.services.some((s) => s.includes('FFS') || s.includes('顔の女性化'))) t.add('FFS');
   if (
     clinic.id.startsWith('srs') ||
     surgeryClinicIds.has(clinic.id) ||

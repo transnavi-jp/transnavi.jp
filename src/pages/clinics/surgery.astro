@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import clinicsData from '../../data/clinics.json';
 import type { Clinic } from '../../types/clinic';
-import { categoriesOf, capabilitiesOf, CAPABILITY_LABELS, isGiCertified, type Capability } from '../../utils/clinic-genre';
+import { categoriesOf, capabilitiesOf, CAPABILITY_LABELS, isGiCertified, isOverseas, type Capability } from '../../utils/clinic-genre';
 
 const prefectureOrder = [
   '北海道', '青森県', '岩手県', '宮城県', '秋田県', '山形県', '福島県', '茨城県', '栃木県', '群馬県',
@@ -18,8 +18,13 @@ const surgery = all
   .filter((clinic) => categoriesOf(clinic).includes('surgery') || clinic.caps.some((cap) => cap.startsWith('surgery')));
 
 const byPrefecture = prefectureOrder
-  .map((prefecture) => ({ prefecture, items: surgery.filter((clinic) => clinic.prefecture === prefecture) }))
+  .map((prefecture) => ({ prefecture, items: surgery.filter((clinic) => !isOverseas(clinic) && clinic.prefecture === prefecture) }))
   .filter((group) => group.items.length > 0);
+
+// Overseas SRS/FFS hospitals (タイ・韓国), grouped by country and listed after Japan.
+const overseasByCountry = [...new Set(surgery.filter(isOverseas).map((clinic) => clinic.prefecture))]
+  .sort((a, b) => a.localeCompare(b, 'ja'))
+  .map((country) => ({ country, items: surgery.filter((clinic) => clinic.prefecture === country) }));
 
 const count = (cap: Capability) => surgery.filter((clinic) => clinic.caps.includes(cap)).length;
 
@@ -74,6 +79,7 @@ const faqLd = {
       <span>SRS {count('surgery-srs')} 件</span>
       <span>睾丸摘出術 {count('surgery-orchiectomy')} 件</span>
       <span>乳房切除 {count('surgery-mastectomy')} 件</span>
+      <span>顔の手術（FFS）{count('surgery-ffs')} 件</span>
       <span>声の手術（VFS）{count('surgery-vfs')} 件</span>
       <span>豊胸 {count('surgery-breast')} 件</span>
     </div>
@@ -123,6 +129,37 @@ const faqLd = {
         絞り込みや検索（地域・診療区分・対応）をしたいときは、<a href="/clinics/">医療機関の一覧ページ</a>からどうぞ。
       </p>
     </section>
+
+    {overseasByCountry.length > 0 && (
+      <section aria-labelledby="overseas">
+        <h2 id="overseas">海外で性別適合手術（SRS）・顔の女性化手術（FFS）を行う病院</h2>
+        <p>
+          日本からは、タイや韓国の病院で性別適合手術（SRS）や顔の女性化手術（FFS）を受ける人もいます。海外で受ける場合は、<strong>費用・言葉・術後のケア・渡航・戸籍変更に必要な書類</strong>など、国内とは違う注意点があります。手術の全体像は<a href="/surgery/">移行のための手術</a>を、海外渡航の段取りは信頼できる主治医や相談先と確認してください。掲載は紹介・推奨ではありません。
+        </p>
+        {overseasByCountry.map((group) => (
+          <div class="finder-region">
+            <h3 class="finder-region-name">{group.country}</h3>
+            <ul class="finder-clinic-list">
+              {group.items.map((clinic) => (
+                <li class="finder-clinic">
+                  <a href={`/clinics/${clinic.id}/`}>{clinic.name}</a>
+                  <span class="finder-clinic-city">{clinic.city}</span>
+                  {clinic.caps.length > 0 && (
+                    <span class="finder-clinic-tags">
+                      {clinic.caps.map((cap) => (
+                        <span class:list={['clinic-tag', cap.startsWith('gaht') ? 'clinic-tag-gaht' : 'clinic-tag-surgery']}>
+                          {CAPABILITY_LABELS[cap]}
+                        </span>
+                      ))}
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </section>
+    )}
 
     <section aria-labelledby="faq">
       <h2 id="faq">よくある質問</h2>

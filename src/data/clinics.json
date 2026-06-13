@@ -3506,7 +3506,8 @@
       "https://www.kyorin-prs.com/gid.html"
     ],
     "services": [
-      "性別適合手術（SRS）"
+      "性別適合手術（SRS）",
+      "顔の女性化手術（FFS）"
     ],
     "source": {
       "project": "とらんすナビ",
@@ -3515,7 +3516,7 @@
     },
     "verificationStatus": "要確認",
     "importedAt": "2026-06-03",
-    "notes": "性別適合手術（SRS）に対応する施設（日本GI（性別不合）学会の認定施設など）。\n\n- 診療科・受診条件・実施している術式は施設によって異なります。\n- 多くは、診断やホルモン療法を経て、紹介や所定の手続きを必要とします。\n- 受診前に必ず公式サイトで最新の情報を確認してください。",
+    "notes": "性別適合手術（SRS）に対応する施設（日本GI（性別不合）学会の認定施設など）。\n\n- 診療科・受診条件・実施している術式は施設によって異なります。\n- 多くは、診断やホルモン療法を経て、紹介や所定の手続きを必要とします。\n- 受診前に必ず公式サイトで最新の情報を確認してください。\n\n形成外科・美容外科では顔面女性化手術（FFS）にも対応しています（前頭形成・下顎形成・頬骨形成・鼻形成・のど仏切除）。出典: https://www.kyorin-prs.com/gid.html",
     "lat": 35.677597,
     "lng": 139.565598,
     "geoSource": "address"
@@ -3531,7 +3532,8 @@
       "https://www.med.yamanashi.ac.jp/medicine/plasticsurg/gid.html"
     ],
     "services": [
-      "性別適合手術（SRS）"
+      "性別適合手術（SRS）",
+      "顔の女性化手術（FFS）"
     ],
     "source": {
       "project": "とらんすナビ",
@@ -3540,7 +3542,7 @@
     },
     "verificationStatus": "要確認",
     "importedAt": "2026-06-03",
-    "notes": "性別適合手術（SRS）に対応する施設（日本GI（性別不合）学会の認定施設など）。\n\n- 診療科・受診条件・実施している術式は施設によって異なります。\n- 多くは、診断やホルモン療法を経て、紹介や所定の手続きを必要とします。\n- 受診前に必ず公式サイトで最新の情報を確認してください。",
+    "notes": "性別適合手術（SRS）に対応する施設（日本GI（性別不合）学会の認定施設など）。\n\n- 診療科・受診条件・実施している術式は施設によって異なります。\n- 多くは、診断やホルモン療法を経て、紹介や所定の手続きを必要とします。\n- 受診前に必ず公式サイトで最新の情報を確認してください。\n\n形成外科では、性別不合（AMAB・MtF）の方への顔面女性化手術（FFS）に対応しています（前頭形成・下顎形成・頬骨形成・鼻形成・のど仏切除）。出典: https://www.med.yamanashi.ac.jp/medicine/plasticsurg/gid.html",
     "lat": 35.6092,
     "lng": 138.538177,
     "geoSource": "address"
@@ -3556,7 +3558,8 @@
       "https://www.hosp.u-toyama.ac.jp/medical/gender/"
     ],
     "services": [
-      "性別適合手術（SRS）"
+      "性別適合手術（SRS）",
+      "顔の女性化手術（FFS）"
     ],
     "source": {
       "project": "とらんすナビ",
@@ -3565,7 +3568,7 @@
     },
     "verificationStatus": "要確認",
     "importedAt": "2026-06-03",
-    "notes": "性別適合手術（SRS）に対応する施設（日本GI（性別不合）学会の認定施設など）。\n\n- 診療科・受診条件・実施している術式は施設によって異なります。\n- 多くは、診断やホルモン療法を経て、紹介や所定の手続きを必要とします。\n- 受診前に必ず公式サイトで最新の情報を確認してください。",
+    "notes": "性別適合手術（SRS）に対応する施設（日本GI（性別不合）学会の認定施設など）。\n\n- 診療科・受診条件・実施している術式は施設によって異なります。\n- 多くは、診断やホルモン療法を経て、紹介や所定の手続きを必要とします。\n- 受診前に必ず公式サイトで最新の情報を確認してください。\n\nジェンダーセンター・形成再建外科では、トランス女性への顔面女性化手術（FFS）や喉頭隆起（喉仏）切除術に対応しています。出典: https://www.hosp.u-toyama.ac.jp/medical/gender/",
     "lat": 36.679882,
     "lng": 137.140549,
     "geoSource": "address"
@@ -3695,6 +3698,281 @@
     "verificationStatus": "要確認",
     "importedAt": "2026-06-03",
     "notes": "声の女性化手術（音声外科・VFS）に対応していると公表している医療機関。甲状軟骨形成術IV型・ウェンドラー声帯短縮術など。診療内容・費用・受診条件は変わることがあります。受ける前に必ず公式情報で確認してください。",
+    "geoSource": "address"
+  },
+  {
+    "id": "ffs-ishikawa-kanazawa",
+    "name": "顔のクリニック金沢",
+    "displayName": "金沢市・顔のクリニック金沢",
+    "prefecture": "石川県",
+    "city": "金沢市",
+    "address": "石川県金沢市鞍月5丁目150 MBPビル2F",
+    "phone": "076-239-0039",
+    "urls": [
+      "https://www.craniofacialclinic.jp/"
+    ],
+    "services": [
+      "顔の女性化手術（FFS）"
+    ],
+    "source": {
+      "project": "とらんすナビ",
+      "path": "",
+      "license": ""
+    },
+    "verificationStatus": "要確認",
+    "importedAt": "2026-06-13",
+    "notes": "顔の女性化手術（FFS）を専門に行う形成外科クリニックです。公開情報では、額（額縮小術・前額リフト・眉骨形成術）、鼻、輪郭（頬骨形成術・下顎角形成術・Vライン形成）などの顔の女性化に対応しています。出典: https://www.craniofacialclinic.jp/\n\n- 顔の女性化手術（FFS）に保険は適用されません。\n- 対応する術式・費用は変わることがあります。受ける前に必ず公式サイト・クリニックでご確認ください。"
+  },
+  {
+    "id": "srs-overseas-th-pai",
+    "name": "プリーチャ美容研究所（PAI）",
+    "displayName": "バンコク（タイ）・プリーチャ美容研究所（PAI）",
+    "prefecture": "タイ",
+    "country": "タイ",
+    "city": "バンコク",
+    "address": "898/1 Sukhumvit 55, Bangkok 10110, Thailand",
+    "urls": [
+      "https://pai.co.th/"
+    ],
+    "services": [
+      "性別適合手術（SRS）",
+      "顔の女性化手術（FFS）",
+      "豊胸"
+    ],
+    "source": {
+      "project": "とらんすナビ",
+      "path": "地図データ（海外）より",
+      "license": ""
+    },
+    "verificationStatus": "要確認",
+    "importedAt": "2026-06-13",
+    "notes": "海外（タイ・バンコク）の性別適合手術などで知られる医療機関です。\n\n- 公開情報で確認できた対応：性別適合手術（SRS）／顔の女性化手術（FFS）／豊胸\n- 海外で手術を受ける場合は、費用・言葉・術後ケア・渡航・戸籍変更に必要な書類など、国内とは違う注意点があります。くわしくは「移行のための手術」を確認してください。\n- 最新の診療内容・料金・予約方法は、必ず各施設の公式サイトでご確認ください。",
+    "lat": 13.737373,
+    "lng": 100.583925,
+    "geoSource": "address"
+  },
+  {
+    "id": "srs-overseas-th-suporn",
+    "name": "スポーン・クリニック",
+    "displayName": "チョンブリー（タイ）・スポーン・クリニック",
+    "prefecture": "タイ",
+    "country": "タイ",
+    "city": "チョンブリー",
+    "address": "Chonburi, Thailand",
+    "urls": [
+      "https://www.supornclinic.com/"
+    ],
+    "services": [
+      "性別適合手術（SRS）",
+      "顔の女性化手術（FFS）",
+      "豊胸"
+    ],
+    "source": {
+      "project": "とらんすナビ",
+      "path": "地図データ（海外）より",
+      "license": ""
+    },
+    "verificationStatus": "要確認",
+    "importedAt": "2026-06-13",
+    "notes": "海外（タイ・チョンブリー）の性別適合手術などで知られる医療機関です。\n\n- 公開情報で確認できた対応：性別適合手術（SRS）／顔の女性化手術（FFS）／豊胸\n- 海外で手術を受ける場合は、費用・言葉・術後ケア・渡航・戸籍変更に必要な書類など、国内とは違う注意点があります。くわしくは「移行のための手術」を確認してください。\n- 最新の診療内容・料金・予約方法は、必ず各施設の公式サイトでご確認ください。",
+    "lat": 13.365214,
+    "lng": 100.990905,
+    "geoSource": "address"
+  },
+  {
+    "id": "srs-overseas-th-chettawut",
+    "name": "チェタワット形成外科",
+    "displayName": "バンコク（タイ）・チェタワット形成外科",
+    "prefecture": "タイ",
+    "country": "タイ",
+    "city": "バンコク",
+    "address": "WIH International Hospital, Bangkok, Thailand",
+    "urls": [
+      "https://www.chet-plasticsurgery.com/"
+    ],
+    "services": [
+      "性別適合手術（SRS）",
+      "顔の女性化手術（FFS）",
+      "豊胸"
+    ],
+    "source": {
+      "project": "とらんすナビ",
+      "path": "地図データ（海外）より",
+      "license": ""
+    },
+    "verificationStatus": "要確認",
+    "importedAt": "2026-06-13",
+    "notes": "海外（タイ・バンコク）の性別適合手術などで知られる医療機関です。\n\n- 公開情報で確認できた対応：性別適合手術（SRS）／顔の女性化手術（FFS）／豊胸\n- 海外で手術を受ける場合は、費用・言葉・術後ケア・渡航・戸籍変更に必要な書類など、国内とは違う注意点があります。くわしくは「移行のための手術」を確認してください。\n- 最新の診療内容・料金・予約方法は、必ず各施設の公式サイトでご確認ください。",
+    "lat": 13.663856,
+    "lng": 100.650575,
+    "geoSource": "address"
+  },
+  {
+    "id": "srs-overseas-th-yanhee",
+    "name": "ヤンヒー病院",
+    "displayName": "バンコク（タイ）・ヤンヒー病院",
+    "prefecture": "タイ",
+    "country": "タイ",
+    "city": "バンコク",
+    "address": "454 Charansanitwong Rd, Bangkok 10700, Thailand",
+    "urls": [
+      "https://www.yanhee.net/cosmetic-services/sex-reassignment-surgery/"
+    ],
+    "services": [
+      "性別適合手術（SRS）",
+      "顔の女性化手術（FFS）",
+      "声の女性化手術（VFS）",
+      "豊胸"
+    ],
+    "source": {
+      "project": "とらんすナビ",
+      "path": "地図データ（海外）より",
+      "license": ""
+    },
+    "verificationStatus": "要確認",
+    "importedAt": "2026-06-13",
+    "notes": "海外（タイ・バンコク）の性別適合手術などで知られる医療機関です。\n\n- 公開情報で確認できた対応：性別適合手術（SRS）／顔の女性化手術（FFS）／声の女性化手術（VFS）／豊胸\n- 海外で手術を受ける場合は、費用・言葉・術後ケア・渡航・戸籍変更に必要な書類など、国内とは違う注意点があります。くわしくは「移行のための手術」を確認してください。\n- 最新の診療内容・料金・予約方法は、必ず各施設の公式サイトでご確認ください。",
+    "lat": 13.800582,
+    "lng": 100.511096,
+    "geoSource": "address"
+  },
+  {
+    "id": "srs-overseas-kr-anam",
+    "name": "高麗大学校 安岩病院（ジェンダークリニック）",
+    "displayName": "ソウル（韓国）・高麗大学校 安岩病院（ジェンダークリニック）",
+    "prefecture": "韓国",
+    "country": "韓国",
+    "city": "ソウル",
+    "address": "Seongbuk-gu, Seoul, South Korea",
+    "urls": [
+      "https://anam.kumc.or.kr/"
+    ],
+    "services": [
+      "性別適合手術（SRS）",
+      "顔の女性化手術（FFS）",
+      "声の女性化手術（VFS）",
+      "豊胸"
+    ],
+    "source": {
+      "project": "とらんすナビ",
+      "path": "地図データ（海外）より",
+      "license": ""
+    },
+    "verificationStatus": "要確認",
+    "importedAt": "2026-06-13",
+    "notes": "海外（韓国・ソウル）の性別適合手術などで知られる医療機関です。\n\n- 公開情報で確認できた対応：性別適合手術（SRS）／顔の女性化手術（FFS）／声の女性化手術（VFS）／豊胸\n- 海外で手術を受ける場合は、費用・言葉・術後ケア・渡航・戸籍変更に必要な書類など、国内とは違う注意点があります。くわしくは「移行のための手術」を確認してください。\n- 最新の診療内容・料金・予約方法は、必ず各施設の公式サイトでご確認ください。",
+    "lat": 37.587082,
+    "lng": 127.0266,
+    "geoSource": "address"
+  },
+  {
+    "id": "srs-overseas-th-kamol",
+    "name": "ガモン病院（Kamol）",
+    "displayName": "バンコク（タイ）・ガモン病院（Kamol）",
+    "prefecture": "タイ",
+    "country": "タイ",
+    "city": "バンコク",
+    "address": "Bangkok, Thailand",
+    "urls": [
+      "https://www.kamolhospital.com/ja/services/facial-feminization-surgery-ffs/"
+    ],
+    "services": [
+      "性別適合手術（SRS）",
+      "顔の女性化手術（FFS）",
+      "声の女性化手術（VFS）",
+      "豊胸"
+    ],
+    "source": {
+      "project": "とらんすナビ",
+      "path": "地図データ（海外）より",
+      "license": ""
+    },
+    "verificationStatus": "要確認",
+    "importedAt": "2026-06-13",
+    "notes": "海外（タイ・バンコク）の性別適合手術などで知られる医療機関です。\n\n- 公開情報で確認できた対応：性別適合手術（SRS）／顔の女性化手術（FFS）／声の女性化手術（VFS）／豊胸\n- 海外で手術を受ける場合は、費用・言葉・術後ケア・渡航・戸籍変更に必要な書類など、国内とは違う注意点があります。くわしくは「移行のための手術」を確認してください。\n- 最新の診療内容・料金・予約方法は、必ず各施設の公式サイトでご確認ください。",
+    "lat": 13.782813,
+    "lng": 100.621291,
+    "geoSource": "address"
+  },
+  {
+    "id": "srs-overseas-th-ppsi",
+    "name": "プーケット形成外科（PPSI）",
+    "displayName": "プーケット（タイ）・プーケット形成外科（PPSI）",
+    "prefecture": "タイ",
+    "country": "タイ",
+    "city": "プーケット",
+    "address": "Bangkok Hospital Siriroj, Phuket 83000, Thailand",
+    "urls": [
+      "https://www.phuketpsi.com/"
+    ],
+    "services": [
+      "性別適合手術（SRS）",
+      "顔の女性化手術（FFS）",
+      "豊胸"
+    ],
+    "source": {
+      "project": "とらんすナビ",
+      "path": "地図データ（海外）より",
+      "license": ""
+    },
+    "verificationStatus": "要確認",
+    "importedAt": "2026-06-13",
+    "notes": "海外（タイ・プーケット）の性別適合手術などで知られる医療機関です。\n\n- 公開情報で確認できた対応：性別適合手術（SRS）／顔の女性化手術（FFS）／豊胸\n- 海外で手術を受ける場合は、費用・言葉・術後ケア・渡航・戸籍変更に必要な書類など、国内とは違う注意点があります。くわしくは「移行のための手術」を確認してください。\n- 最新の診療内容・料金・予約方法は、必ず各施設の公式サイトでご確認ください。",
+    "lat": 7.8869,
+    "lng": 98.3875,
+    "geoSource": "address"
+  },
+  {
+    "id": "srs-overseas-kr-on",
+    "name": "オン病院（釜山）",
+    "displayName": "釜山（韓国）・オン病院（釜山）",
+    "prefecture": "韓国",
+    "country": "韓国",
+    "city": "釜山",
+    "address": "Busanjin-gu, Busan, South Korea",
+    "urls": [
+      "https://onhospital.org/"
+    ],
+    "services": [
+      "性別適合手術（SRS）",
+      "豊胸"
+    ],
+    "source": {
+      "project": "とらんすナビ",
+      "path": "地図データ（海外）より",
+      "license": ""
+    },
+    "verificationStatus": "要確認",
+    "importedAt": "2026-06-13",
+    "notes": "海外（韓国・釜山）の性別適合手術などで知られる医療機関です。\n\n- 公開情報で確認できた対応：性別適合手術（SRS）／豊胸\n- 海外で手術を受ける場合は、費用・言葉・術後ケア・渡航・戸籍変更に必要な書類など、国内とは違う注意点があります。くわしくは「移行のための手術」を確認してください。\n- 最新の診療内容・料金・予約方法は、必ず各施設の公式サイトでご確認ください。",
+    "lat": 35.151845,
+    "lng": 129.034353,
+    "geoSource": "address"
+  },
+  {
+    "id": "srs-overseas-kr-donga",
+    "name": "東亜大学校病院",
+    "displayName": "釜山（韓国）・東亜大学校病院",
+    "prefecture": "韓国",
+    "country": "韓国",
+    "city": "釜山",
+    "address": "Seo-gu, Busan, South Korea",
+    "urls": [
+      "https://www.damc.or.kr/"
+    ],
+    "services": [
+      "性別適合手術（SRS）"
+    ],
+    "source": {
+      "project": "とらんすナビ",
+      "path": "地図データ（海外）より",
+      "license": ""
+    },
+    "verificationStatus": "要確認",
+    "importedAt": "2026-06-13",
+    "notes": "海外（韓国・釜山）の性別適合手術などで知られる医療機関です。\n\n- 公開情報で確認できた対応：性別適合手術（SRS）\n- 海外で手術を受ける場合は、費用・言葉・術後ケア・渡航・戸籍変更に必要な書類など、国内とは違う注意点があります。くわしくは「移行のための手術」を確認してください。\n- 最新の診療内容・料金・予約方法は、必ず各施設の公式サイトでご確認ください。\n\n- かつて性別適合手術で知られた施設ですが、現在の公式サイトでは性別適合手術の案内が確認できないことがあります（執刀医がオン病院に移ったとの情報もあります）。受診を検討する際は必ず最新の公式情報をご確認ください。",
+    "lat": 35.120175,
+    "lng": 129.018187,
     "geoSource": "address"
   }
 ]

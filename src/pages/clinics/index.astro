@@ -2,10 +2,9 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Mascot from '../../components/Mascot.astro';
 import clinicsData from '../../data/clinics.json';
-import poisData from '../../data/map-pois.json';
 import type { Clinic } from '../../types/clinic';
 import { splitClinicUrls } from '../../utils/clinic-links';
-import { categoriesOf, primaryGenre, surgeryTypesOf, capabilitiesOf, CAPABILITY_LABELS, isGiCertified, clinicMapTags } from '../../utils/clinic-genre';
+import { categoriesOf, primaryGenre, surgeryTypesOf, capabilitiesOf, CAPABILITY_LABELS, isGiCertified, isOverseas, clinicMapTags } from '../../utils/clinic-genre';
 
 const clinics = clinicsData as Clinic[];
 const prefectureOrder = [
@@ -65,6 +64,14 @@ const categoryDefinitions = [
   { id: 'mental', label: '精神科（メンタルクリニック）' },
 ] as const;
 
+// 国内・海外: overseas facilities (タイ・韓国の性別適合手術・FFS 病院など) carry a
+// `country`; domestic ones don't. Lets readers narrow to either, or see both.
+const scopeDefinitions = [
+  { id: '', label: 'すべて' },
+  { id: 'domestic', label: '国内' },
+  { id: 'overseas', label: '海外' },
+] as const;
+
 // Facility scale, by the 医療法 (Medical Care Act) definition: a 病院 is an
 // inpatient facility with 20+ beds, and everything smaller is a 診療所 (≤19
 // beds) — クリニック・医院・専門診療所などはすべて診療所にあたります。Only a
@@ -103,31 +110,39 @@ const regionDefinitions = [
 
 // Categorisation (hrt / mental / surgery, with surgery sub-types) lives in a
 // shared util so the embedded map here and the global /map/ use the same rules.
-const clinicsWithCategories = clinics.map((clinic) => ({
-  ...clinic,
-  categories: categoriesOf(clinic),
-  surgeryTypes: surgeryTypesOf(clinic),
-  capabilities: capabilitiesOf(clinic),
-  giCertified: isGiCertified(clinic),
-  type: typeOf(clinic.name),
-  region: regionOf(clinic.prefecture),
-  links: splitClinicUrls(clinic.urls),
-}));
-
-const prefectures = [...new Set(clinics.map((clinic) => clinic.prefecture))].sort((a, b) => {
-  const indexA = prefectureOrder.indexOf(a);
-  const indexB = prefectureOrder.indexOf(b);
-
-  if (indexA === -1 || indexB === -1) {
-    return a.localeCompare(b, 'ja');
-  }
-
-  return indexA - indexB;
+const clinicsWithCategories = clinics.map((clinic) => {
+  const overseas = isOverseas(clinic);
+  return {
+    ...clinic,
+    categories: categoriesOf(clinic),
+    surgeryTypes: surgeryTypesOf(clinic),
+    capabilities: capabilitiesOf(clinic),
+    giCertified: isGiCertified(clinic),
+    overseas,
+    scope: overseas ? 'overseas' : 'domestic',
+    // 医療法の病院／診療所区分は国内のみ。海外は区分対象外として '海外' を立てる。
+    type: overseas ? '海外' : typeOf(clinic.name),
+    region: overseas ? '海外' : regionOf(clinic.prefecture),
+    links: splitClinicUrls(clinic.urls),
+  };
 });
-const groupedClinics = prefectures.map((prefecture) => ({
+
+// Domestic groups in 47-prefecture order, then overseas groups by country last —
+// so 「タイ」「韓国」sit at the bottom of the list instead of being scattered
+// alphabetically among the Japanese prefectures.
+const domesticPrefectures = prefectureOrder.filter((prefecture) =>
+  clinicsWithCategories.some((clinic) => !clinic.overseas && clinic.prefecture === prefecture),
+);
+const overseasCountries = [...new Set(clinicsWithCategories.filter((clinic) => clinic.overseas).map((clinic) => clinic.prefecture))]
+  .sort((a, b) => a.localeCompare(b, 'ja'));
+const groupKeys = [...domesticPrefectures, ...overseasCountries];
+const groupedClinics = groupKeys.map((prefecture) => ({
   prefecture,
+  overseas: overseasCountries.includes(prefecture),
   clinics: clinicsWithCategories.filter((clinic) => clinic.prefecture === prefecture),
 }));
+const domesticCount = clinicsWithCategories.filter((clinic) => !clinic.overseas).length;
+const overseasCount = clinicsWithCategories.length - domesticCount;
 
 // Data for an embedded clinics-only map (reuses /map.js). Only clinics with
 // coordinates; no orgs/events here. Each pin is coloured by its 診療区分:
@@ -144,18 +159,14 @@ const mapClinics = clinicsWithCategories
     lat: clinic.lat,
     lng: clinic.lng,
   }));
-// Overseas SRS hospitals (タイ・韓国) live in map-pois.json as type 'surgery'.
-// Show them on this embedded map too, so it matches the global /map/ (which was
-// showing 9 surgery pins the clinic map omitted). The list below stays domestic.
-const overseasSurgery = (poisData as { name: string; type: string; url: string; lat: number; lng: number }[])
-  .filter((p) => p.type === 'surgery');
-const clinicMapData = { clinics: mapClinics, pois: overseasSurgery };
+// Overseas SRS/FFS hospitals (タイ・韓国) are now first-class clinic records, so
+// they appear as 手術-coloured pins via mapClinics like any other facility — no
+// separate POI layer needed here.
+const clinicMapData = { clinics: mapClinics, pois: [] };
 const genreCounts = mapClinics.reduce(
   (acc, clinic) => ((acc[clinic.genre] = (acc[clinic.genre] ?? 0) + 1), acc),
   {} as Record<string, number>,
 );
-// The 手術 legend counts map pins, so include the overseas SRS surgery pins.
-genreCounts.surgery = (genreCounts.surgery ?? 0) + overseasSurgery.length;
 
 // 対応・タグ filter: the same per-facility capability tags shown on the cards
 // (女性化／男性化ホルモン, SRS とその術式, VFS/FFS/豊胸…), plus GI学会認定 as a
@@ -204,7 +215,7 @@ const capabilityValuesOf = (clinic: (typeof clinicsWithCategories)[number]): str
       <p class="map-fallback">地図を表示するには JavaScript が必要です。下の一覧からも探せます。</p>
     </div>
     <p class="clinic-map-note">
-      ピンの色は診療区分、位置は住所からのおおよそです（番地が不明なものは市区町村のあたり）。ピンをタップすると掲載ページへ進めます。海外（タイ・韓国）でよく知られたSRS病院も「手術」として地図に表示しています（下の一覧は国内の医療機関です）。
+      ピンの色は診療区分、位置は住所からのおおよそです（番地が不明なものは市区町村のあたり）。ピンをタップすると掲載ページへ進めます。海外（タイ・韓国）でよく知られた性別適合手術（SRS）・顔の女性化手術（FFS）の病院も「手術」として地図と下の一覧に掲載しています（「国内・海外」でしぼり込めます）。
       <a class="map-everything-link" href="/map/">当事者団体・イベントもふくむ地図を見る →</a>
     </p>
     <p class="source-note">
@@ -219,7 +230,7 @@ const capabilityValuesOf = (clinic: (typeof clinicsWithCategories)[number]): str
 
     <div class="clinic-summary" aria-label="掲載件数">
       <span><span data-filter-count>{clinics.length}</span>件</span>
-      <span>{prefectures.length}地域</span>
+      <span>国内 {domesticCount} 件・海外 {overseasCount} 件</span>
     </div>
 
     <div class="filter-group-row">
@@ -234,6 +245,23 @@ const capabilityValuesOf = (clinic: (typeof clinicsWithCategories)[number]): str
             aria-pressed={category.id === '' ? 'true' : 'false'}
           >
             {category.label}
+          </button>
+        ))}
+      </section>
+    </div>
+
+    <div class="filter-group-row">
+      <span class="filter-tabs-label">国内・海外</span>
+      <section class="filter-tabs" aria-label="国内・海外" data-filter-tabs data-filter-key="scope">
+        {scopeDefinitions.map((scope) => (
+          <button
+            type="button"
+            class="filter-tab"
+            data-filter-tab
+            data-filter-value={scope.id}
+            aria-pressed={scope.id === '' ? 'true' : 'false'}
+          >
+            {scope.label}
           </button>
         ))}
       </section>
@@ -299,7 +327,7 @@ const capabilityValuesOf = (clinic: (typeof clinicsWithCategories)[number]): str
     {groupedClinics.map((group) => (
       <details class="clinic-region" data-filter-group>
         <summary aria-labelledby={`prefecture-${group.prefecture}`}>
-          <span id={`prefecture-${group.prefecture}`}>{group.prefecture}</span>
+          <span id={`prefecture-${group.prefecture}`}>{group.prefecture}{group.overseas ? '（海外）' : ''}</span>
           <span class="clinic-region-count"><span data-filter-group-count>{group.clinics.length}</span>件</span>
         </summary>
         <div class="clinic-list">
@@ -312,7 +340,8 @@ const capabilityValuesOf = (clinic: (typeof clinicsWithCategories)[number]): str
               data-capabilities={capabilityValuesOf(clinic)}
               data-types={clinic.type}
               data-regions={clinic.region}
-              data-search={[clinic.name, clinic.displayName, clinic.region, clinic.prefecture, clinic.city, clinic.address, clinic.phone, clinic.type, ...clinic.services, ...clinic.surgeryTypes, ...clinic.capabilities.map((cap) => CAPABILITY_LABELS[cap]), clinic.giCertified ? 'GI学会認定施設 保険適用' : ''].filter(Boolean).join(' ')}
+              data-scope={clinic.scope}
+              data-search={[clinic.name, clinic.displayName, clinic.region, clinic.prefecture, clinic.country, clinic.city, clinic.address, clinic.phone, clinic.type, clinic.overseas ? '海外' : '国内', ...clinic.services, ...clinic.surgeryTypes, ...clinic.capabilities.map((cap) => CAPABILITY_LABELS[cap]), clinic.giCertified ? 'GI学会認定施設 保険適用' : ''].filter(Boolean).join(' ')}
             >
               <div class="clinic-card-header">
                 <div>
@@ -376,7 +405,7 @@ const capabilityValuesOf = (clinic: (typeof clinicsWithCategories)[number]): str
                   </div>
                   <div>
                     <dt>施設の規模</dt>
-                    <dd>{clinic.type === '病院' ? '病院（20床以上）' : '診療所（19床以下）'}</dd>
+                    <dd>{clinic.overseas ? '海外の医療機関（日本の医療法の区分対象外）' : clinic.type === '病院' ? '病院（20床以上）' : '診療所（19床以下）'}</dd>
                   </div>
                   {clinic.address && (
                     <div>

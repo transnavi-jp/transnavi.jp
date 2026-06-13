@@ -79,9 +79,9 @@ test('clinic records have unique ids and the fields the pages render', () => {
   }
 });
 
-test('clinic addresses, where present, match the record locality', () => {
+test('domestic clinic addresses, where present, match the record locality', () => {
   for (const c of clinics) {
-    if (!c.address) continue;
+    if (!c.address || c.country) continue; // overseas addresses are romanised — checked below
     // Imported addresses vary: some start with 〒, some omit the prefecture and
     // start at city level. Require the prefecture or the record's city to
     // appear, which still catches a pasted address from the wrong region.
@@ -90,5 +90,16 @@ test('clinic addresses, where present, match the record locality', () => {
       c.address.includes(c.prefecture.replace(/[都道府県]$/, '')) ||
       (c.city && c.address.includes(c.city));
     assert.ok(ok, `${c.id}: address "${c.address}" matches neither ${c.prefecture} nor ${c.city ?? '(no city)'}`);
+  }
+});
+
+test('overseas clinics carry country + city, and group under their country', () => {
+  for (const c of clinics) {
+    if (!c.country) continue;
+    assert.ok(c.city, `${c.id}: overseas clinic missing city`);
+    // Overseas records put the country in `prefecture` too, so the list groups
+    // them under a country heading instead of scattering them among prefectures.
+    assert.equal(c.prefecture, c.country, `${c.id}: prefecture should equal country for overseas`);
+    assert.ok(c.id.startsWith('srs-overseas-'), `${c.id}: overseas id should be namespaced srs-overseas-*`);
   }
 });
