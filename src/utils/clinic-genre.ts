@@ -129,6 +129,24 @@ const BREAST_AUG = /(豊胸|豊乳|乳房増大|バストアップ)/;
 const VFS_TEXT = /(ＶＦＳ|VFS|声の(女性化)?手術|音声の?手術|声帯手術)/;
 const FFS_TEXT = /(ＦＦＳ|FFS|顔面女性化|顔の女性化)/;
 
+// Negation that immediately follows a procedure word and flips it negative — e.g.
+// 「豊胸術を行わずに女性化」 mentions 豊胸 only to say it ISN'T needed. Such a
+// mention must NOT produce a capability tag. Matched within a short window after
+// the keyword (allowing a trailing 術/など etc.).
+const NEGATION_AFTER =
+  /^[^。\n、]{0,8}?(行わ(ず|ない|ぬ)|行いません|行っていな(い|ければ)|行っていません|なし|無し|不要|せず|しな(い|いで)|しません|していな(い|ければ)|していません|対応していな|扱っていな|要しない)/;
+
+// True when `re` matches the text in at least one place that is NOT negated, so
+// affirmative mentions tag and negated-only mentions ("〜を行わず") do not.
+function statesAffirmatively(text: string, re: RegExp): boolean {
+  const g = new RegExp(re.source, re.global ? re.flags : `${re.flags}g`);
+  for (let m = g.exec(text); m; m = g.exec(text)) {
+    if (!NEGATION_AFTER.test(text.slice(m.index + m[0].length))) return true;
+    if (m.index === g.lastIndex) g.lastIndex++; // guard against zero-width matches
+  }
+  return false;
+}
+
 export function capabilitiesOf(clinic: Clinic): Capability[] {
   const text = `${clinic.notes ?? ''} ${clinic.services.join(' ')}`;
   const caps: Capability[] = [];
@@ -136,15 +154,15 @@ export function capabilitiesOf(clinic: Clinic): Capability[] {
   // GAHT direction is gated on the facility actually doing hormones, so a
   // surgery-only clinic that mentions "MtF" in passing isn't tagged as GAHT.
   if (categoriesOf(clinic).includes('hrt')) {
-    if (FEMINIZING.test(text)) caps.push('gaht-feminizing');
-    if (MASCULINIZING.test(text)) caps.push('gaht-masculinizing');
+    if (statesAffirmatively(text, FEMINIZING)) caps.push('gaht-feminizing');
+    if (statesAffirmatively(text, MASCULINIZING)) caps.push('gaht-masculinizing');
   }
 
   const surgery = surgeryTypesOf(clinic);
-  const vaginoplasty = VAGINOPLASTY.test(text);
-  const orchiectomy = ORCHIECTOMY.test(text);
-  const phalloplasty = PHALLOPLASTY.test(text);
-  const hysterectomy = HYSTERECTOMY.test(text);
+  const vaginoplasty = statesAffirmatively(text, VAGINOPLASTY);
+  const orchiectomy = statesAffirmatively(text, ORCHIECTOMY);
+  const phalloplasty = statesAffirmatively(text, PHALLOPLASTY);
+  const hysterectomy = statesAffirmatively(text, HYSTERECTOMY);
   const hasSpecificGenital = vaginoplasty || orchiectomy || phalloplasty || hysterectomy;
 
   // The generic 性別適合手術（SRS） umbrella — only when no specific genital
@@ -154,10 +172,10 @@ export function capabilitiesOf(clinic: Clinic): Capability[] {
   if (orchiectomy) caps.push('surgery-orchiectomy');
   if (phalloplasty) caps.push('surgery-phalloplasty');
   if (hysterectomy) caps.push('surgery-hysterectomy');
-  if (MASTECTOMY.test(text)) caps.push('surgery-mastectomy');
-  if (surgery.includes('VFS') || VFS_TEXT.test(text)) caps.push('surgery-vfs');
-  if (surgery.includes('FFS') || FFS_TEXT.test(text)) caps.push('surgery-ffs');
-  if (BREAST_AUG.test(text)) caps.push('surgery-breast');
+  if (statesAffirmatively(text, MASTECTOMY)) caps.push('surgery-mastectomy');
+  if (surgery.includes('VFS') || statesAffirmatively(text, VFS_TEXT)) caps.push('surgery-vfs');
+  if (surgery.includes('FFS') || statesAffirmatively(text, FFS_TEXT)) caps.push('surgery-ffs');
+  if (statesAffirmatively(text, BREAST_AUG)) caps.push('surgery-breast');
 
   return caps;
 }
